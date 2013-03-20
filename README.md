@@ -31,7 +31,7 @@ Asebox Audience
 Support
 -------
 * Enterprise class support, training, and consulting available.
-* Local support available in London, Paris, Madrid, Lisbon, and Chennai.
+* Local support available in London and Paris
 
 Installation
 ------------
