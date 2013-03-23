@@ -4,7 +4,7 @@ Asebox Sybase Monitoring Tools
 
 What is Asebox?
 ---------------
-
+ 
 Asebox is a tool for monitoring Sybase servers (ASE , RS , IQ, RAO)   It is comprised of two components : A *logger*, which periodically collects metrics from a *monitored server*, and archives them in an *archive database*.   A *reporter*, the *query* and *reporting* part, installed in a Web Server.  With these pages, you can query the *archive database* in order to analyse the data captured by the *logger*.   
 
 Asebox Modules
