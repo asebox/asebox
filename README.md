@@ -36,6 +36,6 @@ Support
 
 Installation
 ------------
-First, you have to [install asemon_logger] on a server (Windows, Unix or Linux).  
-Second, [install asemon_report] (PHP pages in a web server). 
+First, you have to [install asemon_logger](https://github.com/asebox/asebox/wiki/Installing-Logger "install asemon logger")  on a server (Windows, Unix or Linux).  
+Second, you have to [install asemon_report](https://github.com/asebox/asebox/wiki/Installing-Reporter "install asemon report") on a web server (for PHP pages). 
 
