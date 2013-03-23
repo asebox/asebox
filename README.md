@@ -11,12 +11,12 @@ Asebox Modules
 --------------
 
 * Performance Monitoring –  based on historised MDA tables (extends asemon, by Jean-Paul Martin).
-* Application Auditing – based on sybsecurity and native sybase auditing.
-* Application Tracing  - based on application tracing and logging tools.
 * Server Comparison - compare performance and configuration between servers or periods.
+* Application Tracing  - based on application tracing and logging tools.
+* Sybase Auditing – based on sybsecurity and native sybase auditing.
 * Data Dictionary - based on Sybase system tables.
 * Testing Package - extract production activity in real-time, and replay in a test environment.
-* Application Supervision - application activity and availability monitoring (compatible with industry standard Nagios)
+* Supervision - application activity and availability monitoring (compatible with industry standard Nagios)
 * Quality Tracking - summary defect reports and code quality indicators (requires SQLBrowser)
 
 Asebox Audience
@@ -36,4 +36,6 @@ Support
 
 Installation
 ------------
-First, you have to install asemon_logger on a server (Windows, Unix or Linux) See Asemon logger installation for details. Second, install asemon_report (PHP pages in a web server). See Asemon report installation for details.
+First, you have to [install asemon_logger] on a server (Windows, Unix or Linux).  
+Second, [install asemon_report] (PHP pages in a web server). 
+
