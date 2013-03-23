@@ -22,16 +22,17 @@ Asebox Modules
 Asebox Audience
 ---------------
 
-* Project Managers - keep your DBAs, and developers on their toes.
-* Database Administrators - both system, and application tuning have never been easier.
+* Administrators - both system, and application tuning have never been easier.
 * Developers - identify problem code, and contention issues.
-* Testers - unit testing, integration testing, and stress testing.  Comparitors to identify performance regression.
-* Production Support - Proactively identify problems, and produce detailed analysis reports.
+* Testers - Replay tools, regression testing, integration testing, and stress testing. 
+* Support - Proactively identify problems, and produce detailed analysis reports.
+* Auditors - Reports giving overview, analysis and recommendations.
+* Managers - keep your DBAs, and developers on their toes.
 
 Support
 -------
 * Enterprise class support, training, and consulting available.
-* Local support available in London and Paris
+* Documentation available at [Wiki](https://github.com/asebox/asebox/wiki "ASEBOX Wiki")
 
 Installation
 ------------
