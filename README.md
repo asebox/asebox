@@ -31,7 +31,7 @@ Asebox Audience
 
 Support
 -------
-* Enterprise class support, training, and consulting available.
+* Enterprise class support, training, and consulting available. 
 * Documentation available at [Wiki](https://github.com/asebox/asebox/wiki "ASEBOX Wiki")
 
 Installation
