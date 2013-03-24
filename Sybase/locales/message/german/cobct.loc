@@ -1,0 +1,58 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+ All rights reserved.\
+ Use, duplication, or disclosure by the United States Government\
+ is subject to restrictions as set forth in FAR subparagraphs\
+ 52.227-19(a)-(d) for civilian agency contracts and DFARS\
+ 252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+ Sybase reserves all unpublished rights under the copyright laws\
+ of the United States.\
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "Äußere Schicht (Veneer Layer) der COBOL CT-Library"
+2 = ZZZZZ, "COBOL Laufzeitschicht"
+
+[cobcterror]
+
+1 = ZZZZZ, "Ungültiger Typ für CSBDIAG oder CTBDIAG."
+2 = ZZZZZ, "Die Option CS_USERDATA wird für Cobol nicht unterstützt."
+3 = ZZZZZ, "Compiler-Code nicht erkannt."
+4 = ZZZZZ, "Konvertierung der Eingabevariablen in CTBPARAM fehlgeschlagen."
+5 = 22022, "Fehler beim Speichern oder Abfragen der Indikatortyp-Information."
+6 = ZZZZZ, "Fehler bei der Speicherzuweisung."
+7 = ZZZZZ, "Nicht unterstützter Typ."
+8 = ZZZZZ, "CS-ALL-CAPS wird für Cobol nicht unterstützt."
+9 = 22003, "Ein ganzzahliger Wert enthält zu viele Ziffern für das Daten-PIC, in das er eingelesen wurde."
+10 = ZZZZZ, "Unzulässige Kombination von Argumenten für SYBSETSQLDA."
+11 = ZZZZZ, "SQLDA-SQLN ist kleiner als SQLDA-SQLD."
+12 = ZZZZZ, "SQLDA-SQLD ist negativ."
+
+[cobctorigin]
+
+1 = ZZZZZ, "Interner Fehler"
+2 = ZZZZZ, "Fehler im aufrufenden Programm; Ursache liegt wahrscheinlich im vom Precompiler erzeugten Code"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "Nicht behebbarer Fehler ist aufgetreten."
+2 = ZA000, "Interner Fehler ist aufgetreten."
+3 = ZD000, "Unerwartetes CS_COMPUTE_RESULT empfangen."
+4 = ZE000, "Unerwartetes CS_CURSOR_RESULT empfangen."
+5 = ZF000, "Unerwartetes CS_PARAM_RESULT empfangen."
+6 = ZG000, "Unerwartetes CS_ROW_RESULT empfangen."
+7 = ZB000, "Keine Meldungen für sqlca, SQLCODE oder SQLSTATE zurückgegeben."
+8 = ZC000, "Verbindung wurde noch nicht definiert."
+9 = ZH000, "Unerwartetes CS_STATUS_RESULT empfangen."
+10 = ZI000, "Unerwartetes CS_DESCRIBE_RESULT empfangen."
+11 = 22005, "Datenausnahme - Fehler bei der Zuweisung des Element-Deskriptors - Typ."
+12 = JZ000, "Fehler bei der Speicherzuweisung."
+13 = ZK000, "SQL-Server Version 10 oder höher benötigt."
+14 = ZM000, "Fehler beim Initialisieren der Client Library."
+15 = ZN000, "Fehler bei der Aufnahme oder Freigabe eines Mutex."
+16 = 08002, "Verbindungsname wird bereits verwendet."
+16 = 25019, "HA FAILOVER aufgetreten."

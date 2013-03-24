@@ -1,0 +1,424 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) tcllib.loc 1.2 13  8月 
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=japanese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "プロトコル・ドライバのために必要なメモリの大きさが判断できません。"
+
+2 = NETE_NULLOPT, "Net-Library ルーチンへ NULL のオプション ptr を渡すことはできません。"
+
+3 = NETE_UNKWOPT, "要求された Net-Library オプションがわかりません。 "
+
+4 = NETE_UNKWINFCDE, "要求されたアドレス情報コードがわかりません。"
+
+5 = NETE_BOOLREP, "オプション値は、NET_TRUE または NET_FALSE のどちらかでなければなりません。"
+
+6 = NETE_NULLNETBUF, "NULL のバッファ・ポインタを net_init() へ渡すことはできません。"
+
+7 = NETE_NOTSUPPORTED, "機能をサポートしていません。"
+
+8 = NETE_NULLHDLR, "NULL の NET_POLL 配列ポインタを渡すことはできません。"
+
+9 = NETE_BADENGINE, "エンジン識別子が正しくありません。"
+
+10 = NETE_ALREADYINIT, "カレント・プロセスは、すでに net_init() を呼び出しています。"
+
+11 = NETE_DICTNOTFOUND, "アドレス辞書がありません。"
+
+12 = NETE_SRVNAMENOTFND, "指定されたサーバ名属性がありません。"
+
+13 = NETE_NODICTS, "使用可能なアドレス辞書構造体がありません。"
+
+14 = NETE_DRVINIT, "プロトコル・ドライバの初期化中にエラーが発生しました。"
+
+15 = NETE_NODRIVERS, "使用可能なプロトコル・ドライバ構造体がありません。"
+
+16 = NETE_LFNOSECTION , "ローカライゼーション・ファイルに Net-Library エラー・セクションがありません。"
+
+17 = NETE_DICTSYNTAX, "アドレス辞書に構文エラーがあります。"
+
+18 = NETE_ADRTYPNOTFND, "指定されたアドレス型属性がありません。"
+
+19 = NETE_DICTCLOSE, "アドレス辞書をクローズしたときのエラーです。"
+
+20 = NETE_NOEPS, "使用可能なエンドポイント構造体がありません。"
+
+21 = NETE_EPINUSE, "使用中のエンドポイントを使用しようとしました。"
+
+22 = NETE_DRVPROPERTY, "特性を決定するための、プロトコル・ドライバ呼び出しができませんでした。"
+
+23 = NETE_DRVLISTEN, "リスナを登録するための、Net-Lib プロトコル・ドライバ呼び出しができませんでした。"
+
+24 = NETE_DRVCONNECT, "２つのエンドポイントを接続するための、Net-Lib プロトコル・ドライバ呼び出しができませんでした。"
+
+25 = NETE_DRVACCEPT, "送られてくる接続リクエストを受け取るための、プロトコル・ドライバ呼び出しができませんでした。"
+
+26 = NETE_BADIOSTATE, "エンドポイントの I/O 状態が異常です。"
+
+27 = NETE_DRVNOTAVAIL, "指定された Net-Lib プロトコル・ドライバは、使用可能ではありません。"
+
+28 = NETE_BADPROPERTY, "特性型引き数が正しくありません。"
+
+29 = NETE_DISCONNECT, "Net-Library オペレーションは切断により終了しました。"
+
+30 = NETE_DRVEXIT, "Net-Lib プロトコル・ドライバ exit ルーチンが異常終了しました。"
+
+31 = NETE_SUBACCEPT, "リスナに対する accept の発行ができませんでした。"
+
+32 = NETE_DRVREAD, "データを読み込むための Net-Lib プロトコル・ドライバ呼び出しができませんでした。"
+
+33 = NETE_RDDATLEN, "読み込まなければならないデータの大きさが、読み込みバッファの大きさを超えています。"
+
+34 = NETE_DRVREADOOB, "urgent データを読み込むための Net-Lib プロトコル・ドライバ呼び出しです。"
+
+35 = NETE_EXPNOTSUPPORT, "この Net-Lib プロトコル・ドライバでは、優先データをサポートしていません。"
+
+36 = NETE_DRVWRITE, "データを書き込むための、Net-Lib プロトコル・ドライバの呼び出しができませんでした。"
+
+37 = NETE_NULLADDR, "NULL の net_addr ポインタを渡すことはできません。"
+
+38 = NETE_NULLDICT, "NULL の辞書ポインタを渡すことはできません。"
+
+39 = NETE_NULLSTATE, "NULL の net_state ポインタを渡すことはできません。"
+
+40 = NETE_NULLRETRES, "NULL の return_reason ポインタを渡すことはできません。"
+
+41 = NETE_NULLEP, "NULL のエンドポイント・ポインタを渡すことはできません。"
+
+42 = NETE_NULLCBACK, "NULL のコールバック・ルーチン・ポインタを渡すことはできません。"
+
+43 = NETE_NULLDICTNAME, "NULL の辞書 id ポインタを渡すことはできません。"
+
+44 = NETE_NULLEXPFLAG, "NULL の優先データ・フラグ・ポインタを渡すことはできません。"
+
+45 = NETE_NULLDICTPTR, "NULL の辞書ハンドル・ポインタを渡すことはできません。"
+
+46 = NETE_NULLNEWEP, "NULL のエンドポイント・ハンドル・ポインタを渡すことはできません。"
+
+47 = NETE_NULLATTRLST, "NULL のアドレス情報ポインタを渡すことはできません。"
+
+48 = NETE_NULLADDRPTR, "NULL の net_addr ハンドル・ポインタを渡すことはできません。"
+
+49 = NETE_NULLLASTENTRY, "NULL の最終エントリ・ポインタを渡すことはできません。"
+
+50 = NETE_NULLRDDATA, "NULL の読み込みバッファを渡すことはできません。"
+
+51 = NETE_NOADDRS, "使用可能なアドレス構造体がありません。"
+
+52 = NETE_NULLBYTSRD, "NULL の bytes_read ポインタを渡すことはできません。"
+
+53 = NETE_EPCLOSING, "指定されたエンドポイントは、クローズされています。"
+
+54 = NETE_NULLWRDATA, "NULL の書き込みバッファを渡すことはできません。"
+
+55 = NETE_CANCELLED, "要求されたオペレーションは、ほかのイベントにより取り消されました。"
+
+56 = NETE_NULLINTL, "NULL の NET_INTL 構造体を渡すことはできません。"
+
+57 = NETE_NULLUSERPTR, "NULL の user-pointer バッファを渡すことはできません。"
+
+58 = NETE_BADDICT, "正しくない辞書ハンドルを使用しました。"
+
+59 = NETE_BADADDR, "正しくないアドレス・ハンドルを使用しました。"
+
+60 = NETE_BADEP, "正しくないエンドポイント・ハンドルを使用しました。"
+
+61 = NETE_DRVCLOSE, "エンドポイントをクローズするための、Net-Lib プロトコル・ドライバの呼び出しができませんでした。"
+
+62 = NETE_VERSION, "プロトコル・ドライバは、カレント Net-Lib と互換性がありません。Net-Libraryのバージョンが古い可能性があります。"
+
+63 = NETE_NULLSUPPORT, "NULL のポインタを net_capability() の 'supported' パラメータへ渡すことはできません。"
+
+64 = NETE_BADPROCMODE, "プロセッシング・モードが正しくありません。"
+
+65 = NETE_FUNCCODE, "正しくない関数コードが net_report() に渡されました。"
+
+66 = NETE_DRVINUSE, "現在使用中のため、ドライバをアンロードすることができません。"
+
+67 = NETE_NCONNECTED, "接続されていないエンドポイントに I/O を行ないました。"
+
+68 = NETE_NOMULTIRW, "２回以上の読み取りを行なうことはできません。"
+
+69 = NETE_NULLPREVMODE, "NULL の previous mode ポインタは無効です。"
+
+70 = NETE_NULLREPORT, "net_opt_report() によりレポートが要求されていない場合は、net_report() を呼び出すことはできません。"
+
+71 = NETE_LFILENAME, "net_intl_errstr() の呼び出しで、ローカライゼーション・ファイル名が指定されていません。"
+
+72 = NETE_INTLOPEN, "intl_open を使用した、ローカライゼーション・ファイルをオープンできませんでした。"
+
+73 = NETE_UP1ENIGNE, "Net-Lib の単一プロセッサ・バージョンでは、１エンジンしか許されません。"
+
+74 = NETE_NULLCBPARM, "Net-Library ルーチンへの無効な NULL のコールバック・パラメータです。"
+
+75 = NETE_NULLINFOLEN, "net_address_info() への無効な NULL の情報長さポインタです。"
+
+76 = NETE_UNKWNMODE, "要求されたコールバック・モードが認識できません。"
+
+77 = NETE_BADEPNUM, "要求されたエンドポイント番号が正しくありません。"
+
+78 = NETE_NULLENGPTR, "NULL のエンジン・ポインタを net_engine_init() へ渡すことはできません。"
+
+79 = NETE_NULLENGINE, "NULL のエンジン・ポインタを Net-Library ルーチンへ渡すことはできません。"
+
+80 = NETE_NOENGS, "使用可能なエンジン構造体がありません。"
+
+81 = NETE_NOREQUESTS, "使用可能なリクエスト構造体がありません。"
+
+82 = NETE_BADMONFLAG, "要求されたモニタ・フラグ・マスクが正しくありません。"
+
+83 = NETE_EPINCLOSE, "要求されたエンドポイントがクローズしています。"
+
+84 = NETE_BADMODE, "要求されたモードは、サポートされていません。"
+
+85 = NETE_DRVLOAD, "プロトコル・ドライバのロードができませんでした。"
+
+86 = NETE_DRVUNLOAD, "プロトコル・ドライバのアンロードができませんでした。"
+
+87 = NETE_MEMPOLICY, "要求されたメモリ・ポリシが正しくありません。"
+
+88 = NETE_MEMREALLOC, "メモリの再割り当てができませんでした。"
+
+89 = NETE_MEMALLOC, "メモリ割り当てができませんでした。"
+
+90 = NETE_NULLSIZE, "NULL のサイズ・ポインタを net_initsize() へ渡すことはできません。"
+
+91 = NETE_NULLSTATEPTR, "NULL の NET_STATE ポインタを net_init() へ渡すことはできません。"
+
+92 = NETE_NULLSPNLCKCNTPTR, "NULL のスピンロック・カウント・ポインタを net_spinlocks() へ渡すことはできません。"
+
+93 = NETE_ENGACTIVE, "起動中のエンジンがある間は、要求されたオペレーションを実行できません。"
+
+94 = NETE_UNKWIDTYPE, "指定されたアドレス辞書 id 型が正しくありません。"
+
+95 = NETE_SECNOTFOUND, "要求された config ファイル・セクションがありません。"
+
+96 = NETE_DRVNOTLOADED, "指定されたネットワーク・プロトコルのためのネットワーク・ドライバは、ロードされていません。"
+
+97 = NETE_NODRVERRSTR, "カレント・エラーに対して使用可能なプロトコル・ドライバ・エラー文字列がありません。"
+
+98 = NETE_SHRTINFOBUF, "アドレス情報バッファが小さすぎます。"
+
+99 = NETE_NULLNFDS, "NULL の nfds ポインタを net_poll_external() へ渡すことはできません。"
+
+100 = NETE_BADNFDS, "要求されたファイル記述子の数が正しくありません。"
+
+101 = NETE_NULLRDBUF, "NULL の読み込みバッファを Net-Library へ渡すことはできません。"
+
+102 = NETE_NULLWRTBUF, "NULL の書き込みバッファを Net-Library へ渡すことはできません。"
+
+103 = NETE_INTLNXTSEC, "intl_nextsection の呼び出しができませんでした。"
+
+104 = NETE_INTLNXTVAL, "intl_nextvalue の呼び出しができませんでした。"
+
+105 = NETE_LFNOVALUE, "エラー・メッセージのないローカライゼーション・ファイル・エントリがあります。"
+
+106 = NETE_BADERRID, "正しくないエラー番号を持つローカライゼーション・ファイル・エントリがあります。"
+
+107 = NETE_INTLNXTENT, " intl_nextentry の呼び出しができませんでした。"
+
+108 = NETE_NULLINTLSIZE, "NULL のサイズ・ポインタを net_intl_size へ渡すことはできません。"
+
+109 = NETE_NULLINTLBUF, "NULL のバッファ・ポインタを net_intl_errstr へ渡すことはできません。"
+
+110 = NETE_BADMSECS, "milliseconds パラメータの値が正しくありません。"
+
+111 = NETE_NOLISTENERS, "受信しているエンドポイントがない場合、net_accept を呼び出すことはできません。"
+
+112 = NETE_POLLNOTSUP, "関数 net_poll_external() は、サポートされていません。"
+
+113 = NETE_NONEQUEUED, "キューにリクエストがない場合、リクエストの完了を待つことはできません。"
+
+114 = NETE_BADSIGNAL, "Net-Library では、要求されたシグナルは使用されません。"
+
+115 = NETE_DICTINUSE, "複数のタスクを持つアドレス辞書をアクセスしました。"
+
+116 = NETE_NULLEXPFLG, "NULL の優先フラグ・ポインタを net_read へ渡すことはできません。"
+
+117 = NETE_NODRVCLASS, "要求されたプロトコル・クラスの使用可能なドライバはありません。"
+
+118 = NETE_BADSRCHATTR, "属性検索リストに正しくないエントリがあります。"
+
+119 = NETE_BADDICTID, "正しくない辞書 id が net_dict_open に渡されました。"
+
+120 = NETE_INVALIDVERSION, "Net-Library のバージョンが正しくありません。"
+
+121 = NETE_NULLVALUE, "このオプションでは、値引き数を NULL にすることはできません。"
+
+122 = NETE_NULLARG, "ルーチンに対して正しくない NULL 引き数があります。"
+
+123 = NETE_BUFTOOSMALL, "バッファが小さすぎます。"
+
+124 = NETE_BADCMD, "コマンド引き数が正しくありません。"
+
+125 = NETE_NULLBUF, "バッファ引き数がNullです。"
+
+126 = NETE_NULLPROPINFO, "propinfo 引数が NULL です。"
+
+127 = NETE_SETNOTSUPPORTED, "Net-Lib 特性の設定はサポートされていません。"
+
+128 = NETE_INTLHOME, "intl_home の呼び出しができませんでした。"
+
+129 = NETE_INVOSERR, "有効な OS エラー番号ではありません。"
+
+130 = NETE_RLIMITERR, "オープン・ファイルの最大数を取得／設定できません。"
+
+131 = NETE_GETEF, "イベント・フラグの作成ができません。"
+
+132 = NETE_FREEEF, "イベント・フラグの解放ができません。"
+
+133 = NETE_INSQTI, "インターロックされたキューへのエレメントの挿入ができませんでした。"
+
+134 = NETE_REMQHI, "インターロックされたキューからのエレメントの削除ができませんでした。"
+
+135 = NETE_SETIMR, "タイマのセットができませんでした。"
+
+136 = NETE_CANTIM, "タイマの取り消しができませんでした。"
+
+137 = NETE_WAITFR, "イベント待ちができませんでした。"
+
+138 = NETE_CLREF, "イベント・フラグをクリアできませんでした。"
+
+139 = NETE_SETEF, "イベント・フラグをセットできませんでした。"
+
+140 = NETE_DRVATTNHDLR, "プロトコル・ドライバ・アテンション・ハンドラのインストールができませんでした。"
+
+141 = NETE_QUEOPEN, "スレッド通信キューのオープンができませんでした。"
+
+142 = NETE_QUEREAD, "スレッド通信キューからの読み込みができませんでした。"
+
+143 = NETE_QUEWRITE, "スレッド通信キューへの書き込みができませんでした。"
+
+144 = NETE_QUECLOSE, "スレッド通信キューのクローズができませんでした。"
+
+145 = NETE_CREATETHREAD, "スレッドの生成ができませんでした。"
+
+146 = NETE_EVENTCREATE, "イベント・オブジェクトの作成ができませんでした。"
+
+147 = NETE_EVENTPOST, "イベント・オブジェクトのポストができませんでした。"
+
+148 = NETE_EVENTCLEAR, "イベント・オブジェクトのクリアができませんでした。"
+
+149 = NETE_EVENTWAIT, "イベント・オブジェクトの待機ができませんでした。"
+
+150 = NETE_CREATEMTX, "mutex セマフォの作成ができませんでした。"
+
+151 = NETE_REQUESTMTX, "mutex セマフォの排他的所有権の取得ができませんでした。"
+
+152 = NETE_RELEASEMTX, "mutex セマフォの解放ができませんでした。"
+
+153 = NETE_DESTROYMTX, "mutex セマフォの破壊ができませんでした。"
+
+154 = NETE_THRDSPND, "スレッドの中断ができませんでした。"
+
+155 = NETE_THRDRESUME, "スレッドの再開ができませんでした。"
+
+156 = NETE_THRDKILL, "スレッドの終了ができませんでした。"
+
+157 = NETE_SETSIGHDLR, "適切なシグナル・ハンドラをセットできません。"
+
+158 = NETE_SELECTFAIL, "select() の呼び出しができませんでした。"
+
+159 = NETE_FDOFLOW, "使用可能なファイル記述子がありません。リスナを停止します。"
+
+160 = NETE_NOPOLLSTRATS, "使用可能なポーリング・ストラテジ構造体がありません。"
+
+161 = NETE_NOSIGNALS, "Net-Library は、シグナルを生成するプロトコル・ドライバをサポートすることはできません。"
+
+162 = NETE_UNKNOWN, "未知の Net-Library エラーです。"
+
+164 = NETE_OODDRIVER, "ドライバのバージョンがサポートされているバージョンよりも前のものです。"
+
+165 = NETE_OSGENERIC, "オペレーティング・システムのエラーです。 - %1!"
+
+166 = NETE_DRVLOCFAIL, "ドライバ・ローカライゼーション・ファイルのオープンができませんでした。"
+
+167 = NETE_OSOBJECT, "OS Objectの生成ができませんでした。"
+
+168 = NET_QPRFSTR, "アドレス・ファイルから読込み中にエラーが発生しました。"
+
+170 = NETE_BADHANDLER, "不正なシグナル・ハンドラ"
+
+171 = NETE_FLTCONNECT, "Net-Lib フィルタ・ドライバは 2 つのエンドポイントを接続できませんでした。"
+
+172 = NETE_CONABORTED, "接続はアボートされました"
+
+173 = NETE_TIMEOUT, "Net-lib オペレーションはタイムアウトしました"
+
+174 = NETE_URGENT, "OOB データを受信しました"
+
+[filter]
+
+1 = FLTE_CALLFAIL, "ベンダ呼び出しができませんでした。"
+2 = FLTE_BUFOF, "バッファ・オーバフロー・エラーです。"
+3 = FLTE_MALLOC, "メモリ割り付けエラーです。"
+4 = FLTE_SRVNOTSUPP, "サービスはサポートされていません。"
+5 = FLTE_INVPRM, "無効なパラメータです。"
+6 = FLTE_BADPOINTER, "不正なポインタです。"
+
+
+
+; TLS/SSL specific errors:
+60 = FLTE_TLS_MSTRINIT, "SSL/TLS マスタ・コンテキストを初期化できませんでした。"
+61 = FLTE_TLS_IO_SEMANTICS, "I/O セマンティックを部分 I/O に設定できませんでした。"
+62 = FLTE_TLS_PROTOCOLVER, "SSL/TLS プロトコルのバージョンを設定できませんでした。"
+63 = FLTE_TLS_RANDOMOBJ, "PRNG オブジェクトを作成できませんでした。"
+64 = FLTE_TLS_RANDOMINIT, "PRNG オブジェクトを初期化できませんでした。"
+65 = FLTE_TLS_RANDOMSEED, "PRNG をシードできませんでした。"
+66 = FLTE_TLS_RANDOMREF, "PRNG オブジェクト参照を設定できませんでした。"
+67 = FLTE_TLS_RANDOMFUNC, "PRNG 機能を設定できませんでした。"
+68 = FLTE_TLS_CERTFUNC, "証明書チェック機能を設定できませんでした。"
+69 = FLTE_TLS_DUPCONTEXT, "SSL/TLS コンテキスト情報が重複している可能性があります。"
+70 = FLTE_TLS_DUPCHILD, "SSL/TLS 子コンテキストを作成できませんでした。"
+71 = FLTE_TLS_GETVER, "SSL/TLS プロトコルのバージョンを取得できませんでした。"
+72 = FLTE_TLS_INVALIDVER, "不明な SSL/TLS プロトコルのバージョンです。"
+73 = FLTE_TLS_NOVALIDCIPHERS, "暗号スイートがまったく認識されない暗号が設定されました。"
+74 = FLTE_TLS_SETCIPHER, "暗号スイートの設定エラーです。"
+75 = FLTE_TLS_LOADCERT, "ローカル ID のロードに失敗しました。"
+76 = FLTE_TLS_LOADCA, "CA 情報のロードに失敗しました。"
+77 = FLTE_TLS_GETCERTLEN, "ピアの証明書の長さを取得できませんでした。"
+78 = FLTE_TLS_GETCERT, "ピアの証明書を取得できませんでした。"
+79 = FLTE_TLS_GETNAME, "ピアの共通名を抽出できませんでした。"
+80 = FLTE_TLS_SETIOREF, "TLS/SSL I/O 参照を設定できませんでした。"
+81 = FLTE_TLS_SETCERTREF, "TLS/SSL 証明書の参照を設定できませんでした。"
+82 = FLTE_TLS_SETREADFUNC, "TLS/SSL リード・コールバック関数を設定できませんでした。"
+83 = FLTE_TLS_SETWRITEFUNC, "TLS/SSL ライト・コールバック関数を設定できませんでした。"
+84 = FLTE_TLS_HANDSHAKEFAIL, "TLS/SSL ハンドシェイクに失敗しました。"
+85 = FLTE_TLS_SERVERSIDE, "TLS/SSL をサーバ側に設定できませんでした。"
+86 = FLTE_TLS_CLIENTSIDE, "TLS/SSL をクライアント側に設定できませんでした。"
+87 = FLTE_TLS_NOEP, "TLS/SSL が設定される前に I/O が試行されました。"
+88 = FLTE_TLS_NOCONTEXT, "SSL ハンドシェイクの前に I/O が試行されました。"
+89 = FLTE_TLS_READERROR, "読み込み中にエラーが発生しました。"
+90 = FLTE_TLS_WRITEERROR, "書き込み中にエラーが発生しました。"
+91 = FLTE_TLS_DNFCOUNT, "リモート証明書の DN フィールド数を取得できませんでした。"
+92 = FLTE_TLS_DNFEXTRACT, "リモート証明書から識別名を抽出できませんでした。"
+93 = FLTE_TLS_EXTCOUNT, "リモート証明書の拡張をカウントできませんでした。"
+94 = FLTE_TLS_EXTEXTRACT, "リモート証明書から拡張情報を抽出できませんでした。"
+95 = FLTE_TLS_REQCLNT, "必要なクライアント証明書の呼び出しに失敗しました。"
+
+; end of tcllib error strings;
+;

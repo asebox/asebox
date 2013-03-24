@@ -1,0 +1,139 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Błąd krytyczny: Przydzielanie pamięci nie powiodło się."
+2 = ZZZZZ, "Błąd we/wy: Za mało miejsca dla danych wejściowych."
+3 = ZZZZZ, "Otwarcie pliku tymczasowego '%1!' do zapisu w dbedit() nie powiodło się."
+4 = ZZZZZ, "Nie można wywołać edytora '%1!'."
+5 = ZZZZZ, "Nie można otworzyć pliku wejściowego '%1!'."
+6 = ZZZZZ, "Nie można otworzyć pliku wyjściowego '%1!'."
+7 = ZZZZZ, "bcp: Nieznany parametr '%1!'."
+8 = ZZZZZ, "Podczas używania flagi '%1!' w celu ustawienia pierwszego wiersza do kopiowania, numer wiersza musi być większy lub równy 1."
+9 = ZZZZZ, "Podczas używania flag '%1!' i '%2!' w celu ustawienia pierwszego i ostatniego wiersza do kopiowania, numer pierwszego wiersza musi być mniejszy niż numer ostatniego."
+10 = ZZZZZ, "Podczas używania flagi '%1!' w celu ustawienia ostatniego wiersza do kopiowania, numer wiersza musi być większy lub równy 1."
+11 = ZZZZZ, "Kierunek kopiowania musi mieć wartość 'in' (do) lub 'out' (z)."
+12 = ZZZZZ, "Po fladze '%1!' musi znajdować się liczba typu integer.  '%2!' nie jest dozwoloną liczbą typu integer."
+13 = ZZZZZ, "Ostrzeżenie: Flaga '%1!' występuje więcej niż jeden raz.  Nowa wartość flagi zastępuje starą."
+14 = ZZZZZ, "Ostrzeżenie: '%1!' zastępuje '%2!'"
+15 = ZZZZZ, "Nieprawidłowa długość prefiksu. Prawidłowe długości prefiksu to 0, 1, 2 lub 4."
+16 = ZZZZZ, "Poziom (1-16): "
+17 = ZZZZZ, "Nieprawidłowy poziom."
+18 = ZZZZZ, "Przedział (1-64): "
+19 = ZZZZZ, "Dozwolone wiele wpisów rozdzielonych nowego wiersza; znak nowego wiersza po wykonaniu. "
+20 = ZZZZZ, "Logowanie jako SA (N/T): "
+21 = ZZZZZ, "Spróbuj ponownie:"
+22 = ZZZZZ, "Nieprawidłowy przedział."
+23 = ZZZZZ, "Rozpoczęcie kopiowania..."
+24 = ZZZZZ, "Skopiowanych wierszy: %1!."
+25 = ZZZZZ, "Czas zegara (ms): Ogółem = %1!"
+26 = ZZZZZ, "Czy chcesz zapisać w pliku informacje o formacie? [T/n] "
+27 = ZZZZZ, "Nazwa pliku hosta [%1!]: "
+28 = ZZZZZ, "Nieprawidłowy typ kolumny. Prawidłowe typy to:"
+29 = ZZZZZ, "    <cr>: ten sam typ jak kolumna DataServer."
+30 = ZZZZZ, "  Średnia = %1! (%2! wierszy na sek.)"
+31 = ZZZZZ, "Kopiowanie bcp %1! nie powiodło się."
+32 = ZZZZZ, "Kopiowanie bcp %1! częściowo nie powiodło się."
+33 = ZZZZZ, "Nieprawidłowa dokładność. Dokładność powinna należeć do przedziału od %1! do %2!."
+34 = ZZZZZ, "Nieprawidłowa skala. Skala powinna należeć do przedziału od %1! do %2! i powinna być mniejsza lub równa dokładności."
+35 = ZZZZZ, "Zwrócony nieoczekiwany typ wyniku."
+36 = ZZZZZ, "Zwrócony nieoczekiwany wynik."
+37 = ZZZZZ, "Błąd: Zapisywanie pliku BCP (%1!)!"
+38 = ZZZZZ, "Pobieranie specyfikacji pliku hosta nie powiodło się."
+39 = ZZZZZ, "Tabela, którą procedura kopiowania zbiorczego próbuje skopiować do pliku hosta, jest krótsza niż liczba wierszy wskazanych do pominięcia przy kopiowaniu zbiorczym."
+40 = ZZZZZ, "Nieoczekiwany kod zwrotny zwrócony przez procedurę blk_rowxfer_mult."
+41 = ZZZZZ, "Napotkano nieznany typ danych '%1!'."
+42 = ZZZZZ, "Błąd we/wy podczas odczytu pliku błędów bcp."
+43 = ZZZZZ, "Błąd we/wy podczas zapisu pliku błędów bcp."
+44 = ZZZZZ, "Nie można otworzyć pliku błędów."
+45 = ZZZZZ, "Napotkano nieoczekiwany koniec pliku (EOF) w pliku danych BCP."
+46 = ZZZZZ, "W pliku danych BCP znaleziono ujemny prefiks długości."
+47 = ZZZZZ, "Plik hosta '%1!' BCP zawiera tylko %2! wiersze. Pominięcie wszystkich tych wierszy nie jest dozwolone."
+48 = ZZZZZ, "Plik hosta '%1!' BCP zawiera tylko %2! wierszy. Odczytanie żądanej liczby wierszy było niemożliwe."
+49 = ZZZZZ, "W celu kopiowania zbiorczego, wszystkie dane o zmiennej długości muszą posiadać określony prefiks długości lub terminator."
+50 = ZZZZZ, "Pole typu text/image jest większe od maksymalnej wartości. Dane zostały obcięte."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Błąd krytyczny: Przydzielanie pamięci nie powiodło się."
+2 = ZZZZZ, "Kierunek kopiowania musi mieć wartość 'in' (do) lub 'out' (z)."
+3 = ZZZZZ, "Ostrzeżenie: '%1!' zastępuje '%2!'."
+4 = ZZZZZ, "Podczas używania flagi '%1!' w celu ustawienia pierwszego wiersza do kopiowania, numer wiersza musi być większy lub równy 1."
+5 = ZZZZZ, "Podczas używania flag '%1!' i '%2!' w celu ustawienia pierwszego i ostatniego wiersza do kopiowania, numer pierwszego wiersza musi być mniejszy niż numer ostatniego."
+6 = ZZZZZ, "Podczas używania flagi '%1!' w celu ustawienia ostatniego wiersza do kopiowania, numer wiersza musi być większy lub równy 1."
+7 = ZZZZZ, "Podczas używania flagi '%1!' w celu ustawienia rozmiaru wsadu, liczba musi być większa lub równa 1."
+8 = ZZZZZ, "Ostrzeżenie: Ignorowanie flagi '%1!' podczas kopiowania w kierunku 'z'."
+9 = ZZZZZ, "Nie wolno używać jednocześnie '%1!' i '%2!' podczas kopiowania w kierunku 'do'."
+10 = ZZZZZ, "Podczas używania flagi '%1!' w celu ustawienia wartości początkowej kolumny identity, liczba musi być większa lub równa 0."
+11 = ZZZZZ, "Nie można używać jednocześnie flag '%1!' i '%2!'."
+12 = ZZZZZ, "Ostrzeżenie: Ponowne ustawianie rozmiaru wsadu od %1! do %2!."
+13 = ZZZZZ, "Ustawianie właściwości połączenia nie powiodło się."
+14 = ZZZZZ, "Nawiązanie połączenia nie powiodło się."
+15 = ZZZZZ, "Ustawianie opcji połączenia nie powiodło się."
+16 = ZZZZZ, "Pobranie języka nie powiodło się."
+17 = ZZZZZ, "Ustawianie wartości domyślnych nie powiodło się."
+18 = ZZZZZ, "Pobranie formatu tabeli nie powiodło się."
+19 = ZZZZZ, "Wykonanie procedury blk_init nie powiodło się."
+20 = ZZZZZ, "Nie można otworzyć pliku błędów."
+21 = ZZZZZ, "Nierozpoznany obiekt lokalizacji.  Używanie wartości domyślnej '%1!'."
+22 = ZZZZZ, "Błąd wewnętrzny: Nieprawidłowy typ lokalizacji został przekazany do funkcji cs_locale()."
+23 = ZZZZZ, "Ostrzeżenie: Opcja '%1!' nie jest obsługiwana, została zignorowana."
+24 = ZZZZZ, "Błąd składniowy w '%1!'."
+25 = ZZZZZ, "Błąd podczas próby ładowania pary tabel translacyjnych."
+26 = ZZZZZ, "Wystąpił błąd podczas próby skonfigurowania kontekstu aplikacji na potrzeby struktur związanych z lokalizacją."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Wsad został pomyślnie skopiowany zbiorczo do SQL Server."
+2 = ZZZZZ, "Liczba wierszy wysłanych do SQL Server: %1!."
+3 = ZZZZZ, "Liczba wierszy pomyślnie skopiowanych zbiorczo do pliku hosta: %1!."
+4 = ZZZZZ, "Przerwanie - kopiowanie zbiorcze zostało przerwane."
+5 = ZZZZZ, "Liczba skopiowanych wierszy: %1!."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Hasło: "
+2 = ZZZZZ, "Wpisz typ przechowywania pliku pola %1! [%2!]: "
+3 = ZZZZZ, "Wpisz długość pola %1! [brak maksymalnej długości]: "
+4 = ZZZZZ, "Wpisz długość pola %1! [%2!]: "
+5 = ZZZZZ, "Wpisz terminator pola [%1!]: "
+6 = ZZZZZ, "Wpisz długość prefiksu pola %1! [%2!]: "
+7 = ZZZZZ, "Wpisz dokładność pola %1! [%2!]: "
+8 = ZZZZZ, "Wpisz skalę pola %1! [%2!]: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: Nie można otworzyć pliku formatu '%2!'."
+2 = ZZZZZ, "Błąd we/wy podczas odczytu pliku formatu bcp."
+3 = ZZZZZ, "Nie można zamknąć pliku formatu bcp."
+4 = ZZZZZ, "Kolumna %1!: Napotkano niedozwoloną wartość dokładności."
+5 = ZZZZZ, "Napotkano nieznany typ danych o stałej długości."
+6 = ZZZZZ, "Próba odczytu nieznanej wersji pliku formatu bcp."
+7 = ZZZZZ, "W pliku formatu bcp znaleziono niewłaściwy numer kolumny hosta."
+8 = ZZZZZ, "W pliku formatu znaleziono nierozpoznany typ danych '%1!'."
+9 = ZZZZZ, "Zgodnie z instrukcjami w pliku formatu, bcp nie kopiuje kolumny identity, wystąpił konflikt z opcją -E."
+10 = ZZZZZ, "Brak kolumn do skopiowania."
+

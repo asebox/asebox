@@ -1,0 +1,59 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+ All rights reserved.\
+ Use, duplication, or disclosure by the United States Government\
+ is subject to restrictions as set forth in FAR subparagraphs\
+ 52.227-19(a)-(d) for civilian agency contracts and DFARS\
+ 252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+ Sybase reserves all unpublished rights under the copyright laws\
+ of the United States.\
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "Warstwa veneer biblioteki COBOL CT"
+2 = ZZZZZ, "Warstwa Run-time biblioteki COBOL"
+
+[cobcterror]
+
+1 = ZZZZZ, "Niedozwolony typ dla CSBDIAG lub CTBDIAG."
+2 = ZZZZZ, "Opcja CS_USERDATA nie jest obsługiwana przez język Cobol."
+3 = ZZZZZ, "Nierozpoznany kod kompilatora."
+4 = ZZZZZ, "Konwersja zmiennej wejściowej w CTBPARAM nie powiodła się."
+5 = 22022,    "Przechowywanie lub pobieranie informacji o typie wskaźnika nie powiodło się."
+6 = ZZZZZ,   "Przydzielanie pamięci nie powiodło się."
+7 = ZZZZZ,   "Typ nieobsługiwany."
+8 = ZZZZZ,   "Możliwość CS-ALL-CAPS nie jest obsługiwana przez język Cobol."
+9 = 22003, "Liczba typu integer ma za dużo cyfr dla PIC elementu danych, do którego została pobrana."
+10 = ZZZZZ, "Kombinacja argumentów niedozwolona dla wartości SYBSETSQLDA."
+11 = ZZZZZ, "Wartość SQLDA-SQLN jest mniejsza od wartości SQLDA-SQLD."
+12 = ZZZZZ, "Wartość SQLDA-SQLD jest ujemna."
+
+[cobctorigin]
+
+1 = ZZZZZ, "błąd wewnętrzny"
+2 = ZZZZZ, "błąd podczas wywoływania programu, prawdopodobnie kodu wygenerowanego przez prekompilator"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "Wystąpił nienaprawialny błąd."
+2 = ZA000, "Wystąpił błąd wewnętrzny."
+3 = ZD000, "Otrzymano nieoczekiwane CS_COMPUTE_RESULT."
+4 = ZE000, "Otrzymano nieoczekiwane CS_CURSOR_RESULT."
+5 = ZF000, "Otrzymano nieoczekiwane CS_PARAM_RESULT."
+6 = ZG000, "Otrzymano nieoczekiwane CS_ROW_RESULT."
+7 = ZB000, "Dla sqlca, SQLCODE lub SQLSTATE nie zwrócono żadnych komunikatów."
+8 = ZC000, "Połączenie nie zostało jeszcze zdefiniowane."
+9 = ZH000, "Odebrano nieoczekiwaną wartość CS_STATUS_RESULT."
+10 = ZI000, "Otrzymano nieoczekiwane CS_DESCRIBE_RESULT."
+11 = 22005, "Wyjątek danych - błąd w przypisaniu deskryptora elementu - typ."
+12 = JZ000, "Przydzielenie pamięci nie powiodło się."
+13 = ZK000, "SQL-Server musi być w wersji 10 lub nowszej."
+14 = ZM000, "Błąd podczas inicjalizacji biblioteki Client Library."
+15 = ZN000, "Błąd podczas pobierania lub zwalniania semafora mutex."
+16 = 08002, "Nazwa połączenia jest używana."
+16 = 25019, "Awaryjne przejęcie pracy HA."
+

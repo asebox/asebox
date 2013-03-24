@@ -1,0 +1,240 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Session"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "Próba przydzielenia pamięci nie powiodła się."
+
+2  = ZZZZZ, "Błąd podczas odczytywania obiektów."
+
+3  = ZZZZZ, "Nie znaleziono żadnych obiektów."
+
+4  = ZZZZZ, "'%1!' nie istnieje."
+
+5  = ZZZZZ, "nie powiodło się"
+
+6  = ZZZZZ, "OK"
+
+7  = ZZZZZ, "Awaryjne przejęcie pracy przez sterownik interfejsu."
+
+8  = ZZZZZ, "Nie ma otwartych sesji."
+
+9  = ZZZZZ, "Dodano %1!"
+
+10 = ZZZZZ, "Błąd podczas dodawania %1!"
+
+11 = ZZZZZ, "Zmodyfikowano %1!"
+
+12 = ZZZZZ, "Błąd podczas modyfikowania %1!"
+
+13 = ZZZZZ, "Usunięto %1!"
+
+14 = ZZZZZ, "Błąd podczas usuwania %1!"
+
+15 = ZZZZZ, "Usunięto wszystkie obiekty serwera."
+
+16 = ZZZZZ, "Błąd podczas usuwania obiektów serwera."
+
+17 = ZZZZZ, "Błąd: Próba kopiowania do obiektu w tej samej sesji."
+
+18 = ZZZZZ, "Kopiowanie '%1!' z sesji %2! do '%3!' w sesji %4!"
+
+19 = ZZZZZ, "Błąd podczas kopiowania %1!"
+
+20 = ZZZZZ, "Błąd: Próba kopiowania do tej samej sesji."
+
+21 = ZZZZZ, "Kopiowanie wszystkiego do sesji %1!"
+
+22 = ZZZZZ, "Sesja %1! %2!"
+
+23 = ZZZZZ, "bieżące"
+
+24 = ZZZZZ, "Błąd składniowy"
+
+25 = ZZZZZ, "Dodatkowy atrybut"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "Typ warstwy transportowej"
+
+2 =  ZZZZZ, "Adres warstwy transportowej"
+
+3  = ZZZZZ, "Bezpieczeństwo serwera"
+
+4  = ZZZZZ, "Mechanizm bezpieczeństwa"
+
+5  = ZZZZZ, "**Wartość nieznana**"
+
+6  = ZZZZZ, "Baza DIT dla obiektu"
+
+7  = ZZZZZ, "Nazwa odróżnialna"
+
+8  = ZZZZZ, "Znaleziono obiekty serwera"
+
+9  = ZZZZZ, "Wersja"
+
+10 = ZZZZZ, "Usługa"
+
+11 = ZZZZZ, "Status"
+
+12 = ZZZZZ, "Adres"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "Konfiguracja"
+
+15 = ZZZZZ, "Nazwa DS"
+
+16 = ZZZZZ, "Serwer awaryjnego przejęcia pracy HA"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "Czy na pewno chcesz usunąć wszystkie obiekty serwera? (T/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help (pomoc)"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open (otwórz)"
+
+5  = ZZZZZ, "close (zamknij)"
+
+6  = ZZZZZ, "read (czytaj)"
+
+7  = ZZZZZ, "add (dodaj)"
+
+8  = ZZZZZ, "mod (modyfikuj)"
+
+9  = ZZZZZ, "addattr (dodaj atrybut)"
+
+10 = ZZZZZ, "del (usuń)"
+
+11 = ZZZZZ, "delete-all (usuń wszystko)"
+
+12 = ZZZZZ, "copy (kopiuj)"
+
+13 = ZZZZZ, "copyall (kopiuj wszystko)"
+
+14 = ZZZZZ, "to (do)"
+
+15 = ZZZZZ, "list (lista)"
+
+16 = ZZZZZ, "all (wszystko)"
+
+17 = ZZZZZ, "sess (sesja)"
+
+18 = ZZZZZ, "config (konfiguracja)"
+
+19 = ZZZZZ, "exit (wyjdź)"
+
+20 = ZZZZZ, "quit (zakończ)"
+
+21 = ZZZZZ, "switch (przełącz)"
+
+22 = ZZZZZ, "#done (liczba wykonanych)"
+
+23 = ZZZZZ, "#del (liczba usuniętych)"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "NAZWA_USŁUGI_KATALOGOWEJ"
+
+27 = ZZZZZ, "SESJA"
+
+28 = ZZZZZ, "NAZWA_SERWERA"
+
+29 = ZZZZZ, "NAZWA1"
+
+30 = ZZZZZ, "NAZWA2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "Ten ekran."
+
+; open [DSNAME]
+2  = ZZZZZ, "Otwiera sesję domyślnej usługi katalogowej lub usługi katalogowej NAZWA_USŁUGI_KATALOGOWEJ."
+
+; close [SESS]
+3  = ZZZZZ, "Zamyka sesję o numerze SESJA lub sesję bieżącą."
+
+; sess
+4  = ZZZZZ, "Wyświetla wszystkie sesje."
+
+; [switch] SESS
+5  = ZZZZZ, "Ustawia sesję o numerze SESJA jako sesję bieżącą."
+
+; add SERVER-NAME
+6  = ZZZZZ, "Dodaje nowy obiekt serwera do usługi katalogowej."
+
+; read SERVER-NAME
+7  = ZZZZZ, "Odczytuje zawartość obiektu serwera."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "Modyfikuje istniejący obiekt serwera."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "Dodaje atrybut do istniejącego obiektu serwera."
+
+; del SERVER-NAME
+10 = ZZZZZ, "Usuwa istniejący obiekt serwera."
+
+; list [all]
+11 = ZZZZZ, "Wyświetla wszystkie obiekty serwera."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "Kopiuje obiekt NAZWA1 do nowego obiektu NAZWA2 w sesji o numerze SESJA lub w sesji bieżącej."
+
+; copyall to SESS
+13 = ZZZZZ, "Kopiuje wszystkie obiekty serwera w sesji bieżącej do sesji o numerze SESJA."
+
+; delete-all
+14 = ZZZZZ, "Usuwa wszystkie obiekty serwera w bieżącej sesji."
+
+; config
+15 = ZZZZZ, "Wyświetla bieżącą konfigurację."
+
+; exit | quit
+16 = ZZZZZ, "Kończy działanie programu."
+
+

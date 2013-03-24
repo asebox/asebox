@@ -1,0 +1,69 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=polish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "Nie można odłączyć punktu końcowego - Błąd: %1!"
+
+2 = IPDE_ACCEPT, "Błąd podczas akceptacji nowego połączenia - Błąd: %1!"
+
+3 = IPDE_EPCLOSE, "Nie można zamknąć punktu końcowego - Błąd: %1!"
+
+4 = IPDE_PARSE, "Informacje o połączeniu mają nieprawidłową składnię"
+
+5 = IPDE_EPCONNECT, "Nie można nawiązać połączenia z serwerem - Błąd: %1!"
+
+6 = IPDE_EPMODE, "Zmiana trybu potoku nie powiodła się - Błąd: %1!"
+
+7 = IPDE_EVENTOBJ, "Utworzenie obiektu zdarzenia nie powiodło się - Błąd: %1!"
+
+8 = IPDE_NPCREATE, "Utworzenie potoku nazwanego nie powiodło się - Błąd: %1!"
+
+9 = IPDE_READ, "Odczyt z potoku nazwanego nie powiódł się - Błąd: %1!"
+
+10 = IPDE_WRITE, "Zapis do potoku nazwanego nie powiódł się - Błąd: %1!"
+
+11 = IPDE_READOOB, "Błąd podczas odczytu danych OOB - Błąd: %1!"
+
+12 = IPDE_SOCKET, "Błąd tworzenia gniazda - Błąd: %1!"
+
+13 = IPDE_HOSTNAME, "Błąd kojarzenia nazwy hosta - Błąd: %1!"
+
+14 = IPDE_EPBIND, "Błąd powiązania z adresem lokalnym - Błąd: %1!"
+
+15 = IPDE_EPLISTEN, "Błąd tworzenia punktu nasłuchiwania - Błąd: %1!"
+
+16 = IPDE_DRVINIT, "Błąd inicjalizacji sterownika - Błąd: %1!"
+
+17 = IPDE_DRVINIT, "Błąd pobierania opcji gniazda - Błąd: %1!"
+
+18 = IPDE_DRVINIT, "Błąd ustawiania opcji gniazda - Błąd: %1!"
+
+
+; end of insock error strings
+;
+
+

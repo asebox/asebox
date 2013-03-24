@@ -1,0 +1,49 @@
+; comment character is semicolon.
+; "defncopy.loc" - Localization file for defncopy.
+;
+; Sccsid @(#) defncopy.loc 1.3 12/3/93
+;
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+	Alle Rechte vorbehalten.\
+	Gebrauch, Vervielfältigung oder Bekanntmachung durch die Regierung\
+	der Vereinigten Staaten unterliegt den in FAR Unterabschnitten\
+	52.227-19(a)-(d) für Verträge mit Zivilstellen und in DFARS\
+	252.227-7013(c)(1)(ii) für Verträge mit dem Department of Defense\
+	(US-Verteidigungsministerium) genannten Beschränkungen.\
+	Sybase behält sich alle Rechte bezüglich Nichtveröffentlichungen\
+	gemäß den Urheberrechtsgesetzen der Vereinigten Staaten vor.\
+	Sybase, Inc.  6475 Christie Avenue, Emeryville, CA 94608, USA"
+; 
+; first we list the prompts:
+
+[prompts]
+;
+1  = "Passwort: "
+; End of prompts section.
+; Now we list the localized error message strings.
+[dcerrors]
+
+; ERRNOMEM
+1  = "Schwerer Fehler: Erfolglose Speicherzuweisung."
+; ERRNOREADSPACE
+2  = "E/A Fehler: Unzureichender Speicherplatz für Eingabedaten."
+; ERRNOINFILE
+3  = "Kann die Eingabedatei '%1!' nicht öffnen."
+; ERRNOOUTFILE
+4  = "Kann die Ausgabedatei '%1!' nicht öffnen."
+; ERRBADARG
+5  = "defncopy: Unbekannter Parameter '%1!'."
+; ERRNOFLUSH
+6  = "Konnte die Datei '%1!' nicht aus dem Speicher entfernen: '%2!'."
+; ERRNOOBJDEF
+7  = "Objektdefinition '%1!' nicht gefunden."
+; ERRABORT
+8  = "defncopy abgebrochen."
+; ERRBADDIRECTION
+9  = "(Richtung muß entweder 'in' oder 'out' sein.)"
+; ERRNOOBJNAME
+10  = "(mindestens ein Objekt wird benötigt.)"
+; End of error strings section.
+;
+;

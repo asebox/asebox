@@ -1,0 +1,58 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+ All rights reserved.\
+ Use, duplication, or disclosure by the United States Government\
+ is subject to restrictions as set forth in FAR subparagraphs\
+ 52.227-19(a)-(d) for civilian agency contracts and DFARS\
+ 252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+ Sybase reserves all unpublished rights under the copyright laws\
+ of the United States.\
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "COBOL CT 库veneer 层"
+2 = ZZZZZ, "COBOL 运行环境层"
+
+[cobcterror]
+
+1 = ZZZZZ, "非法类型CSBDIAG 或者CTBDIAG."
+2 = ZZZZZ, " Cobol 不支持CS_USERDATA 选项."
+3 = ZZZZZ, "未知的编译器代码."
+4 = ZZZZZ, "在CTBPARAM转变输入变量失败."
+5 = 22022, "存储或者查询指示类型信息失败."
+6 = ZZZZZ, "内存分配失败."
+7 = ZZZZZ, "不支持类型."
+8 = ZZZZZ, " Cobol 不支持CS-ALL-CAPS 能力."
+9 = 22003, " 取到的数据项 PIC的整数位太多."
+10 = ZZZZZ, "SYBSETSQLDA参数联合非法."
+11 = ZZZZZ, "SQLDA-SQLN 少于 SQLDA-SQLD."
+12 = ZZZZZ, "SQLDA-SQLD 是负的."
+
+[cobctorigin]
+
+1 = ZZZZZ, "内部错误"
+2 = ZZZZZ, "调用程序出错, 可以预编译生成代码"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "无法恢复的错误发生."
+2 = ZA000, "内部错误发生."
+3 = ZD000, "接收到非期望的CS_COMPUTE_RESULT."
+4 = ZE000, "接收到非期望的CS_CURSOR_RESULT."
+5 = ZF000, "接收到非期望的CS_PARAM_RESULT."
+6 = ZG000, "接收到非期望的CS_ROW_RESULT."
+7 = ZB000, "无sqlca, SQLCODE 或者SQLSTATE的消息返回."
+8 = ZC000, "连接未定义."
+9 = ZH000, "收到了意外的 CS_STATUS_RESULT。"
+10 = ZI000, "接收到非期望的CS_DESCRIBE_RESULT."
+11 = 22005, "数据失败 --项描述符类型错误."
+12 = JZ000, "内存分配失败."
+13 = ZK000, "SQL-Server 必须高于版本10."
+14 = ZM000, "初始化Client Library"
+15 = ZN000, "加载出错或者冲突."
+16 = 08002, "连接已用过."
+16 = 25019, "发生了 HA 故障切换。"

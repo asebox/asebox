@@ -1,0 +1,292 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Hasło: "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Nie można otworzyć pliku definicji, '%1!'."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia pamięci dla zainicjowania biblioteki Client-Library nie powiodła się."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba zainicjowania biblioteki Client-Library nie powiodła się."
+
+4 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba instalacji wywołania zwrotnego komunikatu biblioteki CS-Library nie powiodła się."
+
+5 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba instalacji wywołania zwrotnego komunikatu klienta nie powiodła się."
+
+6 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba instalacji wywołania zwrotnego komunikatu serwera nie powiodła się."
+
+7 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba podania nazwy i ścieżki pliku interfejsów do kontekstu aplikacji nie powiodła się."
+
+8 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia struktury kontekstu defncopy nie powiodła się."
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "Błąd składniowy defncopy."
+
+2 = ZZZZZ, "Użycie"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "password"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "server_name"
+
+10 = ZZZZZ, "user_name"
+
+11 = ZZZZZ, "security_options"
+
+12 = ZZZZZ, "security_mechanism"
+
+13 = ZZZZZ, "language"
+
+14 = ZZZZZ, "file_name"
+
+15 = ZZZZZ, "database_name"
+
+16 = ZZZZZ, "owner"
+
+17 = ZZZZZ, "object_name"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia wystarczającej ilości pamięci dla %1! nie powiodła się."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia wystarczającej ilości pamięci dla %1! nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia pamięci nie powiodła się."
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Nazwa serwera nie została określona.  Sprawdź wartość zmiennej środowiskowej DSQUERY."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia struktury połączenia klient/serwer nie powiodła się."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia właściwości nazwy użytkownika połączenia klient/serwer na wartość '%1!' nie powiodła się."
+
+4 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia właściwości hasła połączenia klient/serwer nie powiodła się."
+
+5 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia właściwości szyfrowania hasła połączenia klient/serwer nie powiodła się."
+
+6 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba połączenia z serwerem '%1!' nie powiodła się."
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba przydzielenia struktury polecenia biblioteki CS-Library nie powiodła się."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Nie można zainicjować polecenia SQL."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Nie można zainicjować polecenia SQL.  Dalsze kopiowanie zostało anulowane."
+
+4 = ZZZZZ, "BŁĄD KRYTYCZNY: Nie można przesłać polecenia SQL do serwera."
+
+5 = ZZZZZ, "BŁĄD KRYTYCZNY: Nie można przesłać polecenia SQL do serwera.  Dalsze kopiowanie zostało anulowane."
+
+6 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL nie powiodła się."
+
+7 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+8 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL dla obiektu '%1!' nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+9 = ZZZZZ, "BŁĄD KRYTYCZNY: Dane wynikowe polecenia SQL zostały anulowane."
+
+10 = ZZZZZ, "BŁĄD: Dane wynikowe polecenia SQL zostały anulowane.  Kopiowanie dla tego obiektu zostało anulowane."
+
+11 = ZZZZZ, "BŁĄD: Dane wynikowe polecenia SQL obiektu '%1!' zostały anulowane.  Kopiowanie dla tego obiektu zostało anulowane."
+
+12 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL wygenerowała nieoczekiwany kod zwrotny '%1!'."
+
+13 = ZZZZZ, "BŁĄD: Próba ustawienia danych wynikowych polecenia SQL obiektu '%1!' wygenerowała nieoczekiwany kod zwrotny '%1!'.  Kopiowanie dla tego obiektu zostało anulowane."
+
+14 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL wygenerowała nieoczekiwany typ wyniku '%1!'."
+
+15 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba pobrania informacji zestawu wyników nie powiodła się."
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "BŁĄD: Obiekt w pliku '%1!' nie został rozpoznany jako definicja."
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba pobrania informacji zestawu wyników obiektu '%1!' nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba dowiązania danych zestawu wyników obiektu '%1!' do wewnętrznej zmiennej programowej nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba pobrania wiersza danych wynikowych obiektu '%1!' nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+4 = ZZZZZ, "BŁĄD: Próba pobrania wiersza danych wynikowych obiektu '%1!' nie powiodła się.  Kopiowanie dla tego obiektu zostało anulowane."
+
+5 = ZZZZZ, "BŁĄD: Dane wynikowe polecenia SQL obiektu '%1!' zostały anulowane.  Kopiowanie dla tego obiektu zostało anulowane."
+
+6 = ZZZZZ, "BŁĄD: Próba pobrania wiersza danych wynikowych obiektu '%1!' wygenerowała nieoczekiwany kod zwrotny '%2!'.  Kopiowanie dla tego obiektu zostało anulowane."
+
+7 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL obiektu '%1!' wygenerowała nieoczekiwany typ wyniku '%2!'.  Kopiowanie dla tego obiektu zostało anulowane."
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Serwer napotkał błąd podczas próby dostępu do bazy danych '%1!'."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba dostępu do bazy danych '%1!' wygenerowała nieoczekiwany typ wyniku '%2!'."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba ustawienia danych wynikowych polecenia SQL nie powiodła się.  Nie można uzyskać dostępu do bazy danych '%1!'."
+
+4 = ZZZZZ, "BŁĄD KRYTYCZNY: Dane wynikowe polecenia SQL zostały anulowane.  Nie można uzyskać dostępu do bazy danych '%1!'."
+
+5 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba dostępu do bazy danych '%1!' wygenerowała nieoczekiwany kod zwrotny '%2!'."
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "BŁĄD: Serwer napotkał błąd podczas próby wykonania polecenia SQL zawartego w pliku '%1!'.  Kontynuowanie kopiowania przy użyciu następnego obiektu w pliku."
+
+2 = ZZZZZ, "BŁĄD: Próba wykonania polecenia SQL zawartego w pliku '%1!' wygenerowała nieoczekiwany typ wyniku '%2!'.  Kopiowanie dla tego obiektu zostało anulowane."
+
+3 = ZZZZZ, "BŁĄD: Próba wykonania polecenia SQL zawartego w pliku '%1!' wygenerowała nieoczekiwany kod zwrotny '%2!'.  Kopiowanie dla tego obiektu zostało anulowane."
+
+4 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba pobrania opisu wyniku po wykonaniu procedury wbudowanej nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+5 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba dowiązania wyniku po wykonaniu procedury wbudowanej do wewnętrznej zmiennej programowej nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+6 = ZZZZZ, "BŁĄD: Procedura wbudowana wygenerowała nieoczekiwany wynik statusu.  Wykonanie procedury wbudowanej zostało anulowane."
+
+7 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba pobrania wyniku po wykonaniu procedury wbudowanej nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+8 = ZZZZZ, "BŁĄD: Próba pobrania wyniku po wykonaniu procedury wbudowanej nie powiodła się.  Wykonanie procedury wbudowanej zostało anulowane."
+
+9 = ZZZZZ, "BŁĄD: Dane wynikowe polecenia SQL zostały anulowane.  Wykonanie procedury wbudowanej zostało anulowane."
+
+10 = ZZZZZ, "BŁĄD: Próba pobrania wyniku po wykonaniu procedury wbudowanej wygenerowała nieoczekiwany kod zwrotny '%1!'.  Wykonanie procedury wbudowanej zostało anulowane."
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "BŁĄD KRYTYCZNY: Serwer napotkał błąd podczas próby pobrania danych z tabeli syscomments z bazy danych '%1!'."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "BŁĄD: Nie znaleziono obiektu '%1!' w bazie danych '%2!'."
+
+2 = ZZZZZ, "BŁĄD: Serwer napotkał błąd podczas próby pobrania danych z tabeli sysobjects z bazy danych '%1!'.  Kopiowanie dla obiektu '%2!' zostało anulowane."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "BŁĄD: Nie znaleziono definicji obiektu '%1!' w bazie danych '%2!'."
+
+2 = ZZZZZ, "BŁĄD: Serwer napotkał błąd podczas próby pobrania danych z tabeli syscomments z bazy danych '%1!'.  Kopiowanie dla obiektu '%2!' zostało anulowane."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "BŁĄD: Serwer napotkał błąd podczas próby pobrania danych z tabeli sysobjects z bazy danych '%1!'.  Kopiowanie dla obiektu '%2!' zostało anulowane."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "BŁĄD: Serwer napotkał błąd podczas próby pobrania danych z tabeli syscomments z bazy danych '%1!'.  Kopiowanie dla obiektu '%2!' zostało anulowane."
+
+2 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba odczytania definicji SQL obiektu '%1!' z tabeli syscomments z bazy danych '%1!' nie powiodła się.  Dalsze kopiowanie zostało anulowane."
+
+3 = ZZZZZ, "BŁĄD KRYTYCZNY: Próba zapisu do pliku '%1!' wygenerowała błąd końca pliku - sprawdź ilość miejsca dostępnego na dysku.  Dalsze kopiowanie zostało anulowane."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "BŁĄD: Próba zakończenia biblioteki Client-Library nie powiodła się."
+
+2 = ZZZZZ, "BŁĄD: Próba usunięcia przydziału struktury polecenia biblioteki CS-Library nie powiodła się."
+
+3 = ZZZZZ, "BŁĄD: Próba pobrania właściwości skojarzonych z połączeniem klient/serwer nie powiodła się."
+
+4 = ZZZZZ, "BŁĄD: Próba zamknięcia połączenia klient/serwer z serwerem '%1!' nie powiodła się."
+
+5 = ZZZZZ, "BŁĄD: Próba usunięcia przydziału struktury połączenia biblioteki CS-Library nie powiodła się."
+
+
+

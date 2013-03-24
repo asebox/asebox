@@ -1,0 +1,222 @@
+; comment character is semicolon.
+; "bsrv.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) bsrv.hdr 160.1 1/30/95 15:19:35
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+1		= "Le serveur '%1!' n'est pas un Backup Server Sybase.",	"%s"
+10	= "mettez à niveau les entrées du Backup Server dans le fichier d'interface",	""
+11	= "mettez à niveau le fichier runserver du Backup Server",		""
+12	= "initialisez le Backup Server",				""
+13    = "démarrez le Backup Server",                            ""
+100 			= "Informations sur le Backup Server :",		""
+101 		= "nom :",				""
+102 		= "journal d'erreurs :",				""
+103 		= "interfaces :",			""
+104	= "nombre de connexions supportées :",	""
+105		= "emplacement de multibuf :",		""
+106		= "langue :",		""
+107		= "jeu de caractères :",	""
+108		= "fichier de configuration de bande :",		""
+300		= "AJOUTEZ UN NOUVEAU BACKUP SERVER",	 ""
+301		= "",	 ""
+302		= "AJOUTEZ UN NOUVEAU BACKUP SERVER",	 ""
+303		= "\
+auditinit affiche la liste des serveurs disponibles pour la configuration. \
+Cette liste intègre les serveurs Adaptive Server et Backup Server. \
+Si la liste occupe plusieurs écrans\, faites-la défiler. \
+Sélectionnez le Backup Server à configurer. \\n\\n* Touches de \
+contrôle *\\n\\nAppuyez sur Ctrl-f pour faire défiler la liste des serveurs \
+disponibles pour la configuration. Vous devez atteindre la fin \
+de la liste pour pouvoir sélectionner un serveur.\\n\\nAppuyez sur Ctrl-b \
+pour remonter dans la liste des serveurs disponibles pour la \
+configuration. \\n\\nVous n'avez pas besoin d'appuyer sur Ctrl-a pour \
+passer à l'écran suivant\, car la sélection d'un serveur appelle \
+automatiquement l'écran suivant.\\n\\nAppuyez sur Ctrl-x pour quitter \
+cet écran. auditinit revient au menu précédent. En appuyant à nouveau \
+sur Ctrl-x\, vous pouvez revenir aux menus précédents et quitter \
+auditinit pour retourner à l'invite du système d'exploitation.",	 ""
+304	= "\
+auditinit affiche la liste des serveurs déjà installés et disponibles pour \
+la configuration. Cette liste intègre les serveurs Adaptive Server et \
+Backup Server. Si la liste occupe plusieurs écrans\, utilisez la \
+touche fléchée vers le bas pour la faire défiler. Sélectionnez le \
+Backup Server à configurer.",	 ""
+320		= "CONFIGUREZ UN BACKUP SERVER EXISTANT",	 ""
+321		= "",	 ""
+322		= "CONFIGUREZ UN BACKUP SERVER EXISTANT",	 ""
+323	= "\
+auditinit affiche la liste des serveurs déjà installés et disponibles pour \
+la reconfiguration. Cette liste intègre les serveurs Adaptive Server et \
+Backup Server. Si la liste occupe plusieurs écrans\, faites-la défiler. \
+Sélectionnez le Backup Server à reconfigurer. \
+\\n\\n* Touches de contrôle *\\n\\nAppuyez sur Ctrl-f pour faire \
+défiler la liste des serveurs disponibles pour la reconfiguration. \
+Vous devez atteindre la fin de la liste pour pouvoir sélectionner un \
+serveur.\\n\\nAppuyez sur Ctrl-b pour remonter dans la liste des serveurs \
+disponibles pour la reconfiguration. \\n\\nVous n'avez pas besoin d'appuyer \
+sur Ctrl-a pour passer à l'écran suivant\, car la sélection d'un serveur \
+appelle automatiquement l'écran suivant. \\n\\nAppuyez sur Ctrl-x pour \
+quitter cet écran. auditinit revient au menu précédent. En appuyant \
+à nouveau sur Ctrl-x\, vous pouvez revenir aux menus précédents et \
+quitter auditinit pour retourner à l'invite du système d'exploitation.",	 ""
+324	= "\
+auditinit affiche la liste des serveurs déjà installés et disponibles pour \
+la reconfiguration. Cette liste intègre les serveurs Adaptive Server et \
+Backup Server. Si la liste occupe plusieurs écrans\, utilisez la \
+touche fléchée vers le bas pour la faire défiler. Sélectionnez le \
+Backup Server à reconfigurer.",	 ""
+340		= "BACKUP SERVER NOUVEAU OU EXISTANT",	 ""
+341		= "",	 ""
+342		= "BACKUP SERVER NOUVEAU OU EXISTANT",	 ""
+343	= "\
+1.  Configurer un nouveau Backup Server\\n\\nSélectionnez cette option pour \
+configurer un nouveau Backup Server. Comme pour la version 10.0\, toutes les \
+opérations DUMP/LOAD nécessitent l'utilisation d'un Backup Server. Vous devez \
+configurer un Backup Server pour pouvoir sauvegarder et restaurer vos bases \
+de données.\\n\\n2. Configurer un Backup Server existant\\n\\nSélectionnez \
+cette option pour reconfigurer un Backup Server préalablement configuré. \
+\\n\\n\
+AUDITINIT NE SUPPORTE PLUS L'EDITION DE FICHIERS D'INTERFACE.\\n\\n\
+Vous devez utiliser SYBSETUP\, DSEDIT\, DSEDIT_DCE ou un éditeur de texte \
+avant de lancer auditinit pour installer ou modifier un serveur :\\n\
+- avant l'installation\, créez une entrée dans le fichier d'interface\,\\n\
+- avant de modifier un serveur\, modifiez son entrée dans le fichier d'interface.\\n\
+Pour plus de détails, consultez votre documentation.\\n\\n\
+* Touches de contrôle *\\n\\nVous n'avez pas besoin d'appuyer sur Ctrl-a \
+pour passer à l'écran suivant\, car la sélection d'une option de \
+configuration appelle automatiquement l'écran suivant.\\n\\nAppuyez sur \
+Ctrl-x pour quitter cet écran. auditinit revient au menu précédent. \
+En appuyant à nouveau sur Ctrl-x\, vous pouvez revenir aux menus précédents \
+et quitter auditinit pour retourner à l'invite du système d'exploitation.", ""
+344	= "\
+Configurer un nouveau Backup Server\\n \\nSélectionnez cette option pour \
+configurer un nouveau Backup Server. Comme pour la version 10.0\, toutes les \
+opérations DUMP/LOAD nécessitent l'utilisation d'un Backup Server. Vous devez \
+configurer un Backup Server pour pouvoir sauvegarder et restaurer vos bases \
+de données.\\n \\nConfigurer un Backup Server existant\\n \\nSélectionnez \
+cette option pour reconfigurer un Backup Server préalablement configuré. \
+\\n\\n\
+AUDITINIT NE SUPPORTE PLUS L'EDITION DE FICHIERS D'INTERFACE.\\n\\n\
+Vous devez utiliser SYBSETUP\, DSEDIT\, DSEDIT_DCE ou un éditeur de texte \
+avant de lancer auditinit pour installer ou modifier un serveur :\\n\
+- avant l'installation\, créez une entrée dans le fichier d'interface\,\\n\
+- avant de modifier un serveur\, modifiez son entrée dans le fichier d'interface.\\n\
+Pour plus de détails, consultez votre documentation.",	""
+360		= "CONFIGURATION D'UN BACKUP SERVER",	 ""
+361		= "",	 ""
+362		= "CONFIGURATION D'UN BACKUP SERVER",	 ""
+363	= "\
+1.  Journal d'erreurs de Backup Server\\n\\nSélectionnez cette option pour \
+modifier le chemin par défaut affiché pour le journal d'erreurs de Backup \
+Server. Tapez le chemin d'accès complet en regard de l'invite. Le chemin par \
+défaut est backup.log dans le sous-répertoire install du nouveau répertoire \
+SYBASE.\\n\\n2. Fichier quota de Backup Server\\n\\nSélectionnez cette option \
+pour utiliser un fichier quota afin de définir les paramètres système de \
+Backup Server. Indiquez le chemin d'accès à l'invite.\\n\\L'utilitaire \
+startserver se sert du fichier quota pour fournir à Backup Server les quotas \
+de ressource VMS. Si vous n'indiquez pas de chemin pour le fichier quota\, \
+startserver recherche un fichier quota dans le répertoire par défaut. Pour \
+plus d'informations sur les fichiers quota\, reportez-vous au manuel \
+System Administration Guide Supplement pour votre plate-forme.\\n\\n\
+* Touches de contrôle *\\n\\nAppuyez sur Ctrl-a pour valider l'emplacement \
+affiché pour le journal d'erreurs de Backup Server et les valeurs que vous \
+avez entrées pour le fichier d'interface de Backup Server.\\n\\nauditinit \
+affiche l'invite \"Exécuter la configuration de Backup Server ?\" Tapez \"o\" \
+pour installer ou configurer Backup Server.\\n\\nauditinit affiche une série \
+de messages au cours de la configuration de Backup Server. Si la configuration \
+échoue\, auditinit affiche des messages d'erreur. Vous pouvez consulter ces \
+messages d'erreur ainsi que le journal d'erreurs de Backup Server pour \
+déterminer la cause de l'échec.\\n\\nA l'issue de la configuration de Backup \
+Server\, auditinit affiche un message indiquant l'aboutissement de la \
+configuration et revient au menu BACKUP SERVER NOUVEAU OU EXISTANT. \
+\\n\\nAppuyez sur Ctrl-x pour quitter cet écran. auditinit revient au \
+menu précédent. En appuyant à nouveau sur Ctrl-x\, vous pouvez revenir \
+aux menus précédents et quitter auditinit pour retourner à l'invite \
+du système d'exploitation.",	 ""
+364	= "\
+1.  Journal d'erreurs de Backup Server\\n\\nSélectionnez cette option pour \
+modifier le chemin par défaut affiché pour le journal d'erreurs de Backup \
+Server. Tapez le chemin d'accès complet en regard de l'invite. Le chemin par \
+défaut est backup.log dans le sous-répertoire install du nouveau répertoire \
+SYBASE.\\n\\n* Touches de contrôle *\\n\\nAppuyez sur Ctrl-a pour valider \
+l'emplacement affiché pour le journal d'erreurs de Backup Server et les \
+valeurs que vous avez entrées pour le fichier d'interface de Backup \
+Server.\\n\\nauditinit affiche l'invite \"Exécuter la configuration de \
+Backup Server ?\" Tapez \"o\" pour installer ou configurer Backup Server. \
+\\n\\nauditinit affiche une série de messages au cours de la configuration \
+de Backup Server. Si la configuration échoue\, auditinit affiche des messages \
+d'erreur. Vous pouvez consulter ces messages d'erreur ainsi que le journal \
+d'erreurs de Backup Server pour déterminer la cause de l'échec. \
+\\n\\nA l'issue de la configuration de Backup Server\, auditinit affiche \
+un message indiquant l'aboutissement de la configuration et revient au menu \
+BACKUP SERVER NOUVEAU OU EXISTANT.\\n\\nAppuyez sur Ctrl-x pour quitter cet \
+écran. auditinit revient au menu précédent. En appuyant à nouveau sur Ctrl-x\, \
+vous pouvez revenir aux menus précédents et quitter auditinit pour retourner \
+à l'invite du système d'exploitation.",	 ""
+365	= "\
+Journal d'erreurs de Backup Server\\n \\nSélectionnez cette option pour \
+modifier le chemin par défaut affiché pour le journal d'erreurs de Backup \
+Server. Tapez le volume\, le chemin et le nom de fichier complets en regard \
+de l'invite. Par défaut, le fichier cible est nommé backup.log et réside dans \
+le sous-répertoire install du nouveau répertoire SYBASE.\\n \\n* Passez à \
+l'écran suivant *\\n \\nAppuyez sur <F10> pour valider l'emplacement affiché \
+pour le journal d'erreurs de Backup Server et les valeurs que vous avez \
+entrées pour le fichier d'interface de Backup Server.\\n \\nauditinit affiche \
+l'invite \"Exécuter la configuration de Backup Server ?\" Sélectionnez \"Oui\" \
+pour installer ou configurer Backup Server.\\n \\nauditinit affiche une série \
+de messages au cours de la configuration de Backup Server. Si la configuration \
+échoue\, auditinit affiche des messages d'erreur. Vous pouvez consulter ces \
+messages d'erreur ainsi que le journal d'erreurs de Backup Server pour \
+déterminer la cause de l'échec.\\n \\nA l'issue de la configuration\, \
+auditinit affiche un message indiquant l'aboutissement de la configuration.",	 ""
+380		= "Entrez le nom du nouveau Backup Server ('%%s' par défaut) : ",	 ""
+381		= "Nom du Backup Server : ",	 ""
+382	= "Configurer un nouveau Backup Server",	 ""
+383	= "Configurer un Backup Server existant",	 ""
+400		= "Entrez le chemin du journal d'erreurs de Backup Server ('%%s' par défaut) : ",	 ""
+401	= "Journal d'erreurs de Backup Server : ",	 ""
+402	= "Entrer/modifier les informations du fichier d'interface de Backup Server",	 ""
+440		= "Entrez le chemin du fichier quota de Backup Server ('%%s' par défaut) : ",	 ""
+441	= "Fichier quota de Backup Server : ",	 ""
+450	= "Exécuter la configuration de Backup Server ? ",  ""
+451		= "Il n'y a pas d'entrée pour '%1!' dans le fichier d'interface. Créez une entrée pour '%1!' avant de lancer la configuration.",        "%s %s"
+460		= "Langue de Backup Server : ",	 ""
+461	= "Jeu de caractères Backup Server : ",	 ""
+462		= "LANGUE DE BACKUP SERVER",	""
+463		= "",	""
+464		= "",	""
+465		= "",	""
+466	= "Langue courante de Backup Server : ",	""
+467		= "",	""
+468		= "",	""
+469		= "JEU DE CARACTERES DE BACKUP SERVER",	""
+470		= "",	""
+471	= "",	""
+472	= "",	""
+473	= "Jeu de caractères courant de Backup Server : ",	""
+474		= "",	""
+475	= "",	""
+; End of section.
+476		= "Entrez le chemin du fichier de configuration de bande de Backup Server ('%%s' par défaut) : ",  ""
+477		= "Fichier de configuration de bande de Backup Server :",	""
+500 		= "Backup server '%1!' a été configuré. La nouvelle configuration sera prise en compte au prochain démarrage du Backup Server. ",	"%s"
+501 	= "mettez à niveau l'entrée de Backup Server dans le registre",	"" 	
+502	= "impossible de créer une entrée du gestionnaire de contrôle de service pour le Backup Server '%1!'. Le système d'exploitation a renvoyé l'erreur : '%2!'",	"%s%s"

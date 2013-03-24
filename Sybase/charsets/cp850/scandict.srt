@@ -1,0 +1,240 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#) generic/localization/charsets/cp850/scandict.srt	84.1	6/23/93
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Code Page 850 character set, this sort order is a
+;   case-sensitive ordering for the Scandinavian languages (Swedish,
+;   Finnish, Norwegian, Icelandic and Danish).
+;
+;   Upper case letters always sort before their lower case counterparts.
+;
+;   Ligatures, Sort-Doubles, etc.:
+;   ------------------------------
+;       German sharp-s ligature with "ss"
+;
+;   The ordering:
+;   --------------
+;   - first all non-alphanumeric characters in binary order
+;   - followed by all numeric digits
+;   - then followed by all alphabetic characters used in Scandinavian languages
+;   - and ended by all alphabetic characters not used in Scandinavian languages
+;===============================================================================
+
+class = 0x01                              ; Class `1' sort order
+id = 0x2F   				  ; Unique ID # (47) for the sort order
+name = scandict_cp850
+menuname = "Scandinavian dictionary sorting with case sensitivity."
+charset = cp850      
+
+description = "Dictionary sort order for use with Scandinavian\
+ languages.  Uses the Code Page 850 character set and is case sensitive."
+
+; Ligatures 
+
+lig = 0xE1, after ss    ; small german letter sharp s
+
+; Control characters
+
+char = 0x01      ;GRAPHICS
+char = 0x02      ;GRAPHICS
+char = 0x03      ;GRAPHICS
+char = 0x04      ;GRAPHICS
+char = 0x05      ;GRAPHICS
+char = 0x06      ;GRAPHICS
+char = 0x07      ;GRAPHICS
+char = 0x08      ;GRAPHICS
+char = 0x09      ;GRAPHICS
+char = 0x0A      ;GRAPHICS
+char = 0x0B      ;GRAPHICS
+char = 0x0C      ;GRAPHICS
+char = 0x0D      ;GRAPHICS
+char = 0x0E      ;GRAPHICS
+char = 0x0F      ;GRAPHICS
+char = 0x10      ;GRAPHICS
+char = 0x11      ;GRAPHICS
+char = 0x12      ;GRAPHICS
+char = 0x13      ;GRAPHICS
+char = 0x14      ;pilcrow or paragraph sign
+char = 0x15      ;paragraph sign, section sign
+char = 0x16      ;GRAPHICS
+char = 0x17      ;GRAPHICS
+char = 0x18      ;GRAPHICS
+char = 0x19      ;GRAPHICS
+char = 0x1A      ;GRAPHICS
+char = 0x1B      ;GRAPHICS
+char = 0x1C      ;GRAPHICS
+char = 0x1D      ;GRAPHICS
+char = 0x1E      ;GRAPHICS
+char = 0x1F      ;GRAPHICS
+
+; All non-alphanumeric characters, including puntuation
+;       These are sorted merely by their numerical ordering
+;       based on the Code Page 850 standard for clarity and
+;       consistency
+
+char = 0x20      ;( ) space
+char = 0x21      ;(!) exclamation mark
+char = 0x22      ;(") quotation mark
+char = 0x23      ;(#) number sign
+char = 0x24      ;($) dollar sign
+char = 0x25      ;(%) percent sign
+char = 0x26      ;(&) ampersand
+char = 0x27      ;(') apostrophe
+char = 0x28      ;(() left parenthesis
+char = 0x29      ;()) right parenthesis
+char = 0x2A      ;(*) asterisk
+char = 0x2B      ;(+) plus sign
+char = 0x2C      ;(,) comma
+char = 0x2D      ;(-) hyphen, minus sign
+char = 0x2E      ;(.) full stop
+char = 0x2F      ;(/) solidus
+char = 0x3A      ;(:) colon
+char = 0x3B      ;(;) semicolon
+char = 0x3C      ;(<) less-than sign
+char = 0x3D      ;(=) equals sign
+char = 0x3E      ;(>) greater-than sign
+char = 0x3F      ;(?) question mark
+char = 0x40      ;(@) commercial at
+char = 0x5B      ;([) left square bracket
+char = 0x5C      ;(\) reverse solidus
+char = 0x5D      ;(]) right square bracket
+char = 0x5E      ;(^) circumflex accent
+char = 0x5F      ;(_) low line
+char = 0x60      ;(`) grave accent
+char = 0x7B      ;({) left curly bracket
+char = 0x7C      ;(|) vertical line
+char = 0x7D      ;(}) right curly bracket
+char = 0x7E      ;(~) tilde
+char = 0x7F      ;delete, or rubout
+char = 0x9C      ;pound sign
+char = 0x9E      ;multipication sign
+char = 0x9F      ;function symbol
+char = 0xA6      ;feminine ordinal indicator
+char = 0xA7      ;masculine ordinal indicator
+char = 0xA8      ;inverted question mark
+char = 0xA9      ;registered trade mark sign
+char = 0xAA      ;GRAPHICS
+char = 0xAB      ;vulgar fraction one half
+char = 0xAC      ;vulgar fraction one quarter
+char = 0xAD      ;inverted exclamation mark
+char = 0xAE      ;left angle quotation mark
+char = 0xAF      ;right angle quotation mark
+char = 0xB0      ;GRAPHICS
+char = 0xB1      ;GRAPHICS
+char = 0xB2      ;GRAPHICS
+char = 0xB3      ;GRAPHICS
+char = 0xB4      ;GRAPHICS
+char = 0xB8      ;copyright sign
+char = 0xB9      ;GRAPHICS
+char = 0xBA      ;GRAPHICS
+char = 0xBB      ;GRAPHICS
+char = 0xBC      ;GRAPHICS
+char = 0xBD      ;cent sign
+char = 0xBE      ;yen sign
+char = 0xBF      ;GRAPHICS
+char = 0xC0      ;GRAPHICS
+char = 0xC1      ;GRAPHICS
+char = 0xC2      ;GRAPHICS
+char = 0xC3      ;GRAPHICS
+char = 0xC4      ;GRAPHICS
+char = 0xC5      ;GRAPHICS
+char = 0xC8      ;GRAPHICS
+char = 0xC9      ;GRAPHICS
+char = 0xCA      ;GRAPHICS
+char = 0xCB      ;GRAPHICS
+char = 0xCC      ;GRAPHICS
+char = 0xCD      ;GRAPHICS
+char = 0xCE      ;GRAPHICS
+char = 0xCF      ;currency sign
+char = 0xD9      ;GRAPHICS
+char = 0xDA      ;GRAPHICS
+char = 0xDB      ;GRAPHICS
+char = 0xDC      ;GRAPHICS
+char = 0xDD      ;broken bar
+char = 0xDF      ;GRAPHICS
+char = 0xE6      ;micro sign
+char = 0xEE      ;macron
+char = 0xEF      ;acute accent
+char = 0xF0      ;soft hyphen
+char = 0xF1      ;plus/minus (+/-) sign
+char = 0xF2      ;equal sign
+char = 0xF3      ;vulgar fraction three quarter
+char = 0xF4      ;pilcrow or paragraph sign
+char = 0xF5      ;paragraph sign, section sign
+char = 0xF6      ;division sign
+char = 0xF7      ;spacing cedilla
+char = 0xF8      ;ring above or degree sign
+char = 0xF9      ;diaeresis
+char = 0xFA      ;middle dot
+char = 0xFB      ;superscript 1
+char = 0xFC      ;superscript 3
+char = 0xFD      ;superscript 2
+char = 0xFE      ;GRAPHICS
+char = 0xFF      ;undefined
+
+; Digits
+	
+char = 0x30      ;(0) digit zero
+char = 0x31      ;(1) digit one
+char = 0x32      ;(2) digit two
+char = 0x33      ;(3) digit three
+char = 0x34      ;(4) digit four
+char = 0x35      ;(5) digit five
+char = 0x36      ;(6) digit six
+char = 0x37      ;(7) digit seven
+char = 0x38      ;(8) digit eight
+char = 0x39      ;(9) digit nine
+
+; Latin Alphabet
+char = 0x41,0xB7,0xB5,0xB6,0xC7,0x61,0x85,0xA0,0x83,0xC6
+	;A, A-grave, A-acute, A-circumflex, A-tilde, 
+	;a, a-grave, a-acute, a-circumflex, a-tilde
+char = 0x42, 0x62       ;B, b
+char = 0x43, 0x80, 0x63, 0x87
+			;C, C-cedilla, c, c-cedilla
+char = 0x44, 0x64       ;D, d
+char = 0xD1, 0xD0       ;Icelandic capital letter Eth, small letter eth
+char = 0x45, 0xD4, 0x90, 0xD2, 0xD3, 0x65, 0x8A, 0x82, 0x88, 0x89
+	;E, E-grave, E-acute, E-circumflex, E-diaeresis,
+	;e, e-grave, e-acute, e-circumflex, e-diaeresis
+char = 0x46, 0x66       ;F, f
+char = 0x47, 0x67       ;G, g
+char = 0x48, 0x68       ;H, h
+char = 0x49, 0xDE, 0xD6, 0xD7, 0xD8, 0x69, 0x8D, 0xA1, 0x8C, 0x8B, 0xD5
+	;I, I-grave, I-acute, I-circumflex, I-diaeresis, 
+	;i, i-grave, i-acute, i-circumflex, i-diaeresis, Turkish "i"
+char = 0x4A, 0x6A       ;J, j
+char = 0x4B, 0x6B       ;K, k
+char = 0x4C, 0x6C       ;L, l
+char = 0x4D, 0x6D       ;M, m
+char = 0x4E, 0xA5, 0x6E, 0xA4
+			;N, N-tilde, n, n-tilde
+char = 0x4F,0xE3,0xE0,0xE2,0xE5,0x6F,0x95,0xA2,0x93,0xE4
+	;O, O-grave, O-acute, O-circumflex, O-tilde, 
+	;o, o-grave, o-acute, o-circumflex, o-tilde
+char = 0x50, 0x70       ;P, p
+char = 0x51, 0x71       ;Q, q
+char = 0x52, 0x72       ;R, r
+char = 0x53, 0x73       ;S, s
+char = 0x54, 0x74       ;T, t
+char = 0x55,0xEB,0xE9,0xEA,0x9A,0x75,0x97,0xA3,0x96,0x81
+	;U, U-grave, U-acute, U-circumflex, U-diaeresis, 
+	;u, u-grave, u-acute, u-circumflex, u-diaeresis
+char = 0x56, 0x76       ;V, v
+char = 0x57, 0x77       ;W, w
+char = 0x58, 0x78       ;X, x
+char = 0x59, 0xED, 0x79, 0xEC, 0x98
+			;Y, Y-acute, y, y-acute, y-diaeresis
+char = 0x5A, 0x7A       ;Z, z
+char = 0xE7, 0xE8       ;Icelandic capital letter Thorn, small letter thorn
+char = 0x92,0x91        ;A-E, a-e
+char = 0x9D, 0x9B       ;O-stroke, o-stroke 
+char = 0x8F, 0x86       ;A-ring, a-ring
+char = 0x8E, 0x84       ;A-diaeresis, a-diaeresis
+char = 0x99,0x94        ;O-diaeresis, o-diaeresis
+
+

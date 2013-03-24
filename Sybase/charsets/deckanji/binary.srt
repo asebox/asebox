@@ -1,0 +1,22 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#) generic/localization/charsets/deckanji/binary.srt 84.2	8/16/93
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the DECKANJI character set, this sort order is a
+;   binary ordering.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_deckanji
+menuname = "Binary ordering, for the DEC Kanji character set (deckanji)."
+charset = deckanji
+
+description = "Binary sort order for Japanese using the DEC KANJI character set (deckanji)."
+
+binary = "true"

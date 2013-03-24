@@ -1,0 +1,74 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nlnwlink.loc 1.1 4/18/94
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=chinese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlnwlink]
+
+1 = IPDE_EPDISCON, "不能断开结束点 - 错误是%1!"
+
+2 = IPDE_ACCEPT, "接收新的连接时出错 - 错误是%1!"
+
+3 = IPDE_EPCLOSE, "不能关闭结束点 - 错误是%1!"
+
+4 = IPDE_PARSE, "连接信息中存在非法句法"
+
+5 = IPDE_EPCONNECT, "未能连接到服务器 - 错误是%1!"
+
+6 = IPDE_EPMODE, "改变管道方式失败 - 错误是%1!"
+
+7 = IPDE_EVENTOBJ, "创建事件对象失败 - 错误是%1!"
+
+8 = IPDE_NPCREATE, "创建一个命名管道失败 - 错误是%1!"
+
+9 = IPDE_READ, "从该命名管道读失败 - 错误是%1!"
+
+10 = IPDE_WRITE, "向该命名管道写失败 - 错误是%1!"
+
+11 = IPDE_READOOB, "读OOB数据出错 - 错误是%1!"
+
+12 = IPDE_SOCKET, "创建套接字出错 - 错误是%1!"
+
+13 = IPDE_HOSTNAME, "解释主机名出错 - 错误是%1!"
+
+14 = IPDE_EPBIND, "捆绑到本地地址出错 - 错误是%1!"
+
+15 = IPDE_EPLISTEN, "创建监听点出错 - 错误是%1!"
+
+16 = IPDE_DRVINIT, "初始化驱动出错 - 错误是%1!"
+
+17 = IPDE_SAPSOCKET, "打开SAP套接字出错 - 错误是%1!"
+
+18 = IPDE_SAPBIND, "捆绑SAP套接字出错 - 错误是%1!"
+
+19 = IPDE_SAPTHREAD, "启动SAP线索出错 - 错误是%1!"
+
+20 = IPDE_SAPADDRGET, "获得地址信息出错 - 错误是%1!"
+
+21 = IPDE_SAPMUTEX,	"创建SAP mutex出错 - 错误是%1!"
+
+22 = IPDE_SAPTIMEOUT, "等待SAP回答超时 - 错误是%1!"
+ 
+; end of insock error strings
+;

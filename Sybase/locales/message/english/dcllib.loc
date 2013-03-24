@@ -1,0 +1,348 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "Invalid object class."
+
+2 = IFACEE_BADOBJ, "Invalid object."
+
+3 = IFACEE_OPEN, "Attempt to open interfaces file failed."
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "Requested server name not found."
+
+6 = IFACEE_DICTSYNTAX, "Invalid syntax found in interfaces file."
+
+7 = IFACEE_MALLOC, "Error in memory allocation."
+
+8 = IFACEE_CLOSE, "Attempt to close interfaces file failed."
+
+9 = IFACEE_ENTNOTSUPPORTED, "Requested driver entry point is not supported."
+
+10 = IFACEE_PROPNOTSUPPORTED, "Requested property is not supported."
+
+11 = IFACEE_INVALID_HANDLE, "Invalid driver handle found."
+
+12 = IFACEE_INVALIDARG, "Invalid argument passed in driver api."
+
+13 = IFACEE_CANTMODIFY, "Interfaces file or server section is not modifiable."
+
+14 = IFACEE_WRITEFAIL, "Error in writing interfaces file."
+
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "Error returned by service provider."
+
+2 = DCLE_INITED, "DCL is already initialized."
+
+3 = DCLE_MEMALLOC, "Attempt to allocate memory failed."
+
+4 = DCLE_MUTXALLOC, "Attempt to allocate mutex failed."
+
+5 = DCLE_RMAN, "Error in the Request Manager interface."
+
+6 = DCLE_LMAN, "Error in the List Manager interface."
+
+7 = DCLE_VERSION, "Invalid DCL-Library version."
+
+8 = DCLE_PROPCMD, "Invalid property command specified."
+
+9 = DCLE_PROPERTY, "Invalid property specified."
+
+10 = DCLE_OPEN, "Failed to open specified driver."
+
+11 = DCLE_LOAD, "Failed to load specified driver."
+
+12 = DCLE_INTLHOME, "Unable to determine $SYBASE."
+
+13 = DCLE_INTLOPEN, "Unable to open configuration file."
+
+14 = DCLE_INTLNOENT, "Unable to find DCL entry in configuration file."
+
+15 = DCLE_FATAL, "Fatal internal error."
+
+16 = DCLE_FAILOVER, "Failover occurred during last command."
+
+17 = DCLE_SESSBOUND, "Session is currently bound."
+
+18 = DCLE_SESSUBOUND, "Session is currently unbound."
+
+19 = DCLE_PROPOF, "Property buffer overflowed"
+
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "Error in memory allocation."
+
+2 = REGE_INVALID_HANDLE, "Invalid driver handle found."
+
+3 = REGE_ENTNOTSUPPORTED, "Requested driver entry point is not supported."
+
+4 = REGE_OPEN_KEY, "Failed to open a registry key."
+
+5 = REGE_NO_VALUE, "No attributes are found in the registry key."
+
+6 = REGE_ADDRSYNTAX, "Syntax error in address string."
+
+7 = REGE_TYPENOTSUPPORTED, "Invalid value type."
+
+8 = REGE_ENUMKEY, "Failed to enumerate a subkey."
+
+9 = REGE_PROPCMD, "Invalid property command specified."
+
+10 = REGE_PROP_READONLY, "Cannot set/clear a read-only property."
+
+11 = REGE_INVALID_ARG, "Invalid argument."
+
+12 = REGE_CREATE_KEY, "Failed to create a key."
+
+13 = REGE_ENTRY_EXIST, "Registry key already exists."
+
+14 = REGE_INVALID_OID, "Invalid OID."
+
+15 = REGE_INVALID_ATTR_VALUE, "Invalid attribute value."
+
+16 = REGE_CREATE_VALUE, "Failed to set a value."
+
+17 = REGE_DELETE_KEY, "Failed to delete a key."
+
+18 = REGE_MOD_ADDATTR, "Failed to add an attribute."
+
+19 = REGE_MOD_ADDVALUE, "Failed to add an attribute value."
+
+20 = REGE_MOD_REMOVEATTR, "Failed to delete an attribute."
+
+21 = REGE_MOD_REMOVEVALUE, "Failed to delete an attribute value."
+
+22 = REGE_READ_VALUE, "Failed to read an attribute from the object."
+
+23 = REGE_PROPNOTSUPPORTED, "Invalid property specified."
+
+24 = REGE_INVALID_VALUENAME, "Attribute OID is not found."
+
+25 = REGE_MODIFY, "Failed to modify an entry."
+
+26 = REGE_ENUMVALUE, "Failed to enumerate a value."
+
+27 = REGE_CONNECT_REMOTE, "Failed to connect to a remote registry."
+
+28 = REGE_PROPLEN, "Invalid property length specified."
+
+29 = REGE_INVALID_INITSTR, "Invalid initialization string found."
+
+[dcedrv]
+
+1 = DCEE_BADCLASS, "Invalid object class."
+
+2 = DCEE_BADOBJ, "Invalid object."
+
+3 = DCEE_OPEN, "Opening a session to DCE Directory Service failed."
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "Requested server name not found."
+
+6 = DCEE_DICTSYNTAX, "Invalid syntax found in directory service."
+
+7 = DCEE_MALLOC, "Error in memory allocation."
+
+8 = DCEE_CLOSE, "Attempt to close DCE directory service session failed."
+
+9 = DCEE_ENTNOTSUPPORTED, "Requested driver entry point is not supported."
+
+10 = DCEE_PROPNOTSUPPORTED, "Requested property is not supported."
+
+11 = DCEE_INVALID_HANDLE, "Invalid driver handle found."
+
+12 = DCEE_BIND, "Attempt to bind DCE directory session failed."
+
+13 = DCEE_UNBIND, "Attempt to unbind DCE directory session failed."
+
+14 = DCEE_WORKSPACE, "Workspace initialization failed."
+
+15 = DCEE_OMGET, "DCE omget() failed."
+ 
+16 = DCEE_CONTEXT, "DCE context allocation failed."
+ 
+17 = DCEE_PROPCMD, "Invalid property command specified."
+ 
+18 = DCEE_INVALIDARG, "Invalid arguments."
+ 
+19 = DCEE_INITSTR, "Invalid initialization string."
+ 
+20 = DCEE_INVALNAME, "Invalid name syntax."
+ 
+21 = DCEE_CELLNAME, "Error in finding DCE cell name."
+ 
+22 = DCEE_DITBASE, "Invalid ditbase."
+
+23 = DCEE_SEARCH, "Invalid value for search depth."
+ 
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "LDAP driver failed to allocate memory."
+
+2 = E_LOAD, "LDAP driver failed to load the LDAP API provider."
+
+3 = E_VERSION, "Incorrect LDAP API version loaded."
+
+4 = E_URLPARSE, "LDAP driver failed to parse the URL."
+
+5 = E_INTERRUPTED, "LDAP driver caught an unexpected interrupted system call."
+
+6 = E_INTERNAL, "Internal LDAP driver error."
+
+7 = E_NOTFOUND, "LDAP driver failed to find the entry."
+
+8 = E_PROPS, "LDAP driver failed to get/set properties."
+
+9 = E__INIT, "LDAP driver failed in ldap_init()."
+
+10 = E_BIND, "LDAP driver failed in ldap_bind_s()."
+
+11 = E_UNBIND, "LDAP driver failed in ldap_unbind_s()."
+
+12 = E_SEARCH, "LDAP driver failed in ldap_search_s()."
+
+13 = E_ADDMOD, "LDAP driver failed to add/modify entry."
+
+14 = E_DELETE, "LDAP driver failed to delete entry."
+
+15 = E_PERM, "No permission to perform the requested operation."
+
+; End of ldap error strings.
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "Invalid object class."
+
+2 = NDS_EBADOBJ, "Invalid object."
+
+3 = NDS_EOPEN, "Opening a session to NDS Directory Service failed."
+
+4 = NDS_ELASTENTRY, "Passed the last entry."
+
+5 = NDS_ESRVNAMNOTFND, "Requested server name not found."
+
+6 = NDS_EDICTSYNTAX, "Invalid syntax found in Directory Service."
+
+7 = NDS_EMALLOC, "Error in memory allocation."
+
+8 = NDS_ECLOSE, "Attempt to close NDS Directory Service session failed."
+
+9 = NDS_EENTNOTSUPPORTED, "Requested driver entry point is not supported."
+
+10 = NDS_EPROPNOTSUPPORTED, "Requested property is not supported."
+
+11 = NDS_EINVALID_HANDLE, "Invalid driver handle found."
+
+12 = NDS_EBIND, "Binding to the NDS Directory Service failed."
+
+14 = NDS_EUNBIND, "Unbinding to the NDS Directory Service failed."
+
+15 = NDS_EREAD, "Reading from the NDS Directory Service failed."
+
+16 = NDS_EADDOBJ, "Adding an object to the NDS Directory Service failed."
+
+17 = NDS_EPROPCMD, "Invalid action operating on property."
+
+18 = NDS_EINVALIDARG, "Invalid argument."
+
+19 = NDS_ENDSINIT, "Initializing the NDS buffer failed."
+
+20 = NDS_EDELOBJ, "Deleting an object in the NDS Directory Service failed."
+
+21 = NDS_EMODOBJ, "Modifying an object in the NDS Directory Service failed."
+
+22 = NDS_ESEARCH, "Searching an object in the NDS Directory Service failed."
+
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "Error in memory allocation."
+
+2 = BANE_INVALID_HANDLE, "Invalid driver handle found."
+
+3 = BANE_SRVNAMNOTFND, "Requested server name not found."
+
+4 = BANE_NO_VALUE, "No attributes are found in the specified object."
+
+5 = BANE_ADDRSYNTAX, "Syntax error in address string."
+
+6 = BANE_TYPENOTSUPPORTED, "Invalid value type."
+
+7 = BANE_ENUMKEY, "Failed to enumerate a subkey."
+
+8 = BANE_PROPCMD, "Invalid property command specified."
+
+9 = BANE_PROP_READONLY, "Cannot set/clear a read-only property."
+
+10 = BANE_INVALID_ARG, "Invalid argument."
+
+11 = BANE_INVALID_NAME, "Invalid object name."
+
+12 = BANE_ENTRY_EXIST, "Object already exists."
+
+13 = BANE_INVALID_OID, "Invalid OID."
+
+14 = BANE_INVALID_ATTR_VALUE, "Invalid attribute value."
+
+15 = BANE_CREATE_VALUE, "Failed to set an attribute value."
+
+16 = BANE_MOD_ADDATTR, "Failed to add an attribute."
+
+17 = BANE_MOD_REMOVEATTR, "Failed to delete an attribute."
+
+18 = BANE_READ_VALUE, "Failed to read an attribute from the object."
+
+19 = BANE_STARTSESS, "Failed to start StreetTalk or STDA session."
+
+20 = BANE_ENDSESS, "Failed to end StreetTalk or STDA session."
+
+21 = BANE_DELETE_ENTRY, "Failed to delete an object."
+
+22 = BANE_INITSTR, "Invalid initialization string."
+
+23 = BANE_NO_ENTRY, "Specified object does not exist."
+
+; end Banyan DSA driver error message
+;
+

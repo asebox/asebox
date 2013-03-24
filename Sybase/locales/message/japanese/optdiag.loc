@@ -1,0 +1,286 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "Optdiag 出力ファイルにある Adaptive Server Enterprise のサーバ名が、\\n現在の Adaptive Server Enterprise のサーバ名と一致しません。"
+3 = ZZZZZ, "Optdiag のバージョンが、Adaptive Server Enterprise のバージョンと\\n一致しません。同じバージョンを使用してください。"
+10 = ZZZZZ, "Optdiag 出力ファイルにある Adaptive Server Enterprise バージョンが、\\n現在の Adaptive Server Enterprise のバージョンと一致しません。"
+11 = ZZZZZ, "テーブル名 '%1!' が、指定されたテーブル名 '%2!' と一致しません。"
+; The translation for 'Statistics for column' here should agree with that in
+; the format section below.
+12 = ZZZZZ, "次の文字列に、二重引用符による問題があります："
+13 = ZZZZZ, "次の行に値文字列が見つかりません："
+14 = ZZZZZ, "カラム名 '%1!' が、指定されたカラム名 '%2!' と一致しません。"
+15 = ZZZZZ, "カラム統計の更新に失敗しました。"
+16 = ZZZZZ, "ヒストグラム・カラム名 '%1!' が、以前の雑統計用のカラム名\\n'%2!' と一致しません。"
+17 = ZZZZZ, "'%2!.%3!.%4!' に対するヒストグラムのステップ %1! で"
+18 = ZZZZZ, "二重引用符の数に問題があります。"
+19 = ZZZZZ, "データを読み込めませんでした。  "
+20 = ZZZZZ, "ステップ番号 1 が予期されていました。"
+21 = ZZZZZ, "ステップ番号の増加幅が 1 ではありませんでした。"
+22 = ZZZZZ, "累積ヒストグラム・ウェイトが、1.0 にエラーのマージンを加えた値を超えました。  "
+23 = ZZZZZ, "1 つのローに、null ステップ値が 2 つあります。各頻度カウントには、後に非 null 値が続く null ステップ値が 1 つ必要です。"
+24 = ZZZZZ, "'%1!.%2!.%3!' に対するヒストグラムで、"
+26 = ZZZZZ, "Begin transaction が失敗しました。"
+27 = ZZZZZ, "ヒストグラム統計の更新に失敗しました。"
+28 = ZZZZZ, "ヒストグラム統計の削除に失敗しました。"
+29 = ZZZZZ, "ヒストグラム・ウェイトの挿入に失敗しました。"
+30 = ZZZZZ, "Commit transaction が失敗しました。"
+31 = ZZZZZ, "データベース '%1!' はこのサーバには存在しません。"
+32 = ZZZZZ, "指定されたテーブル所有者は、データベース '%1!' 内にテーブルを所有していません。"
+33 = ZZZZZ, "ユーザ '%1!' はデータベース '%2!' には存在しません。"
+34 = ZZZZZ, "テーブル '%1!' は、このデータベースではユーザ '%2!' に所有されていません。"
+35 = ZZZZZ, "テーブル '%1!' はデータベース '%2!' には存在しません。"
+36 = ZZZZZ, "テーブル '%1!' はカラム '%2!' を含んでいません。"
+37 = ZZZZZ, "このインデックスに対する systabstats には統計が入っていません。"
+38 = ZZZZZ, "データ型 '%1!' は Optdiag にはサポートされていません。"
+39 = ZZZZZ, "長さ %2! のデータ型 '%1!' は Optdiag にはサポートされていません。"
+40 = ZZZZZ, "このカラムまたはカラム・グループに対する sysstatistics 内に、統計が見つかりません。"
+41 = ZZZZZ, "このカラムまたはカラム・グループに対する sysstatistics 内に、\\nヒストグラム・データが見つかりませんでした。"
+42 = ZZZZZ, "トレース・フラグ 3 の内部エラーです。"
+43 = ZZZZZ, "内部エラー：テーブル所有者 '%1!' とテーブル '%2!' を繰り返しています。"
+44 = ZZZZZ, "内部エラー： ct_results() が予期せぬ結果タイプ %1! を返しました。"
+45 = ZZZZZ, "内部エラー： ct_fetch() 内にデータ長の不一致があります。"
+48 = ZZZZZ, "予期せぬ値 %1!"
+49 = ZZZZZ, "返されました。"
+50 = ZZZZZ, "内部エラー：ct_results() が結果タイプ CS_CMD_FAIL を返しました。"
+51 = ZZZZZ, "内部エラー：cs_convert() が失敗しました。"
+52 = ZZZZZ, "ロー %1! の読み込み中にエラーが発生しました。"
+53 = ZZZZZ, "内部エラー：カラムの実際の数 (%1!) が、予期された数 (%2!) と異なります。"
+54 = ZZZZZ, "内部エラー：データの実際の最大長 (%1!) が、予期された値 (%2!) を超えました。"
+55 = ZZZZZ, "ノンキャッシュ設定パラメータの後には、'%1!' が続いていなければなりません。"
+56 = ZZZZZ, "キャッシュ '%1!' が見つかりません。"
+57 = ZZZZZ, "インデックス '%1!.%2!.%3!' が見つかりません。"
+58 = ZZZZZ, "次の行で、無効な値が無視されました："
+59 = ZZZZZ, "疑似設定値が更新されていません。"
+60 = ZZZZZ, "疑似テーブル統計値が、テーブル '%1!.%2!' に対して更新されていません。"
+61 = ZZZZZ, "Null 値と、非 null 値の下限値が欠落している可能性があります。"
+62 = ZZZZZ, "ステップが欠落している可能性があります。"
+63 = ZZZZZ, "ウェイトが 0.0 と 1.0 の間ではありません。"
+64 = ZZZZZ, "最近読み込まれたウェイトが原因である可能性があります。"
+65 = ZZZZZ, "ステップ値が増加していません。"
+66 = ZZZZZ, "合計ウェイトが 1.0 と異なっていました。その差はエラーのマージンを超えています。"
+67 = ZZZZZ, "ヒストグラムステップ値の挿入に失敗しました。"
+68 = ZZZZZ, "行レベル '%1!' を探しています。\\n入力ファイルの終わりに予期せず到達しました。\\n二重引用符の不一致による可能性があります。"
+69 = ZZZZZ, "内部エラー：テーブル '%1!' とカラム '%2!' が繰り返されています。"
+70 = ZZZZZ, "Optdiag が成功したというメッセージを読み込まずに、入力ファイルの終わりに到達しました。"
+71 = ZZZZZ, "ユーザのロケールは、環境変数 LANG か、またはコマンド・ライン・フラグ -z \\nによって指定する必要があります。"
+72 = ZZZZZ, "現在のステップ値と以前のステップ値は同一である必要はありません。\\nこのステップは頻度カウントではないためです。"
+73 = ZZZZZ, "SYSSTATISTICS 内の異なるバイナリ値は、読み込み可能な同じ値に\\nまるめられた可能性があります。"
+74 = ZZZZZ, "このステップ値で SYSSTATISTICS を更新すると、矛盾が発生します。"
+75 = ZZZZZ, "このヒストグラムを省略しています。  このヒストグラムを更新する\\n必要がある場合は、Optdiag をバイナリ・モードで実行し、バイナリステップ値を編集してください。"
+76 = ZZZZZ, "このコマンドを実行するには次の役割が必要です：'%1!'。\\nユーザに連絡して、適切な役割を要求してください。"
+77 = ZZZZZ, "Optdiag の行ラベルが指定できる最大長を超えています。"
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+1 = ZZZZZ, "引用符による構文エラーです。"
+2 = ZZZZZ, "カラム名が指定されましたが、テーブル名が指定されていません。"
+3 = ZZZZZ, "トレース・フラグ番号が、指定できる最大値 %1! を超えます。"
+5 = ZZZZZ, "入力ファイル名と出力ファイル名の両方が指定されました。"
+6 = ZZZZZ, "データベースと入力ファイルの引数が読み込まれませんでした。\\nターゲット・データベースを認識できません。"
+7 = ZZZZZ, "入力ファイルをオープンできませんでした。"
+8 = ZZZZZ, "出力ファイルをオープンできませんでした。"
+9 = ZZZZZ, "  ファイルが存在しないか、または Optdiag が必要なパーミッションを\\n持っていないと思われます。"
+10 = ZZZZZ, "'statistics' キーワードの前にコマンド構文エラーが検出されました。"
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Optdiag が失敗しました。前述のエラー・メッセージを調べてください。"
+2 = ZZZZZ, "Optdiag が成功しました。"
+3 = ZZZZZ, "コマンド・ラインにトレース・フラグ 1 を設定して (-T1)、\\nAdaptive Server Enterprise のバージョンの違いを無視してください。"
+5 = ZZZZZ, "コマンド・ラインにトレース・フラグ 4 を設定して (-T4)、\\nこの一貫性の検査を省略してください。"
+7 = ZZZZZ, "指定されていません。"
+8 = ZZZZZ, " (クラスタード)"
+9 = ZZZZZ, " (ノンクラスタード)"
+10 = ZZZZZ, "デフォルトが使用されます。"
+11 = ZZZZZ, "デフォルト"
+12 = ZZZZZ, "次のテーブルは '%1!' で、所有者は '%2!' です。"
+13 = ZZZZZ, "問題の個所がわからない場合は、問題を見つけるためのトレース・フラグ 6 を\\n指定して、入力モードでの Optdiag の再実行を検討してください。"
+14 = ZZZZZ, "Optdiag は終了しましたが、統計は省略されました。\\n前述のエラー・メッセージを調べてください。"
+15 = ZZZZZ, " (実際の値)"
+16 = ZZZZZ, " (疑似値)"
+17 = ZZZZZ, "ディストリビューション・ページのアップグレードから導出された統計"
+18 = ZZZZZ, "Optdiag からロードされた統計"
+19 = ZZZZZ, " (255 バイトだけが使用されています)"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog (skip for optdiag)
+;
+[dialog]
+
+1 = ZZZZZ, "パスワード："
+
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+;
+[format]
+
+1 = ZZZZZ, "サーバ名："
+2 = ZZZZZ, "指定データベース："
+3 = ZZZZZ, "指定テーブル所有者："
+4 = ZZZZZ, "テーブル所有者："
+5 = ZZZZZ, "指定テーブル："
+6 = ZZZZZ, "指定カラム："
+7 = ZZZZZ, "インデックスの統計："
+8 = ZZZZZ, "インデックス・カラム・リスト："
+9 = ZZZZZ, "テーブルの統計："
+; The translation for 'Statistics for column' here should agree with that in
+; the errors section above.
+10 = ZZZZZ, "カラムの統計："
+11 = ZZZZZ, "残りのカラムの統計なし："
+12 = ZZZZZ, "(デフォルト値を使用)"
+13 = ZZZZZ, "カラム・グループの統計："
+14 = ZZZZZ, "カラム統計の最終更新："
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "ディストリビューション・ページのアップグレードにより、統計が開始されました。"
+16 = ZZZZZ, "統計が Optdiag からロードされました。"
+17 = ZZZZZ, "カラムのヒストグラム："
+18 = ZZZZZ, "カラム・データ型："
+19 = ZZZZZ, "要求手順カウント："
+20 = ZZZZZ, "実際の手順カウント："
+21 = ZZZZZ, "最終ヒストグラム更新："
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+22 = ZZZZZ, "手順     ウェイト                    値"
+23 = ZZZZZ, "範囲セル密度："
+24 = ZZZZZ, "総密度："
+25 = ZZZZZ, "データ型："
+26 = ZZZZZ, "範囲選択性："
+27 = ZZZZZ, "中間選択性："
+28 = ZZZZZ, "リーフ・カウント："
+29 = ZZZZZ, "データ・ページ・カウント："
+30 = ZZZZZ, "空のデータ・ページ・カウント："
+31 = ZZZZZ, "空のリーフ・ページ・カウント："
+32 = ZZZZZ, "データ・ロー・カウント："
+33 = ZZZZZ, "転送済みロー・カウント："
+34 = ZZZZZ, "削除済みロー・カウント："
+35 = ZZZZZ, "データ・ページ CR カウント："
+36 = ZZZZZ, "インデックス・ページ CR カウント："
+37 = ZZZZZ, "データ・ロー CR カウント："
+38 = ZZZZZ, "OAM + アロケーション・ページ・カウント："
+39 = ZZZZZ, "最初のエクステント・データ・ページ："
+40 = ZZZZZ, "最初のエクステント・リーフ・ページ："
+41 = ZZZZZ, "データ・ロー・サイズ："
+42 = ZZZZZ, "リーフ・ロー・サイズ："
+43 = ZZZZZ, "インデックス・ハイト："
+44 = ZZZZZ, "導出統計："
+45 = ZZZZZ, "データ・ページ・クラスタ比率："
+46 = ZZZZZ, "インデックス・ページ・クラスタ比率："
+47 = ZZZZZ, "データ・ロー・クラスタ比率："
+48 = ZZZZZ, "テーブル名："
+49 = ZZZZZ, "最大パーティション内のページ："
+50 = ZZZZZ, "設定パラメータ："
+51 = ZZZZZ, "最大並列度："
+52 = ZZZZZ, "最大スキャン並列度："
+53 = ZZZZZ, "キャッシュ設定："
+54 = ZZZZZ, "2K プールのサイズ (KB) ："
+55 = ZZZZZ, "4K プールのサイズ (KB) ："
+56 = ZZZZZ, "8K プールのサイズ (KB) ："
+57 = ZZZZZ, "16K プールのサイズ (KB) ："
+58 = ZZZZZ, "シミュレート済みの最終更新："
+59 = ZZZZZ, "領域利用："
+60 = ZZZZZ, "大規模 I/O 効率："
+61 = ZZZZZ, "ワーカー・プロセス数："
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "カラムのヒストグラム："
+66 = ZZZZZ, "カラム・データ型："
+67 = ZZZZZ, "要求手順カウント："
+68 = ZZZZZ, "実際の手順カウント："
+69 = ZZZZZ, "最終ヒストグラム更新："
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight and value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "手順     ウェイト                    値"
+71 = ZZZZZ, "     範囲セル密度："
+72 = ZZZZZ, "     総密度："
+73 = ZZZZZ, "データ型："
+74 = ZZZZZ, "     範囲選択性："
+75 = ZZZZZ, "     中間選択性："
+76 = ZZZZZ, "     リーフ・カウント："
+77 = ZZZZZ, "     データ・ページ・カウント："
+78 = ZZZZZ, "     空のデータ・ページ・カウント："
+79 = ZZZZZ, "     空のリーフ・ページ・カウント："
+80 = ZZZZZ, "     データ・ロー・カウント："
+81 = ZZZZZ, "     転送済みロー・カウント："
+82 = ZZZZZ, "     削除済みロー・カウント："
+83 = ZZZZZ, "     データ・ページ CR カウント："
+84 = ZZZZZ, "     インデックス・ページ CR カウント："
+85 = ZZZZZ, "     データ・ロー CR カウント："
+86 = ZZZZZ, "     OAM +アロケーションページカウント："
+87 = ZZZZZ, "     最初のエクステント・データ・ページ："
+88 = ZZZZZ, "     最初のエクステント・リーフ・ページ："
+89 = ZZZZZ, "     データ・ロー・サイズ："
+90 = ZZZZZ, "     リーフ・ロー・サイズ："
+91 = ZZZZZ, "     インデックス・ハイト："
+92 = ZZZZZ, "     データ・ページ・クラスタ比率："
+93 = ZZZZZ, "     インデックス・ページ・クラスタ比率："
+94 = ZZZZZ, "     データ・ロー・クラスタ比率："
+95 = ZZZZZ, "テーブル名："
+96 = ZZZZZ, "     最大パーティション内のページ："
+97 = ZZZZZ, "     最大並列度："
+98 = ZZZZZ, "     最大スキャン並列度："
+99 = ZZZZZ, "キャッシュ設定："
+100 = ZZZZZ, "     2K プールのサイズ (KB) ："
+101 = ZZZZZ, "     4K プールのサイズ (KB) ："
+102 = ZZZZZ, "     8K プールのサイズ (KB) ："
+103 = ZZZZZ, "     16K プールのサイズ (KB) ："
+104 = ZZZZZ, "     32K プールのサイズ (KB) ："
+105 = ZZZZZ, "     64K プールのサイズ (KB) ："
+106 = ZZZZZ, "     128K プールのサイズ (KB) ："
+107 = ZZZZZ, "シミュレート済みの最終更新："
+108 = ZZZZZ, "     領域利用："
+109 = ZZZZZ, "     大規模 I/O 効率："
+110 = ZZZZZ, "     ワーカー・プロセス数："
+111 = ZZZZZ, "  導出統計："
+112 = ZZZZZ, "設定パラメータ："
+113 = ZZZZZ, "サンプリング率:"
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "致命的なエラー：メモリの割り付けに失敗しました。"
+2 = ZZZZZ, "接続プロパティの設定に失敗しました。"
+3 = ZZZZZ, "接続の確立に失敗しました。"
+4 = ZZZZZ, "ローカライゼーション・オブジェクトを認識できません。デフォルト値の '%1!' を使用します。"
+5 = ZZZZZ, "内部エラー：不正なローカライゼーション・タイプが cs_locale() に渡されました。"
+6 = ZZZZZ, "'%1!' に構文エラーがあります。"
+7 = ZZZZZ, "1 組の変換テーブルをロードしようとしてエラーが発生しました。"
+8 = ZZZZZ, "割り込み - Optdiag はアボートしました。"
+

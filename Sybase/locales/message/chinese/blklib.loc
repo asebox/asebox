@@ -1,0 +1,181 @@
+; comment character is semicolon.
+
+
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "不能分配内存。"
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "一般错误"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "blk层"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "用户错误"
+
+2 = ZZZZZ, "内部BLK-Library错误"
+
+3 = ZZZZZ, "CT library错误"
+
+4 = ZZZZZ, "异步管理器错误"
+
+5 = ZZZZZ, "common library错误"
+
+6 = ZZZZZ, "内存管理错误"
+
+7 = ZZZZZ, "SQL Server错误"
+
+8 = ZZZZZ, "客户机数据格式错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk运行正常"
+
+1 = ZZZZZ, "不能从该状态: %2!调用API %1!"
+
+2 = ZZZZZ, "API %1!仅允许批量拷贝的IN操作"
+
+3 = ZZZZZ, "API %1!不允许从回调中调用(状态 = %2!)"
+
+4 = ZZZZZ, "参数%1!存在一个非法的值%2!"
+
+5 = ZZZZZ, "结构CS_DATAFMT的%1!域存在 \
+非法值%2!。"
+
+6 = ZZZZZ, "参数%1!不能为空值。"
+
+7 = ZZZZZ, "给定的 %1! 字节的缓冲区超过了\
+待传递值的总长度。"
+
+8 = ZZZZZ, "精度必须大于或等于标度"
+
+9 = ZZZZZ, "不能把空的%1!与数据类型%2!捆绑。"
+
+10 = ZZZZZ, "类型%1!的表列不能与程序中类型为 \
+%2!的变量捆绑。"
+
+11 = ZZZZZ, "不能把正文和数组捆绑在一起。"
+
+12 = ZZZZZ, "对于数组捆绑, 所有列必须具有相同的数组计数值。"
+
+13 = ZZZZZ, "对于该TDS数据类型%1!，不能找到相应的CS_TYPE。"
+
+14 = ZZZZZ, "当CT_Lib例程%1!被调用时失败。"
+
+15 = ZZZZZ, "批量拷贝操作使用CS_BLK_IN或CS_BLK_OUT标明方向。"
+
+16 = ZZZZZ, "用选项CS_BLK_ALL结束批量OUT拷贝。"
+
+17 = ZZZZZ, "%2!的错误进程%1!状态 - 不应在这里。"
+
+18 = ZZZZZ, "%1!的错误状态 - 不应在这里。"
+
+19 = ZZZZZ, "该列与服务器发送的缺省值%1!不同。"
+
+20 = ZZZZZ, "%1!的错误状态 - 一旦能恢复 - 继续进行处理。"
+
+21 = ZZZZZ, "期望从服务器得到的列数与接收到的%1!不同。" 
+ 
+22 = ZZZZZ, "应用必须用%1!属性集登录。"
+
+23 = ZZZZZ, "批量拷贝库的版本和CT_Lib不兼容。"
+
+24 = ZZZZZ, "无值或无有效的缺省值, 不允许为空值。 \
+ 列 = %1! 行 = %2!"
+
+25 = ZZZZZ, "转换例程失败 - 条件溢出。 \
+ 列 = %1! 行 = %2!"
+
+26 = ZZZZZ, "转换例程失败 - 语法错误。 \
+ 列 = %1! 行 = %2!"
+
+27 = ZZZZZ, "错误的捆绑顺序 - 被捆绑的列跟随 \
+正文标记列。"
+
+28 = ZZZZZ, "正文%1!的总长度超过输入数据长度%2!"
+
+29 = ZZZZZ, "缺省值%1!的数量与缺省计数%2!不同。"
+
+30 = ZZZZZ, "对批量out拷贝的文件，返回CS_END_RESULTS。 \
+文件可能为空。"
+
+31 = ZZZZZ, "参数%1!需定义为空值。"
+
+32 = ZZZZZ, "参数%1!需定义为CS_UNUSED。"
+
+33 = ZZZZZ, " 行计数不能大于数组下标计数."
+
+34 = ZZZZZ, "只能允许一个 BLK_IDENTITY 和BLK_IDSTARTNUM."
+
+35 = ZZZZZ, "属性%1!的值不能查询,因为没有\
+建立属性值."
+
+36 = ZZZZZ, "在更新标识列的初始值时发生转变或者\
+额外的错误."
+
+37 = ZZZZZ, "创建大量插入命令时发生错误."
+
+38 = ZZZZZ, "标识列的初始值必须有一个0标量."
+
+39 = ZZZZZ, "建立用于获取行格式的语言命令失败。"
+
+40 = ZZZZZ, "缓冲区大小 %1! 字节为非法值，它必须大于零。"
+
+41 = ZZZZZ, "BCP 在目标表格中创建行时失败。列 %1! 应该从超过 8191 字节的\
+偏移量开始，该开始位置无法在表格（行）格式中\
+准确表示。"
+
+42 = ZZZZZ, "执行本地字符集转换时数据被截断。 \
+col = %1! row = %2!。"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

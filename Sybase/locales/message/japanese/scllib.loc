@@ -1,0 +1,332 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=japanese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "セキュリティ・ドライバ・レベル・エラー"
+
+2 = SCLE_INITED, "SCL はすでに初期化されています。"
+
+3 = SCLE_MEMALLOC, "メモリの割り当てが異常終了しました。"
+
+4 = SCLE_MUTXALLOC, "mutex の割り当てが異常終了しました。"
+
+5 = SCLE_RMAN, "RMAN API にエラーがあります。"
+
+6 = SCLE_LMAN, "LMAN API にエラーがあります。"
+
+7 = SCLE_VERSION, "無効な SCL-Library バージョンです。"
+
+8 = SCLE_PROPCMD, "無効な属性コマンドが指定されました。"
+
+9 = SCLE_PROPERTY, "無効な属性が指定されました。"
+
+10 = SCLE_PROP_RO, "リードオンリー属性です。"
+
+11 = SCLE_PROP_OF, "属性バッファがオーバフローしました。"
+
+12 = SCLE_OPEN, "セキュリティ・ドライバがオープンできません。"
+
+13 = SCLE_LOAD, "セキュリティ・ドライバがロードできません。"
+
+14 = SCLE_INTLHOME, "SYBASE ホーム・ディレクトリが決められません。"
+
+15 = SCLE_INTLOPEN, "設定ファイルがオープンできません。"
+
+16 = SCLE_INTLNOENT, "設定ファイルに SCL エントリが見つかりません。"
+
+18 = SCLE_DRVLOAD, "指定されたセキュリティ・ドライバのロードに失敗しました。"
+
+19 = SCLE_SESSBOUND, "セッションは現在バインドされています。"
+
+20 = SCLE_SESSUBOUND, "セッションは現在バインドされていません。"
+
+21 = SCLE_CREDACT, "クレデンシャルは現在使用中です。"
+
+22 = SCLE_CRED_NA, "クレデンシャルが ACTIVE ではありません。"
+
+23 = SCLE_UNSUPPORT, "このコマンドはサポートされていません。"
+
+24 = SCLE_MUTEXLOCK, "mutex ロックのコールが異常終了しました。"
+
+25 = SCLE_MECHNOTFND, "指定されたセキュリティ・メカニズムがありません。"
+
+26 = SCLE_CFGERR, "設定ファイル・エラー"
+
+27 = SCLE_CREDUSED, "クレデンシャル・ハンドルが削除されていません。"
+
+28 = SCLE_DRIVUSED, "ドライバがクローズされていません。"
+
+29 = SCLE_MECHUSED, "セキュリティ・メカニズム・ハンドルが削除されていません。"
+
+30 = SCLE_MECHOIDNOTFND, "セキュリティ・メカニズム OID がありません。"
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "メモリの割り当てが異常終了しました。"
+
+2 = MSSPE_SRVNOTSUPP, "要求されたセキュリティ・サービスはサポートされていません。"
+
+3 = MSSPE_PRINCIPAL, "指定されたセキュリティ・プリンシパル名が認識できません。または所有者ではありません。"
+
+4 = MSSPE_PROVIDER, "セキュリティ提供者がありません。または提供者の初期化が異常終了しました。"
+
+5 = MSSPE_INITSTR, "無効なドライバ初期化文字列です。"
+
+6 = MSSPE_PROPCMD, "無効なセキュリティ属性コマンドです。"
+
+7 = MSSPE_PROPNOTSUPP, "無効なセキュリティ属性名です。"
+
+8 = MSSPE_CONTEXT, "正しくないドライバ・コンテキスト構造体があります。"
+
+9 = MSSPE_OPNOTSUPP, "ドライバ・エントリ・ポイントはサポートされていません。"
+
+10 = MSSPE_PROPVALLEN, "属性値バッファ長が小さすぎます。"
+
+11 = MSSPE_TOKEN, "無効なセキュリティ・トークンです。"
+
+12 = MSSPE_HANDLE, "無効なセキュリティ・ハンドルです。"
+
+13 = MSSPE_NAMETOOLONG, "メカニズム名／プリンシパル名／ターゲット名のどれかが長すぎます。"
+
+14 = MSSPE_PACKAGE, "指定されたセキュリティ・パッケージはサポートされていません。"
+
+15 = MSSPE_INTERNAL, "予期しない内部エラーが発生しました。"
+
+16 = MSSPE_DENIED, "セキュリティ・セッション要求が拒否されました。"
+
+17 = MSSPE_RMTNAME, "セキュリティ・ターゲット名がありません。または無効です。"
+
+18 = MSSPE_PROVIDERERR, "セキュリティ・サービス提供者の内部エラー %1! が発生しました。"
+
+19 = MSSPE_MSGALTERED, "セキュリティ・メッセージが変更されました - シグネチャ検証が異常終了しました。"
+
+20 = MSSPE_MSGSEQ, "out-of-sequence メッセージが発生しました。"
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "メモリの割り当てが異常終了しました。"
+
+2 = NDSE_SRVNOTSUPP, "要求されたセキュリティ・サービスはサポートされていません。"
+
+3 = NDSE_PRINCIPAL, "無効なプリンシパル名が指定されました。"
+
+4 = NDSE_PROVIDER, "NDS セキュリティ提供者がありません。または初期化が異常終了しました。"
+
+5 = NDSE_INITSTR, "無効な初期化文字列です。"
+
+6 = NDSE_PROPCMD, "無効なセキュリティ属性コマンドです。"
+
+7 = NDSE_PROPNOTSUPP, "無効なセキュリティ属性名です。"
+
+8 = NDSE_CONTEXT, "正しくないドライバ・コンテキスト構造体が指定されました。"
+
+9 = NDSE_OPNOTSUPP, "指定されたセキュリティ・ドライバ・エントリ・ポイントはサポートされていません。"
+
+10 = NDSE_PROPVALLEN, "属性値バッファが非常に小さいです。"
+
+11 = NDSE_DITBASE, "無効な DIT ベースが指定されました。"
+
+12 = NDSE_VERNOTSUPP, "指定されたバージョンはドライバにサポートされていません。"
+
+13 = NDSE_CREDS, "無効なクレデンシャルまたは無効なクレデンシャル使用タイプです。"
+
+14 = NDSE_INITDITBASE, "無効な init DIT ベースです。"
+
+15 = NDSE_NAMETOOLONG, "NDS プリンシパル名が長すぎます。"
+
+16 = NDSE_NWCALLSINIT, "NetWare の NWCallsInit() ルーチンが異常終了しました (%1!)。"
+
+17 = NDSE_NWDSCCTX, "NetWare の NWDSCreateContext() ルーチンが異常終了しました (%1!)。"
+
+18 = NDSE_INIT, "NDS init が異常終了しました (%1!)。"
+
+19 = NDSE_NDS, "NDS コールが異常終了しました (%1!)。"
+
+20 = NDSE_RMTNAME, "セキュリティ・ターゲット名がありません。または正しくありません。"
+
+21 = NDSE_CHANNELID, "指定されたチャネル識別子がありません。または正しくありません。"	
+
+22 = NDSE_BIND, "セキュリティ・セッションのバインドが異常終了しました。"
+
+23 = NDSE_PROVIDERVER, "NDS セキュリティ提供者のバージョンが一致しません。"
+
+24 = NDSE_NWDSTREE, "無効なディレクトリ・ツリー名が指定されました。"
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "メモリの割り当てが異常終了しました。"
+
+2 = DCEE_SRVNOTSUPP, "要求されたセキュリティ・サービスをサポートしていません。"
+
+3 = DCEE_PRINCIPAL, "指定されたセキュリティ・プリンシパル名が認識できません。または所有者ではありません。"
+
+4 = DCEE_BUFOF, "属性値バッファ・オーバフロー・エラー"
+
+5 = DCEE_INITSTR, "無効なドライバ初期化文字列です。"
+
+6 = DCEE_PROPCMD, "無効なセキュリティ属性コマンドです。"
+
+7 = DCEE_PROPNOTSUPP, "無効なセキュリティ属性名です。"
+
+8 = DCEE_CONTEXT, "正しくないドライバ・コンテキスト構造体があります (マイナー・ステータス %1!)。"
+
+9 = DCEE_OPNOTSUPP, "ドライバ・エントリ・ポイントはサポートされていません。"
+
+10 = DCEE_PROPVALLEN, "属性値バッファ長が小さすぎます。"
+
+11 = DCEE_TOKEN, "無効なセキュリティ・トークンです (マイナー・ステータス %1!)。"
+
+12 = DCEE_HANDLE, "無効なセキュリティ・ハンドルです。"
+
+13 = DCEE_NAMETOOLONG, "メカニズム名／プリンシパル名／ターゲット名のどれかが長すぎます。"
+
+14 = DCEE_CHKSIGN, "シグネチャ検証が異常終了しました (マイナー・ステータス %1!)。"
+
+15 = DCEE_INTERNAL, "予期しない内部エラーが発生しました。"
+
+16 = DCEE_DENIED, "セキュリティ・セッション要求が拒否されました (マイナー・ステータス %1!)。"
+
+17 = DCEE_RMTNAME, "セキュリティ・ターゲット名がありません。または正しくありません (マイナー・ステータス %1!)。"
+
+18 = DCEE_PROVIDERERR, "セキュリティ・サービス提供者の内部エラー %1! が発生しました。"
+
+19 = DCEE_MSGALTERED, "セキュリティ・メッセージが変更されました - シグネチャ検証が異常終了しました。"
+
+20 = DCEE_MSGSEQ, "out-of-sequence メッセージが発生しました (マイナー・ステータス %1!)。"
+
+21 = DCEE_BADNAMETYPE, "無効なセキュリティ名の型があります (マイナー・ステータス %1!)。"
+
+22 = DCEE_BADCHANBIND, "無効な／一致しないチャネル・バインドがあります (マイナー・ステータス %1!)。"
+
+23 = DCEE_CREDEXPIRED, "参照されたクレデンシャルが有効な期間を過ぎています (マイナー・ステータス %1!)。"
+
+24 = DCEE_BADCRED, "クレデンシャルに対する一貫性の検査が異常終了しました。 (マイナー・ステータス %1!)。"
+
+25 = DCEE_OLDTOKEN, "指定されたセキュリティ・トークンが古すぎて使用できません (マイナー・ステータス %1!)。"
+
+26 = DCEE_DUPTOKEN, "指定されたセキュリティ・トークンはすでに処理されています (マイナー・ステータス %1!)。"
+
+27 = DCEE_CTXTEXPIRED, "セキュリティ・コンテキストが有効な期間をすでに過ぎています (マイナー・ステータス %1!)。"
+
+28 = DCEE_BADNAME, "無効なセキュリティ名が渡されました (マイナー・ステータス %1!)。"
+
+29 = DCEE_REGIDENTITY, "レジスタ・コンテキスト・アクセプタのアイデンティティに対するルーチンが異常終了しました (マイナー・ステータス %1!)。"
+
+30 = DCEE_BADMECH, "指定されたメカニズムがサポートされていません。または使用できません (マイナー・ステータス %1!)。"
+
+31 = DCEE_BADBUF, "無効なセキュリティ・バッファがあります (マイナー・ステータス %1!)。"
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "メモリの割り当てが異常終了しました。"
+
+2 = KRBE_SRVNOTSUPP, "要求されたセキュリティ・サービスをサポートしていません。"
+
+3 = KRBE_PRINCIPAL, "指定されたセキュリティ・プリンシパル名が認識できません。または所有者ではありません。"
+
+4 = KRBE_BUFOF, "属性値バッファ・オーバフロー・エラー"
+
+5 = KRBE_INITSTR, "無効なドライバ初期化文字列です。"
+
+6 = KRBE_PROPCMD, "無効なセキュリティ属性コマンドです。"
+
+7 = KRBE_PROPNOTSUPP, "無効なセキュリティ属性名です。"
+
+8 = KRBE_CONTEXT, "正しくないドライバ・コンテキスト構造体があります (マイナー・ステータス %1!)。"
+
+9 = KRBE_OPNOTSUPP, "ドライバ・エントリ・ポイントをサポートしていません。"
+
+10 = KRBE_PROPVALLEN, "属性値バッファ長が小さすぎます。"
+
+11 = KRBE_TOKEN, "無効なセキュリティ・トークンです (マイナー・ステータス %1!)。"
+
+12 = KRBE_HANDLE, "無効なセキュリティ・ハンドルです。"
+
+13 = KRBE_NAMETOOLONG, "メカニズム名／プリンシパル名／ターゲット名のどれかが長すぎます。"
+
+14 = KRBE_CHKSIGN, "シグネチャ検証が異常終了しました (マイナー・ステータス %1!)。"
+
+15 = KRBE_INTERNAL, "予期しない内部エラーが発生しました。"
+
+16 = KRBE_DENIED, "セキュリティ・セッション要求が拒否されました (マイナー・ステータス %1!)。"
+
+17 = KRBE_RMTNAME, "セキュリティ・ターゲット名がありません。または無効です (マイナー・ステータス %1!)。"
+
+18 = KRBE_PROVIDERERR, "セキュリティ・サービス提供者の内部エラー %1! が発生しました。"
+
+19 = KRBE_MSGALTERED, "セキュリティ・メッセージが変更されました - シグネチャ検証が異常終了しました。"
+
+20 = KRBE_MSGSEQ, "out-of-sequence メッセージが発生しました (マイナー・ステータス %1!)。"
+
+21 = KRBE_BADNAMETYPE, "無効なセキュリティ名の型があります (マイナー・ステータス %1!)。"
+
+22 = KRBE_BADCHANBIND, "無効な／一致しないチャネル・バインドがあります (マイナー・ステータス %1!)。"
+
+23 = KRBE_CREDEXPIRED, "参照されたクレデンシャルが有効な期間を過ぎています (マイナー・ステータス %1!)。"
+
+24 = KRBE_BADCRED, "クレデンシャルに対する一貫性の検査が異常終了しました (マイナー・ステータス %1!)。"
+
+25 = KRBE_OLDTOKEN, "指定されたセキュリティ・トークンが古すぎて使用できません (マイナー・ステータス %1!)。"
+
+26 = KRBE_DUPTOKEN, "指定されたセキュリティ・トークンはすでに処理されています (マイナー・ステータス %1!)。"
+
+27 = KRBE_CTXTEXPIRED, "セキュリティ・コンテキストが有効な期間をすでに過ぎています (マイナー・ステータス %1!)。"
+
+28 = KRBE_BADNAME, "無効なセキュリティ名が渡されました (マイナー・ステータス %1!)。"
+
+29 = KRBE_REGIDENTITY, "レジスタ・コンテキスト・アクセプタのアイデンティティに対するルーチンが異常終了しました (マイナー・ステータス %1!)。"
+
+30 = KRBE_BADMECH, "指定されたメカニズムがサポートされていません。または使用できません (マイナー・ステータス %1!)。"
+
+31 = KRBE_BADBUF, "無効なセキュリティ・バッファがあります (マイナー・ステータス %1!)。"
+
+; end of CyberSAFE Kerberos driver error strings
+;
+

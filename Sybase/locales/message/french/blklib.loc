@@ -1,0 +1,173 @@
+; comment character is semicolon.
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.3 12/3/93
+;
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "impossible d'allouer de la mémoire."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "erreur générale"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "couche blk"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "erreur utilisateur"
+
+2 = ZZZZZ, "erreur interne à BLK"
+
+3 = ZZZZZ, "erreur bibliothèque CT "
+
+4 = ZZZZZ, "erreur de gestionnaire async"
+
+5 = ZZZZZ, "erreur de la bibliothèque commune"
+
+6 = ZZZZZ, "erreur de gestion mémoire"
+
+7 = ZZZZZ, "erreur SQL Server"
+
+8 = ZZZZZ, "erreur de format des données clientes."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk OK"
+
+1 = ZZZZZ, "Impossible d'appeler API %1! à partir de cet état: %2!"
+
+2 = ZZZZZ, "API %1! autorisé seulement pour une opération de Bulkcopy dans le sens IN"
+
+3 = ZZZZZ, "Rappel de API %1! non autorisé à partir d'une action (état = %2!)"
+
+4 = ZZZZZ, "Paramètre %1! a une valeur illégale de %2!"
+
+5 = ZZZZZ, "Le champ %1! de la structure CS_DATAFMT a une valeur illégale \
+ de %2!."
+
+6 = ZZZZZ, "Le paramètre %1! ne peut pas être NULL."
+
+7 = ZZZZZ, "La taille du buffer spécifié (%1! octets) dépasse la longueur totale de\
+ la valeur à transférer."
+
+8 = ZZZZZ, "La précision doit être supérieure ou égale à l'échelle"
+
+9 = ZZZZZ, "Impossible de lier un paramètre NULL %1! à un type de donnée de \ %2!."
+
+10 = ZZZZZ, "une colonne de table de type %1! ne peut pas être liée à une variable de programme de type %2!."
+
+11 = ZZZZZ, "Impossible d'avoir à la fois un textxfer et un tableau de liaison."
+
+12 = ZZZZZ, "Toutes les colonnes doivent avoir la valeur de comptage de tableau pour le tableau de liaison."
+
+13 = ZZZZZ, "Impossible de trouver un équivalent CS_TYPE pour ce type de donnée TDS %1!"
+
+14 = ZZZZZ, "Echec lors de l'appel de la routine CT_Lib %1!."
+
+15 = ZZZZZ, "Utilisez CS_BLK_IN ou CS_BLK_OUT pour une opération de Bulkcopy."
+
+16 = ZZZZZ, "Utilisez l'option CS_BLK_ALL pour terminer une Bulk copy OUT."
+
+17 = ZZZZZ, "Etat du processus %1! défectueux pour %2! - injustifié."
+
+18 = ZZZZZ, "Etat défectueux %1! - injustifié."
+
+19 = ZZZZZ, "La colonne et la valeur par défaut %1! envoyées par le serveur ne sont pas identiques."
+
+20 = ZZZZZ, "Etat défectueux %1! - mais reprise possible - continuez le traitement."
+
+21 = ZZZZZ, "Le nombre de colonnes devant provenir du serveur est différent du nombre reçu %1!."
+
+22 = ZZZZZ, "L'application doit ouvrir la session avec une propriété %1!."
+
+23 = ZZZZZ, "Incompatibilité de versions pour Bulkcopy bibliothèque et CT_Lib."
+
+24 = ZZZZZ, "Aucune valeur ni valeur par défaut disponible et NULL non autorisé. col = %1! ligne = %2!."
+
+25 = ZZZZZ, "Echec de la routine de conversion - dépassement de condition. col = %1! ligne = %2!."
+
+26 = ZZZZZ, "Echec de la routine de conversion - erreur de syntaxe. col = %1! ligne = %2!."
+
+27 = ZZZZZ, "Ordre de liaison erroné - une colonne liée suit une colonne marquée pour textxfer."
+
+28 = ZZZZZ, "La taille totale de textxfer %1! dépasse la longueur des données en entrée   %2!"
+
+29 = ZZZZZ, "Le nombre de valeurs par défaut %1! n'est pas identique au comptage par défaut %2!"
+
+30 = ZZZZZ, "Envoi de CS_END_RESULTS pour le fichier requis pour Bulkcopy out. Le fichier est peut-être vide."
+
+31 = ZZZZZ, "Le paramètre %1! doit avoir la valeur NULL."
+
+32 = ZZZZZ, "Le paramètre %1! doit avoir la valeur CS_UNUSED."
+
+33 = ZZZZZ, "Impossible de définir un nombre de lignes supérieur au nombre de liens du tableau."
+
+34 = ZZZZZ, "BLK_IDENTITY et BLK_IDSTARTNUM ne peuvent pas être activées simultanément."
+
+35 = ZZZZZ, "Impossible d'obtenir la valeur de la propriété %1! car celle-ci \
+ n'en possède pas."
+
+36 = ZZZZZ, "Erreur de conversion ou d'ajout lors de la mise à jour \
+de la valeur de début de la colonne identity."
+
+37 = ZZZZZ, "Erreur lors de la création de la commande insert bulk."
+
+38 = ZZZZZ, "La valeur de début de la colonne identity doit avoir l'échelle 0."
+
+39 = ZZZZZ, "Echec de compilation de la commande de lecture du format de ligne. "
+
+40 = ZZZZZ, "La taille du buffer (%1! octets) est incorrecte ; elle doit être supérieure à zéro. "
+
+41 = ZZZZZ, "Echec de la création par BCP de lignes dans la table cible. La colonne %1! doit commencer à un \
+offset supérieur à 8191 octets ; cet emplacement de début ne peut pas être représenté précisément dans le\
+format (de ligne) de la table."
+
+42 = ZZZZZ, "Données tronquées lors de la conversion du jeu de caractères local. \
+ col = %1! ligne = %2!."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

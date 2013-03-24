@@ -1,0 +1,125 @@
+; Sccsid @(#) ctdrvlib.loc 1.2 10/7/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "メモリを割り当てができません。"
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "一般エラー"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, "ctdrv レイヤ"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "ユーザ・エラー"
+
+2 = E_ORG_INTRN, "内部 CTDRV-Library エラー"
+
+3 = E_ORG_CT, "CT ライブラリ・エラー"
+
+4 = E_ORG_ASYNC, "非同期マネージャ・エラー"
+
+5 = E_ORG_COM, "共通ライブラリ・エラー"
+
+6 = E_ORG_MEM, "メモリ管理エラー"
+
+7 = E_ORG_SS, "SQL Server エラー"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, "ctdrv OK"
+
+1 = CTDRVE_MEM_F, "CtDrv ルーチンでのメモリ障害です。"
+
+2 = CTDRVE_CTF, "CtDrv ルーチンで CT_Lib ルーチン %1! を呼び出したとき、異常終了しました。"
+
+3 = CTDRVE_APIF, "CtDrv ルーチンで %1! を呼び出したとき、異常終了しました。"
+
+4 = CTDRVE_NOCURSOR, "この文ハンドルにはカーソルがありません。"
+
+5 = CTDRVE_TRUNCATE, "データ全体を返せませんでした。%1! が切り捨てられました。"
+
+6 = CTDRVE_DUPCUR, "%1! という名前のカーソルは、すでに存在します。"
+
+7 = CTDRVE_LENCUR, "カーソル名は %1! 文字を越えてはいけません。"
+
+8 = CTDRVE_SEQ, "関数が、間違った順序で呼び出されています。"
+
+9 = CTDRVE_ODBCTYPE, "入力 CT_LIB データ型を ODBC データ型にマップできません。"
+
+10 = CTDRVE_CTTYPE, "入力 ODBC データ型を CT_LIB データ型にマップできません。"
+
+11 = CTDRVE_CTDATYPE, "%1! : ct_lib データ型を見つけられません。"
+
+12 = CTDRVE_ASYNC, "関数の順序間違い: 別の関数を非同期に実行しています。"
+
+13 = CTDRVE_BUFF, "CtDrv ルーチンで SQL バッファ を割り当てるとき、異常終了しました。"
+
+14 = CTDRVE_SUBF, "CtDrv ルーチンで SQL 置き換えを行うとき、異常終了しました。"
+
+15 = CTDRVE_STMTNM, "CtDrv ルーチンで文名を付けるとき、異常終了しました。"
+
+16 = CTDRVE_CURNM, "CtDrv ルーチンでカーソル名を付けるとき、異常終了しました。"
+
+17 = CTDRVE_RESROW, "CtDrv ルーチンで %1! および %2! の ロー結果を得るとき、異常終了しました。"
+
+18 = CTDRVE_RESDCF, "CtDrv ルーチンで結果 %1! を取得するとき、異常終了しました。"
+
+19 = CTDRVE_APIF2, "CtDrv ルーチンで内部関数 %1! を呼び出したとき、異常終了しました。"
+
+20 = CTDRVE_APIF3, "内部関数 %1! で CT_LIB ルーチン %2! を呼び出したとき、異常終了しました。"
+
+21 = CTDRVE_PARF, "CtDrv ルーチンで SQL 解析を行うとき、異常終了しました。"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+

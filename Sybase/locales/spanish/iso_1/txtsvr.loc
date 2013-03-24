@@ -1,0 +1,156 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  
+;  Product:  Full Text Search Specialty Data Store Release 11.5.1
+;  File:     txtsvr.loc  1.11  01/10/01
+;  Purpose:  Messages for localization  
+;
+;            
+;  Revision History
+;  ----------------------------------------------------------------------
+;  15-Oct-1997                  created, initially 45 messages
+;  28-Oct-1997                  modify 14, 15, 27; add 46, 47
+;  13-Jan-1998			added 48 - 53
+;  21-Jan-1998			added 54 - 57
+;  06-Mar-1998			added 58
+;  26-Mar-1998			added 59
+;  10-Jan-2001                  added 60 - 62
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;                   Copyright (c) Sybase Inc. 1990, 2001
+;                   Emeryville, CA 94608 
+;                   Todos los derechos reservados.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; localized message strings
+;
+[messages]
+;
+; 1  ENOMEM
+1 =  "Error de asignación de memoria."
+; 2  EROUFAIL
+2 =  "%1! ha fallado."
+; 3  EARGMIS
+3 =  "%1!: los argumentos no coinciden."
+; 4  EARGINV
+4 =  "%1!: argumento incorrecto."
+; 5  ECMDFAIL
+5 =  "'%1!' : error en el comando."
+; 6  ERPCNOT 
+6 =  "El RPC '%1!' no existe."
+; 7  ENOCOLL
+7 =  "Los nombres de índice deben tener el formato: 'basededatos.propietario.nombre'."
+; 8  ENOREQDB
+8 =  "La base de datos requerida '%1!' no existe."
+; 9  ENOSPECDB 
+9 =  "La base de datos especificada '%1!' no existe."
+; 10 ENOLOADIDX 
+10 = "No es posible cargar el índice '%1!'."
+; 11 EINVOBJ
+11 = "Nombre de objeto '%1!' incorrecto."
+; 12 EINDEXED
+12 = "El índice ya existe."
+; 13 ENOPASSTH 
+13 = "No se admite el modo passthru."
+; 14 ECOLMISS
+14 = "Error interno: se ha detectado una incoherencia de columnas en la función %1!."
+; 15 ENOROWBUF
+15 = "Error interno: no es posible localizar el búfer de fila en la función %1!."
+; 16 ENOCURSOR 
+16 = "Se requiere un nombre de cursor."
+; 17 ENOPARSE  
+17 = "No es posible analizar la instrucción SQL."
+; 18 ENOILOCK
+18 = "No es posible bloquear el índice."
+; 19 ENOINDEX
+19 = "El índice no existe o no está en línea."
+; 20 EIDXINUSE 
+20 = "El índice se está actualizando en este momento."
+; 21 ECURFAIL   
+21 = "Error de asignación de cursor."
+; 22 ENOUPDDEL  
+22 = "No se admiten operaciones de actualización y eliminación."
+; 23 EINVCOL    
+23 = "Columna no válida en la lista de selección."
+; 24 EFUNFAIL   
+24 = "La función '%1!' ha fallado con un error vdk '%2!'."
+; 25 ESVRBUSY   
+25 = "Este servidor de texto está dedicado al servidor '%1!'."
+; 26 ENORPCNAM  
+26 = "No es posible obtener el nombre de RPC."
+; 27 EINVSORT
+27 = "Especificación de ordenación '%1!' no válida."
+; 28 EUNSUPPORT 
+28 = "Instrucción no admitida."
+; 29 ENOMUTEX   
+29 = "Error al crear el mutex de la base de datos."
+; 30 EGENRQUERY 
+30 = "Error al generar la consulta remota."
+; 31 EPRORQUERY 
+31 = "Error al procesar la consulta remota."
+; 32 ENORTEXT   
+32 = "No es posible ejecutar el procedimiento '%1!'."
+; 33 EINDEXBUSY 
+33 = "El índice del objeto '%1!.%2!' está en uso en otro subproceso."
+; 34 ENOMODCOL  
+34 = "Error al modificar la colección '%1!' para el objeto '%2!.%3!'."
+; 35 EINVALOP   
+35 = "Operador de relevancia no válido, sólo se admiten '>' y '>='."
+; 36 ENOPRED    
+36 = "La consulta no contiene un predicado."
+; 37 EUNSUPCOL  
+37 = "No se admite la columna '%1!'."
+; 38 ENOREMSVR  
+38 = "No es posible iniciar una sesión en el servidor remoto '%1!'."
+; 39 EBINDFAIL  
+39 = "No se pueden vincular los resultados de fila."
+; 40 ENOSLOCK   
+40 = "No se puede obtener el bloqueo de sesión."
+; 41 EMAXSESS   
+41 = "Se ha alcanzado el número máximo de sesiones."
+; 42 EINVTPTR   
+42 = "Valor de puntero de texto no válido."
+; 43 ENOUDATA    
+43 = "No es posible obtener los datos de usuario del subproceso."
+; 44 ECOLCLOSE  
+44 = "Error al abrir la colección '%1!' para el objeto '%2!'."
+; 45 EINDXNO    
+45 = "No se encuentra el índice. Compruebe que la base de datos está en línea."
+; 46 EIDXRW    
+46 = "El índice '%1!' está en uso."
+; 47 ENOIDXOBJ
+47 = "El índice del objeto '%1!.%2!' no existe o no está en línea."
+; 48 EDATATYPE
+48 = "El tipo de datos '%1!' no es compatible."
+; 49 EBACKUP
+49 = "No es posible realizar la copia de seguridad del índice '%1!', rc = %2!."
+; 50 ERESTORE
+50 = "No es posible restaurar el índice '%1!', rc = %2!."
+; 51 IBACKUP
+51 = "Se ha creado una copia de seguridad del índice '%1!'."
+; 52 IRESTORE
+52 = "Se ha restaurado el índice '%1!'."
+; 53 ECLUSTER
+53 = "No es posible crear un conjunto de resultados agrupado. Asegúrese de que el índice se creó con la opción de agrupación activada."
+; 54 ISTATIC
+54 = "Este parámetro es estático y, para que sea efectivo, se debe reiniciar el servidor."
+; 55 IDYNAMIC
+55 = "Este parámetro es dinámico y es ya efectivo."
+; 56 ECFGFILE
+56 = "No es posible crear una nueva versión del archivo de configuración."
+; 57 ECFGNAME
+57 = "Parámetro de configuración '%1!' no válido."
+; 58 EFEATURE
+58 = "Asegúrese de que el índice se creó con la opción DOC-FEATURES definida."
+; 59 EDBINDEX
+59 = "Un índice de la base de datos '%1!' está en uso en otro subproceso."
+; 60 ENOTENABLED
+60 = "El servidor '%1!' no está activado para búsquedas de texto."
+; 61 EBADSRVID
+61 = "El Id. del servidor de texto del servidor compañero HA (%1!) difiere del Id. del primario (%2!)."
+; 62 EHASVRBUSY
+62 = "Este servidor de texto está dedicado a los servidores '%1!' y '%2!'."
+
+
+

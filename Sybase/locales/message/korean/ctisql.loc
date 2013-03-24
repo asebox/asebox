@@ -1,0 +1,94 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "암호: "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "중대 오류: 메모리를 할당할 수 없습니다."
+
+2 = ZZZZZ, "인식하지 않는 지역화 개체입니다. 기본값 '%1!'을(를) 사용합니다."
+
+3 = ZZZZZ, "내부 오류: cs_locale()에 잘못된 지역화 유형을 전달하였습니다."
+
+4 = ZZZZZ, "한 쌍의 변환 테이블을 로드하려고 할 때 오류가 발생하였습니다."
+
+5 = ZZZZZ, "로컬라이제이션 관련 구조에 사용하기 위해 응용 프로그램의 컨텍스트를 구성하려고 시도할 때 에러가 발생했습니다."
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "중대 오류: 메모리를 할당할 수 없습니다."
+
+2 = ZZZZZ, "I/O 오류: 입력 데이터의 공간이 부족합니다."
+
+3 = ZZZZZ, "편집기와 함께 사용할 '%1!' 임시 파일을 열 수 없습니다."
+
+4 = ZZZZZ, "'%1!' 편집기를 호출할 수 없습니다."
+
+5 = ZZZZZ, "'%1!' 입력 파일을 열 수 없습니다."
+
+6 = ZZZZZ, "'%1!' 출력 파일을 열 수 없습니다."
+
+7 = ZZZZZ, "Isql: 알 수 없는 '%1!' 매개 변수입니다."
+
+8 = ZZZZZ, "데이타베이스 이름이 너무 깁니다."
+
+9 = ZZZZZ, "CS 라이브러리 메시지 콜백 루틴을 설치할 수 없습니다."
+
+10 = ZZZZZ, "클라이언트 라이브러리를 초기화할 수 없습니다."
+
+11 = ZZZZZ, "클라이언트 라이브러리의 클라이언트 메시지 콜백 루틴을 설치할 수 없습니다."
+
+12 = ZZZZZ, "지원되지 않는 데이타 유형에 마주쳤습니다."
+
+13 = ZZZZZ, "로우를 인쇄하는 동안 버퍼 오버플로우가 발생하였습니다."
+
+14 = ZZZZZ, "지원되지 않는 결과 유형에 마주쳤습니다."
+
+15 = ZZZZZ, "잘못된 메모리 블록 크기를 지정하였습니다."
+
+16 = ZZZZZ, "잘못된 메모리 핸들을 지정하였습니다."
+
+17 = ZZZZZ, "Isql 메모리 할당 내부 오류입니다."
+
+18 = ZZZZZ, "편집기를 호출하는 명령줄이 너무 깁니다."
+
+19 = ZZZZZ, "Isql 응용프로그램 문맥을 초기화하지 않았습니다."
+
+20 = ZZZZZ, "SQL 서버와의 연결을 설정하지 않았습니다."
+
+21 = ZZZZZ, "사용할 수 있는 명령어 핸들이 없습니다."
+
+22 = ZZZZZ, "버퍼 파일을 열 수 없습니다."
+
+23 = ZZZZZ, "파일의 위치 지시자를 파일의 시작으로 다시 설정할 수 없습니다."
+
+24 = ZZZZZ, "명령어 버퍼를 지울 수 없습니다."
+
+25 = ZZZZZ, "명령어를 시작할 수 없습니다."
+
+26 = ZZZZZ, "명령어 핸들의 명령어를 지울 수 없습니다."
+
+27 = ZZZZZ, "한 쌍의 변환 테이블을 로드하려고 할 때 오류가 발생하였습니다."
+
+
+

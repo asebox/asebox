@@ -1,0 +1,68 @@
+; cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Using  database '%1!' failed." 
+2 = ZZZZZ, "Failed to retrieve data in the table and get the descriptor\\nof text or image data."
+3 = ZZZZZ, "Failed to update table with new text or image."
+4 = ZZZZZ, "Creating table failed."
+5 = ZZZZZ, "Removing table failed."
+6 = ZZZZZ, "Invalid sql query."
+7 = ZZZZZ, "Fetching query results failed."
+8 = ZZZZZ, "Sql query returned multiple rows. It is expected that exactly\\none row is returned."
+9 = ZZZZZ, "Sql query returned zero row. It is expected that exactly\\none row is returned."
+10 = ZZZZZ, "File '%1!' cannot be opened. Please ensure that the file exists and you have write permission."
+11 = ZZZZZ, "File '%1!' cannot be opened. Please ensure that the file exists and it is readable."
+12 = ZZZZZ, "File '%1!' cannot be closed. Please ensure that the file exists and it is already open."
+13 = ZZZZZ, "File '%1!' cannot be removed. Please ensure that the file exists and you have permission to remove it."
+14 = ZZZZZ, "The size of file '%1!' is 0. Please ensure that the file is not empty."
+15 = ZZZZZ, "Jar '%1!' does not exist."
+16 = ZZZZZ, "Processing timestamp failed."
+17 = ZZZZZ, "Internal error: ct_send_data() failed."
+18 = ZZZZZ, "Internal error: ct_get_data() failed."
+19 = ZZZZZ, "Internal error: ct_data_info() failed."
+20 = ZZZZZ, "The length of '%1!' exceeds the maximum length '%2!' bytes."
+21 = ZZZZZ, "Cannot run this command because Java services are not enabled. A user with\\nSystem Administrator (SA) role must reconfigure the system to enable Java."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Server name specified by environment variable DSQUERY is\\ninvalid or DSQUERY is not set from environment."
+2 = ZZZZZ, "Invalid user login name or login name is not set from environment."
+3 = ZZZZZ, "Directory specified by environment variable SYBASE is invalid or SYBASE is not set from environment."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Initializing client application failed."
+2 = ZZZZZ, "'%1!' failed.  Check for error messages above."
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Fatal error: memory allocation failed."
+2 = ZZZZZ, "Setting connection properties failed."
+3 = ZZZZZ, "Establishing connection failed."
+4 = ZZZZZ, "Unrecognized localization object.  Using default value '%1!'."
+5 = ZZZZZ, "Internal error: An invalid localization type was passed to cs_locale()."
+6 = ZZZZZ, "Syntax Error in '%1!'."
+7 = ZZZZZ, "Error in attempting to load a pair of translation tables."
+8 = ZZZZZ, "Interrupt - Program aborted."

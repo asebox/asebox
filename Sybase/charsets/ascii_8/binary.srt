@@ -1,0 +1,21 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#)binary.srt	84.1	6/23/93
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the ASCII-8 character set, this is a binary sort order.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_ascii_8
+menuname = "Binary ordering, for use with any ASCII-based 8-bit (ascii_8) environment."
+charset = ascii_8      		; Use with the ascii_8 character set
+
+description = "Binary Sort Order for the 8-bit ASCII Character Set (ascii_8)."
+
+binary = "true"

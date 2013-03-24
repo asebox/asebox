@@ -1,0 +1,68 @@
+; isql.loc
+; comment character is semicolon.
+; "isql.loc" - Localization file for Isql.
+;
+; Sccsid @(#) isql.loc 1.3 12/3/93
+;
+; German Translation done by Docusoft (tel. 49-89-784095)
+;
+; Revision History
+;
+; when		who		why
+; ----------------------------------------------------------------------------
+; 30.03.90	MW		initial translation
+; 17.8.93	TO		translation
+;
+;[copyright]
+;copyright =  "Copyright (C) 1994 Sybase, Inc.\
+;Alle Rechte vorbehalten.\
+;Gebrauch, Vervielfältigung oder Bekanntmachung durch die Regierung\
+;der Vereinigten Staaten unterliegt den in FAR Unterabschnitten\
+;52.227-19(a)-(d) für Verträge mit Zivilstellen und in DFARS\
+;252.227-7013(c)(1)(ii) für Verträge mit dem Department of Defense\
+;(US-Verteidigungsministerium) genannten Beschränkungen.\
+;Sybase behält sich alle Rechte bezüglich Nichtveröffentlichungen\
+;gemäß den Urheberrechtsgesetzen der Vereinigten Staaten vor.\
+;Sybase, Inc.  6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; 
+; first we list the prompts:
+[prompts]
+; 
+;password = "Password: "
+1  = "Passwort: "
+; End of prompts section.
+; Now we list the localized error message strings.
+
+[isqlerrors]
+; IERRNOMEM
+;1 = "Fatal error: memory allocation failed."
+1  = "Schwerer Fehler: Erfolglose Speicherzuweisung."
+;
+; IERRNOREADSPACE
+;2 = "I/O Error: Insufficient space for input data."
+2  = "E/A Fehler: Unzureichender Speicherplatz für Eingabedaten."
+;
+; IERRTEMPFILE
+;3 = "Failed to open temp file '%1!' for writing in dbedit()."
+3  = "Konnte Temp Datei '%1!' zum Schreiben in dbedit() nicht öffnen."
+;
+; IERREDITFAIL
+;4 = "Unable to invoke the '%1!' editor."
+4 = "Kann den '%1!' Editor nicht aufrufen."
+;
+; IERRNOINFILE
+;5 = "Unable to open input file '%1!'."
+5  = "Kann die Eingabedatei '%1!' nicht öffnen."
+;
+; IERRNOOUTFILE
+;6 = "Unable to open output file '%1!'."
+6  = "Kann die Ausgabedatei '%1!' nicht öffnen."
+;
+; IERRBADARG
+;7 = "Isql: Unknown parameter '%1!'."
+7  = "Isql: Unbekannter Parameter '%1!'."
+;
+; End of error strings section.
+
+

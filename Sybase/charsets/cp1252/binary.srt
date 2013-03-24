@@ -1,0 +1,34 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Microsoft Windows Code Page 1252, Western Europe character set, this is a binary sort order.
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Nov 20 1995 10:04AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+; All rights reserved.
+; Use, duplication, or disclosure by the United States
+; Government is subject to restrictions as set forth in
+; FARS subparagraphs 52.227-19(a)-(d) for civilian
+; agency contracts and DFARS 252.227-7013(c)(1)(ii)
+; for Department of Defense contracts. Sybase reserves
+; all unpublished rights under the copyright laws of
+; the United States.
+; Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp1252
+menuname = "Binary order"
+charset = cp1252
+ 
+description = "Binary sort order for the Microsoft Windows Code Page 1252, Western Europe character set (cp1252)."
+ 
+binary = "true"

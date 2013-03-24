@@ -1,0 +1,85 @@
+; cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Echec d'utilisation de la base de donn‚es '%1!'." 
+2 = ZZZZZ, "Impossible de retrouver les donn‚es dans la table et d'obtenir le descripteur\\ndes donn‚es de type texte ou image."
+3 = ZZZZZ, "Impossible de mettre … jour la table avec les nouvelles donn‚es de type texte ou image."
+4 = ZZZZZ, "Echec de cr‚ation de la table."
+5 = ZZZZZ, "Echec de suppression de la table."
+6 = ZZZZZ, "Requˆte SQL incorrecte."
+7 = ZZZZZ, "Echec de l'extraction des r‚sultats de la requˆte."
+8 = ZZZZZ, "La requˆte SQL a renvoy‚ plusieurs lignes. Elle doit renvoyer exactement\\nune seule ligne."
+9 = ZZZZZ, "La requˆte SQL n'a renvoy‚ aucune ligne. Elle doit renvoyer exactement\\nune ligne."
+10 = ZZZZZ, "Impossible d'ouvrir le fichier '%1!'. V‚rifiez que ce fichier existe et que vous disposez des autorisations en ‚criture."
+11 = ZZZZZ, "Impossible d'ouvrir le fichier '%1!'. V‚rifiez que ce fichier existe et qu'il peut ˆtre lu."
+12 = ZZZZZ, "Impossible de fermer le fichier '%1!'. V‚rifiez que ce fichier existe et qu'il est ouvert."
+13 = ZZZZZ, "Impossible de supprimer le fichier '%1!'. V‚rifiez que ce fichier existe et que vous disposez des autorisations en suppression."
+14 = ZZZZZ, "La taille du fichier '%1!' est nulle. V‚rifiez que ce fichier n'est pas vide."
+15 = ZZZZZ, "Le fichier jar '%1!' n'existe pas."
+16 = ZZZZZ, "Echec de traitement de l'estampille."
+17 = ZZZZZ, "Erreur interne : ‚chec de ct_send_data()."
+18 = ZZZZZ, "Erreur interne : ‚chec de ct_get_data()."
+19 = ZZZZZ, "Erreur interne : ‚chec de ct_data_info()."
+20 = ZZZZZ, "La longueur de '%1!' d‚passe la longueur maximale de '%2!' octets."
+21 = ZZZZZ, "Impossible d'ex‚cuter cette commande car les services Java ne sont pas disponibles. Un utilisateur disposant\\ndu r“le d'administrateur systŠme (SA) doit reconfigurer le systŠme pour activer Java."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Le nom de serveur sp‚cifi‚ par la variable d'environnement DSQUERY est\\nincorrect ou la variable DSQUERY n'est pas d‚finie dans l'environnement."
+2 = ZZZZZ, "Nom de login utilisateur incorrect ou nom de login non d‚fini dans l'environnement."
+3 = ZZZZZ, "Le r‚pertoire sp‚cifi‚ par la variable d'environnement SYBASE est incorrect ou la variable SYBASE n'est pas d‚finie dans l'environnement."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Echec d'initialisation de l'application cliente."
+2 = ZZZZZ, "Echec de '%1!'. Consultez les messages d'erreur pr‚c‚dents."
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+
+; LOC_SECT_FORMAT
+;
+;   Row label strings for optdiag input and output files
+;
+[format]
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Erreur fatale : ‚chec de l'allocation m‚moire."
+2 = ZZZZZ, "Echec de d‚finition des propri‚t‚s de connexion."
+3 = ZZZZZ, "Echec d'‚tablissement de la connexion."
+4 = ZZZZZ, "Objet de localisation non reconnu. Utilisation de la valeur par d‚faut '%1!'."
+5 = ZZZZZ, "Erreur interne : un type de localisation incorrect a ‚t‚ transmis … cs_locale()."
+6 = ZZZZZ, "Erreur de syntaxe dans '%1!'."
+7 = ZZZZZ, "Erreur lors du chargement d'une paire de tables de conversion."
+8 = ZZZZZ, "Interruption - Programme annul‚."
+
+
+

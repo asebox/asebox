@@ -1,0 +1,125 @@
+; Sccsid @(#) ctdrvlib.loc 1.2 10/7/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "不能分配内存."
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "一般错误"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, "ctdrv 层"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "用户错误"
+
+2 = E_ORG_INTRN, "内部CTDRV-Library 错误"
+
+3 = E_ORG_CT, "CT 库错误"
+
+4 = E_ORG_ASYNC, "异步管理器错误"
+
+5 = E_ORG_COM, "common library 错误"
+
+6 = E_ORG_MEM, "内存管理错误"
+
+7 = E_ORG_SS, "SQL Server 错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, "ctdrv 正常"
+
+1 = CTDRVE_MEM_F, " CtDrv 例程内存失败."
+
+2 = CTDRVE_CTF, "调用CT_Lib 例程%1!时 CtDrv 例程失败."
+
+3 = CTDRVE_APIF, "调用%1!时 CtDrv 例程失败."
+
+4 = CTDRVE_NOCURSOR, "语句处理中无游标."
+
+5 = CTDRVE_TRUNCATE, "整个数据不能返回. 截去%1!."
+
+6 = CTDRVE_DUPCUR, " 游标已被命名为%1!."
+
+7 = CTDRVE_LENCUR, "游标名必须不超过%1! 字符."
+
+8 = CTDRVE_SEQ, "函数越序调用."
+
+9 = CTDRVE_ODBCTYPE, "不能将输入的CT_LIB 数据类型映像为ODBC 数据类型."
+
+10 = CTDRVE_CTTYPE, "不能将输入的ODBC 数据类型映像为CT_LIB 数据类型."
+
+11 = CTDRVE_CTDATYPE, "%1! : 没发现ct_lib 数据类型."
+
+12 = CTDRVE_ASYNC, "函数越序: 其它函数异步执行."
+
+13 = CTDRVE_BUFF, " 分配SQL 缓冲时 CtDrv 例程失败."
+
+14 = CTDRVE_SUBF, "执行 SQL 替换时CtDrv 例程失败."
+
+15 = CTDRVE_STMTNM, "制作语句名时CtDrv 例程失败."
+
+16 = CTDRVE_CURNM, "制作游标名时CtDrv 例程失败."
+
+17 = CTDRVE_RESROW, "取 %1!和%2!的结果行时CtDrv 例程失败."
+
+18 = CTDRVE_RESDCF, "取结果%1!时 CtDrv 例程失败."
+
+19 = CTDRVE_APIF2, "内部函数%1!调用时CtDrv 例程失败."
+
+20 = CTDRVE_APIF3, "调用CT_LIB 例程%2!时内部函数%1! 失败."
+
+21 = CTDRVE_PARF, " SQL 语法分析时CtDrv 例程失败."
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+

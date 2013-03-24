@@ -1,0 +1,365 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "Unable to determine amount of memory needed for protocol driver"
+
+2 = NETE_NULLOPT, "It is illegal to pass a NULL options ptr to any Net-Library routine"
+
+3 = NETE_UNKWOPT, "Requested Net-Library option is unknown"
+
+4 = NETE_UNKWINFCDE, "Requested address information code is unknown"
+
+5 = NETE_BOOLREP, "Value of option must be either NET_TRUE or NET_FALSE"
+
+6 = NETE_NULLNETBUF, "It is illegal to pass a NULL buffer pointer to net_init()"
+
+7 = NETE_NOTSUPPORTED, "Feature is not supported"
+
+8 = NETE_NULLHDLR, "It is illegal to pass a NULL NET_POLL array pointer"
+
+9 = NETE_BADENGINE, "Engine identifier is invalid"
+
+10 = NETE_ALREADYINIT, "The current process has already called net_init()"
+
+11 = NETE_DICTNOTFOUND, "Could not find addressing dictionary"
+
+12 = NETE_SRVNAMENOTFND, "Specified server name attribute could not be found"
+
+13 = NETE_NODICTS, "Unable to find an available address dictionary structure"
+
+14 = NETE_DRVINIT, "Error during protocol driver initialization."
+
+15 = NETE_NODRIVERS, "Unable to find an available protocol driver strcuture"
+
+16 = NETE_LFNOSECTION , "Cannot find Net-Library error section in localization file"
+
+17 = NETE_DICTSYNTAX, "Syntax error in address dictionary"
+
+18 = NETE_ADRTYPNOTFND, "Specified address type attribute could not be found"
+
+19 = NETE_DICTCLOSE, "Error closing address dictionary"
+
+20 = NETE_NOEPS, "Unable to find an available endpoint structure"
+
+21 = NETE_EPINUSE, "Tried to use an endpoint that is already in use"
+
+22 = NETE_DRVPROPERTY, "Protocol driver call to determine properties failed"
+
+23 = NETE_DRVLISTEN, "Net-Lib protocol driver call to register a listener failed"
+
+24 = NETE_DRVCONNECT, "Net-Lib protocol driver call to connect two endpoints failed"
+
+25 = NETE_DRVACCEPT, "Protocol driver call to accept an incoming connection request failed"
+
+26 = NETE_BADIOSTATE, "Endpoint has a bad I/O state"
+
+27 = NETE_DRVNOTAVAIL, "Specified Net-Lib protocol driver is not available"
+
+28 = NETE_BADPROPERTY, "Invalid property type argument"
+
+29 = NETE_DISCONNECT, "Net-Library operation terminated due to disconnect"
+
+30 = NETE_DRVEXIT, "Net-Lib protocol driver exit routine failed"
+
+31 = NETE_SUBACCEPT, "The attempt to issue an accept on one of the listeners failed"
+
+32 = NETE_DRVREAD, "Net-Lib protocol driver call to read data failed"
+
+33 = NETE_RDDATLEN, "Size of data required to be read in is larger than read buffer"
+
+34 = NETE_DRVREADOOB, "Net-Lib protocol driver call to read urgent data"
+
+35 = NETE_EXPNOTSUPPORT, "Expedited data is not supported by this Net-Lib protocol driver"
+
+36 = NETE_DRVWRITE, "Net-Lib protocol driver call to write data failed"
+
+37 = NETE_NULLADDR, "It is illegal to pass a NULL net_addr pointer"
+
+38 = NETE_NULLDICT, "It is illegal to pass a NULL dictionary pointer"
+
+39 = NETE_NULLSTATE, "It is illegal to pass a NULL net_state pointer"
+
+40 = NETE_NULLRETRES, "It is illegal to pass a NULL return_reason pointer"
+
+41 = NETE_NULLEP, "It is illegal to pass a NULL endpoint pointer"
+
+42 = NETE_NULLCBACK, "It is illegal to pass a NULL callack routine pointer"
+
+43 = NETE_NULLDICTNAME, "It is illegal to pass a NULL dictionary id pointer"
+
+44 = NETE_NULLEXPFLAG, "It is illegal to pass a NULL expedited data flag pointer"
+
+45 = NETE_NULLDICTPTR, "It is illegal to pass a NULL dictionary handle pointer"
+
+46 = NETE_NULLNEWEP, "It is illegal to pass a NULL endpoint handle pointer"
+
+47 = NETE_NULLATTRLST, "It is illegal to pass a NULL address information pointer"
+
+48 = NETE_NULLADDRPTR, "It is illegal to pass a NULL net_addr handle pointer"
+
+49 = NETE_NULLLASTENTRY, "It is illegal to pass a NULL last entry pointer"
+
+50 = NETE_NULLRDDATA, "It is illegal to pass a NULL read buffer"
+
+51 = NETE_NOADDRS, "Unable to find an available address structure"
+
+52 = NETE_NULLBYTSRD, "It is illegal to pass a NULL bytes_read pointer"
+
+53 = NETE_EPCLOSING, "The specified endpoint is being closed"
+
+54 = NETE_NULLWRDATA, "It is illegal to pass a NULL write buffer"
+
+55 = NETE_CANCELLED, "The requested operation has been canceled due to other events."
+
+56 = NETE_NULLINTL, "It is illegal to pass a NULL NET_INTL structure"
+
+57 = NETE_NULLUSERPTR, "It is illegal to pass a NULL user-pointer buffer"
+
+58 = NETE_BADDICT, "Attempt to use invalid dictionary handle"
+
+59 = NETE_BADADDR, "Attempt to use invalid address handle"
+
+60 = NETE_BADEP, "Attempt to use invalid endpoint handle"
+
+61 = NETE_DRVCLOSE, "Net-Lib protocol driver call to close endpoint failed"
+
+62 = NETE_VERSION, "Protocol driver not compatible with current Net-Lib -- probably an older version of Net-Library"
+
+63 = NETE_NULLSUPPORT, "It is illegal to pass a NULL pointer for the 'supported' parameter to net_capability()"
+
+64 = NETE_BADPROCMODE, "Invalid processing mode"
+
+65 = NETE_FUNCCODE, "Invalid function code passed to net_report()"
+
+66 = NETE_DRVINUSE, "Cannot unload driver -- it is still in use"
+
+67 = NETE_NCONNECTED, "Tried to do I/O on an endpoint that is not connected"
+
+68 = NETE_NOMULTIRW, "Cannot perform more than one read"
+
+69 = NETE_NULLPREVMODE, "Illegal NULL previous mode pointer"
+
+70 = NETE_NULLREPORT, "Cannot call net_report() if reporting has not been requested by net_opt_report()"
+
+71 = NETE_LFILENAME, "Localization file name not specified in call to net_intl_errstr()"
+
+72 = NETE_INTLOPEN, "Attemp to open the localization file using intl_open failed"
+
+73 = NETE_UP1ENIGNE, "The uni-processor version of Net-Lib is allowed only 1 engine"
+
+74 = NETE_NULLCBPARM, "Illegal NULL callback parameter to Net-Library routine"
+
+75 = NETE_NULLINFOLEN, "Illegal NULL information length pointer to net_address_info()"
+
+76 = NETE_UNKWNMODE, "Requested callback mode is not recognized"
+
+77 = NETE_BADEPNUM, "Requested endpoint number is not valid"
+
+78 = NETE_NULLENGPTR, "Illegal to pass a NULL engine pointer to net_engine_init()"
+
+79 = NETE_NULLENGINE, "Illegal to pass a NULL engine pointer to any Net-Library routine"
+
+80 = NETE_NOENGS, "Unable to find an available engine structure"
+
+81 = NETE_NOREQUESTS, "Unable to find an available request structure"
+
+82 = NETE_BADMONFLAG, "The requested monitor flags mask is invalid"
+
+83 = NETE_EPINCLOSE, "The desired endponit is being closed"
+
+84 = NETE_BADMODE, "The requested mode is not supported"
+
+85 = NETE_DRVLOAD, "Attempt to load protocol driver failed"
+
+86 = NETE_DRVUNLOAD, "Attempt to unload protocol driver failed"
+
+87 = NETE_MEMPOLICY, "Requested memory policy is not valid"
+
+88 = NETE_MEMREALLOC, "Attempt to reallocate memory failed"
+
+89 = NETE_MEMALLOC, "Attempt to allocate memory failed"
+
+90 = NETE_NULLSIZE, "It is illegal to pass a NULL size pointer to net_initsize()"
+
+91 = NETE_NULLSTATEPTR, "Illegal to pass a NULL NET_STATE pointer to net_init()"
+
+92 = NETE_NULLSPNLCKCNTPTR, "Illegal to pass a NULL spinlock count pointer to net_spinlocks()"
+
+93 = NETE_ENGACTIVE, "Requested operation cannot be performed while there are active engines"
+
+94 = NETE_UNKWIDTYPE, "Specified address dictionary id type is not valid"
+
+95 = NETE_SECNOTFOUND, "Requested config file section not found"
+
+96 = NETE_DRVNOTLOADED, "Network driver for specified network protocol is not loaded"
+
+97 = NETE_NODRVERRSTR, "No protocol driver error string available for current error"
+
+98 = NETE_SHRTINFOBUF, "The address information buffer is too small."
+
+99 = NETE_NULLNFDS, "It is illegal to pass a NULL nfds pointer to net_poll_external()"
+
+100 = NETE_BADNFDS, "The number of file descriptors requested is invalid"
+
+101 = NETE_NULLRDBUF, "It is illegal to pass a NULL read buffer to Net-Library"
+
+102 = NETE_NULLWRTBUF, "It is illegal to pass a NULL write buffer to Net-Library"
+
+103 = NETE_INTLNXTSEC, "Call to intl_nextsection failed"
+
+104 = NETE_INTLNXTVAL, "Call to intl_nextvalue failed"
+
+105 = NETE_LFNOVALUE, "Localization file entry found with no error message"
+
+106 = NETE_BADERRID, "Localization file entry found with invalid error number"
+
+107 = NETE_INTLNXTENT, "Call to intl_nextentry failed"
+
+108 = NETE_NULLINTLSIZE, "It is illegal to pass a NULL size pointer to net_intl_size"
+
+109 = NETE_NULLINTLBUF, "It is illegal to pass a NULL buffer pointer to net_intl_errstr"
+
+110 = NETE_BADMSECS, "The value of the milliseconds parameter is invalid"
+
+111 = NETE_NOLISTENERS, "It is illegal to call net_accept if there are no listning endpoints"
+
+112 = NETE_POLLNOTSUP, "The function net_poll_external() is not supported"
+
+113 = NETE_NONEQUEUED, "Cannot wait for request completion when none are queued"
+
+114 = NETE_BADSIGNAL, "The requested signal is not used by Net-Library"
+
+115 = NETE_DICTINUSE, "Attempt to access address dictionary with more than one task"
+
+116 = NETE_NULLEXPFLG, "It is illegal to pass a NULL expedited flag pointer to net_read"
+
+117 = NETE_NODRVCLASS, "No driver of the requested protocol class is available"
+
+118 = NETE_BADSRCHATTR, "The attribute search list contains an invalid entry"
+	
+119 = NETE_BADDICTID, "Invalid dictionary id passed to net_dict_open"
+
+120 = NETE_INVALIDVERSION, "Invalid Net-Library version"
+
+121 = NETE_NULLVALUE, "Value argument cannot be NULL for this option"
+
+122 = NETE_NULLARG, "Invalid NULL argument to routine"
+
+123 = NETE_BUFTOOSMALL, "Buffer is too small"
+
+124 = NETE_BADCMD, "Invalid command argument"
+
+125 = NETE_NULLBUF, "Null buffer argument"
+
+126 = NETE_NULLPROPINFO, "Null propinfo argument"
+
+127 = NETE_SETNOTSUPPORTED, "Setting of Net-Lib properties not supported"
+
+128 = NETE_INTLHOME, "Call to intl_home failed"
+
+129 = NETE_INVOSERR, "Not a valid OS error number"
+
+130 = NETE_RLIMITERR, "Unable to get/set the maximum number of open files"
+
+131 = NETE_GETEF, "Could not create event flag"
+
+132 = NETE_FREEEF, "Could not free event flag"
+
+133 = NETE_INSQTI, "Failed to insert element into interlocked queue"
+
+134 = NETE_REMQHI, "Failed to remove element from interlocked queue"
+
+135 = NETE_SETIMR, "Attempt to set timer failed"
+
+136 = NETE_CANTIM, "Attempt to cancel timer failed"
+
+137 = NETE_WAITFR, "Attempt to wait for event failed"
+
+138 = NETE_CLREF, "Could not clear event flag"
+
+139 = NETE_SETEF, "Could not set event flag"
+
+140 = NETE_DRVATTNHDLR, "Attempt to install protocol driver attention handler failed"
+
+141 = NETE_QUEOPEN, "Attempt to open thread communication queue failed"
+
+142 = NETE_QUEREAD, "Attempt to read from thread communication queue failed"
+
+143 = NETE_QUEWRITE, "Attempt to write to thread communication queue failed"
+
+144 = NETE_QUECLOSE, "Attempt to close thread communication queue failed"
+
+145 = NETE_CREATETHREAD, "Attempt to spawn thread failed"
+
+146 = NETE_EVENTCREATE, "Attempt to create event object failed"
+
+147 = NETE_EVENTPOST, "Attempt to post to event object failed"
+
+148 = NETE_EVENTCLEAR, "Attempt to clear event object failed"
+
+149 = NETE_EVENTWAIT, "Attempt to wait for event object failed"
+
+150 = NETE_CREATEMTX, "Attempt to create a mutex semaphore failed"
+
+151 = NETE_REQUESTMTX, "Attempt to obtain exclusive ownership of a mutex semaphore failed"
+
+152 = NETE_RELEASEMTX, "Attempt to release a mutex semaphore failed"
+
+153 = NETE_DESTROYMTX, "Attempt to destroy a mutex semaphore failed"
+
+154 = NETE_THRDSPND, "Attempt to suspend thread failed"
+
+155 = NETE_THRDRESUME, "Attempt to resume thread failed"
+
+156 = NETE_THRDKILL, "Attempt to kill thread failed"
+
+157 = NETE_SETSIGHDLR, "Unable to set the appropriate signal handler"
+
+158 = NETE_SELECTFAIL, "Call to select() failed"
+
+159 = NETE_FDOFLOW, "No more file descriptors available, listener being shut down"
+
+160 = NETE_NOPOLLSTRATS, "No more polling strategy structures available"
+
+161 = NETE_NOSIGNALS, "Net-Library cannot support a protocol driver that generates signals"
+
+162 = NETE_UNKNOWN, "Unknown Net-Library error"
+
+164 = NETE_OODDRIVER, "Driver has a version earlier then supported"
+
+165 = NETE_OSGENERIC, "Operating System Error - %1!"
+
+166 = NETE_DRVLOCFAIL, "Failed to open driver localization file"
+
+167 = NETE_OSOBJECT, "Failed to create an OS Object"
+
+168 = NET_QPRFSTR, "Error in reading from the address file"
+
+; end of tcllib error strings
+;

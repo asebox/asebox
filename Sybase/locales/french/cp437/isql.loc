@@ -1,0 +1,35 @@
+; comment character is semicolon.
+; "isql.loc" - Localization file for Isql.
+;
+; Sccsid @(#) isql.loc 1.3 12/3/93
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Tous droits r‚serv‚s.\
+Ce logiciel est diffus‚ dans le cadre d'un accord de \
+licence ou de non-divulgation et ne peut ˆtre utilis‚ \
+ou copi‚ qu'en conformit‚ avec les stipulations de\
+cet accord.\
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;
+[prompts]
+; 
+1 = "Mot de passe: "
+; End of prompts section.
+; Now we list the localized error message strings.
+[isqlerrors]
+; IERRNOMEM
+1 = "Erreur fatale: ‚chec de l'allocation de m‚moire."
+; IERRNOREADSPACE
+2 = "Erreur d'E/S: espace insuffisant pour les donn‚es d'entr‚e."
+; IERRTEMPFILE
+3 = "Impossible d'ouvrir le fichier temporaire '%1!' en vue d'une ‚criture dans dbedit()."
+; IERREDITFAIL
+4 = "Impossible d'appeler l'‚diteur '%1!'."
+; IERRNOINFILE
+5 = "Impossible d'ouvrir le fichier d'entr‚e '%1!'."
+; IERRNOOUTFILE
+6 = "Impossible d'ouvrir le fichier de sortie '%1!'."
+; IERRBADARG
+7 = "Isql paramŠtre '%1!' inconnu."
+; End of error strings section.

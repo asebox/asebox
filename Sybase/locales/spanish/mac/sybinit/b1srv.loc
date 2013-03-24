@@ -1,0 +1,65 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+2068            = "Establezca las etiquetas de todos los archivos del directorio de versión", ""
+2069            = "Asigne privilegios a los ejecutables requeridos", ""
+3820            = "CONFIGURE PARÁMETROS B1", ""
+3821		= "", ""
+3822		= "", ""
+3823		= "", ""
+3824    = "El valor actual de Data High es:", ""
+3825            = "Confirme el valor de Data High", ""
+3826            = "El valor de Data Low es:", ""
+3827            = "Establezca las etiquetas de todos los archivos del directorio de versión", ""
+3828            = "Asigne privilegios a los ejecutables requeridos", ""
+3829    = "Introduzca el valor de Data Low", ""
+3830    = "¿Es el valor de Data High correcto?", ""
+3831            = "Establezca la etiqueta del proceso actual para corregir DATAHI y vuelva a ejecutar sybinit", ""
+3832    = "Especifique si el valor de DATAHI es correcto o no", ""
+3833    = "Especifique una etiqueta válida para DATALO", ""
+3834    = "Termine de establecer etiquetas para todos los archivos del directorio de versión", ""
+3835    = "Termine de asignar privilegios a los ejecutables requeridos", ""
+3836    = "No es posible obtener el valor de DATAHI", ""
+3837    = "No se ha especificado el valor de DATALO o no es correcto", ""
+3838    = "DATAHI no domina sobre DATALO", ""
+3839    = "No se completado la inicialización de B1", ""
+3840    = "Establezca el valor de Data_low antes de intentar establecer etiquetas para todos los archivos del directorio de versión", ""
+3841            = "No es posible convertir el valor Data_Low al formato de etiqueta del host", ""
+3842            = "No es posible obtener el valor de Data_High", ""
+3843    = "No es posible convertir Data_High al formato de etiqueta del host", ""
+3844    = "No se encontrado el archivo %1!. Este archivo contiene la lista de archivos para los que es necesario establecer etiquetas", "%s"
+3845            = "No es posible abrir el archivo %1!. Compruebe los permisos sobre el archivo", "%s"
+3846            = "Ha fallado el comando del Shell %1! %2!", "%s %s"
+3847    = "La llamada del sistema para cambiar la etiqueta del archivo %1! por %2! ha fallado", "%s %s"
+3848    = "No se encontrado el archivo %1!. Este archivo contiene la lista de archivos a los que se deben asignar privilegios", "%s"
+3849    = "No es posible leer la etiqueta de sensibilidad del directorio %1! especificado para el registro de errores", "%s"
+3850    = "El directorio %1! especificado para registro de errores no está en Data_High %2!", "%s %s"
+3851    = "No es posible obtener la etiqueta para el archivo de registro de errores %1!", "%s"
+3852    = "No es posible cambiar la etiqueta del archivo de registro %1!", "%s"
+3853            = "Ha fallado el comando para asignar privilegios sobre el archivo %1!. Compruebe que sybinit tiene todos los privilegios necesarios", "%s"
+3854    = "No es posible inicializar los atributos de seguridad", ""
+3856            = "Ha fallado la llamada de sistema para obtener el valor de la etiqueta de sensibilidad", ""
+3857    = "No es posible convertir la etiqueta a un formato legible", ""
+3858            = "Ha fallado el intento de establecer la etiqueta del archivo %1!", "%s"
+3859    = "Fallo en la llamada de sistema para obtener la etiqueta del archivo %1!", "%s"
+3860            = "Ha fallado la función de sistema operativo para comparar etiquetas. Compruebe que sybinit tiene todos los privilegios necesarios", ""
+; End of section.

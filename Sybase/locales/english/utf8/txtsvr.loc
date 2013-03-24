@@ -1,0 +1,155 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  
+;  Product:  Full Text Search Specialty Data Store Release 11.5.1
+;  File:     txtsvr.loc  1.11  01/10/01
+;  Purpose:  Messages for localization  
+;
+;            
+;  Revision History
+;  ----------------------------------------------------------------------
+;  15-Oct-1997                  created, initially 45 messages
+;  28-Oct-1997                  modify 14, 15, 27; add 46, 47
+;  13-Jan-1998			added 48 - 53
+;  21-Jan-1998			added 54 - 57
+;  06-Mar-1998			added 58
+;  26-Mar-1998			added 59
+;  10-Jan-2001                  added 60 - 62
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;                   Copyright (c) Sybase Inc. 1997, 1998
+;                   Emeryville, CA 94608 
+;                   All rights reserved.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; localized message strings
+;
+[messages]
+;
+; 1  ENOMEM
+1 =  "Memory allocation failed."
+; 2  EROUFAIL
+2 =  "%1! failed."
+; 3  EARGMIS
+3 =  "%1!: argument mismatch."
+; 4  EARGINV
+4 =  "%1!: invalid argument."
+; 5  ECMDFAIL
+5 =  "'%1!' command failed."
+; 6  ERPCNOT 
+6 =  "RPC '%1!' does not exist."
+; 7  ENOCOLL
+7 =  "Index names must be of the form: 'database.owner.name'."
+; 8  ENOREQDB
+8 =  "The required database '%1!' does not exist."
+; 9  ENOSPECDB 
+9 =  "The specified database '%1!' does not exist."
+; 10 ENOLOADIDX 
+10 = "Unable to load index '%1!'."
+; 11 EINVOBJ
+11 = "Invalid object name '%1!'."
+; 12 EINDEXED
+12 = "Index already exists."
+; 13 ENOPASSTH 
+13 = "Passthru mode not supported."
+; 14 ECOLMISS
+14 = "Internal error: column mismatch detected in function %1!."
+; 15 ENOROWBUF
+15 = "Internal error: Unable to locate row buffer in function %1!."
+; 16 ENOCURSOR 
+16 = "A cursor name is required."
+; 17 ENOPARSE  
+17 = "Unable to parse SQL statement."
+; 18 ENOILOCK
+18 = "Unable to lock index."
+; 19 ENOINDEX
+19 = "Index does not exist or is not online."
+; 20 EIDXINUSE 
+20 = "Index is currently being updated."
+; 21 ECURFAIL   
+21 = "Cursor allocation failed."
+; 22 ENOUPDDEL  
+22 = "Update and Delete operations are not supported."
+; 23 EINVCOL    
+23 = "Invalid column in select list."
+; 24 EFUNFAIL   
+24 = "'%1!' function failed with vdk error '%2!'."
+; 25 ESVRBUSY   
+25 = "This text server is currently dedicated to server '%1!'."
+; 26 ENORPCNAM  
+26 = "Unable to retrieve RPC name."
+; 27 EINVSORT
+27 = "Invalid sort specification '%1!'."
+; 28 EUNSUPPORT 
+28 = "Unsupported statement."
+; 29 ENOMUTEX   
+29 = "Failed to create database mutex."
+; 30 EGENRQUERY 
+30 = "Error generating remote query."
+; 31 EPRORQUERY 
+31 = "Error processing remote query."
+; 32 ENORTEXT   
+32 = "Unable to execute procedure '%1!'."
+; 33 EINDEXBUSY 
+33 = "Index for object '%1!.%2!' is in use by another thread."
+; 34 ENOMODCOL  
+34 = "Failed to modify collection '%1!' for object '%2!.%3!'."
+; 35 EINVALOP   
+35 = "Invalid score operator, only '>' and '>=' are supported."
+; 36 ENOPRED    
+36 = "Query does not contain a predicate."
+; 37 EUNSUPCOL  
+37 = "Unsupported column '%1!'."
+; 38 ENOREMSVR  
+38 = "Unable to log in to remote server '%1!'."
+; 39 EBINDFAIL  
+39 = "Unable to bind row results."
+; 40 ENOSLOCK   
+40 = "Unable to obtain session lock."
+; 41 EMAXSESS   
+41 = "The maximum number of sessions is in use."
+; 42 EINVTPTR   
+42 = "Invalid text pointer value."
+; 43 ENOUDATA    
+43 = "Unable to retrieve user data from thread."
+; 44 ECOLCLOSE  
+44 = "Failed to open collection '%1!' for object '%2!'."
+; 45 EINDXNO    
+45 = "Index not found. Verify that the database is online."
+; 46 EIDXRW    
+46 = "Index '%1!' is in use."
+; 47 ENOIDXOBJ
+47 = "Index for object '%1!.%2!' does not exist or is not online."
+; 48 EDATATYPE
+48 = "Unsupported datatype '%1!'."
+; 49 EBACKUP
+49 = "Backup failed for index '%1!', rc = %2!."
+; 50 ERESTORE
+50 = "Restore failed for index '%1!', rc = %2!."
+; 51 IBACKUP
+51 = "Index '%1!' backed up."
+; 52 IRESTORE
+52 = "Index '%1!' restored."
+; 53 ECLUSTER
+53 = "Unable to create a clustered result set. Ensure that the index was created with clustering enabled."
+; 54 ISTATIC
+54 = "This parameter is static and the server must be restarted for it to take effect."
+; 55 IDYNAMIC
+55 = "This parameter is dynamic and is now in effect."
+; 56 ECFGFILE
+56 = "Unable to create a new version of the configuration file."
+; 57 ECFGNAME
+57 = "Invalid configuration parameter '%1!'."
+; 58 EFEATURE
+58 = "Ensure that the index was created with DOC-FEATURES defined."
+; 59 EDBINDEX
+59 = "An index in database '%1!' is in use by another thread."
+; 60 ENOTENABLED
+60 = "Server '%1!' is not enabled for full-text searches."
+; 61 EBADSRVID
+61 = "The HA companion's text server id (%1!) differs from that of the primary (%2!)."
+; 62 EHASVRBUSY
+62 = "This text server is currently dedicated to servers '%1!' and '%2!'."
+
+

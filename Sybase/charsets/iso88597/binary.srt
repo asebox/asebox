@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the ISO_8859-7:1987, Greek, ELOT_928 character set, this is a binary sort order.
+;
+; SCCS information:	@(#) generic/localization/charsets/iso88597/binary.srt 1.1 1/13/95
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 16 1994  3:47AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_iso88597
+menuname = "Binary ordering, for the ISO_8859-7:1987, Greek, ELOT_928 character set (iso88597)."
+charset = iso88597
+ 
+description = "Binary sort order for the ISO_8859-7:1987, Greek, ELOT_928 character set (iso88597)."
+ 
+binary = "true"

@@ -1,0 +1,89 @@
+; comment character is semicolon.
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+[copyright]
+copyright =  "Copyright (C) 1995 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "unable to get string due to lack of memory"
+
+2 = ZZZZZ, "unable to get layer message string"
+
+3 = ZZZZZ, "unable to get origin message string"
+
+4 = ZZZZZ, "error string not available"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "user api layer"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "external error"
+
+2 = ZZZZZ, "internal Client Library error"
+
+3 = ZZZZZ, "internal net library error"
+
+4 = ZZZZZ, "internal common library error"
+
+5 = ZZZZZ, "internal intl library error"
+
+6 = ZZZZZ, "internal async manager error"
+
+7 = ZZZZZ, "internal memory management error"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "No error."
+
+1 = ZZZZZ, "Unknown error."
+
+2 = ZZZZZ, "Memory allocation failure."
+
+3 = ZZX04, "Unable to open configuration file %1! for reading."
+
+4 = ZZX05, "Configuration %1! has been dropped (CS_FORCE)."
+
+5 = ZZX06, "Configuration file name %1! too long."
+
+6 = ZZX07, "File format error, invalid character line %1!."
+
+7 = ZZX08, "Configuration section %1! not found."
+
+8 = 01X09, "Configuration file syntax error line %1! near (%2!)."
+
+9 = 01X0A, "Configuration %1! was dropped (CS_FORCE) while still in use."
+

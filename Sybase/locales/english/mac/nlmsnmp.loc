@@ -1,0 +1,52 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nlmsnmp.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlmsnmp]
+
+1 = IPDE_EPDISCON, "Unable to disconnect the end point - Error is %1!"
+
+2 = IPDE_ACCEPT, "Error while accepting new connection - Error is %1!"
+
+3 = IPDE_EPCLOSE, "Unable to close the end point - Error is %1!"
+
+4 = IPDE_PARSE, "Connection information has invalid syntax"
+
+5 = IPDE_EPCONNECT, "Failed to connect to the server - Error is %1!"
+
+6 = IPDE_EPMODE, "Failed to change the mode of the pipe - Error is %1!"
+
+7 = IPDE_EVENTOBJ, "Failed to create an event object - Error is %1!"
+
+8 = IPDE_NPCREATE, "Failed to create a named pipe - Error is %1!"
+
+9 = IPDE_READ, "Read from the named pipe failed - Error is %1!"
+
+10 = IPDE_WRITE, "Write to the named pipe failed - Error is %1!"
+
+
+; end of nlmsnmp error strings
+;
+

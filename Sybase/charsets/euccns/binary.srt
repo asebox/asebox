@@ -1,0 +1,22 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   %Z% %M% %I%	%G%
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the EUC JIS Japanese character set, this sort order is a
+;   binary ordering.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_euccns
+menuname = "Binary ordering, for the EUC CNS character set (euccns)."
+charset = euccns
+
+description = "Binary sort order for Chinese using the EUC CNS character set (euccns)."
+
+binary = "true"

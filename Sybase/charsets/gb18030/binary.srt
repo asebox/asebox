@@ -1,0 +1,20 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the gb18030 simplified Chinese character set, this sort 
+;   order is a binary ordering.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_gb18030
+menuname = "Binary ordering, for gb18030."
+charset = gb18030
+
+description = "Binary sort order for simplified Chinese using gb18030."
+
+binary = "true"

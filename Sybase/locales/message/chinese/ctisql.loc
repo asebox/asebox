@@ -1,0 +1,94 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "保密字: "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "致命的错误: 内存分配失败."
+
+2 = ZZZZZ, "不认识的本地化对象.  使用缺省值'%1!'."
+
+3 = ZZZZZ, "内部错误: 一个非法的本地化类型传递到cs_locale()."
+
+4 = ZZZZZ, "装载一对翻译表出错."
+
+5 = ZZZZZ, "在尝试配置应用程序环境以便用于与本地化相关的结构时出现错误。"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "致命的错误: 内存分配失败."
+
+2 = ZZZZZ, "I/O 错误: 输入数据空间不充分."
+
+3 = ZZZZZ, "打开编辑使用的临时文件'%1!'失败."
+
+4 = ZZZZZ, "不能激活'%1!'编辑器."
+
+5 = ZZZZZ, "不能打开输入文件'%1!'."
+
+6 = ZZZZZ, "不能打开输出文件'%1!'."
+
+7 = ZZZZZ, "Isql: 未知的参数'%1!'."
+
+8 = ZZZZZ, "数据库名太长."
+
+9 = ZZZZZ, "不能安装CS-Library 消息反馈例程."
+
+10 = ZZZZZ, "不能初始化Client Library."
+
+11 = ZZZZZ, "不能安装Client Library客户消息反馈例程."
+
+12 = ZZZZZ, "不支持出现的数据类型."
+
+13 = ZZZZZ, "打印行时缓冲溢出."
+
+14 = ZZZZZ, "不支持的结果类型."
+
+15 = ZZZZZ, "指定非法的内存块大小."
+
+16 = ZZZZZ, "指定非法的内存处理."
+
+17 = ZZZZZ, "内部isql 内存分配错误."
+
+18 = ZZZZZ, "编辑器中命令行太长."
+
+19 = ZZZZZ, "一个isql 应用的上下文没被初始化."
+
+20 = ZZZZZ, "一个SQL Server的连接没被建立."
+
+21 = ZZZZZ, "无可用的命令处理."
+
+22 = ZZZZZ, "不能打开缓冲文件."
+
+23 = ZZZZZ, "复位文件指针到文件头失败."
+
+24 = ZZZZZ, "清除命令缓冲失败."
+
+25 = ZZZZZ, "不能初始此命令."
+
+26 = ZZZZZ, "在处理中清除命令失败."
+
+27 = ZZZZZ, "装载一对翻译表出错."
+
+
+

@@ -1,0 +1,280 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "Optdiag 출력 화일에서 Adaptive Server Enterprise 서버 이름과\\n현재 Adaptive Server Enterprise 서버 이름이 일치하지 않습니다."
+3 = ZZZZZ, "Optdiag 버전이 Adaptive Server Enterprise\\n버전과 일치하지 않습니다. 동일한 버전의 프로그램을 사용하십시오."
+10 = ZZZZZ, "Optdiag 출력 화일에서 Adaptive Server Enterprise 버젼과\\n현재 Adaptive Server Enterprise 서버 버젼이 일치하지 않습니다."
+11 = ZZZZZ, "테이블 이름 '%1!'와(과) 지정한 테이블 이름 '%2!'이(가) 일치하지 않습니다."
+12 = ZZZZZ, "다음 문자열에서 겹 따옴표 관련 문제가 발생하였습니다.:"
+13 = ZZZZZ, "다음 줄에 값이 없는 문자열이 있습니다.:"
+14 = ZZZZZ, "열 이름 '%1!'와(과) 지정한 열 이름 '%2!'이(가) 일치하지 않습니다."
+15 = ZZZZZ, "열 통계를 갱신할 수 없습니다."
+16 = ZZZZZ, "히스토그램 열 이름 '%1!'은(는) 기타 통계에 대해 이전 열 이름 '%2!'와(과)\\n일치하지 않습니다."
+17 = ZZZZZ, "'%2!.%3!.%4!'의 히스토그램 단계 %1! 상에서,"
+18 = ZZZZZ, "겹 따옴표와 관련된 문제가 있습니다."
+19 = ZZZZZ, "데이타를 읽을 수 없습니다. "
+20 = ZZZZZ, "단계 번호는 1이어야 합니다."
+21 = ZZZZZ, "단계 번호가 1씩 증가하지 않습니다."
+22 = ZZZZZ, "오류로 히스토그램 누적 가중치가 1.0 + 여유 값을 초과하였습니다. "
+23 = ZZZZZ, "두 인접 셀은 양쪽 모두 < 연산자를 사용할 수 없습니다."
+24 = ZZZZZ, "'%1!.%2!.%3!'의 히스토그램 상에서,"
+26 = ZZZZZ, "Begin transaction을 실행할 수 없습니다."
+27 = ZZZZZ, "히스토그램 통계를 갱신할 수 없습니다."
+28 = ZZZZZ, "히스토그램 통계를 삭제할 수 없습니다."
+29 = ZZZZZ, "히스토그램 가중치를 삽입할 수 없습니다."
+30 = ZZZZZ, "Commit transaction을 실행할 수 없습니다."
+31 = ZZZZZ, "이 서버에는 '%1!' 데이타베이스가 없습니다."
+32 = ZZZZZ, "지정한 테이블 소유주는 '%1!' 데이타베이스에서 테이블을 소유하지 않습니다."
+33 = ZZZZZ, "'%2!' 데이타베이스에는 '%1!' 사용자가 없습니다."
+34 = ZZZZZ, "이 데이타베이스의 '%1!' 테이블은 '%2!' 사용자에게 속해 있지 않습니다."
+35 = ZZZZZ, "이 '%2!' 데이타베이스에는 '%1!' 테이블이 없습니다."
+36 = ZZZZZ, "'%1!' 테이블에는 '%2!' 열이 없습니다."
+37 = ZZZZZ, "Systabstats에 이 인덱스에 대한 통계가 없습니다."
+38 = ZZZZZ, "Optdiag는 '%1!' 데이타 유형을 지원하지 않습니다."
+39 = ZZZZZ, "Optdiag는 길이가 %2!인 '%1!' 데이타 유형을 지원하지 않습니다."
+40 = ZZZZZ, "Sysstatistics에 이 열이나 열 그룹에 대한 통계가 없습니다."
+41 = ZZZZZ, "Sysstatistics에 이 열이나 열 그룹에 대한 히스토그램이 없습니다."
+42 = ZZZZZ, "추적 플래그 3 관련 내부 오류."
+43 = ZZZZZ, "내부 오류: '%1!' 테이블 소유주와 '%2!' 테이블이 반복됩니다."
+44 = ZZZZZ, "내부 오류: ct_results()가 잘못된 결과 유형 %1!을(를) 리턴합니다." 
+45 = ZZZZZ, "내부 오류: ct_fetch()에서 데이타 길이가 일치하지 않습니다."
+48 = ZZZZZ, "잘못된 값 %1!"
+; Next is "returned", as in "a function returned a value".
+49 = ZZZZZ, "리턴함"
+50 = ZZZZZ, "내부 오류: ct_results()가 CS_CMD_FAIL 결과 유형을 리턴하였습니다."
+51 = ZZZZZ, "내부 오류: cs_convert()가 실행되지 않습니다."
+52 = ZZZZZ, " %1! 행을 읽을 수 없습니다."
+53 = ZZZZZ, "내부 오류: 실제 행 번호 (%1!)와(과) 예상 번호 (%2!)이(가) 동일하지 않습니다."
+54 = ZZZZZ, "내부 오류: 실제 데이타의 최대 길이 (%1!)은(는) 예상치 (%2!)을(를) 초과합니다."
+55 = ZZZZZ, "캐쉬와 관련없는 구성 매개 변수는 '%1!'(으)로 시작되어야 합니다."
+56 = ZZZZZ, "'%1!' 캐쉬를 찾을 수 없습니다."
+57 = ZZZZZ, "'%1!.%2!.%3!' 색인을 찾을 수 없습니다."
+58 = ZZZZZ, "다음 줄에서 잘못된 값을 무시하였습니다."
+59 = ZZZZZ, "시뮬레이션된 구성 값이 갱신되지 않았습니다."
+60 = ZZZZZ, "'%1!.%2!' 테이블에 대해 시뮬레이션된 테이블 통계가 갱신되지 않았습니다."
+61 = ZZZZZ, "Null 값과 null이 아닌 값의 하위 경계를 뺄 수 있습니다."
+62 = ZZZZZ, "빠지는 단계가 있을 수 있습니다."
+63 = ZZZZZ, "가중치는 0.0과 1.0 사이에 있어야 합니다."
+64 = ZZZZZ, "최근에 읽은 가중치가 원인일 수 있습니다."
+65 = ZZZZZ, "단계 값이 증가하지 않습니다."
+66 = ZZZZZ, "오류로 총 가중치가 1.0 + 여유 값을 넘었습니다."
+67 = ZZZZZ, "히스토그램 단계 값을 삽입할 수 없습니다."
+68 = ZZZZZ, "'%1!' 줄 라벨을 찾는 중입니다.\\n예기치 않게 화일 끝에 도달하였습니다.\\n겹 따옴표가 일치하지 않기 때문일 것입니다."
+69 = ZZZZZ, "내부 오류: '%1!' 테이블과 '%2!' 열이 반복됩니다."
+70 = ZZZZZ, "Optdiag가 성공했다는 메시지를 읽지 않고 입력 화일 끝에 도달하였습니다."
+71 = ZZZZZ, "반드시 사용자 locale을 환경 변수 LANG이나 명령줄 플래그 -z로 \\n지정하여야 합니다."
+72 = ZZZZZ, "현 단계는 발생 빈도수에 포함되지 않으므로 현재와 이전 단계의 값은\\n같지 않아야 합니다."
+73 = ZZZZZ, "SYSSTATISTICS의 서로 다른 이진 값들은 동일한 값으로 읽혀질 것입니다." 
+74 = ZZZZZ, "이 단계에서 SYSSTATISTICS를 갱신하는 것은 일관성에 문제를 일으킬 것 입니다." 
+75 = ZZZZZ, "이 히스토그램을 건너 뛰고 있습니다. 만일 이 히스토그램을 갱신해야 한다면,\\n이진 모드로 Optdiag를 수행하고 이진 단계 값을 수정하십시오."
+76 = ZZZZZ, "이 명령을 실행하려면 '%1!' 역할이 있어야 합니다. \\n해당 역할이 있는 사용자에게 문의하십시오."
+77 = ZZZZZ, "Optdiag 행 레이블이 최대 허용 길이를 초과합니다."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "인용 부호 관련 구문 오류."
+2 = ZZZZZ, "열 이름은 지정되었으나 테이블 이름이 지정되지 않았습니다."
+3 = ZZZZZ, "추적 플래그 값은 최대 허용치인 %1!을(를) 초과했습니다."
+5 = ZZZZZ, "입력 화일과 출력 화일 이름이 지정되어야 합니다."
+6 = ZZZZZ, "데이타베이스와 입력 화일에 대한 인수를 읽지 못했기 때문에\\n대상 데이타베이스를 모릅니다."
+7 = ZZZZZ, "입력 화일을 열 수 없습니다."
+8 = ZZZZZ, "출력 화일을 열 수 없습니다."
+9 = ZZZZZ, "  아마도 화일이 존재하지 않거나 Optdiag에 필요한 사용권한이 없습니다."
+10 = ZZZZZ, "'statistics' 키워드 앞에 명령줄 구문 오류가 있습니다."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Optdiag가 실패하였습니다.  위에서 오류 메시지를 검사하십시오."
+2 = ZZZZZ, "Optdiag가 성공하였습니다."
+3 = ZZZZZ, "Adaptive Server Enterprise 버젼에서 차이를 무시하기 위해 명령줄에서\\n추적 플래그 1 (-T1)을 설정하십시오."
+5 = ZZZZZ, "이 일관성 검사를 건너 뛰기 위해 명령줄에서 추적 플래그 4 (-T4)를 설정하십시오."
+7 = ZZZZZ, "지정되지 않음"
+8 = ZZZZZ, " (클러스터)"
+9 = ZZZZZ, " (비클러스터)"
+10 = ZZZZZ, "기본값이 사용됩니다."
+11 = ZZZZZ, "기본값"
+12 = ZZZZZ, "다음 테이블은 '%1!'이고 소유주는 '%2!'입니다."
+13 = ZZZZZ, "문제 소재를 찾을 수 없다면, 이 문제를 해결하기 위해\\n입력 모드에서 추적 플래그 6과 함께 Optdiag를 재 실행할 수 있습니다."
+14 = ZZZZZ, "Optdiag는 완료되었지만 통계는 무시되었습니다.\\n위에서 오류 메시지를 검사하십시오."
+15 = ZZZZZ, " (실제)"
+16 = ZZZZZ, " (시뮬레이션된)"
+17 = ZZZZZ, "분산 페이지 업그레이드로부터 통계를 생성했습니다."
+18 = ZZZZZ, "Optdiag로부터 통계를 로드했습니다."
+19 = ZZZZZ, " (255바이트 사용됨)"
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "암호: "
+
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+;
+[format]
+
+1 = ZZZZZ, "서버 이름:"
+2 = ZZZZZ, "지정된 데이타베이스:"
+3 = ZZZZZ, "지정된 테이블 소유주:"
+4 = ZZZZZ, "테이블 소유주:"
+5 = ZZZZZ, "지정된 테이블:"
+6 = ZZZZZ, "지정된 열:"
+7 = ZZZZZ, "인덱스에 대한 통계:"
+8 = ZZZZZ, "인덱스 열 목록:"
+9 = ZZZZZ, "테이블에 대한 통계:"
+10 = ZZZZZ, "열에 대한 통계:"
+11 = ZZZZZ, "남아 있는 열에 대한 통계가 없습니다:"
+12 = ZZZZZ, "(기본 값을 사용합니다.)"
+13 = ZZZZZ, "열 그룹에 대한 통계:"
+14 = ZZZZZ, "열 통계의 최종 갱신:"
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "분산 페이지 업그레이드에서 시작된 통계입니다."
+16 = ZZZZZ, "Optdiag에서 로드된 통계입니다."
+17 = ZZZZZ, "열에 대한 히스토그램:"
+18 = ZZZZZ, "열 데이터 유형:"
+19 = ZZZZZ, "요청된 단계 수:"
+20 = ZZZZZ, "실제 단계 수:"
+21 = ZZZZZ, "마지막 히스토그램 업데이트:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+22 = ZZZZZ, "단계     가중치                      값"
+23 = ZZZZZ, "범위 셀 밀도:"
+24 = ZZZZZ, "전체 밀도:"
+25 = ZZZZZ, "데이터 유형:"
+26 = ZZZZZ, "범위 선택도:"
+27 = ZZZZZ, "중간 선택도:"
+28 = ZZZZZ, "리프 수:"
+29 = ZZZZZ, "데이터 페이지 수:"
+30 = ZZZZZ, "빈 데이터 페이지 수:"
+31 = ZZZZZ, "빈 리프 페이지 수:"
+32 = ZZZZZ, "데이터 행 수:"
+33 = ZZZZZ, "전달된 행 수:"
+34 = ZZZZZ, "삭제된 행 수:"
+35 = ZZZZZ, "데이터 페이지 CR 수:"
+36 = ZZZZZ, "인덱스 페이지 CR 수:"
+37 = ZZZZZ, "데이터 행 CR 수:"
+38 = ZZZZZ, "OAM + 할당 페이지 수:"
+39 = ZZZZZ, "첫 번째 익스텐트 데이터 페이지:"
+40 = ZZZZZ, "첫 번째 익스텐트 리프 페이지:"
+41 = ZZZZZ, "데이터 행 크기:"
+42 = ZZZZZ, "리프 행 크기:"
+43 = ZZZZZ, "인덱스 높이:"
+44 = ZZZZZ, "파생된 통계:"
+45 = ZZZZZ, "데이터 페이지 클러스터 비율:"
+46 = ZZZZZ, "인덱스 페이지 클러스터 비율:"
+47 = ZZZZZ, "데이터 행 클러스터 비율:"
+48 = ZZZZZ, "테이블 이름:"
+49 = ZZZZZ, "가장 큰 partition의 페이지:"
+50 = ZZZZZ, "구성 매개변수:"
+51 = ZZZZZ, "최대 병렬도:"
+52 = ZZZZZ, "최대 스캔 병렬도:"
+53 = ZZZZZ, "캐시 구성:"
+54 = ZZZZZ, "2K 풀의 크기(Kb):"
+55 = ZZZZZ, "4K 풀의 크기(Kb):"
+56 = ZZZZZ, "8K 풀의 크기(Kb):"
+57 = ZZZZZ, "16K 풀의 크기(Kb):"
+58 = ZZZZZ, "시뮬레이션된 마지막 업데이트:"
+59 = ZZZZZ, "공간 활용:"
+60 = ZZZZZ, "대량 I/O 효율성:"
+61 = ZZZZZ, "작업자 프로세스 수:"
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "열에 대한 히스토그램:"
+66 = ZZZZZ, "열 데이터 유형:"
+67 = ZZZZZ, "요청된 단계 수:"
+68 = ZZZZZ, "실제 단계 수:"
+69 = ZZZZZ, "마지막 히스토그램 업데이트:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight and value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "단계     가중치                    값"
+71 = ZZZZZ, "     범위 셀 밀도:"
+72 = ZZZZZ, "     전체 밀도:"
+73 = ZZZZZ, "데이터 유형:"
+74 = ZZZZZ, "     범위 선택도:"
+75 = ZZZZZ, "     중간 선택도:"
+76 = ZZZZZ, "     리프 수:"
+77 = ZZZZZ, "     데이터 페이지 수:"
+78 = ZZZZZ, "     빈 데이터 페이지 수:"
+79 = ZZZZZ, "     빈 리프 페이지 수:"
+80 = ZZZZZ, "     데이터 행 수:"
+81 = ZZZZZ, "     전달된 행 수:"
+82 = ZZZZZ, "     삭제된 행 수:"
+83 = ZZZZZ, "     데이터 페이지 CR 수:"
+84 = ZZZZZ, "     인덱스 페이지 CR 수:"
+85 = ZZZZZ, "     데이터 행 CR 수:"
+86 = ZZZZZ, "     OAM + 할당 페이지 수:"
+87 = ZZZZZ, "     첫 번째 익스텐트 데이터 페이지:"
+88 = ZZZZZ, "     첫 번째 익스텐트 리프 페이지:"
+89 = ZZZZZ, "     데이터 행 크기:"
+90 = ZZZZZ, "     리프 행 크기:"
+91 = ZZZZZ, "     인덱스 높이:"
+92 = ZZZZZ, "     데이터 페이지 클러스터 비율:"
+93 = ZZZZZ, "     인덱스 페이지 클러스터 비율:"
+94 = ZZZZZ, "     데이터 행 클러스터 비율:"
+95 = ZZZZZ, "테이블 이름:"
+96 = ZZZZZ, "     가장 큰 partition의 페이지:"
+97 = ZZZZZ, "     최대 병렬도:"
+98 = ZZZZZ, "     최대 스캔 병렬도:"
+99 = ZZZZZ, "캐시 구성:"
+100 = ZZZZZ, "     2K 풀의 크기(Kb):"
+101 = ZZZZZ, "     4K 풀의 크기(Kb):"
+102 = ZZZZZ, "     8K 풀의 크기(Kb):"
+103 = ZZZZZ, "     16K 풀의 크기(Kb):"
+104 = ZZZZZ, "     32K 풀의 크기(Kb):"
+105 = ZZZZZ, "     64K 풀의 크기(Kb):"
+106 = ZZZZZ, "     128K 풀의 크기(Kb):"
+107 = ZZZZZ, "시뮬레이션된 마지막 업데이트:"
+108 = ZZZZZ, "     공간 활용:"
+109 = ZZZZZ, "     대량  I/O 효율성:"
+110 = ZZZZZ, "     작업자 프로세스 수:"
+111 = ZZZZZ, "  파생된 통계:"
+112 = ZZZZZ, "구성 매개변수:"
+113 = ZZZZZ, "샘플링 비율:"
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "치명적인 오류: 메모리를 할당할 수 없습니다."
+2 = ZZZZZ, "연결 속성을 설정할 수 없습니다."
+3 = ZZZZZ, "연결을 할 수 없습니다."
+4 = ZZZZZ, "localization 객체를 인식할 수 없습니다. 기본값인 '%1!'을(를) 사용합니다."
+5 = ZZZZZ, "내부 오류: 잘못된 localization 유형이 cs_locale()로 넘겨졌습니다."
+6 = ZZZZZ, "'%1!'에 구문 오류."
+7 = ZZZZZ, "한 세트의 번역 테이블들을 구동하는 중에 오류가 발생하였습니다."
+8 = ZZZZZ, "인터럽트 - Optdiag가 중단되었습니다."

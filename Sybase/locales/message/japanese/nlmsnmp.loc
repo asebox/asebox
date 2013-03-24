@@ -1,0 +1,52 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nlmsnmp.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=japanese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlmsnmp]
+
+1 = IPDE_EPDISCON, "エンド・ポイントの接続解除ができません。%1! エラー"
+
+2 = IPDE_ACCEPT, "新しい接続を行っている間にエラーが発生しました。%1! エラー"
+
+3 = IPDE_EPCLOSE, "エンド・ポイントがクローズできません。%1! エラー"
+
+4 = IPDE_PARSE, "接続情報に正しくない構文があります。"
+
+5 = IPDE_EPCONNECT, "サーバへの接続ができませんでした。%1! エラー"
+
+6 = IPDE_EPMODE, "パイプのモードを変更することができませんでした。%1! エラー"
+
+7 = IPDE_EVENTOBJ, "イベント・オブジェクトを生成できませんでした。%1! エラー"
+
+8 = IPDE_NPCREATE, "名前付けパイプを生成できませんでした。%1! エラー"
+
+9 = IPDE_READ, "名前付けパイプからの読み込みができませんでした。%1! エラー"
+
+10 = IPDE_WRITE, "名前付けパイプへの書き込みができませんでした。%1! エラー"
+
+
+; end of nlmsnmp error strings
+;
+

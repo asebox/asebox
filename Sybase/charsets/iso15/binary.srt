@@ -1,0 +1,27 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the ISO_8859-15:1998, Latin9, Western Europe character set, this is a binary sort order.
+;
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; May 24 1998  9:03PM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_iso15
+menuname = "Binary ordering, for the ISO_8859-15:1998, Latin9, Western Europe character set (iso15)."
+charset = iso15
+ 
+description = "Binary sort order for the ISO_8859-15:1998, Latin9, Western Europe character set (iso15)."
+ 
+binary = "true"

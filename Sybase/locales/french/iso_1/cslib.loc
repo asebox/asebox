@@ -1,0 +1,170 @@
+; comment character is semicolon.
+; "cslib.loc" - Localization file for CS-Library.
+;
+; Sccsid @(#) cslib.loc 1.3 12/3/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+	Tous droits réservés.\
+Ce logiciel est diffusé dans le cadre d'un accord de \
+licence ou de non-divulgation et ne peut être utilisé \
+ou copié qu'en conformité avec les stipulations de\
+cet accord.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csdefaults]
+
+1 = ZZZZZ, "impossible d'allouer de la mémoire."
+
+2 = ZZZZZ, "cslib"
+
+3 = ZZZZZ, "cslib"
+
+4 = ZZZZZ, "erreur générale"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CS-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cslayer]
+
+2 = ZZZZZ, "couche api utilisateur cslib"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csorigin]
+
+1 = ZZZZZ, "erreur externe"
+
+2 = ZZZZZ, "erreur interne à la CS-Library"
+
+4 = ZZZZZ, "erreur dans la bibliothèque commune"
+
+5 = ZZZZZ, "erreur interne à la bibliothèque"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csapierror]
+
+0 =  00000, "Aucune erreur."
+
+1 =  ZZZZZ, "Erreur inconnue."
+
+2 =  ZZZZZ, "Les informations recherchées dépasseront la capacité du tampon de %1! octets."
+
+3 = ZZZZZ, "Echec d'allocation de mémoire."
+
+4 = 22023, "Le paramètre %1! ne peut pas être NULL."
+
+5 = 22023, "Lorsque %1! est NULL le paramètre %2! doit être 0."
+
+6 = 22023, "Une valeur illégale de %1! a été affectée au paramètre %2!."
+
+7 = 22023, "Le paramètre %1! doit être NULL."
+
+8 = 22023, "Le paramètre %1! doit être défini comme CS_UNUSED."
+
+9 = 22023, "La propriété %1! ne peut être ni définie ni effacée."
+
+10 = 22023, "Un pointeur de localisation invalide a été spécifié."
+
+11 = 22023, "Le paramètre %1! renvoie à une valeur de type de donnée illégale."
+
+12 = 22023, "Un nom de localisation inconnu a été spécifié."
+
+13 = 22023, "Impossible d'effectuer une opération CS_GET sur type %1!."
+
+14 = ZZZZZ, "Impossible de charger des informations de localisation."
+
+15 = ZZZZZ, "Impossible d'initialiser la routine de gestion d'erreurs."
+
+16 = 0A000, "Conversion entre des types de données %1! et %2! n'est pas gérée."
+
+17 = 22023, "Le champ format d'une structure CS_DATAFMT doit être CS_FMT_UNUSED lorsque le type de donnée est %1!." 
+
+18 = 22023, "Une valeur illégale de %1! a été entrée dans le champ %2! de la structure CS_DATAFMT."
+
+19 = 22023, "Un pointeur de localisation illégal a été spécifié dans la structure CS_DATAFMT."
+
+20 = ZZZZZ, "La conversion/opération a entraîné un dépassement de capacité."
+
+21 = ZZZZZ, "La conversion/opération a entraîné un dépassement de capacité."
+
+22 = ZZZZZ, "Une valeur de précision illégale a été identifiée."
+
+23 = ZZZZZ, "Une valeur d'échelle illégale a été identifiée."
+
+24 = ZZZZZ, "La conversion/opération est arrêtée en raison d'une erreur syntaxique dans le fichier source."
+
+25 = ZZZZZ, "La valeur de type de donnée est hors du domaine des valeurs légales pour le type de donnée."
+
+26 = 22012, "Division par zéro non autorisée."
+
+27 = 01000, "AVERTISSEMENT: Les gestionnaires de messages et d'erreurs existants ont été enlevés."
+
+28 = ZZZZZ, "Mémoire insuffisante pour la sauvegarde des messages. Effacement de tous les messages précédemment stockés."
+
+29 = ZZZZZ, "La routine de gestion des erreurs en ligne doit être initialisée avec l'opération CS_INIT avant tout autre action cs_diag()."
+
+30 = ZZZZZ, "La limite de message ne peut pas être fixée à une valeur inférieure au nombre de messages CS-Library actuellement sauvegardé."
+
+31 = ZZZZZ, "La structure de contexte ne peut pas être éliminée car l'application n'est pas sortie de %1!."
+
+32 = 22023, "Lorsque le type est CS_DT_CONFMT, la seule opération autorisée est  CS_SET."
+
+33 = 0A000, "La translation requise n'est pas gérée."
+ 
+34 = ZZZZZ, "Translation de certains caractères impossible."
+
+35 = ZZZZZ, "Conversion/opération arrêtée en raison d'une erreur stylistique."
+
+36 = 22001, "Résultat tronqué en raison d'un dépassement de capacité suite à une conversion/opération."
+
+37 = ZZZZZ, "Impossible de mettre en correspondance cs_ctx_name avec les clés données."
+
+38 = ZZZZZ, "Chaîne non copiée pour éviter tout dépassement de capacité."
+
+39 = ZZZZZ, "Chaîne non construite.  Présence d'une marque de réservation illégale dans la chaîne de texte."
+
+40 = ZZZZZ, "Autorisation de 0, 1, ou 2 étoiles dans la chaîne de format."
+
+41 = ZZZZZ, "Présence d'un jeton de type de donné non reconnu dans la chaîne de format."
+
+42 = 22023, "La chaîne de format ne peut pas être NULL."
+
+43 = 22023, "Le spécificateur de format personnalisé est trop long."
+
+44 = 22023, "Absence de spécificateur de format personnalisé correspondant au spécificateur d'une chaîne de format."
+
+45 = ZZZZZ, "Gestionnaire de localisation erroné pour cs_locale sur des types CS_SYB_LANG, CS_SYB_CHARSET ou CS_SYB_LANG_CHARSET."
+ 
+46 = ZZZZZ, "Impossible d'accéder au fichier de localisation %1!."
+ 
+47 = 08003, "%1! Exception de connexion -- Connexion inexistante."
+ 
+48 = 08002, "%1! Exception de connexion -- Nom de connexion utilisé."
+ 
+49 = 34000, "%1! Nom de curseur non valide."
+ 
+50 = 26000, "%1! Identificateur d'instruction SQL non valide."
+ 
+51 = ZZZZZ, "%1! cs_objects: erreur lors de l'exécution de l'opération requise."
+
+52 = ZZZZZ, "Débordement du tampon interne."

@@ -1,0 +1,90 @@
+; comment character is semicolon.
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "nie można pobrać łańcucha, ponieważ brakuje pamięci"
+
+2 = ZZZZZ, "nie można pobrać łańcucha komunikatu warstwy"
+
+3 = ZZZZZ, "nie można pobrać łańcucha komunikatu pochodzenia"
+
+4 = ZZZZZ, "łańcuch błędu nie jest dostępny"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "user api layer"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "błąd zewnętrzny"
+
+2 = ZZZZZ, "błąd wewnętrzny biblioteki Client Library"
+
+3 = ZZZZZ, "błąd wewnętrzny biblioteki Net Library"
+
+4 = ZZZZZ, "błąd wewnętrzny biblioteki wspólnej"
+
+5 = ZZZZZ, "błąd wewnętrzny biblioteki intl"
+
+6 = ZZZZZ, "błąd wewnętrzny menedżera asynchronicznego"
+
+7 = ZZZZZ, "błąd wewnętrzny zarządzania pamięcią"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "Brak błędu."
+
+1 = ZZZZZ, "Nieznany błąd."
+
+2 = ZZZZZ, "Przydzielenie pamięci nie powiodło się."
+
+3 = ZZX04, "Nie można otworzyć do odczytu pliku konfiguracyjnego %1!."
+
+4 = ZZX05, "Konfiguracja %1! została usunięta (CS_FORCE)."
+
+5 = ZZX06, "Nazwa pliku konfiguracyjnego %1! jest zbyt długa."
+
+6 = ZZX07, "Błąd formatu pliku, nieprawidłowy znak w wierszu %1!."
+
+7 = ZZX08, "Nie znaleziono sekcji konfiguracji %1!."
+
+8 = 01X09, "Błąd składniowy pliku konfiguracyjnego w wierszu %1!, w pobliżu (%2!)."
+
+9 = 01X0A, "Wciąż używana konfiguracja %1! została usunięta (CS_FORCE)."
+
+

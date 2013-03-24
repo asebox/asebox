@@ -1,0 +1,888 @@
+; comment character is semicolon.
+
+
+
+; "ctlib.loc" - Localization file for Client-Library.
+;
+; Sccsid @(#) ctlib.loc 1.6 11/5/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+ 	All rights reserved.\
+ 	Use, duplication, or disclosure by the United States\
+ 	Government is subject to restrictions as set forth in\
+ 	subparagraph (c) (1) (ii) of the Rights in Technical\
+ 	Data and Computer Software clause at CFR 52.227-7013.\
+ 	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library Default Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdefaults]
+
+1 = ZZZZZ, "nie można pobrać łańcucha, ponieważ brakuje pamięci"
+
+2 = ZZZZZ, "nie można pobrać łańcucha komunikatu warstwy"
+
+3 = ZZZZZ, "nie można pobrać łańcucha komunikatu pochodzenia"
+
+4 = ZZZZZ, "łańcuch błędu nie jest dostępny"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctlayer]
+
+1 = ZZZZZ, "warstwa api użytkownika"
+
+2 = ZZZZZ, "warstwa api użytkownika"
+
+3 = ZZZZZ, "ogólna warstwa protokołu"
+
+4 = ZZZZZ, "określona warstwa protokołu"
+
+5 = ZZZZZ, "warstwa pakietów sieciowych"
+
+6 = ZZZZZ, "warstwa usług katalogowych"
+
+7 = ZZZZZ, "warstwa usług bezpieczeństwa"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitions.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctorigin]
+
+1 = ZZZZZ, "błąd zewnętrzny"
+
+2 = ZZZZZ, "błąd wewnętrzny biblioteki Client Library"
+
+3 = ZZZZZ, "błąd wewnętrzny biblioteki Net Library"
+
+4 = ZZZZZ, "błąd wewnętrzny biblioteki wspólnej"
+
+5 = ZZZZZ, "błąd wewnętrzny biblioteki intl"
+
+6 = ZZZZZ, "błąd wewnętrzny menedżera asynchronicznego"
+
+7 = ZZZZZ, "błąd wewnętrzny zarządzania pamięcią"
+
+8 = ZZZZZ, "błąd wewnętrzny warstwy sterowania katalogiem"
+
+9 = ZZZZZ, "błąd wewnętrzny warstwy sterowania bezpieczeństwem"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctapierror]
+
+0 = ZZZZZ, "Sprawdzanie stanu zakończyło się pomyślnie."
+
+1 = ZZZZZ, "Pobierane informacje nie zmieszczą się w buforze o wielkości %1! bajtów."
+
+
+2 = ZZZZZ, "Przydzielanie pamięci nie powiodło się."
+
+3 = 22023, "Parametr %1! nie może mieć wartości NULL."
+
+
+4 = 22023, "Gdy %1! ma wartość NULL, %2! musi mieć wartość 0."
+
+
+5 = 22023, "Przypisano niedozwoloną wartość %1! dla parametru %2!."
+
+
+6 = 08000, "Otwarto już maksymalną liczbę połączeń."
+
+
+7 = ZZZZZ, "Serwer nie obsługuje możliwości KEEP_CON."
+
+
+8 = 22023, "Parametr %1! musi mieć wartości NULL."
+
+
+9 = 22023, "Parametr %1! musi być ustawiony na CS_UNUSED."
+
+
+10 = 22023, "Wartości logiczne muszą być ustawione na CS_TRUE lub CS_FALSE."
+
+
+11 = ZZZZZ,	"Nie można zainstalować CS_SIGNAL_CB, ponieważ platforma nie obsługuje schematu we/wy sieci sterowanego przerwaniami."
+
+
+12 = ZZZZZ,	"Nie można zainstalować CS_COMPLETION_CB, ponieważ platforma nie oferuje wymaganych możliwości dotyczących przerwań lub odpytywania."
+
+
+13 = ZZZZZ,	"Ta właściwość nie może zostać ustawiona po nawiązaniu połączenia z serwerem."
+
+
+14 = ZZZZZ,	"Ta właściwość/możliwość nie może być ustawiona."
+
+
+15 = ZZZZZ,	"Aby pobrać tę właściwość/możliwość, konieczne jest połączenie z serwerem."
+
+
+16 = ZZZZZ, "Ta procedura nie może zostać wywołana, gdy wyniki oczekują na polecenie, które zostało przesłane do serwera."
+
+
+17 = 36001, "Struktura polecenia obsługuje już zadeklarowany kursor."
+
+
+18 = 24000,	"Kursor musi być zadeklarowany, zanim będzie możliwe zainicjowanie polecenia tego typu."
+
+
+19 = ZZZZZ,	"Ta procedura może zostać wywołana tylko po zainicjowaniu polecenia CS_SEND_DATA_CMD."
+
+
+20 = ZZZZZ,	"Polecenie musi zostać zainicjowane, zanim będzie możliwe wywołanie tej procedury."
+
+
+21 = ZZZZZ,	"Ta procedura nie może zostać użyta, gdy kursor jest zadeklarowany w strukturze polecenia."
+
+
+22 = 24000,	"Kursor jest już zadeklarowany w tej strukturze polecenia."
+
+
+23 = 24000,	"Po otwarciu kursora nie można zainicjować polecenia."
+
+
+24 = 24000,	"Kursor jest już otwarty w tej strukturze polecenia."
+
+
+25 = 24000,	"Aktualizacja i usunięcie kursora nie są dozwolone po zwróceniu CS_END_DATA przez funkcję ct_fetch()."
+
+
+26 = ZZZZZ,	"Polecenie jest już zainicjowane w tej strukturze polecenia."
+
+
+27 = ZZZZZ,	"Zainicjowane polecenie nie może mieć parametrów."
+
+
+28 = ZZZZZ,	"Polecenie zostało już zainicjowane."
+
+
+29 = ZZZZZ,	"Polecenie tego typu nie może być przetwarzane wsadowo za pomocą polecenia już zainicjowanego w strukturze polecenia."
+
+
+30 = ZZZZZ, "Wiersz musi być pobrany, zanim będzie możliwe użycie tej procedury."
+
+
+31 = 36001,	"Polecenie \"rows\" kursora nie może zostać zainicjowane po zainicjowaniu polecenia \"open\" kursora."
+
+
+32 = 08000,	 "Możliwości połączenia nie obsługują tego typu żądań."
+
+
+33 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_CURSOR_RESULT."
+
+
+34 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_CMD_DONE."
+
+
+35 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_COMPUTE_RESULT."
+
+
+36 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_COMPFMT_RESULT."
+
+
+37 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_MSG_RESULT."
+
+
+38 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_PARAM_RESULT."
+
+
+39 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_ROWFMT_RESULT."
+
+
+40 = ZZZZZ, "Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_CMD_FAIL."
+
+
+41 = ZZZZZ, "Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_CMD_SUCCEED."
+
+
+42 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_ROW_RESULT."
+
+
+43 = ZZZZZ,	"Ta procedura nie może zostać wywołana po zwróceniu przez funkcję ct_results() wyniku typu CS_STATUS_RESULT."
+
+
+44 = ZZZZZ,	"Ta procedura nie może zostać wywołana, ponieważ aktualnie oczekuje operacja asynchroniczna."
+
+
+45 = ZZZZZ,	"Wystąpił błąd wewnętrzny w warstwie api użytkownika."
+
+
+46 = 22023,	"W polu %2! struktury CS_DATAFMT wstawiono niedozwoloną wartość %1!."
+
+
+47 = ZZZZZ,	"Podczas definiowania parametrów, nazwy muszą być podane dla wszystkich parametrów lub nie podane dla żadnego."
+
+
+48 = ZZZZZ,	"Serwer nie obsługuje parametrów typu %1!."
+
+
+49 = ZZZZZ,	"Ta procedura nie może zostać wywołana, ponieważ inna struktura polecenia posiada oczekujące wyniki."
+
+
+50 = ZZZZZ,	"Połączenie zostało oznaczone jako zamknięte."
+
+
+51 = 22023,	"Dokładnie jeden z %1! i %2! musi mieć wartość inną niż NULL."
+
+
+52 = ZZZZZ,	"Wbudowana obsługa błędów musi być zainicjowana podczas operacji CS_INIT zanim będą mogły być wykonane inne akcje funkcji ct_diag()."
+
+
+53 = ZZZZZ,	"Zapisanie komunikatów nie było możliwe z powodu braku pamięci. Wszystkie wcześniej przechowywane komunikaty zostały wyczyszczone."
+
+
+54 = ZZZZZ,	"Wbudowana obsługa błędów została już zainicjowana dla tej struktury połączenia."
+
+
+55 = ZZZZZ,	"OSTRZEŻENIE:  Usunięto istniejące programy obsługi błędów i komunikatów."
+
+
+
+56 = ZZZZZ,	"Limit komunikatów nie może być mniejszy niż liczba obecnie zapisanych komunikatów biblioteki Client-Library lub serwera."
+
+
+57 = ZZZZZ,	"Wynik typu %1! nie może być dowiązany do zmiennej typu %2! programu."
+
+
+58 = 22023,	"Pole formatu struktury CS_DATAFMT musi być ustawione na CS_FMT_UNUSED, jeśli typem danych jest %1!."
+
+
+59 = 22023,	"Jeżeli parametr bufora ma wartość NULL, to parametr %1! musi również mieć wartość NULL."
+
+
+60 = ZZZZZ,	"Wystąpił błąd użycia.  Procedura została wywołana w niedozwolonym czasie."
+
+
+61 = ZZZZZ,	"Element %1! nie jest większy niż największe ograniczenie elementów."
+
+
+62 = ZZZZZ,	"Element %1! został już odczytany."
+
+
+63 = ZZZZZ,	"Czas odczytu z serwera został przekroczony."
+
+
+64 = ZZZZZ,	"Opcja określania plików debugowania nie jest jeszcze obsługiwana. Wszystkie informacje debugowania zostaną wysłane do wyjścia stdout."
+
+
+65 = ZZZZZ,	"Żądany typ informacji śledzenia nie jest jeszcze obsługiwany."
+
+
+66 = ZZZZZ,	"Podczas ustawiania/czyszczenia tego typu informacji debugowania musi być podana struktura kontekstu."
+
+
+67 = ZZZZZ,	"Podczas ustawiania/czyszczenia tego typu informacji debugowania musi być podana struktura połączenia."
+
+68 = ZZZZZ,	"Nie znaleziono deskryptora."
+
+69 = ZZZZZ,	"Deskryptor o nazwie %1! istnieje już w połączeniu"
+
+70 = 07008,	"Liczba deskryptorów %1! nie jest dopuszczalna, ponieważ przekracza maksymalną liczbę %2!."
+
+72 = ZZZZZ,	"Deskryptor %1! został już skojarzony ze strukturą polecenia."
+
+73 = 22023,	"Pole %1! struktury CS_DATAFMT musi być ustawione na CS_UNUSED."
+
+74 = 22023,	"Gdy %1! ma wartość NULL, pole %2! struktury CS_DATAFMT musi być ustawione na 0."
+
+75 = 07001, "Znaleziono niespójne ustawienia parametrów dynamicznego deskryptora, gdy został użyty jako parametry wejściowe polecenia. Wszystkie wartości deskryptora muszą być ustawione."
+
+76 = 07001,	"Znaleziono niespójne nazwy parametrów dynamicznego deskryptora, gdy został użyty jako parametry wejściowe polecenia.  Nazwa parametru musi być podana dla wszystkich elementów lub nie być podana dla żadnego z elementów."
+
+77 = ZZZZZ,	"Dynamiczny deskryptor jest używany dla parametrów wejściowych, dlatego nie można wywołać funkcji ct_param()."
+
+78 = 02000,	"Brak wierszy odpowiadających specyfikacji."
+
+79 = 22003, "Dowiązanie elementu zbioru wynikowego %1! spowodowało nadmiar."
+
+80 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! spowodowało niedomiar."
+
+81 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ określono niedozwoloną wartość dokładności."
+
+82 = ZZZZZ,	"Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ określono niedozwoloną wartość skali."
+
+83 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ wystąpił błąd składniowy w danych źródłowych."
+
+84 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ w polu format struktury CS_DATAFMT wystąpiła niedozwolona wartość."
+
+85 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ wartość pola źródłowego nie należy do domeny dozwolonych wartości."
+
+86 = 22012, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ wystąpiła próba dzielenia przez zero."
+
+87 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się, ponieważ biblioteka Client-Library nie mogła pobrać zasobu."
+
+88 = ZZZZZ, "Dowiązanie elementu zbioru wynikowego %1! nie powiodło się.  Przyczyna błędu nie jest znana."
+
+89 = 22002, "Dane kolumny %1! mają wartość NULL, ale brak dostępnych wskaźników."
+
+90 = 01004, "Dane kolumny %1! zostały obcięte, ale brak dostępnych wskaźników."
+
+91 = ZZZZZ, "Brak dowiązania dla kolumny %1!."
+
+92 = ZZZZZ,	"Struktura CS_IODESC musi być ustawiona za pomocą funkcji ct_data_info(), zanim możliwe będzie wywołanie ct_send_data()."
+
+93 = ZZZZZ, "Liczba bajtów %1! przekracza wartość określoną dla tej operacji wysyłania danych.  Można przesłać tylko %2! bajtów więcej."
+
+94 = ZZZZZ, "Liczba bajtów określona dla tej operacji wysyłania danych nie została wysłana.  Do przesłania pozostało bajtów: %1!."
+
+95 = 22001, "Wartość %1! została obcięta."
+
+96 = ZZZZZ, "Brak informacji przeglądania."
+
+97 = ZZZZZ,	"CS_IODESC można pobrać tylko dla kolumn typu text lub image.  Kolumna %1! nie jest kolumną typu text lub image."
+
+98 = ZZZZZ,	"Nie można pobrać CS_IODESC dla kolumny, która nie została odczytana. Kolumna %1! nie została odczytana."
+
+99 = 0A000,	"Możliwości nie mogą zostać ustawione po nawiązaniu połączenia."
+
+100 = ZZZZZ, "Żądane możliwości nie mogą zostać ustawione."
+
+101 = ZZZZZ, "Wystąpił błąd inicjalizacji pamięci podręcznej błędów Client-Library."
+
+102 = 0A000, "Ta opcja nie jest obsługiwana przez serwer."
+
+103 = ZZZZZ, "Tę procedurę można wywołać, tylko gdy właściwość CS_HIDDEN_KEYS została ustawiona na CS_TRUE."
+
+104 = ZZZZZ, "Ten komunikat nie powinien być widziany."
+
+105 = ZZZZZ, "Wystąpił nieoczekiwany błąd podczas pobierania danych klucza."
+
+106 = ZZZZZ, "Kolumna %1! nie jest kolumną klucza."
+
+107 = ZZZZZ, "Kolumna %1! nie może zawierać wartości NULL.  Dane klucza dla kolumny mogą być ustawione na NULL, tylko jeśli kolumna akceptuje wartości NULL."
+
+108 = ZZZZZ, "Dane klucza podane dla kolumny %1! przekraczają maksymalną długość zdefiniowaną dla kolumny."
+
+109 = ZZZZZ, "Wystąpił nieoczekiwany błąd podczas ustawiania danych klucza."
+
+110 = 07008, "Nie istnieje prawidłowa liczba dla deskryptora." 
+
+111 = ZZZZZ, "Ten komunikat nie powinien być widziany."
+
+112 = 00000, "Wiersze odpowiadające specyfikacji: %1!."
+
+113 = ZZZZZ, "Struktura polecenia podana dla tej procedury zawiera dane powiadomienia lub rozszerzone dane o błędach.  Ta procedura nie akceptuje takiej struktury polecenia."
+
+114 = ZZZZZ, "Rozszerzone dane o błędach nie istnieją dla komunikatu %1!."
+
+115 = ZZZZZ, "Hasło zdalne nie może zostać ustawione, gdy istnieje połączenie z serwerem."
+
+116 = ZZZZZ, "Podana kombinacja hasło/nazwa serwera przekracza limit 255 bajtów, wymuszany przez bibliotekę Client-Library."
+
+117 = ZZZZZ, "Podczas wywoływania tej procedury właściwość CS_DISABLE_POLL musi być ustawiona na CS_FALSE."
+
+118 = ZZZZZ, "Nie można otworzyć pliku %1!."
+
+119 = 22023, "Podczas definiowania parametrów CS_INPUTVALUE dla polecenia ct_cursor(CS_CURSOR_DECLARE) dane muszą mieć wartość NULL."
+
+120 = 22023, "Bufor musi być pusty, gdy aktualny zbiór wynikowy zawiera tylko informacje o formacie."
+
+121 = ZZZZZ, "Brak danych skojarzonych z elementem deskryptora %1!."
+
+122 = ZZZZZ, "Wyniki są aktualnie pobierane do tego deskryptora.  Liczba deskryptorów %1! jest mniejsza niż rozmiar zbioru wynikowego: %2!."
+
+123 = ZZZZZ, "Deskryptor został już określony dla bieżącego polecenia."
+
+124 = ZZZZZ, "Użyto już ct_param() do zdefiniowania parametrów polecenia."
+
+125 = ZZZZZ, "Deskryptor o rozmiarze %1! nie jest wystarczająco duży dla zbioru wynikowego o rozmiarze %2!."
+
+126 = ZZZZZ, "Deskryptor jest używany przez inną strukturę polecenia."
+
+127 = ZZZZZ, "Tej procedury nie można wywołać, jeśli dla zbioru wynikowego wywołano już ct_bind()."
+
+128 = 22023, "Pole typu danych CS_IODESC musi być ustawione na CS_TEXT_TYPE lub CS_IMAGE_TYPE."
+
+129 = 22023, "W strukturze %1! podano nieprawidłowe ustawienia lokalne."
+
+130 = 22023, "Podano nieprawidłową dokładność lub skalę w wartości CS_NUMERIC lub CS_DECIMAL."
+
+131 = ZZZZZ, "Pula pamięci nie może zostać ustawiona lub wyczyszczona, jeśli w strukturze kontekstu istnieją otwarte połączenia."
+
+132 = 22001, "Dowiązanie elementu zbioru wynikowego %1! spowodowało obcięcie."
+
+133 = 02000, "Brak wierszy odpowiadających specyfikacji.  Będzie więcej zbiorów wynikowych."
+
+134 = ZZZZZ, "Określony identyfikator już istnieje w tym połączeniu."
+
+135 = ZZZZZ, "Określony identyfikator nie istnieje w tym połączeniu."
+
+136 = 22023, "Łańcuch o długości 0 nie jest dozwolony dla parametru %1!."
+
+137 = ZZZZZ, "Liczba dowiązań %1! nie jest zgodna z liczbą podaną dla istniejących dowiązań.  Aktualna liczba dowiązań: %2!."
+
+138 = ZZZZZ, "Długość danych %1! przekracza maksymalną długość dozwoloną dla danych %2!."
+
+139 = ZZZZZ, "Ustawienie dokładności lub skali na CS_SRC_VALUE jest dozwolone, tylko jeśli odpowiadająca kolumna zbioru wynikowego jest typu numeric lub decimal."
+
+140 = ZZZZZ, "Skala nie może być większa niż dokładność."
+
+141 = 22023, "%1! musi mieć wartość 0 lub CS_UNUSEDCS_UNUSED, gdy %2! ma wartość NULL."
+
+142 = ZZZZZ, "Ta właściwość może zostać użyta tylko w odpowiednim wywołaniu zwrotnym biblioteki Client-Library.  Ta właściwość nie może zostać użyta w kodzie głównym."
+
+143 = ZZZZZ, "Maksymalna liczba połączeń nie może być ustawiona na wartość mniejszą niż liczba aktualnie istniejących połączeń."
+
+144 = ZZZZZ, "Ta właściwość może zostać użyta, tylko jeśli kursor istnieje w strukturze polecenia."
+
+145 = ZZZZZ, "Tej właściwości nie można ustawić, gdy struktura polecenia posiada oczekujące wyniki lub otwarty kursor."
+
+146 = ZZZZZ, "Podana struktura CS_LOCALE nie jest prawidłowa."
+
+147 = ZZZZZ, "Ta procedura może zostać użyta, tylko z wersją biblioteki Client-Library, która obsługuje debugowanie."
+
+148 = ZZZZZ, "Menedżer asynchroniczny biblioteki Client-Library nie może kontynuować działania.  To połączenie zostało oznaczone jako zamknięte."
+
+149 = ZZZZZ, "Klucz bieżącego wiersza został częściowo ustawiony za pomocą ct_keydata().  Każda kolumna klucza musi zostać ustawiona za pomocą ct_keydata(), zanim będzie możliwe kontynuowanie tej operacji."
+
+150 = ZZZZZ, "Ta procedura nie może zostać wywołana, ponieważ struktura kontekstu znajduje się w niezdefiniowanym stanie. Prawdopodobnie jest to spowodowane błędem ct_exit()." 
+
+151 = ZZZZZ, "W strukturze połączenia musi istnieć połączenie z serwerem, zanim będzie możliwe wywołanie tej procedury." 
+
+152 = ZZZZZ, "Struktura polecenia musi zostać podana dla operacji CS_CANCEL_CURRENT."
+
+153 = ZZZZZ, "Ta procedura nie może zostać wywołana, gdy w strukturze CS_CONNECTION istnieje połączenie z serwerem."
+
+154 = ZZZZZ, "Ta procedura nie może zostać wywołana, ponieważ struktura połączenia znajduje się w niezdefiniowanym stanie." 
+
+155 = ZZZZZ, "Ta procedura nie może zostać wywołana, gdy struktura polecenia znajduje się w stanie bezczynności."
+
+156 = ZZZZZ, "Ta procedura nie może zostać wywołana, gdy polecenie zostało zainicjowane, ale nie zostało wysłane."
+
+157 = ZZZZZ, "Ta procedura nie może zostać wywołana, dopóki dla polecenia wysłanego do serwera nie zostanie wywołana funkcja ct_results()."
+
+158 = ZZZZZ, "Ta procedura może zostać wywołana, tylko jeśli wyniki, które można pobrać, są dostępne do odczytu."
+
+159 = ZZZZZ, "Ta procedura może zostać wywołana, tylko jeśli struktura polecenia znajduje się w stanie bezczynności."
+
+160 = ZZZZZ, "Ta procedura może zostać wywołana, tylko jeśli wiersze kursora są dostępne do odczytu."
+
+161 = ZZZZZ, "Ta procedura może zostać wywołana, tylko jeśli dostępne są wyniki w postaci zwykłych wierszy."
+
+162 = ZZZZZ, "Operacja odbierania passthru nie jest dozwolona, gdy połączenie jest w trakcie przetwarzania wyników w standardowy sposób."
+
+163 = 21000, "Ta procedura nie może zostać wywołana, dopóki wszystkie wyniki, które można pobrać, nie zostaną całkowicie przetworzone."
+
+164 = ZZZZZ, "Ta procedura może zostać wywołana, tylko jeśli dostępne są obliczone wyniki."
+
+165 = ZZZZZ, "Ta procedura nie może zostać wywołana, gdy jest zainicjowane zagnieżdżone polecenie kursora."
+
+166 = ZZZZZ, "Ta procedura nie może zostać wywołana, gdy wyniki zagnieżdżonego polecenia kursora nie są całkowicie przetworzone."
+
+167 = ZZZZZ, "Ta procedura nie może zostać wywołana, ponieważ struktura polecenia znajduje się w niezdefiniowanym stanie." 
+
+168 = ZZZZZ, "Ta procedura nie może zostać wywołana, ponieważ w tej strukturze polecenia trwa operacja odbierania passthru."
+
+169 = ZZZZZ, "Ta procedura nie może zostać wywołana, ponieważ w tej strukturze polecenia trwa operacja wysyłania passthru."
+
+170 = ZZZZZ, "Ta procedura nie może zostać wywołana po zwróceniu przez ct_results() wyników typu CS_DESCRIBE_RESULT."
+
+171 = 24000, "Kursor musi zostać otwarty, zanim będzie możliwe zainicjowanie tego typu polecenia."
+
+172 = ZZZZZ, "Ta procedura nie może zostać wywołana, ponieważ w strukturze CS_COMMAND trwa operacja wysyłania danych."
+
+173 = ZZZZZ, "Status zwrotny CS_PENDING musi zostać zwrócony z wywołania zwrotnego zakończenia, jeśli zostały zainicjowane dodatkowe operacje asynchroniczne."
+
+174 = ZZZZZ, "Struktura kontekstu musi być podana podczas ustawiania/czyszczenia tego typu wywołania zwrotnego."
+
+175 = ZZZZZ, "Brak zainstalowanego programu obsługi wywołania zwrotnego dla sygnału %1!."
+
+176 = ZZZZZ, "Serwer nie obsługuje parametrów typu %1! o wartości NULL."
+
+177 = 22023, "Długość parametru %1! będącego łańcuchem znaków zakończonym znakiem null przekracza maksymalną dozwoloną długość."
+
+178 = ZZZZZ, "Ta procedura nie może zostać wywołana, jeśli nie zostało wykonane co najmniej jedno wywołanie ct_send_data()."
+
+179 = 24000, "Wiersz kursora musi zostać pobrany, zanim będzie możliwe zainicjowanie tego polecenia."
+
+180 = ZZZZZ, "To polecenie musi zostać wykonane natychmiast po inicjalizacji polecenia CS_CURSOR_DECLARE."
+
+181 = 24000, "To polecenie nie jest dozwolone, gdy kursor jest zamknięty."
+
+182 = 24000, "To polecenie nie jest dozwolone po pobraniu wszystkich wierszy kursora."
+
+183 = ZZZZZ, "Podczas ustawiania opcji serwer zwrócił błąd. Szczegóły znajdują się w komunikacie serwera."
+
+184 = 00ZZZ, "Dowiązania typu sticky nie pasują do bieżącego zbioru wynikowego.  Dowiązania typu sticky zostały odrzucone dla wszystkich zbiorów wynikowych."
+
+185 = ZZZZZ, "Właściwość CS_STICKY_BINDS nie może być ustawiona dla struktur CS_COMMAND zawierających rozszerzone dane o błędach lub powiadomieniach o zdarzeniu."
+
+186 = ZZZZZ, "Bieżący zbiór wynikowy nie został dowiązany.  Istniejące dowiązania typu sticky zostały odrzucone, ponieważ nie pasowały do bieżącego zbioru wynikowego."
+
+187 = ZZZZZ, "To polecenie nie jest dozwolone. Oczekiwane jest polecenie ct_command z CS_END."
+
+188 = ZZZZZ, "To polecenie nie jest dozwolone. Oczekiwane jest polecenie ct_cursor z CS_END."
+
+189 = 01X01, "Właściwość %2! musi mieć wartość konfiguracyjną (%1!) równą CS_TRUE lub CS_FALSE."
+
+190 = 01X02, "Wartość konfiguracyjna (%1!) dla właściwości %2! nie jest liczbą całkowitą."
+
+191 = ZZX03, "Połączenie nie powiodło się z powodu nieprawidłowych lub brakujących zewnętrznych danych konfiguracyjnych."
+
+192 = ZZZZZ, "Wartość parametru sd_sqld przekracza sd_sqln; operacja: %1!."
+
+193 = ZZZZZ, "Wartość parametru sd_sqld jest ujemna; operacja: %1!."
+
+194 = ZZZZZ, "Wartość parametru sd_sqln jest ujemna."
+
+195 = ZZZZZ, "Liczba kolumn w zbiorze wynikowym, %1!, przekracza możliwą liczbę kolumn, %2!, dla podanej struktury SQLDA."
+
+196 = ZZZZZ, "To polecenie jest dozwolone tylko, gdy występują oczekujące wyniki opisowe."
+
+197 = ZZZZZ, "Przekazano nieprawidłowy obiekt usług katalogowych."
+
+198 = ZZZZZ, "Żądana usługa bezpieczeństwa nie jest obsługiwana."
+
+199 = 22023, "Długość polecenia przekracza maksymalną liczbę %1! dla tej operacji."
+
+200 = ZZZZZ, "Ostatnia kwerenda spowodowała zakleszczenie lub upływ limitu czasu blokady. Szczegóły znajdują się w komunikacie serwera."
+
+201 = ZZZZZ, "HAFAILOVER: Próba połączenia z serwerem %1!."
+
+202 = 00ZZZ, "Serwer nie obsługuje opcji CS_IMPLICIT_CURSOR. Deklaracja kursora została zmieniona na CS_READ_ONLY." 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Generic Protocol Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctgperror]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The TDS Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cttdserror]
+
+1 = ZZZZZ, "Wystąpił błąd protokołu tds. Napotkano przedwczesny koniec strumienia danych." 
+
+2 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwoloną wersję tds." 
+
+3 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwolony status logowania." 
+
+4 = ZZZZZ, "Wystąpił błąd protokołu tds. Za dużo bajtów w strumieniu danych." 
+
+5 = ZZZZZ, "przydzielanie pamięci nie powiodło się."
+
+6 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas przetwarzania wyników znaleziono zduplikowany identyfikator ALT." 
+
+7 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas przetwarzania wyników znaleziono nieprawidłowy operator ALT." 
+
+8 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas przetwarzania wyników znaleziono nieprawidłowy identyfikator ALT." 
+
+9 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas przetwarzania wyników znaleziono nieprawidłową liczbę kolumn ALT." 
+
+10 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas przetwarzania wyników znaleziono nieprawidłowy numer kolumny." 
+
+11 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas przetwarzania wyników znaleziono nieprawidłowy indeks tabeli." 
+
+12 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwolony status przeglądania." 
+
+13 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwolony typ możliwości." 
+
+14 = 34000, "Wystąpił błąd protokołu tds. Odebrano nieprawidłową nazwę kursora." 
+
+15 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano zduplikowany identyfikator kursora." 
+
+16 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy identyfikator kursora." 
+
+17 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłową liczbę wierszy kursora." 
+
+18 = 24000, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy status kursora." 
+
+19 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy status wykonania." 
+
+20 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwolony strumień tokena DONEINPROC." 
+
+21 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy status dynamiczny." 
+
+22 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłową długość instrukcji dynamicznej." 
+
+23 = 07000, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy typ dynamiczny." 
+
+24 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy identyfikator dynamiczny." 
+
+25 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy rozmiar pakietu." 
+
+26 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwolony typ ENVCHANGE." 
+
+27 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy status komunikatu." 
+
+28 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano niedozwolony token." 
+
+29 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowe polecenie opcji." 
+
+30 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy typ opcji." 
+
+31 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy strumień orderby." 
+
+32 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano PARAMFMT bez określonych parametrów." 
+
+33 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy strumień PARAMFMT." 
+
+34 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano ROWFMT bez określonych kolumn." 
+
+35 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy strumień ROWFMT." 
+
+36 = ZZZZZ, "Wystąpił błąd maszyny stanu tds. Odebrano niedozwoloną kolejność tokenów tds." 
+
+37 = ZZZZZ, "Wystąpił błąd maszyny stanu tds. Podjęto próbę operacji z oczekującymi wynikami. Jest to błąd wewnętrzny." 
+
+38 = ZZZZZ, "Wystąpił błąd logowania tds. Podczas uzgadniania znaleziono niedozwoloną liczbę parametrów." 
+
+39 = ZZZZZ, "Wystąpił błąd protokołu tds. Podczas uzgadniania logowania odebrano nieprawidłowy identyfikator komunikatu." 
+
+40 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy status kolumny." 
+
+41 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłowy typ danych." 
+
+42 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłową dokładność numeryczną." 
+
+43 = ZZZZZ, "Wystąpił błąd protokołu tds. Odebrano nieprawidłową skalę numeryczną." 
+
+44 = 08001,	"Próba połączenia z serwerem nie powiodła się."
+
+45 = ZZZZZ, "Wystąpił błąd warstwy wewnętrznej tds. Dostęp do menedżera bufora wierszy nie powiódł się."
+
+46 = ZZZZZ, "Wystąpił błąd logowania tds. Serwer podjął próbę szyfrowania hasła, ale brak zainstalowanego programu szyfrującego."
+
+47 = ZZZZZ, "Wystąpił błąd logowania tds. Zainstalowany program szyfrujący zwrócił status o wartości innej niż CS_SUCCEED."
+
+48 = ZZZZZ, "Wystąpił błąd logowania tds. Serwer podjął próbę sprawdzania bezpieczeństwa, ale brak zainstalowanego programu obsługi sprawdzania."
+
+49 = ZZZZZ, "Wystąpił błąd logowania tds. Zainstalowany program obsługi sprawdzania zwrócił status o wartości innej niż CS_SUCCEED."
+
+50 = ZZZZZ, "Wystąpił błąd warstwy wewnętrznej tds. Serwer zwrócił błąd podczas przetwarzania wewnętrznego strumienia tds."
+
+51 = ZZZZZ, "Wystąpił błąd warstwy wewnętrznej tds. Biblioteka wspólna zwróciła nieoczekiwany błąd."
+
+52 = ZZZZZ, "Wystąpił błąd warstwy wewnętrznej tds. Menedżer asynchroniczny zwrócił nieoczekiwany błąd."
+
+53 = ZZZZZ, "Wystąpił błąd bezpieczeństwa dotyczący użycia. Wywołanie zwrotne sesji bezpieczeństwa powinno być ustawione dla bezpośredniej sesji bezpieczeństwa"
+
+54 = ZZZZZ, "Nieprawidłowa usługa bezpieczeństwa dla określonego mechanizmu"
+
+55 = ZZZZZ, "Otrzymano nieoczekiwany token bezpieczeństwa z serwera. Błąd wewnętrzny lub błąd serwera" 
+
+56 = ZZZZZ, "Informacje o dowiązaniach kanału nie są dostępne."
+
+57 = ZZZZZ, "Otrzymano zły token bezpieczeństwa"
+
+58 = ZZZZZ, "Wywołanie zwrotne sesji bezpieczeństwa nie powiodło się"
+
+59 = ZZZZZ, "Nieprawidłowa liczba parametrów w otrzymanym komunikacie bezpieczeństwa." 
+
+60 = ZZZZZ, "Wystąpił nieoczekiwany błąd wewnętrzny bezpieczeństwa." 
+
+61 = ZZZZZ, "Żądana usługa bezpieczeństwa nie jest obsługiwana." 
+
+63 = ZZZZZ, "Wystąpił wewnętrzny błąd warstwy tds. Serwer nie może obsługiwać maski możliwości o większym rozmiarze."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Network Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctnperror]
+
+1 = 01002, "Wystąpił błąd podczas zamykania połączenia."
+
+2 = ZZZZZ, "Wystąpił błąd podczas zwalniania adresu."
+
+3 = ZZZZZ, "Wystąpił błąd podczas kojarzenia adresu."
+
+4 = 08001, "Wystąpił błąd podczas nawiązywania połączenia."
+
+5 = ZZZZZ, "Wystąpił błąd podczas wykonywania rozsyłanego zapisu."
+
+6 = ZZZZZ, "Wystąpił błąd podczas wykonywania odczytu z sieci."
+
+7 = ZZZZZ, "Wystąpił błąd podczas wykonywania zapisu w sieci."
+
+8 = ZZZZZ, "Wystąpił błąd podczas otwierania słownika adresów."
+
+9 = ZZZZZ, "Wystąpił błąd podczas zamykania słownika adresów."
+
+10 = ZZZZZ, "Podjęto próbę odczytu z połączenia, z którego jest już wykonywany odczyt."
+
+11 = ZZZZZ, "Podjęto próbę zapisu przez połączenie, przez które jest już wykonywany zapis."
+
+12 = ZZZZZ, "Błąd stanu: Podjęto próbę zapisu, podczas gdy połączenie oczekuje na odczyt."
+
+13 = ZZZZZ, "Błąd stanu: Podjęto próbę odczytu, podczas gdy połączenie oczekuje na zapis."
+
+14 = ZZZZZ, "Bufor jest zbyt mały, aby pomieścić cały pakiet."
+
+15 = ZZZZZ, "Odczyt z sieci, podczas gdy pozostały nieprzetworzone dane z poprzedniego odczytu."
+
+16 = ZZZZZ, "Wystąpił błąd podczas pobierania informacji adresowych."
+
+17 = ZZZZZ, "Wystąpił błąd podczas pobierania właściwości adresu."
+
+18 = ZZZZZ, "Wystąpił błąd pakietu protokołu. Odebrano niedozwoloną długość"
+
+19 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Poświadczenia bezpieczeństwa wygasły."
+
+20 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Sesja bezpieczeństwa wygasła"
+
+21 = ZZZZZ, "Wystąpił błąd bezpieczeństwa dotyczący protokołu. Otrzymano pakiet TDS z nieprawidłowymi informacjami o bezpieczeństwie."
+
+22 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Otrzymano token bezpieczeństwa ze złą wersją usług bezpieczeństwa."
+
+23 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Procedura podpisywania nie powiodła się."
+
+24 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Weryfikacja podpisu nie powiodła się."
+
+25 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Procedura pieczętowania nie powiodła się."
+
+26 = ZZZZZ, "Wystąpił błąd bezpieczeństwa. Procedura rozpieczętowania nie powiodła się."
+
+27 = ZZZZZ, "Wystąpił nieoczekiwany błąd wewnętrzny bezpieczeństwa."
+
+128 = ZZZZZ, "Wystąpił błąd podczas inicjalizacji przechowywania rekordów opcji sieciowych."
+
+129 = ZZZZZ, "Wystąpił błąd podczas ustawiania opcji sieciowej."
+
+130 = ZZZZZ, "nieużywane."
+
+131 = ZZZZZ, "Wystąpił błąd podczas inicjalizacji biblioteki Net-Library."
+
+132 = ZZZZZ, "Wystąpił błąd podczas inicjalizacji motoru biblioteki Net-Library."
+
+133 = ZZZZZ, "Wystąpił błąd podczas ustawiania wywołania zwrotnego biblioteki Net-Library."
+
+134 = ZZZZZ, "Wystąpił błąd podczas zamykania motoru biblioteki Net-Library."
+
+135 = ZZZZZ, "Wystąpił błąd podczas zamykania biblioteki Net-Library."
+
+136 = ZZZZZ, "Wystąpił błąd podczas ustawiania trybu wywołania zwrotnego biblioteki Net-Library."
+
+137 = ZZZZZ, "Wystąpił błąd podczas łączenia sygnałów w bibliotece Net-Library."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Directory Service Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdserror]
+
+1 = ZZZZZ, "Wystąpił błąd podczas dowiązywania do usługi katalogowej."
+
+2 = ZZZZZ, "Wystąpił błąd podczas usuwania dowiązania do usługi katalogowej."
+
+3 = ZZZZZ, "Wystąpił błąd podczas odczytu z usługi katalogowej."
+
+4 = ZZZZZ, "Wystąpił błąd podczas przydzielania sesji usługi katalogowej."
+
+5 = ZZZZZ, "Wystąpił błąd podczas usuwania sesji usługi katalogowej."
+
+6 = ZZZZZ, "Wystąpił błąd podczas operacji na właściwości sesji."
+
+7 = ZZZZZ, "Wystąpił błąd podczas wykonywania przeszukiwania katalogu."
+
+8 = ZZZZZ, "Podany numer atrybutu był poza zakresem."
+
+9 = ZZZZZ, "Podano nieprawidłowy identyfikator informacji."
+
+10 = ZZZZZ, "Wystąpił błąd podczas usuwania obiektu katalogu."
+
+128 = ZZZZZ, "Wystąpił błąd podczas inicjowania warstwy sterowania katalogiem."
+
+129 = ZZZZZ, "Wystąpił błąd podczas zamykania warstwy sterowania katalogiem."
+
+130 = ZZZZZ, "nieużywane."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Security Service Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctsserror]
+
+1 = ZZZZZ, "Wystąpił błąd podczas dowiązywania do usługi bezpieczeństwa"
+
+2 = ZZZZZ, "Wystąpił błąd podczas usuwania dowiązania do usługi bezpieczeństwa"
+
+4 = ZZZZZ, "Wystąpił błąd podczas przydzielania kontekstu sesji bezpieczeństwa"
+
+5 = ZZZZZ, "Wystąpił błąd podczas usuwania kontekstu sesji bezpieczeństwa"
+
+6 = ZZZZZ, "Wystąpił błąd podczas operacji na właściwości sesji bezpieczeństwa"
+
+7 = ZZZZZ, "Wystąpił błąd podczas przydzielania uchwytu poświadczenia bezpieczeństwa"
+
+8 = ZZZZZ, "Wystąpił błąd podczas uzyskiwania ustanowionego poświadczenia bezpieczeństwa"
+
+9 = ZZZZZ, "Wystąpił błąd podczas usuwania uchwytu poświadczenia bezpieczeństwa"
+
+10 = ZZZZZ, "Wystąpił błąd podczas operacji na właściwości poświadczenia sesji"
+
+11 = ZZZZZ, "Wystąpił błąd podczas zmiany mechanizmu bezpieczeństwa"
+
+12 = ZZZZZ, "Wystąpił błąd podczas przydzielania uchwytu mechanizmu bezpieczeństwa"
+
+13 = ZZZZZ, "Wystąpił błąd podczas usuwania uchwytu mechanizmu bezpieczeństwa"
+
+14 = ZZZZZ, "Wystąpił błąd podczas operacji na właściwości mechanizmu bezpieczeństwa"
+
+15 = ZZZZZ, "Wystąpił błąd podczas pieczętowania danych sesji"
+
+16 = ZZZZZ, "Wystąpił błąd podczas rozpieczętowania danych sesji"
+
+17 = ZZZZZ, "Wystąpił błąd podczas generowania podpisu kryptograficznego"
+
+18 = ZZZZZ, "Wystąpił błąd podczas sprawdzania podpisu kryptograficznego"
+
+19 = ZZZZZ, "Wystąpił błąd podczas przetwarzania tokenu sesji bezpieczeństwa"
+
+20 = ZZZZZ, "Wystąpił błąd podczas próby opuszczenia sesji bezpieczeństwa"
+
+21 = ZZZZZ, "Określona usługa bezpieczeństwa nie jest obsługiwana"
+
+128 = ZZZZZ, "Wystąpił błąd podczas inicjowania warstwy sterowania bezpieczeństwem."
+
+129 = ZZZZZ, "Wystąpił błąd podczas zamykania warstwy sterowania bezpieczeństwem."
+
+130 = ZZZZZ, "Wystąpił błąd podczas konfigurowania właściwości warstwy sterowania bezpieczeństwem."
+
+131 = ZZZZZ, "Wystąpił błąd podczas przydzielania uchwytu poświadczenia warstwy sterowania bezpieczeństwem."
+
+132 = ZZZZZ, "Wystąpił błąd podczas usuwania uchwytu poświadczenia warstwy sterowania bezpieczeństwem."
+
+133 = ZZZZZ, "Wystąpił błąd podczas operacji na właściwości poświadczenia warstwy sterowania bezpieczeństwem."
+
+134 = ZZZZZ, "Wystąpił błąd podczas zmiany mechanizmu bezpieczeństwa."
+
+135 = ZZZZZ, "Wystąpił błąd podczas przydzielania nowego uchwytu mechanizmu bezpieczeństwa."
+
+136 = ZZZZZ, "Wystąpił błąd podczas usuwania uchwytu mechanizmu bezpieczeństwa."
+
+137 = ZZZZZ, "Wystąpił błąd podczas operacji na właściwościach mechanizmu bezpieczeństwa."
+
+

@@ -1,0 +1,105 @@
+; comment character is semicolon.
+
+; "bcp.loc" - Localization file for Bcp.
+;
+; Sccsid @(#) bcp.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; The strings bcp uses to prompt the user for imformation.
+;
+[prompts]
+; /* BPPASSWORD */
+1 = "Password: "
+; /* BPCOLTYPE */
+2 = "Enter the file storage type of field %1! [%2!]: "
+; /* BPFLENNOMAX */
+3 = "Enter length of field %1! [no max length]: "
+; /* BPFLEN */
+4 = "Enter length of field %1! [%2!]: "
+; /* BPFTERM */
+5 = "Enter field terminator [%1!]: "
+; /* BPPREFXLEN */
+6 = "Enter prefix-length of field %1! [%2!]: "
+;
+; End of prompts section.
+;
+; Now we list the localized error message strings.
+;
+[bcperrors]
+; /* BERRNOMEM */
+1 = "Fatal error: memory allocation failed."
+; /* BERRNOREADSPACE */
+2 = "I/O Error: Insufficient space for input data."
+; /* BERRTEMPFILE */
+3 = "Failed to open temp file '%1!' for writing in dbedit()."
+; /* BERREDITFAIL */
+4 = "Unable to invoke the '%1!' editor."
+; /* BERRNOINFILE */
+5 = "Unable to open input file '%1!'."
+; /* BERRNOOUTFILE */
+6 = "Unable to open output file '%1!'."
+; /* BERRBADARG */
+7 = "bcp: Unknown parameter '%1!'."
+; /* BERRFIRSTROW */
+8 = "When using the '%1!' flag to set the first row to copy, the row number must be greater than or equal to 1."
+; /* BERRFLROW */
+9 = "When using the '%1!' and '%2!' flags to set the first and last rows to copy, the first row number must be smaller than the last."
+; /* BERRLASTROW */
+10 = "When using the '%1!' flag to set the last row to copy, the row number must be greater than or equal to 1."
+; /* BERRBADDIR */
+11 = "Copy direction must be either 'in' or 'out'."
+; /* BERRBADINTARG */
+12 = "The '%1!' flag must be followed by an integer.  '%2!' is not a legal integer."
+; /* BERRDUPARGS */
+13 = "Warning: the '%1!' flag appears more than once.  The new flag's value supersedes the old."
+; /* BERROVERRIDE */
+14 = "Warning: '%1!' overrides '%2!'"
+; /* BERRBADPREFXLEN */
+15 = "Invalid prefix length. Valid prefix-lengths are 0, 1, 2, or 4."
+; /* BSTRLEVEL */
+16 = "Level (1-16): "
+; /* BERRLEVEL */
+17 = "Invalid level"
+; /* BSTRCOMP */
+18 = "Compartment (1-64): "
+; /* BSTRENTRY */
+19 = "Multiple entries, separated by return, allowed;  return when done. "
+; /* BERRLOGIN */
+20 = "Login as SA (n/y): "
+; /* BSTRTRY */
+21 = "Try again:"
+; /* BERRCOMP */
+22 = "Invalid compartment"
+; /* BSTRSTART */
+23 = "Starting copy..."
+; /* BSTRROW */
+24 = "%1! rows copied."
+; /* BSTRTIME */
+25 = "Clock Time (ms.): total = %1!"
+; /* BSTRSAVE */
+26 = "Do you want to save this format information in a file? [Y/n] "
+; /* BSTRHOST */
+27 = "Host filename [%1!]: "
+; /* BERRCOLTYPE */
+28 = "Invalid column type. Valid types are:"
+; /* BERRDSCOL */
+29 = "<cr>: same type as DataServer column."
+; /* BSTRAVG */
+30 = " Avg = %1! (%2! rows per sec.)"
+; /* BERRCOPY */
+31 = "bcp copy %1! failed"
+; /* BERRBADPRECISION */
+32 = "Invalid precision. Precision should be between %1! and %2!"
+; /* BERRBADSCALE */
+33 = "Invalid scale. Scale should be between %1! and %2! and should be less than or equal to the precision"
+;
+; End of error strings section.

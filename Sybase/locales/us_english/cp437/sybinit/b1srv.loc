@@ -1,0 +1,64 @@
+; comment character is semicolon.
+;
+; - Localization file for Auditinit and Syconfig.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1999 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+2068		= "Set labels of all the files in release directory", ""
+2069		= "Assign privileges to required executables", ""
+3820		= "CONFIGURE B1 PARAMETERS", ""
+3821		= "", ""
+3822		= "", ""
+3823		= "", ""
+3824	= "Current value of Data High is:", ""
+3825		= "Confirm the value of Data High", ""
+3826		= "The value of Data Low is:", ""
+3827		= "Set labels for all files in release directory", ""
+3828		= "Assign privileges to required executables", ""
+3829	= "Enter the value of Data Low", ""
+3830	= "Is the value of Data High OK ?", ""
+3831		= "Set your Current Process Label to correct DATAHI and rerun sybinit", ""
+3832	= "Specify whether value of DATAHI is OK or not", ""
+3833	= "Specify a legal label for DATALO", ""
+3834	= "Complete the task of setting labels for all files in release directory", ""
+3835	= "Complete the task of assigning privileges to required executables", ""
+3836	= "Cannot get the value of DATAHI", ""
+3837	= "Value of DATALO not specified or incorrect", ""
+3838	= "DATAHI does not dominate DATALO", ""
+3839	= "B1 initialization has not been completed", ""
+3840	= "Set the value of Data_Low before trying to set labels of all the files in release directory", ""
+3841		= "Cannot convert Data_Low value to host label format", ""
+3842		= "Cannot obtain value of Data_High", ""
+3843	= "Connot convert Data_High to host label format", ""
+3844	= "File %1! not found. This file contains the list of files for which labels need to be set", "%s"
+3845		= "Cannot open file %1!. Check the permissions on the file", "%s"
+3846		= "Shell command %1! %2! failed", "%s %s"
+3847	= "System call to set label of file %1! to %2! failed", "%s %s"
+3848	= "File %1! not found. This file contains the list of files which need to be given privileges", "%s"
+3849	= "Cannot read the sensitivity label of the directory %1! specified for errorlog", "%s"
+3850	= "The directory %1! specified for errorlog is not at Data_High %2!", "%s %s"
+3851	= "Cannot obtain label for errorlog file %1!", "%s"
+3852	= "Cannot change label of the errorlog file %1!", "%s"
+3853		= "Command to assign privileges to file %1! failed. Check that sybinit has all the required privileges", "%s"
+3854	= "Unable to initialize security attributes", ""
+3856		= "System call to get sensitivity label value failed", ""
+3857	= "Can not convert host label to human readable format", ""
+3858		= "Attempt  to set label of file %1! failed", "%s"
+3859	= "System call to get label of file %1! failed", "%s"
+3860		= "Operating system function to compare labels failed. Check that sybinit has all the required privileges", ""
+; End of section.

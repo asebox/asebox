@@ -1,0 +1,348 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "คลาสของออบเจ็กต์ไม่ถูกต้อง"
+
+2 = IFACEE_BADOBJ, "ออบเจ็กต์ไม่ถูกต้อง"
+
+3 = IFACEE_OPEN, "ไม่สามารถเปิดอินเทอร์เฟซไฟล์"
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "ไม่พบชื่อเซิร์ฟเวอร์ที่รีเควสต์"
+
+6 = IFACEE_DICTSYNTAX, "พบซินแทกซ์ที่ไม่ถูกต้องในอินเทอร์เฟซไฟล์"
+
+7 = IFACEE_MALLOC, "เกิดข้อผิดพลาดในการจัดสรรหน่วยความจำ"
+
+8 = IFACEE_CLOSE, "ไม่สามารถปิดอินเทอร์เฟซไฟล์"
+
+9 = IFACEE_ENTNOTSUPPORTED, "ไม่สนับสนุนจุดป้อนเข้าไดรฟ์เวอร์ที่รีเควสต์"
+
+10 = IFACEE_PROPNOTSUPPORTED, "ไม่สนับสนุนพร็อปเพอร์ตีที่รีเควสต์"
+
+11 = IFACEE_INVALID_HANDLE, "พบแฮนเดิลไดรเวอร์ที่ไม่ถูกต้อง"
+
+12 = IFACEE_INVALIDARG, "อาร์กิวเมนต์ที่ส่งไปที่ไดรฟ์เวอร์ api ไม่ถูกต้อง"
+
+13 = IFACEE_CANTMODIFY, "ไม่สามารถแก้ไขอินเทอร์เฟซไฟล์หรือเซ็กชันของเซิร์ฟเวอร์ได้"
+
+14 = IFACEE_WRITEFAIL, "เกิดข้อผิดพลาดในการเขียนอินเทอร์เฟซไฟล์"
+
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "ผู้ให้บริการส่งคืนข้อผิดพลาด"
+
+2 = DCLE_INITED, "ตั้งค่าเริ่มต้น DCL แล้ว"
+
+3 = DCLE_MEMALLOC, "ความพยายามในการจัดสรรหน่วยความจำล้มเหลว"
+
+4 = DCLE_MUTXALLOC, "ความพยายามในการจัดสรร mutex ล้มเหลว"
+
+5 = DCLE_RMAN, "เกิดข้อผิดพลาดในอินเทอร์เฟซ  Request Manager"
+
+6 = DCLE_LMAN, "เกิดข้อผิดพลาดในอินเทอร์เฟซ  List Manager"
+
+7 = DCLE_VERSION, "เวอร์ชัน DCL-Library ไม่ถูกต้อง"
+
+8 = DCLE_PROPCMD, "คำสั่งพร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+
+9 = DCLE_PROPERTY, "พร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+
+10 = DCLE_OPEN, "ไม่สามารถเปิดไดรฟ์เวอร์ที่ระบุ"
+
+11 = DCLE_LOAD, "ไม่สามารถโหลดไดรฟ์เวอร์ที่ระบุ"
+
+12 = DCLE_INTLHOME, "ไม่สามารถหาค่า $SYBASE"
+
+13 = DCLE_INTLOPEN, "ไม่สามารถเปิดคอนฟิเกอเรชันไฟล์"
+
+14 = DCLE_INTLNOENT, "ไม่พบรายการ DCL ในคอนฟิเกอเรชันไฟล์"
+
+15 = DCLE_FATAL, "ข้อผิดพลาดภายในอย่างร้ายแรง"
+
+16 = DCLE_FAILOVER, "เกิดเฟลโอเวอร์ในขณะที่ทำคำสั่งอันสุดท้าย"
+
+17 = DCLE_SESSBOUND, "เซสชันถูกไบนด์อยู่ในขณะนี้"
+
+18 = DCLE_SESSUBOUND, "เซสชันถูกอันไบนด์อยู่ในขณะนี้"
+
+19 = DCLE_PROPOF, "บัฟเฟอร์ของพร็อปเพอร์ตีโอเวอร์โฟลว์"
+
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "เกิดข้อผิดพลาดในการจัดสรรหน่วยความจำ"
+
+2 = REGE_INVALID_HANDLE, "พบไดรฟ์เวอร์แฮนเดิลที่ไม่ถูกต้อง"
+
+3 = REGE_ENTNOTSUPPORTED, "ไม่สนับสนุนจุดป้อนเข้าไดรฟ์เวอร์ที่รีเควสต์"
+
+4 = REGE_OPEN_KEY, "ไม่สามารถเปิดรีจิสตรีคีย์"
+
+5 = REGE_NO_VALUE, "ไม่พบแอตทริบิวต์ในรีจิสตรีคีย์"
+
+6 = REGE_ADDRSYNTAX, "เกิดข้อผิดพลาดด้านซินแท็กซ์ในแอดเดรสสตริง"
+
+7 = REGE_TYPENOTSUPPORTED, "ประเภทค่าไม่ถูกต้อง"
+
+8 = REGE_ENUMKEY, "ไม่สามารถแสดงรายการซับคีย์"
+
+9 = REGE_PROPCMD, "คำสั่งพร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+
+10 = REGE_PROP_READONLY, "ไม่สามารถ ตั้งค่า/ล้าง พร็อปเพอร์ตีสำหรับอ่านอย่างเดียว"
+
+11 = REGE_INVALID_ARG, "อาร์กิวเมนต์ไม่ถูกต้อง"
+
+12 = REGE_CREATE_KEY, "ไม่สามารถสร้างคีย์"
+
+13 = REGE_ENTRY_EXIST, "มีรีจิสตรีคีย์อยู่แล้ว"
+
+14 = REGE_INVALID_OID, "OID ไม่ถูกต้อง"
+
+15 = REGE_INVALID_ATTR_VALUE, "ค่าแอตทริบิวต์ไม่ถูกต้อง"
+
+16 = REGE_CREATE_VALUE, "ไม่สามารถกำหนดค่า"
+
+17 = REGE_DELETE_KEY, "ไม่สามารถลบคีย์"
+
+18 = REGE_MOD_ADDATTR, "ไม่สามารถเพิ่มแอตทริบิวต์"
+
+19 = REGE_MOD_ADDVALUE, "ไม่สามารถเพิ่มค่าแอตทริบิวต์"
+
+20 = REGE_MOD_REMOVEATTR, "ไม่สามารถลบแอตทริบิวต์"
+
+21 = REGE_MOD_REMOVEVALUE, "ไม่สามารถลบค่าแอตทริบิวต์"
+
+22 = REGE_READ_VALUE, "ไม่สามารถอ่านแอตทริบิวต์จากออบเจ็กต์"
+
+23 = REGE_PROPNOTSUPPORTED, "พร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+
+24 = REGE_INVALID_VALUENAME, "ไม่พบแอตทริบิวต์ OID"
+
+25 = REGE_MODIFY, "ไม่สามารถแก้ไขรายการ"
+
+26 = REGE_ENUMVALUE, "ไม่สามารถแสดงรายการค่า"
+
+27 = REGE_CONNECT_REMOTE, "ไม่สามารถเชื่อมต่อกับรีโมทรีจิสตรี"
+
+28 = REGE_PROPLEN, "ความยาวของพร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+
+29 = REGE_INVALID_INITSTR, "พบสตริงการตั้งค่าเริ่มต้นที่ไม่ถูกต้อง"
+
+[dcedrv]
+
+1 = DCEE_BADCLASS, "คลาสของออบเจ็กต์ไม่ถูกต้อง"
+
+2 = DCEE_BADOBJ, "ออบเจ็กต์ไม่ถูกต้อง"
+
+3 = DCEE_OPEN, "การเปิดเซสชันไปที่บริการไดเรกทอรี DCE ล้มเหลว"
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "ไม่พบชื่อเซิร์ฟเวอร์ที่รีเควสต์"
+
+6 = DCEE_DICTSYNTAX, "พบซินแท็กซ์ที่ไม่ถูกต้องในบริการไดเรกทอรี"
+
+7 = DCEE_MALLOC, "เกิดข้อผิดพลาดในการจัดสรรหน่วยความจำ"
+
+8 = DCEE_CLOSE, "ความพยายามในการปิดเซสชันบริการไดเรกทอรี DCE ล้มเหลว"
+
+9 = DCEE_ENTNOTSUPPORTED, "ไม่สนับสนุนจุดป้อนเข้าไดรฟ์เวอร์ที่รีเควสต์"
+
+10 = DCEE_PROPNOTSUPPORTED, "ไม่สนับสนุนพร็อปเพอร์ตีที่รีเควสต์"
+
+11 = DCEE_INVALID_HANDLE, "พบไดรฟ์เวอร์แฮนเดิลที่ไม่ถูกต้อง"
+
+12 = DCEE_BIND, "ความพยายามในการไบนด์เซสชันของไดเรกทอรี DCE ล้มเหลว"
+
+13 = DCEE_UNBIND, "ความพยายามในการอันไบนด์เซสชันของไดเรกทอรี  DCE ล้มเหลว"
+
+14 = DCEE_WORKSPACE, "การตั้งค่าเริ่มต้นเวิร์กสเปซล้มเหลว"
+
+15 = DCEE_OMGET, "DCE omget() ล้มเหลว"
+ 
+16 = DCEE_CONTEXT, "การจัดสรรคอนเท็กซ์ DCE ล้มเหลว"
+ 
+17 = DCEE_PROPCMD, "คำสั่งพร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+ 
+18 = DCEE_INVALIDARG, "อาร์กิวเมนต์ไม่ถูกต้อง"
+ 
+19 = DCEE_INITSTR, "สตริงการตั้งค่าเริ่มต้นไม่ถูกต้อง"
+ 
+20 = DCEE_INVALNAME, "ซินแท็กซ์เกี่ยวกับชื่อไม่ถูกต้อง"
+ 
+21 = DCEE_CELLNAME, "เกิดข้อผิดพลาดในการค้นหาชื่อเซลล์ DCE"
+ 
+22 = DCEE_DITBASE, "Ditbase ไม่ถูกต้อง"
+
+23 = DCEE_SEARCH, "ค่าความลึกของการค้นหาไม่ถูกต้อง"
+ 
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "ไดรฟ์เวอร์ LDAP ไม่สามารถจัดสรรหน่วยความจำ"
+
+2 = E_LOAD, "ไดรฟ์เวอร์ LDAP ไม่สามารถโหลดผู้ให้บริการ LDAP API"
+
+3 = E_VERSION, "มีการโหลดเวอร์ชัน LDAP API ที่ไม่ถูกต้อง"
+
+4 = E_URLPARSE, "ไดรฟ์เวอร์ LDAP ไม่สามารถพาร์ส URL"
+
+5 = E_INTERRUPTED, "ไดรฟ์เวอร์ LDAP ตรวจพบการเรียกระบบที่ถูกอินเทอร์รัปต์โดยไม่คาดหมาย"
+
+6 = E_INTERNAL, "ข้อผิดพลาดภายในเกี่ยวกับไดรฟ์เวอร์ LDAP "
+
+7 = E_NOTFOUND, "ไดรฟ์เวอร์ LDAP ไม่พบรายการ"
+
+8 = E_PROPS, "ไดรฟ์เวอร์ LDAP ไม่สามารถดึง/ตั้งค่าพรอปเพอร์ตี"
+
+9 = E__INIT, "ไดรฟ์เวอร์ LDAP ล้มเหลวใน ldap_init()"
+
+10 = E_BIND, "ไดรฟ์เวอร์ LDAP ล้มเหลวใน ldap_bind_s()."
+
+11 = E_UNBIND, "ไดรฟ์เวอร์ LDAP ล้มเหลวใน ldap_unbind_s()."
+
+12 = E_SEARCH, "ไดรฟ์เวอร์ LDAP ล้มเหลวใน ldap_search_s()."
+
+13 = E_ADDMOD, "ไดรฟ์เวอร์ LDAP ไม่สามารถเพิ่ม/แก้ไขรายการ"
+
+14 = E_DELETE, "ไดรฟ์เวอร์ LDAP ไม่สามารถลบรายการ"
+
+15 = E_PERM, "ไม่อนุญาตให้ดำเนินการตามที่รีเควสต์"
+
+; End of ldap error strings.
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "คลาสของออบเจ็กต์ไม่ถูกต้อง"
+
+2 = NDS_EBADOBJ, "ออบเจ็กต์ไม่ถูกต้อง"
+
+3 = NDS_EOPEN, "การเปิดเซสชันไปที่บริการไดเรกทอรี NDS  ล้มเหลว"
+
+4 = NDS_ELASTENTRY, "ผ่านรายการสุดท้าย"
+
+5 = NDS_ESRVNAMNOTFND, "ไม่พบชื่อเซิร์ฟเวอร์ที่รีเควสต์"
+
+6 = NDS_EDICTSYNTAX, "พบซินแท็กซ์ที่ไม่ถูกต้องในบริการไดเรกทอรี"
+
+7 = NDS_EMALLOC, "เกิดข้อผิดพลาดในการจัดสรรหน่วยความจำ"
+
+8 = NDS_ECLOSE, "ความพยายามในการปิดเซสชันบริการไดเรกทอรี NDS ล้มเหลว"
+
+9 = NDS_EENTNOTSUPPORTED, "ไม่สนับสนุนจุดป้อนเข้าไดรฟ์เวอร์ที่รีเควสต์"
+
+10 = NDS_EPROPNOTSUPPORTED, "ไม่สนับสนุนพร็อปเพอร์ตีที่รีเควสต์"
+
+11 = NDS_EINVALID_HANDLE, "พบไดรฟ์เวอร์แฮนเดิลที่ไม่ถูกต้อง"
+
+12 = NDS_EBIND, "การไบนด์เข้ากับบริการไดเรกทอรี NDS  ล้มเหลว"
+
+14 = NDS_EUNBIND, "การอันไบนด์กับบริการไดเรกทอรี NDS  ล้มเหลว"
+
+15 = NDS_EREAD, "การอ่านจากบริการไดเรกทอรี NDS  ล้มเหลว"
+
+16 = NDS_EADDOBJ, "การเพิ่มออบเจ็กต์ลงในบริการไดเรกทอรี NDS  ล้มเหลว"
+
+17 = NDS_EPROPCMD, "แอกชันที่ทำบนพร็อปเพอร์ตีไม่ถูกต้อง"
+
+18 = NDS_EINVALIDARG, "อาร์กิวเมนต์ไม่ถูกต้อง"
+
+19 = NDS_ENDSINIT, "การตั้งค่าเริ่มต้นบัฟเฟอร์ NDS ล้มเหลว"
+
+20 = NDS_EDELOBJ, "การลบออบเจ็กต์ในบริการไดเรกทอรี NDS  ล้มเหลว"
+
+21 = NDS_EMODOBJ, "การแก้ไขออบเจ็กต์ในบริการไดเรกทอรี NDS  ล้มเหลว"
+
+22 = NDS_ESEARCH, "การค้นหาออบเจ็กต์ในบริการไดเรกทอรี NDS  ล้มเหลว"
+
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "เกิดข้อผิดพลาดในการจัดสรรหน่วยความจำ"
+
+2 = BANE_INVALID_HANDLE, "พบไดรฟ์เวอร์แฮนเดิลที่ไม่ถูกต้อง"
+
+3 = BANE_SRVNAMNOTFND, "ไม่พบชื่อเซิร์ฟเวอร์ที่รีเควสต์"
+
+4 = BANE_NO_VALUE, "ไม่พบแอตทริบิวต์ในออบเจ็กต์ที่ระบุ"
+
+5 = BANE_ADDRSYNTAX, "เกิดข้อผิดพลาดด้านซินแท็กซ์ในแอดเดรสสตริง"
+
+6 = BANE_TYPENOTSUPPORTED, "ประเภทค่าไม่ถูกต้อง"
+
+7 = BANE_ENUMKEY, "ไม่สามารถแสดงรายการซับคีย์"
+
+8 = BANE_PROPCMD, "คำสั่งพร็อปเพอร์ตีที่ระบุไม่ถูกต้อง"
+
+9 = BANE_PROP_READONLY, "ไม่สามารถ ตั้งค่า/ล้าง พร็อปเพอร์ตีสำหรับอ่านอย่างเดียว"
+
+10 = BANE_INVALID_ARG, "อาร์กิวเมนต์ไม่ถูกต้อง"
+
+11 = BANE_INVALID_NAME, "ชื่อออบเจ็กต์ไม่ถูกต้อง"
+
+12 = BANE_ENTRY_EXIST, "มีออบเจ็กต์อยู่แล้ว"
+
+13 = BANE_INVALID_OID, "OID ไม่ถูกต้อง"
+
+14 = BANE_INVALID_ATTR_VALUE, "ค่าแอตทริบิวต์ไม่ถูกต้อง"
+
+15 = BANE_CREATE_VALUE, "ไม่สามารถกำหนดค่าแอตทริบิวต์"
+
+16 = BANE_MOD_ADDATTR, "ไม่สามารถเพิ่มแอตทริบิวต์"
+
+17 = BANE_MOD_REMOVEATTR, "ไม่สามารถลบแอตทริบิวต์"
+
+18 = BANE_READ_VALUE, "ไม่สามารถอ่านแอตทริบิวต์จากออบเจ็กต์"
+
+19 = BANE_STARTSESS, "ไม่สามารถเริ่มเซสชัน StreetTalk หรือ STDA"
+
+20 = BANE_ENDSESS, "ไม่สามารถจบเซสชัน StreetTalk หรือ STDA"
+
+21 = BANE_DELETE_ENTRY, "ไม่สามารถลบออบเจ็กต์"
+
+22 = BANE_INITSTR, "สตริงการตั้งค่าเริ่มต้นไม่ถูกต้อง"
+
+23 = BANE_NO_ENTRY, "ไม่มีออบเจ็กต์ที่ระบุอยู่"
+
+; end Banyan DSA driver error message
+;
+

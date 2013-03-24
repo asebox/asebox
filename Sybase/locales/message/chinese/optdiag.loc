@@ -1,0 +1,283 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "Optdiag输出文件中的Adaptive Server Enterprise服务器名\\n与当前Adaptive Server Enterprise的服务器名不匹配。"
+3 = ZZZZZ, "Optdiag 版本与 Adaptive Server Enterprise\\n版本不匹配。请使用这两个程序的同一版本。"
+10 = ZZZZZ, "Optdiag输出文件中的Adaptive Server Enterprise版本\\n与当前Adaptive Server Enterprise的版本不匹配。"
+11 = ZZZZZ, "表名 '%1!' 与指定的表名 '%2!' 不匹配。"
+12 = ZZZZZ, "下述字符串中的双引号有问题:"
+13 = ZZZZZ, "在下述行处未找到值串:"
+14 = ZZZZZ, "列名 '%1!' 与指定的列名不匹配 '%2!'。"
+15 = ZZZZZ, "更新列的统计信息失败。"
+16 = ZZZZZ, "Histogram列名 '%1!' 与前一列名\\n'%2!'不匹配（用于其它统计信息）。"
+17 = ZZZZZ, "针对 '%2!.%3!.%4!' 的histogram的第 %1! 步, "
+18 = ZZZZZ, "双引号的个数有问题。"
+19 = ZZZZZ, "不能读取数据。"
+20 = ZZZZZ, "应先执行第1步。"
+21 = ZZZZZ, "步骤号未逐个递增。"
+22 = ZZZZZ, "累积histogram权重超过 1.0（加上错误边界）。"
+23 = ZZZZZ, "两个临界单元格不能都使用 < 操作符。"
+24 = ZZZZZ, "针对'%1!.%2!.%3!'的histogram,"
+26 = ZZZZZ, "开始事务失败。"
+27 = ZZZZZ, "更新histogram统计信息失败。"
+28 = ZZZZZ, "删除histogram统计信息失败。"
+29 = ZZZZZ, "插入histogram权重失败。"
+30 = ZZZZZ, "提交事务失败。"
+31 = ZZZZZ, "该服务器上不存在数据库 '%1!'。"
+32 = ZZZZZ, "指定的表属主不拥有数据库 '%1!' 中的表。"
+33 = ZZZZZ, "数据库 '%2!'中不存在用户 '%1!'。"
+34 = ZZZZZ, "表 '%1!' 不属于本数据库中的用户 '%2!'。"
+35 = ZZZZZ, "数据库 '%2!'中不存在表 '%1!'。"
+36 = ZZZZZ, "表 '%1!' 不包括列 '%2!'。"
+37 = ZZZZZ, "systabstats中没有该索引的统计信息。"
+38 = ZZZZZ, "Optdiag不支持数据类型 '%1!'。"
+39 = ZZZZZ, "Optdiag不支持长度为 %2! 的数据类型 '%1!'。"
+40 = ZZZZZ, "sysstatistics中没有该列或列组的统计信息。"
+41 = ZZZZZ, "sysstatistics中没有该列或列组的\\nhistogram数据。"
+42 = ZZZZZ, "跟踪标志为3的内部错误。"
+43 = ZZZZZ, "内部错误: 表属主 '%1!'和表 '%2!' 重复。"
+44 = ZZZZZ, "内部错误: ct_results()返回异常结果类型 %1!。"
+45 = ZZZZZ, "内部错误: ct_fetch()中数据长度不匹配。"
+48 = ZZZZZ, "异常值 %1!"
+; Next is "returned", as in "a function returned a value".
+49 = ZZZZZ, "已返回"
+50 = ZZZZZ, "内部错误: ct_results()返回结果类型 CS_CMD_FAIL。"
+51 = ZZZZZ, "内部错误: cs_convert()失败。"
+52 = ZZZZZ, "读取行 %1! 失败。"
+53 = ZZZZZ, "内部错误:实际列数(%1!)不等于期望的数目(%2!)。"
+54 = ZZZZZ, "内部错误:实际的最大数据长度(%1!)超过期望值(%2!)。"
+55 = ZZZZZ, "非高速缓存配置参数必须后跟'%1!'。"
+56 = ZZZZZ, "未找到高速缓存'%1!'。"
+57 = ZZZZZ, "未找到索引'%1!.%2!.%3!'。"
+58 = ZZZZZ, "下述行处的无效值被忽略:"
+59 = ZZZZZ, "模拟配置值未更新。"
+60 = ZZZZZ, "表'%1!.%2!'的模拟表统计未更新。"
+61 = ZZZZZ, "Null值和非Null值的低端可能丢失。"
+62 = ZZZZZ, "可能有丢失的步骤。"
+63 = ZZZZZ, "权重不在 0.0 和 1.0 之间。"
+64 = ZZZZZ, "最近读取的权重可疑。"
+65 = ZZZZZ, "步值不在增加。"
+66 = ZZZZZ, "总权重不是 1.0 （由多个错误边界引起）。"
+67 = ZZZZZ, "插入histogram步值失败。"
+68 = ZZZZZ, "查找行标签 '%1!'。\\n异常到达输入文件的尾部。\\n可能因双引号不匹配引起。"
+69 = ZZZZZ, "内部错误: 表 '%1!' 和列 '%2!' 重复。"
+70 = ZZZZZ, "未读取 Optdiag 成功的消息而到达输入文件的尾部。"
+71 = ZZZZZ, "用户的场点必须由环境变量LANG\\n或命令行标志-z指定。"
+72 = ZZZZZ, "当前和前一步骤的值不能相同，\\n因本步不是频率计数。"
+73 = ZZZZZ, "SYSSTATISTICS中不同的二进制值可能被四舍五入\\n到同一个可读值。"
+74 = ZZZZZ, "用这些步值更新STATISTICS 将产生不一致。"
+75 = ZZZZZ, "跳过该histogram。若需要更新该histogram,\\n请以二进制模式运行Optdiag并编辑该二进制步值。"
+76 = ZZZZZ, "要执行该命令，您必须具有以下角色：'%1!'。\\n请与具有相关角色的用户联系，以请求帮助。"
+77 = ZZZZZ, "Optdiag 行标超出了它的最大允许长度。"
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "因引号导致的语法错误。"
+2 = ZZZZZ, "指定列名但未指定表名。"
+3 = ZZZZZ, "跟踪标志号超过最大允许值%1!。"
+5 = ZZZZZ, "输入文件和输出文件都被指定。"
+6 = ZZZZZ, "针对数据库和输入文件的参数不能读, 因此不知道\\n目标数据库。"
+7 = ZZZZZ, "打开输入文件失败。"
+8 = ZZZZZ, "打开输出文件失败。"
+9 = ZZZZZ, "该文件可能不存在或Optdiag缺少必要的\\n权限。"
+10 = ZZZZZ, "在找到'statistics'关键字之前，命令行语法错误。"
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Optdiag 失败。 检查上面的错误消息。"
+2 = ZZZZZ, "Optdiag 成功。"
+3 = ZZZZZ, "在命令行设置跟踪标志1(-T1)以忽略Adaptive Server Enterprise 版本的\\n不同。"
+5 = ZZZZZ, "在命令行设置跟踪标志4(-T4)以跳过该\\n一致性检查。"
+7 = ZZZZZ, "未指定"
+8 = ZZZZZ, " (聚簇)"
+9 = ZZZZZ, " (非聚簇)"
+10 = ZZZZZ, "使用的缺省"
+11 = ZZZZZ, "缺省"
+12 = ZZZZZ, "下一张表是'%1!',其属主是'%2!'。"
+13 = ZZZZZ, "若对问题的位置不清楚,考虑以带跟踪标志6的输入模式再次运行Optdiag\\n以帮助确定问题的位置。"
+14 = ZZZZZ, "Optdiag 完成, 但跳过了统计。\\n检查上面的错误消息。"
+15 = ZZZZZ, " (实际的)"
+16 = ZZZZZ, " (模拟的)"
+17 = ZZZZZ, "由升级分布页而产生的统计信息。"
+18 = ZZZZZ, "从 Optdiag 装载的统计信息。"
+19 = ZZZZZ, " （只使用了 255 个字节）"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "口令: "
+
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+;
+[format]
+
+1 = ZZZZZ, "服务器名:"
+2 = ZZZZZ, "指定的数据库:"
+3 = ZZZZZ, "指定的表属主:"
+4 = ZZZZZ, "表属主:"
+5 = ZZZZZ, "指定的表:"
+6 = ZZZZZ, "指定的列:"
+7 = ZZZZZ, "对索引的统计:"
+8 = ZZZZZ, "索引列列表:"
+9 = ZZZZZ, "对表的统计:"
+10 = ZZZZZ, "对列的统计:"
+11 = ZZZZZ, "其余列没有统计:"
+12 = ZZZZZ, "(使用的缺省值)"
+13 = ZZZZZ, "列组的统计:"
+14 = ZZZZZ, "列统计的最后更新:"
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "来源于分布页升级的统计信息。"
+16 = ZZZZZ, "从 Optdiag 装载的统计信息。"
+17 = ZZZZZ, "列的直方图:"
+18 = ZZZZZ, "列数据类型:"
+19 = ZZZZZ, "请求的梯级计数:"
+20 = ZZZZZ, "实际的梯级计数:"
+21 = ZZZZZ, "直方图最后更新:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+22 = ZZZZZ, "梯级     权值                    值"
+23 = ZZZZZ, "域单元密度:"
+24 = ZZZZZ, "总密度:"
+25 = ZZZZZ, "数据类型:"
+26 = ZZZZZ, "域选择性:"
+27 = ZZZZZ, "两者之间选择性:"
+28 = ZZZZZ, "叶计数:"
+29 = ZZZZZ, "数据页计数:"
+30 = ZZZZZ, "空数据页计数:"
+31 = ZZZZZ, "空叶页计数:"
+32 = ZZZZZ, "数据行计数:"
+33 = ZZZZZ, "转移行计数:"
+34 = ZZZZZ, "删除行计数:"
+35 = ZZZZZ, "数据页 CR 计数:"
+36 = ZZZZZ, "索引页 CR 计数:"
+37 = ZZZZZ, "数据行 CR 计数:"
+38 = ZZZZZ, "OAM + 分配页计数:"
+39 = ZZZZZ, "第一扩充数据页:"
+40 = ZZZZZ, "第一扩充叶页:"
+41 = ZZZZZ, "数据行行宽:"
+42 = ZZZZZ, "叶行行宽:"
+43 = ZZZZZ, "索引高度:"
+44 = ZZZZZ, "派生统计信息:"
+45 = ZZZZZ, "数据页集群比:"
+46 = ZZZZZ, "索引页集群比:"
+47 = ZZZZZ, "数据行集群比:"
+48 = ZZZZZ, "表名:"
+49 = ZZZZZ, "最大分区中的页:"
+50 = ZZZZZ, "配置参数:"
+51 = ZZZZZ, "最大并行度:"
+52 = ZZZZZ, "最大扫描并行度:"
+53 = ZZZZZ, "高速缓存配置:"
+54 = ZZZZZ, "2K 缓冲池的大小 (Kb):"
+55 = ZZZZZ, "4K 缓冲池的大小 (Kb):"
+56 = ZZZZZ, "8K 缓冲池的大小 (Kb):"
+57 = ZZZZZ, "16K 缓冲池的大小 (Kb):"
+58 = ZZZZZ, "模拟统计信息的最后更新:"
+59 = ZZZZZ, "空间利用:"
+60 = ZZZZZ, "大 I/O 的效率:"
+61 = ZZZZZ, "工作进程数:"
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "列的直方图:"
+66 = ZZZZZ, "列数据类型:"
+67 = ZZZZZ, "请求的梯级计数:"
+68 = ZZZZZ, "实际的梯级计数:"
+69 = ZZZZZ, "直方图最后更新:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight and value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "梯级     权值                    值"
+71 = ZZZZZ, "     域单元密度:"
+72 = ZZZZZ, "     总密度:"
+73 = ZZZZZ, "数据类型:"
+74 = ZZZZZ, "     域选择性:"
+75 = ZZZZZ, "     两者之间选择性:"
+76 = ZZZZZ, "     叶计数:"
+77 = ZZZZZ, "     数据页计数:"
+78 = ZZZZZ, "     空数据页计数:"
+79 = ZZZZZ, "     空叶页计数:"
+80 = ZZZZZ, "     数据行计数:"
+81 = ZZZZZ, "     转移行计数:"
+82 = ZZZZZ, "     删除行计数:"
+83 = ZZZZZ, "     数据页 CR 计数:"
+84 = ZZZZZ, "     索引页 CR 计数:"
+85 = ZZZZZ, "     数据行 CR 计数:"
+86 = ZZZZZ, "     OAM + 分配页计数:"
+87 = ZZZZZ, "     第一扩充数据页:"
+88 = ZZZZZ, "     第一扩充叶页:"
+89 = ZZZZZ, "     数据行行宽:"
+90 = ZZZZZ, "     叶行行宽:"
+91 = ZZZZZ, "     索引高度:"
+92 = ZZZZZ, "     数据页集群比:"
+93 = ZZZZZ, "     索引页集群比:"
+94 = ZZZZZ, "     数据行集群比:"
+95 = ZZZZZ, "表名:"
+96 = ZZZZZ, "     最大分区中的页:"
+97 = ZZZZZ, "     最大并行度:"
+98 = ZZZZZ, "     最大扫描并行度:"
+99 = ZZZZZ, "高速缓存配置:"
+100 = ZZZZZ, "     2K 缓冲池的大小 (Kb):"
+101 = ZZZZZ, "     4K 缓冲池的大小 (Kb):"
+102 = ZZZZZ, "     8K 缓冲池的大小 (Kb):"
+103 = ZZZZZ, "     16K 缓冲池的大小 (Kb):"
+104 = ZZZZZ, "     32K 缓冲池的大小 (Kb):"
+105 = ZZZZZ, "     64K 缓冲池的大小 (Kb):"
+106 = ZZZZZ, "     128K 缓冲池的大小 (Kb):"
+107 = ZZZZZ, "模拟统计信息的最后更新:"
+108 = ZZZZZ, "     空间利用:"
+109 = ZZZZZ, "     大 I/O 的效率:"
+110 = ZZZZZ, "     工作进程数:"
+111 = ZZZZZ, "  派生统计信息:"
+112 = ZZZZZ, "配置参数:"
+113 = ZZZZZ, "采样百分比："
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "致命错误:内存分配失败。"
+2 = ZZZZZ, "设置连接属性失败。"
+3 = ZZZZZ, "建立连接失败。"
+4 = ZZZZZ, "不识别的本地化对象。使用缺省值'%1!'。"
+5 = ZZZZZ, "内部错误:传递给cs_locale()的是无效的本地化类型。"
+6 = ZZZZZ, "'%1!'语法错误。"
+7 = ZZZZZ, "试图加载转换表对时出错。"
+8 = ZZZZZ, "中断 - Optdiag 异常终止。"

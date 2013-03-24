@@ -1,0 +1,331 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=11.5
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=korean
+
+[copyright]
+copyright =  "저작권 (C) 1990, 2001 Sybase, Inc.\
+모든 저작권은 본사 소유입니다. \
+미 연방 정부에 의한 사용, 복제 또는 공개는 \
+CFR 52.227-7013의 Rights in Technical Data and \
+Computer Software 절에 있는 (c) (1) (ii) 항목에 \
+명시된 규정을 따릅니다. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "보안 드라이버 수준 오류입니다."
+
+2 = SCLE_INITED, "SCL을 이미 초기화하였습니다."
+
+3 = SCLE_MEMALLOC, "메모리를 할당할 수 없습니다."
+
+4 = SCLE_MUTXALLOC, "mutex를 할당할 수 없습니다."
+
+5 = SCLE_RMAN, "RMAN API에 오류가 있습니다."
+
+6 = SCLE_LMAN, "LMAN API에 오류가 있습니다."
+
+7 = SCLE_VERSION, "잘못된 SCL 라이브러리 버전입니다."
+
+8 = SCLE_PROPCMD, "잘못된 특성 명령어를 지정하였습니다."
+
+9 = SCLE_PROPERTY, "잘못된 특성을 지정하였습니다."
+
+10 = SCLE_PROP_RO, "읽기 전용 특성입니다."
+
+11 = SCLE_PROP_OF, "특성 버퍼 오버플로우입니다."
+
+12 = SCLE_OPEN, "보안 드라이버를 열 수 없습니다."
+
+13 = SCLE_LOAD, "보안 드라이버를 로드할 수 없습니다."
+
+14 = SCLE_INTLHOME, "SYBASE 홈 디렉토리를 결정할 수 없습니다."
+
+15 = SCLE_INTLOPEN, "구성 파일을 열 수 없습니다."
+
+16 = SCLE_INTLNOENT, "구성 파일에 SCL 항목이 없습니다."
+
+18 = SCLE_DRVLOAD, "지정된 보안 드라이버를 로드할 수 없습니다."
+
+19 = SCLE_SESSBOUND, "세션이 현재 바인드되어 있습니다."
+
+20 = SCLE_SESSUBOUND, "세션이 현재 바인드되어 있지 않습니다."
+
+21 = SCLE_CREDACT, "자격을 현재 사용하고 있습니다."
+
+22 = SCLE_CRED_NA, "자격을 현재 사용하지 않고 있습니다."
+
+23 = SCLE_UNSUPPORT, "명령어가 지원되지 않습니다."
+
+24 = SCLE_MUTEXLOCK, "Mutex 잠금을 호출할 수 없습니다."
+
+25 = SCLE_MECHNOTFND, "지정된 보안 처리 방법이 없습니다."
+
+26 = SCLE_CFGERR, "구성 파일 오류입니다."
+
+27 = SCLE_CREDUSED, "자격 핸들을 삭제하지 않았습니다."
+
+28 = SCLE_DRIVUSED, "드라이버를 닫지 않았습니다."
+
+29 = SCLE_MECHUSED, "보안 처리 방법 핸들을 삭제하지 않았습니다."
+
+30 = SCLE_MECHOIDNOTFND, "보안 처리 방법 OID가 없습니다."
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "메모리를 할당할 수 없습니다."
+
+2 = MSSPE_SRVNOTSUPP, "요청한 보안 서비스는 지원되지 않습니다."
+
+3 = MSSPE_PRINCIPAL, "지정된 보안 담당자 이름을 알 수 없거나 소유자가 아닙니다."
+
+4 = MSSPE_PROVIDER, "보안 제공자가 없거나 제공자를 초기화할 수 없습니다."
+
+5 = MSSPE_INITSTR, "잘못된 드라이버 초기화 문자열입니다."
+
+6 = MSSPE_PROPCMD, "잘못된 보안 특성 명령어입니다."
+
+7 = MSSPE_PROPNOTSUPP, "잘못된 보안 특성 이름입니다."
+
+8 = MSSPE_CONTEXT, "잘못된 드라이버 문맥 구조가 있습니다."
+
+9 = MSSPE_OPNOTSUPP, "드라이버 진입점이 지원되지 않습니다."
+
+10 = MSSPE_PROPVALLEN, "특성 값 버퍼 길이가 너무 작습니다."
+
+11 = MSSPE_TOKEN, "잘못된 보안 토큰입니다."
+
+12 = MSSPE_HANDLE, "잘못된 보안 핸들입니다."
+
+13 = MSSPE_NAMETOOLONG, "처리 방법/담당자/대상 이름이 너무 깁니다."
+
+14 = MSSPE_PACKAGE, "지정한 보안 패키지는 지원되지 않습니다."
+
+15 = MSSPE_INTERNAL, "예기치 않은 내부 오류가 발생하였습니다."
+
+16 = MSSPE_DENIED, "보안 세션 요청이 거부되었습니다."
+
+17 = MSSPE_RMTNAME, "보안 대상 이름이 없거나 올바르지 않습니다."
+
+18 = MSSPE_PROVIDERERR, "%1! 보안 서비스 제공자 내부 오류가 발생하였습니다."
+
+19 = MSSPE_MSGALTERED, "보안 메시지가 바뀌었습니다. 서명 유효성 검사에 불합격하였습니다."
+
+20 = MSSPE_MSGSEQ, "순서가 뒤바뀐 메시지가 있습니다."
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "메모리를 할당할 수 없습니다."
+
+2 = NDSE_SRVNOTSUPP, "요청한 보안 서비스는 지원되지 않습니다."
+
+3 = NDSE_PRINCIPAL, "잘못된 담당자 이름을 지정하였습니다."
+
+4 = NDSE_PROVIDER, "NDS 보안 제공자가 없거나 초기화할 수 없습니다."
+
+5 = NDSE_INITSTR, "잘못된 초기화 문자열입니다."
+
+6 = NDSE_PROPCMD, "잘못된 보안 특성 명령어입니다."
+
+7 = NDSE_PROPNOTSUPP, "잘못된 보안 특성 이름입니다."
+
+8 = NDSE_CONTEXT, "잘못된 드라이버 문맥 구조를 지정하였습니다."
+
+9 = NDSE_OPNOTSUPP, "지정한 보안 드라이버 진입점은 지원되지 않습니다."
+
+10 = NDSE_PROPVALLEN, "특성 값 버퍼가 너무 작습니다."
+
+11 = NDSE_DITBASE, "잘못된 DIT 기점을 지정하였습니다."
+
+12 = NDSE_VERNOTSUPP, "지정한 버전은 드라이버에서 지원되지 않습니다."
+
+13 = NDSE_CREDS, "잘못된 자격 또는 자격 사용 유형입니다."
+
+14 = NDSE_INITDITBASE, "잘못된 init DIT 기점입니다."
+
+15 = NDSE_NAMETOOLONG, "NDS 담당자 이름이 너무 깁니다."
+
+16 = NDSE_NWCALLSINIT, "NWCallsInit() NetWare 루틴을 실행할 수 없습니다(%1!)."
+
+17 = NDSE_NWDSCCTX, "NWDSCreateContext() NetWare 루틴을 실행할 수 없습니다(%1!)."
+
+18 = NDSE_INIT, "NDS를 초기화할 수 없습니다(%1!)."
+
+19 = NDSE_NDS, "NDS를 호출할 수 없습니다(%1!)."
+
+20 = NDSE_RMTNAME, "보안 대상 이름이 없거나 올바르지 않습니다."
+
+21 = NDSE_CHANNELID, "지정한 채널 구별자가 없거나 올바르지 않습니다."
+
+22 = NDSE_BIND, "보안 세션을 바인드할 수 없습니다."
+
+23 = NDSE_PROVIDERVER, "NDS 보안 제공자 버전이 일치하지 않습니다."
+
+24 = NDSE_NWDSTREE, "잘못된 디렉토리 트리 이름을 지정하였습니다."
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "메모리를 할당할 수 없습니다."
+
+2 = DCEE_SRVNOTSUPP, "요청한 보안 서비스는 지원되지 않습니다."
+
+3 = DCEE_PRINCIPAL, "지정한 보안 담당자 이름을 알 수 없거나 소유자가 아닙니다."
+
+4 = DCEE_BUFOF, "특성 값 버퍼 오버플로우 오류입니다."
+
+5 = DCEE_INITSTR, "잘못된 드라이버 초기화 문자열입니다."
+
+6 = DCEE_PROPCMD, "잘못된 보안 특성 명령어입니다."
+
+7 = DCEE_PROPNOTSUPP, "잘못된 보안 특성 이름입니다."
+
+8 = DCEE_CONTEXT, "잘못된 드라이버 문맥 구조가 있습니다(부 상태 %1!)."
+
+9 = DCEE_OPNOTSUPP, "드라이버 진입점이 지원되지 않습니다."
+
+10 = DCEE_PROPVALLEN, "특성 값 버퍼 길이가 너무 작습니다."
+
+11 = DCEE_TOKEN, "잘못된 보안 토큰입니다(부 상태 %1!)."
+
+12 = DCEE_HANDLE, "잘못된 보안 핸들입니다."
+
+13 = DCEE_NAMETOOLONG, "처리 방법/담당자/대상 이름이 너무 깁니다."
+
+14 = DCEE_CHKSIGN, "서명 유효성 검사에 불합격하였습니다(부 상태 %1!)."
+
+15 = DCEE_INTERNAL, "예기치 않은 내부 오류가 발생하였습니다."
+
+16 = DCEE_DENIED, "보안 세션 요청이 거부되었습니다(부 상태 %1!)."
+
+17 = DCEE_RMTNAME, "보안 대상 이름이 없거나 올바르지 않습니다 (부 상태 %1!)."
+
+18 = DCEE_PROVIDERERR, "%1! 보안 서비스 제공자 내부 오류가 발생하였습니다."
+
+19 = DCEE_MSGALTERED, "보안 메시지가 바뀌었습니다. 서명 유효성 검사에 불합격하였습니다."
+
+20 = DCEE_MSGSEQ, "순서가 뒤바뀐 메시지가 있습니다(부 상태 %1!)."
+
+21 = DCEE_BADNAMETYPE, "잘못된 보안 이름 유형이 있습니다(부 상태 %1!)."
+
+22 = DCEE_BADCHANBIND, "잘못된/일치하지 않는 채널 바인드가 있습니다(부 상태 %1!)."
+
+23 = DCEE_CREDEXPIRED, "참조한 자격이 만료되었습니다(부 상태 %1!)."
+
+24 = DCEE_BADCRED, "자격에 대한 일관성 검사를 수행할 수 없습니다(부 상태 %1!)."
+
+25 = DCEE_OLDTOKEN, "지정한 보안 토큰이 너무 오래되어 사용할 수 없습니다(부 상태 %1!)."
+
+26 = DCEE_DUPTOKEN, "지정한 보안 토큰은 이미 처리되었습니다(부 상태 %1!)."
+
+27 = DCEE_CTXTEXPIRED, "보안 문맥이 이미 만료되었습니다(부 상태 %1!)."
+
+28 = DCEE_BADNAME, "잘못된 보안 이름을 전달하였습니다(부 상태 %1!)."
+
+29 = DCEE_REGIDENTITY, "문맥 수용자의 신원을 등록하는 루틴을 실행할 수 없습니다(부 상태 %1!)."
+
+30 = DCEE_BADMECH, "지정한 처리 방법은 지원되지 않거나 사용할 수 없습니다(부 상태 %1!)."
+
+31 = DCEE_BADBUF, "잘못된 보안 버퍼가 있습니다(부 상태 %1!)."
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "메모리를 할당할 수 없습니다."
+
+2 = KRBE_SRVNOTSUPP, "요청한 보안 서비스는 지원되지 않습니다."
+
+3 = KRBE_PRINCIPAL, "지정한 보안 담당자 이름을 알 수 없거나 소유자가 아닙니다."
+
+4 = KRBE_BUFOF, "특성 값 버퍼 오버플로우 오류입니다."
+
+5 = KRBE_INITSTR, "잘못된 드라이버 초기화 문자열입니다."
+
+6 = KRBE_PROPCMD, "잘못된 보안 특성 명령어입니다."
+
+7 = KRBE_PROPNOTSUPP, "잘못된 보안 특성 이름입니다."
+
+8 = KRBE_CONTEXT, "잘못된 드라이버 문맥 구조가 있습니다(부 상태 %1!)."
+
+9 = KRBE_OPNOTSUPP, "드라이버 진입점이 지원되지 않습니다."
+
+10 = KRBE_PROPVALLEN, "특성 값 버퍼 길이가 너무 작습니다."
+
+11 = KRBE_TOKEN, "잘못된 보안 토큰입니다(부 상태 %1!)."
+
+12 = KRBE_HANDLE, "잘못된 보안 핸들입니다."
+
+13 = KRBE_NAMETOOLONG, "처리 방법/담당자/대상 이름이 너무 깁니다."
+
+14 = KRBE_CHKSIGN, "서명 유효성 검사에 불합격하였습니다(부 상태 %1!)."
+
+15 = KRBE_INTERNAL, "예기치 않은 내부 오류가 발생하였습니다."
+
+16 = KRBE_DENIED, "보안 세션 요청이 거부되었습니다(부 상태 %1!)."
+
+17 = KRBE_RMTNAME, "보안 대상 이름이 없거나 올바르지 않습니다(부 상태 %1!)."
+
+18 = KRBE_PROVIDERERR, "%1! 보안 서비스 제공자 내부 오류가 발생하였습니다."
+
+19 = KRBE_MSGALTERED, "보안 메시지가 바뀌었습니다. 서명 유효성 검사에 불합격하였습니다."
+
+20 = KRBE_MSGSEQ, "순서가 뒤바뀐 메시지가 있습니다(부 상태 %1!)."
+
+21 = KRBE_BADNAMETYPE, "유효하지 않은 보안 이름 유형이 없습니다(부 상태 %1!)."
+
+22 = KRBE_BADCHANBIND, "잘못된/일치하지 않는 채널 바인드가 있습니다(부 상태 %1!)."
+
+23 = KRBE_CREDEXPIRED, "참조한 자격이 만료되었습니다(부 상태 %1!)."
+
+24 = KRBE_BADCRED, "자격에 대한 일관성 검사를 수행할 수 없습니다(부 상태 %1!)."
+
+25 = KRBE_OLDTOKEN, "지정한 보안 토큰이 너무 오래되어 사용할 수 없습니다(부 상태 %1!)."
+
+26 = KRBE_DUPTOKEN, "지정한 보안 토큰은 이미 처리되었습니다(부 상태 %1!)."
+
+27 = KRBE_CTXTEXPIRED, "보안 문맥이 이미 만료되었습니다(부 상태 %1!)."
+
+28 = KRBE_BADNAME, "잘못된 보안 이름을 전달하였습니다(부 상태 %1!)."
+
+29 = KRBE_REGIDENTITY, "문맥 수용자의 신원을 등록하는 루틴을 실행할 수 없습니다(부 상태 %1!)."
+
+30 = KRBE_BADMECH, "지정한 처리 방법은 지원되지 않거나 사용할 수 없습니다(부 상태 %1!)."
+
+31 = KRBE_BADBUF, "잘못된 보안 버퍼가 있습니다(부 상태 %1!)."
+
+; end of CyberSAFE Kerberos driver error strings
+;

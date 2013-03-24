@@ -1,0 +1,156 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  
+;  Product:  Full Text Search Specialty Data Store Release 11.5.1
+;  File:     txtsvr.loc  1.11  01/10/01
+;  Purpose:  Messages for localization  
+;
+;            
+;  Revision History
+;  ----------------------------------------------------------------------
+;  15-Oct-1997                  created, initially 45 messages
+;  28-Oct-1997                  modify 14, 15, 27; add 46, 47
+;  13-Jan-1998			added 48 - 53
+;  21-Jan-1998			added 54 - 57
+;  06-Mar-1998			added 58
+;  26-Mar-1998			added 59
+;  10-Jan-2001                  added 60 - 62
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;                   Copyright (c) Sybase Inc. 1990, 2001
+;                   Emeryville, CA 94608 
+;                   Tous droits réservés.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; localized message strings
+;
+[messages]
+;
+; 1  ENOMEM
+1 =  "Echec de l'allocation de mémoire."
+; 2  EROUFAIL
+2 =  "Echec de %1!."
+; 3  EARGMIS
+3 =  "%1! : argument incohérent."
+; 4  EARGINV
+4 =  "%1! : argument incorrect."
+; 5  ECMDFAIL
+5 =  "Echec de la commande '%1!'."
+; 6  ERPCNOT 
+6 =  "Le RPC '%1!' n'existe pas."
+; 7  ENOCOLL
+7 =  "Les noms d'index doivent se présenter sous la forme 'basededonnées.propriétaire.nom'."
+; 8  ENOREQDB
+8 =  "La base de données '%1!' nécessaire n'existe pas."
+; 9  ENOSPECDB 
+9 =  " La base de données '%1!' spécifiée n'existe pas."
+; 10 ENOLOADIDX 
+10 = "Impossible de charger l'index '%1!'."
+; 11 EINVOBJ
+11 = "Le nom de l'objet '%1!' est incorrect."
+; 12 EINDEXED
+12 = "L'index existe déjà."
+; 13 ENOPASSTH 
+13 = "Le mode passthru n'est pas supporté."
+; 14 ECOLMISS
+14 = "Erreur interne : colonne incohérente détectée dans la fonction %1!."
+; 15 ENOROWBUF
+15 = "Erreur interne : buffer de ligne introuvable dans la fonction %1!."
+; 16 ENOCURSOR 
+16 = "Vous devez spécifier un nom de curseur."
+; 17 ENOPARSE  
+17 = "Impossible d'analyser l'instruction SQL."
+; 18 ENOILOCK
+18 = "Impossible de verrouiller l'index."
+; 19 ENOINDEX
+19 = "L'index n'existe pas ou est en mode autonome."
+; 20 EIDXINUSE 
+20 = "L'index est en cours de mise à jour."
+; 21 ECURFAIL   
+21 = "Echec d'allocation du curseur."
+; 22 ENOUPDDEL  
+22 = "Les opérations de modification et de suppression ne sont pas supportées."
+; 23 EINVCOL    
+23 = "Colonne incorrecte dans la liste de sélection."
+; 24 EFUNFAIL   
+24 = "Echec de la fonction '%1!' suite à l'erreur vdk '%2!'."
+; 25 ESVRBUSY   
+25 = "Ce Text Server est actuellement dédié au serveur '%1!'."
+; 26 ENORPCNAM  
+26 = "Impossible d'extraire le nom du RPC."
+; 27 EINVSORT
+27 = "Spécification de tri '%1!' incorrecte."
+; 28 EUNSUPPORT 
+28 = "Instructions non supportée."
+; 29 ENOMUTEX   
+29 = "Impossible de créer un mutex de base de données."
+; 30 EGENRQUERY 
+30 = "Erreur de génération de la requête distante."
+; 31 EPRORQUERY 
+31 = " Erreur de traitement de la requête distante."
+; 32 ENORTEXT   
+32 = "Impossible d'exécuter la procédure '%1!'."
+; 33 EINDEXBUSY 
+33 = "L'index de l'objet '%1!.%2!' est utilisé par un autre thread."
+; 34 ENOMODCOL  
+34 = "Impossible de modifier la collection '%1!' de l'objet '%2!.%3!'."
+; 35 EINVALOP   
+35 = "Opérateur de comparaison incorrect. Seuls les opérateurs '>' et '>=' sont supportés."
+; 36 ENOPRED    
+36 = "Le requête ne contient pas de prédicat."
+; 37 EUNSUPCOL  
+37 = "Colonne '%1!' non supportée."
+; 38 ENOREMSVR  
+38 = "Connexion impossible au serveur distant '%1!'."
+; 39 EBINDFAIL  
+39 = "Impossible d'associer les résultats de ligne."
+; 40 ENOSLOCK   
+40 = "Impossible d'obtenir le verrou de la session."
+; 41 EMAXSESS   
+41 = "Le nombre maximum de sessions en cours est atteint."
+; 42 EINVTPTR   
+42 = "Valeur incorrecte du pointeur de texte."
+; 43 ENOUDATA    
+43 = "Impossible d'extraire les données utilisateur du thread."
+; 44 ECOLCLOSE  
+44 = "Impossible d'ouvrir la collection '%1!' de l'objet '%2!'."
+; 45 EINDXNO    
+45 = "Index introuvable. Vérifiez que la base de données est en ligne."
+; 46 EIDXRW    
+46 = "L'index '%1!' est en cours d'utilisation."
+; 47 ENOIDXOBJ
+47 = "L'index de l'objet '%1!.%2!' n'existe pas ou est en mode autonome."
+; 48 EDATATYPE
+48 = "Type de données '%1!' non supporté."
+; 49 EBACKUP
+49 = "Echec de la sauvegarde de l'index '%1!', rc = %2!."
+; 50 ERESTORE
+50 = " Echec de la restauration de l'index '%1!', rc = %2!."
+; 51 IBACKUP
+51 = "L'index '%1!' a été sauvegardé."
+; 52 IRESTORE
+52 = "L'index '%1!' a été restauré."
+; 53 ECLUSTER
+53 = "Impossible de créer un jeu de résultats clusterisé. Vérifiez que l'index a été créé en activant la clusterisation."
+; 54 ISTATIC
+54 = "Redémarrez le serveur pour que ce paramètre statique prenne effet."
+; 55 IDYNAMIC
+55 = "Ce paramètre dynamique a désormais pris effet."
+; 56 ECFGFILE
+56 = "Impossible de créer une nouvelle version du fichier de configuration."
+; 57 ECFGNAME
+57 = "Paramètre de configuration '%1!' incorrect."
+; 58 EFEATURE
+58 = "Vérifiez que l'index a été créé en définissant DOC-FEATURES."
+; 59 EDBINDEX
+59 = "Un index de la base de données '%1!' est utilisé par un autre thread."
+; 60 ENOTENABLED
+60 = "La fonction de recherche de texte intégral n'est pas activée sur le serveur '%1!'."
+; 61 EBADSRVID
+61 = "L'ID de Text Server du compagnon HD (%1!) diffère de celui du compagnon primaire (%2!)."
+; 62 EHASVRBUSY
+62 = "Ce Text Server est actuellement dédié aux serveurs '%1!' et '%2!'."
+
+
+

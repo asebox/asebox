@@ -1,0 +1,699 @@
+; comment character is semicolon.
+
+; "ctlib.loc" - Localization file for Client-Library.
+;
+; Sccsid @(#) ctlib.loc 1.8 12/3/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library Default Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdefaults]
+
+1 = ZZZZZ, "Zu wenig Speicher. Kann Zeichenkette nicht einlesen."
+
+2 = ZZZZZ, "Kann Schicht-Zeichenkette nicht einlesen."
+
+3 = ZZZZZ, "Kann Origin-Zeichenkette nicht einlesen."
+
+4 = ZZZZZ, "Fehlerzeichenkette nicht verf’gbar."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctlayer]
+
+1 = ZZZZZ, "Benutzer-API-Schicht"
+
+2 = ZZZZZ, "Benutzer-API-Schicht"
+
+3 = ZZZZZ, "Generische Protokoll-Schicht"
+
+4 = ZZZZZ, "Protokollspezifische Schicht"
+
+5 = ZZZZZ, "Netzpaket-Schicht"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitions.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctorigin]
+
+1 = ZZZZZ, "Externer Fehler"
+
+2 = ZZZZZ, "Interner Fehler in Client-Library"
+
+3 = ZZZZZ, "Interner Fehler in Netz-Library"
+
+4 = ZZZZZ, "Interner allgemeiner Library-Fehler"
+
+5 = ZZZZZ, "Interner Fehler in intl-Library"
+
+6 = ZZZZZ, "Interner Fehler bei Async-Manager"
+
+7 = ZZZZZ, "Interner Fehler bei Speicherverwaltung"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctapierror]
+
+0 = ZZZZZ, "Zustandsvalidierung erfolgreich."
+
+1 = ZZZZZ, "Die einzulesenden Informationen passen nicht in einen Puffer von %1! Byte."
+
+
+2 = ZZZZZ, "Fehler bei der Speicherzuweisung."
+
+3 = 22023, "Der Parameter %1! kann nicht NULL sein."
+
+
+4 = 22023, "Wenn %1! NULL ist, muž der Parameter %2! 0 sein."
+
+
+5 = 22023, "Angegebener Wert %1! f’r Parameter %2! ung’ltig."
+
+
+6 = 08000, "Die maximale Anzahl von Verbindungen ist bereits ge÷ffnet."
+
+
+7 = ZZZZZ, "Der Server unterst’tzt KEEP_ON nicht."
+
+
+8 = 22023, "Der Parameter %1! muž NULL sein."
+
+
+9 = 22023, "Der Parameter %1! muž auf CS_UNUSED gesetzt werden."
+
+
+10 = 22023, "Boolesche Werte m’ssen entweder auf CS_TRUE oder CS_FALSE gesetzt werden."
+
+
+11 = ZZZZZ,	"CS_SIGNAL_CB kann nicht installiert werden, da die Plattform Interrupt-gesteuerte Netzwerk-E/A nicht unterst’tzt."
+
+
+12 = ZZZZZ,	"CS_COMPLETION_CB kann nicht installiert werden, da die Plattform nicht ’ber die n÷tigen Polling- oder Interrupt-Eigenschaften verf’gt."
+
+
+13 = ZZZZZ,	"Eigenschaft kann nicht eingerichtet werden, nachdem eine Verbindung zum Server hergestellt wurde."
+
+
+14 = ZZZZZ,	"Diese Eigenschaft kann nicht eingerichtet werden."
+
+
+15 = ZZZZZ,	"F’r diese Eigenschaft muž eine Verbindung zum Server bestehen."
+
+
+16 = ZZZZZ, "Aufruf der Routine nicht m÷glich, w„hrend Ergebnisse eines Befehls an den Server noch ausstehen."
+
+
+17 = 36001, "Die Befehlsstruktur unterst’tzt bereits einen deklarierten Cursor."
+
+
+18 = 24000,	"Ein Cursor muž deklariert werden, bevor dieser Befehlstyp initialisiert werden kann."
+
+
+19 = ZZZZZ,	"Diese Routine kann nur nach der Initialisierung eines CS_SEND_DATA_CMD-Befehls aufgerufen werden."
+
+
+20 = ZZZZZ,	"Ein Befehl muž initialisiert werden, bevor diese Routine aufgerufen werden kann."
+
+
+21 = ZZZZZ,	"Diese Routine kann nicht verwendet werden, w„hrend ein Cursor f’r die Befehlsstruktur deklariert wird."
+
+
+22 = 24000,	"Ein Cursor wurde bereits f’r diese Befehlsstruktur deklariert."
+
+
+23 = 24000,	"Der Befehl kann nicht initialisiert werden, nachdem der Cursor ge÷ffnet wurde."
+
+
+24 = 24000,	"Der Cursor f’r diese Befehlsstruktur wurde bereits ge÷ffnet."
+
+
+25 = 24000,	"Cursor-Aktualisierungen und Cursor-L÷schungen sind nicht erlaubt, nachdem ct_fetch() CS_END_DATA zur’ckgeliefert hat."
+
+
+26 = ZZZZZ,	"F’r diese Befehlsstruktur wurde bereits ein Befehl initialisiert."
+
+
+27 = ZZZZZ,	"Der initialisierte Befehl darf keine Parameter haben."
+
+
+28 = ZZZZZ,	"Ein Befehl wurde bereits initialisiert."
+
+
+29 = ZZZZZ,	"Dieser Befehlstyp kann nicht mit dem in der Befehlsstruktur initialisierten Befehl gestapelt werden."
+
+
+30 = ZZZZZ, "Vor Verwendung dieser Routine muž eine Zeile eingelesen werden."
+
+
+31 = 36001,	"Ein cursor rows-Befehl kann nicht nach Initialisierung eines cursor open-Befehls initialisiert werden."
+
+
+32 = 08000,	 "Diese Verbindung unterst’tzt diesen Anforderungstyp nicht."
+
+
+33 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() Ergebnis vom Typ CS_CURSOR_RESULT zur’ckgeliefert hat."
+
+
+34 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_CMD_DONE zur’ckgeliefert hat."
+
+
+35 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_COMPUTE_RESULT zur’ckgeliefert hat."
+
+
+36 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_COMPFMT_RESULT zur’ckgeliefert hat."
+
+
+37 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_MSG_RESULT zur’ckgeliefert hat."
+
+
+38 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_PARAM_RESULT zur’ckgeliefert hat."
+
+
+39 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_ROWFMT_RESULT zur’ckgeliefert hat."
+
+
+40 = ZZZZZ, "Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_CMD_FAIL zur’ckgeliefert hat."
+
+
+41 = ZZZZZ, "Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_CMD_SUCCEED zur’ckgeliefert hat."
+
+
+42 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_ROW_RESULT zur’ckgeliefert hat."
+
+
+43 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, nachdem ct_results() ein Ergebnis vom Typ CS_STATUS_RESULT zur’ckgeliefert hat."
+
+
+44 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, da noch eine asynchrone Operation aussteht."
+
+
+45 = ZZZZZ,	"Interner Fehler in Benutzer-API-Schicht des Benutzers."
+
+
+46 = 22023,	"Ung’ltiger Wert %1! in Feld %2! der CS_DATAFMT-Struktur eingesetzt."
+
+
+47 = ZZZZZ,	"Bei der Parameterdefinition muž entweder f’r alle oder f’r keinen Parameter ein Name bereitgestellt werden."
+
+
+48 = ZZZZZ,	"Der Server unterst’tzt Parameter des Typs %1! nicht."
+
+
+49 = ZZZZZ,	"Aufruf der Routine nicht m÷glich, da die Ergebnisse einer anderen Befehlsstruktur noch ausstehen."
+
+
+50 = ZZZZZ,	"Die Verbindung wurde als tot gekennzeichnet."
+
+
+51 = 22023,	"Entweder %1! oder %2! muž Nicht-NULL sein."
+
+
+52 = ZZZZZ,	"In-line-Fehlerbehandlung muž mit CS_INIT initialisiert werden, bevor eine ct_diag()-Aktion stattfinden kann."
+
+
+53 = ZZZZZ,	"Nicht gen’gend Speicher vorhanden, um Meldungen zu speichern. Alle gespeicherten Meldungen wurden gel÷scht."
+
+
+54 = ZZZZZ,	"In-line-Fehlerbehandlung wurde f’r diese Verbindungsstruktur bereits initialisiert."
+
+
+55 = ZZZZZ,	"ACHTUNG: Bestehende Fehler- und Meldungssteuerprogramme wurden entfernt."
+
+
+56 = ZZZZZ,	"Die Meldungsgrenze kann nicht kleiner als die Anzahl der momentan gespeicherten Client-Library- oder Server-Meldungen sein."
+
+
+57 = ZZZZZ,	"Ein Ergebnis vom Typ %1! kann nicht mit einer Programmvariable vom Typ %2! verkn’pft werden."
+
+
+58 = 22023,	"Das Formatfeld der CS_DATAFMT-Struktur muž CS_FMT_UNUSED sein, wenn das Datentypfeld %1! ist."
+
+
+59 = 22023,	"Wenn der Puffer-Parameter NULL ist, muž der Parameter %1! ebenfalls NULL sein."
+
+
+60 = ZZZZZ,	"Anwendungsfehler. Die Routine wurde zu einem unerlaubten Zeitpunkt aufgerufen."
+
+
+61 = ZZZZZ,	"Element von %1! ist nicht gr÷žer als das gr÷žte verkn’pfte Element."
+
+
+62 = ZZZZZ,	"Element %1! wurde bereits gelesen."
+
+
+63 = ZZZZZ,	"Zeit’berschreitung beim Lesen vom Server."
+
+
+64 = ZZZZZ,	"Option zur Angabe von Fehlersuch-Dateien wird noch nicht unterst’tzt. Informationen an stdout gesendet."
+
+
+65 = ZZZZZ,	"Der angeforderte Typ von Trace-Informationen wird noch nicht unterst’tzt."
+
+
+66 = ZZZZZ,	"Kontextstruktur n÷tig, um diese Fehlersuch-Informationen einzustellen oder zu l÷schen."
+
+
+67 = ZZZZZ,	"Eine Verbindungsstruktur muž bereitgestellt werden, wenn dieser Typ von Fehlersuch-Informationen gesetzt/gel÷scht wird."
+
+68 = ZZZZZ,	"Deskriptor nicht gefunden."
+
+69 = ZZZZZ,	"Ein Deskriptor mit dem Namen %1! ist bereits in der Verbindung vorhanden."
+
+70 = 07008,	"Der Deskriptor-Z„hler von %1! nicht m÷glich, da er den maximalen Z„hler von %2! ’berschreitet."
+
+72 = ZZZZZ,	"Der Deskriptor %1! wurde bereits mit einer Befehlsstruktur verbunden."
+
+73 = 22023,	"Das Feld %1! der Struktur CS_DATAFMT muž auf CS_UNUSED gesetzt werden."
+
+74 = 22023,	"Wenn %1! NULL ist, muž das Feld %2! der Struktur CS_DATAFMT auf 0 gesetzt werden."
+
+75 = 07001, "Inkonsistente Parametereinstellung f’r als Eingabeparameter verwendeten dynamischen Deskriptor. Alle Deskriptor-Werte m’ssen gesetzt werden."
+
+76 = 07001,	"Inkonsistente Parameternamen f’r als Eingabeparameter verwendeten dynamischen Deskriptor. Parametername f’r alle oder f’r keine Elemente ben÷tigt."
+
+77 = ZZZZZ,	"Ein dynamischer Deskriptor wird f’r Eingabe-Parameter verwendet. ct_param() kann deshalb nicht aufgerufen werden."
+
+78 = 02000,	"Keine Zeilen betroffen."
+
+79 = 22003, "Die Verkn’pfung von Element %1! der Ergebnismenge f’hrte zu einem ›berlauf."
+
+80 = ZZZZZ, "Die Verkn’pfung von Element %1! der Ergebnismenge f’hrte zu einem Unterlauf."
+
+81 = ZZZZZ, "Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Ung’ltiger Wert f’r Gesamtstellenzahl."
+
+82 = ZZZZZ,	"Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Ung’ltiger Wert f’r Nachkommastellen."
+
+83 = ZZZZZ, "Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Syntax-Fehler in Quelldatei."
+
+84 = ZZZZZ, "Element %1! der Ergebnismenge konnte verkn’pft werden. Ung’ltiger Wert im Formatfeld einer CS_DATAFMT-Struktur."
+
+85 = ZZZZZ, "Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Wert des Quellfelds nicht im Bereich g’ltiger Werte."
+
+86 = 22012, "Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Versuch, durch 0 zu teilen."
+
+87 = ZZZZZ, "Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Client-Library konnte keine Ressourcen erhalten."
+
+88 = ZZZZZ, "Element %1! der Ergebnismenge konnte nicht verkn’pft werden. Fehlerursache unbekannt."
+
+89 = 22002, "Die Daten f’r Spalte %1! sind NULL. Es war aber kein Indikator verf’gbar."
+
+90 = 01004, "Die Daten f’r Spalte %1! wurden abgeschnitten. Es war aber kein Indikator verf’gbar."
+
+91 = ZZZZZ, "F’r Spalte %1! fehlte die Verkn’pfung."
+
+92 = ZZZZZ,	"Vor dem Aufruf von ct_send_data() muž eine CS_IODESC-Struktur mit ct_data_info() eingerichtet werden."
+
+93 = ZZZZZ, "Max. Byte-Anzahl f’r diese Datentransfer-Operation um %1! ’berschritten. Nur %2! weitere Byte k÷nnen ’bertragen werden."
+
+94 = ZZZZZ, "Max. Byte-Anzahl f’r diese Datentransfer-Operation nicht ’bertragen. %1! Byte m’ssen noch ’bertragen werden."
+
+95 = 22001, "Der Wert %1! wurde abgeschnitten."
+
+96 = ZZZZZ, "Keine Suchlauf-Informationen vorhanden."
+
+97 = ZZZZZ,	"CS_IODESC kann nur f’r Text- oder Bildspalten abgefragt werden. Spalte %1! ist keine Text- oder Bildspalte."
+
+98 = ZZZZZ,	"CS_IODESC kann nicht f’r eine Spalte abgefragt werden, die noch nicht gelesen wurde. Spalte %1! wurde noch nicht gelesen."
+
+99 = 0A000,	"Eigenschaften k÷nnen nicht eingerichtet werden, nachdem eine Verbindung hergestellt wurde."
+
+100 = ZZZZZ, "Anforderungs-Eigenschaften k÷nnen nicht eingerichtet werden."
+
+101 = ZZZZZ, "Fehler beim Initialisieren des Fehler-Cache der Client-Library aufgetreten."
+
+102 = 0A000, "Diese Option wird vom Server nicht unterst’tzt."
+
+103 = ZZZZZ, "Diese Routine kann nur aufgerufen werden, wenn CS_HIDDEN_KEYS auf CS_TRUE gesetzt wurde."
+
+104 = ZZZZZ, "Diese Meldung sollte nicht erscheinen."
+
+105 = ZZZZZ, "Beim Einlesen von Schl’sseldaten ist ein unerwarteter Fehler aufgetreten."
+
+106 = ZZZZZ, "Spalte %1! ist keine Schl’sselspalte."
+
+107 = ZZZZZ, "Spalte %1! kann keine NULL-Werte aufnehmen. Schl’sseldaten k÷nnen nur dann auf NULL gesetzt werden, wenn die Spalte NULL-Werte akzeptiert."
+
+108 = ZZZZZ, "Die bereitgestellten Schl’sseldaten f’r Spalte %1! ’berschreiten die maximale L„nge, die f’r diese Spalte definiert wurde."
+
+109 = ZZZZZ, "Unerwarteter Fehler beim Setzen von Schl’sseldaten aufgetreten."
+
+110 = 07008, "F’r den Deskriptor ist kein g’ltiger Z„hler vorhanden." 
+
+111 = ZZZZZ, "Diese Meldung sollte nicht erscheinen."
+
+112 = 00000, "%1! Zeilen betroffen."
+
+113 = ZZZZZ, "Die Befehlsstruktur dieser Routine enth„lt Benachrichtigungs- oder erweiterte Fehlermeldungsdaten. Diese Routine akzeptiert diese Befehlsstruktur nicht."
+
+114 = ZZZZZ, "Erweiterte Fehlermeldungsdaten f’r Meldung %1! nicht vorhanden."
+
+115 = ZZZZZ, "Ein entferntes Pažwort kann nicht eingerichtet werden, wenn eine Verbindung zu einem Server besteht."
+
+116 = ZZZZZ, "Die bereitgestellte Kombination von Servername und Pažwort ’berschreitet die von der Client-Library erzwungene Grenze von 255 Byte."
+
+117 = ZZZZZ, "Die Eigenschaft CS_DISABLE_POLL muž beim Aufruf dieser Routine auf CS_FALSE gesetzt werden."
+
+118 = ZZZZZ, "Kann Datei %1! nicht ÷ffnen."
+
+119 = 22023, "Die Daten m’ssen NULL sein, wenn CS_INPUTVALUE-Parameter f’r einen ct_cursor(CS_CURSOR_DECLARE)-Befehl definiert werden."
+
+120 = 22023, "Der Puffer muž NULL sein, wenn die aktuelle Ergebnismenge nur aus Formatinformationen besteht."
+
+121 = ZZZZZ, "Keine Daten mit Deskriptor-Element %1! verbunden."
+
+122 = ZZZZZ, "Ergebnissse werden jetzt in diesen Deskriptor eingelesen. Ein Deskriptor-Z„hler von %1! ist kleiner als die Gr÷že der Ergebnismenge von %2!."
+
+123 = ZZZZZ, "Ein Deskriptor f’r den aktuellen Befehl wurde bereits festgelegt."
+
+124 = ZZZZZ, "ct_param() wurde bereits f’r die Definition von Parametern f’r den Befehl verwendet."
+
+125 = ZZZZZ, "Ein Deskriptor der Gr÷že %1! ist f’r eine Ergebnismenge der Gr÷že %2! nicht grož genug."
+
+126 = ZZZZZ, "Eine andere Befehlsstruktur verwendet den Deskriptor."
+
+127 = ZZZZZ, "Aufruf der Routine nicht m÷glich, wenn ct_bind() bereits f’r die Ergebnismenge aufgerufen wurde."
+
+128 = 22023, "Das Datentypfeld von CS_IODESC muž entweder auf CS_TEXT_TYPE oder auf CS_IMAGE_TYPE gesetzt sein."
+
+129 = 22023, "Eine ung’ltige lokale Variable wurde f’r die Struktur %1! bereitgestellt."
+
+130 = 22023, "Ung’ltige Gesamtstellenzahl oder Anzahl von Nachkommastellen wurde f’r CS_NUMERIC- oder CS_DECIMAL-Wert bereitgestellt."
+
+131 = ZZZZZ, "Speicher-Pool kann nicht eingerichtet oder gel÷scht werden, wenn offene Verbindungen in der Kontextstruktur vorhanden sind."
+
+132 = 22001, "Die Verkn’pfung des Elements %1! der Ergebnismenge f’hrte zum Abschneiden von Daten."
+
+133 = 02000, "Keine Zeilen betroffen. Weitere Ergebnismenge folgt."
+
+134 = ZZZZZ, "Die angegebene Kennung ist in dieser Verbindung bereits vorhanden."
+
+135 = ZZZZZ, "Die angegebene Kennung ist in dieser Verbindung nicht vorhanden."
+
+136 = 22023, "Zeichenkette mit L„nge 0 f’r Parameter %1! nicht gestattet."
+
+137 = ZZZZZ, "Ein Verkn’pfungsz„hler von %1! ist nicht konsistent mit dem f’r die bestehenden Verkn’pfungen bereitgestellten Z„hler. Der aktuelle Verkn’pfungsz„hler ist %2!."
+
+138 = ZZZZZ, "Datenl„nge von %1! ’berschreitet die maximale L„nge, die f’r %2!-Daten erlaubt ist."
+
+139 = ZZZZZ, "Das Einrichten der Gesamtstellenzahl oder von Nachkommastellen in CS_SRC_VALUE ist nur erlaubt, wenn die Ergebnismengenspalte numerisch oder dezimal ist."
+
+140 = ZZZZZ, "Gesamtsstellenzahl kann nicht gr÷žer als die Anzahl der Nachkommastellen sein."
+
+141 = 22023, "%1! muž 0 oder CS_UNUSED sein, wenn %2! NULL ist."
+
+142 = ZZZZZ, "Diese Eigenschaft kann nur im entsprechenden Client-Library-Callback, aber nicht im Korpus des Programms, verwendet werden."
+
+143 = ZZZZZ, "Die maximale Anzahl von Verbindungen kann nicht auf einen Wert gesetzt werden, der kleiner als die Anzahl der aktuell bestehenden Verbindungen ist."
+
+144 = ZZZZZ, "Diese Eigenschaft kann nur verwendet werden, wenn ein Cursor f’r die Befehlsstruktur existiert."
+
+145 = ZZZZZ, "Diese Eigenschaft kann nicht eingerichtet werden, wenn die Befehlsstruktur einen offenen Cursor oder noch ausstehende Ergebnisse hat."
+
+146 = ZZZZZ, "Die bereitgestellte CS_LOCALE-Struktur ist nicht g’ltig."
+
+147 = ZZZZZ, "Diese Routine kann nur mit der Fehlersuch-Version der Client-Library verwendet werden."
+
+148 = ZZZZZ, "Der Async-Manager der Client-Library konnte nicht fortfahren. Diese Verbindung wurde als tot gekennzeichnet."
+
+149 = ZZZZZ, "Der aktuelle Schl’ssel der Zeile wurde teilweise mit ct_keydata() eingerichtet. Jede Schl’sselspalte muž mit ct_keydata() eingerichtet werden, bevor diese Operation fortgef’hrt werden kann."
+
+150 = ZZZZZ, "Aufruf der Routine nicht m÷glich, da sich die Kontextstruktur in einem undefinierten Zustand befindet. Wahrscheinliche Ursache ist ein ct_exit()-Fehler." 
+
+151 = ZZZZZ, "Eine Verbindung zum Server muž f’r die Verbindungsstruktur bestehen, bevor diese Routine aufgerufen werden kann." 
+
+152 = ZZZZZ, "F’r CS_CANCEL_CURRENT-Operation muž eine Befehlsstruktur bereitgestellt werden."
+
+153 = ZZZZZ, "Aufruf der Routine nicht m÷glich, wenn eine Verbindung zu einem Server f’r die CS_CONNECTION-Struktur vorhanden ist."
+
+154 = ZZZZZ, "Aufruf der Routine nicht m÷glich, da sich die Verbindungsstruktur in einem undefinierten Zustand befindet." 
+
+155 = ZZZZZ, "Aufruf der Routine nicht m÷glich, wenn die Befehlsstruktur nicht aktiv ist."
+
+156 = ZZZZZ, "Aufruf der Routine nicht m÷glich, wenn ein Befehl initialisiert, aber nicht gesendet wurde."
+
+157 = ZZZZZ, "Diese Routine kann so lange nicht aufgerufen werden, bis ct_results() f’r den Befehl, der zum Server gesendet wurde, aufgerufen wurde."
+
+158 = ZZZZZ, "Diese Routine kann nur aufgerufen werden, wenn abrufbare Ergebnisse zum Lesen vorhanden sind."
+
+159 = ZZZZZ, "Diese Routine kann nur aufgerufen werden, wenn die Befehlsstruktur nicht aktiv ist."
+
+160 = ZZZZZ, "Diese Routine kann nur aufgerufen werden, wenn die Cursor-Zeilen zum Lesen verf’gbar sind."
+
+161 = ZZZZZ, "Diese Routine kann nur aufgerufen werden, wenn regul„re Zeilenergebnisse verf’gbar sind."
+
+162 = ZZZZZ, "Eine empfangende Durchreicheoperation ist nicht erlaubt, w„hrend die Verbindung Ergebnisse standardm„žig verarbeitet."
+
+163 = 21000, "Diese Routine kann so lange nicht aufgerufen werden, bis alle abrufbaren Ergebnisse vollst„ndig verarbeitet wurden."
+
+164 = ZZZZZ, "Diese Routine kann nur aufgerufen werden, wenn berechnete Ergebnisse verf’gbar sind."
+
+165 = ZZZZZ, "Aufruf der Routine nicht m÷glich, wenn ein verschachtelter Cursor-Befehl initialisiert wird."
+
+166 = ZZZZZ, "Diese Routine kann so lange nicht aufgerufen werden, bis die Ergebnisse eines verschachtelten Cursor-Befehls vollst„ndig verarbeitet sind."
+
+167 = ZZZZZ, "Aufruf der Routine nicht m÷glich, da sich die Befehlsstruktur in einem undefinierten Zustand befindet." 
+
+168 = ZZZZZ, "Aufruf der Routine nicht m÷glich, da eine empfangende Durchreicheoperation f’r diese Befehlsstruktur im Gange ist."
+
+169 = ZZZZZ, "Aufruf der Routine nicht m÷glich, da eine sendende Durchreicheoperation f’r diese Befehlsstruktur im Gange ist."
+
+170 = ZZZZZ, "Aufruf der Routine nicht m÷glich, nachdem ct_results() einen Ergebnistyp von CS_DESCRIBE_RESULT zur’ckgeliefert hat."
+
+171 = 24000, "Ein Cursor muž ge÷ffnet werden, bevor dieser Befehlstyp initialisiert werden kann."
+
+172 = ZZZZZ, "Aufruf der Routine nicht m÷glich, da die CS_COMMAND-Struktur gerade eine Daten-Operation durchf’hrt."
+
+173 = ZZZZZ, "Ein R’ckgabestatus von CS_PENDING muž von einem vollst„ndigen Callback zur’ckgeliefert werden, wenn zus„tzliche Async-Operationen initialisiert wurden."
+
+174 = ZZZZZ, "Eine Kontextstruktur muž beim Einrichten/L÷schen dieses Callback-Typs bereitgestellt werden."
+
+175 = ZZZZZ, "F’r Signal %1! ist kein Callback-Steuerprogramm installiert."
+
+176 = ZZZZZ, "Der Server unterst’tzt Null-Parameter des Typs %1! nicht."
+
+177 = 22023, "Die L„nge des nullbegrenzten Zeichenketten-Parameters %1! ’berschreitet die maximal erlaubte L„nge."
+
+178 = ZZZZZ, "Aufruf der Routine nicht m÷glich, bevor kein Aufruf an ct_send_data() abgesetzt wurde."
+
+179 = 24000, "Eine Cursor-Zeile muž eingelesen werden, bevor dieser Befehl initialisiert werden kann."
+
+180 = ZZZZZ, "Dieser Befehl muž unmittelbar auf die Initialisierung eines CS_CURSOR_DECLARE-Befehls folgen."
+
+181 = 24000, "Dieser Befehl ist nicht gestattet, wenn der Cursor geschlossen ist."
+
+182 = 24000, "Dieser Befehl ist nach dem Abrufen aller Cursor-Zeilen nicht gestattet."
+
+183 = ZZZZZ, "Der Server meldete einen Fehler, w„hrend die Optionen eingestellt wurden. Details sind in der Servermeldung zu finden."
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Generic Protocol Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctgperror]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The TDS Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cttdserror]
+
+1 = ZZZZZ, "TDS-Protokollfehler. Vorzeitiges Ende des Datenstroms." 
+
+2 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige TDS-Version wurde empfangen." 
+
+3 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Login-Status wurde empfangen." 
+
+4 = ZZZZZ, "TDS-Protokollfehler. Zu viele Byte im Datenstrom." 
+
+5 = ZZZZZ, "Fehler bei der Speicherzuweisung."
+
+6 = ZZZZZ, "TDS-Protokollfehler. Doppelte ALT-Kennung w„hrend der Verarbeitung der Ergebnisse gefunden." 
+
+7 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger ALT-Operator w„hrend der Verarbeitung der Ergebnisse gefunden."
+
+8 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige ALT-Kennung w„hrend der Verarbeitung der Ergebnisse gefunden."
+
+9 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger ALT-Spaltenz„hler w„hrend der Verarbeitung der Ergebnisse gefunden." 
+
+10 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige Spaltennummer bei Verarbeitung der Ergebnisse gefunden." 
+
+11 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Tabellenindex bei Verarbeitung der Ergebnisse gefunden." 
+
+12 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Suchlauf-Status wurde empfangen." 
+
+13 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Eigenschaftstyp wurde empfangen." 
+
+14 = 34000, "TDS-Protokollfehler. Ung’ltiger Cursorname wurde empfangen." 
+
+15 = ZZZZZ, "TDS-Protokollfehler. Doppelte Cursor-Kennung wurde empfangen." 
+
+16 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige Cursor-Kennung wurde empfangen." 
+
+17 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Cursor-Zeilenz„hler wurde empfangen." 
+
+18 = 24000, "TDS-Protokollfehler. Ung’ltiger Cursor-Status wurde empfangen." 
+
+19 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Erledigt-Status wurde empfangen." 
+
+20 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger DONEINPROC-Token-Strom wurde empfangen." 
+
+21 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger dynamischer Status wurde empfangen." 
+
+22 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige dynamische Anweisungsl„nge wurde empfangen." 
+
+23 = 07000, "TDS-Protokollfehler. Ung’ltiger dynamischer Typ wurde empfangen." 
+
+24 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige dynamische Kennung wurde empfangen." 
+
+25 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige Paket-Gr÷že wurde empfangen." 
+
+26 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger ENVCHANGE-Typ wurde empfangen." 
+
+27 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Meldungs-Status wurde empfangen." 
+
+28 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiges Token wurde empfangen." 
+
+29 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Optionsbefehl wurde empfangen." 
+
+30 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Optionstyp wurde empfangen." 
+
+31 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Orderby-Strom wurde empfangen." 
+
+32 = ZZZZZ, "TDS-Protokollfehler. PARAMFMT wurde ohne Angabe von Parametern empfangen." 
+
+33 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger PARAMFMT-Strom wurde empfangen." 
+
+34 = ZZZZZ, "TDS-Protokollfehler. ROWFMT wurde ohne Angabe von Spalten empfangen." 
+
+35 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger ROWFMT-Strom wurde empfangen." 
+
+36 = ZZZZZ, "TDS-Zustands-Systemfehler. Eine ung’ltige TDS-Token-Folge wurde empfangen." 
+
+37 = ZZZZZ, "TDS-Zustands-Systemfehler. Ergebnisse der Operation stehen noch aus: Interner Fehler." 
+
+38 = ZZZZZ, "TDS-Login-Fehler. Ung’ltige Anzahl von Parametern w„hrend der Anmeldeprozedur" 
+
+39 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige Meldungskennung wurde w„hrend der Anmeldeprozedur empfangen." 
+
+40 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Spalten-Status wurde empfangen." 
+
+41 = ZZZZZ, "TDS-Protokollfehler. Ung’ltiger Datentyp wurde empfangen." 
+
+42 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige numerische Gesamtstellenzahl wurde empfangen." 
+
+43 = ZZZZZ, "TDS-Protokollfehler. Ung’ltige numerische Nachkommastellen wurden empfangen." 
+
+44 = 08001,	"Versuch, Verbindung zum Server herzustellen, ist fehlgeschlagen."
+
+45 = ZZZZZ, "Interner TDS-Schichtenfehler. Zugriff auf Verwaltungsprogramm des Zeilenpuffers fehlgeschlagen."
+
+46 = ZZZZZ, "TDS-Login-Fehler. Server versuchte, Pažwort zu verschl’sseln. Kein Verschl’sselungsprogramm vorhanden."
+
+47 = ZZZZZ, "TDS-Login-Fehler. Das installierte Verschl’sselungs-Steuerprogramm hat einen anderen Status als CS_SUCCEED zur’ckgeliefert."
+
+48 = ZZZZZ, "TDS-Login-Fehler. Server versuchte, Sicherheitsprozedur zu starten. Keine Sicherheitsprozedur vorhanden."
+
+49 = ZZZZZ, "TDS-Login-Fehler. Die installierte Sicherheitsprozedur hat einen anderen Status als CS_SUCCEED zur’ckgeliefert."
+
+50 = ZZZZZ, "Interner TDS-Schichtenfehler. Fehler wurde w„hrend der Verarbeitung eines internen TDS-Stroms vom Server zur’ckgeliefert."
+
+51 = ZZZZZ, "Interner TDS-Schichtenfehler. Unerwarteter Fehler wurde von der allgemeinen Library zur’ckgeliefert."
+
+52 = ZZZZZ, "Interner TDS-Schichtenfehler. Unerwarteter Fehler wurde vom Async-Manager zur’ckgeliefert."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Network Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctnperror]
+
+1 = 01002, "Fehler beim Schliežen der Verbindung."
+
+2 = ZZZZZ, "Fehler beim Freigeben der Adresse."
+
+3 = ZZZZZ, "Fehler beim Aufl÷sen der Adresse."
+
+4 = 08001, "Fehler beim Aufbauen der Verbindung."
+
+5 = ZZZZZ, "Fehler beim Ausf’hren des abgeschickten Schreibvorgangs."
+
+6 = ZZZZZ, "Fehler bei Lesezugriff auf Netzwerk aufgetreten."
+
+7 = ZZZZZ, "Fehler bei Schreibzugriff auf Netzwerk aufgetreten."
+
+8 = ZZZZZ, "Fehler beim Ùffnen des Adrežw÷rterbuchs."
+
+9 = ZZZZZ, "Fehler beim Schliežen des Adrežw÷rterbuchs."
+
+10 = ZZZZZ, "Es wurde versucht, in einer Verbindung zu lesen, die bereits einen Lesevorgang ausf’hrt."
+
+11 = ZZZZZ, "Es wurde versucht, in einer Verbindung zu schreiben, die bereits einen Schreibvorgang ausf’hrt."
+
+12 = ZZZZZ, "Zustandsfehler: Es wurde versucht zu schreiben. Die Verbindung erwartet einen Lesevorgang."
+
+13 = ZZZZZ, "Zustandsfehler: Es wurde versucht zu lesen. Die Verbindung erwartet einen Schreibvorgang."
+
+14 = ZZZZZ, "Puffer ist zu klein f’r ein ganzes Paket."
+
+15 = ZZZZZ, "Lesen vom Netzwerk, w„hrend nicht verarbeitete Daten vom letzten Lesevorgang vorhanden sind."
+
+16 = ZZZZZ, "Fehler beim Einlesen von Adrežinformationen aufgetreten."
+
+17 = ZZZZZ, "Fehler beim Einlesen von Adrežeigenschaften aufgetreten."
+
+18 = ZZZZZ, "Protokoll-Paketfehler. Ung’ltige L„nge wurde empfangen."
+
+128 = ZZZZZ, "Fehler beim Initialisieren der Netzwerk-Optionen zur Protokollierung."
+
+129 = ZZZZZ, "Fehler beim Einstellen einer Netzwerk-Option aufgetreten."
+
+130 = ZZZZZ, "Nicht verwendet."
+
+131 = ZZZZZ, "Fehler beim Initialisieren der Net-Library."
+
+132 = ZZZZZ, "Fehler beim Initialisieren des Net-Library-Rechners."
+
+133 = ZZZZZ, "Fehler beim Einrichten des Net-Library-Callbacks."
+
+134 = ZZZZZ, "Fehler beim Verlassen des Net-Library-Rechners."
+
+135 = ZZZZZ, "Fehler beim Verlassen der Net-Library."
+
+136 = ZZZZZ, "Fehler beim Einrichten des Callback-Modus der Net-Library."
+
+137 = ZZZZZ, "Fehler beim Verketten von Signalen in der Net-Library."
+
+
+

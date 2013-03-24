@@ -1,0 +1,45 @@
+; comment character is semicolon.
+; "defncopy.loc" - Localization file for defncopy.
+;
+; Sccsid @(#) defncopy.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+; 
+; The strings defncopy uses to prompt users for information.
+;
+[prompts]
+; 
+1 = "Password: "
+; End of prompts section.
+; Now we list the localized error message strings.
+[dcerrors]
+; ERRNOMEM
+
+1 = "Fatal error: memory allocation failed."
+; ERRNOREADSPACE
+2 = "I/O Error: Insufficient space for input data."
+; ERRNOINFILE
+3 = "Unable to open input file '%1!'."
+; ERRNOOUTFILE
+4 = "Unable to open output file '%1!'."
+; ERRBADARG
+5 = "defncopy: Unknown parameter '%1!'."
+; ERRNOFLUSH
+6 = "Failed to flush file '%1!': '%2!'."
+; ERRNOOBJDEF
+7 = "Definition of object '%1!' not found."
+; ERRABORT
+8 = "defncopy aborted."
+; ERRBADDIRECTION
+9 = "(direction must be either 'in' or 'out'.)"
+; ERRNOOBJNAME
+10 = "(at least one object name needed.)"
+; End of error strings section.

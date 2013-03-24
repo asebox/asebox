@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Macintosh, Eastern European character set, this is a binary sort order.
+;
+; SCCS information:	%Z% generic/localization/charsets/mac_ee/%M% %I% %G%
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Jan 18 1995  7:58AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_mac_ee
+menuname = "Binary ordering, for the Macintosh, Eastern European character set (mac_ee)."
+charset = mac_ee
+ 
+description = "Binary sort order for the Macintosh, Eastern European character set (mac_ee)."
+ 
+binary = "true"

@@ -1,0 +1,66 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=french
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "Impossible de déconnecter l'endpoint. Erreur : %1!"
+
+2 = IPDE_ACCEPT, "Erreur lors de l'acceptation de la nouvelle connexion. Erreur : %1!"
+
+3 = IPDE_EPCLOSE, "Impossible de fermer l'endpoint. Erreur : %1!"
+
+4 = IPDE_PARSE, "Syntaxe incorrecte des informations de connexion."
+
+5 = IPDE_EPCONNECT, "Echec de la connection au serveur. Erreur : %1!"
+
+6 = IPDE_EPMODE, "Echec du changement de mode du pipe. Erreur : %1!"
+
+7 = IPDE_EVENTOBJ, "Echec de la création d'un objet événement. Erreur : %1!"
+
+8 = IPDE_NPCREATE, "Echec de la création d'un named pipe. Erreur : %1!"
+
+9 = IPDE_READ, "Echec de la lecture depuis le named pipe. Erreur : %1!"
+
+10 = IPDE_WRITE, "Echec de l'écriture sur le named pipe. Erreur : %1!"
+
+11 = IPDE_READOOB, "Erreur lors de la lecture des données OOB. Erreur : %1!"
+
+12 = IPDE_SOCKET, "Erreur de création d'un socket. Erreur : %1!"
+
+13 = IPDE_HOSTNAME, "Erreur de résolution du nom d'hôte. Erreur : %1!"
+
+14 = IPDE_EPBIND, "Erreur de liaison à l'adresse locale. Erreur : %1!"
+
+15 = IPDE_EPLISTEN, "Erreur de création d'un point d'écoute. Erreur : %1!"
+
+16 = IPDE_DRVINIT, "Erreur d'initialisation du gestionnaire. Erreur : %1!"
+
+17 = IPDE_DRVINIT, "Erreur lors de l'obtention d'une option de socket. Erreur : %1!"
+
+18 = IPDE_DRVINIT, "Erreur lors de la définition d'une option de socket. Erreur : %1!"
+; end of insock error strings
+;
+

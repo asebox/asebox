@@ -1,0 +1,282 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "The Adaptive Server Enterprise server name in the Optdiag output file\\ndoes not match the server name of the current Adaptive Server Enterprise."
+3 = ZZZZZ, "The Optdiag version does not match the Adaptive Server Enterprise\\nversion. Use the same version of these two programs."
+10 = ZZZZZ, "The Adaptive Server Enterprise version in the Optdiag output file\\ndoes not match the version of the current Adaptive Server Enterprise."
+11 = ZZZZZ, "Table name '%1!' does not match the specified table name '%2!'."
+12 = ZZZZZ, "Problem with double quote marks with the following string:"
+13 = ZZZZZ, "No value string found at the following line:"
+14 = ZZZZZ, "Column name '%1!' does not match the specified column name '%2!'."
+15 = ZZZZZ, "Updating column statistics failed."
+16 = ZZZZZ, "Histogram column name '%1!' does not match the previous column name\\n'%2!' for miscellaneous statistics."
+17 = ZZZZZ, "At step %1! of the histogram for '%2!.%3!.%4!', "
+18 = ZZZZZ, "there is a problem with the number of double quotes."
+19 = ZZZZZ, "could not read data.  "
+20 = ZZZZZ, "step number 1 was expected."
+21 = ZZZZZ, "the step number did not increase by 1."
+22 = ZZZZZ, "the cumulative histogram weight exceeded 1.0 plus a margin for error.  "
+23 = ZZZZZ, "two adjacent cells cannot both use the < operator."
+24 = ZZZZZ, "At the histogram for '%1!.%2!.%3!',"
+26 = ZZZZZ, "Begin transaction failed."
+27 = ZZZZZ, "Updating histogram statistics failed."
+28 = ZZZZZ, "Deleting histogram statistics failed."
+29 = ZZZZZ, "Inserting histogram weights failed."
+30 = ZZZZZ, "Commit transaction failed."
+31 = ZZZZZ, "Database '%1!' does not exist in this server."
+32 = ZZZZZ, "The specified table owner does not own a table in database '%1!'."
+33 = ZZZZZ, "User '%1!' does not exist in database '%2!'."
+34 = ZZZZZ, "Table '%1!' does not belong to user '%2!' in this database."
+35 = ZZZZZ, "Table '%1!' does not exist in database '%2!'."
+36 = ZZZZZ, "Table '%1!' does not contain column '%2!'."
+37 = ZZZZZ, "There are no statistics in systabstats for this index."
+38 = ZZZZZ, "Datatype '%1!' is not supported by Optdiag."
+39 = ZZZZZ, "Datatype '%1!' with length %2! is not supported by Optdiag."
+40 = ZZZZZ, "No statistics found in sysstatistics for this column or column group."
+41 = ZZZZZ, "No histogram data found in sysstatistics for this column or\\ncolumn group."
+42 = ZZZZZ, "Internal error with trace flag 3."
+43 = ZZZZZ, "Internal error: Table owner '%1!' and table '%2!' are repeating."
+44 = ZZZZZ, "Internal error: ct_results() returned unexpected result type %1!."
+45 = ZZZZZ, "Internal error: data length mismatch in ct_fetch()."
+48 = ZZZZZ, "unexpected value %1!"
+; Next is "returned", as in "a function returned a value".
+49 = ZZZZZ, "returned"
+50 = ZZZZZ, "Internal error: ct_results() returned result type CS_CMD_FAIL."
+51 = ZZZZZ, "Internal error: cs_convert() failed."
+52 = ZZZZZ, "Error reading row %1!."
+53 = ZZZZZ, "Internal error: actual number of columns (%1!) does not not equal expected number (%2!)."
+54 = ZZZZZ, "Internal error: actual maximum data length (%1!) exceeds expected (%2!)."
+55 = ZZZZZ, "Non-cache configuration parameters must be followed by '%1!'."
+56 = ZZZZZ, "Cache '%1!' not found."
+57 = ZZZZZ, "Index '%1!.%2!.%3!' not found."
+58 = ZZZZZ, "Invalid value ignored at the following line:"
+59 = ZZZZZ, "Simulated configuration values not updated."
+60 = ZZZZZ, "Simulated table statistics not updated for table '%1!.%2!'."
+61 = ZZZZZ, "Null values and a lower bound for non-null values may be missing."
+62 = ZZZZZ, "There may be missing steps."
+63 = ZZZZZ, "the weight is not between 0.0 and 1.0."
+64 = ZZZZZ, "A recently read weight may be the culprit."
+65 = ZZZZZ, "the step value is not increasing."
+66 = ZZZZZ, "the total weight differed from 1.0 by more than a margin for error."
+67 = ZZZZZ, "Inserting histogram step values failed."
+68 = ZZZZZ, "Searching for line label '%1!'.\\nEnd of input file reached unexpectedly.\\nPossibly due to an unmatched double quote mark."
+69 = ZZZZZ, "Internal error: Table '%1!' and column '%2!' are repeating."
+70 = ZZZZZ, "End of input file reached without reading the Optdiag succeeded message."
+71 = ZZZZZ, "The user's locale must be specified by the environment variable LANG\\nor the command line flag -z."
+72 = ZZZZZ, "the current and previous step values must not be identical\\nsince this step is not a frequency count."
+73 = ZZZZZ, "Different binary values in SYSSTATISTICS may have been rounded\\nto the same readable value."
+74 = ZZZZZ, "Updating SYSSTATISTICS with these step values would create an inconsistency."
+75 = ZZZZZ, "Skipping this histogram.  If you need to update this histogram,\\nplease run Optdiag in binary mode and edit the binary step values."
+76 = ZZZZZ, "You must have the following role(s) to execute this command: '%1!'.\\nPlease contact a user with the appropriate role for help."
+77 = ZZZZZ, "The Optdiag line label exceeds its maximum allowable length."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Syntax error with quotation mark."
+2 = ZZZZZ, "Column name was specified but table name was not."
+3 = ZZZZZ, "Trace flag number exceeds %1!, the maximum allowable value."
+5 = ZZZZZ, "Both input and output file names were specified."
+6 = ZZZZZ, "The arguments for database and input file were not read, so the target\\ndatabase is unknown."
+7 = ZZZZZ, "Failed to open the input file."
+8 = ZZZZZ, "Failed to open the output file."
+9 = ZZZZZ, "  Probably the file does not exist or Optdiag does not have\\nthe necessary permission."
+10 = ZZZZZ, "Command line syntax error before the 'statistics' keyword was found."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Optdiag failed.  Check for error messages above."
+2 = ZZZZZ, "Optdiag succeeded."
+3 = ZZZZZ, "Set trace flag 1 on the command line (-T1) to ignore a difference\\nin Adaptive Server Enterprise versions."
+5 = ZZZZZ, "Set trace flag 4 on the command line (-T4) to skip this\\nconsistency check."
+7 = ZZZZZ, "not specified"
+8 = ZZZZZ, " (clustered)"
+9 = ZZZZZ, " (nonclustered)"
+10 = ZZZZZ, "default used"
+11 = ZZZZZ, "default"
+12 = ZZZZZ, "Next table is '%1!' and the owner is '%2!'."
+13 = ZZZZZ, "If the location of the problem is not clear, consider rerunning Optdiag\\nin input mode with trace flag 6 to help locate the problem."
+14 = ZZZZZ, "Optdiag is done, but statistics were skipped.\\nCheck for error messages above."
+15 = ZZZZZ, " (actual)"
+16 = ZZZZZ, " (simulated)"
+17 = ZZZZZ, "Statistics originated from upgrade of distribution page."
+18 = ZZZZZ, "Statistics loaded from Optdiag."
+19 = ZZZZZ, " (only 255 bytes used)"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Password: "
+
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+;
+[format]
+
+1 = ZZZZZ, "Server name:"
+2 = ZZZZZ, "Specified database:"
+3 = ZZZZZ, "Specified table owner:"
+4 = ZZZZZ, "Table owner:"
+5 = ZZZZZ, "Specified table:"
+6 = ZZZZZ, "Specified column:"
+7 = ZZZZZ, "Statistics for index:"
+8 = ZZZZZ, "Index column list:"
+9 = ZZZZZ, "Statistics for table:"
+10 = ZZZZZ, "Statistics for column:"
+11 = ZZZZZ, "No statistics for remaining columns:"
+12 = ZZZZZ, "(default values used)"
+13 = ZZZZZ, "Statistics for column group:"
+14 = ZZZZZ, "Last update of column statistics:"
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "Statistics originated from upgrade of distribution page."
+16 = ZZZZZ, "Statistics loaded from Optdiag."
+17 = ZZZZZ, "Histogram for column:"
+18 = ZZZZZ, "Column datatype:"
+19 = ZZZZZ, "Requested step count:"
+20 = ZZZZZ, "Actual step count:"
+21 = ZZZZZ, "Last histogram update:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+22 = ZZZZZ, "Step     Weight                    Value"
+23 = ZZZZZ, "Range cell density:"
+24 = ZZZZZ, "Total density:"
+25 = ZZZZZ, "Data type:"
+26 = ZZZZZ, "Range selectivity:"
+27 = ZZZZZ, "In between selectivity:"
+28 = ZZZZZ, "Leaf count:"
+29 = ZZZZZ, "Data page count:"
+30 = ZZZZZ, "Empty data page count:"
+31 = ZZZZZ, "Empty leaf page count:"
+32 = ZZZZZ, "Data row count:"
+33 = ZZZZZ, "Forwarded row count:"
+34 = ZZZZZ, "Deleted row count:"
+35 = ZZZZZ, "Data page CR count:"
+36 = ZZZZZ, "Index page CR count:"
+37 = ZZZZZ, "Data row CR count:"
+38 = ZZZZZ, "OAM + allocation page count:"
+39 = ZZZZZ, "First extent data pages:"
+40 = ZZZZZ, "First extent leaf pages:"
+41 = ZZZZZ, "Data row size:"
+42 = ZZZZZ, "Leaf row size:"
+43 = ZZZZZ, "Index height:"
+44 = ZZZZZ, "Derived statistics:"
+45 = ZZZZZ, "Data page cluster ratio:"
+46 = ZZZZZ, "Index page cluster ratio:"
+47 = ZZZZZ, "Data row cluster ratio:"
+48 = ZZZZZ, "Table name:"
+49 = ZZZZZ, "Pages in largest partition:"
+50 = ZZZZZ, "Configuration Parameters:"
+51 = ZZZZZ, "Max parallel degree:"
+52 = ZZZZZ, "Max scan parallel degree:"
+53 = ZZZZZ, "Configuration for cache:"
+54 = ZZZZZ, "Size of 2K pool in Kb:"
+55 = ZZZZZ, "Size of 4K pool in Kb:"
+56 = ZZZZZ, "Size of 8K pool in Kb:"
+57 = ZZZZZ, "Size of 16K pool in Kb:"
+58 = ZZZZZ, "Last update of simulated:"
+59 = ZZZZZ, "Space utilization:"
+60 = ZZZZZ, "Large I/O efficiency:"
+61 = ZZZZZ, "Number of worker processes:"
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "Histogram for column:"
+66 = ZZZZZ, "Column datatype:"
+67 = ZZZZZ, "Requested step count:"
+68 = ZZZZZ, "Actual step count:"
+69 = ZZZZZ, "Last histogram update:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight and value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "Step     Weight                    Value"
+71 = ZZZZZ, "     Range cell density:"
+72 = ZZZZZ, "     Total density:"
+73 = ZZZZZ, "Data type:"
+74 = ZZZZZ, "     Range selectivity:"
+75 = ZZZZZ, "     In between selectivity:"
+76 = ZZZZZ, "     Leaf count:"
+77 = ZZZZZ, "     Data page count:"
+78 = ZZZZZ, "     Empty data page count:"
+79 = ZZZZZ, "     Empty leaf page count:"
+80 = ZZZZZ, "     Data row count:"
+81 = ZZZZZ, "     Forwarded row count:"
+82 = ZZZZZ, "     Deleted row count:"
+83 = ZZZZZ, "     Data page CR count:"
+84 = ZZZZZ, "     Index page CR count:"
+85 = ZZZZZ, "     Data row CR count:"
+86 = ZZZZZ, "     OAM + allocation page count:"
+87 = ZZZZZ, "     First extent data pages:"
+88 = ZZZZZ, "     First extent leaf pages:"
+89 = ZZZZZ, "     Data row size:"
+90 = ZZZZZ, "     Leaf row size:"
+91 = ZZZZZ, "     Index height:"
+92 = ZZZZZ, "     Data page cluster ratio:"
+93 = ZZZZZ, "     Index page cluster ratio:"
+94 = ZZZZZ, "     Data row cluster ratio:"
+95 = ZZZZZ, "Table name:"
+96 = ZZZZZ, "     Pages in largest partition:"
+97 = ZZZZZ, "     Max parallel degree:"
+98 = ZZZZZ, "     Max scan parallel degree:"
+99 = ZZZZZ, "Configuration for cache:"
+100 = ZZZZZ, "     Size of 2K pool in Kb:"
+101 = ZZZZZ, "     Size of 4K pool in Kb:"
+102 = ZZZZZ, "     Size of 8K pool in Kb:"
+103 = ZZZZZ, "     Size of 16K pool in Kb:"
+104 = ZZZZZ, "     Size of 32K pool in Kb:"
+105 = ZZZZZ, "     Size of 64K pool in Kb:"
+106 = ZZZZZ, "     Size of 128K pool in Kb:"
+107 = ZZZZZ, "Last update of simulated:"
+108 = ZZZZZ, "     Space utilization:"
+109 = ZZZZZ, "     Large I/O efficiency:"
+110 = ZZZZZ, "     Number of worker processes:"
+111 = ZZZZZ, "  Derived statistics:"
+112 = ZZZZZ, "Configuration Parameters:"
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Fatal error: memory allocation failed."
+2 = ZZZZZ, "Setting connection properties failed."
+3 = ZZZZZ, "Establishing connection failed."
+4 = ZZZZZ, "Unrecognized localization object.  Using default value '%1!'."
+5 = ZZZZZ, "Internal error: An invalid localization type was passed to cs_locale()."
+6 = ZZZZZ, "Syntax Error in '%1!'."
+7 = ZZZZZ, "Error in attempting to load a pair of translation tables."
+8 = ZZZZZ, "Interrupt - Optdiag aborted."

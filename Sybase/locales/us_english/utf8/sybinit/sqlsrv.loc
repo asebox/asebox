@@ -1,0 +1,1592 @@
+; comment character is semicolon.
+;
+; - Localization file for Auditinit and Syconfig.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1999 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+		
+1 = "Cannot reliably set attributes designated 'USE_DEFAULT' because attribute '%1!' is unset.",	"%s"
+ 
+100 	= "Language '%1!' has been successfully installed.",	"%s"
+101 	= "Error installing language '%1!'; not installed.",	"%s"
+102 	= "Language '%1!' has been successfully removed.",	"%s"
+103 	= "Error removing language %1!'; not removed.",		"%s"
+104 	= "Language '%1!' has already been installed.",		"%s"
+105 	= "Language '%1!' is not installed; not removing.",	"%s"
+106 	= "Language '%1!' is already the default.",		"%s"
+107	= "Cannot set the default language: cannot get language id for language '%1!'.", "%s"
+108	= "Cannot determine the Adaptive Server's default language.",		""
+109 = "Cannot determine which languages are currently installed in the Adaptive Server.",	""
+110	= "INTERNAL ERROR: Language '%1!' is not classified. Developer must add it to lang_table", "%s" 
+111 = "Cannot alter master database size on master device during language install.",	""
+200	= "Cannot determine the Adaptive Server's default character set.",	""
+202 = "Character set '%1!' has been successfully installed.", "%s"
+203 	= "Error installing character set '%1!'; not installed.", "%s"
+204 = "Character set '%1!' has already been installed.",	"%s"
+205 	= "Character set  '%1!' has been successfully removed.", "%s"
+206 	= "Error removing character set '%1!'; not removed.",	"%s"
+207 = "Character set '%1!' has already been removed.",	"%s"
+208 = "Character set '%1!' is already the default.",	"%s"
+209 = "Cannot set the default character set: cannot get character set id for character set '%1!'.", "%s"
+210 = "'%1!' is the default character set: it cannot be removed.", "%s"
+211 = "Cannot determine which character sets are currently installed in the Adaptive Server.", ""
+300	= "Cannot get the Adaptive Server's default sort order.",			""
+301 	= "Cannot get the sort order id for sort order '%1!'.", "%s"
+302 = "Sort order '%1!' has been successfully installed.", "%s"
+303 	  = "Error installing sort order '%1!'; not installed.", "%s"
+304 = "Sort order '%1!' has already been installed.",	"%s"
+305 = "Cannot determine which sort order is currently installed in the Adaptive Server.", ""
+306 = "Attempting to install sort order '%1!' anyway.",	"%s"
+307 = "Sort order '%1!' is already the default.",		"%s"
+308 = "Cannot determine which sort order is currently the default sort order for the Adaptive Server.", ""
+309 	  = "Error setting sort order '%1!' to the default.",	"%s"
+310 = "Sort order '%1!' has been successfully set to the default.", "%s"
+400 	= "Could not obtain permission to change system tables.",""
+401 	= "Could not reconfigure the Adaptive Server.",		  ""
+402	= "'sp_configure %1!' failed.",				"%s"
+500	= "Error locating runserver file '%1!'.",		"%s"
+501	= "Failed to boot server '%1!'.",			"%s"
+502	= "Failed to boot server '%1!':  process is running but server is unavailable.", "%s"
+503	= "Cannot determine the status of server '%1!':  process is running but unable to log in.", "%s"
+510		= "Couldn't boot server '%1!' after changing internal tables.", "%s"
+511		= "Couldn't reboot server '%1!' after changing internal tables.", "%s"
+512		= "waiting for server '%1!' to boot...",		"%s"
+513	= "Server '%1!' is not a Sybase Adaptive Server.", 		"%s"
+541	= "Failed to log in to server '%1!' to shut it down.",	"%s"
+542	= "Issued \"shutdown\" to server '%1!' but it is still up.", "%s"
+543		= "Failed to shutdown server '%1!'.",			"%s"
+544	= "Waiting %1! seconds for the operating system to reclaim resources before rebooting.",	"%d"
+545	= "waiting for database '%1!' to recover...",		"%s"
+546	= "Failed to recovery database '%1!' . boot not complete...",	"%s"
+547	= "Recovering all databases ...", ""
+548	= "..Done! All databases recovered.", ""
+560 = "Failed to set execute permissions on runserver file '%1!'; will not be able to boot this server.",  "%s"
+561	= "Cannot open runserver file '%1!' for writing.  Please check the permissions.", "%s"
+562 = "Unable to set Adaptive Server '%1!' as a secondary server; attempting to create it as a primary server instead.", "%s"
+563	= "Error formatting the text for the runserver file.", ""
+564 	= "Error generating runserver file '%1!'.", "%s"
+600	= "Failed to set the backup server to '%1!'.",		"%s"
+700	= "Cannot create device '%1!': no available virtual device numbers (vdevnos).",	"%s"
+701	= "Cannot create device '%1!': could not query server.", "%s"
+702 = "Cannot create device '%1!' using file '%2!' because the file already exists. If you want to create a device using '%3!' then you must delete it first.",	"%s %s %s"
+703	= "Create device '%1!' failed.",			"%s"
+704	= "Created device '%1!'.",				"%s"
+705		= "Drop device '%1!' failed.",				"%s"
+706	= "Dropped device '%1!'.",				"%s"
+750	= "Cannot create database '%1!': device '%2!' does not exist.", "%s %s"
+751	= "Create database '%1!' failed.",			"%s"
+752	= "Created database '%1!'.",				"%s"
+753	= "Database '%1!' created with a size of '%2!' instead of '%3!' due to space limitations.", "%s %.2f %.2f"
+760 = "Drop database '%1!' failed: could not use the master database.", "%s"
+761		= "Drop database '%1!' failed.",			"%s"
+762	= "Dropped database '%1!'.",				"%s"
+800 	= "Cannot locate script '%1!' to install auditing stored procedures.", "%s"
+801	= "Error executing script '%1!' to install auditing stored procedures.", "%s"
+802 	= "Failed to create auditing segment '%1!' on device '%2!'.", "%s %s"
+803 	= "Auditing segment '%1!' created on device '%2!'.",		"%s %s"
+804	= "'sp_auditinstall %1!, %2!' failed.",		"%s %s"
+805	= "'sp_auditinstall' succeeded.",			""
+806	= "'use %1!' failed.",					"%s"
+807		= "Rebooting Adaptive Server '%1!' to activate audit process.", "%s"
+808	= "Adaptive Server reboot failed.  To activate the audit process reboot '%1!' manually.", "%s"
+809	= "Failed to set '%1!' to truncate log on checkpoint.", "%s"
+810	= "The AUDIT PROCESS is not running.",			""
+820		= "Failed to install auditing capability.",			""
+821		= "Auditing capability installed.",				""
+822	= "You are required to specify the log device for the audit database", ""
+823		= "Since no separate devices are specified for the audit tables, the audit database will be created on master.", ""
+824	= "Specify the number of audit tables to be created in the audit database", ""
+825	= "You have reached the maximum number of devices allowed for auditing. You cannot add any more devices for auditing", ""
+826	= "Do you want to add a new device?", ""
+827		= "Error getting name of attribute for device number '%1!'", "%d"
+828		= "Error setting the value of the attribute '%1!' to '%2!'", "%s %s"
+829 = "You are allowed only one device for the audit database transaction log.", ""
+830		= "Give the entry number for the device", ""
+831		= "Invalid audit device entry selected", ""
+832	= "More than one device is being used for the current audit database. Auditinit will display only one of them as the device used for audit database transaction log", ""
+833	= "Cannot create device of name '%1!'. A device of this name already exists in the server", "%s"
+834	= "'use' command for sybsecurity database failed", ""
+835		= "Attempt to add device '%1!' in sybsecurity database failed", "%s"
+836	= "Attempt to create segment '%1!' on '%2!' device in sybsecurity database failed", "%s %s"
+837	= "Attempt to create table '%1!' on '%2!' segment in sybsecurity database failed", "%s %s"
+838	= "Invalid table count specified for auditing. The number should be between 1 and '%1!'", "%s"
+839	= "Invalid device count specified for auditing. The number should be between 0 and '%1!'", "%s"
+841	= "Auditing attributes did not pass the required checks.", ""
+842	= "It is not permitted to use resource file for configuring auditing for a server on which auditing is already installed. You should use auditinit in the interactive mode to do this", ""
+843 = "You must specify how much of the device size is to be allocated to the audit database", ""
+844	= "Logical name", ""
+845	= "Physical name", ""
+846	= "Segment name", ""
+847	= "Table name", ""
+848	= "Size", ""
+849 = "Device '%1!' is not specified as a new device. Only new devices are allowed in a new server configuration", "%s"
+850	= "Check for the attributes for device number '%1!' failed.", "%s"
+851	  = "Command to set the 'abort tran on log full' option to 'FALSE' for the '%1!' database failed", "%s"
+852  = "CHECKPOINT command in the '%1!' database failed", "%s"
+853		  = "Some auditing devices are configured, but 'configure auditing' is set to 'no'. Do you want to configure auditing?", ""
+854	  = "One or less device has been specified for the audit tables. You still have the option to create multiple audit tables by having all the audit tables on the same device", ""
+855	  = "Command to grant select permission on '%1!' to '%2!' failed", "%s %s"
+856	= "You are not allowed to add any more audit tables in the audit database since it will cross the maximum number of audit tables allowed in the system", ""
+900	= "sybsystemprocs database created.",			""
+901	= "Failed to create the sybsystemprocs database.",	""
+902  = "Failed to get server type attribute.",       ""
+1000	= "Copying old interfaces file '%1!' to '%2!'.",		"%s %s"
+1001	= "Server '%1!' failed preupgrade eligibility test.  Not upgrading.  See log for more information.",	"%s"
+1002	= "Server '%1!' passed preupgrade eligibility test.  Proceeding.",	"%s"
+1003		= "Upgrade of server '%1!' to release '%2!' failed.  See log for more information.",	"%s %s" 
+1004	= "Upgrade of server '%1!' to release '%2!' succeeded.",	"%s %s"
+1005 = "Error connecting to server after upgrading.",	""
+1006 = "Error in upgrade check: version is '%1!', expected '%2!'.",	"%s %s"
+1007 = "Could not reset auditinit's release directory to new release directory.", ""
+1008	= "Languages other than 'us_english' will not be upgraded.  If you have languages other than 'us_english' installed on your server you will have to upgrade them manually.",	""
+1009	= "The following languages cannot be upgraded since you do not have their 12.0 Language Modules: '%1!'.  The existing messages in these languages will not be removed.  However, all messages that were added or modified with the 12.0 release will default to 'us_english.'", "%s"
+1010	= "The following languages will be removed and reinstalled: '%1!'", "%s"
+1011	= "Error with interfaces file in new release directory; terminating upgrade.", ""
+1012 = "Could not find an entry for server '%1!' in interfaces file '%2!'.", "%s %s"
+1013 = "Could not load a copy of the interfaces entry for server '%1!'.", "%s"
+1014 = "Could not insert entry '%1!' into interfaces file '%2!'.", "%s %s"
+1015 	= "Copying entry '%1!' from interfaces file '%2!' to interfaces file '%3!'.", "%s %s %s"
+1020	= "Error creating temporary runserver file in release directory '%1!' for server '%2!' for upgrading; terminating upgrade.", "%s %s" 
+1021	= "Could not determine the location of the master device from the runserver file.", ""
+1022	= "Enter the full path to the master device for the server to be upgraded (default is '%1!'): ", "%s"
+1023 = "Master device '%1!' does not exist; cannot upgrade.", "%s"
+1024	= "Upgrade of server '%1!' to release '%2!' succeeded.  However, there were some problems upgrading stored procedures, triggers, rules, or views.  Auditinit will continue with the configuration but you should consult the Auditinit log (%3!) for more information after the configuration has completed.", "%s %s %s"
+1050	= "Error checking on the status of the upgraded databases.", ""
+1051	= "Database '%1!' is marked load crash.",		"%s"
+1052	= "Database '%1!' is marked suspect.",			"%s"
+1053	= "Database '%1!' was NOT successfully upgrade.",	"%s"
+1060 	= "Checkpointing all databases.",					""
+1061 = "Error setting up to checkpoint databases: cannot run upgrade.",	""
+1062 = "Error checkpointing database '%1!': cannot run upgrade.",	"%s"
+1063 = "\
+Waiting for database '%1!' to come online.  If this database is \\n\
+replicated, boot the Replication Server to drain the transaction log. \\n\
+If you do not want to wait for the database(s) to come online. You\\n\
+may interrupt here and rerun AUDITINIT when the databases are online.\\n", "%s"
+1200	= "Could not locate file '%1!'; cannot install system stored procedures.", "%s"
+1201	= "Could not locate file '%1!'; cannot set permissions on model database in the Adaptive Server.", "%s"
+1202 = "The version string of the installmaster file is different from the version string stored in the server.", ""
+1300		= "Interfaces entry '%1!' has no port.",		"%s"
+1301	= "Interfaces entry '%1!' has no protocol.",		"%s"
+1302	= "Interfaces entry '%1!' has no hostname.",		"%s"
+1304	= "Attempt to insert entry '%1!' in interfaces file failed.", "%s"
+1305	= "Cannot insert entry '%1!' in interfaces file.",	"%s" 
+1306 = "Due to an error inserting companion entries, the interfaces entry '%1!' may be incomplete.  Auditinit may be unable to boot your companion servers.  If necessary please edit your interfaces file by hand.",	"%s"
+1400	= "Cannot determine the host node name to use as the Adaptive Server's master node.", ""
+1401 = "Unable to boot companion servers '%1!'.  Attempting to boot master server only.", "%s"
+2000	= "Installing language '%1!'",				"%s"
+2001	= "Installing character set '%1!'",			"%s"
+2002	= "Booting the Sybase Server",				""
+2003	= "Building the master device",				""
+2004	= "Installing Sybase system stored procedures",		""
+2005	= "Setting the permissions for the 'model' database",	""
+2006	= "Installing Sybase catalog stored procedures",	""
+2007	= "Installing the 'pubs' database",			""
+2008	= "Installing the 'pubs2' database",			""
+2009 = "Installing the 'interpubs' database",		""
+2010 	= "Installing the 'jpubs' database",			""
+2011	= "Adding pictures to the 'pubs' database",		""
+2012	= "Adding pictures to the 'pubs2' database",		""
+2013		= "Upgrading the server %1! from release %2! to release %3!",		"%s %s %s"
+2014	= "Testing Sybase Server '%1!' for eligibility to upgrade to release '%2!'.", "%s %s"
+2015	= "Removing languages from the Adaptive Server",		""
+2016	= "Removing character sets from the Adaptive Server",	""
+2017	= "Setting the default language to %1!",		"%s"
+2018	= "Setting the default character set to %1!",		"%s"
+2051	= "create the master device",				""
+2052	= "update the Sybase Server runserver file",		""
+2054	= "boot the Sybase Server",				""
+2055	= "upgrade the Adaptive Server",				""
+2056	= "install system stored procedures",			""
+2057	= "set permissions for the 'model' database",		""
+2058		= "set the Backup Server for the Adaptive Server",		""
+2059	= "install a character set(s)",				""
+2060	= "remove a character set(s)",				""
+2061		= "set the default character set and/or default sort order for the Adaptive Server",	""
+2062	= "install a language(s)",				""
+2063	= "remove a language(s)",				""
+2064	= "set the default language",				""
+2065			= "install auditing capabilities",			""
+2066		= "configure optional databases",			""
+2067	= "update Sybase Server entry in interfaces file",	""
+2068		= "create the sybsystemprocs database",			""
+2069		= "Complete B1-specific initialization",""
+2070	= "Rewrite runserver file without installation flag",""
+2071		= "install monitor server script",		""
+2072		= "install sybsystemdb database", ""
+2100		= "Adaptive Server Information:",		""
+2101 		= "name: ",				""
+2102 	= "master device:",			""
+2103 	= "master device mirror:",		""
+2104 	= "master device size:",		""
+2105 	= "errorlog:",				""
+2106 		= "interfaces:",			""
+2107 	= "shared memory file location:",	""
+2109 	= "sso password:",			""
+2110 	= "secondary server:",			""
+2111	= "configuration file location: ",   ""
+2200	= "Cannot determine the companion servers for Adaptive Server '%1!': cannot determine the location of the interfaces file.", "%s"	
+2201		= "Cannot determine the companion servers for Adaptive Server '%1!': interfaces file '%2!' does not exist.", "%s %s"	
+2202	= "Cannot determine the companion servers for Adaptive Server '%1!': cannot read interfaces file '%2!'.", "%s %s"	
+2210 = "Cannot determine whether you have a SYB_EXEC.COM in your home directory.  SYB_EXEC.COM is required to start a remote server.  Will attempt to continue anyway.", ""
+2211 = "Cannot determine whether you have a SYB_EXEC.COM in your home directory.  SYB_EXEC.COM is required to start a remote server.  Will attempt to continue anyway.", ""
+2212 = "Cannot determine whether you have a SYB_EXEC.COM in your home directory.  SYB_EXEC.COM is required to start a remote server.  Will attempt to continue anyway.", ""
+2213 	= "Cannot copy SYB_EXEC.COM to your home directory.  Cannot boot remote servers.",	""
+2214 = "Failure setting '%1!' to be executable.  Will not be able to boot remote servers.",	"%s"	
+3111		= "EXISTING SYBASE SERVER", ""
+3112		= "", ""
+3113		= "EXISTING SYBASE SERVER", ""
+3114	= "\
+1. Configure an Existing Adaptive Server\\n\\nSelect this option if you \
+want to install auditing in an already installed or upgraded \
+Adaptive Server.\\n\\n \
+* Control Keys *\\n\\nYou do not need to press Ctrl-a to continue \
+to the next screen\, as your selection of an item automatically leads \
+to the next screen.\\n\\nPress Ctrl-x to exit this screen and \
+cancel any selections you have made in this screen. auditinit will \
+return to the previous menu. You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", ""
+3115	= "\
+1. Configure an \
+Existing Sybase Server\\n \\nSelect this option if you \
+want to install auditing in an already installed or upgraded \
+Adaptive Server.", ""
+3121		= "ADD NEW ADAPTIVE SERVER", ""
+3122		= "", ""
+3123		= "ADD NEW ADAPTIVE SERVER", ""
+3124	= "\
+Auditinit displays a list of servers available for \
+configuration.  This list contains Backup Servers as well as SQL \
+Servers.  If the entire list does not fit on one screen\, scroll to \
+the end of the list by pressing Ctrl-f.  Select the server you want to \
+configure.\\n\\n* Control Keys *\\n\\nPress the Ctrl-f key if you want to \
+scroll forward through the list of servers available for \
+configuration.  You must scroll to the end of the list before \
+selecting a server.\\n\\nPress the Ctrl-b key if you want to scroll \
+backward through the list of servers available for \
+configuration.\\n\\nYou do not need to press Ctrl-a to continue to \
+the next screen\, as your selection of a server automatically leads to \
+the next screen.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.\\n\\n\
+* Control Keys *\\n\\nPress Ctrl-a to accept the displayed \
+server name and continue to the next screen.\\n\\nPress Ctrl-x to exit \
+this screen and cancel any selections you have made in this screen. \
+auditinit will return to the previous menu. You can repeat Ctrl-x to \
+return to previous menus and exit auditinit to the operating system \
+prompt.", ""
+3125	= "\
+Auditinit displays a list of servers available for \
+configuration.  This list contains Backup Servers as well as SQL \
+Servers.  If the entire list does not fit on one screen\, use the down \
+arrow key to scroll to the end of the list.  Select the server you want to \
+configure.\\n\\n\
+* Continue to Next Screen *\\n \\nPress <F10> to accept the \
+displayed server name and continue to the next screen.", ""
+3131		= "CONFIGURE EXISTING ADAPTIVE SERVER", ""
+3132		= "",	 ""
+3133		= "CONFIGURE EXISTING ADAPTIVE SERVER",	 ""
+3134		= "\
+Auditinit displays a list of servers available for \
+configuration.  This list contains Backup Servers as well as SQL \
+Servers.  If the entire list does not fit on one screen\, scroll to \
+the end of the list by pressing Ctrl-f.  Select the server you want to \
+configure (You can only configure auditing for the current release). \
+\\n\\n* Control Keys *\\n\\nPress the Ctrl-f key if you want to \
+scroll forward through the list of servers available for upgrade or \
+reconfiguration.  You must scroll to the end of the list before \
+selecting a server.\\n\\nPress the Ctrl-b key if you want to scroll \
+backward through the list of servers available for \
+auditing configuration.\\n\\nYou do not need to press Ctrl-a to continue to \
+the next screen\, as your selection of a server automatically leads to \
+the next screen.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.",       ""
+3135	= "\
+Auditinit displays a list of servers available for \
+configuration.  This list contains Backup Servers as well as SQL \
+Servers.  If the entire list does not fit on one screen\, use the down \
+arrow key to scroll to the end of the list.  Select the server you want to \
+configure auditing for (the server must be the current release).",       ""
+3169	= "\
+AUDITINIT NO LONGER COPIES THE ENTRY FOR THE SERVER TO BE UPGRADED \
+FROM THE OLD INTERFACES FILE TO THE NEW ONE.  See the Help \
+screen or your documentation for details.",	""
+3170	= "\
+CONFIGURE AUDITING\\n \\nSelect this \
+option to configure \
+the auditing feature of Sybase Server.\\n \\n \
+* Configure the Sybase Server *\\n \\nPress <F10> to \
+proceed with the configuration.  ",	 ""
+3171		= "SYBASE SERVER CONFIGURATION",	 ""
+3172		= "",	 ""
+3173		= "SYBASE SERVER CONFIGURATION",	 ""
+3174	= "\
+1. CONFIGURE AUDITING\\n\\nSelect this \
+option to configure the auditing feature of Adaptive Server.\\n\\n\
+* Control Keys *\\n\\nPress Ctrl-a to proceed with the configuration. \
+\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to the previous menu \
+and to exit auditinit to the operating system prompt.",	 ""
+3175	= "\
+1. CONFIGURE AUDITING\\n\\nSelect this \
+option to configure \
+the auditing feature of Adaptive Server.\\n \\n\
+* Control Keys *\\n\\nPress Ctrl-a to proceed with the configuration. \
+\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to the previous menu \
+and to exit auditinit to the operating system prompt.",	 ""
+3176		= "UPGRADE EXISTING SYBASE SERVER", ""
+3177		= "",	 ""
+3178		= "UPGRADE EXISTING SYBASE SERVER",	 ""
+3179	= "\
+1. RELEASE DIRECTORY FOR PREVIOUS RELEASE\\n\\nSelect this option to \
+change the displayed path for the release directory of your pre-10.0 \
+SYBASE installation. At the prompt\, enter the full directory path \
+of your previous SYBASE Installation.  Do not enter the path of the \
+new SYBASE release directory.\\n\\n\
+AUDITINIT NO LONGER SUPPORTS INTERFACES FILE EDITING\, including \
+the task of copying the entry for the server to be upgraded \
+from the old interfaces file to the new one.\\n\\n\
+SYBSETUP\, DSEDIT\, DSEDIT_DCE\, or a text editor must be used for \
+this purpose.  See your documentation for more details.\\n\\n\
+* Control Keys *\\n\\nPress \
+Ctrl-a to accept the displayed release directory path. \
+\\n\\nPress Ctrl-x to exit this screen and cancel any changes \
+you have made to the screen.  Auditinit will return to the previous \
+menu.  You can repeat Ctrl-x to return to previous menus and exit \
+auditinit to the operating system prompt.",       ""
+3180	= "\
+Release Directory for Previous Release\\n\\nSelect this option to \
+change the displayed path for the release directory of your pre-10.0 \
+SYBASE installation. At the prompt\, enter the full directory path \
+of your previous SYBASE Installation.  Do not enter the path of the \
+new SYBASE release directory.\\n\\n\
+AUDITINIT NO LONGER COPIES THE ENTRY FOR THE SERVER TO BE UPGRADED \
+FROM THE OLD INTERFACES FILE TO THE NEW ONE.\\n\\n\
+SYBSETUP\, DSEDIT\, DSEDIT_DCE\, or a text editor must be used for \
+this purpose.  See your documentation for more details.\\n\\n\
+* Continue to Next Screen *\\n \\nPress \
+<F10> to accept the displayed release directory path.",       ""
+3181		= "ENTER SA ACCOUNT NAME AND PASSWORD",	 ""
+3182		= "",	 ""
+3183		= "ENTER SA ACCOUNT NAME AND PASSWORD",	 ""
+3184	= "\
+1. SA Account\\n\\nSelect this option to enter the username of an \
+account that has System Administration privileges.  Auditinit will use \
+this account to login to the Sybase Server you selected in the previous \
+menu.\\n\\n2. SA Password\\n\\nSelect this option to enter the \
+password of the account that has System Administration privileges. \
+For security purposes\, auditinit substitutes pound signs (#) for \
+characters in the password field.  The default System Administration \
+account password is NULL; if you want to keep the NULL value\, do not \
+select the \"SA Password\" option.\\n\\n* Control Keys *\\n\\nPress \
+Ctrl-a to accept the displayed SA account name and \
+password.\\n\\nPress Ctrl-x to exit this screen and cancel any changes \
+you have made to the screen.  Auditinit will return to the previous \
+menu.  You can repeat Ctrl-x to return to previous menus and exit \
+auditinit to the operating system prompt.",	 ""
+3185	= "\
+SA Account\\n \\nSelect this option to enter the username of an \
+account that has System Administration privileges.  Auditinit will use \
+this account to login to the Sybase Server you selected in the previous \
+menu.\\n \\nSA Password\\n \\nSelect this option to enter the \
+password of the account that has System Administration privileges. \
+For security purposes\, auditinit substitutes pound signs (#) for \
+characters in the password field.  The default System Administration \
+account password is NULL; if you want to keep the NULL value\, do not \
+select the \"SA Password\" option.\\n \\n* Continue to Next \
+Screen *\\n \\nPress <F10> to accept the displayed SA account name and \
+password.",	 ""
+3191		= "SYBASE SERVER UPGRADE",	 ""
+3192		= "",	 ""
+3193	= "SYBASE SERVER UPGRADE",	 ""
+3194	= "\
+1.  Test Sybase Server upgrade eligibility now\\n\\nSelect this option to \
+test whether your selected Sybase Server's master database contains \
+enough free space to upgrade to 12.0.\\n\\nIf auditinit displays a \
+message indicating your server failed the upgrade eligibility test\, \
+examine the auditinit log file to determine the amount of additional space \
+necessary for a successful upgrade.  Use the alter database command on \
+the master database of your server to allocate the necessary space \
+before you attempt the update process again.  Refer to \
+the SYBASE Adaptive Server installation guide for more information on the \
+alter database command.\\n\\n2.  Check for reserved word \
+conflicts\\n\\nRelease 12.0 Sybase Server contains new Transact-SQL \
+keywords that are reserved words.  Reserved words are SQL syntax and \
+cannot be used as identifiers.  Select this option to see if any of \
+your existing databases use reserved words as identifiers.  See \
+\"What's New in SQL Server Release 12.0?\" for a complete list of \
+these new reserved words.\\n\\nIf auditinit finds reserved word \
+conflicts\, it displays a message indicating the number of reserved \
+word conflicts that exist in your databases.  Reserved word conflicts \
+involving database names can cause the upgrade to fail. Other reserved word \
+conflicts will not prevent a successful upgrade\, but they can cause errors \
+in queries\, stored procedures or applications.\\n\\nYou should run the \
+stored procedure sp_checkreswords on each of your databases to find \
+the identifiers which conflict with reserved words.  You can run this \
+procedure now\, before proceeding with the upgrade\, or you can run it \
+after you have completed the upgrade.  Refer to the SYBASE \
+Adaptive Server installation guide for more information on detecting reserved \
+word conflicts and changing identifier names.  Press Return to return to \
+the \"Sybase Server Upgrade\" menu.\\n\\nIf none of your existing \
+databases uses reserved words as identifiers\, auditinit displays a \
+message indicating that no reserved word conflicts exist.  Press \
+return to return to the \"Sybase Server Upgrade\" menu.\\n\\n3.  \
+sybsystemprocs database configuration\\n\\nRelease 12.0 provides a new \
+system database\, sybsystemprocs\, which stores most of the system \
+stored procedures.  This new feature lessens space requirements for \
+the master database\, allows greater flexibility for users and can \
+speed recovery of master.  Select this option to proceed to the menu \
+for configuration of the sybsystemprocs database and device.\\n\\n4.  \
+sybsystemdb database configuration\\n\\nStarting \
+with release 12.0 of Adaptive Server\, the spt_commitab table \
+is stored in a database called \
+sybsystemdb. (With previous releases of Sybase Server\, the spt_commitab \
+table was stored in the master database.) Refer to the \
+SYBASE Adaptive Server installation guide for information on choosing a \
+suitable location for sybsystemdb. \
+Select this option to proceed to the menu for configuration of the \
+sybsystemdb database and device. \\n\\n5.  \
+Upgrade Sybase Server now\\n\\nSelect this option to proceed with the \
+upgrade of your server after you have completed the upgrade \
+eligibility test\, checked for reserved words and selected \
+configuration options for the sybsystemprocs database.\\n\\nAuditinit \
+displays the current path for the Sybase Server error log location in your \
+old SYBASE release directory.  Type in a revised full path to place \
+the error log in your newly created SYBASE directory.  You can press \
+return to accept the displayed path\, but then your Adaptive Server \
+error log will remain in your old SYBASE directory.\\n\\nAuditinit will \
+display a series of messages as the upgrade process runs.  If the \
+upgrade process does not succeed\, auditinit will display error \
+messages.  You can review the error messages and the auditinit error log \
+to determine the cause of the upgrade failure.\\n\\nAfter the upgrade \
+process has completed successfully\, auditinit will display a message \
+indicating the upgrade succeeded and will return to the Sybase Server \
+UPGRADE menu.\\n\\n6. REMAP QUERY \
+TREES IN ALL DATABASES\\n\\nIt is possible for your upgrade to succeed \
+while the remapping of certain objects fails.  If this type of failure \
+occurs you must drop these objects after the upgrade.  Refer to \
+the SYBASE Adaptive Server installation guide for instructions \
+for dropping the objects and continuing the upgrade process.  Select this \
+option to continue remapping the remaining objects after dropping the \
+failed objects.\\n\\n* Control Keys *\\n\\nPress Ctrl-x to exit the \
+screen.  Auditinit will return to the previous menu.  You can repeat \
+Ctrl-x to return to previous menus and exit auditinit to the \
+operating system prompt.",	 ""
+3195	= "\
+Test Sybase Server upgrade eligibility now\\n \\nSelect this option to \
+test whether your selected Sybase Server's master database contains \
+enough free space to upgrade to 12.0.\\n \\nIf auditinit displays a \
+message indicating your server failed the upgrade eligibility test\, \
+press <F3> to examine the auditinit log file and determine the amount \
+of additional space \
+necessary for a successful upgrade.  Use the alter database command on \
+the master database of your server to allocate the necessary space \
+before you attempt the update process again.  Refer to \
+the SYBASE Adaptive Server installation guide for more information on the \
+alter database command.\\n \\nCheck for reserved word \
+conflicts\\n \\nRelease 12.0 Sybase Server contains new Transact-SQL \
+keywords that are reserved words.  Reserved words are SQL syntax and \
+cannot be used as identifiers.  Select this option to see if any of \
+your existing databases use reserved words as identifiers.  See \
+\"What's New in SQL Server Release 12.0?\" for a complete list of \
+these new reserved words.\\n \\nIf auditinit finds reserved word \
+conflicts\, it displays a message indicating the number of reserved \
+word conflicts that exist in your databases.  Reserved word conflicts \
+involving database names can cause the upgrade to fail. Other reserved word \
+conflicts will not prevent a successful upgrade\, but they can cause errors \
+in queries\, stored procedures or applications.\\n \\nYou should run the \
+stored procedure sp_checkreswords on each of your databases to find \
+the identifiers which conflict with reserved words.  You can run this \
+procedure now\, before proceeding with the upgrade\, or you can run it \
+after you have completed the upgrade.  Refer to the SYBASE \
+Adaptive Server installation guide for more information on detecting reserved \
+word conflicts and changing identifier names.\\n \\nIf none of your existing \
+databases uses reserved words as identifiers\, auditinit displays a \
+message indicating that no reserved word conflicts exist.  Press \
+return to return to the \"Sybase Server Upgrade\" menu.\\n \\nsybsystemprocs \
+database configuration\\n \\nRelease 12.0 provides a new \
+system database\, sybsystemprocs\, which stores most of the system \
+stored procedures.  This new feature lessens space requirements for \
+the master database\, allows greater flexibility for users\, and can \
+speed recovery of master.  Select this option to proceed to the menu \
+for configurating the sybsystemprocs database and device.\\n \\nsybsystemdb \
+database configuration\\n\\nStarting \
+with release 12.0 of Adaptive Server\, the spt_commitab table \
+is stored in a database called \
+sybsystemdb. (With previous releases of Adaptive Server\, the spt_commitab \
+table was stored in the master database.) Refer to the \
+SYBASE Adaptive Server installation guide for information on choosing a \
+suitable location for sybsystemdb. \
+Select this option to proceed to the menu for configuration of the \
+sybsystemdb database and device. \\n\\nUpgrade  \
+Sybase Server now\\n \\nAfter you have completed the upgrade eligibility \
+test\, checked for reserved words\, and configured the sybsystemprocs \
+database\, select this option to proceed with the upgrade.\\n \\nAuditinit \
+displays the current path for the Sybase Server error log (the \
+old SYBASE release directory.)  Type in a revised full path to place \
+the error log in your newly created SYBASE directory.  You can press \
+return to accept the displayed path\, but then the Adaptive Server \
+error log will remain in the old SYBASE directory.\\n \\nAuditinit will \
+display a series of messages as the upgrade process runs.  If the \
+upgrade process does not succeed\, auditinit will display error \
+messages.  You can review the error messages and the auditinit error log \
+to determine the cause of the upgrade failure.\\n \\nAfter the upgrade \
+process has completed successfully\, auditinit displays a message \
+indicating that the upgrade succeeded.\\n \\nREMAP QUERY \
+TREES IN ALL DATABASES\\n \\nIt is possible for your upgrade to succeed \
+while the remapping of certain objects fails.  If this type of failure \
+occurs you must drop these objects after the upgrade.  Refer to \
+Appendix B of the SYBASE Adaptive Server installation guide for instructions \
+on dropping the objects and continuing the upgrade process.  Select this \
+option to continue remapping the remaining objects after dropping the \
+failed objects.",	 ""
+3201		= "MASTER DEVICE CONFIGURATION",	 ""
+3202		= "",	 ""
+3203	= "MASTER DEVICE CONFIGURATION",	 ""
+3204		= "\
+1. Master Device\\n\\nSelect this option to enter the path of your \
+master device. Enter the full path of the device\, and press \
+Return.\\n\\n2. Size\\n\\nSelect \
+this option to specify the size (in megabytes) of the \
+master device. The recommended size for the master device is 17 \
+megabytes\, and the minimum size is 15 megabytes. The master device \
+contains a minimum of three databases: master\, model\, and tempdb. \
+Additionally\, it can contain one or more of the three pubs databases: \
+pubs2\, interpubs\, and jpubs. As of release 12.0\, most of the SYBASE \
+system stored procedures are stored in the new sybsystemprocs database\, \
+rather than the master database.3. Contiguous\\n\\nSelect this option if you \
+want to change the displayed default of \"yes\".  If this option is set to \
+\"yes\"\, auditinit reports an error if the master device cannot be created \
+on contiguous blocks of the disk.  If this option is set to \"no\"\, auditinit \
+does not report an error if creating a contiguous file is not possible. \
+\\n\\n* Control Keys *\\n\\nPress \
+Ctrl-a to accept the displayed values and continue to the next \
+screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.",	 ""
+3205	= "\
+1. Master Device\\n\\nSelect this option to enter the path of your \
+master device. Enter the full path of the device\, and press \
+Return. (If you enter the name of an operating system file instead of \
+a raw device\, auditinit will warn you that this is not recommended. If \
+you still want to use the operating system file\, press Return again.) \
+In general\, Sybase does not recommend putting the master device on an \
+operating system file because operating system files use block I/O. If \
+you put your master device on an operating system file\, and your \
+system crashes while a read or write is in progress\, you could \
+potentially lose up to a whole block of data. Refer to \
+the SYBASE Adaptive Server installation guide for information on using \
+operating system files for the master device.\\n\\n2. Size\\n\\nSelect \
+this option to specify the size (in megabytes) of the \
+master device. The recommended size for the master device is 17 \
+megabytes\, and the minimum size is 15 megabytes. The master device \
+contains a minimum of three databases: master\, model\, and tempdb. \
+Additionally\, it can contain one or more of the three pubs databases: \
+pubs2\, interpubs\, and jpubs. As of release 12.0\, most of the SYBASE \
+system stored procedures are stored in the new sybsystemprocs database\, \
+rather than the master database.\\n\\n* Control Keys *\\n\\nPress \
+Ctrl-a to accept the displayed values and continue to the next \
+screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.",	 ""
+3206	= "\
+Master Device\\n \\nSelect this option to enter the path of the master \
+device file.  Enter the full volume\, path\, and filename of the device\, \
+and press Return.\\n \\nRefer to the SYBASE Adaptive Server \
+installation guide for information on using \
+operating system files for the master device.\\n \\nSize\\n \\nSelect \
+this option to specify the size (in megabytes) of the \
+master device. The recommended size for the master device is 17 \
+megabytes\, and the minimum size is 15 megabytes. The master device \
+contains a minimum of three databases: master\, model\, and tempdb. \
+Additionally\, it can contain one or more of the three pubs databases: \
+pubs2\, interpubs\, and jpubs. As of release 12.0\, most of the SYBASE \
+system stored procedures are stored in the new sybsystemprocs database\, \
+rather than the master database.\\n \\nRefer to the SYBASE \
+Adaptive Server installation guide for detailed instructions on planning the \
+size of the master device file.\\n \\n* Continue to Next Screen *\\n \\nPress \
+<F10> to accept the displayed values and continue to the next \
+screen.",	 ""
+3211		= "SET ERRORLOG LOCATION",	 ""
+3212		= "",	 ""
+3213		= "SET ERRORLOG LOCATION",	 ""
+3214		= "\
+1. Adaptive Server Errorlog\\n\\nSelect this option to specify the location \
+of Adaptive Server's error log. The default location is \
+$SYBASE/install/errorlog. To use the default location\, press Ctrl-a to \
+accept and continue to the next screen. The Adaptive Server error log \
+contains status and error messages generated by Adaptive Server during \
+booting\, use\, and shutdown. If your server experiences any error \
+conditions\, or behaves in any unexpected way\, look in the error log for \
+messages generated in response to the error condition. Each message \
+entry includes a date and time stamp\, a field indicating whether the \
+message was generated by Adaptive Server's kernel or another part of the \
+server\, and the error message itself.\\n\\n* Control Keys *\\n\\nPress \
+Ctrl-a to accept the displayed error log path and continue to the next \
+screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.",	 ""
+3215		= "\
+1. Adaptive Server Errorlog\\n\\nSelect this option to specify the location \
+of Adaptive Server's error log. The default location is \
+sybase_system:[sybase.install]errorlog. To use the default location\, press Ctrl-a to \
+accept and continue to the next screen. The Adaptive Server error log \
+contains status and error messages generated by Adaptive Server during \
+booting\, use\, and shutdown. If your server experiences any error \
+conditions\, or behaves in any unexpected way\, look in the error log for \
+messages generated in response to the error condition. Each message \
+entry includes a date and time stamp\, a field indicating whether the \
+message was generated by Adaptive Server's kernel or another part of the \
+server\, and the error message itself.\\n\\n* Control Keys *\\n\\nPress \
+Ctrl-a to accept the displayed error log path and continue to the next \
+screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.",	 ""
+3216		= "\
+Adaptive Server Errorlog\\n \\nSelect this option to specify the location \
+of Adaptive Server's error log. The default location is in a file named errorlog \
+in the install subdirectory of the SYBASE release directory. To use the \
+default location\, press <F10> to \
+accept and continue to the next screen.\\n \\nThe Adaptive Server error log \
+contains status and error messages generated by Adaptive Server during \
+booting\, use\, and shutdown. If your server experiences any error \
+conditions\, or behaves in any unexpected way\, look in the error log for \
+messages generated in response to the error condition. Each message \
+entry includes a date and time stamp\, a field indicating whether the \
+message was generated by Adaptive Server's kernel or another part of the \
+server\, and the error message itself.\\n \\n* Continue to Next \
+Screen *\\n \\nPress <F10> to accept the displayed error log path and \
+continue to the next screen.",	 ""
+3221		= "SET QUOTA FILE LOCATION",	 ""
+3222		= "",	 ""
+3223	= "SET QUOTA FILE LOCATION",	 ""
+3224		= "\
+1. Adaptive Server Quota File\\n\\nSelect this item and enter the full path \
+of a quota file to use for Adaptive Server system parameters.  There is no \
+default path name.\\n\\nThe startserver utility uses the quota file to \
+provide Adaptive Server with VMS resource quotas.  startserver starts the \
+server as a VMS detached process and passes the new resource quotas to \
+this process.\\n\\nIf you do not provide a quota file path\, \
+startserver will look for a quota file in the directory from which it \
+is run.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept the quota \
+file path that is currently displayed.\\n\\n\ Press Ctrl-x to exit \
+this screen and cancel any changes you have made to the screen. \
+Auditinit will return to the previous menu.  You can repeat Ctrl-x to \
+return to previous menus and exit auditinit to the operating system \
+prompt.",	 ""
+3231		= "CONFIGURE LANGUAGES",	 ""
+3232		= "",	 ""
+3233		= "CONFIGURE LANGUAGES",	 ""
+3234	= "\
+Select a language module to perform any of the following tasks:\\n- \
+Install the language\, making it available for Adaptive Server to use\\n- \
+Remove the language\, making it unavailable to Adaptive Server\\n- Make the \
+language the default language that Adaptive Server uses\\n\\nThe columns to \
+the right of the languages indicate the languages' status:\\n- \
+\"Installed?\" indicates whether or not the language is already \
+available to Adaptive Server.\\n- \"Remove\" indicates whether or not \
+auditinit will remove the language.\\n- \"Install\" indicates whether or \
+not auditinit will install the language.\\n- \"Default\" indicates \
+whether or not auditinit will make the language the default.\\n\\nNote \
+that us_english is always available for Adaptive Server to use.\\n\\n* \
+Control Keys *\\n\\nPress Ctrl-a to accept the language configuration \
+options indicated by the columns.  Auditinit does not write your changes \
+to the language configuration until you execute the Adaptive Server \
+configuration as a whole.\\n\\nPress Ctrl-x to exit this screen and \
+cancel any changes you have made to the screen.  Auditinit will return \
+to the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.",	 ""
+3235	= "\
+Select the name of a language module to perform any of the following \
+tasks:\\n- \
+Install the language\, making it available for Adaptive Server to use\\n- \
+Remove the language\, making it unavailable to Adaptive Server\\n- Make the \
+language the default language that Adaptive Server uses\\n \\nThe columns to \
+the right of the languages indicate the languages' status:\\n- \
+\"Installed?\" indicates whether or not the language is already \
+available to Adaptive Server.\\n- \"Remove\" indicates whether or not \
+auditinit will remove the language.\\n- \"Install\" indicates whether or \
+not auditinit will install the language.\\n- \"Default\" indicates \
+whether or not auditinit will make the language the default.\\n \\nNote \
+that us_english is always available for Adaptive Server to use.\\n \\n* \
+Continue to Next Screen *\\n \\nPress <F10> to accept the language \
+configuration \
+options indicated by the columns.  Auditinit does not write your changes \
+to the language configuration until you execute the Adaptive Server \
+configuration as a whole.",	 ""
+3241		= "CONFIGURE CHARACTER SETS",	 ""
+3242		= "",	 ""
+3243		= "CONFIGURE CHARACTER SETS",	 ""
+3244	= "\
+Select the name of a character set to perform any of the following \
+tasks:\\n- Install the character set\, making it available for the \
+server to use\\n- Remove the character set\, making it unavailable to \
+Adaptive Server \\n- Make the character set the default character set that \
+Adaptive Server uses\\n\\nThe columns to the right of the character sets \
+indicate the character sets' status:\\n- \"Installed?\" indicates \
+whether or not the character set is already available to the \
+server.\\n- \"Remove\" indicates whether or not auditinit will remove \
+the character set.\\n- \"Install\" indicates whether or not auditinit \
+will install the character set.\\n- \"Default\" indicates whether or \
+not auditinit will make the character set the default.\
+\\n\\n* Control Keys *\\n\\nPress Ctrl-a to \
+accept the character set configuration options indicated by the \
+columns.  Auditinit does not change the character set configuration \
+until you execute the Adaptive Server configuration as a whole.\\n\\nPress \
+Ctrl-x to exit this screen and cancel any changes you have made to the \
+screen.  Auditinit will return to the previous menu.  You can repeat \
+Ctrl-x to return to previous menus and exit auditinit to the operating \
+system prompt.",	 ""
+3245	= "\
+Select the name of a character set to perform any of the following \
+tasks:\\n- Install the character set\, making it available for the \
+server to use\\n- Remove the character set\, making it unavailable to \
+Adaptive Server \\n- Make the character set the default character set that \
+Adaptive Server uses\\n \\nThe columns to the right of the character sets \
+indicate the character sets' status:\\n- \"Installed?\" indicates \
+whether or not the character set is already available to the \
+server.\\n- \"Remove\" indicates whether or not auditinit will remove \
+the character set.\\n- \"Install\" indicates whether or not auditinit \
+will install the character set.\\n- \"Default\" indicates whether or \
+not auditinit will make the character set the default.\
+\\n \\n* Continue to Next Screen *\\n \\nPress <F10> to \
+accept the character set configuration options indicated by the \
+columns.  Auditinit does not change the character set configuration \
+until you execute the Adaptive Server configuration as a whole.",	 ""
+3251		= "CONFIGURE SORT ORDER",	 ""
+3252		= "",	 ""
+3253		= "CONFIGURE SORT ORDER",	 ""
+3254	= "\
+Select the name of the default sort order (collating sequence) that \
+this Adaptive Server will use.  See your SYBASE Adaptive Server \
+installation guide for information on the sort orders \
+available.\\n\\nThe \"Chosen\" \
+column indicates which sort order auditinit will assign as the default. \
+Initially\, Binary ordering is selected as the default.\\n\\n* Control \
+Keys *\\n\\nPress Ctrl-a to accept the chosen sort order as the \
+default.  Auditinit does not change the default sort until you execute \
+the Adaptive Server configuration as a whole.\\n\\nPress Ctrl-x to exit \
+this screen and cancel any changes you have made to the screen. \
+Auditinit will return to the previous menu.  You can repeat Ctrl-x to \
+return to previous menus and exit auditinit to the operating system \
+prompt.",	 ""
+3255	= "\
+Select the name of the default sort order (collating sequence) that \
+this Adaptive Server will use.  See your SYBASE Adaptive Server \
+installation guide for information on the sort orders \
+available.\\n \\nThe \"Chosen\" \
+column indicates which sort order auditinit will assign as the default. \
+Initially\, Binary ordering is selected as the default.\\n \\n* Continue \
+to Next Screen *\\n \\nPress <F10> to accept the chosen sort order as the \
+default.  Auditinit does not change the default sort until you execute \
+the Adaptive Server configuration as a whole.",	 ""
+3261		= "CONFIGURE AUDITING",	 ""
+3262		= "AUDITING INSTRUCTION", ""
+3263		= "CONFIGURE AUDITING",	 ""
+3264	= "\
+1. Configure auditing\\n\\nSelect this option to indicate that you want \
+to install the auditing database and the auditing device (optional).  \
+Auditinit will toggle the option to \"yes.\" If you do not toggle this \
+option to \"yes\,\" auditinit will not install the auditing database. \
+\\n\\n2. sybsecurity database size (Meg)\\n\\nSelect this option to change the \
+size of the sybsecurity database\, which contains the sysaudits table.  \
+sysaudits is the audit log\, where records of activity on Adaptive Server \
+are sent.\\n\\nThe default size for the sybsecurity database is 5 \
+megabytes.  You may want to increase the size depending on the amount \
+and type of auditing you want to perform.  Refer to your \
+SYBASE Adaptive Server installation guide for more details.\\n\\n3. \
+sybsecurity logical device name\\n\\nSelect this option to enter the \
+name of the logical device on which to place the sybsecurity database.  \
+The logical device name is the name you use in SQL statements to refer \
+to the device.  It is not the physical path of the device.\\n\\nIf you \
+are reconfiguring an existing Adaptive Server\, you can enter the logical \
+name of an existing database device.  However\, do NOT place the \
+sybsecurity database on the \"master\" device.\\n\\nIf you want to \
+create a new device for the sybsecurity database (recommended)\, enter \
+the name for that new device at the prompt.  The default name is \
+\"sybsecurity.\"\\n\\n4. create new device for the sybsecurity \
+database\\n\\nSelect this option if you want to create a new device on \
+which to place the sybsecurity database.  Auditinit toggles this option \
+to \"yes\" and displays two new menu options\, which are described \
+below.\\n\\n5. sybsecurity physical device name\\n\\nSelect this \
+option to enter the full path of the \
+file to use for the new sybsecurity device.  Adaptive Server will use the \
+auditing device to store the sybsecurity database.\\n\\n6. size of the \
+new device (Meg)\\n\\nSelect this option to enter the size of the file to \
+create.\\n\\nThe device must be large enough to contain the \
+sybsecurity database and related system procedures.\\n\\n* Control Keys \
+*\\n\\nPress Ctrl-a to accept the auditing options displayed on the \
+screen. If \"Configure auditing\" and \"create new device for the \
+sybsecurity database\" are marked with a \"yes\,\" auditinit will \
+install the auditing system and auditing device when you execute the \
+Adaptive Server configuration as a whole.\\n\\nPress Ctrl-x to exit this \
+screen and cancel any changes you have made to the screen.  Auditinit \
+will return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.",	 ""
+3265	= "\
+1. Configure auditing\\n\\nSelect this option to indicate that you want \
+to install the auditing database and the auditing device (optional).  \
+Auditinit will toggle the option to \"yes.\" If you do not toggle this \
+option to \"yes\,\" auditinit will not install the auditing database. \
+\\n\\n2. sybsecurity database size (Meg)\\n\\nSelect this option to change the \
+size of the sybsecurity database\, which contains the sysaudits table.  \
+sysaudits is the audit log\, where records of activity on Adaptive Server \
+are sent.\\n\\nThe default size for the sybsecurity database is 5 \
+megabytes.  You may want to increase the size depending on the amount \
+and type of auditing you want to perform.  Refer to your \
+SYBASE Adaptive Server installation guide for more details.\\n\\n3. \
+sybsecurity logical device name\\n\\nSelect this option to enter the \
+name of the logical device on which to place the sybsecurity database.  \
+The logical device name is the name you use in SQL statements to refer \
+to the device.  It is not the physical path of the device.\\n\\nIf you \
+are reconfiguring an existing Adaptive Server\, you can enter the logical \
+name of an existing database device.  However\, do NOT place the \
+sybsecurity database on the \"master\" device.\\n\\nIf you want to \
+create a new device for the sybsecurity database (recommended)\, enter \
+the name for that new device at the prompt.  The default name is \
+\"sybsecurity.\"\\n\\n4. create new device for the sybsecurity \
+database\\n\\nSelect this option if you want to create a new device on \
+which to place the sybsecurity database.  Auditinit toggles this option \
+to \"yes\" and displays two new menu options\, which are described \
+below.\\n\\n5. sybsecurity physical device name\\n\\nSelect this \
+option to enter the full path of the raw partition or operating system \
+file to use for the new sybsecurity device.  Adaptive Server will use the \
+auditing device to store the sybsecurity database.\\n\\nSybase \
+recommends that you use a raw partition for the auditing device\, as \
+it reduces the potential for losing auditing data.\\n\\n6. size of the \
+new device (Meg)\\n\\nSelect this option to enter the size of the new \
+auditing device.  If you entered the path of a raw partition for the \
+device name\, auditinit displays the size of that partition as the \
+default.  Note that in this case you should not reduce the displayed \
+device size\, as the remaining space cannot be used for any other \
+purpose.\\n\\nIf you entered the path of an operating system file for \
+the device name\, select this option and type the size of the file to \
+create.\\n\\nThe device must be large enough to contain the \
+sybsecurity database and related system procedures.\\n\\n* Control Keys \
+*\\n\\nPress Ctrl-a to accept the auditing options displayed on the \
+screen. If \"Configure auditing\" and \"create new device for the \
+sybsecurity database\" are marked with a \"yes\,\" auditinit will \
+install the auditing system and auditing device when you execute the \
+Adaptive Server configuration as a whole.\\n\\nPress Ctrl-x to exit this \
+screen and cancel any changes you have made to the screen.  Auditinit \
+will return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.",	 ""
+3266	= "\
+Configure auditing\\n \\nSelect this option to indicate that you want \
+to install the auditing database and the auditing device (optional).  \
+Auditinit will toggle the option to \"yes.\" If you do not toggle this \
+option to \"yes\,\" auditinit will not install the auditing database. \
+\\n \\nsybsecurity database size (Meg)\\n \\nSelect this option to change the \
+size of the sybsecurity database\, which contains the sysaudits table.  \
+sysaudits is the audit log\, where records of activity on Adaptive Server \
+are sent.\\n \\nThe default size for the sybsecurity database is 5 \
+megabytes.  You may want to increase the size depending on the amount \
+and type of auditing you want to perform.  Refer to your \
+SYBASE Adaptive Server installation guide for more details.\\n \\nsybsecurity \
+logical device name\\n \\nSelect this option to enter the \
+name of the logical device on which to place the sybsecurity database.  \
+The logical device name is the name you use in SQL statements to refer \
+to the device.  It is not the physical path of the device.\\n \\nIf you \
+are reconfiguring an existing Adaptive Server\, you can enter the logical \
+name of an existing database device.  However\, do NOT place the \
+sybsecurity database on the \"master\" device.\\n \\nIf you want to \
+create a new device for the sybsecurity database (recommended)\, enter \
+the name for that new device at the prompt.  The default name for a new \
+device is \"sybsecurity.\"\\n \\ncreate new device for the sybsecurity \
+database\\n \\nSelect this option if you want to create a new device on \
+which to place the sybsecurity database.  Auditinit toggles this option \
+to \"yes\" and displays two new menu options\, which are described \
+below.\\n \\nsybsecurity physical device name\\n \\nSelect this \
+option to enter the full path of the file to use for the new sybsecurity \
+device.  Adaptive Server will use the \
+auditing device to store the sybsecurity database.\\n \\nsize of the \
+new device (Meg)\\n \\nSelect this option to enter the size of the new \
+auditing device to create.  The device must be large enough to contain the \
+sybsecurity database and related system procedures.\\n \\n* Continue to Next \
+Screen *\\n \\nPress <F10> to accept the auditing options displayed on the \
+screen. If \"Configure auditing\" and \"create new device for the \
+sybsecurity database\" are marked with a \"yes\,\" auditinit will \
+install the auditing system and auditing device when you execute the \
+Adaptive Server configuration as a whole.",	 ""
+3271		= "ADD / REMOVE OPTIONAL DATABASES",	 ""
+3272		= "",	 ""
+3273		= "",	 ""
+3274		= "",	 ""
+3281		= "SYBSYSTEMPROCS DATABASE CONFIGURATION",	 ""
+3282		= "",	 ""
+3283		= "SYBSYSTEMPROCS DATABASE CONFIGURATION",	 ""
+3284	= "\
+1. sybsystemprocs database size (Meg)\\n\\nRelease 12.0 provides a new \
+system database\, sybsystemprocs\, which contains most of the stored \
+system procedures.  Refer to the SYBASE Adaptive Server \
+installation guide for more information on configuring this database.  \
+Select this option if you want to change the default size displayed \
+for the sybsystemprocs database.  The default size is sufficient to \
+hold release 12.0 system procedures.  If you plan to place additional \
+stored procedures in this database\, you need to increase its size in \
+order to accommodate them.  Type the desired size\, in megabytes\, at \
+the prompt.\\n\\n2. sybsystemprocs logical device name:\\n\\nSelect this \
+option to change the displayed default logical name for your sybsystemprocs device.  \
+This is the device name that you will use in SQL statements to refer to \
+the sybsystemprocs device. This is not the physical path.  Type the \
+name of a new or existing device at the prompt.  Auditinit displays the \
+name in the menu.\\n\\n3. create new device for the sybsystemprocs \
+database: \\n\\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemprocs database.  \"No\" indicates that you want to use an \
+existing device for the sybsystemprocs database.\\n\\nIf you use an \
+existing device for the sybsystemprocs database\, ensure that the \
+device has enough free space available.\\n\\n4.  physical name of new \
+device:\\n\\nSelect this option to provide the physical path for your \
+new sybsystemprocs device.  Type in the full path at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemprocs \
+database.\\n\\n5. size of the new device (Meg)\\n\\nSelect this option to \
+change the displayed default size of the new sybsystemprocs device.  Type the size\, in \
+megabytes\, at the prompt.  The device size must be large enough to \
+contain the sybsystemprocs database.  This option does not appear if \
+you use an existing device for the sybsystemprocs \
+database.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept all of the \
+displayed values for the sybsystemprocs database and \
+device.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will return to \
+the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.",	 ""
+3285	= "\
+1. sybsystemprocs database size (Meg)\\n\\nRelease 12.0 provides a new \
+system database\, sybsystemprocs\, which contains most of the stored \
+system procedures.  Refer to the SYBASE Adaptive Server \
+installation guide for more information on configuring this database.  \
+Select this option if you want to change the default size displayed \
+for the sybsystemprocs database.  The default size is sufficient to \
+hold release 12.0 system procedures.  If you plan to place additional \
+stored procedures in this database\, you need to increase its size in \
+order to accommodate them.  Type the desired size\, in megabytes\, at \
+the prompt.\\n\\n2. sybsystemprocs logical device name:\\n\\nSelect this \
+option to change the displayed default logical name for your sybsystemprocs device.  \
+This is the device name that you will use in SQL statements to refer to \
+the sybsystemprocs device. This is not the physical path.  Type the \
+name of a new or existing device at the prompt.  The logical name may refer \
+to either an operating system file or a raw partition.  Auditinit displays the \
+name in the menu.\\n\\n3. create new device for the sybsystemprocs \
+database: \\n\\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemprocs database.  \"No\" indicates that you want to use an \
+existing device for the sybsystemprocs database.\\n\\nIf you use an \
+existing device for the sybsystemprocs database\, ensure that the \
+device has enough free space available.\\n\\n4.  physical name of new \
+device:\\n\\nSelect this option to provide the physical path for your \
+new sybsystemprocs device.  The device may be either an operating system \
+file or a raw partition.  Type in the full path at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemprocs \
+database.\\n\\n5. size of the new device (Meg)\\n\\nSelect this option to \
+change the displayed default size of the new sybsystemprocs device.  Type the size\, in \
+megabytes\, at the prompt.  The device size must be large enough to \
+contain the sybsystemprocs database.  This option does not appear if \
+you use an existing device for the sybsystemprocs \
+database.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept all of the \
+displayed values for the sybsystemprocs database and \
+device.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will return to \
+the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.",	 ""
+3286	= "sybsystemprocs database configuration",	 ""
+3287	= "\
+sybsystemprocs database size (Meg)\\n \\nRelease 12.0 provides a new \
+system database\, sybsystemprocs\, which contains most of the stored \
+system procedures.  Refer to the SYBASE Adaptive Server \
+installation guide for more information on configuring this database.  \
+Select this option if you want to change the default size displayed \
+for the sybsystemprocs database.  The default size is sufficient to \
+hold release 12.0 system procedures.  If you plan to place additional \
+stored procedures in this database\, you need to increase its size in \
+order to accommodate them.  Type the desired size\, in megabytes\, at \
+the prompt.\\n \\nsybsystemprocs logical device name\\n \\nSelect this \
+option to change the displayed default logical name for your \
+sybsystemprocs device.  \
+This is the device name that you will use in SQL statements to refer to \
+the sybsystemprocs device. It is not the physical path.  Type the \
+name of a new or existing device at the prompt.  Auditinit displays the \
+name in the menu.\\n \\ncreate new device for the sybsystemprocs \
+database\\n \\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemprocs database.  \"No\" indicates that you want to use an \
+existing device for the sybsystemprocs database.\\n \\nIf you use an \
+existing device for the sybsystemprocs database\, ensure that the \
+device has enough free space available.\\n \\nphysical name of new \
+device:\\n \\nSelect this option to enter the physical path for your \
+new sybsystemprocs device.  Type in the full volue\, path\, and filename \
+at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemprocs \
+database.\\n \\nsize of the new device (Meg)\\n \\nSelect this option to \
+change the displayed default size of the new sybsystemprocs device.  Type the size\, in \
+megabytes\, at the prompt.  The device size must be large enough to \
+contain the sybsystemprocs database.  This option does not appear if \
+you use an existing device for the sybsystemprocs \
+database.\\n \\n* Continue to Next Screen *\\n \\nPress <F10> to accept \
+all of the displayed values for the sybsystemprocs database and \
+device.",	 ""
+3291           = "ADD/CHANGE A NEW DEVICE FOR AUDITING", ""
+3292           = "",    ""
+3293       = "ADD/CHANGE A NEW DEVICE FOR AUDITING", ""
+3294    = "", ""
+3295   = "\
+1. Physical name of the device\\nSelect this option to give the full pathname \
+of the device to be added for auditing. The device can either be a raw device \
+or a operating system filename.\\n\\n2. Logical Name of the device\\nSelect \
+this option to give the name of the device as it should be inside the server \
+\\n\\n3. Size of the device\\nSelect this option to specify the device size. \
+The size should be in MegaBytes. For raw devices the size is displayed \
+automatically.\\n\\4. Device size allocated for auditing\\nSelect this field \
+if you want to add only part of the device for auditing, and use rest of the \
+device for some other purpose. By default, whole device will be used for \
+auditing.", ""
+3296        = "", ""
+3300	= "sybsystemprocs database size (Meg): ",	""
+3301 = "sybsystemprocs logical device name: ",	""
+3302 = "physical name of new device: ",	""
+3303	= "size of the new device (Meg): ",	""
+3304 = "create new device for the sybsystemprocs database: ",	""
+3305	= "Enter the size of the sybsystemprocs database in megabytes: ", ""
+3306	= "Enter the logical device name for the sybsystemprocs database : ", ""
+3307	= "Enter the physical device name for the sybsystemprocs database : ", ""
+3308	= "Enter the size of the new device: ", ""
+3310           = "USE/CHANGE AN EXISTING DEVICE FOR AUDTING", ""
+3311           = "",    ""
+3312               = "USE/CHANGE AN EXISTING DEVICE FOR AUDTING",	""
+3313    = "", ""
+3314   = "\
+1. Logical Name of the device\\nSelect this option to give the name of the \
+device in the server\\n\\n4. Device size allocated for auditing\\nSelect this \
+field to specify how much of the device do you want to allocate for auditing.", ""
+3315        = "", ""
+3320 = "Add a device for audit table(s) ", ""
+3321   = "Add a device for the audit database transaction log", ""
+3322 = "Delete a device entry", ""
+3323    = "Change a device entry", ""
+3324 = "List of devices for the audit tables: ", ""
+3325 = "Device for the audit database transaction log: ", ""
+3326    = "Total size of the audit database: ", ""
+3400		= "SYBSYSTEMDB DATABASE CONFIGURATION",  ""
+3401		= "", ""
+3402		= "SYBSYSTEMDB DATABASE CONFIGURATION",  ""
+3403	= "\
+1. create sybsystemdb:\\n\\nSelect this option to indicate that you want \
+to create the sybsystemdb database (optional).\\n\\n2. create sybsystemdb \
+log:\\n\\nSelect this option to indicate that you want \
+to create the sybsystemdb log (optional).\\n\\n3. sybsystemdb \
+database size (Meg):\\n\\nSelect this option if you want to change the \
+default size displayed for the sybsystemdb database.\\n\\n4. sybsystemdb \
+database logical device name:\\n\\nSelect this option to change the \
+displayed default logical name for your sybsystemdb database \
+device.\\n\\n5. create new device for the sybsystemdb \
+database: \\n\\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemdb database.  \"No\" indicates that you want to use an \
+existing device for the sybsystemdb database.\\n\\nIf you use an \
+existing device for the sybsystemdb database\, ensure that the \
+device has enough free space available.\\n\\n6. sybsystemdb database physical \
+device name:\\n\\nSelect this option to provide the physical path for your \
+new sybsystemdb database device.  The device may be either an operating system \
+file or a raw partition.  Type in the full path at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemdb \
+database.\\n\\n7. size of the new database device (Meg)\\n\\nSelect this \
+option to change the displayed default size of the new sybsystemdb database \
+device. Type the size\, in megabytes\, at the prompt.  The device size must \
+be large enough to contain the sybsystemdb database.  This option does not \
+appear if you use an existing device for the sybsystemdb \
+database.\\n\\n8. sybsystemdb \
+log size (Meg):\\n\\nSelect this option if you want to change the \
+default size displayed for the sybsystemdb log.\\n\\n9. sybsystemdb \
+log logical device name:\\n\\nSelect this option to change the \
+displayed default logical name for your sybsystemdb log \
+device.\\n\\n10. create new device for the sybsystemdb \
+log: \\n\\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemdb log.  \"No\" indicates that you want to use an \
+existing device for the sybsystemdb log.\\n\\nIf you use an \
+existing device for the sybsystemdb log\, ensure that the \
+device has enough free space available.\\n\\n11. sybsystemdb log physical \
+device name:\\n\\nSelect this option to provide the physical path for your \
+new sybsystemdb log device.  The device may be either an operating system \
+file or a raw partition.  Type in the full path at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemdb \
+log.\\n\\n12. size of the new log device (Meg)\\n\\nSelect this \
+option to change the displayed default size of the new sybsystemdb log device. \
+Type the size\, in megabytes\, at the prompt.  The device size must be large \
+enough to contain the sybsystemdb log.  This option does not appear if \
+you use an existing device for the sybsystemdb \
+log.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept all of the \
+displayed values for the sybsystemdb database and \
+device.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will return to \
+the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.",	 ""
+3404	= "\
+create sybsystemdb:\\n\\nSelect this option to indicate that you want \
+to create the sybsystemdb database (optional).\\n\\ncreate sybsystemdb \
+log:\\n\\nSelect this option to indicate that you want \
+to create the sybsystemdb log (optional).\\n\\nsybsystemdb \
+database size (Meg):\\n\\nSelect this option if you want to change the \
+default size displayed for the sybsystemdb database.\\n\\nsybsystemdb \
+database logical device name:\\n\\nSelect this option to change the \
+displayed default logical name for your sybsystemdb database \
+device.\\n\\ncreate new device for the sybsystemdb \
+database: \\n\\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemdb database.  \"No\" indicates that you want to use an \
+existing device for the sybsystemdb database.\\n\\nIf you use an \
+existing device for the sybsystemdb database\, ensure that the \
+device has enough free space available.\\n\\nsybsystemdb database physical \
+device name:\\n\\nSelect this option to provide the physical path for your \
+new sybsystemdb database device.  The device may be either an operating system \
+file or a raw partition.  Type in the full path at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemdb \
+database.\\n\\nsize of the new database device (Meg)\\n\\nSelect this \
+option to change the displayed default size of the new sybsystemdb database \
+device. Type the size\, in megabytes\, at the prompt.  The device size must \
+be large enough to contain the sybsystemdb database.  This option does not \
+appear if you use an existing device for the sybsystemdb \
+database.\\n\\nsybsystemdb \
+log size (Meg):\\n\\nSelect this option if you want to change the \
+default size displayed for the sybsystemdb log.\\n\\nsybsystemdb \
+log logical device name:\\n\\nSelect this option to change the \
+displayed default logical name for your sybsystemdb log \
+device.\\n\\ncreate new device for the sybsystemdb \
+log: \\n\\nSelect this option if you want to change the displayed \
+value.  \"Yes\" indicates that you want to use a new device for the \
+sybsystemdb log.  \"No\" indicates that you want to use an \
+existing device for the sybsystemdb log.\\n\\nIf you use an \
+existing device for the sybsystemdb log\, ensure that the \
+device has enough free space available.\\n\\nsybsystemdb log physical \
+device name:\\n\\nSelect this option to provide the physical path for your \
+new sybsystemdb log device.  The device may be either an operating system \
+file or a raw partition.  Type in the full path at the prompt.  \
+Auditinit displays the path in the menu.  This option does not appear if \
+you are using an existing device for the sybsystemdb \
+log.\\n\\nsize of the new log device (Meg)\\n\\nSelect this \
+option to change the displayed default size of the new sybsystemdb log device. \
+Type the size\, in megabytes\, at the prompt.  The device size must be large \
+enough to contain the sybsystemdb log.  This option does not appear if \
+you use an existing device for the sybsystemdb \
+log.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept all of the \
+displayed values for the sybsystemdb database and \
+device.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will return to \
+the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.",	 ""
+3405	= "create sybsystemdb (optional): ",	 ""
+3406	= "sybsystemdb database size (Meg): ",	 ""
+3407	= "Enter the size of the sybsystemdb database (Meg): ", ""
+3408 	= "sybsystemdb database logical device name: ",	""
+3409	= "Enter the logical device name for the sybsystemdb database : ", ""
+3410= "create new device for the sybsystemdb database: ",	""
+3411	= "sybsystemdb database physical device name : ", ""
+3412	= "Enter the physical name of the device to use for the sybsystemdb database (default is '%1!'): ",	 "%s"
+3413	= "size of the new database device (Meg): ",	""
+3414	= "Enter the size of new database device (Meg): ", ""
+3415= "create sybsystemdb log: ",	 ""
+3416	= "sybsystemdb log size (Meg): ", ""
+3417	= "Enter the size of the sybsystemdb log (Meg): ", ""
+3418 	= "sybsystemdb log logical device name: ",	""
+3419	= "Enter the logical device name for the sybsystemdb log : ", ""
+3420= "create new device for the sybsystemdb log: ",	""
+3421	= "sybsystemdb log physical device name : ", ""
+3422	= "Enter the physical name of the device to use for the sybsystemdb log (default is '%1!'): ",	 "%s"
+3423	= "size of the new log device (Meg): ",	""
+3424	= "Enter the size of new log device (Meg): ", ""
+3425	= "Cannot locate script '%1!' to install 2PC stored procedures.", "%s"
+3426 = "Error executing script '%1!' to install 2PC stored procedures.", "%s"
+3427 = "sybsystemdb database configuration", ""
+3428	= "The table sybsystemdb..spt_committab does not exist.", ""
+3429 = "Sybase advises against putting the '%1!' database and the log on the same device since this can make recovery impossible if that disk fails.", "%s"
+3430 = "The Sybase Server cannot be upgraded until information about the sybsystemdb database is entered.",	 ""
+3431	= "sybsystemdb database created.",			""
+3432	= "Failed to create the sybsystemdb database.",	""
+3500	= "CONFIGURE DEFAULT XP SERVER",	 ""
+3501	= "Configure Default XP Server",	 ""
+3502		= "CONFIGURE DEFAULT XP SERVER", ""
+3503		= "",	 ""
+3504		= "SET THE ADAPTIVE SERVER'S XP SERVER",	 ""
+3505		= "\
+1. Configure XP Server's interface file entry\\n\\nSelect this option to enter \
+the listener service information of a default XP Server that this Adaptive Server \
+will use for extended stored procedures. \\n\\n* \
+Control Keys *\\n\\nPress Ctrl-a or Ctrl-x to exit this \
+screen. Auditinit will return to the previous menu.  You can repeat Ctrl-x to \
+return to previous menus and exit auditinit to the operating system \
+prompt.",	 ""
+3506	= "Configure XP Server's interface file entry", ""
+3507 = "The Sybase Server cannot be upgraded until information about the XP Server is entered.",	 ""
+3508	= "update XP Server entry in interfaces file",	""
+3509		= "set the XP Server for the Adaptive Server", ""
+3510	= "Failed to set the XP Server.", ""
+3601	= "Configure a new Adaptive Server",	 ""
+3602	= "Configure an existing Sybase Server",	 ""
+3603 = "Upgrade an existing Sybase Server",  ""
+3611		= "Enter the name of the new Adaptive Server (default is '%1!'): ",	 "%s"
+3612		= "Adaptive Server name: ",	 ""
+3651			= "Complete",	 ""
+3652			= "Incomplete",	 ""
+3653			= "Changed",	 ""
+3654			= "Unchanged",	 ""
+3661		= "There is no interfaces file entry for '%1!'.",	 "%s"
+3662		= "The interfaces file entry for '%1!' does not have any listeners.",	 "%s"
+3663		= "Execute the Sybase Server Configuration now? ",	 ""
+3664	= "Are you sure you want to cancel? ",	 ""
+3665	= "CONFIGURE SERVER'S INTERFACES FILE ENTRY",	 ""
+3666	= "CONFIGURE DEFAULT BACKUP SERVER",	 ""
+3667	= "Some Adaptive Server configuration screens were never entered.",	 ""
+3668	= "Select one of the following servers:",	 ""
+3669	= "IS THIS A PRIMARY INSTALLATION?                         ", ""
+3670	= "Configure Backup Server For Secure SQL Server? ", 	""
+3671		= "The Sybase Server is down.  Would you like to boot it now? ",	 ""
+3672		= "Enter the name of a Sybase Server user account that has SA privileges (default is '%1!'): ",	 "%s"
+3673		= "Enter the password to this account: ",	 ""
+3674		= "SA Account: ",	 ""
+3675	= "SA Password: ",	 ""
+3676		= "Server '%1!' is a pre-4.8 Sybase Server.  It must be upgraded to at least version 4.8 before being used with auditinit.",	 "%s"
+3677	= "Unable to determine the version of Sybase Server '%1!'.",	 "%s" 
+3678			= "Please reenter the account and/or password for server '%1!' and try again.", "%s"
+3679		= "Must use SA account to upgrade pre-system-10 server, please try again.", ""
+3680		= "Server '%1!' is a '%2!' Sybase Server.  It must be upgraded to at least version '%3!' before being used with auditinit.",	"%s %s %s" 
+3681	= "Test Sybase Server upgrade eligibility now",	 ""
+3682	= "Upgrade Sybase Server now",	 ""
+3683	= "Server '%1!' passed preupgrade eligibility test.",	"%s"
+3684	= "Server '%1!' failed preupgrade eligibility test.  See log for more information.",	"%s"
+3685    = "Check for reserved word conflicts", ""
+3686          = "Reserved word check passed, there are no conflicts with Adaptive Server reserved words.", ""
+3687      = "Warning: %1! conflicts with 12.0 reserved words were found.  Sybase suggests that you resolve these conflicts before upgrading the Sybase Server.  Run 'sp_checkreswords' on each database for more information.", "%d"
+3688 = "Warning: %1! conflicts with 12.0 reserved words where found.  Sybase suggests that you resolve these conflicts before upgrading the Sybase Server.  See file '%2!' for more information.", "%d %s"
+3689 = "The Sybase Server cannot be upgraded until information about the sybsystemprocs database is entered.",	 ""
+3691       = "Enter the pathname of the Adaptive Server's master device (default is '%1!'): ",  "%s"
+3692       = "Enter the size of the Adaptive Server's master device in megabytes: ", ""
+3693     = "Should the master device be a contiguous file? (default is '%1!') ",         "%s"
+3694    = "Master Device: ",     ""
+3695    = "Size (Meg): ",        ""
+3696  = "Contiguous: ",        ""
+3697	= "The log file for sp_checkreswords output is '%1!'.",	"%s"
+3698		= "Reserved Words Used as Database Objects for Database '%1!'", "%s"
+3699		= "The log file for query tree remapping output is '%1!'.", "%s"
+3700	= "Remap the query trees in all databases", ""
+3701	= "Release directory for previous release", ""
+3702		= "You must drop and recreate %1! %2!.%3!.%4!, object id %5!, that failed remapping.", "%s %s %s %s %d"
+3703		= "Remapping query trees in database, '%1!'.", "%s"
+3704		= "Remapping object, '%1!'.", "%s"
+3705		= "Terminating remapping of query trees due to %1! errors in database, '%2!'", "%d %s"
+3706		= "Remapping of all query trees on server, '%1!', succeeded.", "%s"
+3707		= "Remapping of %1! query trees on server, '%2!', failed.  See '%3!' for more details.", "%d %s %s"
+3711		= "Enter the pathname of the Adaptive Server's errorlog (default is '%1!'): ",	 "%s"
+3712		= "Adaptive Server errorlog: ",	 ""
+3713	= "Enter the NEW pathname of the Adaptive Server's errorlog (default is '%1!'): ",	 "%s"
+3721		= "Enter the pathname of the Adaptive Server's quota file (default is '%1!'): ",	 "%s"
+3722	= "Adaptive Server quota file: ",	 ""
+3731		= "Current default language: ",	 ""
+3732	= "Current default character set: ",	 ""
+3733	= "Current sort order: ",	 ""
+3734		= "Language",	 ""
+3735	= "Select the language you want to install, remove, or designate as the default language.",	 ""
+3736		= "Installed?",	 ""
+3737		= "Remove",	 ""
+3738		= "Install",	 ""
+3739	= "Make default",	 ""
+3740		= "Remove this language? ",	 ""
+3741		= "Install this language? ",	 ""
+3742		= "Make this language the default language? ",	 ""
+3751		= "Character set",	 ""
+3752		= "Select the character set you want to install, remove, or designate as the default character set.",	 ""
+3753		= "Remove this character set? ",	 ""
+3754		= "Install this character set? ",	 ""
+3755	= "Make this character set the default character set? ",	 ""
+3756		= "You must designate one of the listed character sets to be the default character set before you can leave this screen. ",	 ""
+3761		= "Sort Order",	 ""
+3762		= "Chosen",	 ""
+3763		= "Select a sort order.",	 ""
+3771	= "Enter the physical name of the device to use for the sybsecurity database (default is '%1!'): ",	 "%s"
+3772	= "Enter the size of the sybsecurity database in megabytes: ", ""
+3773	= "sybsecurity physical device name: ",	 ""
+3774	= "sybsecurity database size (Meg): ",	 ""
+3775 = "Configure auditing: ",	 ""
+3776 	= "sybsecurity logical device name: ",	""
+3777	= "Enter the logical device name for the sybsecurity database : ", ""
+3778	= "Size of the new device (Meg): ",	""
+3779	= "Enter the size of the new device:", ""
+3780 = "create new device for the sybsecurity database: ",	""
+3781		= "",	 ""
+3782		= "",	 ""
+3783		= "",	 ""
+3784		= "",	 ""
+3785		= "",	 ""
+3786		= "",	 ""
+3790	= "Logical name of the device: ", ""
+3791	= "Device size for auditing: ", ""
+3792	= "Specify the logical name for the device", ""
+3793	= "Specify the size to be allocated for the audit database", ""
+3800		= "SET THE SYBASE SERVER'S BACKUP SERVER",	 ""
+3801		= "",	 ""
+3802		= "SET THE SYBASE SERVER'S BACKUP SERVER",	 ""
+3803	= "\
+1. Sybase Server Backup Server name\\n\\nSelect this option to enter the \
+name of a default Backup Server that this Sybase Server will use for \
+database dumping and loading.  The default value is SYB_BACKUP.\\n\\n\
+Note that although you specify the name of a Backup Server in this \
+screen\, that Backup Server may not yet exist.  If you have not \
+configured the default Backup Server\, do so after you have succesfully \
+configured this Sybase Server.  Be sure to create the Backup Server with \
+the same default Backup Server name you specify on this screen.  See \
+your SYBASE Adaptive Server installation guide for more \
+information.\\n\\n* \
+Control Keys *\\n\\nPress Ctrl-a to accept the name of the default \
+Backup Server that is currently displayed.\\n\\nPress Ctrl-x to exit \
+this screen and cancel any changes you have made to the screen. \
+Auditinit will return to the previous menu.  You can repeat Ctrl-x to \
+return to previous menus and exit auditinit to the operating system \
+prompt.",	 ""
+3804		= "Enter the name of the Sybase Server's Backup Server (default is '%1!'): ",	 "%s"
+3805		= "Sybase Server Backup Server name: ", ""
+3806	= "\
+Sybase Server Backup Server name\\n \\nSelect this option to enter the \
+name of a default Backup Server that this Sybase Server will use for \
+database dumping and loading.  The default value is SYB_BACKUP.\\n \\n\
+Note that although you specify the name of a Backup Server in this \
+screen\, that Backup Server may not yet exist.  If you have not \
+configured the default Backup Server\, do so after you have succesfully \
+configured this Sybase Server.  Be sure to create the Backup Server with \
+the same default Backup Server name you specify on this screen.  See \
+your Installation Guide for more \
+information.\\n \\n* Continue to Next Screen *\\n \\nPress <F10> to accept \
+the name of the default Backup Server that is currently displayed.  \
+Auditinit will return to the previous menu.",	 ""
+3850	= "Configure a new Adaptive Server (Express Mode)",	 ""
+3851	= "Configure a new Adaptive Server (Normal Mode)",	 ""
+3852      = "Master Device path/name: ",	 ""
+3853      = "   size (Meg): ",	 ""
+3854 = "System Procedure device path/name: ",	""
+3855  = "   logical name: ",	""
+3856     = "   size (Meg): ",	""
+3857	      = "Errorlog path/name: ",	 ""
+3859	= "Registry entry for server name '%1!' already exists.", "%s"
+3860	= "Current default language:     ",	 ""
+3861	= "Current default character set:",	 ""
+3862	= "Current sort order:           ",	 ""
+3863 		= "update Sybase Server entry in registry",	"" 	
+3864		= "start the Sybase Server",	""	
+3865		= "shutdown the Sybase Server",	""	
+3866		= "could not create Service Control Manager entry for Sybase Server '%1!'. Operating system returned error: '%2!'",	"%s%s"
+3867		= "The Sybase Server is stopped. Would you like to start it ?",	""	
+3868		= "Invalid login. Please try again.",	""	
+3869 		= "update XP Server entry in registry",	"" 	
+3870			= "configure event logging",	"" 	
+3871	= "Cannot determine the Sybase Server's event logging enabled/disabled flag.",		""
+3872	= "Cannot determine the Sybase Server's event log computer name.",		""
+4000		= "Validation function for yes/no check called with NULL pointer.", ""
+4001		= "Validation function for device name called with NULL pointer.", ""
+4002	= "Validation function for companion server name called with NULL pointer.", ""
+4003	= "Server name '%1!' is too long. Maximum allowed length is %2! characters.", "%s %d"
+4004	= "Server name was not supplied.",""
+4005	= "Server name '%1!' is not valid. Server names may include only alphanumeric Roman characters or punctuation marks.", "%s"
+4010		= "Validation function for retry frequency called with NULL pointer.", ""
+4011 	= "Retry frequency '%1!' is not a number.", "%s"
+4012		= "Validation function for delay interval called with NULL pointer.", ""
+4013	= "Delay interval '%1!' is not a number.", "%s"
+4014	= "Unable to generate internal list for protocol validation check.",""
+4015	= "No protocols detected in protocol list during protocol validation check.",""
+4017	= "Protocol '%1!' is not valid.","%s"
+4019	= "Unable to generate internal list for entry name validation check.", ""
+4020	= "No entry names detected in entry name list during entry name validation check.", ""
+4021	= "Unable to generate internal list for hostname during hostname validation check.", ""
+4022	= "No hostnames detected in hostname list during hostname validation check.",""
+4024	= "Host '%1!' does not exist.", "%s"
+4026	= "Unable to generate internal list for portlist validation check.", ""
+4027 = "The protocol attribute has not been set prior to calling the portlist validation check.", ""
+4028 = "Unable to generate internal list for protocols during the portlist validation check.", ""
+4030	= "No ports detected in port list during portlist validation check.", ""
+4031 = "Detected fewer protocols than ports during port list validation check: list should have the same number of elements.", ""
+4032	= "Validation function for SA login called with NULL pointer.", ""
+4033	= "The System Administrator login must be non-null.", ""
+4034	= "Validation function for SA Password called with NULL pointer.", ""
+4035	= "SA password is too long.  Maximum length is %1! characters.","%d"
+4036 = "",	""
+4037	= "Charset '%1!' is not valid.", "%s"
+4038	= "Validation function for character set called with NULL pointer.", ""
+4039	= "Language '%1!' is not valid.", "%s"
+4040	= "Validation function for language called with NULL pointer.", ""
+4041 = "The character set attribute must be defined before the validation function for sort order is called.", ""
+4042 = "No character sets detected in charset list during character set validation check.",""
+4043 = "The language attribute must be defined before the validation function for character sets is called.", ""
+4044	= "No languages detected in language list during language validation check.",""
+4045  	= "Character set '%1!' is not valid.","%s"
+4046 	= "Language '%1!' is not valid.", "%s"
+4047 = "Unable to generate internal list during add charset validation check.", ""
+4048 = "Unable to generate internal list during remove charset validation check.", ""
+4049 = "Unable to generate internal list during add language validation check.", ""
+4050 = "Unable to generate internal list during remove language validation check.", ""
+4052 = "Sort Order '%1!' is invalid.", "%s"
+4053	= "Validation function for sort ordercalled with NULL pointer.",""
+4054 = "", ""
+4055	= "Value '%1!' must be 'yes' or 'no'.", "%s"
+4058 = "'%1!' is too long. Maximum allowed length is %2! characters.", "%s %d"
+4059 = "'%1!' is a regular file that already exists. It will be overwritten.", "%s"
+4060	= "Device file '%1!' must have read and write permissions.", "%s"
+4061 = "'%1!' is a block device which is not recommended for a Server device.  Please use a character device.", "%s"
+4062 	= "Device '%1!' is not a disk device.", "%s"
+4063	= "Could not obtain directory component of '%1!'.", "%s"
+4064	= "Fully qualified pathname is required for the device.", ""
+4065	= "Error on directory '%1!'.","%s"
+4066	= "'%1!' is not a directory: cannot be used for a device.", "%s"
+4067 = "Directory '%1!' must have read, write and execute permissions if it is to be used for a Sybase device.","%s"
+4068 = "Device '%1!' must have read and write permissions.", "%s"
+4069		  = "Asynch I/O is not enabled.  Please install asynch I/O.", ""
+4070 = "Device '%1!' is a block device which is not recommended because asynch I/O is not enabled.  Please enable asynch I/O or choose a character device.", "%s"
+4075 = "'%1!' is not a valid number. Numbers may include only numeric Roman characters in the range from '0' to '9'.", "%s"
+4076  = "Audit device size '%1!' is too small: the minimum size permitted is '%2!' megabytes.", "%s %.2f"
+4077 = "Master device size '%1!' is too small: the minimum size permitted is '%2!' megabytes.", "%s %.2f"
+4079	= "Sybase Server errorlog file not specified.", ""
+4080	= "BACKUP SERVER errorlog file not specified.", ""
+4081 	= "Quota file not specified.", ""
+4082 		= "The '%1!' attribute was not set.", "%s"
+4083 	= "Adding a new server while upgrading is not allowed", ""
+4085 	= "Specifying new configuration while upgrading is not allowed.", ""
+4086 = "\
+'%1!' is a regular file which is not recommended for a Server device.", "%s"
+4087 	= "'%1!' is not a valid Sybase Server name.", "%s"
+4088 	= "'%1!' is not a valid Backup Server name.", "%s"
+4089 = "Backup Server name was not supplied.",""
+4090 = "'%1!' is a regular file that already exists; please remove it if you want to use it as a device file", "%s"
+4091 = "'%1!' is a character device which is not recommended for a Server device.  Please use a block device.", "%s"
+4092 = "Backup Server '%1!' does not exist in the interfaces file.  Be sure to create it if you intend to use the Sybase Server's backup/restore functionality.", "%s"
+4093 = "Device size '%1!' is invalid: '%2!' has a maximum of '%3!' megabytes of free space", "%s %s %.2f"
+4094 		= "'%1!' is an invalid retry value.", "%s" 
+4095 		= "'%1!' is an invalid delay value.", "%s"
+4096	= "", ""
+4200 = "Cannot create a new device for the '%1!' database unless the physical device name of the device is set.", "%s"
+4201  = "Cannot create a new device for the '%1!' database unless the logical device name of the device is set.", "%s"
+4202	= "Cannot create a new device for the '%1!' database unless the size of the device is set.", "%s"
+4203 = "Physical device name '%1!' is invalid: a maximum of 127 characters is permitted.", "%s"
+4204  = "System device name '%1!' is invalid: a maximum of 127 characters is permitted.", "%s"
+4205 = "Sybase advises against putting the '%1!' database on the master device. If you do put '%1!' on the master device please make sure that the master device is large enough for this database.", "%s"
+4206 = "'%1!' database size '%2!' is invalid: the minimum size permitted is %3! megabytes.", "%s %d %d"
+4207 = "'%1!' database size ('%2!' megabytes) is larger than the size of the device on which it is to be placed ('%3!' megabytes).", "%s %s %s"
+4208 = "The '%1!' device size ('%2!' megabytes) is too small for '%1!' database ('%3!' megabytes).", "%s %s %s"
+4209	= "Ignoring request to create a new device for the %1! database: %1! database already exists.  If you want to create a new %1! database please delete the existing one first.", "%s"
+4210	= "Existing %1! database is too small ('%2!' megabytes): the minimum size permitted is '%3!' megabytes.", "%s %.2f %.2f"
+4211		= "Cannot put %1! database on device '%2!': device is not a data device.", "%s %s"
+4212		= "Cannot put %1! database on device '%2!': device does not have the '%3!' megabytes of free space that is requested.", "%s %s %s"
+4213		= "Cannot put %1! database on device '%2!': device does not exist.  Either create the device yourself or indicate to auditinit that you want it to be created automatically.", "%s %s"
+4220 	= "You must supply a value for the physical device name if you intend to create it.",	""
+4221	= "You must supply a value for the size of physical device if you intend to create it.",	""
+4222	= "You must supply a value for the size of '%1!' database.", "%s"
+4223	= "You must supply a value for the name of the device on which the '%1!' database is to reside.", "%s"
+4224	= "The device name, '%1!', is already in use.  Please enter a different name to avoid overwriting the existing device.", "%s"
+4225 = "You cannot use same logical device for two of the auditing devices", ""
+4226	= "The device '%1!' not found in the server. If you want to use an exsiting device, make sure a device of that name exists in the server", "%s"
+5000	= "Unable to locate runserver file for '%1!' in the Sybase 4.2 release directory '%2!'", "%s %s"
+5001	= "Unable to read information for Server '%1!' in Sybase 4.2 release directory '%2!' from runserver file '%3!'", "%s %s %s"
+5002	= "Unable to determine location of Master Device for Server '%1!' in the Sybase 4.2 release directory '%2!'. Preupgrade failed", "%s %s"
+5003	= "Release directory '%1!' is not a valid Sybase 4.2 release directory", "%s"
+5004 = "Release directory '%1!' is a post - Sybase 4.2 release directory", "%s"
+5005 = "Verifying that Master Device '%1!' is a Sybase 4.2 Master Device", "%s"
+5006 = "Unable to shutdown the Sybase Server '%1!'", "%s"
+5007 = "Unable to locate temporary file to verify Version Level of the Master Device '%1!'", "%s"
+5008 = "Unable to determine Sybase Version Level for Master Device '%1!'", "%s"
+5009 = "The Master Device '%1!' is not a Sybase 4.2 Master Device", "%s"
+5010 = "Shutting down the Sybase Server '%1!'", "%s"
+5011 = "Unable to open file '%1!'.", "%s"
+5012 = "Booting Sybase 4.2 Server '%1!'", "%s"
+5013 = "Unable to boot Sybase 4.2 Server '%1!'", "%s"
+5014 = "Verifying that all databases have 'no checkpoint on recovery' turned off", ""
+5015 = "Database '%1!' has 'no checkpoint on recovery' turned on", "%s"
+5016 = "Please turn off the checkpoint on recovery option in the above databases and then try upgrading", ""
+5017 = "Saving 4.2 configuration and changing to System 12.0", ""
+5018 = "Unable to run the SQL Script '%1!' to save the 4.2 configuration and change to System 12.0", "%s"
+5019 = "Configuration values successfully changed to System 12.0", ""
+5020 = "Truncating the log in all databases", ""
+5021 = "Unable to run the SQL Script '%1!' to truncate the log.", "%s"
+5022 = "Restoring 4.2 configuration", ""
+5023 = "Modifying the configuration area on '%1!' to enable a System 12.0 Sybase Server to boot", "%s"
+5024 = "Unable to modify the configuration area on '%1!'", "%s"
+5025 = "Booting a System 12.0 Sybase Server to try a trial upgrade", ""
+5026 = "Unable to write the runserver file for Server '%1!' in the System 12.0 release directory '%2!'", "%s %s"
+5027 = "Unable to boot System 12.0 Sybase Server '%1!' in release directory '%2!'", "%s %s"
+5028 = "Trial Upgrade has failed. Please check the errorlog '%1!' for additional details", "%s"
+5029 = "Restoring the 4.2 configuration area on '%1!'", "%s"
+5030 = "Unable to restore the  4.2 configuration area on '%1!'", "%s"
+5031 = "Saving Master Device '%1!' configuration values", "%s"
+5032 ="Unable to save Master Device '%1!' configuration values", "%s"
+5033 = "Successfully saved Master Device '%1!' configuration values", "%s"
+5034 = "Running script '%1!' to save Database segment information", "%s"
+5035 = "Unable to save database segment information", ""
+5036 = "Successfully saved database segment information", ""
+5037 = "Starting Phase I of Upgrade", ""
+5038 = "Running '%1!' to upgrade system catalogs in Master Database", "%s"
+5039 = "Unable to run script '%1!'", "%s"
+5040 = "System catalogs upgraded to System 12.0", ""
+5041 = "Upgrading system catalogs in user databases", ""
+5042 = "Unable to use the Master Database", ""
+5043 = "Truncating the log in the System Databases", ""
+5044 = "Unable to use database '%1!'. Skipping this database", "%s"
+5045 = "Upgrading Sysindexes columns in database '%1!'", "%s"
+5046 = "Adding Sysgams to database '%1!'", "%s"
+5047 = "Truncating the log in database '%1!'", "%s"
+5048 = "Upgrading Master Device configuration to System 12.0 level", ""
+5049 = "Unable to set Master Device option '%1!'.", "%s"
+5050 = "Unable to determine status of upgrade of allocation structures in the Master Database", ""
+5051 = "Unable to upgrade allocation structures in the Master Database. Please check the errorlog '%1!' for additional details", "%s"
+5052 = "Starting Phase II of Upgrade", ""
+5053 = "Upgrading allocation structures in user databases", ""
+5054 = "Unable to determine status of upgrade of allocation structures in User Databases", ""
+5055 = "Unable to upgrade allocation structures in user databases. Please check the errorlog '%1!' for additional details", "%s"
+5056 = "Starting Phase III of Upgrade", ""
+5057 = "Loading new system error messages", ""
+5058 = "Unable to load new system error messages from '%1!'", "%s"
+5059 = "Starting Phase IV of Upgrade", ""
+5060 = "Upgrade38 completed successfully",""
+5061 = "Successfully changed Master Device configuration",""
+5062 = "Modifying the server's runserver file",""
+5063 = "Booting Server '%1!' to upgrade allocation structures in the Master Database","%s"
+5064 = "Server did not boot. Would you like to try again ?",""
+5065 =  "Checking the status of allocation structures in the Master Database",""
+5066  = "Allocation structures in Master Database successfully upgraded",""
+5068 = "Checking the status of allocation structures in user databases",""
+5069 = "Allocation structures in all user databases successfully upgraded",""
+5070 = "Booting System 12.0 Sybase Server '%1!'  to complete the upgrade","%s"
+5071 = "Installing sp_configure",""
+5072 = "Unable to install sp_configure",""
+5073  = "Running upgrade49",""
+5074 = "Unable to run upgrade49",""
+5075 = "The upgrade49 program completed successfully",""
+5076 = "Starting Phase V of Upgrade", ""
+5077 = "Running upgrade",""
+5078 = "Unable to run upgrade",""
+5079 = "The upgrade program completed successfully",""
+5080 = "Unable to run Installmaster",""
+5081 = "Upgrade to System 12.0 completed successfully",""
+5082 =  "Have you backed up all your databases ?",""
+5083 =  "Could not get the version of the current device\n", ""
+5084	= "Configure Omni Connect",	""
+; End of section.

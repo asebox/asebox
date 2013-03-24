@@ -1,0 +1,332 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=chinese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "安全驱动级错误."
+
+2 = SCLE_INITED, "SCL 已经被初始化."
+
+3 = SCLE_MEMALLOC, "分配内存失败."
+
+4 = SCLE_MUTXALLOC, "分配mutex 失败."
+
+5 = SCLE_RMAN, "RMAN API错误."
+
+6 = SCLE_LMAN, "LMAN API错误."
+
+7 = SCLE_VERSION, "非法的SCL-Library 版本."
+
+8 = SCLE_PROPCMD, "指定非法的属性命令."
+
+9 = SCLE_PROPERTY, "指定非法的属性."
+
+10 = SCLE_PROP_RO, "只读属性."
+
+11 = SCLE_PROP_OF, "属性缓冲溢出."
+
+12 = SCLE_OPEN, "不能打开安全驱动."
+
+13 = SCLE_LOAD, "不能装载安全驱动."
+
+14 = SCLE_INTLHOME, "不能确定SYBASE 根目录."
+
+15 = SCLE_INTLOPEN, "不能打开配置文件."
+
+16 = SCLE_INTLNOENT, "不能在配置文件中发现SCL 记录项."
+
+18 = SCLE_DRVLOAD, "装载指定安全驱动失败."
+
+19 = SCLE_SESSBOUND, "捆绑会话."
+
+20 = SCLE_SESSUBOUND, "解绑会话."
+
+21 = SCLE_CREDACT, "凭证正在使用."
+
+22 = SCLE_CRED_NA, "凭证没激活."
+
+23 = SCLE_UNSUPPORT, "不支持该命令."
+
+24 = SCLE_MUTEXLOCK, "Mutex 锁调用失败."
+
+25 = SCLE_MECHNOTFND, "指定的安全机制没找到."
+
+26 = SCLE_CFGERR, "配置文件错误."
+
+27 = SCLE_CREDUSED, "凭证处理没删除."
+
+28 = SCLE_DRIVUSED, "驱动没被关闭."
+
+29 = SCLE_MECHUSED, "安全机制处理没被删除."
+
+30 = SCLE_MECHOIDNOTFND, "安全机制OID 没找到."
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "内存分配失败."
+
+2 = MSSPE_SRVNOTSUPP, "不支持要求的安全服务."
+
+3 = MSSPE_PRINCIPAL, "指定的安全名未知或者它不是属主."
+
+4 = MSSPE_PROVIDER, "安全提供器没找到或者提供器初始化失败."
+
+5 = MSSPE_INITSTR, "非法的驱动初始化字符串."
+
+6 = MSSPE_PROPCMD, "非法的安全属性命令."
+
+7 = MSSPE_PROPNOTSUPP, "非法的安全属性名."
+
+8 = MSSPE_CONTEXT, "找到坏的驱动上下文结构."
+
+9 = MSSPE_OPNOTSUPP, "不支持驱动入口."
+
+10 = MSSPE_PROPVALLEN, "属性值缓冲长度太小."
+
+11 = MSSPE_TOKEN, "非法的安全令牌."
+
+12 = MSSPE_HANDLE, "非法的安全处理."
+
+13 = MSSPE_NAMETOOLONG, "机制/原理/目标名太长."
+
+14 = MSSPE_PACKAGE, "不支持指定的安全包."
+
+15 = MSSPE_INTERNAL, "发生非期望的内部错误."
+
+16 = MSSPE_DENIED, "安全会话要求被拒绝."
+
+17 = MSSPE_RMTNAME, "安全目标名没找到或者非法."
+
+18 = MSSPE_PROVIDERERR, "安全服务提供器内部错误%1! 发生."
+
+19 = MSSPE_MSGALTERED, "安全消息改变- 签名校验失败."
+
+20 = MSSPE_MSGSEQ, "遇到越序消息."
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "内存分配失败."
+
+2 = NDSE_SRVNOTSUPP, "不支持要求的安全服务."
+
+3 = NDSE_PRINCIPAL, "指定非法的原理名."
+
+4 = NDSE_PROVIDER, "NDS 安全提供器没找到或者初始化失败."
+
+5 = NDSE_INITSTR, "非法的初始化字符串."
+
+6 = NDSE_PROPCMD, "非法的安全属性命令."
+
+7 = NDSE_PROPNOTSUPP, "非法的安全属性名."
+
+8 = NDSE_CONTEXT, "指定坏的驱动上下文结构."
+
+9 = NDSE_OPNOTSUPP, "不支持指定的安全驱动入口."
+
+10 = NDSE_PROPVALLEN, "属性值缓冲太小."
+
+11 = NDSE_DITBASE, "指定非法的DIT 基值."
+
+12 = NDSE_VERNOTSUPP, "驱动不支持指定版本."
+
+13 = NDSE_CREDS, "非法的凭证或凭证用法类型."
+
+14 = NDSE_INITDITBASE, "非法的初始 DIT 基值."
+
+15 = NDSE_NAMETOOLONG, "NDS 原理名太长."
+
+16 = NDSE_NWCALLSINIT, "NetWare 例程NWCallsInit() 失败(%1!)."
+
+17 = NDSE_NWDSCCTX, "NetWare 例程NWDSCreateContext() 失败(%1!)."
+
+18 = NDSE_INIT, "NDS 初始化 失败(%1!)."
+
+19 = NDSE_NDS, "NDS 调用失败(%1!)."
+
+20 = NDSE_RMTNAME, "安全目标名没找到或者非法."
+
+21 = NDSE_CHANNELID, "指定通道标识符没找到或者非法."
+
+22 = NDSE_BIND, "安全会话捆绑失败."
+
+23 = NDSE_PROVIDERVER, "NDS 安全提供器版本不匹配."
+
+24 = NDSE_NWDSTREE, "指定非法的目录名."
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "内存分配失败."
+
+2 = DCEE_SRVNOTSUPP, "不支持要求的安全服务."
+
+3 = DCEE_PRINCIPAL, "指定的安全原理名未知或者它不是属主."
+
+4 = DCEE_BUFOF, "属性值缓冲溢出错误."
+
+5 = DCEE_INITSTR, "非法的驱动初始化字符串."
+
+6 = DCEE_PROPCMD, "非法的安全属性命令."
+
+7 = DCEE_PROPNOTSUPP, "非法的安全属性名."
+
+8 = DCEE_CONTEXT, "找到坏的驱动上下文结构 (第二状态%1!)."
+
+9 = DCEE_OPNOTSUPP, "不支持驱动入口."
+
+10 = DCEE_PROPVALLEN, "属性值缓冲长度太小."
+
+11 = DCEE_TOKEN, "非法的安全令牌(第二状态%1!)."
+
+12 = DCEE_HANDLE, "非法的安全处理."
+
+13 = DCEE_NAMETOOLONG, "机制/原理/目标名太长."
+
+14 = DCEE_CHKSIGN, "签名校验失败(第二状态%1!)."
+
+15 = DCEE_INTERNAL, "非期望的内部错误发生."
+
+16 = DCEE_DENIED, "安全会话要求被拒绝(第二状态%1!)."
+
+17 = DCEE_RMTNAME, "安全目标名没找到或者非法(第二状态%1!)."
+
+18 = DCEE_PROVIDERERR, "安全服务提供器内部错误%1! 发生."
+
+19 = DCEE_MSGALTERED, "安全消息改变- 签名校验失败."
+
+20 = DCEE_MSGSEQ, "遇到越序消息 (第二状态%1!)."
+
+21 = DCEE_BADNAMETYPE, "找到非法的安全名类型 (第二状态%1!)."
+
+22 = DCEE_BADCHANBIND, "找到非法的/不匹配的通道捆绑 (第二状态%1!)."
+
+23 = DCEE_CREDEXPIRED, "参照凭证过期(第二状态%1!)."
+
+24 = DCEE_BADCRED, "凭证一致性检查失败(第二状态%1!)."
+
+25 = DCEE_OLDTOKEN, "指定安全令牌已被使用(第二状态%1!)."
+
+26 = DCEE_DUPTOKEN, "指定安全令牌已被处理(第二状态%1!)."
+
+27 = DCEE_CTXTEXPIRED, "安全上下文已经过期(第二状态%1!)."
+
+28 = DCEE_BADNAME, "传入非法的安全名 (第二状态%1!)."
+
+29 = DCEE_REGIDENTITY, "注册例程的上下文接受标识失败(第二状态%1!)."
+
+30 = DCEE_BADMECH, "指定机制不支持或者难以获得(第二状态%1!)."
+
+31 = DCEE_BADBUF, "找到非法的安全缓冲 (第二状态%1!)."
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "内存分配失败."
+
+2 = KRBE_SRVNOTSUPP, "不支持要求的安全服务."
+
+3 = KRBE_PRINCIPAL, "指定安全原理名未知或者它不是属主."
+
+4 = KRBE_BUFOF, "属性值缓冲溢出错误."
+
+5 = KRBE_INITSTR, "非法的驱动初始化字符串."
+
+6 = KRBE_PROPCMD, "非法的安全属性命令."
+
+7 = KRBE_PROPNOTSUPP, "非法的安全属性名."
+
+8 = KRBE_CONTEXT, "找到坏的驱动上下文结构 (第二状态%1!)."
+
+9 = KRBE_OPNOTSUPP, "不支持驱动入口."
+
+10 = KRBE_PROPVALLEN, "属性值缓冲长度太小."
+
+11 = KRBE_TOKEN, "非法的安全令牌(第二状态%1!)."
+
+12 = KRBE_HANDLE, "非法的安全处理."
+
+13 = KRBE_NAMETOOLONG, "机制/原理/目标名太长."
+
+14 = KRBE_CHKSIGN, "签名校验失败(第二状态%1!)."
+
+15 = KRBE_INTERNAL, "发生非期望的内部错误."
+
+16 = KRBE_DENIED, "安全会话要求被拒绝(第二状态%1!)."
+
+17 = KRBE_RMTNAME, "安全目标名没找到或者非法(第二状态%1!)."
+
+18 = KRBE_PROVIDERERR, "发生安全服务提供器内部错误%1!."
+
+19 = KRBE_MSGALTERED, "安全消息改变- 签名校验失败."
+
+20 = KRBE_MSGSEQ, "遇到越序消息 (第二状态%1!)."
+
+21 = KRBE_BADNAMETYPE, "找到非法的安全名类型 (第二状态%1!)."
+
+22 = KRBE_BADCHANBIND, "找到非法的/不匹配的通道捆绑 (第二状态%1!)."
+
+23 = KRBE_CREDEXPIRED, "参照凭证过期(第二状态%1!)."
+
+24 = KRBE_BADCRED, "凭证一致性检查失败(第二状态%1!)."
+
+25 = KRBE_OLDTOKEN, "指定安全令牌已被使用(第二状态%1!)."
+
+26 = KRBE_DUPTOKEN, "指定安全令牌是已被处理(第二状态%1!)."
+
+27 = KRBE_CTXTEXPIRED, "安全上下文已经过期(第二状态%1!)."
+
+28 = KRBE_BADNAME, "传入非法的安全名 (第二状态%1!)."
+
+29 = KRBE_REGIDENTITY, "注册例程的上下文接受标识失败(第二状态%1!)."
+
+30 = KRBE_BADMECH, "指定机制不支持或者难以获得(第二状态%1!)."
+
+31 = KRBE_BADBUF, "找到非法的安全缓冲 (第二状态%1!)."
+
+; end of CyberSAFE Kerberos driver error strings
+;
+

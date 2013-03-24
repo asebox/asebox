@@ -1,0 +1,182 @@
+; comment character is semicolon.
+
+
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "No es posible asignar memoria."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "Error general "
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "nivel blk"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "Error de usuario"
+
+2 = ZZZZZ, "Error interno en la librería BLK"
+
+3 = ZZZZZ, "Error en la librería CT"
+
+4 = ZZZZZ, "Error del administrador asíncrono"
+
+5 = ZZZZZ, "Error en la librería common"
+
+6 = ZZZZZ, "Error de gestión de memoria"
+
+7 = ZZZZZ, "Error de SQL Server"
+
+8 = ZZZZZ, "Error en el formato de los datos del cliente"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk correcto"
+
+1 = ZZZZZ, "No es posible llamar a la API %1! desde este estado: %2!""
+
+2 = ZZZZZ, "API %1! sólo se puede usar para una operación de bulk copy in"
+
+3 = ZZZZZ, "No es posible llamar a API %1!  desde una función de callback (estado = %2!)"
+
+4 = ZZZZZ, "El parámetro %1! tiene un valor incorrecto de %2!"
+
+5 = ZZZZZ, "El campo %1! de la estructura CS_DATAFMT tiene un valor incorrecto \
+de %2!."
+
+6 = ZZZZZ, "El parámetro %1! no puede ser NULL."
+
+7 = ZZZZZ, "El buffer indicado de %1! bytes excede la longitud total del \
+valor que se va a transferir."
+
+8 = ZZZZZ, "La precisión debe ser mayor o igual que la escala"
+
+9 = ZZZZZ, "No es posible asociar un valor %1! NULL a un tipo de datos %2!."
+
+10 = ZZZZZ, "No es posible asociar una columna de tabla de tipo %1! a una variable \
+de programa de tipo %2!."
+
+11 = ZZZZZ, "No es posible realizar textxfer y array binding a la vez."
+
+12 = ZZZZZ, "Todas las columnas deben tener el mismo número de ocurrencias para \
+poder asociarlas a una matriz."
+
+13 = ZZZZZ, "No es posible encontrar un CS_TYPE equivalente para este tipo de datos TDS \
+%1!"
+
+14 = ZZZZZ, "Error cuando la rutina CT_Lib %1! llamó."
+
+15 = ZZZZZ, "Utilice la dirección CS_BLK_IN o CS_BLK_OUT para una operación de bulk copy."
+
+16 = ZZZZZ, "Utilice la opción CS_BLK_ALL para finalizar una operación de bulk copy out."
+
+17 = ZZZZZ, "Estado del proceso %1! erróneo para %2!. No debería estar aquí."
+
+18 = ZZZZZ, "Estado erróneo para %1! .No debería estar aquí."
+
+19 = ZZZZZ, "La columna y el valor por defecto %1! enviados por el servidor no son \
+iguales."
+
+20 = ZZZZZ, "Estado erróneo para %1!, pero puede recuperarse. Continua el proceso."
+
+21 = ZZZZZ, "El número de columnas esperadas del servidor no coincide \
+con el recibido: %1!."
+
+22 = ZZZZZ, "La aplicación debe iniciar la sesión con la propiedad %1! activa."
+
+23 = ZZZZZ, "Las versiones de la librería de bulk copy y de CT_Library son incompatibles."
+
+24 = ZZZZZ, "No hay ningún valor ni valor por defecto disponible y no se permiten valores NULL. \
+col = %1! fila = %2!."
+
+25 = ZZZZZ, "Error en la rutina de conversión. Condición de desbordamiento. \
+col = %1! fila = %2!."
+
+26 = ZZZZZ, "Error en la rutina de conversión. Error de sintaxis. \
+col = %1! fila = %2!."
+
+27 = ZZZZZ, "Orden de asociación erróneo. Una columna asociada sigue a una columna \
+marcada para textxfer."
+
+28 = ZZZZZ, "El tamaño total de textxfer %1! sobrepasa la longitud de los datos de entrada %2!"
+
+29 = ZZZZZ, "El número de valores por defecto %1! no coincide con el número por defecto %2!"
+
+30 = ZZZZZ, "Devolución de CS_END_RESULTS para el archivo solicitado para \
+la operación de bulk copy out. El archivo puede estar vacío."
+
+31 = ZZZZZ, "El parámetro %1! debe ser NULL."
+
+32 = ZZZZZ, "El parámetro %1! debe ser CS_UNUSED."
+
+33 = ZZZZZ, "No es posible establecer un número de filas mayor que el definido para el array binding."
+
+34 = ZZZZZ, "Las opciones BLK_IDENTITY y BLK_IDSTARTNUM no pueden activarse a la vez."
+
+35 = ZZZZZ, "El valor de la propiedad %1! no puede recuperarse porque no ha sido asignado."
+
+36 = ZZZZZ, "Error de conversión o adición al actualizar el valor inicial de la columna identity."
+
+37 = ZZZZZ, "Error al crear el comando insert bulk."
+
+38 = ZZZZZ, "El valor inicial de la columna Identity debe tener una escala de 0."
+
+39 = ZZZZZ, "Error al crear el comando de idioma que obtiene el formato de fila. "
+
+40 = ZZZZZ, "El buffer de %1! bytes es un valor incorrecto, debe ser mayor que cero. "
+
+41 = ZZZZZ, "BCP no pudo crear las filas en la tabla de destino. La columna %1! empezaría en un \
+desplazamiento de más de 8191 bytes; esta ubicación de inicio no se puede representar con precisión en el \
+formato (filas) de la tabla."
+
+42 = ZZZZZ, "Datos truncados al convertir al conjunto de caracteres local. \
+ col = %1! fila = %2!."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

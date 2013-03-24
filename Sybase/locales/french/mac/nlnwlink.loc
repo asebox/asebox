@@ -1,0 +1,76 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nlwnsck.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=french
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Tous droits réservés. \
+L'utilisation, la reproduction et la divulgation du présent document\
+par le gouvernement des Etats-Unis d'Amérique sont régies par le \
+paragraphe (c) (1) (ii) de la clause sur les Droits en matière \
+d'informations techniques, informatiques et logicielles du\
+CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlnwlink]
+
+1 = IPDE_EPDISCON, "Impossible de déconnecter la terminaison - l'erreur est %1!"
+
+2 = IPDE_ACCEPT, "L'erreur %1! a été détectée lors de la validation de la nouvelle connexion"
+
+3 = IPDE_EPCLOSE, "Impossible de fermer la terminaison - l'erreur est %1!"
+
+4 = IPDE_PARSE, "La syntaxe des informations relatives à la connexion est incorrecte"
+
+5 = IPDE_EPCONNECT, "Connexion au serveur impossible - l'erreur est %1!"
+
+6 = IPDE_EPMODE, "Echec lors du changement de mode du pipe - l'erreur est %1!"
+
+7 = IPDE_EVENTOBJ, "Impossible de créer un objet événement - l'erreur est %1!"
+
+8 = IPDE_NPCREATE, "Impossible de créer un pipe nommé - l'erreur est %1!"
+
+9 = IPDE_READ, "Echec lors de la lecture du pipe nommé - l'erreur est %1!"
+
+10 = IPDE_WRITE, "Echec lors de l'écriture dans le pipe nommé - l'erreur est %1!"
+
+11 = IPDE_READOOB, "Erreur lors de la lecture des données OOB - l'erreur est %1!"
+
+12 = IPDE_SOCKET, "Erreur lors de la création d'une connexion - l'erreur est %1!"
+
+13 = IPDE_HOSTNAME, "Erreur lors de la traduction du nom de l'hôte - l'erreur est %1!"
+
+14 = IPDE_EPBIND, "Erreur lors de la liaison de l'adresse locale - l'erreur est %1!"
+
+15 = IPDE_EPLISTEN, "Erreur lors de la création du point de réception - l'erreur est %1!"
+
+16 = IPDE_DRVINIT, "Erreur lors de l'initialisation du lecteur - l'erreur est %1!"
+
+17 = IPDE_SAPSOCKET, "Erreur lors de l'ouverture du socket SAP - l'erreur est %1!"
+
+18 = IPDE_SAPBIND, "Erreur lors de la liaison avec la connexion par socket SAP - l'erreur est %1!"
+
+19 = IPDE_SAPTHREAD, "Erreur lors du démarrage de la tâche SAP - l'erreur est %1!"
+
+20 = IPDE_SAPADDRGET, "Erreur lors de la recherche des informations d'adresse - l'erreur est %1!"
+
+21 = IPDE_SAPMUTEX, "Erreur lors de la création d'un mutex SAP - l'erreur est %1!"
+
+22 = IPDE_SAPTIMEOUT, "Dépassement du délai lors de l'attente d'une réponse SAP - l'erreur est %1!"
+
+; end of insock error strings
+;
+

@@ -1,0 +1,94 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "パスワード："
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "致命的エラー: メモリの割り当てに失敗しました。"
+
+2 = ZZZZZ, "認識されないローカライゼーション・オブジェクトです。デフォルト値 '%1!' を使用します。"
+
+3 = ZZZZZ, "内部エラー: cs_locale() に不正なローカライゼーション・タイプが渡されました。"
+
+4 = ZZZZZ, "1 組の変換テーブルのロード中にエラーが発生しました。"
+
+5 = ZZZZZ, "ローカライゼーション関連構造体と一緒に使用するためにアプリケーションのコンテキストを設定しようとして、エラーが発生しました。"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "致命的なエラー：メモリの割り当てに失敗しました。"
+
+2 = ZZZZZ, "I/O エラー：領域不足のためデータを入力できません。"
+
+3 = ZZZZZ, "エディタの使用に必要なテンポラリ・ファイル '%1!' をオープンできませんでした。"
+
+4 = ZZZZZ, "Unable to invoke the '%1!' editor."
+
+5 = ZZZZZ, "入力ファイル '%1!' をオープンできません。"
+
+6 = ZZZZZ, "出力ファイル '%1!' をオープンできません。"
+
+7 = ZZZZZ, "Isql：不明なパラメータ '%1!'。"
+
+8 = ZZZZZ, "データベース名が長すぎます。"
+
+9 = ZZZZZ, "CS-Library メッセージ・コールバック・ルーチンをインストールできません。"
+
+10 = ZZZZZ, "Client Library を初期化できません。"
+
+11 = ZZZZZ, "Client Library クライアント・メッセージ・コールバック・ルーチンをインストールできません。"
+
+12 = ZZZZZ, "サポートされないデータ型です。"
+
+13 = ZZZZZ, "バッファがいっぱいです。ローの出力を中断します。"
+
+14 = ZZZZZ, "サポートされない結果型です。"
+
+15 = ZZZZZ, "無効なメモリ・ブロック・サイズです。"
+
+16 = ZZZZZ, "無効なメモリ・ハンドルです。"
+
+17 = ZZZZZ, "内部 isql メモリの割り当てエラーです。"
+
+18 = ZZZZZ, "コマンドラインに長すぎる文字列が指定されたため、エディタを起動できません。"
+
+19 = ZZZZZ, "isql アプリケーション・コンテキストが初期化されていません。"
+
+20 = ZZZZZ, "SQL Server に接続されていません。"
+
+21 = ZZZZZ, "コマンド・ハンドルは使用できません。"
+
+22 = ZZZZZ, "バッファ・ファイルをオープンできません。"
+
+23 = ZZZZZ, "ファイルの位置インジケータをファイルの始めにリセットできませんでした。"
+
+24 = ZZZZZ, "コマンド・バッファをクリアできませんでした。"
+
+25 = ZZZZZ, "コマンドを初期化できません。"
+
+26 = ZZZZZ, "コマンド・ハンドルのコマンドをクリアできませんでした。"
+
+27 = ZZZZZ, "変換テーブルのロード中にエラーが発生しました。"
+
+
+

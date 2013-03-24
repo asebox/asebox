@@ -1,0 +1,19 @@
+This is the README file for the SDK/Open Server scripts.
+
+This directory contains the following script(s):
+
+copylibs.bat:
+	As of SDK 15.0 and Open Server 15.0, Sybase library names have
+	changed from lib<name> to libsyb<name> to avoid name clashes
+	with other libraries.
+
+	To allow pre-15.0 applications to continue to work with the
+	renamed shared libraries, this script is provided to copy the
+	new library names to the old ones in %SYBASE%\%SYBASE_OCS%\dll.
+
+	Usage of the script:
+
+	   copylibs.bat { create / remove }
+
+	where 'create' copies the old-named files in $SYBASE/$SYBASE_OCS/dll
+	and 'remove' can be used to delete these files again.

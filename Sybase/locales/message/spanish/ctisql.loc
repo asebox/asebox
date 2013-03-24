@@ -1,0 +1,93 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "Contraseña: "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "Error fatal: Imposible asignar memoria."
+
+2 = ZZZZZ, "Objeto de localización desconocido. Se usará el valor por defecto '%1!'."
+
+3 = ZZZZZ, "Error interno: Se transfirió un tipo de localización incorrectoa cs_locale()."
+
+4 = ZZZZZ, "Error al cargar un par de tablas de conversión."
+
+5 = ZZZZZ, "Se ha producido un error al intentar configurar el contexto de la aplicación para su uso con las estructuras relacionadas con la localización."
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "Error fatal: imposible asignar memoria."
+
+2 = ZZZZZ, "Error de E/S: espacio insuficiente para los datos de entrada."
+
+3 = ZZZZZ, "Imposible abrir el archivo temporal '%1!' para utilizarlo con el editor."
+
+4 = ZZZZZ, "Imposible llamar el editor '%1!'."
+
+5 = ZZZZZ, "Imposible abrir el archivo de entrada '%1!'."
+
+6 = ZZZZZ, "Imposible abrir el archivo de salida '%1!'."
+
+7 = ZZZZZ, "Isql: Parámetro '%1!' desconocido."
+
+8 = ZZZZZ, "Nombre de base de datos demasiado largo."
+
+9 = ZZZZZ, "Imposible instalar la rutina de callback de mensajes de CS-Library."
+
+10 = ZZZZZ, "Imposible inicializar Client-Library."
+
+11 = ZZZZZ, "Imposible instalar la rutina de callback de mensajes del cliente de Client-Library."
+
+12 = ZZZZZ, "Se encontró un tipo de datos no soportado."
+
+13 = ZZZZZ, "Desbordamiento de buffer durante la impresión de la fila."
+
+14 = ZZZZZ, "Tipo de resultado no soportado."
+
+15 = ZZZZZ, "Tamaño de bloque de memoria incorrecto."
+
+16 = ZZZZZ, "Referencia de memoria incorrecta."
+
+17 = ZZZZZ, "Error interno de asignación de memoria de isql."
+
+18 = ZZZZZ, "fila de comando para llamar el editor demasiado larga."
+
+19 = ZZZZZ, "No se inicializó el contexto de una aplicación isql."
+
+20 = ZZZZZ, "No se estableció una conexión con un SQL Server."
+
+21 = ZZZZZ, "No hay referencia de comando disponible."
+
+22 = ZZZZZ, "Imposible abrir el archivo de buffer."
+
+23 = ZZZZZ, "Imposible reinicializar el indicador de posición al principio del archivo."
+
+24 = ZZZZZ, "Imposible borrar el buffer del comando."
+
+25 = ZZZZZ, "Imposible iniciar el comando."
+
+26 = ZZZZZ, "Imposible borrar el comando en la referencia de comandos."
+
+27 = ZZZZZ, "Error al cargar una pareja de tablas de conversión."
+
+
+

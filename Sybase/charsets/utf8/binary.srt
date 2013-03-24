@@ -1,0 +1,27 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the ISO 10646-1, UTF-8 multibyte encoding character set, this is a binary sort order.
+;
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Sep 23 1998  3:51PM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_utf8
+menuname = "Binary ordering, for the ISO 10646-1, UTF-8 multibyte encoding character set (utf8)."
+charset = utf8
+ 
+description = "Binary sort order for the ISO 10646-1, UTF-8 multibyte encoding character set (utf8)."
+ 
+binary = "true"

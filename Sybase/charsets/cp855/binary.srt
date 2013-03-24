@@ -1,0 +1,29 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the IBM Code Page 855, Bulgaria character set, this is a binary sort order.
+;
+; SCCS information:	@(#) generic/localization/charsets/cp855/binary.srt 1.2 2/22/95
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 16 1994  3:44AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp855
+menuname = "Binary ordering, for the IBM Code Page 855, Bulgaria character set (cp855)."
+charset = cp855
+preference = false
+ 
+description = "Binary sort order for the IBM Code Page 855, Bulgaria character set (cp855)."
+ 
+binary = "true"

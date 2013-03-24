@@ -1,0 +1,143 @@
+; comment character is semicolon.
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.3 12/3/93
+;
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+Tous droits r‚serv‚s.\
+Ce logiciel est diffus‚ dans le cadre d'un accord de \
+licence ou de non-divulgation et ne peut ˆtre utilis‚ \
+ou copi‚ qu'en conformit‚ avec les stipulations de\
+cet accord.\
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "impossible d'allouer de la m‚moire."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "erreur g‚n‚rale"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "couche blk"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "erreur utilisateur"
+
+2 = ZZZZZ, "erreur interne … BLK"
+
+3 = ZZZZZ, "erreur bibliothŠque CT "
+
+4 = ZZZZZ, "erreur de gestionnaire async"
+
+5 = ZZZZZ, "erreur de la bibliothŠque commune"
+
+6 = ZZZZZ, "erreur de gestion m‚moire"
+
+7 = ZZZZZ, "erreur SQL Server"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk OK"
+
+1 = ZZZZZ, "Impossible d'appeler API %1! … partir de cet ‚tat: %2!"
+
+2 = ZZZZZ, "API %1! autoris‚ seulement pour une op‚ration de Bulkcopy dans le sens IN"
+
+3 = ZZZZZ, "Rappel de API %1! non autoris‚ … partir d'une action (‚tat = %2!)"
+
+4 = ZZZZZ, "ParamŠtre %1! a une valeur ill‚gale de %2!"
+
+5 = ZZZZZ, "Le champ %1! de la structure CS_DATAFMT a une valeur ill‚gale \
+ de %2!."
+
+6 = ZZZZZ, "Le paramŠtre %1! ne peut pas ˆtre NULL."
+
+7 = ZZZZZ, "Les informations recherch‚es d‚passent la capacit‚ du tampon de %1! octet."
+
+8 = ZZZZZ, "La pr‚cision doit ˆtre sup‚rieure ou ‚gale … l'‚chelle"
+
+9 = ZZZZZ, "Impossible de lier un paramŠtre NULL %1! … un type de donn‚e de \ %2!."
+
+10 = ZZZZZ, "une colonne de table de type %1! ne peut pas ˆtre li‚e … une variable de programme de type %2!."
+
+11 = ZZZZZ, "Impossible d'avoir … la fois un textxfer et un tableau de liaison."
+
+12 = ZZZZZ, "Toutes les colonnes doivent avoir la valeur de comptage de tableau pour le tableau de liaison."
+
+13 = ZZZZZ, "Impossible de trouver un ‚quivalent CS_TYPE pour ce type de donn‚e TDS %1!"
+
+14 = ZZZZZ, "Echec lors de l'appel de la routine CT_Lib %1!."
+
+15 = ZZZZZ, "Utilisez CS_BLK_IN ou CS_BLK_OUT pour une op‚ration de Bulkcopy."
+
+16 = ZZZZZ, "Utilisez l'option CS_BLK_ALL pour terminer une Bulk copy OUT."
+
+17 = ZZZZZ, "Etat du processus %1! d‚fectueux pour %2! - injustifi‚."
+
+18 = ZZZZZ, "Etat d‚fectueux %1! - injustifi‚."
+
+19 = ZZZZZ, "La colonne et la valeur par d‚faut %1! envoy‚es par le serveur ne sont pas identiques."
+
+20 = ZZZZZ, "Etat d‚fectueux %1! - mais reprise possible - continuez le traitement."
+
+21 = ZZZZZ, "Le nombre de colonnes devant provenir du serveur est diff‚rent du nombre re‡u %1!."
+
+22 = ZZZZZ, "L'application doit ouvrir la session avec une propri‚t‚ %1!."
+
+23 = ZZZZZ, "Incompatibilit‚ de versions pour Bulkcopy bibliothŠque et CT_Lib."
+
+24 = ZZZZZ, "Aucune valeur ni valeur par d‚faut disponible et NULL non autoris‚. col = %1! ligne = %2!."
+
+25 = ZZZZZ, "Echec de la routine de conversion - d‚passement de condition. col = %1! ligne = %2!."
+
+26 = ZZZZZ, "Echec de la routine de conversion - erreur de syntaxe. col = %1! ligne = %2!."
+
+27 = ZZZZZ, "Ordre de liaison erron‚ - une colonne li‚e suit une colonne marqu‚e pour textxfer."
+
+28 = ZZZZZ, "La taille totale de textxfer %1! d‚passe la longueur des donn‚es en entr‚e   %2!"
+
+29 = ZZZZZ, "Le nombre de valeurs par d‚faut %1! n'est pas identique au comptage par d‚faut %2!"
+
+30 = ZZZZZ, "Envoi de CS_END_RESULTS pour le fichier requis pour Bulkcopy out. Le fichier est peut-ˆtre vide."
+
+31 = ZZZZZ, "The parameter %1! is required to be NULL."
+
+32 = ZZZZZ, "The parameter %1! is required to be CS_UNUSED."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

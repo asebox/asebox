@@ -1,0 +1,75 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlnwlink]
+
+1 = IPDE_EPDISCON, "Unable to disconnect the end point - Error is %1!"
+
+2 = IPDE_ACCEPT, "Error while accepting new connection - Error is %1!"
+
+3 = IPDE_EPCLOSE, "Unable to close the end point - Error is %1!"
+
+4 = IPDE_PARSE, "Connection information has invalid syntax"
+
+5 = IPDE_EPCONNECT, "Failed to connect to the server - Error is %1!"
+
+6 = IPDE_EPMODE, "Failed to change the mode of the pipe - Error is %1!"
+
+7 = IPDE_EVENTOBJ, "Failed to create an event object - Error is %1!"
+
+8 = IPDE_NPCREATE, "Failed to create a named pipe - Error is %1!"
+
+9 = IPDE_READ, "Read from the named pipe failed - Error is %1!"
+
+10 = IPDE_WRITE, "Write to the named pipe failed - Error is %1!"
+
+11 = IPDE_READOOB, "Error while reading OOB data - Error is %1!"
+
+12 = IPDE_SOCKET, "Error in creating a socket - Error is %1!"
+
+13 = IPDE_HOSTNAME, "Error in resolving the hostname - Error is %1!"
+
+14 = IPDE_EPBIND, "Error in binding to local address - Error is %1!"
+
+15 = IPDE_EPLISTEN, "Error in creating a listening point - Error is %1!"
+
+16 = IPDE_DRVINIT, "Error in initializing the driver - Error is %1!"
+
+17 = IPDE_SAPSOCKET, "Error in opening SAP socket - Error is %1!"
+
+18 = IPDE_SAPBIND, "Error in binding SAP socket - Error is %1!"
+
+19 = IPDE_SAPTHREAD, "Error in starting SAP thread - Error is %1!"
+
+20 = IPDE_SAPADDRGET, "Error in getting address information - Error is %1!"
+
+21 = IPDE_SAPMUTEX,	"Error in creating SAP mutex - Error is %1!"
+
+22 = IPDE_SAPTIMEOUT, "Timed out waiting for SAP response - Error is %1!"
+
+; end of insock error strings
+;
+

@@ -1,0 +1,291 @@
+; "defncopy.loc "-- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Senha:"
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "ERRO FATAL: Impossível abrir o arquivo de definições '%1!'."
+
+2 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar memória para a inicialização de Client-Library."
+
+3 = ZZZZZ, "ERRO FATAL: Falha na tentativa de inicializar Client-Library."
+
+4 = ZZZZZ, "ERRO FATAL: Falha na tentativa de instalar callback de mensagens de CS-Library."
+
+5 = ZZZZZ, "ERRO FATAL: Falha na tentativa de instalar callback de mensagem do cliente."
+
+6 = ZZZZZ, "ERRO FATAL: Falha na tentativa de instalar callback de mensagem do servidor."
+
+7 = ZZZZZ, "ERRO FATAL: Falha na tentativa de fornecer nome e rota do arquivo de interfaces para o contexto da aplicação."
+
+8 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar a estrutura do contexto defncopy."
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "Erro de Sintaxe em defncopy "
+
+2 = ZZZZZ, "Utilização "
+
+3 = ZZZZZ, "display_charset "
+
+4 = ZZZZZ, "interfaces_file "
+
+5 = ZZZZZ, "client_charset "
+
+6 = ZZZZZ, "keytab_file "
+
+7 = ZZZZZ, "senha "
+
+8 = ZZZZZ, "remote_server_principal "
+
+9 = ZZZZZ, "server_name "
+
+10 = ZZZZZ, "user_name "
+
+11 = ZZZZZ, "security_options "
+
+12 = ZZZZZ, "security_mechanism "
+
+13 = ZZZZZ, "idioma "
+
+14 = ZZZZZ, "file_name "
+
+15 = ZZZZZ, "database_name "
+
+16 = ZZZZZ, "proprietário "
+
+17 = ZZZZZ, "object_name "
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar memória suficiente para %1!."
+
+2 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar memória suficiente para %1!. Canceladas todas as cópias subseqüentes."
+
+3 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar memória."
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "ERRO FATAL: Não foi especificado um nome de servidor. Verifique o valor da variável do ambiente DSQUERY."
+
+2 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar uma estrutura de conexão cliente/servidor."
+
+3 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir a propriedade do nome do usuário da conexão cliente/servidor com o valor '%1!'."
+
+4 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir a propriedade da senha da conexão cliente/servidor ."
+
+5 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir a propriedade de codificação da senha da conexão cliente/servidor."
+
+6 = ZZZZZ, "ERRO FATAL: Falha na tentativa de conectar com o servidor '%1!'."
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "ERRO FATAL: Falha na tentativa de alocar a estrutura de comando CS-Library."
+
+2 = ZZZZZ, "ERRO FATAL: Falha na tentativa de iniciar um comando SQL."
+
+3 = ZZZZZ, "ERRO FATAL: Impossível iniciar um comando SQL. Canceladas todas as cópias subseqüentes."
+
+4 = ZZZZZ, "ERRO FATAL: Impossível enviar um comando SQL para o servidor."
+
+5 = ZZZZZ, "ERRO FATAL: Impossível enviar um comando SQL para o servidor. Canceladas todas as cópias subseqüentes."
+
+6 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir dados de resultado de um comando SQL."
+
+7 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir dados de resultado de comando SQL. Canceladas todas as cópias subseqüentes."
+
+8 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir dados de resultado de comando SQL para o objeto '%1!'. Canceladas todas as cópias subseqüentes."
+
+9 = ZZZZZ, "ERRO FATAL: Dados do resultado de comando SQL cancelados."
+
+10 = ZZZZZ, "ERRO: Dados de resultado de comando SQL cancelados. Cópia cancelada para este objeto."
+
+11 = ZZZZZ, "ERRO: Cancelados os dados de resultado do comando SQL para o objeto '%1!'. Cópia cancelada para este objeto."
+
+12 = ZZZZZ, "ERRO FATAL: Tentativa de definir dados de resultado de comando SQL gerou um código de retorno inesperado '%1!'."
+
+13 = ZZZZZ, "ERRO: A tentativa de definir dados de resultado de comando SQL para o objeto '%1!' gerou um código de retorno inesperado '%1!'. Cópia cancelada para este objeto."
+
+14 = ZZZZZ, "ERRO FATAL: Tentativa de definir os dados de resultado de comando SQL gerou resultado inesperado tipo '%1!'."
+
+15 = ZZZZZ, "ERRO FATAL: Falha na tentativa de recuperar a informação do conjunto de resultados."
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "ERRO: Objeto no arquivo '%1!' não reconhecido como uma definição."
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "ERRO FATAL: Falha na tentativa de recuperar informações definidas para o objeto '%1!'. Canceladas todas as cópias subseqüentes."
+
+2 = ZZZZZ, "ERRO FATAL: Falha na tentativa de vincular dados definidos do resultado do objeto '%1!' a uma variável interna de programa. Canceladas todas as cópias subseqüentes."
+
+3 = ZZZZZ, "ERRO FATAL: Falha na tentativa de buscar dados do resultado do objeto '%1!'. Canceladas todas as cópias subseqüentes."
+
+4 = ZZZZZ, "ERRO: Falha na tentativa de buscar dados de resultado de linha do objeto '%1!'. Cancelada a cópia para este objeto."
+
+5 = ZZZZZ, "ERRO: Cancelados os dados de resultado do comando SQL para o objeto '%1!'. Cópia cancelada para este objeto."
+
+6 = ZZZZZ, "ERRO: A tentativa de buscar dados de resultado de linha do objeto '%1!' gerou o código de retorno inesperado '%2!'. Cancelada a cópia para este objeto."
+
+7 = ZZZZZ, "ERRO FATAL: A tentativa de definir dados de resultado de comando SQL para o objeto '%1!' gerou o resultado inesperado tipo '%2!'. Cancelada a cópia para este objeto."
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "ERRO FATAL:  O servidor encontrou um erro enquanto tentava acessar o banco de dados '%1!'."
+
+2 = ZZZZZ, "ERRO FATAL: Tentativa de acessar o banco de dados '%1!' gerou um resultado inesperado tipo '%2!'."
+
+3 = ZZZZZ, "ERRO FATAL: Falha na tentativa de definir dados de resultado do comando SQL. Impossível acessar o banco de dados '%1!'."
+
+4 = ZZZZZ, "ERRO FATAL:  Cancelados os dados de resultado de comando SQL. Impossível acessar o banco de dados '%1!'."
+
+5 = ZZZZZ, "ERRO FATAL: Tentativa de acessar o banco de dados '%1!' gerou um código de retorno inesperado '%2!'."
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "ERRO: O servidor encontrou um erro ao tentar executar um SQL contido no arquivo '%1!'. A cópia continua, usando o objeto seguinte no arquivo."
+
+2 = ZZZZZ, "ERRO: Tentativa de executar SQL contido dentro do arquivo '%1!' gerou um resultado inesperado tipo '%2!'. Cancelada a cópia para este objeto."
+
+3 = ZZZZZ, "ERRO: Tentativa de executar SQL contido dentro do arquivo '%1!' gerou um código de retorno inesperado '%2!'. Cancelada a cópia para este objeto."
+
+4 = ZZZZZ, "ERRO FATAL: Falha na tentativa de recuperar uma descrição do resultado da execução de um procedimento armazenado. Canceladas todas as cópias subseqüentes."
+
+5 = ZZZZZ, "ERRO FATAL: Falha na tentativa de vincular o resultado da execução de um procedimento armazenado a uma variável interna de programa. Canceladas todas as cópias subseqüentes."
+
+6 = ZZZZZ, "ERRO: Um procedimento armazenado gerou um resultado de estado inesperado. Cancelada a execução do procedimento armazenado."
+
+7 = ZZZZZ, "ERRO FATAL: Falha na tentativa de buscar o resultado da execução de um procedimento armazenado. Canceladas todas as cópias subseqüentes."
+
+8 = ZZZZZ, "ERRO FATAL: Falha na tentativa de buscar o resultado da execução de um procedimento armazenado. Cancelada a execução do procedimento armazenado."
+
+9 = ZZZZZ, "ERRO: Cancelados os dados de resultado do comando SQL. Cancelada a execução do procedimento armazenado."
+
+10 = ZZZZZ, "ERRO: Tentativa de buscar o resultado da execução de um procedimento armazenado gerou o código de retorno inesperado  '%1!'. Cancelada a execução do procedimento armazenado."
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "ERRO FATAL: O servidor encontrou um erro ao tentar recuperar dados do banco de dados da tabela syscomments '%1!'."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "ERRO: Objeto '%1!' não encontrado no banco de dados '%2!'."
+
+2 = ZZZZZ, "ERRO: O servidor encontrou um erro ao tentar recuperar dados da tabela sysobjects do banco de dados '%1!'. Cancelada a cópia para o objeto '%2!'."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "ERRO: A definição do objeto '%1!' não foi encontrada no banco de dados '%2!'."
+
+2 = ZZZZZ, "ERRO: O servidor encontrou um erro ao tentar recuperar dados da tabela syscomments do banco de dados '%1!'. Cancelada a cópia para o objeto '%2!'."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "ERRO: O servidor encontrou um erro ao tentar recuperar dados da tabela sysobjects do banco de dados '%1!'. Cancelada a cópia para o objeto '%2!'."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "ERRO: O servidor encontrou um erro ao tentar recuperar dados da tabela syscomments do banco de dados '%1!'. Cancelada a cópia para o objeto '%2!'."
+
+2 = ZZZZZ, "ERRO FATAL: Falha na tentativa de ler a instrução de definição SQL do objeto '%1!'s da tabela syscomments do banco de dados '%1!'. Canceladas todas as cópias subseqüentes."
+
+3 = ZZZZZ, "ERRO FATAL: A tentativa de gravar no arquivo '%1!' gerou um erro de fim-de-arquivo; verifique o espaço disponível em disco. Canceladas todas as cópias subseqüentes."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "ERRO: Falha na tentativa de sair de Client-Library."
+
+2 = ZZZZZ, "ERRO: Falha na tentativa de desalocar a estrutura do comando CS-Library."
+
+3 = ZZZZZ, "ERRO: ERRO FATAL: Falha na tentativa de recuperar as propriedades associadas com a conexão cliente/servidor."
+
+4 = ZZZZZ, "ERRO: Falha na tentativa de fechar a conexão cliente/servidor com o servidor '%1!'."
+
+5 = ZZZZZ, "ERRO: Falha na tentativa de desalocar a estrutura de conexão com CS-Library."
+
+

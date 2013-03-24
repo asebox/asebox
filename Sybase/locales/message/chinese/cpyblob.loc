@@ -1,0 +1,70 @@
+; cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "使用数据库 '%1!' 时失败。" 
+2 = ZZZZZ, "检索表中数据并获取文本或图像数据的描述符\\n时失败。"
+3 = ZZZZZ, "用新文本或图像更新表时失败。"
+4 = ZZZZZ, "创建表时失败。"
+5 = ZZZZZ, "撤除表时失败。"
+6 = ZZZZZ, "无效的 sql 查询。"
+7 = ZZZZZ, "读取查询结果时失败。"
+8 = ZZZZZ, "Sql 查询返回多行。期望仅返回\\n一行。"
+9 = ZZZZZ, "Sql 查询返回零行。期望仅返回\\n一行。"
+10 = ZZZZZ, "打不开文件 '%1!'。请确保文件存在且有写权限。"
+11 = ZZZZZ, "打不开文件 '%1!'。请确保文件存在且可读。"
+12 = ZZZZZ, "无法关闭文件 '%1!'。请确保文件存在且已打开。"
+13 = ZZZZZ, "无法撤除文件 '%1!'。请确保文件存在且有撤除权限。"
+14 = ZZZZZ, "文件 '%1!' 大小为 0。请确保文件非空。"
+15 = ZZZZZ, "Jar '%1!' 不存在。"
+16 = ZZZZZ, "处理时间戳时失败。"
+17 = ZZZZZ, "内部错误: ct_send_data() 失败。"
+18 = ZZZZZ, "内部错误: ct_get_data() 失败。"
+19 = ZZZZZ, "内部错误: ct_data_info() 失败。"
+20 = ZZZZZ, "'%1!' 的长度超过了 '%2!' 字节的最大长度。"
+21 = ZZZZZ, "不能运行此命令，因为未启用 Java 服务。具有系统管理员 (SA) 角色的用户\\n必须重新配置系统来启用 Java。"
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "环境变量 DSQUERY 指定的服务器名\\n无效或环境中未设置 DSQUERY。"
+2 = ZZZZZ, "无效的用户登录名或环境中未设置登录名。"
+3 = ZZZZZ, "环境变量 SYBASE 指定的目录无效，或环境中未设置 SYBASE。"
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "初始化客户应用程序时失败。"
+2 = ZZZZZ, "'%1!' 失败。检查上面的错误消息。"
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "致命错误: 内存分配失败。"
+2 = ZZZZZ, "设置连接属性时失败。"
+3 = ZZZZZ, "建立连接时失败。"
+4 = ZZZZZ, "无法识别的本地化对象。使用缺省值 '%1!'。"
+5 = ZZZZZ, "内部错误: 无效的本地化类型被传递给 cs_locale()。"
+6 = ZZZZZ, "'%1!' 中有语法错误。"
+7 = ZZZZZ, "试图装载一对转换表时出错。"
+8 = ZZZZZ, "中断 - 程序被中止。"
+
+
+

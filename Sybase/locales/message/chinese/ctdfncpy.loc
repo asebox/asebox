@@ -1,0 +1,285 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;  defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "保密字: "
+
+; LOX_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "致命错误: 不能打开定义文件, '%1!'."
+
+2 = ZZZZZ, "致命错误: 分配内存for Client-Library 初始化失败."
+
+3 = ZZZZZ, "致命错误: 初始化Client-Library failed."
+
+4 = ZZZZZ, "致命错误: 安装CS-Library 消息反馈失败."
+
+5 = ZZZZZ, "致命错误: 安装客户消息反馈失败."
+
+6 = ZZZZZ, "致命错误: 安装服务器消息反馈失败."
+
+7 = ZZZZZ, "致命错误: 为应用上下文提供接口文件路径名失败."
+ 
+8 = ZZZZZ, "致命的错误: 分配defncopy 上下文结构失败."
+
+;  LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "defncopy 语法错误"
+
+2 = ZZZZZ, "用法"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "保密字"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "服务器名"
+
+10 = ZZZZZ, "用户名"
+
+11 = ZZZZZ, "security_options"
+
+12 = ZZZZZ, "security_mechanism"
+
+13 = ZZZZZ, "语言"
+
+14 = ZZZZZ, "文件名"
+
+15 = ZZZZZ, "数据库名"
+
+16 = ZZZZZ, "属主"
+
+17 = ZZZZZ, "object_name"
+
+;  LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "致命的错误: 为%1!分配充足的内存失败."
+  
+2 = ZZZZZ, "致命的错误: 为%1!分配充足的内存失败.  取消所有进一步的拷贝."
+
+3 = ZZZZZ, "致命的错误: 分配内存失败."
+ 
+;  LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "致命的错误: 服务器名没指定.  检查DSQUERY 环境变量值."
+ 
+2 = ZZZZZ, "致命的错误: 分配客户/服务器连接结构失败."
+ 
+3 = ZZZZZ, "致命的错误: 设置客户/服务器连接的用户名属性为'%1!' 失败."
+ 
+4 = ZZZZZ, "致命的错误: 设置客户/服务器连接的保密字属性失败."
+ 
+5 = ZZZZZ, "致命的错误: 设置客户/服务器连接的保密字加密属性失败."
+
+6 = ZZZZZ, "致命的错误: 连接服务器 '%1!' 失败."
+ 
+;  LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "致命错误: 分配CS-Library 命令结构失败."
+
+2 = ZZZZZ, "致命错误: 不能初始SQL 命令."
+
+3 = ZZZZZ, "致命错误: 不能初始SQL 命令.  取消所有后续拷贝."
+
+4 = ZZZZZ, "致命错误: 不能向服务器发送SQL 命令."
+
+5 = ZZZZZ, "致命错误: 不能向服务器发送SQL 命令.  取消所有后续拷贝."
+
+6 = ZZZZZ, "致命错误: 设置 SQL 命令结果数据失败."
+
+7 = ZZZZZ, "致命错误: 设置 SQL 命令结果数据失败.  取消所有后续拷贝."
+
+8 = ZZZZZ, "致命错误: 为对象'%1!'设置 SQL 命令结果数据失败.  取消所有后续拷贝."
+
+9 = ZZZZZ, "致命错误: 取消SQL 命令结果数据."
+
+10 = ZZZZZ, "错误: 取消SQL 命令结果数据.  取消此对象的拷贝."
+
+11 = ZZZZZ, "错误: 取消对象'%1!'的SQL 命令结果数据.  取消此对象的拷贝."
+
+12 = ZZZZZ, "致命错误: 设置 SQL 命令结果数据返回非期望的代码'%1!'."
+
+13 = ZZZZZ, "错误: 设置对象'%1!'的 SQL 命令结果数据返回非期望的代码'%1!'. 取消此对象的拷贝."
+
+14 = ZZZZZ, "致命错误: 设置 SQL 命令结果数据返回非期望的结果类型'%1!'."
+
+15 = ZZZZZ, "致命错误: 查询结果集信息失败."
+
+ 
+;  LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "错误: 文件'%1!'的对象不能作为定义."
+ 
+
+;  LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "致命错误: 查询对象'%1!'的结果集信息失败.  取消所有后续拷贝."
+
+2 = ZZZZZ, "致命错误: 捆绑对象'%1!'的结果集数据到一个内部程序变量失败.  取消所有后续拷贝."
+
+3 = ZZZZZ, "致命错误: 取对象'%1!'的行结果数据失败.  取消所有后续拷贝."
+
+4 = ZZZZZ, "错误: 取对象'%1!'的行结果数据失败.  取消此对象的拷贝."
+
+5 = ZZZZZ, "错误: 取消对象'%1!'的SQL 命令结果数据.  取消此对象的拷贝."
+
+6 = ZZZZZ, "错误: 取对象'%1!'的行结果数据返回非期望的代码'%2!'.  取消此对象的拷贝."
+
+7 = ZZZZZ, "致命错误: 设置对象'%1!'的 SQL 命令结果数据生成非期望的结果类型'%2!'.  取消此对象的拷贝."
+ 
+
+;  LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "致命错误: 服务器存取数据库'%1!'出错."
+
+2 = ZZZZZ, "致命错误: 存取数据库'%1!' 生成非期望的结果类型'%2!'."
+
+3 = ZZZZZ, "致命错误: 设置 SQL 命令结果数据失败.  不能存取数据库'%1!'."
+
+4 = ZZZZZ, "致命错误: 取消SQL 命令结果数据.  不能存取数据库'%1!'."
+
+5 = ZZZZZ, "致命错误: 存取数据库'%1!' 返回非期望的代码'%2!'."
+ 
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "错误: 服务器执行文件'%1!'的SQL出错.  继续拷贝文件中下一对象."
+
+2 = ZZZZZ, "错误: 执行文件'%1!'的SQL生成非期望的结果类型'%2!'.  取消此对象的拷贝."
+
+3 = ZZZZZ, "错误: 执行文件'%1!'的SQL返回非期望的代码'%2!'.  取消此对象的拷贝."
+
+4 = ZZZZZ, "致命错误: 查询执行存储过程结果失败.  取消所有后续拷贝."
+
+5 = ZZZZZ, "致命错误: 捆绑存储过程结果到内部程序变量失败.  取消所有后续拷贝."
+
+6 = ZZZZZ, "错误: 存储过程生成非期望的状态结果.  存储过程执行取消."
+
+7 = ZZZZZ, "致命错误: 取存储过程结果失败.  取消所有后续拷贝."
+
+8 = ZZZZZ, "错误: 取存储过程结果失败.  存储过程执行取消."
+
+9 = ZZZZZ, "错误: SQL 命令结果数据取消.  存储过程执行取消."
+
+10 = ZZZZZ, "错误: 取存储过程结果返回非期望的代码'%1!'.  存储过程执行取消."
+ 
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "致命错误: 查询数据库'%1!'的syscomments 表出错."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "错误: 对象'%1!'在数据库'%2!'中没找到."
+
+2 = ZZZZZ, "错误: 查询数据库'%1!'的 sysobjects 表出错.  取消对象'%2!'的拷贝."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "错误: 在数据库'%2!'中没找到对象'%1!'的定义."
+
+2 = ZZZZZ, "错误: 查询数据库'%1!'的syscomments 表出错.  取消对象'%2!'的拷贝."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "错误: 查询数据库'%1!'的 sysobjects 表出错.  取消对象'%2!'的拷贝."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "错误: 查询数据库'%1!'的syscomments 表出错.  取消对象'%2!'的拷贝."
+
+2 = ZZZZZ, "致命错误: 从数据库'%1!'的 syscomments 表读对象'%1!'的 SQL 定义语句失败.  取消所有后续拷贝."
+
+3 = ZZZZZ, "致命错误: 写文件'%1!' 生成文件结束符出错; 检查可用的盘空间.  取消所有后续拷贝."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "错误: 退出Client-Library 失败."
+
+2 = ZZZZZ, "错误: 释放CS-Library 命令结构失败."
+
+3 = ZZZZZ, "错误: client/server有关的查询属性连接失败."
+
+4 = ZZZZZ, "错误: 关闭client/server 服务器 '%1!'的连接 失败."
+
+5 = ZZZZZ, "错误: 释放CS-Library 连接结构失败."
+

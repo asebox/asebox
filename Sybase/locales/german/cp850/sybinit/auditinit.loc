@@ -1,0 +1,988 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; NOTE: This file will be empty for the language 'us_english'
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagrafs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+0    = "", 	""
+1    = "Datei '%1!' kann nicht angelegt werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+2    = "Datei '%1!' kann nicht ge”ffnet werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+3    = "Schreiben in Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+4    = "Lesen von Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+5    = "Datei '%1!' kann nicht geschlossen werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+6    = "Zugriff auf Verzeichnis '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+7    = "%1! ", 	"%s"
+8    = "Tempor„re Datei kann nicht angelegt werden.", 	""
+9    = "Ausgabe von '%1!' konnte nicht aufgezeichnet werden.", 	"%s"
+10    = "Fehler beim Anlegen des Pfads '%1!': Pfad ist zu lang.", 	"%s"
+11    = "Fehler beim Anlegen der Objektliste.", 	""
+12    = "Attribut '%1!' ist nicht gesetzt.", 	"%s"
+13    = "Attribut '%1!' existiert nicht.", 	"%s"
+14    = "Datei '%1!' existiert nicht.", 	"%s"
+15    = "Pfad fr Interfaces-Datei konnte nicht angelegt werden.", 	""
+16    = ".", 	""
+17    = "%1!", 	"%s"
+18    = "Fertig", 	""
+19    = "Informationen ber '%1!' mit Aufruf von '%2!' nicht verfgbar. Meldung des Betriebssystems: %3!.", 	"%s %s %s"
+20    = "j", 	""
+21    = "n", 	""
+24    = "šberlauf des internen Puffers, w„hrend '%1!' zur Shell gesendet wurde.", 	"%s"
+25    = "Shell ohne Befehl aufgerufen.", 	" "
+26    = "Aufruf der Shell mit '%1!'.", 	"%s"
+27    = "fork() mit folgender Meldung fehlgeschlagen: %1!.", 	"%s"
+28    = "Ausgabe von execl(): Betriebssystem-Fehler.", 	""
+29    = "syb_system_datetime() wurde mit NULL-Puffer aufgerufen.", 	""
+32    = "syb_user_username() wurde mit NULL-Puffer aufgerufen.", 	 ""
+33    = "Benutzername des aktuellen Benutzers nicht gefunden.", 	""
+34    = "syb_user_get_env() wurde mit NULL-Umgebungspuffer aufgerufen.", 	""
+35    = "syb_user_get_env() wurde mit NULL-Umgebungsvariablen-Puffer aufgerufen.", 	""
+36    = "Umgebungsvariable '%1!' ist nicht definiert.", 	"%s"
+37    = "syb_user_curdir() wurde mit NULL-Puffer aufgerufen.", 	""
+38    = "Aktuelles Arbeitsverzeichnis nicht gefunden.", 	""
+39    = "syb_user_chdir() wurde mit NULL-Puffer aufgerufen.", ""
+40    = "Arbeitsverzeichnis konnte nicht auf '%1!' gewechselt werden.", 	"%s"
+41    = "syb_file_exists() wurde mit NULL-Puffer aufgerufen.", 	""
+42    = "Ob '%1!' vorhanden ist, kann nicht ermittelt werden. Meldung des Betriebssystems: %2!.", "%s %s"
+43    = "Ob '%1!' vorhanden ist, kann nicht ermittelt werden. Meldung des Betriebssystems: %2!.", "%s %d"
+44    = "syb_file_delete() wurde mit NULL-Puffer aufgerufen.", 	""
+45    = "L”schen der Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+46    = "L”schen der Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+47    = "syb_file_get_mode() wurde mit NULL-Dateinamen aufgerufen.", 	""
+48    = "Berechtigungen fr Datei '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %s"
+49    = "Berechtigungen fr Datei '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %d"
+50    = "syb_file_set_mode() wurde mit NULL-Dateinamen aufgerufen.", 	""
+51    = "Einstellung der Berechtigungen fr Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+52    = "Einstellung der Berechtigungen fr Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+53    = "syb_file_copy() wurde mit NULL-Namen fr Quelldatei aufgerufen.", 	""
+54    = "syb_file_copy() wurde mit NULL-Namen fr Zieldatei aufgerufen.", 	""
+55    = "™ffnen der Datei '%1!' zum Exportieren nicht m”glich.", 	"%s"
+56    = "™ffnen der Datei '%1!' zum Importieren nicht m”glich.", 	"%s"
+57    = "Fehler beim Kopieren: Lesez„hler = '%1!', Schreibz„hler = '%2!'.", 	"%d %d"
+58    = "Dateiberechtigungen fr '%1!' nach Kopierzugriff nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %s"
+59    = "Dateiberechtigungen fr '%1!' nach Kopierzugriff nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %d"
+60    = "Einstellung der Dateiberechtigungen '%1!' nach Kopierzugriff nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+61    = "Einstellung der Dateiberechtigungen '%1!' nach Kopierzugriff nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+62    = "syb_file_rename() wurde mit NULL-Quellpuffer aufgerufen.", 	""
+63    = "syb_file_rename() wurde mit NULL-Zielpuffer aufgerufen.", 	""
+64    = "Umbenennen der Datei '%1!' in '%2!' nicht m”glich. Meldung des Betriebssystems: %3!.", 	"%s %s %s"
+65    = "Umbenennen der Datei '%1!' in '%2!' nicht m”glich. Meldung des Betriebssystems: %3!.", 	"%s %s %d"
+66    = "syb_file_size() wurde mit NULL-Dateinamen aufgerufen.", 	""
+67    = "Gr”áe von '%1!' kann nicht ermittelt werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+68    = "Gr”áe von '%1!' kann nicht ermittelt werden. Meldung des Betriebssystems: %2!.", 	"%s %d"
+69    = "syb_file_isdir() wurde mit NULL-Pfad aufgerufen.", 	""
+70    = "Es kann nicht ermittelt werden, ob '%1!' ein Verzeichnis ist. Meldung des Betriebssystems: %2!.", 	"%s %s"
+71    = "Es kann nicht ermittelt werden, ob '%1!' Verzeichnis ist. Meldung des Betriebssystems: %2!.", 	"%s %d"
+72    = "syb_user_default_charset() wurde mit NULL-Puffer aufgerufen.", 	""
+73    = "syb_user_default_language() wurde mit NULL-Puffer aufgerufen.", 	""
+74    = "syb_file_date() wurde mit NULL-Dateinamen aufgerufen.", 	""
+75    = "nderungsdatum von '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %s"
+76    = "nderungsdatum von '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %d"
+77    = "nderungsdatum von '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %s"
+78    = "nderungsdatum von '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %d"
+79    = "syb_path_basename() wurde mit NULL-Pfad aufgerufen.", 	""
+80    = "syb_path_basename() wurde mit NULL-Puffer aufgerufen.", 	""
+81    = "Der Pfad '%1!' zu syb_path_basename() berschreitet die maximal erlaubte L„nge ('%2!').", 	"%s %d"
+82    = "syb_path_dirname() wurde mit NULL-Pfad aufgerufen.", 	""
+83    = "syb_path_dirname() wurde mit NULL-Puffer aufgerufen.", 	""
+84    = "Der Pfad '%1!' zu syb_path_dirname() berschreitet die maximal erlaubte L„nge ('%2!').", 	"%s %d"
+85    = "syb_path_append_dir() wurde mit NULL-Pfad aufgerufen.", 	""
+86    = "syb_path_append_dir() wurde mit NULL-Verzeichnisnamen aufgerufen.", 	""
+87    = "Der durch Anh„ngen von '%1!' an '%2!' gebildete Pfad berschreitet die erlaubte Pfadl„nge ('%3!').", 	"%s %s %d"
+88    = "syb_path_append_Datei() wurde mit NULL-Pfad aufgerufen.", 	""
+89    = "syb_path_append_Datei() wurde mit NULL-Dateinamen aufgerufen.", 	""
+90    = "Anh„ngen von '%1!' an '%2!' nicht m”glich.", 	"%s %s"
+91    = "syb_path_convert () wurde mit NULL-Pfad aufgerufen.", 	""
+92    = "Der Pfad '%1!' zu syb_file_convert() berschreitet die maximal erlaubte L„nge ('%2!').", 	"%s %d"
+93    = "Syb_file_convert() wurde ohne Dateinamen aufgerufen.", 	""
+94    = "Der Parameter des Dateinamens '%1!' zu syb_file_convert() hat nicht den erwarteten Endbegrenzer.", 	"%s"
+95    = "syb_file_convert() wurde mit dem ungltigen Dateityp '%1!' aufgerufen.", 	"%d"
+96    = "syb_file_list() wurde mit NULL-Verzeichnisnamen aufgerufen.", 	""
+97    = "™ffnen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	 "%s %s"
+98    = "™ffnen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", "%s %d"
+99    = "Lesen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+100    = "Lesen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+101    = "Schlieáen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!", "%s %s"
+102    = "Schlieáen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!", 	"%s %d"
+103    = "Zuweisung von list_head in syb_file_list() nicht m”glich.", 	""
+104    = "Zuweisung der Struktur syb_file in syb_file_list() nicht m”glich.", 	""
+105    = "syb_file_list_first() wurde mit NULL-Puffer aufgerufen.", 	""
+106    = "syb_file_list_first() wurde mit NULL-file_list aufgerufen.", 	""
+107    = "syb_file_list_next() wurde mit NULL-Puffer aufgerufen.", 	""
+108    = "syb_file_list_next() wurde mit NULL-file_list aufgerufen.", 	""
+109    = "syb_dir_delete() wurde mit NULL-Verzeichnisnamen aufgerufen.", 	""
+110    = "™ffnen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+111    = "™ffnen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+112    = "Informationen ber '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %s"
+113    = "Informationen ber '%1!' nicht erhalten. Meldung des Betriebssystems: %2!.", 	"%s %d"
+114    = "L”schen der Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+115    = "L”schen der Datei '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+116    = "Lesen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+117    = "Lesen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+118    = "L”schen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+119    = "L”schen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+120    = "syb_dir_create() wurde mit NULL-Verzeichnis aufgerufen.", 	""
+121    = "Anlegen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+122    = "Anlegen des Verzeichnisses '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+123    = "syb_dir_get_mode() wurde mit NULL-Verzeichnis aufgerufen.", 	""
+124    = "Informationen ber Verzeichnis '%1!' nicht verfgbar. Meldung des Betriebssystems: %2!.", 	"%s %s"
+125    = "Informationen ber Verzeichnis '%1!' nicht verfgbar. Meldung des Betriebssystems: %2!.", 	"%s %d"
+126    = "'%1!' ist kein Verzeichnis.", 	"%s"
+127    = "syb_dir_set_mode() wurde mit NULL-Verzeichnis aufgerufen.", 	""
+128    = "Informationen ber Verzeichnis '%1!' nicht verfgbar. Meldung des Betriebssystems: %2!.", 	"%s %s"
+129    = "Informationen ber Verzeichnis '%1!' nicht verfgbar. Meldung des Betriebssystems: %2!.", 	"%s %d"
+130    = "'%1!' ist kein Verzeichnis.", 	"%s"
+131    = "Einstellen der Verzeichnis-Berechtigungen fr '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %s"
+132    = "Einstellen der Verzeichnis-Berechtigungen fr '%1!' nicht m”glich. Meldung des Betriebssystems: %2!.", 	"%s %d"
+133    = "syb_net_get_inet_address() wurde mit NULL-Puffer aufgerufen.", 	""
+134    = "syb_net_get_ethernet_address() wurde mit NULL-Puffer aufgerufen.", 	""
+135    = "Auf Ethernet-Adresse fr '%1!' konnte nicht zugegriffen werden.", 	"%s"
+136    = "syb_net_get_hostname_from_enet() wurde mit NULL-Puffer aufgerufen.", 	""
+137    = "Konvertierung der Ethernet-Adresse '%1!' in eine Ethernet-Nummer nicht m”glich.", 	"%s"
+138    = "Hostname fr Ethernet-Adresse '%1!' nicht verfgbar.", 	"%s"
+139    = "Host '%1!' nicht gefunden.", 	"%s"
+140    = "syb_net_get_hostname_from_inet() wurde mit NULL-Puffer aufgerufen.", 	""
+141    = "Hostname fr Internet-Adresse '%1!' nicht verfgbar.", 	"%s"
+142    = "Zuweisung von Kontext-Struktur in syb_system_default_charset() nicht m”glich.", 	""
+143    = "Informationen zur Standard-Lokalisierung in syb_system_default_charset() nicht verfgbar.", 	""
+144    = "Schlieáen der Kontext-Struktur in syb_system_default_charset() nicht m”glich.", 	""
+145    = "Locale-Struktur in syb_system_default_charset() kann nicht geschlossen werden.", 	""
+146    = "Locale-Struktur in syb_system_default_charset() kann nicht zugewiesen werden.", 	""
+147    = "Informationen zum Standard-Zeichensatz nicht verfgbar.", 	""
+148    = "Zuweisung von Kontext-Struktur in syb_system_default_language() nicht m”glich.", 	""
+149    = "Schlieáen der Kontext-Struktur in syb_system_default_language() nicht m”glich.", 	""
+150    = "Ungltige Befehlszeilenoption '%1!'.", 	"%s"
+151    = "Setzen des Debug-Flags '%1!' nicht m”glich.", 	"%s"
+152    = "Setzen des Trace-Flags '%1!' nicht m”glich.", 	"%s"
+153    = "Pfadinformationen k”nnen nicht eingelesen werden.", 	""
+154    = "Auditinit-Versionsverzeichnis konnte nicht ermittelt werden.", 	""
+155    = "Auditinit-Versionsverzeichnis konnte nicht ermittelt werden.", 	""
+156    = "Auditinit-Versionsverzeichnis konnte nicht ermittelt werden.", 	""
+157    = "Informationen zur Standardsprache nicht verfgbar.", 	""
+158    = "Informationen zur Standard-Lokalisierung in syb_system_default_language() nicht verfgbar.", 	""
+159    = "syb_get_home_Verzeichnis() wurde mit NULL-Benutzer aufgerufen.", 	""
+160    = "syb_get_home_Verzeichnis() wurde mit NULL-Puffer aufgerufen.", 	""
+161    = "Informationen im Home-Verzeichnis fr '%1!' konnten nicht eingelesen werden.", 	"%s"
+162    = "Kompilierung des regul„ren Ausdrucks '%1!' nicht m”glich.", 	"%s"
+163    = "syb_file_touch_date() wurde mit NULL-Dateinamen aufgerufen.", 	""
+164    = "nderungsdatum fr '%1!' konnte nicht aktualisiert werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+165    = "nderungsdatum fr '%1!' konnte nicht aktualisiert werden. Meldung des Betriebssystems: %2!.", 	"%s %d"
+166    = "Zuweisung von Kontext-Struktur in syb_system_datetime() nicht m”glich.", 	""
+167    = "Zeit-Information von cs_time() in syb_system_datetime() nicht erhalten.", 	""
+168    = "Schlieáen der Kontext-Struktur in syb_system_datetime() nicht m”glich.", 	""
+169    = "Zuweisung von Kontext-Struktur in syb_system_month() nicht m”glich.", 	""
+172    = "Zeit-Information von cs_time() in syb_system_month() nicht erhalten.", 	""
+173    = "Schlieáen der Kontext-Struktur in syb_system_month() nicht m”glich.", 	""
+174    = "Locale-Struktur in syb_system_default_language() kann nicht geschlossen werden.", 	""
+175    = "Locale-Struktur in syb_system_default_language() kann nicht zugewiesen werden.", 	""
+176    = "Zuweisung von Kontext-Struktur in syb_system_day() nicht m”glich.", 	""
+177    = "Zeit-Information von cs_time() in syb_system_day() nicht erhalten.", 	""
+178    = "Schlieáen der Kontext-Struktur in syb_system_day() nicht m”glich.", 	""
+179    = "Zeichensatz kann in der Befehlszeile nur einmal angegeben werden.", 	""
+180    = "Sprache kann in der Befehlszeile nur einmal angegeben werden.", 	""
+181    = "Die Logdatei kann in der Befehlszeile nur einmal angegeben werden.", 	""
+182    = "Die Ressourcendatei kann in der Befehlszeile nur einmal angegeben werden.", 	""
+183    = "Das Versionsverzeichnis kann in der Befehlszeile nur einmal angegeben werden.", 	 ""
+184    = "syb_file_date_buffer() wurde mit NULL-Puffer aufgerufen.", 	""
+185    = "Unerwartete Datums-Zeichenfolge gefunden: '%1!'.", 	"%s"
+186    = "Zuweisung von Kontext-Struktur in syb_file_date_buffer() nicht m”glich.", 	""
+187    = "Schlieáen der Kontext-Struktur in syb_file_date_buffer() nicht m”glich.", 	""
+188    = "syb_net_get_hostname() wurde mit NULL-Hostnamen aufgerufen.", 	""
+189    = "Hostname konnte nicht eingelesen werden. Meldung des Betriebssystems: %1!.", 	"%s"
+190    = "Hostname konnte nicht eingelesen werden. Meldung des Betriebssystems: %1!.", 	"%d"
+191    = "Ungltiges Argument an syb_file_is_regular_file bergeben.", 	""
+192    = "Ob %1! ein blockorientiertes Ger„t ist, konnte nicht ermittelt werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+193    = "Ob %1! ein blockorientiertes Ger„t ist, konnte nicht ermittelt werden. Meldung des Betriebssystems: %2!.", 	"%s %d"
+194    = "Ob %1! ein zeichenorientiertes Ger„t ist, konnte nicht ermittelt werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+195    = "Ob %1! ein zeichenorientiertes Ger„t ist, konnte nicht ermittelt werden. Meldung des Betriebssystems: %2!.", 	"%s %d"
+196    = "Versuch, Umgebungsvariable '%1!' auf '%2!' zu setzen, fehlgeschlagen.", 	"%s %s"
+197    = "Bibliothek '%1!' kann nicht initialisiert werden: Datei existiert nicht.", 	"%s"
+198    = "Versuch, Bibliothek '%1!' zu initialisieren, fehlgeschlagen. Im Log finden Sie weitere Informationen.", 	"%s"
+199    = "Validierungsprfung fr gltiges Verzeichnis wurde mit NULL-Zeiger aufgerufen.", 	""	
+200    = "Verzeichnis-Komponente fr '%1!' nicht erhalten.", 	"%s"
+201    = "Vollst„ndige Pfadangabe ben”tigt (%1!).", 	"%s"
+202    = "Fehler im Verzeichnis '%1!'.", 	"%s"
+203    = "'%1!' ist kein Verzeichnis.", 	"%s"
+204    = "Verzeichnis '%1!' ben”tigt Lese-, Schreib- und Ausfhrungs-Berechtigungen.", 	"%s"
+205    = "'%1!' gab an Auditinit keinen Exit-Status zurck.", 	"%s"
+206    = "Wert der SYBASE-Umgebungsvariable ist nicht verfgbar.", 	""
+207    = "AUDITINIT.NLM existiert NICHT an dem von der SYBASE-Umgebungsvariablen bezeichneten Standort: '%1!'.", 	"%s"
+208    = "Datei der SYBASE-Umgebungsvariablen '%1!' nicht gefunden.", 	"%s"
+209    = "Datei der Sybase-Umgebungsvariablen '%1!' kann nicht geschlossen werden.", 	"%s"
+210    = "Datei der Sybase-Umgebungsvariablen '%1!' kann nicht angelegt werden.", 	"%s"
+211    = "Verzeichnis-Komponente von '%1!' nicht verfgbar.", 	"%s"
+212    = "Datei der Sybase-Umgebungsvariablen '%1!' kann nicht in '%2!' umbenannt werden.", 	"%s %s"
+213    = "Suffix des Dateinamens fr Sybase-Umgebungsdatei '%1!' nicht verfgbar.", 	"%s"
+214    = "'%1!' konnte nicht an '%2!' angeh„ngt werden\, um den Backup-Auditinit-Umgebungsdateinamen zu erhalten.", 	"%s %s"
+215    = "%1! kann nicht vervielf„ltigt werden. Auf der Systemkonsole finden Sie weitere Informationen.", 	"%s"
+216    = "Hostname '%1!' ist ungltig. Hostnamen drfen nur r”mische Zeichen enthalten.", 	"%s"
+217    = "Pfad '%1!' kann nicht mit Aufruf von '%2!' entpackt werden. Meldung des Betriebssystems: %3!.", 	"%s %s %s"
+218    = "Informationen ber Dateisystem '%1!' nicht verfgbar. Meldung des Betriebssystems: %2!.", 	"%s %s"
+219    = "Zeichendatei-Schnittstelle fr Pfad '%1!' nicht verfgbar.", 	"%s"
+220    = "'%1! kann nicht an '%2!' angeh„ngt werden: '%3!' ist kein gltiges Verzeichnis.", 	"%s %s %s"
+221    = "Kann nicht ermitteln, ob '%1!' zu diesem Cluster geh”rt. Meldung des Betriebssystems: %2!.", 	"%s %s"
+227    = "NLM '%1!' ist bereits geladen.", 	"%s"
+231    = "'%1!' ist keine gltige Adresse. SPX-Adressen drfen nur aus Zeichen bestehen, die Hexadezimalstellen darstellen ('0'-'9' und 'a'-'f').", 	"%s"
+244    = "ja", 	""
+245    = "nein", 	""
+250    = "Fehler beim Warten auf Abschluss des Prozesses '%1!'. Meldung des Betriebssystems: %2!. WARNUNG: Vollst„ndigkeits-Status kann nicht ausgegeben werden.", 	"%s %s"
+251    = "Fehler bei Statusprfung des Prozesses '%1!'. Meldung des Betriebssystems: %2!.", 	"%s %s"
+252    = "Sie haben keine Schreibberechtigung fr '%1!'. Die Schreibberechtigung fr dieses Verzeichnis wird eventuell sp„ter gebraucht. Vor dem Weiterarbeiten sollten Sie die Berechtigung beantragen.", 	"%s"
+300    = "WARNUNG:", 	""
+301    = "TRACE:", 	""
+302    = "", 	""
+303    = "SYSTEMFEHLER:", 	""
+304    = "INTERNER FEHLER:", 	""
+305    = "Im Log (%1!) finden Sie weitere Informationen. Notieren Sie diesen Fehler und wenden Sie sich an Ihren Sybase-Partner.", 	"%s"
+306    = "VERBINDUNGSFEHLER:", 	""
+307    = "SERVERFEHLER:", 	""
+308    = "Notieren Sie diesen Fehler und wenden Sie sich an Ihren Sybase-Partner.", 	""
+401    = "inf_ifile_read() wurde mit NULL-Dateinamen aufgerufen.", 	""
+402    = "Interfaces-Datei '%1!' ist bereits geladen. Die alte Interfaces-Datei sollte vor dem Laden der neuen Interfaces-Datei '%2!' entladen werden.", 	"%s %s"
+403    = "Interfaces-Datei '%1!' nicht gefunden.", 	"%s"
+404    = "™ffnen der Interfaces-Datei '%1!' nicht m”glich.", 	"%s"
+405    = "Syntaxfehler in Zeile '%1!'.", 	"%s"
+406    = "Schlieáen der Interfaces-Datei '%1!' nicht m”glich.", 	"%s"
+407    = "Schlieáen der Interfaces-Datei '%1!' w„hrend der Freigabe einer Speicherzuordnung nicht m”glich.", 	"%s"
+408    = "Fr Interfaces-Eingabe-Struktur kann kein Speicher zugewiesen werden.", 	""
+409    = "Fr Interfaces-Dienst-Struktur kann kein Speicher zugewiesen werden.", 	""
+410    = "Syntaxfehler bei der syntaktischen Analyse des Dienstes '%1!'.", 	"%s"
+411    = "Unbekannter Diensttyp '%1!' in Dienst '%2!'.", 	"%s %s"
+412    = "Fehler bei der syntaktischen Analyse des Dienstes in Zeile '%1!'.", 	"%s"
+413    = "Fehler bei der syntaktischen Analyse in Zeile '%2!': Unbekanntes Protokoll '%1!'.", 	"%s %s"
+414    = "Aktueller Hostname nicht verfgbar.", 	""
+415    = "Internet-Adresse fr '%1!' nicht verfgbar.", 	"%s"
+416    = "Protokoll '%1!' wird auf '%2!' nicht untersttzt.", 	"%s %s"
+417    = "Syntaktische Analyse der TLI-Adresse fr '%1!' nicht m”glich.", 	"%s"
+418    = "Interfaces-Datei '%1!' ist bereits ge”ffnet. Sie sollte vor dem Schreibzugriff geschlossen werden.", 	"%s"
+419    = "Keine Interfaces-Datei zum Schreiben ausgew„hlt.", 	""
+420    = "Verzeichnis-Komponente der Interfaces-Datei '%1!' nicht erhalten.", 	"%s"
+421    = "Name der Folgedatei fr Interfaces-Sicherungsdatei nicht gefunden.", 	""
+422    = "Anh„ngen von '%1!' an '%2!', um den Namen der Sicherungs-Interfaces-Datei zu erhalten, nicht m”glich.", 	"%s %s"
+423    = "'%1!' kann nicht in '%2!' umbenannt werden.", 	"%s %s"
+424    = "™ffnen der Interfaces-Datei '%1!' zum Schreiben nicht m”glich.", 	"%s"
+425    = "Schreiben in Interfaces-Datei '%1!' nicht m”glich.", 	"%s"
+426    = "Interfaces-Datei '%1!' kann nicht geschlossen werden.", 	"%s"
+427    = "Dienst fr Eintrag '%1!' kann nicht in eine Zeichenfolge konvertiert werden.", 	"%s"
+428    = "inf_service_construct_string() wurde mit NULL-Service aufgerufen.", 	""
+429    = "inf_service_construct_string() wurde mit NULL-Puffer aufgerufen.", 	""
+430    = "Unbekannter Diensttyp '%1!'; Dienst wird ignoriert.", 	"%d"
+431    = "Unbekanntes Protokoll '%1!'; Dienst wird ignoriert.", 	"%d"
+432    = "TCP ist das einzige Protokoll, das auf TLI untersttzt wird.", 	""
+433    = "Unbekannte Netzwerk-API. Gltige Netzwerk-API sind TLI\, Sockets oder keine.", 	""
+434    = "Dienst wurde in Zeile '%1!' vor diesem Eintrag gefunden.", 	"%s"
+435    = "Syntaktische Analyse der TLI-Anschlussnummer '%1!' nicht m”glich.", 	"%s"
+436    = "Internet-Adresse fr '%1!' nicht verfgbar.", 	"%s"
+437    = "Internet-Adresse '%1!' kann syntaktisch nicht in ein TLI-Format umgewandelt werden.", 	"%s"
+438    = "Unbekanntes Protokoll fr Eintrag '%1!' gefunden; Eintrag wird ignoriert.", 	"%s"
+439    = "Unbekannter Dienst fr Eintrag '%1!' gefunden; Dienst wird ignoriert.", 	"%s"
+440    = "Hostname fr Adresse '%1!' kann nicht ermittelt werden; Dienst wird ignoriert.", 	"%s"
+441    = "Doppelter Eintrag '%1!' wurde gefunden. Der erste Eintrag wird bearbeitet, alle weiteren werden ignoriert.", 	"%s"
+442    = "Nicht alle Aliase fr Listener konnten eingerichtet werden.", 	""
+443    = "Fehler bei der syntaktischen Analyse: '%1!' hat einen Listener '%2!', der bereits von '%3!' als Listener verwendet wird.", 	"%s %s %s"
+444    = " inf_service_copy() wurde mit NULL-Services aufgerufen.", 	 ""
+445    = "Kein Dienst in Interfaces-Datei fr Eintrag '%1!' gefunden; Eintrag wird ignoriert.", 	"%s"
+446    = "Interfaces-Eintrag '%1!' ist bereits vorhanden: Doppelte Eintr„ge sind nicht erlaubt.", 	"%s"
+447    = "Interfaces-Eintrag '%1!' w„re Listener von '%2!'. '%3!' ist bereits mit '%4!' verknpft.", 	"%s %s %s %s"
+448    = "Fr Listener-Eintrag '%1!' wurde '%2!' als Master eingetragen, obwohl er sich auf '%3!' in Interfaces-Datei bezieht.", 	"%s %s %s"
+449    = "Fr Kopf der Eintragsliste in Interfaces kann kein Speicher zugewiesen werden.", 	""
+450    = "Fr Element in der Eintragsliste von Interfaces kann kein Speicher zugewiesen werden.", 	""
+451    = "Doppelter Dienst in Interfaces-Eintrag '%1!' gefunden; Dienst wurde nicht eingefgt.", 	"%s"
+452    = "Dienst in Interfaces-Eintrag '%1!' wurde unvollst„ndig angegeben; Dienst wurde nicht eingefgt.", 	"%s"
+453    = "inf_service_get_alias() wurde mit NULL-Puffer aufgerufen.", 	""
+454    = "Interfaces-Eintrag '%1!' konnte nicht als Master von '%2!' markiert werden, da '%3!' bereits mit '%4!' verknpft ist.", 	"%s %s %s %s"
+455    = "Versuch, '%1!' als Listener fr '%2!' zu verwenden, fehlgeschlagen, da '%3!' keinen Interfaces-Dienst hat.", 	"%s %s %s"
+456    = "Versuch, '%1!' als Listener von '%2!' zu verwenden, fehlgeschlagen, da '%3!' keinen Abfrage-Dienst (es sollte genau EIN Abfrage-Dienst vorhanden sein) hat.", 	"%s %s %s"
+457    = "Versuch, '%1!' als Listener von '%2!' zu verwenden, fehlgeschlagen, da '%3!' mehrere Dienste (es sollte genau EIN Abfrage-Dienst vorhanden sein) hat.", 	"%s %s %s"
+458    = "Fr Listener-Eintrag '%1!' kann kein Speicher zugewiesen werden.", 	"%s"
+459    = "Fr Listener-Dienst '%1!' kann kein Speicher zugewiesen werden.", 	"%s"
+460    = "Listener-Alias '%1!' von '%2!' kann nicht in Interfaces-Datei eingefgt werden.", 	"%s %s"
+461    = "inf_service_set_Alias() wurde mit NULL-Puffer aufgerufen.", 	""
+463    = "Interfaces-Eintrag '%1!' kann in Interfaces-Datei nicht gefunden werden.", 	"%s"
+464    = "Keine Eintr„ge. Prfen Sie die Interfaces-Datei.", 	""
+500    = "Meldung Nr. '%1!' fr Produkt '%2!' kann in Nachrichtencache nicht gefunden werden.", 	"%d %s"
+501    = "Auditinit-Meldung Nummer '%1!' konnte nicht gefunden werden.", 	"%d"
+502    = "Meldung '%1!' fr Produkt '%2!' kann nicht zusammengesetzt werden. Der nicht zusammengesetzte Text ist: '%3!', Format-Zeichenfolge ist '%4!'.", 	"%d %s %s %s"
+503    = "Fr diese Meldung wird 'us_english' verwendet.", 	""
+504    = "Meldungen fr Produkt '%1!' mit Sprache '%2!' und Zeichensatz '%3!' k”nnen nicht geladen werden: Lokalisierungsdatei '%4!' nicht gefunden.", 	"%s %s %s %s"
+505    = "Meldungen fr Produkt-Nr. '%1!' mit Sprache '%2!' und Zeichensatz '%3!' k”nnen nicht geladen werden: Falsche Produkt-Nr.", 	"%d %s %s"
+506    = "'us_english' wird fr alle Meldungen verwendet.", 	""
+507    = "Formatfehler in Lokalisierungsdatei '%1!': Abschnitt '%2!' nicht gefunden. Laden der Sprache wird abgebrochen.", 	"%s %s"
+508    = "Fehler beim ™ffnen von '%1!' fr die Lokalisierung von Produkt '%2!'. Laden der Sprache wird abgebrochen.", 	"%s %s"
+509    = "'%1!' wird standardm„áig fr alle Meldungen verwendet.", 	"%s"
+600    = "Boot-Verzeichnis nicht eingerichtet; Sitzungslog kann nicht angelegt werden.", 	""
+601    = "Logverzeichnis nicht gefunden; Sitzungslog kann nicht angelegt werden.", 	""
+602    = "Lesen von Logverzeichnis nicht m”glich; Sitzungslog kann nicht angelegt werden.", 	""
+603    = "Logdatei '%1!' kann nicht ge”ffnet werden. Meldung des Betriebssystems: %2!.", 	"%s %s"
+604    = "Schreiben im Log fehlgeschlagen. Meldung des Betriebssystems: %1!.", 	"%s"
+605    = "Schlieáen des Logs fehlgeschlagen. Meldung des Betriebssystems: %1!.", 	"%s"
+607    = "Schreiben im Log nicht m”glich: Log wurde nicht angelegt.", 	""
+608    = "BEGINN DER UMGEBUNGSINFORMATION", 	""
+609    = "ENDE DER UMGEBUNGSINFORMATION", 	""
+610    = "Log wird geschlossen.", 	""
+611    = "Logname ist zu lang; Log kann nicht angelegt werden.", 	""
+612    = "BETRIEBSSYSTEM-UMGEBUNG", 	""
+613    = "BENUTZERUMGEBUNG", 	""
+614    = "PROZESSBESCHRNKUNGEN", 	""
+615    = "Beginn der Ausgabe von '%1!':", 	"%s"
+616    = "Ende der Ausgabe von '%1!'.", 	"%s"
+617    = "Name der Logdatei von '%1!' kann nicht generiert werden.", 	"%s"
+640    = "Zeichensatz:", 	""
+641    = "Sprache:", 	""
+642    = "Auditinit-Versionsverzeichnis:", 	""
+643    = "Arbeits-Versionsverzeichnis:", 	""
+644    = "Benutzername:", 	""
+645    = "Aktuelles Verzeichnis:", 	""
+700    = "Ja", 	""
+701    = "Nein", 	""
+702    = "(Geben Sie ja oder nein ein): ", 	""
+703    = "Weiter", 	""
+704    = "Geben Sie eine Zahl ein und drcken Sie die Eingabetaste: ", 	""
+705    = "Initialisierung des Men-Managers fehlgeschlagen.", 	""
+706    = "Men kann nicht angelegt werden: Anzahl erlaubter Fenster ist berschritten.", 	""
+707    = "Men kann nicht angelegt werden: Name des Fensters ist NULL.", 	""
+708    = "Bereits vorhandenes Men kann nicht angelegt werden (Name des Fensters = %1!).", 	"%s"
+709    = "Bildschirmattribute k”nnen nicht eingestellt werden: kein Fenster ge”ffnet.", 	""
+710    = "Aktuelles Fenster ist NULL.", 	""
+711    = "Strg-A OK und Fortfahren, Strg-X Anzeige verlassen, ? Hilfe.", 	""
+712    = "Strg-F - vorw„rts, Strg-B zurck.", 	""
+714    = "<Mehr>", 	""
+715    = "Drcken Sie die Eingabetaste, um fortzufahren. ", 	""
+716    = "Ihre Auswahl liegt auáerhalb des Bereichs. Wiederholen Sie Ihre Eingabe.", 	""
+717    = "Drcken Sie Strg-X, um die Hilfe zu beenden: ", 	""
+718    = "<F1> : Hilfe                                    <F3> : Audinit-Fehler-Log anzeigen", 	""
+719    = "<Esc> :  Hilfeanzeige verlassen", 	""
+720    = "Auditinit-Fehler: ", 	""
+721    = "Auditinit-Warnung: ", 	""
+722    = "Auditinit-Meldung: ", 	""
+723    = "Sybinit - Das Installationsprogramm fr System 10", 	""
+724    = "<F1> : Hilfe                                    <F3> : Audinit-Fehler-Log anzeigen", 	""
+725    = "AUDITINIT beenden?", 	""
+726    = "<EINGABE> : W„hlen Sie eine Option     <Esc> : Vorherige Anzeige      <F10> : N„chste Anzeige", 	""
+727    = "<ENTER> : Option w„hlen                                   <Esc> : Audinit beenden", 	""
+728    = "Auditinit-Fehler-Log: %1!", 	"%s"
+729    = "<Esc> :  Auditinit-Fehler-Log-Anzeige verlassen", 	""
+730    = "<F3>  : Quell-Laufwerk wechseln                    <Esc> : Kopieren von Dateien abbrechen", 	""
+731    = "Geben Sie den Ort der Installationsdiskette an: ", 	""
+732    = "<Esc> : Installation abbrechen", 	""
+733    = "Kopie der Datei : %1!", 	"%s"
+734    = "Installation abbrechen?", 	""
+735    = "Geben Sie das Laufwerk der Diskette %1! an:", 	"%s"
+736    = "Quellpfad : %1!\\", 	"%s"
+737    = "Zielpfad  : %1!\\", 	"%s"
+738    = "Diskette  : %1!", 	"%s"
+739    = "Legen Sie die Diskette %1! in Laufwerk %2!", 	"%s %s"
+740    = "%1! Installation abgeschlossen.", 	"%s"
+741    = "Sybase-Produktkonfigurationsdatei nicht gefunden.", 	""
+742    = "Legen Sie die Installationsdiskette ein.", 	""
+743    = "W„hlen Sie das Produkt, das Sie installieren wollen", 	""
+744    = "%1!-Installation", 	"%s"
+745    = "Diskette wechseln:", 	""
+746    = "Interner Fehler: Feldtyp fr %1! ist ungltig.", 	"%s"
+800    = "Ungltige Produkt-Nr. '%1!': Produkt ist nicht in internem Register.", 	"%d"
+801    = "reg_product_num_name() wurde mit NULL-Puffer aufgerufen.", 	""
+802    = "reg_product_name() wurde mit NULL-Puffer aufgerufen.", 	""
+803    = "Produkt '%1!' ist im internen Register nicht registriert.", 	"%s"
+804    = "reg_product_firstscreen() wurde mit NULL-Puffer aufgerufen.", 	""
+900    = "Unerwartetes Dateiendezeichen in Replay-Datei!", 	""
+1100    = "Initialisierung des Auditinit-Systemanbindungsmoduls fehlgeschlagen.", 	"" 
+1101    = "Login-Datensatz fr Verbindung konnte nicht eingelesen werden: Server = '%1!'.", 	"%s"
+1102    = "Pufferberlauf in DBPROCESS. Der SQL-Text lautet: '%1!'.", 	"%s"
+1103    = "Fehler beim Senden von SQL an Server '%1!'.", 	"%s"
+1104    = "Login-Versuch fehlgeschlagen: Server = '%1!'.", 	"%s"
+1105    = "™ffnen der Datei '%1!' fehlgeschlagen. Meldung des Betriebssystems: %2!.", 	"%s %s"
+1106    = "Fehler beim Lesen der Datei '%1!'. Meldung des Betriebssystems: %2!.", 	"%s %s"
+1107    = "Fehler beim Lesen von Ergebnissen von Server '%1!'.", 	"%s"
+1108    = "Auditinit-Systemanbindungsmodule nicht initialisiert.", 	""
+1109    = "DB-Library-Fehler: '%1!'.", 	"%s"
+1110    = "DB-Library-Betriebssystemfehler: '%1!'.", 	"%s"
+1111    = "Meldung des Adaptive Servers: Mldg %1!\, Ebene %2!\, Status %3!", 	"%d %d %d"
+1112    = "Server", 	""
+1113    = "Prozedur", 	""
+1114    = "Zeile", 	""
+1115    = "Fehler beim Verknpfen der Ergebnisse von Server '%1!'.", 	"%s"
+1120    = "Fehler bei der Initialisierung von RPCs fr Server '%1!'.", 	"%s"
+1121    = "Fehler beim Einstellen der RPC-Parameter fr Server '%1!'.", 	"%s"
+1122    = "Fehler beim Senden der RPCs fr Server '%1!'.", 	"%s"
+1123    = "Folgender SQL-Befehl wird an den Server gesendet: '%1!'.", 	"%s"
+1200    = "Taskliste nicht gefunden. Konfiguration kann nicht ausgefhrt werden.", 	""
+1201    = "Konfiguration kann nicht ausgefhrt werden, da Validierung der Eingabewerte fehlgeschlagen ist.", 	""
+1202    = "WARNUNG: Wiederherstellung von dieser Konfiguration nicht m”glich, da Fehler beim Schreiben der Attributsicherung aufgetreten ist.", 	""
+1203    = "Beginn von Task %1!.", 	"%s"
+1204    = "Ende von Task %1!.", 	"%s"
+1205    = "...need_to %1!.", 	"%s"
+1206    = "...need_to ist NULL--- wird standardm„áig ausgefhrt.", 	""
+1207    = "...able_to %1!.", 	"%s"
+1208    = "...able_to ist NULL--- wird nicht ausgefhrt.", 	""
+1209    = "...Task-Aktionen %1!.", 	"%s"
+1210    = "...WARNUNG: Task-Aktionen NULL--- wird nicht ausgefhrt.", 	""
+1211    = "...Task-Erfolg %1!.", 	"%s"
+1212    = "...Task-Erfolg NULL--- wird nicht ausgefhrt.", 	""
+1213    = "Task wird gerade ausgefhrt: %1! .", 	"%s"
+1214    = "Task wurde erfolgreich ausgefhrt: %1!.", 	"%s"
+1215    = "Task konnte nicht ausgefhrt werden: %1!. Die Konfiguration wird beendet.", 	"%s"
+1216    = "Konfiguration erfolgreich abgeschlossen.", 	""
+1217    = "Konfiguration fehlgeschlagen.", 	""
+1218    = "Da diese Auditinit-Sitzung mit dem Parameter '%1! %2!' aufgerufen wurde\, werden die oben genannten Warnungen ignoriert\, und die Konfiguration wird fortgesetzt.", 	"%s %s"
+1219    = "Auditinit wird wegen der oben angegebenen Warnmeldungen beendet. Wenn Sie die Konfiguration trotz der Warnungen fortsetzen wollen\, rufen Sie Auditinit mit dem Parameter '%1! %2!' auf.", 	"%s %s"
+1230    = "Tasklist auf Wunsch des Benutzers abgebrochen.", 	""
+1300    = "Das Auditinit-Versionsverzeichnis konnte nicht ermittelt werden.", 	""
+1302    = "Attribut fr das Auditinit-Versionsverzeichnis konnte nicht gesetzt werden.", 	""
+1303    = "Lokalisierungs-Manager kann nicht initialisiert werden.", 	 ""
+1304    = "Die Markierung 'validate only' muss mit der Ressourcendatei angegeben werden.", 	""
+1305    = "Der Pfad fr das Auditinit-Verzeichnis konnte nicht ermittelt werden.", 	""
+1306    = "Sybase-Versionsverzeichnis nicht verfgbar.", 	""
+1308    = "Setzen des Sybase-Versionsverzeichnis-Attributs nicht m”glich.", 	""
+1310    = "Setzen des Sybase-Ressourcendatei-Attributs nicht m”glich.", 	""
+1311    = "Log-Manager kann nicht initialisiert werden.", 	""
+1312    = "Fehler beim Zugriff auf Attributsicherung im Wiederherstellungsprozess der vorherigen Konfigurationssitzung.", 	""
+1313    = "Attributsicherung konnte im Wiederherstellungsprozess der vorherigen Konfigurationssitzung nicht geladen werden.", 	""
+1314    = "Fehler im Auditinit-Wiederherstellungslog: Es ist darin kein Produkt angegeben.", 	""
+1315    = "Wollen Sie die vorherige Konfigurationssitzung wiederherstellen? ", 	""
+1316    = "  '%1!'.", 	"%s"
+1319    = "Falsches Produkt '%1!' im Auditinit-Wiederherstellungslog fr die Attributsicherung.", 	"%s"
+1320    = "Fehler im Auditinit-Wiederherstellungslog: In der Attributsicherung ist keine Sprache angegeben.", 	""
+1321    = "Taskliste fr Produkt '%1!' im Auditinit-Wiederherstellungslog nicht vorhanden.", 	"%s"
+1322    = "Taskliste fr Produkt '%1!' kann nicht ausgefhrt werden.", 	"%s"
+1323    = "In Ressourcendatei '%1!' kann nicht geladen werden.", 	"%s"
+1324    = "Kein Produkt in Ressourcendatei '%1!' angegeben.", 	"%s"
+1325    = "Unbekanntes Produkt '%1!' in Ressourcendatei '%2!' angegeben.", 	"%s %s"
+1326    = "Ressourcendatei '%1!' kann nicht verifiziert werden.", 	"%s"
+1327    = "Keine Einstellung im Register fr Funktion der Ressourcendatei fr '%1!' vorhanden.", 	"%s"
+1328    = "Keine Sprache in Ressourcendatei '%1!' angegeben.", 	"%s"
+1329    = "Erste Anzeige fr '%1!' nicht erhalten.", 	"%s"
+1330    = "™ffnen und Anzeigen des ersten Fensters fr '%1!' nicht m”glich.", 	"%s"
+1331    = "Keine Sprache in interaktivem Modus angegeben.", 	""
+1332    = "Erste Anzeige fr Auditinit konnte nicht aufgerufen werden.", 	""
+1333    = "Erste Anzeige fr Auditinit konnte nicht ge”ffnet und angezeigt werden.", 	""
+1334    = "Auditinit : \\n\\tauditinit\\n\\t [-a]\\n\\t [-c Zeichensatz]\\n\\t [-e]\\n\\t [-h]\\n\\t [-l Sprache]\\n\\t [-log Logdatei]\\n\\t [-r Ressourcendatei]\\n\\t [-s Versionsverzeichnis]\\n\\t [-v]", 	""
+1336    = "'%1!'", 	"%s"
+1338    = "Anzeigemanager kann nicht initialisiert werden.", 	""
+1339    = "Modul zur Ausfhrung von SQL kann nicht initialisiert werden.", 	""
+1340    = "Attribute k”nnen nicht angelegt werden.", 	""
+1341    = "Anzeige kann nicht generiert werden.", 	""
+1342    = " Auditinit-Umgebung konnte nicht eingerichtet werden.", 	""
+1343    = "Wiederherstellungslog aus vorheriger Sitzung wird ignoriert.", 	""
+1344    = "Konfigurationssitzung fr Produkt '%1!' wird wiederhergestellt.", 	"%s"
+1345    = "Beenden.", 	""
+1346    = "Auditinit beenden? ", 	""
+1347    = "Einige Tasks laufen noch. Wollen Sie die Tasks WIRKLICH abbrechen? ", 	""
+1348    = "Sicherung der aktuellen Attribute erstellen?", 	""
+1349    = "Geben Sie fr die Attribute einen Ressourcendateinamen ein (Standard ist '%1!'): ",         "%s"
+1350    = "Attributsicherung in '%1!' erfolgreich.", 	"%s"
+1400    = "Auditinit : \\n\\tauditinit\\n\\t [/validate]\\n\\t [/charset=Zeichensatz]\\n\\t [/environment]\\n\\t [/help]\\n\\t [/language=Sprache]\\n\\t [/log=Logdatei]\\n\\t [/resource=Ressourcendatei]\\n\\t [/sybase=Versionsverzeichnis]\\n\\t [/version]", 	""
+1401    = "Verzeichnis '%1!' ist bereits vorhanden und kein gltiges Versionsverzeichnis des Adaptive Servers. Geben Sie einen anderen Standort fr das Versionsverzeichnis an.", 	"%s"
+1402    = "Verzeichnis '%1!' ist das Versionsverzeichnis eines Sybase Servers. šberschreiben?", 	"%s"
+1403    = "Die Logdatei fr diese Sitzung ist '%1!'.", 	"%s"
+1404    = "Ressourcendatei '%1!' wird fr Produktattribute verwendet.", 	"%s"
+1405    = "AUDITINIT UNTERSTšTZT DIE BEARBEITUNG VON INTERFACES-DATEIEN \
+NICHT MEHR. Alle Ressourcedateiattribute fr Interfaces-Dateien (einschlieálich \
+do_add_server und do_add_backup_server) werden ignoriert.\\n\\n SYBSETUP\, \
+DSEDIT\, DSEDIT_DCE oder ein Texteditor mssen benutzt werden\, bevor mit \
+Auditinit ein Server installiert\, ge„ndert oder umgestellt wird:\\n - Vor der \
+Installation eines Servers erstellen Sie einen neuen Eintrag in der \
+Interfaces-Datei\\n - Bevor Sie einen Server auf andere Weise „ndern\, „ndern Sie \
+seinen Eintrag in der Interfaces-Datei\\n - Vor dem Upgrade kopieren Sie den \
+Eintrag fr den umzustellenden Server aus der alten Interfaces-Datei in die \
+neue.\\n\\n Weitere Hinweise finden Sie in der Dokumentation.", 	"%s"
+1410    = "Verzeichnisattribut von Adaptive Server Enterprise kann nicht festgelegt werden.",        ""
+1411    = "Das Attribut des Open Client/Server Bibliotheksverzeichnisses kann nicht gesetzt werden.",    ""
+1502    = "Speicher der Gr”áe %1! kann nicht zugewiesen werden: Ungltige Gr”áe.", 	"%d"
+1503    = "Versuch, Speicher zuzuweisen, fehlgeschlagen.", 	""
+1506    = "Speicher der Gr”áe %1! kann nicht zu bestehendem Speicher hinzugefgt werden: ungltige Gr”áe.", 	"%d"
+1507    = "Versuch, Speicher ungltigem Speicherzeiger zuzuweisen.", 	""
+1508    = "Versuch, Speicher hinzuzufgen, fehlgeschlagen.", 	""
+1509    = "Ungltige Argumente in syb_calloc(): Nummer = %1!, Gr”áe = %2!.", 	"%d %d"
+1510    = "Versuch, Speicher ber calloc() zuzuweisen, fehlgeschlagen.", 	""
+1511    = "Auslagerungsspeicher des Betriebssystems geht zur Neige. Das Betriebssystem wird Auditinit m”glicherweise abbrechen.", 	""
+1650    = "In Ressourcendatei '%1!': '%2!' ist ein ungltiger Produktname.", 	"%s %s"
+1651    = "In Ressourcendatei '%3!': '%2!' ist ein ungltiges Attribut fr Produkt '%1!'.", 	"%s %s %s"
+1652    = "Syntaxfehler in Ressourcendatei '%1!': %2!.", 	"%s %s"
+1653    = "%1! ist eine unvollst„ndige Attributsicherung.", 	"%s"
+1654    = "Attribut '%1!' wird zur Konfiguration von Produkt '%2!' ben”tigt, wurde aber in Ressourcendatei '%3!' nicht gesetzt.", 	 "%s %s %s"
+1655    = "Attribut '%1!' fr Produkt '%2!' wurde mehrfach in Ressourcendatei '%3!' angegeben.", 	 "%s %s %s"
+1656    = "Interner Produkt-Registerfehler. '%1!' registrierte Produkte vorhanden.", 	 "%d"
+1657    = "Attribut '%1!' konnte nicht gesetzt werden, da '%2!' ein ungltiger Wert ist.", 	 "%s %s"
+3101    = "AUDITINIT", 	""
+3102    = "", 	""
+3103    = "AUDITINIT", 	""
+3104    = "\
+ 1. Versionsverzeichnis\\n\\nWenn Sie einen Server konfigurieren, und das \
+angezeigte Verzeichnis nicht das Verzeichnis ist\, in das Sie die \
+SYBASE-Dateien geladen haben\, beenden Sie Auditinit. Setzen Sie \
+die SYBASE-Umgebungsvariable so\, dass sie auf das Verzeichnis \
+zeigt\, in dem Sie die SYBASE-Dateien gespeichert haben. Rufen \
+Sie Auditinit wieder auf und starten Sie den Vorgang nochmals.\
+\\n\\n2. Server-Produkt konfigurieren\\n\\nW„hlen Sie diese \
+Option\, wenn Sie Auditing auf einem bestehenden Adaptive \
+Server installieren wollen.\\n\\n  * Steuertasten *\\n\\nMit Strg-x \
+beenden Sie Auditinit.", 	""
+3105    = "\
+1. Versionsverzeichnis\\n\\nWenn Sie einen Server konfigurieren, \
+und das angezeigte Verzeichnis nicht das Verzeichnis ist\, in \
+das Sie die SYBASE-Dateien geladen haben\, beenden Sie \
+Auditinit. Setzen Sie das SYBASE-Logical so\, dass sie auf \
+das Verzeichnis zeigt\, in dem Sie die SYBASE-Dateien \
+gespeichert haben. Rufen Sie Auditinit wieder auf und \
+starten Sie den Vorgang nochmals.\\n\\nArt der Installation: \
+Hier wird angezeigt\, ob die SYBASE-Installation prim„r oder \
+sekund„r ist. Eine prim„re Installation ist fr ein \
+Produktionssystem. Ihre Logicals werden in der SYBASE-Befehlsdatei \
+definiert. Eine sekund„re Installation wird fr ein Testsystem eingerichtet. \
+Ihre Logicals werden auf Prozessebene definiert. Die Art der Installation \
+haben Sie angegeben\, als Sie VMSINSTAL aufgerufen haben.\\n\\n2. \
+Server-Produkt konfigurieren\\n\\nW„hlen Sie diese Option\, wenn Sie \
+Auditing auf einem bestehenden Adaptive Server installieren wollen.\\n\\n\
+  * Steuertasten *\\n\\nMit Strg-x beenden Sie Auditinit.", 	""
+3107    = "AUDITINIT UNTERSTšTZT DIE BEARBEITUNG VON \
+INTERFACES-DATEIEN NICHT MEHR.\\nHinweise finden Sie in der \
+Hilfe oder in der Dokumentation.\\n\\n", 	""
+3111    = "SERVER-PRODUKTE KONFIGURIEREN", 	""
+3112    = "", 	""
+3113    = "SERVER-PRODUKTE KONFIGURIEREN", 	""
+3114    = "\
+W„hlen Sie die Nummer des Serverprodukts und drcken Sie die Eingabetaste.\\n\\n* Steuertasten *\\n\\nUm zur n„chsten Anzeige \
+zu gelangen\, brauchen Sie nicht Strg-a zu drcken\, da sie mit der Auswahl \
+eines Produkts automatisch aufgerufen wird.\\n\\nMit Strg-x schlieáen Sie \
+diese Anzeige und annullieren eventuell durchgefhrte Eintr„ge. Auditinit \
+kehrt in das vorherige Men zurck. Mit wiederholtem Drcken von Strg-x \
+rufen Sie jeweils das vorherige Men auf\, verlassen Auditinit und kehren \
+zur Eingabeaufforderung des Betriebssystems zurck.", 	""
+3121    = "SYSTEMANBINDUNG KONFIGURIEREN", 	""
+3122    = "", 	""
+3123    = "SYSTEMANBINDUNG KONFIGURIEREN", 	""
+3124    = "\
+Auditinit zeigt eine Liste der verfgbaren Systemanbindungsprodukte. W„hlen \
+Sie das gewnschte Produkt und drcken Sie die Eingabetaste.\\n\\n* \
+Steuertasten *\\n\\nUm zur n„chsten Anzeige zu gelangen\, brauchen \
+Sie nicht Strg-a zu drcken\, da sie mit der Auswahl eines Produkts \
+automatisch aufgerufen wird.\\n\\nMit Strg-x schlieáen Sie diese Anzeige \
+und annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt in das \
+vorherige Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie \
+jeweils das vorherige Men auf\, verlassen Auditinit und kehren zur \
+Eingabeaufforderung des Betriebssystems zurck.", 	""
+3131    = "FRONTEND-PRODUKTE KONFIGURIEREN", 	""
+3132    = "", 	""
+3133    = "FRONTEND-PRODUKTE KONFIGURIEREN", 	""
+3134    = "\
+Auditinit zeigt eine Liste der verfgbaren Frontend-Produkte. W„hlen Sie \
+das gewnschte Produkt und drcken Sie die Eingabetaste.\\n\\n* Steuertasten \
+ *\\n\\nUm zur n„chsten Anzeige zu gelangen\, brauchen Sie nicht Strg-a \
+zu drcken\, da sie mit der Auswahl eines Produkts automatisch aufgerufen \
+wird.\\n\\nMit Strg-x schlieáen Sie diese Anzeige und annullieren eventuell \
+durchgefhrte Eintr„ge. Auditinit kehrt in das vorherige Men zurck. Mit \
+wiederholtem Drcken von Strg-x rufen Sie jeweils das vorherige Men \
+auf\, verlassen Auditinit und kehren zur Eingabeaufforderung des \
+Betriebssystems zurck.", 	""
+3141    = "HAUPTANZEIGE DER INTERFACES-DATEI", 	""
+3142    = "", 	""
+3143    = "HAUPTANZEIGE DER INTERFACES-DATEI", 	""
+3144    = "\
+1. Neuen Eintrag hinzufgen\\n\\nW„hlen Sie diese Option\, um einen \
+neuen Listener-Dienst einzurichten.\\n\\n2. Bestehenden Eintrag \
+„ndern\\n\\nW„hlen Sie diese Option\, um einen Wert zu „ndern\, der mit \
+einem Eintrag der Interfaces-Datei verbunden ist.\\n\\n3. Bestehenden Eintrag \
+anzeigen\\n\\nW„hlen Sie diese Option\, um bereits definierte Eintr„ge der \
+Interfaces-Datei anzuzeigen.\\n\\n4. Bestehenden Eintrag l”schen\\n\\nW„hlen \
+Sie diese Option\, um einen bestehenden Eintrag aus der Interfaces-Datei zu \
+entfernen.\\n\\n* Steuertasten *\\n\\nUm zur n„chsten Anzeige zu gelangen\, \
+brauchen Sie nicht Strg-a zu drcken\, da sie mit der Auswahl einer Option \
+automatisch aufgerufen wird.\\n\\nMit Strg-x schlieáen Sie diese Anzeige und \
+annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt in das vorherige \
+Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie jeweils das \
+vorherige Men auf\, verlassen Auditinit und kehren zur Eingabeaufforderung \
+des Betriebssystems zurck.", 	""
+3151    = "NEUEN EINTRAG IN DER INTERFACES-DATEI ERSTELLEN", 	""
+3152    = "", 	""
+3153    = "NEUEN EINTRAG IN DER INTERFACES-DATEI ERSTELLEN", 	""
+3154    = "\
+1. Servername:\\n\\nW„hlen Sie diese Option\, um den Namen des Servers \
+einzugeben\, fr den Sie einen Eintrag in der Interfaces-Datei erstellen wollen. \
+Geben Sie den Namen an der Bedieneraufforderung ein.\\n\\n* Steuertasten \
+*\\n\\nMit Strg-a akzeptieren Sie den angezeigten Namen und gehen weiter zum \
+n„chsten Men.\\n\\nMit Strg-x schlieáen Sie diese Anzeige. Auditinit kehrt in \
+das vorherige Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie \
+jeweils das vorherige Men auf\, verlassen Auditinit und kehren zur \
+Eingabeaufforderung des Betriebssystems zurck.", 	""
+3161    = "EINTRAG IN DER INTERFACES-DATEI WHLEN", 	""
+3162    = "", 	""
+3163    = "EINTRAG IN DER INTERFACES-DATEI WHLEN", 	""
+3164    = "\
+Auditinit zeigt eine Liste verfgbarer Eintr„ge in der Interfaces-Datei an. Diese \
+Liste enth„lt Eintr„ge fr Adaptive Server und Backup Server. Wenn die Liste \
+zu lang ist\, um in den Anzeigeausschnitt zu passen\, bl„ttern Sie sie bis ans Ende \
+durch. W„hlen Sie den Eintrag der Interfaces-Datei\, den Sie „ndern wollen.\\n\\n*  \
+Steuertasten *\\n\\nMit Strg-f bl„ttern Sie die Liste verfgbarer Eintr„ge der \
+Interfaces-Datei vorw„rts. Sie mssen erst bis ans Ende der Liste gehen\, wenn Sie einen \
+Eintrag l”schen wollen.\\n\\nMit Strg-b bl„ttern Sie die Liste verfgbarer Eintr„ge \
+der Interfaces-Datei zurck.\\n\\nUm zur n„chsten Anzeige zu gelangen\, \
+brauchen Sie nicht Strg-a zu drcken\, da sie mit der Auswahl eines Eintrags in der \
+Interfaces-Datei automatisch aufgerufen wird.\\n\\nMit Strg-x schlieáen Sie diese \
+Anzeige. Auditinit kehrt in das vorherige Men zurck. Mit wiederholtem \
+Drcken von Strg-x rufen Sie jeweils das vorherige Men auf\, verlassen \
+Auditinit und kehren zur Eingabeaufforderung des Betriebssystems zurck.", 	""
+3171    = "ANZEIGE FšR DEN INTERFACES-EINTRAG DES SERVERS", 	""
+3172    = "", 	""
+3173    = "ANZEIGE FšR DEN INTERFACES-EINTRAG DES SERVERS", 	""
+3174    = "\
+1. Anzahl der Neuversuche:\\n\\nMit dieser Option k”nnen Sie angeben\, wie oft \
+ein Client den Versuch wiederholt\, die Verbindung mit dem Adaptive Server \
+herzustellen\, nachdem der erste Versuch der Verbindungsaufnahme \
+fehlgeschlagen ist. W„hlen Sie diese Option\, wenn Sie den angezeigten Wert \
+„ndern wollen.\\n\\n2. Zeitspanne fr Neuversuch:\\n\\nMit dieser Option k”nnen \
+Sie festlegen\, wie viele Sekunden ein Client abwartet\, bevor er nochmals \
+versucht\, die Verbindung mit dem Adaptive Server aufzunehmen. W„hlen Sie \
+diese Option\, wenn Sie den angezeigten Wert „ndern wollen.\\n\\n3. Neuen \
+Listener-Dienst hinzufgen:\\n\\nW„hlen Sie diese Option\, wenn Sie einen \
+Listener-Dienst hinzufgen wollen\, der Netzwerkverbindungen zum Adaptive \
+Server erm”glicht. Beachten Sie\, dass Auditinit alle derzeit verfgbaren \
+Listener-Dienste im unteren Teil des Bildschirms anzeigt.\\n\\nListener-Dienst \
+„ndern oder l”schen:\\n\\nWenn Sie bereits Listener-Dienste konfiguriert haben\, \
+zeigt Auditinit alle derzeit verfgbaren Listener-Dienste als getrennte Menoption. \
+W„hlen Sie den Listener-Dienst\, den Sie „ndern oder l”schen wollen.\\n\\n* \
+Steuertasten *\\n\\nMit Strg-a akzeptieren Sie alle angezeigten Werte fr den \
+Interfaces-Datei-Eintrag. Auditinit fordert Sie auf\, zu best„tigen\, dass diese \
+nderungen in die Interfaces-Datei geschrieben werden sollen. Geben Sie an der \
+Eingabeaufforderung \"j\" ('y') ein\, um die nderungen in die Interfaces-Datei \
+zu schreiben.\\n\\nMit Strg-x schlieáen Sie diese Anzeige. Auditinit kehrt in das \
+vorherige Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie jeweils \
+das vorherige Men auf\, verlassen Auditinit und kehren zur Eingabeaufforderung \
+des Betriebssystems zurck.", 	""
+3191    = "NETZWERKPROTOKOLL AUSWHLEN", 	""
+3192    = "", 	""
+3193    = "NETZWERKPROTOKOLL AUSWHLEN", 	""
+3194    = "\
+W„hlen Sie den Namen eines Netzwerkprotokolls\, das fr den neuen \
+Dienst verwendet werden soll. Welche Protokolle angezeigt werden\, richtet \
+sich nach dem verwendeten Betriebssystem und der installierten \
+Netzwerksoftware. Hinweise zu untersttzten Protokollen entnehmen Sie \
+der Installationsanleitung Ihres SYBASE Adaptive Servers.\\n\\n* \
+Steuertasten *\\n\\nMit Strg-x schlieáen Sie diese Anzeige und annullieren \
+eventuell durchgefhrte Eintr„ge. Auditinit kehrt in das vorherige Men \
+zurck. Mit wiederholtem Drcken von Strg-x rufen Sie jeweils das vorherige \
+Men auf\, verlassen Auditinit und kehren zur Eingabeaufforderung des \
+Betriebssystems zurck.", 	""
+3201    = "TCP-DIENST BEARBEITEN", 	""
+3202    = "", 	""
+3203    = "TCP-DIENST BEARBEITEN", 	""
+3204    = "\
+1. Hostname/Adresse\\n\\nW„hlen Sie diesen Eintrag\, um den angezeigten \
+TCP-Hostnamen oder die IP-Adresse des Adaptive Servers zu „ndern\, den \
+Sie installieren. Als Standardvorgabe zeigt Auditinit den Hostnamen des \
+Rechners\, den Sie gerade verwenden.\\n\\n2. Port\\n\\nW„hlen Sie diesen \
+Eintrag\, um die 4- oder 5-stellige Portnummer des Adaptive Servers \
+einzugeben. Gltige Portnummern liegen zwischen 1024 und 65535. \
+Hinweise zur Wahl einer nicht benutzten Portnummer entnehmen Sie \
+der Installationsanleitung Ihres SYBASE Adaptive Servers.\\n\\nDer \
+Adaptive Server benutzt diese Portnummer\, um Verbindungen von den \
+Clients zu verwalten. (Clients mssen dieselbe Portnummer verwenden\, \
+um eine Verbindung mit diesem Adaptive Server einzurichten.)\\n\\n3. \
+Aliasname\\n\\nW„hlen Sie diesen Eintrag\, wenn Sie einen Alias (einen \
+\"Spitznamen\") fr den TCP-Dienst definieren wollen. Damit k”nnen Sie \
+den TCP-Dienst von anderen definierten Diensten unterscheiden.\\n\\n4. \
+Diesen Dienst aus dem Interfaces-Eintrag entfernen\\n\\nW„hlen \
+Sie diesen Eintrag\, um einen bestehenden Dienst aus dem Eintrag des Servers \
+in der Interfaces-Datei zu l”schen (angezeigter Hostname\, Port und \
+Aliasname).\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den \
+angezeigten TCP-Dienst.\\n\\nMit Strg-x schlieáen Sie diese Anzeige und \
+annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt in das vorherige \
+Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie jeweils das \
+vorherige Men auf\, verlassen Auditinit und kehren zur Eingabeaufforderung \
+des Betriebssystems zurck.", 	""
+3205    = "\
+1. Hostname/Adresse\\n\\nW„hlen Sie diesen Eintrag\, um den angezeigten \
+TCP-Hostnamen oder die IP-Adresse des Adaptive Servers zu „ndern\, den Sie \
+installieren. Als Standardvorgabe zeigt Auditinit den Hostnamen des Rechners\, \
+den Sie gerade verwenden.\\n\\n2. Port\\n\\nW„hlen Sie diesen Eintrag\, um die \
+4- oder 5-stellige Portnummer des Adaptive Servers einzugeben. Gltige \
+Portnummern liegen zwischen 1024 und 65535. Hinweise zur Wahl einer nicht \
+benutzten Portnummer entnehmen Sie der Installationsanleitung Ihres SYBASE \
+Adaptive Servers.\\n\\nDer Adaptive Server benutzt diese Portnummer\, um \
+Verbindungen von den Clients zu verwalten. (Clients mssen dieselbe \
+Portnummer verwenden\, um eine Verbindung mit diesem Adaptive Server \
+einzurichten.)\\n\\n3. Aliasname\\n\\nW„hlen Sie diesen Eintrag\, wenn Sie einen \
+Alias (einen \"Spitznamen\") fr den TCP-Dienst definieren wollen. Damit \
+k”nnen Sie den TCP-Dienst von anderen definierten Diensten \
+unterscheiden.\\n\\n4. Servertyp\\n\\nW„hlen Sie diese Option\, wenn Sie den \
+Servertyp von einem Masterserver auf einen Begleitserver „ndern wollen. \
+Als Standardvorgabe installiert Auditinit einen Masterserver. Wenn Sie nur \
+einen Masterserver installieren wollen\, ignorieren Sie diese Option.\\n\\nDer \
+Installationsanleitung fr den SYBASE Adaptive Server entnehmen Sie \
+zus„tzliche Hinweise zur Installation eines Begleitservers.\\n\\n5. \
+Diesen Dienst aus dem Interfaces-Eintrag entfernen\\n\\nW„hlen \
+Sie diesen Eintrag\, um einen bestehenden Dienst aus dem Eintrag des Servers \
+in der Interfaces-Datei zu l”schen (angezeigter Hostname\, Port und \
+Aliasname).\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den \
+angezeigten TCP-Dienst.\\n\\nMit Strg-x schlieáen Sie diese Anzeige \
+und annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt in das \
+vorherige Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie \
+jeweils das vorherige Men auf\, verlassen Auditinit und kehren zur \
+Eingabeaufforderung des Betriebssystems zurck.", 	""
+3211    = "DECNET-DIENST BEARBEITEN", 	""
+3212    = "", 	""
+3213    = "DECNET-DIENST BEARBEITEN", 	""
+3214    = "\
+1. Knotenname\\n\\nW„hlen Sie diese Option\, um den angezeigten Knotennamen \
+fr den Adaptive Server zu „ndern\, den Sie installieren. Als Standardvorgabe \
+zeigt Auditinit den aktuellen Knotennamen an.\\n\\n2. Objekt\\n\\nW„hlen Sie \
+diese Option\, wenn Sie eine Netzwerk-Objektnummer fr den Adaptive Server \
+eingeben wollen. Gltige Objektnummern liegen zwischen 128 und 253.\\n\\n\
+Sybase empfiehlt\, die Verwendung von Objektnummern zu unterlassen. Der \
+Adaptive Server untersttzt Objektnummern nur aus Kompatibilit„tsgrnden \
+mit frheren Versionen.\\n\\n3. Aliasname\\n\\nW„hlen Sie diesen Eintrag\, wenn \
+Sie einen Alias (einen \"Spitznamen\") fr den DECnet-Dienst definieren wollen. \
+Damit k”nnen Sie den DECnet-Dienst von anderen definierten Diensten \
+unterscheiden.\\n\\n4. Diesen Dienst aus dem Interfaces-Eintrag \
+entfernen\\n\\nW„hlen Sie diesen Eintrag\, um einen bestehenden Dienst aus dem \
+Eintrag des Servers in der Interfaces-Datei zu l”schen (angezeigter Knotenname\, \
+Objekt und Aliasname).\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den \
+angezeigten DECnet-Dienst.\\n\\nMit Strg-x schlieáen Sie diese Anzeige und \
+annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt in das vorherige \
+Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie jeweils das \
+vorherige Men auf\, verlassen Auditinit und kehren zur Eingabeaufforderung \
+des Betriebssystems zurck.", 	""
+3215    = "\
+1. Knotenname\\n\\nW„hlen Sie diese Option\, um den angezeigten Knotennamen \
+fr den Adaptive Server zu „ndern\, den Sie installieren. Als Standardvorgabe \
+zeigt Auditinit den aktuellen Knotennamen an.\\n\\n2. Objekt\\n\\nW„hlen Sie \
+diese Option\, wenn Sie eine Netzwerk-Objektnummer fr den Adaptive Server \
+eingeben wollen. Gltige Objektnummern liegen zwischen 128 und 253.\\n\\n\
+Sybase empfiehlt\, die Verwendung von Objektnummern zu unterlassen. Der \
+Adaptive Server untersttzt Objektnummern nur aus Kompatibilit„tsgrnden \
+mit frheren Versionen.\\n\\n3. Aliasname\\n\\nW„hlen Sie diesen Eintrag\, \
+wenn Sie einen Alias (einen \"Spitznamen\") fr den DECnet-Dienst definieren \
+wollen. Damit k”nnen Sie den DECnet-Dienst von anderen definierten Diensten \
+unterscheiden..\\n\\n4. Servertyp\\n\\nW„hlen Sie diese Option\, wenn Sie den \
+Servertyp von einem Masterserver auf einen Begleitserver „ndern wollen. \
+Als Standardvorgabe installiert Auditinit einen Masterserver. Wenn Sie nur \
+einen Masterserver installieren wollen\, ignorieren Sie diese Option.\\n\\nDer \
+Installationsanleitung fr den SYBASE Adaptive Server entnehmen Sie \
+zus„tzliche Hinweise zur Installation eines Begleitservers.\\n\\n5. Diesen \
+Dienst aus dem Interfaces-Eintrag entfernen\\n\\nW„hlen Sie diesen \
+Eintrag\, um einen bestehenden Dienst aus dem Eintrag des Servers in der \
+Interfaces-Datei zu l”schen (angezeigter Knotenname\, Objekt und Aliasname).\
+\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den angezeigten DECnet-\
+Dienst.\\n\\nMit Strg-x schlieáen Sie diese Anzeige und annullieren eventuell \
+durchgefhrte Eintr„ge. Auditinit kehrt in das vorherige Men zurck. Mit \
+wiederholtem Drcken von Strg-x rufen Sie jeweils das vorherige Men auf\, \
+verlassen Auditinit und kehren zur Eingabeaufforderung des Betriebssystems \
+zurck.", 	""
+3221    = "SPX-DIENST BEARBEITEN", 	""
+3222    = "", 	""
+3223    = "SPX-DIENST BEARBEITEN", 	""
+3224    = "\
+1. Hostname/Adresse\\n\\nW„hlen Sie diese Option\, um den Hostnamen \
+einzugeben\, auf dem der Server laufen wird. Als Standardvorgabe zeigt \
+Auditinit den aktuellen Hostnamen. Ein Beispiel fr einen gltigen Hostnamen \
+mit entsprechender Adresse ist 00000001\,AA0004002104.\\n\\n2. \
+Socket\\n\\nW„hlen Sie diese Option\, um den Socket einzugeben\, den der \
+Server benutzt, um auf Client-Verbindungen zu horchen. Gltige Socketnummern \
+liegen zwischen 0x8000 und 0xBFFF. Sie k”nnen die Socketnummer im Hex- \
+oder Dezimalformat eingeben. Eintr„ge\, die mit \"0x\" beginnen\, werden als \
+Hex interpretiert.\\n\\n3. Aliasname\\n\\nW„hlen Sie diesen Eintrag\, wenn Sie \
+einen Alias (einen \"Spitznamen\") fr den SPX-Dienst definieren wollen. \
+Damit k”nnen Sie den SPX-Dienst von anderen definierten Diensten \
+unterscheiden.\\n\\n4. Diesen Dienst aus dem Interfaces- Eintrag \
+entfernen\\n\\nW„hlen Sie diesen Eintrag\, um einen bestehenden Dienst aus \
+dem Eintrag des Servers in der Interfaces-Datei zu l”schen (angezeigter \
+Hostname\, Socket und Aliasname).\\n\\n* Steuertasten *\\n\\nMit Strg-a \
+akzeptieren Sie den angezeigten SPX-Dienst.\\n\\nMit Strg-x schlieáen Sie \
+diese Anzeige und annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt \
+in das vorherige Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie \
+jeweils das vorherige Men auf\, verlassen Auditinit und kehren zur \
+Eingabeaufforderung des Betriebssystems zurck.", 	""
+3225    = "\
+1. Hostname/Adresse\\n\\nW„hlen Sie diese Option\, um den Hostnamen \
+einzugeben\, auf dem der Server laufen wird. Als Standardvorgabe zeigt \
+Auditinit den aktuellen Hostnamen. Ein Beispiel fr einen gltigen Hostnamen \
+mit entsprechender Adresse ist 00000001\,AA0004002104.\\n\\n2. \
+Socket\\n\\nW„hlen Sie diese Option\, um den Socket einzugeben\, den der \
+Server benutzt, um auf Client-Verbindungen zu horchen. Gltige \
+Socketnummern liegen zwischen 0x8000 und 0xBFFF. Sie k”nnen die \
+Socketnummer im Hex- oder Dezimalformat eingeben. Eintr„ge\, die mit \
+\"0x\" beginnen\, werden als Hex interpretiert.\\n\\nHinweise zu gltigen \
+Socketnummern entnehmen Sie der Installationsanleitung Ihres SYBASE \
+Adaptive Servers.\\n\\n3. Aliasname\\n\\nW„hlen Sie diesen Eintrag\, wenn Sie \
+einen Alias (einen \"Spitznamen\") fr den SPX-Dienst definieren wollen. \
+Damit k”nnen Sie den SPX-Dienst von anderen definierten Diensten \
+unterscheiden.\\n\\n4. Servertyp\\n\\nW„hlen Sie diese Option\, wenn Sie \
+den Servertyp von einem Masterserver auf einen Begleitserver „ndern \
+wollen. Als Standardvorgabe installiert Auditinit einen Masterserver. Wenn \
+Sie nur einen Masterserver installieren wollen\, ignorieren Sie diese \
+Option.\\n\\nDer Installationsanleitung fr den SYBASE Adaptive Server \
+entnehmen Sie zus„tzliche Hinweise zur Installation eines \
+Begleitservers.\\n\\n4. Diesen Dienst aus dem Interfaces-Eintrag \
+entfernen\\n\\nW„hlen Sie diesen Eintrag\, um einen bestehenden Dienst aus \
+dem Eintrag des Servers in der Interfaces-Datei zu l”schen (angezeigter \
+Hostname\, Socket und Aliasname).\\n\\n* Steuertasten *\\n\\nMit Strg-a \
+akzeptieren Sie den angezeigten SPX-Dienst.\\n\\nMit Strg-x schlieáen Sie \
+diese Anzeige und annullieren eventuell durchgefhrte Eintr„ge. Auditinit kehrt \
+in das vorherige Men zurck. Mit wiederholtem Drcken von Strg-x rufen Sie \
+jeweils das vorherige Men auf\, verlassen Auditinit und kehren zur \
+Eingabeaufforderung des Betriebssystems zurck.", 	""
+3231    = "APPLETALK-DIENST BEARBEITEN", 	""
+3232    = "", 	""
+3233    = "", 	""
+3234    = "", 	""
+3241    = "BSD-NAMED-PIPES-DIENST BEARBEITEN", 	""
+3242    = "", 	""
+3243    = "BSD-NAMED-PIPES-DIENST BEARBEITEN", 	""
+3244    = "\
+1. Listener-Pfad\\n\\nW„hlen Sie diesen Eintrag\, um den Suchpfad fr den \
+BSD-Named-Pipes-Listener einzugeben. Der Pfad muss auf dem lokalen \
+Rechner verfgbar sein\, auf dem der Server l„uft.\\n\\n 2. Alias fr Named \
+Pipes\\n\\n W„hlen Sie diesen Eintrag\, um den Aliasnamen fr Named Pipes \
+einzugeben. \\n\\n 3. Diesen Dienst aus dem Interfaces-Eintrag \
+entfernen\\n\\nW„hlen Sie diesen Eintrag\, um einen bestehenden Dienst aus \
+dem Eintrag des Servers in der Interfaces-Datei zu l”schen (angezeigter BSD-\
+Named-Pipes-Listener und NP-Aliasname).\\n\\n* Steuertasten *\\n\\nMit Strg-a \
+akzeptieren Sie den angezeigten BSD-Named-Pipes-Dienst.\\n\\nMit Strg-x \
+schlieáen Sie diese Anzeige und annullieren eventuell durchgefhrte Eintr„ge. \
+Auditinit kehrt in das vorherige Men zurck. Mit wiederholtem Drcken von \
+Strg-x rufen Sie jeweils das vorherige Men auf\, verlassen Auditinit und kehren \
+zur Eingabeaufforderung des Betriebssystems zurck.", 	""
+3245    = "Interfaces fr Secure SQL Server konfigurieren?", 	"" 
+3301    = "Pfad des Versionsverzeichnisses eingeben (Standard ist: '%1!'): ", 	"%s"
+3302    = "Versionsverzeichnis: ", 	""
+3303    = "Interfaces-Datei anzeigen/bearbeiten", 	""
+3304    = "Server-Produkt konfigurieren", 	""
+3305    = "Open Client/Server-Produkt konfigurieren", 	""
+3306    = "Frontend-Produkt konfigurieren", 	""
+3307    = "Dateien von Diskette kopieren", 	""
+3308    = "Umgebungsvariable anzeigen/bearbeiten", 	""
+3309    = "Systemkonsistenz prfen", 	""
+3310    = "Art der Installation: ", 	""
+3311    = "Prim„rinstallation (Zugang auf Systemebene)", 	""
+3312    = "Sekund„rinstallation (Zugang auf Prozessebene oder Gruppenebene)", 	""
+3401    = "Die bersetzten Systemmeldungen fr das Produkt '%1!' konnten nicht geladen werden.", 	"%s"
+3402    = "Produkt", 	""
+3403    = "Installationsdatum", 	""
+3404    = "Konfigurationsdatum", 	""
+3405    = "Produkte:", 	""
+3501    = "Interfaces-Datei: ", 	""
+3502    = "Neuen Eintrag hinzufgen", 	""
+3503    = "Bestehenden Eintrag „ndern", 	""
+3504    = "Bestehenden Eintrag anzeigen", 	""
+3505    = "Bestehenden Eintrag l”schen", 	""
+3511    = "Ein Eintrag mit diesem Namen ist in der Interfaces-Datei bereits vorhanden.", 	""
+3512    = "Namen des hinzuzufgenden Servers eingeben (Standard ist: '%1!'): ", 	"%s"
+3513    = "Servername: ", 	""
+3514    = "Einen der folgenden Interfaces-Eintr„ge w„hlen:", 	""
+3522    = "Eintrag '%1!' in der Interfaces-Datei nicht gefunden.", 	"%s"
+3530    = "Dieser Eintrag ist ungltig\, da er keine Listener hat. Fgen Sie Listener hinzu oder verlassen Sie diese Anzeige mit Strg-x ohne Speichern des Eintrags in der Interfaces-Datei.", 	""
+3531    = "nderungen jetzt in die Interfaces-Datei schreiben? ", 	""
+3532    = "Wollen Sie wirklich annullieren? ", 	""
+3533    = "Anzahl der Neuversuche eingeben (Standard ist: '%1!'): ", 	"%s"
+3534    = "Zeitspanne fr Neuversuche eingeben (Standard ist: '%1!'): ", 	"%s"
+3535    = "Diesen Eintrag aus der Interfaces-Datei entfernen? ", 	""
+3536    = "Backup Server: ", 	""
+3537    = "Anzahl der Neuversuche: ", 	""
+3538    = "Zeitspanne fr Neuversuch: ", 	""
+3539    = "Neuen Listener-Dienst hinzufgen", 	""
+3540    = "Dienst „ndern oder l”schen", 	""
+3541    = "Protokoll", 	""
+3542    = "Adresse", 	""
+3543    = "Port", 	""
+3544    = "Aliasname", 	""
+3545    = "Typ", 	""
+3546    = "Verfgbare Listener-Dienste:", 	""
+3547    = "Neue Abfragedienste hinzufgen", 	""
+3548    = "Verfgbare Abfragedienste:", 	""
+3551    = "TCP", 	""
+3552    = "DECnet", 	""
+3553    = "SPX", 	""
+3554    = "ADSP", 	""
+3555    = "BSD NAMED PIPES", 	""
+3561    = "Geben Sie den Aliasnamen fr diesen Eintrag an (Standard ist: '%1!'): ", 	"%s"
+3562    = "Geben Sie den Hostnamen oder die Internet-Adresse fr diesen Eintrag an (Standard ist: '%1!'): ", 	"%s"
+3563    = "Geben Sie die Portnummer fr diesen Eintrag an (Standard ist: '%1!'): ", 	"%s"
+3564    = "Aliasname:", 	""
+3565    = "Hostname/Adresse:", 	""
+3566    = "Port:", 	""
+3567    = "Ist diese Information richtig? ", 	""
+3568    = "Diesen Dienst aus dem Interfaces-Eintrag entfernen? ", 	""
+3569    = "Diesen Dienst aus dem Interfaces-Eintrag entfernen", 	""
+3570    = "Master", 	""
+3571    = "Begleitserver", 	""
+3572    = "Geben Sie erst einen Hostnamen ein.", 	""
+3573    = "Ist dieser Server ein Begleitserver? ", 	""
+3574    = "Servertyp:", 	""
+3581    = "Geben Sie den Aliasnamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3582    = "Geben Sie den Knotennamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3583    = "Geben Sie die Objektnummer fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3584    = "Aliasname:", 	""
+3585    = "Knotenname:", 	""
+3586    = "Objekt:", 	""
+3591    = "Geben Sie den Aliasnamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3592    = "Geben Sie den Hostnamen oder die Internet-Adresse fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3593    = "Geben Sie die Socket-Nummer fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3594    = "Aliasname:", 	""
+3595    = "Hostname/Adresse:", 	""
+3596    = "Socket:", 	""
+3597    = "Geben Sie den Aliasnamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3598    = "Geben Sie den AppleTalk-Zonennamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3599    = "Geben Sie den Appletalk-Objektnamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3600    = "Zonenname:", 	""
+3601    = "Objektname:", 	""
+3602    = "Aliasname:", 	""
+3611    = "Geben Sie die hexadezimale Internet-Adresse fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3612    = "Internet-Adresse:", 	""
+3620    = "Geben Sie den Aliasnamen fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3621    = "Geben Sie den Listener-Pfad fr diesen Eintrag ein (Standard ist: '%1!'): ", 	"%s"
+3622    = "Aliasname:", 	""
+3623    = "Listener-Pfad:", 	""
+3624    = "Port: ", 	""
+3650    = "Netware-Systemprfung", 	""
+3651    = "", 	""
+3652    = "", 	""
+3653    = "", 	""
+3654    = "Hauptversion", 	""
+3655    = "Zwischenversion", 	""
+3656    = "Version", 	""
+3657    = "Monat", 	""
+3658    = "Tag", 	""
+3659    = "Jahr", 	""
+3660    = "NLM-Prfergebnis: ", 	""
+4000    = "Validierungsfunktion fr Servernamen mit Null-Zeiger aufgerufen.", 	""
+4001    = "Servername '%1!' ist zu lang. Die erlaubte L„nge betr„gt %2! Zeichen.", 	"%s %d"
+4002    = "Name des Adaptive Servers wurde nicht eingegeben.", 	""
+4003    = "Name '%1!' ist ungltig. Servernamen drfen nur alphanumerische Zeichen (r”misch) oder Satzzeichen enthalten.", 	"%s"
+4004    = "Name des Interfaces-Eintrags '%1!' bereits vorhanden.", 	"%s"
+4005    = "Port '%1!' ist nicht gltig. Port-Beschreibungen drfen nur alphanumerische Zeichen (r”misch) enthalten.", 	"%s"
+4006    = "Die Verwendung von Objektnamen (%1!) wird wegen der Beeintr„chtigung der Performance nicht empfohlen.", 	"%s"
+4007    = "In der internen Registrierung wurden keine Produkte gefunden.", 	""
+4008    = "In der internen Registrierung wurden keine Produkt-Kurznamen gefunden.", 	""
+4009    = "Produkt-Kurzname '%1!' ist nicht gltig.", 	"%s"
+4010    = "Sybase r„t von der Verwendung von DECnet-Objektnamen (%1!) ab. Benutzen Sie lieber Objektnummern.", 	"%s"
+4011    = "Objektname '%1!' ist zu lang. Objektnamen sind auf %2! Zeichen beschr„nkt.", 	"%s %d"
+4012    = "Runserver-Datei '%1!' ist bereits vorhanden. Runserver-Dateinamen sind auf 8 Zeichen beschr„nkt. W„hlen Sie einen anderen Servernamen oder l”schen Sie die bestehende Runserver-Datei.", 	"%s"
+4013    = "Port '%1!' ist fr '%2!' registriert. W„hlen Sie eine andere Portadresse oder vergewissern Sie sich\, dass dieser Port verfgbar ist\, bevor Sie weitermachen.", 	"%d %s"
+4014    = "Port '%1!' liegt auáerhalb des zul„ssigen Bereichs fr von Sybase untersttzte Ports.", 	"%s"
+5000    = "Locale-Struktur fr Zeichensatz %1! kann nicht eingerichtet werden.", 	"%s"
+5001    = "Verbindung zum Server kann nicht hergestellt werden: %1!.",         "%s"
+5002    = "Verbindung zu Adaptive Server kann nicht initialisiert werden.",         ""
+5003    = "Fehler: alloc-Befehl ist fehlgeschlagen",         ""
+5004    = "Fehler in Anfrage: '%1!'.",         "%s"
+5005    = "Fehler beim Zugriff auf Abfrageergebnisse: '%1!'.",         "%s"
+5006    = "Fehler bei Verarbeitung des Abfragetextes: '%1!'.",         "%s"
+5007    = "Open Client-Meldung: '%1!'.",         "%s"
+5008    = "Adaptive Server-Meldung: '%1!'.",         "%s"
+; End of section.

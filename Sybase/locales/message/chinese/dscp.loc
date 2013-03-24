@@ -1,0 +1,239 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "会话"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "企图分配内存失败."
+
+2  = ZZZZZ, "读对象错."
+
+3  = ZZZZZ, "没找到对象."
+
+4  = ZZZZZ, "'%1!' 不存在."
+
+5  = ZZZZZ, "失败"
+
+6  = ZZZZZ, "ok"
+
+7  = ZZZZZ, "接口驱动失败."
+
+8  = ZZZZZ, "无打开会话."
+
+9  = ZZZZZ, "增加%1!"
+
+10 = ZZZZZ, "增加%1!出错"
+
+11 = ZZZZZ, "修改%1!"
+
+12 = ZZZZZ, "修改%1!出错"
+
+13 = ZZZZZ, "删除%1!"
+
+14 = ZZZZZ, "删除%1!出错"
+
+15 = ZZZZZ, "删除所有服务器对象."
+
+16 = ZZZZZ, "删除服务器对象出错."
+
+17 = ZZZZZ, "错误: 企图在同样的会话中拷贝对象."
+
+18 = ZZZZZ, "在会话%4!中从会话%2!拷贝'%1!'到 '%3!' "
+
+19 = ZZZZZ, "拷贝%1!出错"
+
+20 = ZZZZZ, "错误: 企图拷贝同样的会话."
+
+21 = ZZZZZ, "拷贝所有会话%1!"
+
+22 = ZZZZZ, "会话%1! %2!"
+
+23 = ZZZZZ, "当前"
+
+24 = ZZZZZ, "语法错误"
+
+25 = ZZZZZ, "附加属性"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "传输类型"
+
+2 =  ZZZZZ, "传输地址"
+
+3  = ZZZZZ, "服务器安全级"
+
+4  = ZZZZZ, "安全机制"
+
+5  = ZZZZZ, "**未知的值**"
+
+6  = ZZZZZ, "对象的DIT 基"
+
+7  = ZZZZZ, "区别名"
+
+8  = ZZZZZ, "找到服务器对象"
+
+9  = ZZZZZ, "版本"
+
+10 = ZZZZZ, "服务"
+
+11 = ZZZZZ, "状态"
+
+12 = ZZZZZ, "地址"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "配置"
+
+15 = ZZZZZ, "DS 名"
+
+16 = ZZZZZ, "HA 故障服务器"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "你确定删除所有服务器对象? (Y/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "帮助"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "打开"
+
+5  = ZZZZZ, "关闭"
+
+6  = ZZZZZ, "读"
+
+7  = ZZZZZ, "增加"
+
+8  = ZZZZZ, "取模"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "删除"
+
+11 = ZZZZZ, "删除所有"
+
+12 = ZZZZZ, "拷贝"
+
+13 = ZZZZZ, "拷贝所有"
+
+14 = ZZZZZ, "到"
+
+15 = ZZZZZ, "列表"
+
+16 = ZZZZZ, "所有"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "设置"
+
+19 = ZZZZZ, "退出"
+
+20 = ZZZZZ, "返回"
+
+21 = ZZZZZ, "交换"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "服务器名"
+
+29 = ZZZZZ, "名1"
+
+30 = ZZZZZ, "名2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "此屏幕."
+
+; open [DSNAME]
+2  = ZZZZZ, "打开缺省目录服务的会话或者DSNAME 目录服务."
+
+; close [SESS]
+3  = ZZZZZ, "关闭记数会话 SESS或者当前会话."
+
+; sess
+4  = ZZZZZ, "所有会话列表."
+
+; [switch] SESS
+5  = ZZZZZ, "记数会话SESS为当前会话."
+
+; add SERVER-NAME
+6  = ZZZZZ, "增加一个新的服务器对象目录服务."
+
+; read SERVER-NAME
+7  = ZZZZZ, "读服务器对象内容."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "修改一个已存在的服务器对象."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "增加一个属性到一个已存在的服务器对象."
+
+; del SERVER-NAME
+10 = ZZZZZ, "删除一个已存在的服务器对象."
+
+; list [all]
+11 = ZZZZZ, "所有服务器对象列表."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "在记数会话SESS或当前会话中拷贝对象名1到一个新的对象名2."
+
+; copyall to SESS
+13 = ZZZZZ, "拷贝当前会话的所有服务器对象到记数会话SESS."
+
+; delete-all
+14 = ZZZZZ, "删除当前会话的所有服务器对象."
+
+; config
+15 = ZZZZZ, "当前配置列表."
+
+; exit | quit
+16 = ZZZZZ, "退出程序."
+

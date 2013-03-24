@@ -1,0 +1,68 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=11.5
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=korean
+
+[copyright]
+copyright =  "저작권 (C) 1990, 2001 Sybase, Inc.\
+모든 저작권은 본사 소유입니다. \
+미 연방 정부에 의한 사용, 복제 또는 공개는 \
+CFR 52.227-7013의 Rights in Technical Data and \
+Computer Software 절에 있는 (c) (1) (ii) 항목에 \
+명시된 규정을 따릅니다.
+\Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlvip]
+
+1 = IPDE_EPDISCON, "끝점의 연결을 끊을 수 없습니다 - 오류는 %1!입니다."
+
+2 = IPDE_ACCEPT, "새 연결을 받아들이는 동안 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+3 = IPDE_EPCLOSE, "끝점을 닫을 수 없습니다 - 오류는 %1!입니다."
+
+4 = IPDE_PARSE, "연결 정보에 잘못된 구문이 있습니다."
+
+5 = IPDE_EPCONNECT, "서버에 연결할 수 없습니다 - 오류는 %1!입니다."
+
+6 = IPDE_EPMODE, "파이프의 모드를 바꿀 수 없습니다 - 오류는 %1!입니다."
+
+7 = IPDE_EVENTOBJ, "이벤트 객체를 만들 수 없습니다 - 오류는 %1!입니다."
+
+8 = IPDE_NOSODES, "소켓 설명자를 가져올 수 없습니다 - 오류는 %1!입니다."
+
+9 = IPDE_READ, "소켓/cid에서 읽을 수 없습니다 - 오류는 %1!입니다."
+
+10 = IPDE_WRITE, "소켓/cid에 쓸 수 없습니다 - 오류는 %1!입니다."
+
+11 = IPDE_SOFLUSH, "브로드캐스트를 전달할 수 없습니다 - 오류는 %1!입니다."
+
+12 = IPDE_SENDFAIL, "VIP 소켓을 보낼 수 없습니다 - 오류는 %1!입니다."
+
+13 = IPDE_RCVFAIL, "VIP 소켓을 받을 수 없습니다 - 오류는 %1!입니다."
+
+14 = IPDE_OPENFAIL, "VIP 소켓을 열 수 없습니다 - 오류는 %1!입니다."
+
+15 = IPDE_GTPORTFAIL, "청취자 포트 번호를 가져올 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+16 = IPDE_SPORTFAIL, "청취자 포트 번호를 설정할 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+17 = IPDE_STSESSFAIL, "StreetTalk 세션을 열 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+18 = IPDE_MEM, "운영 체제 메모리 오류 - 오류는 %1!입니다."
+
+
+; end of nlvip  error strings
+;
+

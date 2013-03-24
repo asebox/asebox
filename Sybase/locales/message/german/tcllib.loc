@@ -1,0 +1,423 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "Benötigter Speicherbedarf für Protokoll-Treiber kann nicht bestimmt werden."
+
+2 = NETE_NULLOPT, "Ein NULL-Optionen-Zeiger darf nicht an eine Net-Library-Routine übergeben werden."
+
+3 = NETE_UNKWOPT, "Angeforderte Net-Library-Option ist unbekannt."
+
+4 = NETE_UNKWINFCDE, "Angeforderter Informationscode für Adresse ist unbekannt."
+
+5 = NETE_BOOLREP, "Wert der Option muss entweder NET_TRUE oder NET_FALSE sein."
+
+6 = NETE_NULLNETBUF, "Ein NULL-Pufferzeiger darf nicht an net_init() übergeben werden."
+
+7 = NETE_NOTSUPPORTED, "Eigenschaft wird nicht unterstützt."
+
+8 = NETE_NULLHDLR, "Ein NULL NET_POLL-Array-Zeiger darf nicht übergeben werden."
+
+9 = NETE_BADENGINE, "Kennung der Engine ist ungültig."
+
+10 = NETE_ALREADYINIT, "Der aktuelle Prozess hat net_init() bereits aufgerufen."
+
+11 = NETE_DICTNOTFOUND, "Adresswörterbuch konnte nicht gefunden werden."
+
+12 = NETE_SRVNAMENOTFND, "Angegebenes Namensattribut des Servers nicht gefunden."
+
+13 = NETE_NODICTS, "Kein verfügbare Adresswörterbuch-Struktur gefunden."
+
+14 = NETE_DRVINIT, "Fehler während der Initialisierung des Protokolltreibers."
+
+15 = NETE_NODRIVERS, "Keine verfügbare Protokolltreiber-Struktur gefunden."
+
+16 = NETE_LFNOSECTION , "In der Lokalisierungs-Datei kann der Fehlerabschnitt der Net-Library nicht gefunden werden."
+
+17 = NETE_DICTSYNTAX, "Syntaxfehler im Adresswörterbuch."
+
+18 = NETE_ADRTYPNOTFND, "Angegebenes Adresstypattribut wurde nicht gefunden."
+
+19 = NETE_DICTCLOSE, "Fehler beim Schließen des Adresswörterbuchs."
+
+20 = NETE_NOEPS, "Keine verfügbare Endpunkt-Struktur gefunden."
+
+21 = NETE_EPINUSE, "Es wurde versucht, einen Endpunkt zu verwenden, der bereits verwendet wird."
+
+22 = NETE_DRVPROPERTY, "Aufruf des Protokolltreibers zum Feststellen von Eigenschaften ist fehlgeschlagen."
+
+23 = NETE_DRVLISTEN, "Aufruf des Net-Lib-Protokolltreibers zur Registrierung eines Listeners ist fehlgeschlagen."
+
+24 = NETE_DRVCONNECT, "Aufruf des Net-Lib-Protokolltreibers zum Verbinden zweier Endpunkte ist fehlgeschlagen."
+
+25 = NETE_DRVACCEPT, "Aufruf des Protokolltreibers zur Annahme einer eingehenden Verbindungsanforderung ist fehlgeschlagen."
+
+26 = NETE_BADIOSTATE, "Endpunkt hat falschen I/O-Zustand."
+
+27 = NETE_DRVNOTAVAIL, "Angegebener Net-Lib-Protokolltreiber nicht verfügbar."
+
+28 = NETE_BADPROPERTY, "Ungültiges Typargument der Eigenschaft."
+
+29 = NETE_DISCONNECT, "Net-Library-Vorgänge beendet, da Verbindung gelöst wurde."
+
+30 = NETE_DRVEXIT, "Beendigungsroutine des Net-Lib-Protokolltreibers fehlgeschlagen."
+
+31 = NETE_SUBACCEPT, "Versuch, 'accept' für einen der Listener auszugeben, ist fehlgeschlagen."
+
+32 = NETE_DRVREAD, "Aufruf des Net-Lib-Protokolltreibers zum Lesen von Daten fehlgeschlagen."
+
+33 = NETE_RDDATLEN, "Die zum Lesen angeforderten Daten sind größer als der Lesepuffer."
+
+34 = NETE_DRVREADOOB, "Aufruf des Net-Lib-Protokolltreibers zum Lesen dringender Daten."
+
+35 = NETE_EXPNOTSUPPORT, "Abgeschickte Daten werden von diesem Net-Lib-Protokolltreiber nicht unterstützt."
+
+36 = NETE_DRVWRITE, "Aufruf des Net-Lib-Protokolltreibers zum Schreiben von Daten fehlgeschlagen."
+
+37 = NETE_NULLADDR, "Für net_addr darf kein NULL-Zeiger übergeben werden."
+
+38 = NETE_NULLDICT, "Für ein Wörterbuch darf kein NULL-Zeiger übergeben werden."
+
+39 = NETE_NULLSTATE, "Für net_state darf kein NULL-Zeiger übergeben werden."
+
+40 = NETE_NULLRETRES, "Für return_reason darf kein NULL-Zeiger übergeben werden."
+
+41 = NETE_NULLEP, "Für einen Endpunkt darf kein NULL-Zeiger übergeben werden."
+
+42 = NETE_NULLCBACK, "Für eine Callback-Routine darf kein NULL-Zeiger übergeben werden."
+
+43 = NETE_NULLDICTNAME, "Für eine Wörterbuchkennung darf kein NULL-Zeiger übergeben werden."
+
+44 = NETE_NULLEXPFLAG, "Für Flag für Daten hoher Priorität (Expedited Data Flag) darf kein NULL-Zeiger übergeben werden."
+
+45 = NETE_NULLDICTPTR, "Für ein Wörterbuch-Handle darf kein NULL-Zeiger übergeben werden."
+
+46 = NETE_NULLNEWEP, "Für ein Endpunkt-Handle darf kein NULL-Zeiger übergeben werden."
+
+47 = NETE_NULLATTRLST, "Für Adressinformationen darf kein NULL-Zeiger übergeben werden."
+
+48 = NETE_NULLADDRPTR, "Für ein net_addr-Handle darf kein NULL-Zeiger übergeben werden."
+
+49 = NETE_NULLLASTENTRY, "Für den letzten Eintrag darf kein NULL-Zeiger übergeben werden."
+
+50 = NETE_NULLRDDATA, "Es darf kein NULL-Lesepuffer übergeben werden."
+
+51 = NETE_NOADDRS, "Keine verfügbare Adressstruktur gefunden."
+
+52 = NETE_NULLBYTSRD, "Für bytes_read darf kein NULL-Zeiger übergeben werden."
+
+53 = NETE_EPCLOSING, "Der angegebene Endpunkt wird geschlossen."
+
+54 = NETE_NULLWRDATA, "Es darf kein NULL-Lesepuffer übergeben werden."
+
+55 = NETE_CANCELLED, "Der angeforderte Vorgang wurde wegen anderer Ereignisse abgebrochen."
+
+56 = NETE_NULLINTL, "Für NET_INTL darf keine NULL-Struktur übergeben werden."
+
+57 = NETE_NULLUSERPTR, "Für Benutzerzeiger darf kein NULL-Puffer übergeben werden."
+
+58 = NETE_BADDICT, "Es wurde versucht, ein ungültiges Wörterbuch-Handle zu verwenden."
+
+59 = NETE_BADADDR, "Es wurde versucht, ein ungültiges Adress-Handle zu verwenden."
+
+60 = NETE_BADEP, "Es wurde versucht, ein ungültiges Endpunkt-Handle zu verwenden."
+
+61 = NETE_DRVCLOSE, "Aufruf des Net-Lib-Protokolltreibers zum Schließen eines Endpunkts fehlgeschlagen."
+
+62 = NETE_VERSION, "Protokolltreiber nicht kompatibel mit aktueller Net-Lib - Wahrscheinlich eine ältere Version von Net-Library."
+
+63 = NETE_NULLSUPPORT, "Für den Parameter 'supported' darf an net_capability() kein NULL-Zeiger übergeben werden."
+
+64 = NETE_BADPROCMODE, "Ungültiger Verarbeitungsmodus"
+
+65 = NETE_FUNCCODE, "Ungültiger Funktionscode an net_report() übergeben."
+
+66 = NETE_DRVINUSE, "Treiber kann nicht entladen werden - Treiber wird verwendet."
+
+67 = NETE_NCONNECTED, "Es wurde ein I/O-Vorgang für einen Endpunkt versucht, der nicht verbunden ist."
+
+68 = NETE_NOMULTIRW, "Mehr als ein Lesevorgang nicht möglich."
+
+69 = NETE_NULLPREVMODE, "Ungültiger NULL-Zeiger für vorherigen Modus."
+
+70 = NETE_NULLREPORT, "net_report() kann nicht aufgerufen werden, wenn Bericht nicht von net_opt_report() angefordert wurde."
+
+71 = NETE_LFILENAME, "Name der Lokalisierungs-Datei im Aufruf an net_intl_errstr() nicht angegeben."
+
+72 = NETE_INTLOPEN, "Der Versuch, die Lokalisierungs-Datei mit intl_open zu öffnen, ist fehlgeschlagen."
+
+73 = NETE_UP1ENIGNE, "Für die Einzelprozessor-Version von Net-Lib ist nur eine Engine erlaubt."
+
+74 = NETE_NULLCBPARM, "Ungültiger NULL-Callback-Parameter für Net-Library-Routine."
+
+75 = NETE_NULLINFOLEN, "Ungültiger NULL-Informationslängezeiger der für net_address_info()."
+
+76 = NETE_UNKWNMODE, "Angeforderter Callback-Modus wird nicht erkannt."
+
+77 = NETE_BADEPNUM, "Angeforderte Endpunkt-Nummer nicht gültig."
+
+78 = NETE_NULLENGPTR, "Für die Engine darf kein NULL-Zeiger an net_engine_init() übergeben werden."
+
+79 = NETE_NULLENGINE, "Für die Engine darf kein NULL-Zeiger an eine Net-Library-Routine übergeben werden."
+
+80 = NETE_NOENGS, "Keine verfügbare Engine-Struktur gefunden."
+
+81 = NETE_NOREQUESTS, "Keine verfügbare Anforderungs-Struktur gefunden."
+
+82 = NETE_BADMONFLAG, "Die angeforderte Maske für Monitor-Markierungen ist ungültig."
+
+83 = NETE_EPINCLOSE, "Der gewünschte Endpunkt wird geschlossen."
+
+84 = NETE_BADMODE, "Der angeforderte Modus wird nicht unterstützt."
+
+85 = NETE_DRVLOAD, "Der Versuch, den Protokolltreiber zu laden, ist fehlgeschlagen."
+
+86 = NETE_DRVUNLOAD, "Der Versuch, den Protokolltreiber zu entladen, ist fehlgeschlagen."
+
+87 = NETE_MEMPOLICY, "Angeforderte Speicherrichtlinie ist nicht gültig."
+
+88 = NETE_MEMREALLOC, "Der Versuch, Speicher erneut zuzuweisen, ist fehlgeschlagen."
+
+89 = NETE_MEMALLOC, "Der Versuch, Speicher zuzuweisen, ist fehlgeschlagen."
+
+90 = NETE_NULLSIZE, "Für die Größe darf kein NULL-Zeiger an net_initsize() übergeben werden."
+
+91 = NETE_NULLSTATEPTR, "Für NET_STATE darf kein NULL-Zeiger an net_init() übergeben werden."
+
+92 = NETE_NULLSPNLCKCNTPTR, "Für den Spinlock-Zähler darf kein NULL-Zeiger an net_spinlocks() übergeben werden."
+
+93 = NETE_ENGACTIVE, "Angeforderter Vorgang kann nicht durchgeführt werden, solange aktive Engines vorhanden sind."
+
+94 = NETE_UNKWIDTYPE, "Angegebener Kennungstyp des Adresswörterbuchs nicht gültig."
+
+95 = NETE_SECNOTFOUND, "Angeforderter Abschnitt der config-Datei nicht gefunden."
+
+96 = NETE_DRVNOTLOADED, "Netzwerktreiber für angegebenes Netzwerkprotokoll nicht geladen." 
+
+97 = NETE_NODRVERRSTR, "Keine Fehlerzeichenkette des Protokolltreibers für aktuellen Fehler."
+
+98 = NETE_SHRTINFOBUF, "Der Puffer der Adressinformation ist zu klein."
+
+99 = NETE_NULLNFDS, "Für nfds darf kein NULL-Zeiger an net_poll_external() übergeben werden."
+
+100 = NETE_BADNFDS, "Die Anzahl der angeforderten Datei-Deskriptoren ist ungültig."
+
+101 = NETE_NULLRDBUF, "Es darf kein NULL-Lesepuffer an Net-Library übergeben werden."
+
+102 = NETE_NULLWRTBUF, "Es darf kein NULL-Schreibpuffer an die Net-Library übergeben werden."
+
+103 = NETE_INTLNXTSEC, "Aufruf von intl_nextsection fehlgeschlagen."
+
+104 = NETE_INTLNXTVAL, "Aufruf von intl_nextvalue fehlgeschlagen."
+
+105 = NETE_LFNOVALUE, "Lokalisierungs-Datei-Eintrag ohne Fehlermeldung gefunden."
+
+106 = NETE_BADERRID, "Lokalisierungs-Datei-Eintrag mit ungültiger Fehlernummer gefunden."
+
+107 = NETE_INTLNXTENT, "Aufruf von intl_nextentry fehlgeschlagen."
+
+108 = NETE_NULLINTLSIZE, "Für die Größe darf kein NULL-Zeiger an net_intl_size übergeben werden."
+
+109 = NETE_NULLINTLBUF, "Es darf kein NULL-Pufferzeiger an net_intl_errstr übergeben werden."
+
+110 = NETE_BADMSECS, "Der Wert des Parameters für Millisekunden ist ungültig."
+
+111 = NETE_NOLISTENERS, "net_accept kann nicht aufgerufen werden, wenn keine empfangsbereiten Endpunkte vorhanden sind."
+
+112 = NETE_POLLNOTSUP, "Die Funktion net_poll_external() wird nicht unterstützt."
+
+113 = NETE_NONEQUEUED, "Warten auf Anforderungsabschluss nicht möglich, wenn keine Anforderungen in der Warteschlange stehen."
+
+114 = NETE_BADSIGNAL, "Das angeforderte Signal wird von der Net-Library nicht verwendet."
+
+115 = NETE_DICTINUSE, "Es wurde versucht, auf das Adresswörterbuch mit mehr als einer Aufgabe zuzugreifen."
+
+116 = NETE_NULLEXPFLG, "Für Flag für hohe Priorität (Expedited Flag) darf kein NULL-Zeiger an net_read übergeben werden."
+
+117 = NETE_NODRVCLASS, "Für die angeforderte Protokollklasse ist kein Treiber verfügbar."
+
+118 = NETE_BADSRCHATTR, "Die Attribut-Suchliste enthält einen ungültigen Eintrag."
+	
+119 = NETE_BADDICTID, "Ungültige Wörterbuchkennung an net_dict_open übergeben."
+
+120 = NETE_INVALIDVERSION, "Ungültige Net-Library-Version"
+
+121 = NETE_NULLVALUE, "Für diese Option darf das Wertargument nicht NULL sein."
+
+122 = NETE_NULLARG, "Ungültiges NULL-Argument für Routine"
+
+123 = NETE_BUFTOOSMALL, "Puffer ist zu klein."
+
+124 = NETE_BADCMD, "Ungültiges Befehlsargument"
+
+125 = NETE_NULLBUF, "Null-Puffer-Argument"
+
+126 = NETE_NULLPROPINFO, "Null-propinfo-Argument"
+
+127 = NETE_SETNOTSUPPORTED, "Einrichten von Net-Lib-Eigenschaften wird nicht unterstützt."
+
+128 = NETE_INTLHOME, "Aufruf von intl_home fehlgeschlagen."
+
+129 = NETE_INVOSERR, "Keine gültige BS-Fehlernummer"
+
+130 = NETE_RLIMITERR, "Einlesen/Einstellen der maximalen Anzahl offener Dateien nicht möglich."
+
+131 = NETE_GETEF, "Ereignis-Flag konnte nicht erstellt werden."
+
+132 = NETE_FREEEF, "Ereignis-Flag konnte nicht freigegeben werden."
+
+133 = NETE_INSQTI, "Element konnte nicht in verriegelte Warteschlange eingefügt werden."
+
+134 = NETE_REMQHI, "Element konnte nicht aus verriegelter Warteschlange entfernt werden."
+
+135 = NETE_SETIMR, "Versuch, Zeitgeber einzustellen, ist fehlgeschlagen."
+
+136 = NETE_CANTIM, "Versuch, Zeitgeber abzubrechen, ist fehlgeschlagen."
+
+137 = NETE_WAITFR, "Versuch, auf Ereignis zu warten, ist fehlgeschlagen."
+
+138 = NETE_CLREF, "Ereignis-Flag konnte nicht gelöscht werden."
+
+139 = NETE_SETEF, "Ereignis-Flag konnte nicht gesetzt werden."
+
+140 = NETE_DRVATTNHDLR, "Versuch, den Attention-Handler für den Protokolltreiber zu installieren, ist fehlgeschlagen."
+
+141 = NETE_QUEOPEN, "Versuch, die Thread-Kommunikations-Warteschlange zu öffnen, ist fehlgeschlagen."
+
+142 = NETE_QUEREAD, "Versuch, aus der Thread-Kommunikations-Warteschlange zu lesen, ist fehlgeschlagen."
+
+143 = NETE_QUEWRITE, "Versuch, in die Thread-Kommunikations-Warteschlange zu schreiben, ist fehlgeschlagen."
+
+144 = NETE_QUECLOSE, "Versuch, die Thread-Kommunikations-Warteschlange zu schließen, ist fehlgeschlagen."
+
+145 = NETE_CREATETHREAD, "Versuch, Thread anzustoßen, ist fehlgeschlagen."
+
+146 = NETE_EVENTCREATE, "Versuch, Ereignis-Objekt zu erstellen, ist fehlgeschlagen."
+
+147 = NETE_EVENTPOST, "Versuch, ein Ereignis-Objekt zuzuordnen, ist fehlgeschlagen."
+
+148 = NETE_EVENTCLEAR, "Versuch, Ereignis-Objekt zu löschen, ist fehlgeschlagen."
+
+149 = NETE_EVENTWAIT, "Versuch, auf ein Ereignis-Objekt zu warten, ist fehlgeschlagen."
+
+150 = NETE_CREATEMTX, "Versuch, einen Mutex-Semaphor zu erstellen, ist fehlgeschlagen."
+
+151 = NETE_REQUESTMTX, "Versuch, exklusive Eigentumsrechte für einen Mutex-Semaphor zu erhalten, ist fehlgeschlagen."
+
+152 = NETE_RELEASEMTX, "Versuch, einen Mutex-Semaphor freizugeben, ist fehlgeschlagen."
+
+153 = NETE_DESTROYMTX, "Versuch, einen Mutex-Semaphor zu zerstören, ist fehlgeschlagen."
+
+154 = NETE_THRDSPND, "Versuch, einen Thread zeitweilig zu unterbrechen, ist fehlgeschlagen."
+
+155 = NETE_THRDRESUME, "Versuch, Thread wiederaufzunehmen, ist fehlgeschlagen."
+
+156 = NETE_THRDKILL, "Versuch, Thread zu beenden, ist fehlgeschlagen."
+
+157 = NETE_SETSIGHDLR, "Entsprechende Signalverarbeitungsroutine kann nicht eingerichtet werden."
+
+158 = NETE_SELECTFAIL, "Aufruf von select() fehlgeschlagen."
+
+159 = NETE_FDOFLOW, "Keine weiteren Datei-Deskriptoren verfügbar. Listener wird heruntergefahren."
+
+160 = NETE_NOPOLLSTRATS, "Keine weiteren Polling-Strategie-Strukturen verfügbar."
+
+161 = NETE_NOSIGNALS, "Net-Library kann keinen Protokolltreiber unterstützen, der Signale erzeugt."
+
+162 = NETE_UNKNOWN, "Unbekannter Net-Library-Fehler"
+
+164 = NETE_OODDRIVER, "Version des Treibers ist älter als die unterstützte Version."
+
+165 = NETE_OSGENERIC, "Betriebssystemfehler - %1!"
+
+166 = NETE_DRVLOCFAIL, "Lokalisierungsdatei des Treibers konnte nicht geöffnet werden."
+
+167 = NETE_OSOBJECT, "Betriebssystem-Objekt konnte nicht angelegt werden."
+
+168 = NET_QPRFSTR, "Fehler beim Lesen der Adressdatei."
+
+170 = NETE_BADHANDLER, "Falsche Signalverarbeitungsroutine"
+
+171 = NETE_FLTCONNECT, "Net-Lib-Filtertreiber konnte zwei Endpunkte nicht verbinden."
+
+172 = NETE_CONABORTED, "Verbindung abgebrochen"
+
+173 = NETE_TIMEOUT, "Zeitüberschreitung bei Net-Lib-Vorgang"
+
+174 = NETE_URGENT, "OOB-Daten empfangen"
+
+[filter]
+
+1 = FLTE_CALLFAIL, "Vendoraufruf ist fehlgeschlagen."
+2 = FLTE_BUFOF, "Pufferüberlauffehler."
+3 = FLTE_MALLOC, "Speicherzuordnungsfehler."
+4 = FLTE_SRVNOTSUPP, "Dienst wird nicht unterstützt."
+5 = FLTE_INVPRM, "Ungültiger Parameter."
+6 = FLTE_BADPOINTER, "Falscher Zeiger."
+
+; TLS/SSL specific errors:
+60 = FLTE_TLS_MSTRINIT, "SSL/TLS-Masterkontext konnte nicht initialisiert werden."
+61 = FLTE_TLS_IO_SEMANTICS, "I/O-Semantik konnte nicht auf partielle I/O-Vorgänge gesetzt werden."
+62 = FLTE_TLS_PROTOCOLVER, "SSL/TLS-Protokollversion konnte nicht gesetzt werden."
+63 = FLTE_TLS_RANDOMOBJ, "PRNG-Objekt konnte nicht erstellt werden."
+64 = FLTE_TLS_RANDOMINIT, "PRNG-Objekt konnte nicht initialisiert werden."
+65 = FLTE_TLS_RANDOMSEED, "PRNG-Startparameter konnten nicht gesetzt werden."
+66 = FLTE_TLS_RANDOMREF, "PRNG-Objektreferenz konnte nicht festgelegt werden."
+67 = FLTE_TLS_RANDOMFUNC, "PRNG-Funktion konnte nicht festgelegt werden."
+68 = FLTE_TLS_CERTFUNC, "Prüfzertifikatsfunktion konnte nicht festgelegt werden."
+69 = FLTE_TLS_DUPCONTEXT, "SSL/TLS-Kontextdaten konnten nicht dupliziert werden."
+70 = FLTE_TLS_DUPCHILD, "Untergeordneter SSL/TLS-Kontext konnte nicht erstellt werden."
+71 = FLTE_TLS_GETVER, "Auf SSL/TLS-Protokollversion konnte nicht zugegriffen werden."
+72 = FLTE_TLS_INVALIDVER, "Unbekannte SSL/TLS-Protokollversion."
+73 = FLTE_TLS_NOVALIDCIPHERS, "Festgelegter Schlüssel hat keine bekannten Verschlüsselungsabfolgen festgestellt."
+74 = FLTE_TLS_SETCIPHER, "Fehler bei Festlegung der Verschlüsselungsabfolgen."
+75 = FLTE_TLS_LOADCERT, "Versuch, lokale Identität zu laden, ist fehlgeschlagen."
+76 = FLTE_TLS_LOADCA, "Versuch, CA-Daten zu laden, ist fehlgeschlagen."
+77 = FLTE_TLS_GETCERTLEN, "Auf Länge des Peer-Zertifikats konnte nicht zugegriffen werden."
+78 = FLTE_TLS_GETCERT, "Auf Peer-Zertifikat konnte nicht zugegriffen werden."
+79 = FLTE_TLS_GETNAME, "Allgemeiner Name des Peers konnte nicht extrahiert werden."
+80 = FLTE_TLS_SETIOREF, "TLS/SSL-I/O-Referenz konnte nicht festgelegt werden."
+81 = FLTE_TLS_SETCERTREF, "TLS/SSL-Zertifikatsreferenz konnte nicht festgelegt werden."
+82 = FLTE_TLS_SETREADFUNC, "TLS/SSL-Lese-Callback-Funktion konnte nicht festgelegt werden."
+83 = FLTE_TLS_SETWRITEFUNC, "TLS/SSL-Schreib-Callback-Funktion konnte nicht festgelegt werden."
+84 = FLTE_TLS_HANDSHAKEFAIL, "TLS/SSL-Handshake ist fehlgeschlagen."
+85 = FLTE_TLS_SERVERSIDE, "TLS/SSL konnte serverseitig nicht festgelegt werden."
+86 = FLTE_TLS_CLIENTSIDE, "TLS/SSL konnte clientseitig nicht festgelegt werden."
+87 = FLTE_TLS_NOEP, "I/O-Vorgang wurde versucht, bevor TLS/SSL festgelegt war."
+88 = FLTE_TLS_NOCONTEXT, "I/O-Vorgang wurde vor SSL-Handshake versucht."
+89 = FLTE_TLS_READERROR, "Fehler beim Lesen."
+90 = FLTE_TLS_WRITEERROR, "Fehler beim Schreiben."
+91 = FLTE_TLS_DNFCOUNT, "Auf Zähler der DN-Felder des entfernten Zertifikats konnte nicht zugegriffen werden."
+92 = FLTE_TLS_DNFEXTRACT, "Daten zu 'Distinguished Name' konnten nicht aus entferntem Zertifikat extrahiert werden."
+93 = FLTE_TLS_EXTCOUNT, "Erweiterungen des entfernten Zertifikats konnten nicht gezählt werden."
+94 = FLTE_TLS_EXTEXTRACT, "Erweiterungsdaten aus entferntem Zertifikat konnten nicht extrahiert werden."
+95 = FLTE_TLS_REQCLNT, "Aufruf für erforderliches Clientzertifikat ist fehlgeschlagen."
+
+; end of tcllib error strings
+;
+

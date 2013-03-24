@@ -1,0 +1,68 @@
+; cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Użycie bazy danych '%1!' nie powiodło się." 
+2 = ZZZZZ, "Pobranie danych w tabeli i uzyskanie deskryptora\\n danych typu text lub image nie powiodło się."
+3 = ZZZZZ, "Zaktualizowanie tabeli nowymi danymi typu text lub image nie powiodło się."
+4 = ZZZZZ, "Utworzenie tabeli nie powiodło się."
+5 = ZZZZZ, "Usunięcie tabeli nie powiodło się."
+6 = ZZZZZ, "Nieprawidłowa kwerenda sql."
+7 = ZZZZZ, "Pobranie wyników kwerendy nie powiodło się."
+8 = ZZZZZ, "Kwerenda Sql zwróciła wiele wierszy. Oczekiwano, że zostanie zwrócony dokładnie\\njeden wiersz."
+9 = ZZZZZ, "Kwerenda Sql nie zwróciła żadnych wierszy. Oczekiwano, że zostanie zwrócony dokładnie \\njeden wiersz."
+10 = ZZZZZ, "Nie można otworzyć pliku '%1!'. Upewnij się, że plik istnieje i że masz uprawnienia do zapisu."
+11 = ZZZZZ, "Nie można otworzyć pliku '%1!'. Upewnij się, że plik istnieje i że można go odczytać."
+12 = ZZZZZ, "Nie można zamknąć pliku '%1!'. Upewnij się, że plik istnieje i że jest obecne otwarty."
+13 = ZZZZZ, "Nie można usunąć pliku '%1!'. Upewnij się, że plik istnieje i że masz prawa do usuwania."
+14 = ZZZZZ, "Rozmiar pliku '%1!' wynosi 0. Upewnij się, że plik nie jest pusty."
+15 = ZZZZZ, "Plik jar '%1!' nie istnieje."
+16 = ZZZZZ, "Przetwarzanie sygnatury czasowej nie powiodło się."
+17 = ZZZZZ, "Błąd wewnętrzny: Wykonanie funkcji ct_send_data() nie powiodło się."
+18 = ZZZZZ, "Błąd wewnętrzny: Wykonanie funkcji ct_get_data() nie powiodło się."
+19 = ZZZZZ, "Błąd wewnętrzny: Wykonanie funkcji ct_data_info() nie powiodło się."
+20 = ZZZZZ, "Długość '%1!' przekracza maksymalną długość '%2!' bajtów."
+21 = ZZZZZ, "Nie można uruchomić tego polecenia, ponieważ nie są włączone usługi Java. Użytkownik posiadający rolę\\nadministratora systemu (sa) musi ponownie skonfigurować system, aby włączyć obsługę języka Java."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Nazwa serwera określona przez zmienną środowiskową DSQUERY jest \\nnieprawidłowa lub zmienna DSQUERY nie jest ustawiona z poziomu środowiska."
+2 = ZZZZZ, "Nieprawidłowa nazwa logowania użytkownika lub nazwa logowania nie jest ustawiona z poziomu środowiska."
+3 = ZZZZZ, "Katalog określony przez zmienną środowiskową SYBASE jest \\nnieprawidłowy lub zmienna SYBASE nie jest ustawiona z poziomu środowiska."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Inicjowane aplikacji klienta nie powiodło się."
+2 = ZZZZZ, "'%1!' - nie powiodło się.  Sprawdź komunikaty o błędach znajdujące się powyżej."
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Błąd krytyczny: Przydzielanie pamięci nie powiodło się."
+2 = ZZZZZ, "Ustawianie właściwości połączenia nie powiodło się."
+3 = ZZZZZ, "Ustanowienie połączenia nie powiodło się."
+4 = ZZZZZ, "Nierozpoznany obiekt lokalizacji.  Używanie domyślnej wartości '%1!'."
+5 = ZZZZZ, "Błąd wewnętrzny: Nieprawidłowy typ lokalizacji został przekazany do funkcji cs_locale()."
+6 = ZZZZZ, "Błąd składniowy w '%1!'."
+7 = ZZZZZ, "Błąd podczas próby ładowania pary tabel translacyjnych."
+8 = ZZZZZ, "Przerwanie - działanie programu zostało przerwane."

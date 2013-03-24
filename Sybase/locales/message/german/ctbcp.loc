@@ -1,0 +1,138 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Schwer wiegender Fehler: Speicherzuordnung fehlgeschlagen."
+2 = ZZZZZ, "I/O-Fehler: Nicht genügend Speicherplatz für Eingabedaten."
+3 = ZZZZZ, "Temporärdatei '%1!' konnte zum Schreiben in dbedit() nicht geöffnet werden."
+4 = ZZZZZ, "Der '%1!' Editor konnte nicht aufgerufen werden."
+5 = ZZZZZ, "Eingabedatei '%1!' konnte nicht geöffnet werden."
+6 = ZZZZZ, "Ausgabedatei '%1!' konnte nicht geöffnet werden."
+7 = ZZZZZ, "bcp: Unbekannter Parameter '%1!'."
+8 = ZZZZZ, "Wenn Sie die Markierung '%1!' verwenden, um die erste zu kopierende Zeile festzulegen, muss die Zeilennummer mindestens 1 sein."
+9 = ZZZZZ, "Wenn Sie die Markierungen '%1!' und '%2!' verwenden, um die erste und die letzte zu kopierende Zeile festzulegen, muss die erste Zeilennummer kleiner als die letzte sein."
+10 = ZZZZZ, "Wenn Sie die Markierung '%1!' verwenden, um die letzte zu kopierende Zeile festzulegen, muss die Zeilennummer mindestens 1 sein."
+11 = ZZZZZ, "Die Kopierrichtung muss 'in' oder 'out' sein."
+12 = ZZZZZ, "Die Markierung '%1!' muss von einer ganzen Zahl gefolgt sein. '%2!' ist keine zulässige ganze Zahl."
+13 = ZZZZZ, "Achtung: Die Markierung '%1!' erscheint mehr als einmal. Der neue Markierungswert ersetzt den alten." 
+14 = ZZZZZ, "Achtung: '%1!' ersetzt '%2!'"
+15 = ZZZZZ, "Ungültige Präfixlänge. Gültige Präfixlängen sind 0, 1, 2 oder 4."
+16 = ZZZZZ, "Ebene (1-16): "
+17 = ZZZZZ, "Ungültige Ebene"
+18 = ZZZZZ, "Abteilung (1-64): "
+19 = ZZZZZ, "Mehrfache, durch eine Zeilenschaltung getrennte Einträge zulässig; mit Eingabetaste abschließen. "
+20 = ZZZZZ, "Anmelden als SA (n/j): "
+21 = ZZZZZ, "Nochmals versuchen:"
+22 = ZZZZZ, "Ungültige Abteilung"
+23 = ZZZZZ, "Kopiervorgang beginnt..."
+24 = ZZZZZ, "%1! Zeilen kopiert."
+25 = ZZZZZ, "Taktzeit (ms.): gesamt = %1!"
+26 = ZZZZZ, "Wollen Sie diese Formatinformationen in einer Datei speichern? [J/N] "
+27 = ZZZZZ, "Host-Dateiname [%1!]: "
+28 = ZZZZZ, "Ungültiger Spaltentyp. Gültige Spaltentypen:"
+29 = ZZZZZ, "    <cr>: derselbe Typ wie DataServer-Spalte."
+30 = ZZZZZ, "  Mittelw. = %1! (%2! Zeilen pro Sek.)"
+31 = ZZZZZ, "bcp-Kopieren %1! fehlgeschlagen"
+32 = ZZZZZ, "bcp-Kopieren %1! teilweise fehlgeschlagen"
+33 = ZZZZZ, "Ungültige Gesamtstellenanzahl. Gesamtstellenanzahl muss zwischen %1! und %2! liegen."
+34 = ZZZZZ, "Ungültige Dezimalstellenanzahl. Dezimalstellenanzahl muss zwischen %1! und %2! liegen und darf maximal gleich der Gesamtstellenanzahl sein."
+35 = ZZZZZ, "Unerwarteter Ergebnistyp zurückgegeben."
+36 = ZZZZZ, "Unerwartetes Ergebnis zurückgegeben."
+37 = ZZZZZ, "Fehler: Schreiben der BCP-Datei (%1!)!"
+38 = ZZZZZ, "Abruf der Host-Dateispezifikation fehlgeschlagen."
+39 = ZZZZZ, "Die Tabelle, die Bulk-Copy in eine Hostdatei zu kopieren versucht, ist kürzer als die Anzahl von Zeilen, die Bulk-Copy auslassen sollte."
+40 = ZZZZZ, "blk_rowxfer_mult gab unerwarteten Rückgabecode zurück."
+41 = ZZZZZ, "Unbekannter Datentyp '%1!' aufgetreten."
+42 = ZZZZZ, "I/O-Fehler beim Lesen der bcp-Fehlerdatei."
+43 = ZZZZZ, "I/O-Fehler beim Schreiben der bcp-Fehlerdatei."
+44 = ZZZZZ, "Fehlerdatei kann nicht geöffnet werden."
+45 = ZZZZZ, "Unerewartetes EOF in der BCP-Datendatei."
+46 = ZZZZZ, "Negatives Längenpräfix in der BCP-Datendatei gefunden."
+47 = ZZZZZ, "Die BCP-Hostdatei '%1!' besteht nur aus %2! Zeilen. Das Auslassen aller dieser Zeilen ist nicht gestattet."
+48 = ZZZZZ, "Die BCP-Hostdatei '%1!' enthält nur %2! Zeilen. Es war nicht möglich, die verlangte Anzahl von Zeilen zu lesen."
+49 = ZZZZZ, "Für Bulk-Copy müssen alle Daten mit variabler Länge entweder ein Längenpräfix oder ein Abschlusszeichen definiert haben."
+50 = ZZZZZ, "Text/Bild-Feld ist größer als der Maximalwert. Daten werden gekürzt."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Schwer wiegender Fehler: Speicherzuordnung fehlgeschlagen."
+2 = ZZZZZ, "Kopierrichtung muss 'in' oder 'out' sein."
+3 = ZZZZZ, "Achtung: '%1!' ersetzt '%2!'."
+4 = ZZZZZ, "Wenn Sie die Markierung '%1!' verwenden, um die erste zu kopierende Zeile festzulegen, muss die Zeilennummer mindestens 1 sein."
+5 = ZZZZZ, "Wenn Sie die Markierungen '%1!' und '%2!' verwenden, um die erste und die letzte zu kopierende Zeile festzulegen, muss die erste Zeilennummer kleiner als die letzte sein."
+6 = ZZZZZ, "Wenn Sie die Markierung '%1!' verwenden, um die letzte zu kopierende Zeile festzulegen, muss die Zeilennummer mindestens 1 sein."
+7 = ZZZZZ, "Wenn Sie die Markierung '%1!' verwenden, um die Größe der Anweisungsfolge zu definieren, muss die Zahl mindestens 1 sein."
+8 = ZZZZZ, "Achtung: Markierung '%1!' wird beim Exportieren ignoriert."
+9 = ZZZZZ, "Sie können beim Kopieren in eine Tabelle nicht gleichzeitig '%1!' und '%2!' verwenden."
+10 = ZZZZZ, "Wenn Sie die Markierung '%1!' verwenden, um den Beginnwert der Identity-Spalte festzulegen, muss die Zahl mindestens 0 sein."
+11 = ZZZZZ, "Sie können die Markierungen '%1!' und '%2!' nicht gemeinsam verwenden."
+12 = ZZZZZ, "Achtung: Größe der Anweisungsfolge wird von %1! auf %2! zurückgesetzt."
+13 = ZZZZZ, "Setzen der Verbindungseigenschaften fehlgeschlagen."
+14 = ZZZZZ, "Einrichtung der Verbindung fehlgeschlagen."
+15 = ZZZZZ, "Setzen der Verbindungsoptionen fehlgeschlagen."
+16 = ZZZZZ, "Sprache konnte nicht abgerufen werden."
+17 = ZZZZZ, "Einrichtung von Standardwerten fehlgeschlagen."
+18 = ZZZZZ, "Tabellenformat konnte nicht abgerufen werden."
+19 = ZZZZZ, "blk_init fehlgeschlagen."
+20 = ZZZZZ, "Fehlerdatei konnte nicht geöffnet werden."
+21 = ZZZZZ, "Nicht erkanntes Sprachlokalisierungsobjekt. Standardwert '%1!' wird verwendet."
+22 = ZZZZZ, "Interner Fehler: Ungültiger Sprachlokalisierungstyp wurde an cs_locale() übergeben."
+23 = ZZZZZ, "Achtung: Option '%1!' wird nicht unterstützt und daher ignoriert."
+24 = ZZZZZ, "Syntaxfehler in '%1!'."
+25 = ZZZZZ, "Fehler beim Versuch, ein Übersetzungstabellenpaar zu laden."
+26 = ZZZZZ, "Beim Versuch, den Anwendungskontext zur Verwendung mit lokalisierungsbezogenen Strukturen zu konfigurieren, ist ein Fehler aufgetreten."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Import der Daten in den Adaptive Server gemäß der Anweisungsfolge erfolgreich durchgeführt."
+2 = ZZZZZ, "%1! Zeilen an den Adaptive Server gesandt."
+3 = ZZZZZ, "%1! Zeilen mit Bulk-Copy erfolgreich in die Hostdatei kopiert."
+4 = ZZZZZ, "Unterbrechung - Bulk-Copy abgebrochen."
+5 = ZZZZZ, "%1! Zeilen kopiert."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Kennwort: "
+2 = ZZZZZ, "Dateispeichertyp für das Feld %1! [%2!] eingeben: "
+3 = ZZZZZ, "Länge des Feldes %1! eingeben [keine Maximallänge]: "
+4 = ZZZZZ, "Länge des Feldes %1! eingeben [%2!]: "
+5 = ZZZZZ, "Feldabschlusszeichen eingeben [%1!]: "
+6 = ZZZZZ, "Präfixlänge des Feldes %1! eingeben [%2!]: "
+7 = ZZZZZ, "Gesamtstellenanzahl des Feldes %1! eingeben [%2!]: "
+8 = ZZZZZ, "Dezimalstellenanzahl des Feldes %1! eingeben [%2!]: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: Formatdatei '%2!' kann nicht geöffnet werden."
+2 = ZZZZZ, "I/O-Fehler beim Lesen der bcp-Formatdatei."
+3 = ZZZZZ, "bcp-Formatdatei kann nicht geschlossen werden."
+4 = ZZZZZ, "Spalte %1!: Unzulässiger Gesamtstellenwert erkannt."
+5 = ZZZZZ, "Unbekannter Datentyp mit fixer Länge erkannt."
+6 = ZZZZZ, "Versuch, eine unbekannte Version der bcp-Formatdatei zu lesen."
+7 = ZZZZZ, "Falsche Host-Spaltennummer in der bcp-Formatdatei gefunden."
+8 = ZZZZZ, "Nicht erkannter Datentyp '%1!' in der Formatdatei gefunden."
+9 = ZZZZZ, "Die Formatdatei wies bcp an, die Identity-Spalte nicht zu kopieren, Konflikt mit Option -E."
+10 = ZZZZZ, "Keine Spalte zum Kopieren."

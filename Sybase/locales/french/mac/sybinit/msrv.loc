@@ -1,0 +1,35 @@
+; comment character is semicolon.
+; "msrv.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) msrv.hdr 101.1 1/21/94 19:19:48
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+1	= "Le serveur '%1!' n'est pas un Sybase Monitor Server.",	"%s"
+10	= "modifiez l'entrée de Monitor Server dans le fichier d'interface",	""
+11	= "modifiez le fichier runserver de Monitor Server",		""
+12	= "initialisez Monitor Server",				""
+13	= "démarrez Monitor Server",				""
+450	= "Lancer la configuration de Monitor Server maintenant ? ",  ""
+451	= "Il n'y a pas d'entrée pour '%1!' dans le fichier d'interface. Créez une entrée pour '%2!' avant de lancer la configuration.",        "%s %s"
+500	= "Monitor Server '%1!' est configuré. La nouvelle configuration prendra effet au prochain démarrage de Monitor Server. ",	"%s"
+501 	= "modifiez l'entrée de Monitor Server dans le regitre",	"" 	
+502	= "impossible de créer une entrée de Service Control Manager pour Monitor Server '%1!'. Le système d'exploitation renvoie l'erreur : '%2!'",	"%s%s"
+
+; End of section.

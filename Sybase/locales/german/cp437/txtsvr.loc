@@ -1,0 +1,156 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  
+;  Product:  Full Text Search Specialty Data Store Release 11.5.1
+;  File:     txtsvr.loc  1.11  01/10/01
+;  Purpose:  Messages for localization  
+;
+;            
+;  Revision History
+;  ----------------------------------------------------------------------
+;  15-Oct-1997                  created, initially 45 messages
+;  28-Oct-1997                  modify 14, 15, 27; add 46, 47
+;  13-Jan-1998			added 48 - 53
+;  21-Jan-1998			added 54 - 57
+;  06-Mar-1998			added 58
+;  26-Mar-1998			added 59
+;  10-Jan-2001                  added 60 - 62
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;                   Copyright (c) Sybase Inc. 1997, 2001
+;                   Emeryville, CA 94608 
+;                   All rights reserved.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; localized message strings
+;
+[messages]
+;
+; 1  ENOMEM
+1 =  "Speicherzuordnung fehlgeschlagen"
+; 2  EROUFAIL
+2 =  "%1! fehlgeschlagen"
+; 3  EARGMIS
+3 =  "%1!: Argumente stimmen nicht Åberein."
+; 4  EARGINV
+4 =  "%1!: UngÅltiges Argument"
+; 5  ECMDFAIL
+5 =  "'%1!' Befehl fehlgeschlagen"
+; 6  ERPCNOT 
+6 =  "RPC '%1!' ist nicht vorhanden."
+; 7  ENOCOLL
+7 =  "Indexnamen mÅssen folgendes Format haben: 'Datenbank.EigentÅmer.Name'."
+; 8  ENOREQDB
+8 =  "Die angeforderte Datenbank '%1!' ist nicht vorhanden."
+; 9  ENOSPECDB 
+9 =  "Die angegebene Datenbank '%1!' ist nicht vorhanden."
+; 10 ENOLOADIDX 
+10 = "Index '%1!' konnte nicht geladen werden."
+; 11 EINVOBJ
+11 = "UngÅltiger Objektname '%1!'."
+; 12 EINDEXED
+12 = "Index ist bereits vorhanden."
+; 13 ENOPASSTH 
+13 = "Durchreichmodus (Passthrough) wird nicht unterstÅtzt."
+; 14 ECOLMISS
+14 = "Interner Fehler: In Funktion %1! stimmen Spalten nicht Åberein."
+; 15 ENOROWBUF
+15 = "Interner Fehler: In Funktion %1! konnte kein Zeilenpuffer ermittelt werden."
+; 16 ENOCURSOR 
+16 = "Ein Cursorname ist erforderlich."
+; 17 ENOPARSE  
+17 = "Die SQL-Anweisung konnte nicht syntaktisch analysiert werden."
+; 18 ENOILOCK
+18 = "Index konnte nicht gesperrt werden."
+; 19 ENOINDEX
+19 = "Index ist nicht vorhanden oder nicht online."
+; 20 EIDXINUSE 
+20 = "Index wird gerade aktualisiert."
+; 21 ECURFAIL   
+21 = "Cursorzuordnung fehlgeschlagen."
+; 22 ENOUPDDEL  
+22 = "Aktualisierungen und LîschvorgÑnge (Update- und Delete-Anweisungen) werden nicht unterstÅtzt."
+; 23 EINVCOL    
+23 = "UngÅltige Spalte in der Auswahlliste."
+; 24 EFUNFAIL   
+24 = "'%1!' Funktion mit VDK-Fehler '%2!' fehlgeschlagen."
+; 25 ESVRBUSY   
+25 = "Dieser Textserver ist derzeit explizit dem Server '%1!' zugeordnet."
+; 26 ENORPCNAM  
+26 = "RPC-Name kann nicht abgerufen werden."
+; 27 EINVSORT
+27 = "UngÅltige Sortierungsspezifikation '%1!'."
+; 28 EUNSUPPORT 
+28 = "Anweisung wird nicht unterstÅtzt."
+; 29 ENOMUTEX   
+29 = "Datenbank-Mutex konnte nicht erstellt werden."
+; 30 EGENRQUERY 
+30 = "Fehler bei der Erstellung der Remote-Abfrage."
+; 31 EPRORQUERY 
+31 = "Fehler bei der Verarbeitung der Remote-Abfrage."
+; 32 ENORTEXT   
+32 = "Prozedur '%1!' konnte nicht ausgefÅhrt werden."
+; 33 EINDEXBUSY 
+33 = "Index fÅr Objekt '%1!.%2!' wird von einem anderen Thread benutzt."
+; 34 ENOMODCOL  
+34 = "Kollektion '%1!' fÅr Objekt '%2!.%3!' konnte nicht geÑndert werden."
+; 35 EINVALOP   
+35 = "UngÅltiger Mengen-Operator, nur '>' und '>=' werden unterstÅtzt."
+; 36 ENOPRED    
+36 = "Abfrage enthÑlt kein PrÑdikat."
+; 37 EUNSUPCOL  
+37 = "Nicht unterstÅtzte Spalte '%1!'"
+; 38 ENOREMSVR  
+38 = "Anmeldung beim Fremdserver '%1!' war nicht mîglich."
+; 39 EBINDFAIL  
+39 = "Zeilenresultate konnten nicht gebunden werden."
+; 40 ENOSLOCK   
+40 = "Es konnte keine Sitzungssperre erworben werden."
+; 41 EMAXSESS   
+41 = "Es wird bereits die Hîchstanzahl von Sitzungen benutzt."
+; 42 EINVTPTR   
+42 = "UngÅltiger Textzeigerwert."
+; 43 ENOUDATA    
+43 = "Abfrage der Benutzerdaten aus dem Thread nicht mîglich."
+; 44 ECOLCLOSE  
+44 = "Kollektion '%1!' fÅr Objekt '%2!' konnte nicht geîffnet werden."
+; 45 EINDXNO    
+45 = "Index nicht gefunden. PrÅfen Sie, ob die Datenbank online ist."
+; 46 EIDXRW    
+46 = "Index '%1!' wird benutzt."
+; 47 ENOIDXOBJ
+47 = "Index fÅr Objekt '%1!.%2!' ist nicht vorhanden oder nicht online."
+; 48 EDATATYPE
+48 = "Nicht unterstÅtzter Datentyp '%1!'"
+; 49 EBACKUP
+49 = "Sicherung fÅr Index '%1!' fehlgeschlagen, rc = %2!"
+; 50 ERESTORE
+50 = "Wiederherstellung fÅr Index '%1!' fehlgeschlagen, rc = %2!"
+; 51 IBACKUP
+51 = "Index '%1!' ist gesichert."
+; 52 IRESTORE
+52 = "Index '%1!' ist wiederhergestellt."
+; 53 ECLUSTER
+53 = "Erstellung einer Cluster-Ergebnismenge war nicht mîglich. Vergewissern Sie sich, dass der Index mit aktivierter Cluster-Option erstellt wurde."
+; 54 ISTATIC
+54 = "Dieser Parameter ist statisch, und der Server muss neu gestartet werden, damit er wirksam wird."
+; 55 IDYNAMIC
+55 = "Dieser Parameter ist dynamisch und daher ab sofort wirksam."
+; 56 ECFGFILE
+56 = "Es konnte keine neue Version der Konfigurationsdatei erstellt werden."
+; 57 ECFGNAME
+57 = "UngÅltiger Konfigurationsparameter '%1!'."
+; 58 EFEATURE
+58 = "Vergewissern Sie sich, dass der Index mit definierter Option DOC-FEATURES erstellt wurde."
+; 59 EDBINDEX
+59 = "Ein Index in der Datenbank '%1!' wird von einem anderen Thread benutzt."
+; 60 ENOTENABLED
+60 = "Server '%1!' ist nicht fÅr Volltext-Recherche eingerichtet."
+; 61 EBADSRVID
+61 = "Die Textserver-ID (%1!) des HA-Begleitservers ist nicht identisch mit der des PrimÑrservers (%2!)."
+; 62 EHASVRBUSY
+62 = "Dieser Textserver ist derzeit explizit den Servern '%1!' und '%2!' zugeordnet."
+
+
+

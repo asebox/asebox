@@ -1,0 +1,27 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Microsoft Windows Code Page 1258, Vietnamese character set, this is a binary sort order.
+;
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 27 1998  3:06PM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp1258
+menuname = "Binary ordering, for the Microsoft Windows Code Page 1258, Vietnamese character set (cp1258)."
+charset = cp1258
+ 
+description = "Binary sort order for the Microsoft Windows Code Page 1258, Vietnamese character set (cp1258)."
+ 
+binary = "true"

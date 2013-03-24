@@ -1,0 +1,13 @@
+; This is the Conversion Configuration File for utf8 charset.
+
+[conversion]
+convertto = iso_1, table, MATCH, 3F
+convertto = roman8, table, MATCH, 3F
+convertto = cp850, table, MATCH, 3F
+convertto = cp437, table, MATCH, 3F
+convertto = mac, table, MATCH, 3F
+convertto = sjis, table, MATCH, 3F
+convertto = eucjis, table, MATCH, 3F
+convertto = deckanji, table, MATCH, 3F
+convertto = eucgb, table, MATCH, 3F
+convertto = eucksc, table, MATCH, 3F

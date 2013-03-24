@@ -1,0 +1,742 @@
+; comment character is a semicolon
+;
+; @(#) locales.dat 1.3 10/14/2003
+;
+; LOCALES.DAT
+;
+; Flat-file database for converting vendor-specific international
+; locale information to sybase proprietary format.
+;
+[file format]
+        version=12.5
+        list_seperator=,
+        escape=\
+
+[copyright]
+copyright = "Copyright Sybase Inc., 1996, 2003. All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright\
+	laws of the United States.\
+	Sybase, Inc. One Sybase Drive, Dublin, CA 94568, USA."
+
+;
+; Locales.dat File Format:
+; [vendor] sections designate specific vendor-wide accepted
+;	   families of machines and/or operating systems
+;	   that use a common internationalization scheme
+;
+;   locale = vendor_locale, syb_language, syb_charset
+;	the "locale" entry is used for sybase internal parsing of
+;	this file.
+;
+;	   vendor_locale is composed of the vendor-specified
+;		language[_territory][.codeset], according to
+;		POSIX terminology.  Sybase internal functions
+;		will build up the name if necessary.
+;
+;	   syb_language is the Sybase-recognized language name
+;		that an external environment variable, "SYBLANG"
+;		may be set to, and is the proper normalized value
+;		to be used for setting a sessions language.
+;
+;	   syb_charset is the Sybase-recognized character set
+;		name for determining character set conversion
+;		and location of localization files.
+;
+
+[aix]
+	locale = C, us_english, iso_1
+	locale = En_US, us_english, iso_1
+	locale = en_US, us_english, iso_1
+	locale = default, us_english, iso_1
+	locale = En_US.IBM-850, us_english, cp850
+	locale = en_US.ISO8859-1, us_english, iso_1
+	locale = En_JP, us_english, sjis
+	locale = en_JP, us_english, eucjis
+	locale = Fr_FR, french, cp850
+	locale = fr_FR, french, iso_1
+	locale = Fr_FR.IBM-850, french, cp850
+	locale = fr_FR.ISO8859-1, french, iso_1
+	locale = Fr_CA, french, cp850
+	locale = fr_CA, french, iso_1
+	locale = Fr_CA.IBM-850, french, cp850
+	locale = fr_CA.ISO8859-1, french, iso_1
+	locale = Fr_CH, french, cp850
+	locale = fr_CH, french, iso_1
+	locale = Fr_CH.IBM-850, french, cp850
+	locale = fr_CH.ISO8859-1, french, iso_1
+	locale = Fr_BE, french, cp850
+	locale = fr_BE, french, iso_1
+	locale = Fr_BE.IBM-850, french, cp850
+	locale = fr_BE.ISO8859-1, french, iso_1
+	locale = De_DE, german, cp850
+	locale = de_DE, german, iso_1
+	locale = De_DE.IBM-850, german, cp850
+	locale = de_DE.ISO8859-1, german, iso_1
+	locale = De_CH, german, cp850
+	locale = de_CH, german, iso_1
+	locale = De_CH.IBM-850, german, cp850
+	locale = de_CH.ISO8859-1, german, iso_1
+	locale = Es_ES, spanish, cp850
+	locale = es_ES, spanish, iso_1
+	locale = Es_ES.IBM-850, spanish, cp850
+	locale = es_ES.ISO8859-1, spanish, iso_1
+	locale = ja_JP, japanese, eucjis
+	locale = ja_JP.IBM-eucJP, japanese, eucjis
+	locale = Ja_JP, japanese, sjis
+	locale = Ja_JP.IBM-932, japanese, sjis
+	locale = japanese.sjis, japanese, sjis
+	locale = japanese, japanese, eucjis
+	locale = zh_CN, chinese, eucgb
+	locale = zh_TW, tchinese, euccns
+	locale = zh_TW.IBM-eucTW, tchinese, euccns
+	locale = Zh_TW, tchinese, big5
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.IBM-eucKR, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = us_english.utf8, us_english, utf8
+
+[axposf]
+	locale = C, us_english, iso_1
+	; Use Posix Locales, straight from the Posix Guidelines
+	locale = en_US.88591, us_english, iso_1
+	locale = fr_FR, french, iso_1
+	locale = de_DE, german, iso_1
+	locale = es_ES, spanish, iso_1
+	locale = ja_JP, japanese, eucjis
+	locale = zh_CN, chinese, eucgb
+	locale = zh_TW, tchinese, euccns
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = us_english.utf8, us_english, utf8
+	locale = default, us_english, iso_1
+
+[hpia]
+	; from hp ux section below, copied directly.
+	locale = n-computer, us_english, roman8
+	locale = C, us_english, roman8
+	locale = american, us_english, roman8
+	locale = american.roman9, us_english, roman9
+	locale = american.iso88591, us_english, iso_1
+	locale = english.iso88591, us_english, iso_1
+	locale = english, us_english, roman8
+	locale = english.roman9, us_english, roman9
+	locale = french, french, roman8
+	locale = french.roman9, french, roman9
+	locale = french.iso88591, french, iso_1
+	locale = c-french, french, roman8
+	locale = c-french.roman9, french, roman9
+	locale = c-french.iso88591, french, iso_1
+	locale = fr_CA.iso88591, french, iso_1
+	locale = fr_CA.roman8, french, roman8
+	locale = fr_CA.iso885915, french, iso15
+	locale = fr_CA.utf8, french, utf8
+	locale = fr_FR.iso88591, french, iso_1
+	locale = fr_FR.roman8, french, roman8
+	locale = fr_FR.iso885915@euro, french, iso15
+	locale = fr_FR.utf8, french, utf8	
+	locale = german, german, roman8
+	locale = german.roman9, german, roman9
+	locale = german.iso88591, german, iso_1
+	locale = de_DE.iso88591, german, iso_1
+	locale = de_DE.roman8, german, roman8
+	locale = de_DE.iso885915@euro, german, iso15
+	locale = de_DE.utf8, german, utf8
+	locale = spanish, spanish, roman8
+	locale = spanish.roman9, spanish, roman9
+	locale = spanish.iso88591, spanish, iso_1
+	locale = es_ES.iso88591, spanish, iso_1
+	locale = es_ES.roman8, spanish, roman8
+	locale = es_ES.iso885915@euro, spanish, iso15
+	locale = es_ES.utf8, spanish, utf8
+	locale = japanese, japanese, sjis
+	locale = japanese.euc, japanese, eucjis
+	locale = ja_JP.eucJP, japanese, eucjis
+	locale = ja_JP.SJIS, japanese, sjis
+	locale = ja_JP.utf8, japanese, utf8
+	locale = zh_CN.utf8, chinese, utf8
+	locale = zh_CN.gb18030, chinese, gb18030
+	locale = ko_KR.eucKR, korean, eucksc
+	locale = ko_KR.utf8, korean, utf8
+	locale = ko_KR.949, korean, cp949
+	locale = pl_PL.iso88592, polish, iso88592
+	locale = pl_PL.utf8, polish, utf8
+	locale = th_TH.tis620, thai, tis620
+	; locale = chinese-s, chinese, eucgb
+	; locale = chinese-t, tchinese, euccns
+	; locale = korean, korean, eucksc
+	locale = us_english.utf8, us_english, utf8
+	locale = en_US.iso88591, us_english, iso_1
+	locale = en_US.roman8, us_english, roman8
+	locale = en_US.utf8, us_english, utf8
+	locale = default, us_english, roman8
+
+[hp ux]
+	; from hp:/usr/lib/nls/config, man hpnls
+	; from "Developing and Localizing International Software"
+	; 	Hewlett-Packard Professional Books
+	; 	ISBN 0-13-300674-3
+	locale = n-computer, us_english, roman8
+	locale = C, us_english, roman8
+	locale = american, us_english, roman8
+	locale = american.roman9, us_english, roman9
+	locale = american.iso88591, us_english, iso_1
+	locale = english.iso88591, us_english, iso_1
+	locale = english, us_english, roman8
+	locale = english.roman9, us_english, roman9
+	locale = french, french, roman8
+	locale = french.roman9, french, roman9
+	locale = french.iso88591, french, iso_1
+	locale = c-french, french, roman8
+	locale = c-french.roman9, french, roman9
+	locale = c-french.iso88591, french, iso_1
+	locale = fr_CA.iso88591, french, iso_1
+	locale = fr_CA.roman8, french, roman8
+	locale = fr_CA.iso885915, french, iso15
+	locale = fr_CA.utf8, french, utf8
+	locale = fr_FR.iso88591, french, iso_1
+	locale = fr_FR.roman8, french, roman8
+	locale = fr_FR.iso885915@euro, french, iso15
+	locale = fr_FR.utf8, french, utf8	
+	locale = german, german, roman8
+	locale = german.roman9, german, roman9
+	locale = german.iso88591, german, iso_1
+	locale = de_DE.iso88591, german, iso_1
+	locale = de_DE.roman8, german, roman8
+	locale = de_DE.iso885915@euro, german, iso15
+	locale = de_DE.utf8, german, utf8
+	locale = spanish, spanish, roman8
+	locale = spanish.roman9, spanish, roman9
+	locale = spanish.iso88591, spanish, iso_1
+	locale = es_ES.iso88591, spanish, iso_1
+	locale = es_ES.roman8, spanish, roman8
+	locale = es_ES.iso885915@euro, spanish, iso15
+	locale = es_ES.utf8, spanish, utf8
+	locale = japanese, japanese, sjis
+	locale = japanese.euc, japanese, eucjis
+	locale = ja_JP.eucJP, japanese, eucjis
+	locale = ja_JP.SJIS, japanese, sjis
+	locale = ja_JP.utf8, japanese, utf8
+	locale = zh_CN.utf8, chinese, utf8
+	locale = zh_CN.gb18030, chinese, gb18030
+	locale = ko_KR.eucKR, korean, eucksc
+	locale = ko_KR.utf8, korean, utf8
+	locale = ko_KR.949, korean, cp949
+	locale = pl_PL.iso88592, polish, iso88592
+	locale = pl_PL.utf8, polish, utf8
+	locale = th_TH.tis620, thai, tis620
+	; locale = chinese-s, chinese, eucgb
+	; locale = chinese-t, tchinese, euccns
+	; locale = korean, korean, eucksc
+	locale = us_english.utf8, us_english, utf8
+	locale = en_US.iso88591, us_english, iso_1
+	locale = en_US.roman8, us_english, roman8
+	locale = en_US.utf8, us_english, utf8
+	locale = default, us_english, roman8
+
+[linux]
+	locale = FRENCH, french, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = fr_BE.437, french, cp437
+	locale = fr_BE.850, french, cp850
+	locale = fr_CA, french, iso_1
+	locale = fr_CA.850, french, cp850
+	locale = fr_CH, french, iso_1
+	locale = fr_CH.437, french, cp437
+	locale = fr_CH.850, french, cp850
+	locale = fr_FR.437, french, cp437
+	locale = fr_FR.850, french, cp850
+	locale = GERMAN, german, iso_1
+	locale = de, german, iso_1
+	locale = de_AT, german, iso_1
+	locale = de_AT.437, german, cp437
+	locale = de_AT.850, german, cp850
+	locale = de_CH, german, iso_1
+	locale = de_CH.437, german, cp437
+	locale = de_CH.850, german, cp850
+	locale = de_DE.437, german, cp437
+	locale = de_DE.850, german, cp850
+	locale = CHINESE, chinese, eucgb
+	locale = zh_CN, chinese, eucgb
+	locale = zh_CN.gb18030, chinese, gb18030
+	locale = zh_CN.GB18030, chinese, gb18030
+	locale = zh_CN.gbk, chinese, eucgb
+	locale = zh_TW, tchinese, big5
+	locale = zh_TW.euctw, tchinese, euccns
+	locale = JAPANESE, japanese, eucjis
+	locale = japan, japanese, eucjis
+	locale = ja, japanese, eucjis
+	locale = ja_JP.eucJP, japanese, eucjis
+	locale = ja_JP.sjis, japanese, sjis
+	locale = KOREAN, korean, eucksc
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.euckr, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = korean.euc, korean, eucksc
+	locale = SPANISH, spanish, cp850
+	locale = ENGLISH, us_english, iso_1
+	locale = en, us_english, iso_1
+	locale = en_AU, us_english, iso_1
+	locale = en_AU.437, us_english, cp437
+	locale = en_AU.850, us_english, cp850
+	locale = en_GB, us_english, iso_1
+	locale = en_GB.437, us_english, cp437
+	locale = en_GB.850, us_english, cp850
+	locale = en_US, us_english, iso_1
+	locale = en_US.437, us_english, cp437
+	locale = en_US.850, us_english, cp850
+	locale = us_english.utf8, us_english, utf8
+	locale = en_US.UTF-8, us_english, utf8
+	locale = us_EN, us_english, iso_1
+	locale = C, us_english, iso_1
+	locale = default, us_english, iso_1
+
+[linuxamd64]
+	locale = FRENCH, french, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = fr_BE.437, french, cp437
+	locale = fr_BE.850, french, cp850
+	locale = fr_CA, french, iso_1
+	locale = fr_CA.850, french, cp850
+	locale = fr_CH, french, iso_1
+	locale = fr_CH.437, french, cp437
+	locale = fr_CH.850, french, cp850
+	locale = fr_FR.437, french, cp437
+	locale = fr_FR.850, french, cp850
+	locale = GERMAN, german, iso_1
+	locale = de, german, iso_1
+	locale = de_AT, german, iso_1
+	locale = de_AT.437, german, cp437
+	locale = de_AT.850, german, cp850
+	locale = de_CH, german, iso_1
+	locale = de_CH.437, german, cp437
+	locale = de_CH.850, german, cp850
+	locale = de_DE.437, german, cp437
+	locale = de_DE.850, german, cp850
+	locale = CHINESE, chinese, eucgb
+	locale = zh_CN, chinese, eucgb
+	locale = zh_CN.gb18030, chinese, gb18030
+	locale = zh_CN.GB18030, chinese, gb18030
+	locale = zh_CN.gbk, chinese, eucgb
+	locale = zh_TW, tchinese, big5
+	locale = zh_TW.euctw, tchinese, euccns
+	locale = JAPANESE, japanese, eucjis
+	locale = japan, japanese, eucjis
+	locale = ja, japanese, eucjis
+	locale = ja_JP.eucJP, japanese, eucjis
+	locale = ja_JP.sjis, japanese, sjis
+	locale = KOREAN, korean, eucksc
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.euckr, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = korean.euc, korean, eucksc
+	locale = SPANISH, spanish, cp850
+	locale = ENGLISH, us_english, iso_1
+	locale = en, us_english, iso_1
+	locale = en_AU, us_english, iso_1
+	locale = en_AU.437, us_english, cp437
+	locale = en_AU.850, us_english, cp850
+	locale = en_GB, us_english, iso_1
+	locale = en_GB.437, us_english, cp437
+	locale = en_GB.850, us_english, cp850
+	locale = en_US, us_english, iso_1
+	locale = en_US.437, us_english, cp437
+	locale = en_US.850, us_english, cp850
+	locale = us_english.utf8, us_english, utf8
+	locale = en_US.UTF-8, us_english, utf8
+	locale = us_EN, us_english, iso_1
+	locale = C, us_english, iso_1
+	locale = default, us_english, iso_1
+
+[linux_s390]
+	locale = FRENCH, french, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = fr_BE.437, french, cp437
+	locale = fr_BE.850, french, cp850
+	locale = fr_CA, french, iso_1
+	locale = fr_CA.850, french, cp850
+	locale = fr_CH, french, iso_1
+	locale = fr_CH.437, french, cp437
+	locale = fr_CH.850, french, cp850
+	locale = fr_FR.437, french, cp437
+	locale = fr_FR.850, french, cp850
+	locale = GERMAN, german, iso_1
+	locale = de, german, iso_1
+	locale = de_AT, german, iso_1
+	locale = de_AT.437, german, cp437
+	locale = de_AT.850, german, cp850
+	locale = de_CH, german, iso_1
+	locale = de_CH.437, german, cp437
+	locale = de_CH.850, german, cp850
+	locale = de_DE.437, german, cp437
+	locale = de_DE.850, german, cp850
+	locale = CHINESE, chinese, eucgb
+	locale = zh_CN, chinese, eucgb
+	locale = zh_CN.gb18030, chinese, gb18030
+	locale = zh_CN.gbk, chinese, eucgb
+	locale = zh_TW, tchinese, big5
+	locale = zh_TW.euctw, tchinese, euccns
+	locale = JAPANESE, japanese, eucjis
+	locale = japan, japanese, eucjis
+	locale = ja, japanese, eucjis
+	locale = ja_JP.eucJP, japanese, eucjis
+	locale = ja_JP.sjis, japanese, sjis
+	locale = KOREAN, korean, eucksc
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.euckr, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = korean.euc, korean, eucksc
+	locale = SPANISH, spanish, cp850
+	locale = ENGLISH, us_english, iso_1
+	locale = en, us_english, iso_1
+	locale = en_AU, us_english, iso_1
+	locale = en_AU.437, us_english, cp437
+	locale = en_AU.850, us_english, cp850
+	locale = en_GB, us_english, iso_1
+	locale = en_GB.437, us_english, cp437
+	locale = en_GB.850, us_english, cp850
+	locale = en_US, us_english, iso_1
+	locale = en_US.437, us_english, cp437
+	locale = en_US.850, us_english, cp850
+	locale = us_english.utf8, us_english, utf8
+	locale = us_EN, us_english, iso_1
+	locale = C, us_english, iso_1
+	locale = default, us_english, iso_1
+
+[posix]
+	; refer to "man setlocale()"
+	locale = fr_FR, french, iso_1
+	locale = de_DE, german, iso_1
+	locale = es_ES, spanish, iso_1
+	locale = ja_JP, japanese, eucjis
+	locale = zh_CN, chinese, eucgb
+	locale = zh_TW, tchinese, euccns
+	locale = ko_KR, korean, eucksc
+	locale = us_english.utf8, us_english, utf8
+	locale = default, us_english, iso_1
+
+[sgi_svr4]
+	locale = C, us_english, iso_1
+	locale = en_US, us_english, iso_1
+	locale = de, german, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = es, spanish, iso_1
+	locale = ja_JP, japanese, eucjis
+	locale = zh_CN.ugb, chinese, eucgb
+	locale = zh_TW.ucns, tchinese, euccns
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = us_english.utf8, us_english, utf8
+	locale = default, us_english, iso_1
+
+[sun_svr4]
+	; from Solaris International Developer's Guide
+	; 	ISBN 0-13-031063-8
+	; refer to "man setlocale()"
+	locale = C, us_english, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = fr_CA, french, iso_1
+	locale = fr_CA.ISO8859-1, french, iso_1
+	locale = fr_CH, french, iso_1
+	locale = fr_CH.ISO8859-1, french, iso_1
+	locale = fr_FR, french, iso_1
+	locale = fr_FR.ISO8859-1, french, iso_1
+	locale = fr_FR.ISO8859-15, french, iso15 
+	locale = fr_FR.ISO8859-15@euro, french, iso15
+	locale = fr_FR.UTF-8, french, utf8
+	locale = fr_FR.UTF-8@euro, french, utf8
+	locale = fr.iso_8859_1, french, iso_1
+	locale = de, german, iso_1
+	locale = de_CH, german, iso_1
+	locale = de.iso_8859_1, german, iso_1
+	locale = de_DE, german, iso_1
+	locale = de_DE.ISO8859-1, german, iso_1
+	locale = de_DE.ISO8859-15, german, iso15
+	locale = de_DE.ISO8859-15@euro, german, iso15
+	locale = de_DE.UTF-8, german, utf8
+	locale = de_DE.UTF-8@euro, german, utf8
+	locale = es, spanish, iso_1
+	locale = es.iso_8859_1, spanish, iso_1
+	locale = es_ES, spanish, iso_1
+	locale = es_ES.ISO8859-1, spanish, iso_1
+	locale = es_ES.ISO8859-15, spanish, iso15
+	locale = es_ES.ISO8859-15@euro, spanish, iso15
+	locale = es_ES.UTF-8, spanish, utf8
+	locale = es_ES.UTF-8@euro, spanish, utf8
+	locale = japanese, japanese, eucjis
+	locale = ja, japanese, eucjis
+	locale = japanese.sjis, japanese, sjis
+	locale = ja_JP.PCK, japanese, sjis
+	locale = ja_JP.UTF-8, japanese, utf8
+	locale = ja_JP.eucJP, japanese, eucjis 
+	locale = ru, russian, iso88595
+	locale = ru.iso_8859_5, russian, iso88595
+	locale = bg.iso_8859_5, us_english, iso88595
+	locale = zh, chinese, eucgb
+	locale = zh_CN, chinese, eucgb
+	locale = zh_CN.EUC, chinese, eucgb
+	locale = zh.GBK, chinese, eucgb
+	locale = zh_CN.GBK, chinese, eucgb
+	locale = zh.UTF-8, chinese, utf8
+	locale = zh_CN.UTF-8, chinese, utf8
+	locale = zh_TW, tchinese, euccns
+	locale = zh_TW.EUC, tchinese, euccns
+	locale = zh_TW.BIG5, tchinese, big5
+	locale = zh_TW.UTF-8, tchinese, utf8
+	locale = ko, korean, eucksc
+	locale = ko_KR.EUC, korean, eucksc
+	locale = ko.949, korean, cp949
+	locale = ko_KR.949, korean, cp949
+	locale = ko.UTF-8, korean, utf8
+	locale = ko_KR.UTF-8, korean, utf8
+	locale = us_english.utf8, us_english, utf8
+	locale = en_US, us_english, iso_1
+	locale = en_US.ISO8859-1, us_english, iso_1
+	locale = en_US.ISO8859-15, us_english, iso15
+	locale = en_US.ISO8859-15@euro, us_english, iso15
+	locale = en_US.UTF-8, us_english, utf8
+	locale = en_UK, us_english, iso_1
+	locale = en_GB, us_english, iso_1
+	locale = en_GB.ISO8859-1, us_english, iso_1
+	locale = en_GB.ISO8859-15, us_english, iso15
+	locale = en_GB.ISO8859-15@euro, us_english, iso15 
+	locale = pl, polish, iso88592
+	locale = pl_PL.ISO8859-2, polish, iso88592
+	locale = pl_PL.UTF-8, polish, utf8
+	locale = th, thai, tis620
+	locale = th_TH, thai, tis620
+	locale = th_TH.TIS620, thai, tis620
+	locale = default, us_english, iso_1
+
+[sunx86]
+	; from Solaris International Developer's Guide
+	; 	ISBN 0-13-031063-8
+	; refer to "man setlocale()"
+	locale = C, us_english, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = fr_CA, french, iso_1
+	locale = fr_CA.ISO8859-1, french, iso_1
+	locale = fr_CH, french, iso_1
+	locale = fr_CH.ISO8859-1, french, iso_1
+	locale = fr_FR, french, iso_1
+	locale = fr_FR.ISO8859-1, french, iso_1
+	locale = fr_FR.ISO8859-15, french, iso15 
+	locale = fr_FR.ISO8859-15@euro, french, iso15
+	locale = fr_FR.UTF-8, french, utf8
+	locale = fr_FR.UTF-8@euro, french, utf8
+	locale = fr.iso_8859_1, french, iso_1
+	locale = de, german, iso_1
+	locale = de_CH, german, iso_1
+	locale = de.iso_8859_1, german, iso_1
+	locale = de_DE, german, iso_1
+	locale = de_DE.ISO8859-1, german, iso_1
+	locale = de_DE.ISO8859-15, german, iso15
+	locale = de_DE.ISO8859-15@euro, german, iso15
+	locale = de_DE.UTF-8, german, utf8
+	locale = de_DE.UTF-8@euro, german, utf8
+	locale = es, spanish, iso_1
+	locale = es.iso_8859_1, spanish, iso_1
+	locale = es_ES, spanish, iso_1
+	locale = es_ES.ISO8859-1, spanish, iso_1
+	locale = es_ES.ISO8859-15, spanish, iso15
+	locale = es_ES.ISO8859-15@euro, spanish, iso15
+	locale = es_ES.UTF-8, spanish, iso15
+	locale = es_ES.UTF-8@euro, spanish, iso15
+	locale = japanese, japanese, eucjis
+	locale = ja, japanese, eucjis
+	locale = japanese.sjis, japanese, sjis
+	locale = ja_JP.PCK, japanese, sjis
+	locale = ja_JP.UTF-8, japanese, utf8
+	locale = ja_JP.eucJP, japanese, eucjis 
+	locale = ru, russian, iso88595
+	locale = ru.iso_8859_5, russian, iso88595
+	locale = bg.iso_8859_5, us_english, iso88595
+	locale = zh, chinese, eucgb
+	locale = zh_CN, chinese, eucgb
+	locale = zh_CN.EUC, chinese, eucgb
+	locale = zh.GBK, chinese, eucgb
+	locale = zh_CN.GBK, chinese, eucgb
+	locale = zh.UTF-8, chinese, utf8
+	locale = zh_CN.UTF-8, chinese, utf8
+	locale = zh_TW, tchinese, euccns
+	locale = zh_TW.EUC, tchinese, euccns
+	locale = zh_TW.BIG5, tchinese, big5
+	locale = zh_TW.UTF-8, tchinese, utf8
+	locale = ko, korean, eucksc
+	locale = ko_KR.EUC, korean, eucksc
+	locale = ko.949, korean, cp949
+	locale = ko_KR.949, korean, cp949
+	locale = ko.UTF-8, korean, utf8
+	locale = ko_KR.UTF-8, korean, utf8
+	locale = us_english.utf8, us_english, utf8
+	locale = en_US, us_english, iso_1
+	locale = en_US.ISO8859-1, us_english, iso_1
+	locale = en_US.ISO8859-15, us_english, iso15
+	locale = en_US.ISO8859-15@euro, us_english, iso15
+	locale = en_US.UTF-8, us_english, utf8
+	locale = en_UK, us_english, iso_1
+	locale = en_GB, us_english, iso_1
+	locale = en_GB.ISO8859-1, us_english, iso_1
+	locale = en_GB.ISO8859-15, us_english, iso15
+	locale = en_GB.ISO8859-15@euro, us_english, iso15 
+	locale = pl, polish, iso88592
+	locale = pl_PL.ISO8859-2, polish, iso88592
+	locale = pl_PL.UTF-8, polish, utf8
+	locale = th, thai, tis620
+	locale = th_TH, thai, tis620
+	locale = th_TH.TIS620, thai, tis620
+	locale = default, us_english, iso_1
+
+[NT]
+	locale = enu, us_english, iso_1
+	locale = fra, french, iso_1
+	locale = deu, german, iso_1
+	locale = rus, russian, cp1251
+	locale = hun, us_english, cp1250
+	locale = ell, us_english, cp1253
+	locale = heb, us_english, cp1255
+	locale = ara, us_english, cp1256
+	locale = trk, us_english, cp1254
+	locale = esp, spanish, iso_1
+	locale = jpn, japanese, sjis
+	locale = japanese, japanese, sjis
+	locale = chs, chinese, eucgb
+	locale = cht, tchinese, big5
+	locale = kor, korean, cp949
+	locale = us_english.utf8, us_english, utf8
+	locale = default, us_english, iso_1
+
+[macosx]
+	locale = FRENCH, french, iso_1
+	locale = fr, french, iso_1
+	locale = fr_BE, french, iso_1
+	locale = fr_BE.437, french, cp437
+	locale = fr_BE.850, french, cp850
+	locale = fr_CA, french, iso_1
+	locale = fr_CA.850, french, cp850
+	locale = fr_CH, french, iso_1
+	locale = fr_CH.437, french, cp437
+	locale = fr_CH.850, french, cp850
+	locale = fr_FR, french, iso_1
+	locale = fr_FR.437, french, cp437
+	locale = fr_FR.850, french, cp850
+	locale = GERMAN, german, iso_1
+	locale = de, german, iso_1
+	locale = de_AT, german, iso_1
+	locale = de_AT.437, german, cp437
+	locale = de_AT.850, german, cp850
+	locale = de_CH, german, iso_1
+	locale = de_CH.437, german, cp437
+	locale = de_CH.850, german, cp850
+	locale = de_DE, german, iso_1
+	locale = de_DE.437, german, cp437
+	locale = de_DE.850, german, cp850
+	locale = JAPANESE, japanese, eucjis
+	locale = japan, japanese, eucjis
+	locale = ja_JP, japanese, eucjis
+	locale = ja_JP.eucjis, japanese, eucjis
+	locale = ja_JP.sjis, japanese, sjis
+	locale = KOREAN, korean, eucksc
+	locale = ko_KR, korean, eucksc
+	locale = ko_KR.949, korean, cp949
+	locale = SPANISH, spanish, cp850
+	locale = es_ES, spanish, iso_1
+	locale = CHINESE, chinese, eucgb
+	locale = zh_CN, chinese, eucgb
+	locale = zh_TW, tchinese, euccns
+	locale = ENGLISH, us_english, iso_1
+	locale = en, us_english, iso_1
+	locale = en_AU, us_english, iso_1
+	locale = en_AU.437, us_english, cp437
+	locale = en_AU.850, us_english, cp850
+	locale = us_EN, us_english, iso_1
+	locale = en_GB, us_english, iso_1
+	locale = en_GB.437, us_english, cp437
+	locale = en_GB.850, us_english, cp850
+	locale = en_US, us_english, iso_1
+	locale = en_US.437, us_english, cp437
+	locale = en_US.850, us_english, cp850
+	locale = fi_FI, us_english, iso_1
+	locale = us_english.utf8, us_english, utf8
+	locale = default, us_english, iso_1
+	locale = C, us_english, iso_1
+
+[language-charset groups]
+	language=french,cp1252,cp1254,cp437,cp850,cp857,iso_1,iso88599,\
+		mac,macturk,roman8,turkish8,utf8,roman9
+	language=german,iso_1,roman8,cp850,cp437,mac,iso88599,cp1254,\
+		cp857,turkish8,macturk,iso88592,cp1250,cp852,mac_ee, \
+		utf8,cp1252,roman9
+	language=spanish,iso_1,roman8,cp850,cp437,mac,iso88599,cp1254,\
+		cp857,turkish8,macturk,cp860,utf8,cp1252,roman9
+	language=portuguese,iso_1,roman8,cp850,cp437,mac,iso88599,\
+		cp1254,cp857,turkish8,macturk,cp860,utf8,cp1252,roman9
+	language=turkish,iso88599,cp1254,cp857,turkish8,macturk,utf8
+	language=greek,iso88597,cp1253,greek8,macgrk2,cp869,utf8
+	language=japanese,eucjis,sjis,deckanji,utf8,cp932
+	language=chinese,eucgb,utf8
+	language=tchinese,euccns,big5,cp950,utf8
+	language=korean,eucksc,cp949,utf8
+	language=thai,tis620,cp874,utf8
+	language=hebrew,iso88598,cp1255,utf8
+	language=arabic,iso88596,cp1256,cp864,utf8
+	language=russian,iso88595,cp1251,koi8,cp855,cp866,mac_cyr,utf8
+	language=hungarian,iso88592,cp1250,cp852,mac_ee,utf8
+	language=polish,iso88592,cp1250,cp852,mac_ee,utf8
+
+[sql server charset groups]
+;	charsets=cp1252,cp437,cp850,cp860,iso_1,mac,roman8,roman9
+	charsets=cp437,cp850,iso_1,mac,roman8,roman9
+	charsets=cp1250,cp852,iso88592,mac_ee
+	charsets=cp1251,cp855,cp866,iso88595,koi8,mac_cyr
+;	charsets=cp1256,cp864,iso88596
+	charsets=cp1253,cp869,greek8,iso88597,macgrk2
+;	charsets=cp1255,iso88598
+	charsets=cp1254,cp857,iso88599,macturk,turkish8
+;	charsets=cp932,deckanji,eucji,sjis
+	charsets=deckanji,eucji,sjis
+;	charsets=big5,cp950,euccns
+;	charsets=cp874,tis620
+
+; 
+; General NOTES:
+;==================================================================
+; From Sun Software Internationalization Guide:
+; ISO-POSIX
+; Locale Language and Territory for ISO-8859/1 (LC_CTYPE=iso_8859_1)
+; ------ ----------------------
+; C	Default "C" locale
+; ca	Catalan
+; da	Danish
+; de	German
+; de_CH	Swiss German
+; en	English
+; en_UK	English as written in UK
+; en_US	English as written in US
+; eo	Esperanto
+; es	Spanish
+; eu	Basque
+; fi	Finnish
+; fr	French
+; fr_BE	French as written in Belgium
+; fr_CA	Canadian French
+; fr_CH	Swiss French
+; ga	Irish
+; gd	Scots Gaelic
+; is	Icelandic
+; it	Italian
+; nl	Dutch
+; no	Norwegian
+; pl	Polish
+; pt	Portuguese
+; ro	Romanian
+; sv	Swedish

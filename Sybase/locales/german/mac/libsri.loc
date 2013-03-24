@@ -1,0 +1,61 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) libsri.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libsri]
+
+1 = IPD_NOERR, "Augenblicklich kein Fehler - Systemfehler %1!"
+
+2 = IPD_ACPTWAITFAIL, "Versuch, auf accept-Benachrichtigung zu warten, fehlgeschlagen - Systemfehler %1!"
+
+3 = IPD_ASSIGNFAIL, "Versuch, einen neuen Lese-/Schreib-Kanal zuzuweisen fehlgeschlagen - Systemfehler %1!"
+
+4 = IPD_ACCEPTFAIL, "Versuch, ankommende Verbindung zu akzeptieren, ist fehlgeschlagen - Systemfehler %1!"
+
+5 = IPD_EXPREADFAIL, "Lesen der abgeschickten Daten fehlgeschlagen - Systemfehler %1!"
+
+6 = IPD_CLOSEFAIL, "Versuch, aktiven Kanal zu schließen, ist fehlgeschlagen - Systemfehler %1!"
+
+7 = IPD_DASSGNFAIL, "Versuch, Zuweisung des Kanals zu lösen, ist fehlgeschlagen - Systemfehler %1!"
+
+8 = IPD_CNCTPRSFAIL, "Kann Verbindungsinformationen nicht parsen - Systemfehler %1!"
+
+9 = IPD_LISTENFAIL, "Versuch, Listener zu erstellen, ist fehlgeschlagen - Systemfehler %1!"
+
+10 = IPD_READFAIL, "Lesen von normalen Daten ist fehlgeschlagen - Systemfehler %1!"
+
+11 = IPD_WRITEFAIL, "Versuch, Daten zu schreiben, ist fehlgeschlagen - Systemfehler %1!"
+
+12 = IPD_CONNECTFAIL, "Versuch, Verbindung zu initialisieren, ist fehlgeschlagen - Systemfehler %1!"
+
+13 = IPD_GHOSTFAIL, "Versuch, Hostadresse einzulesen, ist fehlgeschlagen - Systemfehler %1!"
+
+14 = IPD_SETSCKFAIL, "Versuch, Socket-Optionen einzustellen, ist fehlgeschlagen - Systemfehler %1!"
+
+15 = IPD_BINDFAIL, "Versuch, Adresse zu verknüpfen, ist fehlgeschlagen - Systemfehler %1!"
+
+; end of sri tcp error strings
+;

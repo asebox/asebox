@@ -1,0 +1,41 @@
+; comment character is semicolon.
+; "isql.loc" - Localization file for Isql.
+;
+; Sccsid @(#) isql.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; The strings isql uses to prompt users for information.
+;
+[prompts]
+
+; 
+1 = "Password: "
+; End of prompts section.
+; Now we list the localized error message strings.
+[isqlerrors]
+
+; IERRNOMEM
+1 = "Fatal error: memory allocation failed."
+; IERRNOREADSPACE
+2 = "I/O Error: Insufficient space for input data."
+; IERRTEMPFILE
+3 = "Failed to open temp file '%1!' for writing in dbedit()."
+; IERREDITFAIL
+4 = "Unable to invoke the '%1!' editor."
+; IERRNOINFILE
+5 = "Unable to open input file '%1!'."
+; IERRNOOUTFILE
+6 = "Unable to open output file '%1!'."
+; IERRBADARG
+7 = "Isql: Unknown parameter '%1!'."
+; End of error strings section.

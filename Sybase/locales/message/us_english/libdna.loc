@@ -1,0 +1,64 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libdna]
+
+1 = IPD_NOERR, "There is not currently an error."
+
+2 = IPD_ACPTWAITFAIL, "Attempt to wait for accept notification failed - system error %1!"
+
+3 = IPD_ASSIGNFAIL, "Attempt to assign a new read/write channel failed - system error %1!"
+
+4 = IPD_ACCEPTFAIL, "Attempt to accept incoming connection failed - system error %1!"
+
+5 = IPD_EXPREADFAIL, "Read of expedited data failed - system error %1!"
+
+6 = IPD_CLOSEFAIL, "Attempt to close active channel failed - system error %1!"
+
+7 = IPD_DASSGNFAIL, "Attempt to de-assign channel failed - system error %1!"
+
+8 = IPD_CNCTPRSFAIL, "Unable to parse connection information - system error %1!"
+
+9 = IPD_LISTENFAIL, "Attempt to create listener failed - system error %1!"
+
+10 = IPD_READFAIL, "Read of normal data failed - system error %1!"
+
+11 = IPD_WRITEFAIL, "Attempt to write data failed - system error %1!"
+
+12 = IPD_CONNECTFAIL, "Attempt to initiate connection failed - system error %1!"
+
+13 = IPD_CREMBXFAIL, "Unable to create mailbox - system error %1!"
+
+14 = IPD_DELMBXFAIL, "Unable to delete mailbox - system error %1!"
+
+15 = IPD_BADMSG, "Received unexpected message in mailbox - system error %1!"
+
+16 = IPD_MBREADFAIL, "Attempt to read from mailbox failed - system error %1!"
+
+; end of decnet error strings
+;

@@ -1,0 +1,68 @@
+ cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Falha ao utilizar o banco de dados '%1!'." 
+2 = ZZZZZ, "Não foi possível recuperar dados da tabela e obter o descritor\\nde dados de texto ou imagem." 
+3 = ZZZZZ, "Não foi possível atualizar a tabela com o novo texto ou imagem."
+4 = ZZZZZ, "Falha ao criar a tabela."
+5 = ZZZZZ, "Falha ao remover a tabela."
+6 = ZZZZZ, "Consulta sql inválida."
+7 = ZZZZZ, "Falha na busca de resultados da consulta."
+8 = ZZZZZ, "A consulta sql retornou várias linhas. Era esperado o retorno de\\nexatamente uma linha."
+9 = ZZZZZ, "A consulta sql retornou zero linhas. Era esperado o retorno de\\nexatamente uma linha."
+10 = ZZZZZ, "Impossível abrir o arquivo '%1!'. Verifique se o arquivo existe e se você tem permissão de gravação."
+11 = ZZZZZ, "Impossível abrir o arquivo '%1!'. Verifique se o arquivo existe e pode ser lido."
+12 = ZZZZZ, "Impossível fechar o arquivo '%1!'. Verifique se o arquivo existe e se já está aberto."
+13 = ZZZZZ, "Impossível remover o arquivo '%1!'. Verifique se o arquivo existe e se você tem permissão para removê-lo."
+14 = ZZZZZ, "O tamanho do arquivo '%1!' é 0. Verifique se o arquivo não está vazio."
+15 = ZZZZZ, "Jar '%1!' não existe."
+16 = ZZZZZ, "Falha ao processar o timestamp."
+17 = ZZZZZ, "Erro interno: ct_send_data() falhou."
+18 = ZZZZZ, "Erro interno: ct_get_data() falhou."
+19 = ZZZZZ, "Erro interno: ct_data_info() falhou."
+20 = ZZZZZ, "O comprimento de '%1!' excede o comprimento máximo de '%2!' bytes."
+21 = ZZZZZ, "Impossível executar este comando porque os serviços Java estão inativos. Um usuário com o Papel de\\nAdministrador do Sistema (SA) deve reconfigurar o sistema para ativar o Java."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "O nome de servidor especificado pela variável de ambiente DSQUERY é\\ninválido ou DSQUERY não está definida no ambiente."
+2 = ZZZZZ, "O nome de login do usuário é inválido ou não está definido no ambiente."
+3 = ZZZZZ, "O diretório especificado pela variável de ambiente SYBASE é inválido ou SYBASE não está definida no ambiente."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Falha ao inicializar a aplicação cliente."
+2 = ZZZZZ, "'%1!' falhou. Verifique as mensagens de erro acima."
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Erro fatal: falha na alocação de memória."
+2 = ZZZZZ, "Falha na definição das propriedades da conexão."
+3 = ZZZZZ, "Falha ao estabelecer a conexão."
+4 = ZZZZZ, "Objeto de localização não reconhecido. Usando o valor padrão '%1!'."
+5 = ZZZZZ, "Erro interno: Um tipo de localização inválido foi passado para cs_locale()."
+6 = ZZZZZ, "Erro de sintaxe em '%1!'."
+7 = ZZZZZ, "Erro ao tentar carregar um par de tabelas de conversão."
+8 = ZZZZZ, "Interrupção - Programa cancelado."
+
+
+

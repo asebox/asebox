@@ -1,0 +1,186 @@
+; comment character is semicolon.
+
+; "cslib.loc"- Localization file for CS-Library.
+;
+; Sccsid @(#) cslib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csdefaults]
+
+1 = ZZZZZ, "impossível alocar memória."
+
+2 = ZZZZZ, "cslib "
+
+3 = ZZZZZ, "cslib "
+
+4 = ZZZZZ, "erro geral "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CS-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cslayer]
+
+2 = ZZZZZ, "camada api do usuário da cslib "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origem do erro "definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csorigin]
+
+1 = ZZZZZ, "erro externo "
+
+2 = ZZZZZ, "erro interno em CS-Library "
+
+4 = ZZZZZ, "erro de biblioteca comum "
+
+5 = ZZZZZ,"erro interno de biblioteca "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csapierror]
+
+0 = 00000, "Sem erro."
+
+1 = ZZZZZ, "Erro desconhecido."
+
+2 = ZZZZZ, "A informação que está sendo recuperada não caberá em um buffer de %1! bytes."
+
+3 = ZZZZZ, "Falha de alocação de memória."
+
+4 = 22023, "O parâmetro %1! não pode ser NULL."
+
+5 = 22023, "Quando %1!  NULL, o parâmetro %2! deve ser 0."
+
+6 = 22023, "Foi dado um valor ilegal de %1! para o parâmetro %2!."
+
+7 = 22023, "O parâmetro %1! deve ser NULL."
+
+8 = 22023, "O parâmetro %1! deve ser definido como CS_UNUSED."
+
+9 = 22023, "A propriedade %1! não pode ser definida ou apagada."
+
+10 = 22023, "Um ponteiro local inválido foi passado para dentro."
+
+11 = 22023, "O parâmetro %1! aponta para um valor ilegal de tipo de dados."
+
+12 = 22023, "Um nome local desconhecido foi passado para dentro."
+
+13 = 22023, "Uma operação CS_GET não pode ser realizada no tipo %1!."
+
+14 = ZZZZZ, "Impossível carregar informação de localização."
+
+15 = ZZZZZ, "Impossível inicializar o tratamento de erro."
+
+16 = 0A000, "Conversão entre os tipos de dados %1! e %2! não suportada."
+
+17 = 22023, "O campo de formato de uma estrutura CS_DATAFMT deve ser CS_FMT_UNUSED quando o tipo de dados  %1!."
+
+18 = 22023, "Um valor ilegal de %1! foi colocado no campo %2! da \
+estrutura CS_DATAFMT."
+
+19 = 22023, "Um ponteiro local foi especificado na estrutura CS_DATAFMT."
+
+20 = ZZZZZ, "A conversão/operação resultou em estouro."
+
+21 = ZZZZZ, "A conversão/operação resultou em estouro negativo."
+
+22 = ZZZZZ, "Foi encontrado um valor de precisão ilegal."
+
+23 = ZZZZZ, "Foi encontrado um valor ilegal de escala."
+
+24 = ZZZZZ, "A conversão/operação foi interrompida por causa de um erro de sintaxe no campo de origem."
+
+25 = ZZZZZ, "O valor do tipo de dados está fora do domínio dos valores válidos para o tipo de dados."
+
+26 = 22012, "Não é permitida uma divisão por zero."
+
+27 = 01000, "AVISO: Foram desinstalados os tratamentos de erros e mensagens."
+
+28 = ZZZZZ, "Memória insuficiente para gravar mensagens. Todas as mensagens previamente armazenadas foram apagadas."
+
+29 = ZZZZZ, "O tratamento de erro in-line deve ser inicializado com a operação CS_INIT antes de qualquer outra ação do cs_diag()."
+
+30 = ZZZZZ, "O limite da mensagem não pode ser definido com um valor inferior ao número de mensagens salvas no momento em CS-Library."
+
+31 = ZZZZZ, "A estrutura contextual não pode ser eliminada porque a aplicação não saiu de %1!."
+
+32 = 22023, "A operação CS_SET só é permitida quando o tipo é CS_DT_CONVFMT."
+
+33 = 0A000, "A tradução solicitada não é suportada."
+ 
+34 = ZZZZZ, "Impossível traduzir alguns dos caracteres."
+
+35 = ZZZZZ, "A conversão/operação parou devido a um erro de estilo."
+
+36 = 22001, "O resultado está truncado porque a conversão/operação resultou em estouro."
+
+37 = ZZZZZ, "Falha de cs_ctx_name em localizar as chaves dadas."
+
+38 = ZZZZZ, "A string não foi copiada porque isto resultaria em estouro."
+
+39 = ZZZZZ, "Impossível montar a string. Foi localizado um marcador ilegal na string de texto."
+
+40 = ZZZZZ, "São permitidas apenas 0, 1 ou 2 estrelas na string de formato."
+
+41 = ZZZZZ, "Foi localizado um token de tipo de dados desconhecido na string de formato."
+
+42 = 22023, "A string de formato não pode ser NULL."
+
+43 = 22023, "O especificador de formato personalizado  longo demais."
+
+44 = 22023, "Não foi encontrado um especificador de formato que coincida com o especificador na string de formato."
+
+45 = ZZZZZ, "Tratamento local inválido para cs_locale nos tipos CS_SYB_LANG, CS_SYB_CHARSET ou CS_SYB_LANG_CHARSET."
+ 
+46 = ZZZZZ, "Impossível acessar o arquivo de localização %1!."
+ 
+47 = 08003, "Exceção de conexão %1! -- A conexão não existe."
+ 
+48 = 08002, "Exceção de conexão %1! -- Nome da conexão está em uso."
+ 
+49 = 34000, "Nome de cursor inválido %1!."
+ 
+50 = 26000, "Identificador de declaração SQL inválido %1!."
+ 
+51 = ZZZZZ, "%1! cs_objects: erro na execução da operação solicitada."
+
+52 = ZZZZZ, "Ocorre um estouro no buffer interno."
+
+;CSE_ERROPENFILE
+53 = ZZZZZ, "Erro de abertura do arquivo de localização!"
+
+;CSE_USEREP
+54 = ZZZZZ, "Aviso: O caractere de substituição por não-correlação é usado no destino porque alguns caracteres não podem ser convertidos."
+
+;CSE_CTBCORRUPT
+55 = ZZZZZ, "Um Arquivo de Tabela de Conversão (.ctb file) está danificado. Por favor faça nova instalação ou geração."
+
+;CSE_NOOID
+56 = ZZZZZ, "Falha na correlação de um nome local com um id de objeto!"

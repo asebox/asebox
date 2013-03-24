@@ -1,0 +1,239 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Session"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "Attempting to allocate memory failed."
+
+2  = ZZZZZ, "Error in reading objects."
+
+3  = ZZZZZ, "No objects found."
+
+4  = ZZZZZ, "'%1!' doesn't exist."
+
+5  = ZZZZZ, "fail"
+
+6  = ZZZZZ, "ok"
+
+7  = ZZZZZ, "FailOver to Interface Driver."
+
+8  = ZZZZZ, "No session is opened."
+
+9  = ZZZZZ, "Added %1!"
+
+10 = ZZZZZ, "Error in adding %1!"
+
+11 = ZZZZZ, "Modified %1!"
+
+12 = ZZZZZ, "Error in modifying %1!"
+
+13 = ZZZZZ, "Deleted %1!"
+
+14 = ZZZZZ, "Error in deleting %1!"
+
+15 = ZZZZZ, "Deleted all server objects."
+
+16 = ZZZZZ, "Error in deleting server objects."
+
+17 = ZZZZZ, "Error: Attempt to copy to the object in the same session."
+
+18 = ZZZZZ, "Copy '%1!' from Session %2! to '%3!' in Session %4!"
+
+19 = ZZZZZ, "Error in copying %1!"
+
+20 = ZZZZZ, "Error: Attempt to copy to the same session."
+
+21 = ZZZZZ, "Copy all to Session %1!"
+
+22 = ZZZZZ, "Session %1! %2!"
+
+23 = ZZZZZ, "current"
+
+24 = ZZZZZ, "Syntax Error"
+
+25 = ZZZZZ, "Extra attribute"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "Transport Type"
+
+2 =  ZZZZZ, "Transport Address"
+
+3  = ZZZZZ, "Server Security"
+
+4  = ZZZZZ, "Security Mechanism"
+
+5  = ZZZZZ, "**Unknown Value**"
+
+6  = ZZZZZ, "DIT base for object"
+
+7  = ZZZZZ, "Distinguish name"
+
+8  = ZZZZZ, "Server objects found"
+
+9  = ZZZZZ, "Version"
+
+10 = ZZZZZ, "Service"
+
+11 = ZZZZZ, "Status"
+
+12 = ZZZZZ, "Address"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "Configuration"
+
+15 = ZZZZZ, "DS Name"
+
+16 = ZZZZZ, "HA Failoverserver"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "Are you sure to delete all server objects? (Y/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open"
+
+5  = ZZZZZ, "close"
+
+6  = ZZZZZ, "read"
+
+7  = ZZZZZ, "add"
+
+8  = ZZZZZ, "mod"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "del"
+
+11 = ZZZZZ, "delete-all"
+
+12 = ZZZZZ, "copy"
+
+13 = ZZZZZ, "copyall"
+
+14 = ZZZZZ, "to"
+
+15 = ZZZZZ, "list"
+
+16 = ZZZZZ, "all"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "exit"
+
+20 = ZZZZZ, "quit"
+
+21 = ZZZZZ, "switch"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "SERVER_NAME"
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "This screen."
+
+; open [DSNAME]
+2  = ZZZZZ, "Open a session for the default directory service, or the DSNAME directory service."
+
+; close [SESS]
+3  = ZZZZZ, "Close the session numbered SESS, or the current one."
+
+; sess
+4  = ZZZZZ, "List all the sessions."
+
+; [switch] SESS
+5  = ZZZZZ, "Make session numbered SESS the current session."
+
+; add SERVER-NAME
+6  = ZZZZZ, "Add a new server object to the directory service."
+
+; read SERVER-NAME
+7  = ZZZZZ, "Read the content of a server object."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "Modify an existing server object."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "Add an attribute to an existing server object."
+
+; del SERVER-NAME
+10 = ZZZZZ, "Delete an existing server object."
+
+; list [all]
+11 = ZZZZZ, "List all the server objects."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "Copy the object NAME1 to a new object NAME2 in the session numbered SESS, or the current session."
+
+; copyall to SESS
+13 = ZZZZZ, "Copy all the server objects in the current session to the session numbered SESS."
+
+; delete-all
+14 = ZZZZZ, "Delete all the server objects in the current session."
+
+; config
+15 = ZZZZZ, "List the current configuration."
+
+; exit | quit
+16 = ZZZZZ, "Exit program."
+

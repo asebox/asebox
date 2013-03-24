@@ -1,0 +1,240 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Sitzung"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "Versuchte Speicherzuweisung fehlgeschlagen."
+
+2  = ZZZZZ, "Fehler beim Lesen von Objekten."
+
+3  = ZZZZZ, "Keine Objekte gefunden."
+
+4  = ZZZZZ, "'%1!' existiert nicht."
+
+5  = ZZZZZ, "Fehlgeschlagen"
+
+6  = ZZZZZ, "OK"
+
+7  = ZZZZZ, "Notumschaltung zum Interface-Treiber."
+
+8  = ZZZZZ, "Keine Sitzung geöffnet."
+
+9  = ZZZZZ, "%1! hinzugefügt"
+
+10 = ZZZZZ, "Fehler beim Hinzufügen von %1!"
+
+11 = ZZZZZ, "%1! geändert"
+
+12 = ZZZZZ, "Fehler beim Ändern von %1!"
+
+13 = ZZZZZ, "%1! gelöscht"
+
+14 = ZZZZZ, "Fehler beim Löschen von %1!"
+
+15 = ZZZZZ, "Alle Serverobjekte gelöscht."
+
+16 = ZZZZZ, "Fehler beim Löschen von Serverobjekten."
+
+17 = ZZZZZ, "Fehler: Versuch, in derselben Sitzung auf das Objekt zu kopieren."
+
+18 = ZZZZZ, "Kopie von '%1!' aus Sitzung %2! auf '%3!' in Sitzung %4!"
+
+19 = ZZZZZ, "Fehler beim Kopieren von %1!"
+
+20 = ZZZZZ, "Fehler: Versuch, in dieselbe Sitzung zu kopieren."
+
+21 = ZZZZZ, "Alles wird auf Sitzung %1! kopiert."
+
+22 = ZZZZZ, "Sitzung %1! %2!"
+
+23 = ZZZZZ, "Aktuelle Sitzung"
+
+24 = ZZZZZ, "Syntaxfehler"
+
+25 = ZZZZZ, "Extraattribut"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "Transporttyp"
+
+2 =  ZZZZZ, "Transportadresse"
+
+3  = ZZZZZ, "Server-Sicherheit"
+
+4  = ZZZZZ, "Sicherheitsmechanismus"
+
+5  = ZZZZZ, "**Unbekannter Wert**"
+
+6  = ZZZZZ, "DIT-Basis für Objekt"
+
+7  = ZZZZZ, "Name unterscheiden"
+
+8  = ZZZZZ, "Serverobjekte gefunden"
+
+9  = ZZZZZ, "Version"
+
+10 = ZZZZZ, "Dienst"
+
+11 = ZZZZZ, "Status"
+
+12 = ZZZZZ, "Adresse"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "Konfiguration"
+
+15 = ZZZZZ, "DS-Name"
+
+16 = ZZZZZ, "HA-Server für Notumschaltung"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "Wollen Sie wirklich alle Serverobjekte löschen? (J/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open"
+
+5  = ZZZZZ, "close"
+
+6  = ZZZZZ, "read"
+
+7  = ZZZZZ, "add"
+
+8  = ZZZZZ, "mod"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "del"
+
+11 = ZZZZZ, "delete-all"
+
+12 = ZZZZZ, "copy"
+
+13 = ZZZZZ, "copyall"
+
+14 = ZZZZZ, "to"
+
+15 = ZZZZZ, "list"
+
+16 = ZZZZZ, "all"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "exit"
+
+20 = ZZZZZ, "quit"
+
+21 = ZZZZZ, "switch"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "SERVER_NAME"
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "Diese Anzeige."
+
+; open [DSNAME]
+2  = ZZZZZ, "Öffnet eine Sitzung für den Standard-Verzeichnisdienst oder den DSNAME-Verzeichnisdienst."
+
+; close [SESS]
+3  = ZZZZZ, "Schließt die Sitzung Nummer SESS oder die aktuelle Sitzung."
+
+; sess
+4  = ZZZZZ, "Listet alle Sitzungen auf."
+
+; [switch] SESS
+5  = ZZZZZ, "Macht Sitzung Nummer SESS zur aktuellen Sitzung."
+
+; add SERVER-NAME
+6  = ZZZZZ, "Fügt dem Verzeichnisdienst ein neues Serverobjekt hinzu."
+
+; read SERVER-NAME
+7  = ZZZZZ, "Liest den Inhalt eines Serverobjekts."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "Ändert ein bestehendes Serverobjekt."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "Fügt einem bestehenden Serverobjekt ein Attribut hinzu."
+
+; del SERVER-NAME
+10 = ZZZZZ, "Löscht ein bestehendes Serverobjekt."
+
+; list [all]
+11 = ZZZZZ, "Listet alle Serverobjekte auf."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "Kopiert das Objekt NAME1 auf ein neues Objekt NAME2 in der Sitzung Nummer SESS oder in der aktuellen Sitzung."
+
+; copyall to SESS
+13 = ZZZZZ, "Kopiert alle Serverobjekte in der aktuellen Sitzung auf die Sitzung Nummer SESS."
+
+; delete-all
+14 = ZZZZZ, "Löscht alle Serverobjekte in der aktuellen Sitzung."
+
+; config
+15 = ZZZZZ, "Listet die aktuelle Konfiguration auf."
+
+; exit | quit
+16 = ZZZZZ, "Beendet das Programm."
+
+

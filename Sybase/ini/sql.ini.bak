@@ -1,0 +1,103 @@
+# --------- NEW ASEMON ALIASES ---------------- #
+
+
+LIVE-AFS-TAR-FDS
+        master tcp ether bdm-bp2s-prd-arc.fr.net.intra 5511
+        query tcp ether bdm-bp2s-prd-arc.fr.net.intra 5511
+
+LIVE-ARC-CCS-MFS
+        master tcp ether bdm-bp2s-prd-arc.fr.net.intra 5501
+        query tcp ether bdm-bp2s-prd-arc.fr.net.intra 5501
+
+LIVE-AFS-FAMOO
+        master tcp ether bdm-bp2s-prd-arc.fr.net.intra 5601
+        query tcp ether bdm-bp2s-prd-arc.fr.net.intra 5601
+
+LIVE-AFS-IRP
+        master tcp ether bdm-bp2s-prd-arc.fr.net.intra 5531
+        query tcp ether bdm-bp2s-prd-arc.fr.net.intra 5531
+
+LIVE-CROSS-CTS
+        master tcp ether bdm-bp2s-prd-arc.fr.net.intra 5541
+        query tcp ether bdm-bp2s-prd-arc.fr.net.intra 5541
+
+LIVE-CROSS-PBL
+        master tcp ether bdm-bp2s-prd-arc.fr.net.intra 5631
+        query tcp ether bdm-bp2s-prd-arc.fr.net.intra 5631
+
+TEST-AFS-TAR-FDS
+        master tcp ether parlltempo02.fr.net.intra 5511
+        query tcp ether parlltempo02.fr.net.intra 5511
+
+TEST-ARC-CCS-MFS
+        master tcp ether parlltempo02.fr.net.intra 5501
+        query tcp ether parlltempo02.fr.net.intra 5501
+
+TEST-AFS-FAMOO
+        master tcp ether parlltempo02.fr.net.intra 5601
+        query tcp ether parlltempo02.fr.net.intra 5601
+
+TEST-AFS-IRP
+        master tcp ether parlltempo02.fr.net.intra 5531
+        query tcp ether parlltempo02.fr.net.intra 5531
+
+TEST-CROSS-CTS
+        master tcp ether parlltempo02.fr.net.intra 5541
+        query tcp ether parlltempo02.fr.net.intra 5541
+
+TEST-CROSS-PBL
+        master tcp ether parlltempo02.fr.net.intra 5541
+        query tcp ether parlltempo02.fr.net.intra 5541
+
+
+ORAMON_STNG_AREA
+        master tcp ether parlltempo02.fr.net.intra 5541
+        query tcp ether parlltempo02.fr.net.intra 5541
+
+
+# --------------------------------------------------------------------------- #
+
+[GFS-FAMOO]
+query=tcp,bdm-bp2s-prd-arc.fr.net.intra,5601
+
+[TST-GFS-FAMOO]
+query=tcp,parlltempo02.fr.net.intra,5601
+
+[ARC0_PAR_TST_IQS]
+query=tcp,parlltempo02.fr.net.intra,5620
+
+
+[TEST-AFS-FAMOO]
+query=tcp,parlltempo02.fr.net.intra 5601
+
+[TEST-AFS-IRP]
+query=tcp,parlltempo02.fr.net.intra 5531
+
+# --------------------------------------------------------------------------- #
+# AMANDA
+
+[AMD1_PAR_DEV_SQL]
+master=TCP,tiths020.fr.net.intra,5400
+query=TCP,tiths020.fr.net.intra,5400
+
+[AMD1_PAR_PPD_SQL]
+query=TCP,tiths320.fr.net.intra,5500
+
+[AMD3_PAR_DEV_SQL]
+master=TCP,tiths107.fr.net.intra,5500
+query=TCP,tiths107.fr.net.intra,5500
+
+[AMD1_PAR_LIV_SQL]
+master= TCP, amanda-prod.fr.net.intra,5410
+query=TCP,amanda-prod.fr.net.intra,5410
+
+[AMD1_PAR_LIV_SQL_NEW]
+master=TCP, cl-gfs-fr2-pkg1.fr.net.intra,5410
+query=TCP,cl-gfs-fr2-pkg1.fr.net.intra,5410
+
+[AMD1_PAR_TST_SQL]
+query=TCP,tit_host.fr.net.intra,5502
+query=TCP,tit_host.fr.net.intra,5500
+
+[AMD2_PAR_LIV_SQL]
+query=tcp,cl-gfs-fr2-pkg1.fr.net.intra,5420

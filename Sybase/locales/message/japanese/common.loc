@@ -1,0 +1,79 @@
+; comment character is a semicolon.
+; JAPANESE common.loc
+;
+; Sccsid @(#) common.loc 1.3 12/3/93
+;
+[file format]
+        ; left and right brackets will delimit section titles.
+        ; Any special character, including the comment character
+        ; and the section-title delimiters, may be interpreted
+        ; literally by preceding them with the escape character.
+        ; In addition, any line that ends with the escape character
+        ; will be continued onto the next line.
+        version=12.5
+        list_separator=,        ; commas will separate the members of a list.
+        escape=&                ; ampersand is the escape symbol.
+[language]
+        language=japanese
+[copyright]
+
+版権 =  "Copyright (C) 1990, 2001 Sybase, Inc.&
+
+        全版権所有。&
+        米国政府による使用、複製または公開は、&
+        CFR 52.227-7013、技術データとコンピュータ・&
+        ソフトウェアの項の副節(c) (1) (ii)に定められる&
+        通り、制約条件の対象となります。&
+        Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+[datetime]
+        months= 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, &
+                十月, 十一月, 十二月
+        ; months= January, February, March, April, May, June, July, August, &
+        ;       September, October, November, December
+
+        ; MUST USE English short month names to be compatible with 4.0.6
+        ; Front End Applications currently.
+        ; shortmonths= １月, ２月, ３月, ４月, ５月, ６月, ７月, ８月, ９月, &
+        ;       １０月, １１月, １２月
+        shortmonths= Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+
+        ; The list of day-names must begin with the local equivalent of
+        ; Monday, which is the first day of the week in most places.
+
+        days= 月, 火, 水, 木, 金, 土, 日
+        ; days= Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+
+        firstday = 7    ; Sunday is the first day of a Japanese week.
+
+        ; The date format specifier consists of the 3 characters
+        ; 'm', 'd', and 'y' in any order. The order of these characters
+        ; determines the appearance of the month, day, and year in
+        ; a datetime string. Each of the characters 'm', 'd', and 'y'
+        ; must appear exactly once.
+
+        dateformat=ymd
+
+        ; The time format specifier consists of the number "12" or "24",
+        ; to designate the 12-hour or 24-hour time system.
+
+        timeformat=12
+[money]
+        ; The currency format specifier consists of two parts:
+        ;
+        ;       1) The letter "B" or "A", which means that the currency
+        ;          symbol should appear before or after the amount,
+        ;          respectively.
+        ;
+        ;       2) The currency symbol. It may consist of more than one
+        ;          character (e.g. "kr" for kroner). If the currency
+        ;          symbol is unavailable on your keyboard, it may
+        ;          be described as a hexadecimal character constant
+        ;          (e.g. 0x23 or 0xe322).
+        ;
+        ; More than one money format may be specified. DB-Library
+        ; will properly ignore any specified currency symbol when
+        ; converting from character to money. Character strings
+        ; without a currency symbol will also be accepted.
+
+        moneyformat=B,"\"
+        moneyformat=A,"円"

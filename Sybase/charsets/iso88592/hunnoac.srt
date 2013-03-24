@@ -1,0 +1,204 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#) generic/localization/charsets/iso88592/hunnoac.srt 1.2 4/10/95
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the ISO 8859-2 character set, this sort order is a case
+;   and accent insensitive ordering. Upper case letters sort after 
+;   their lower case counterparts. Diacritical marks are ignored.
+;
+;   It is useful for the Hungarian language.
+;
+;   The ordering:
+;   --------------
+;   first all non-printing characters in binary order
+;   followed by all non-alphanumeric characters
+;   followed by all numeric digits
+;   followed by all alphabetic characters
+;===============================================================================
+
+class = 0x01                             ; Class `1' sort order
+id = 0x46                                ; Unique ID # (70) for the sort order
+name = hunnoac_iso88592
+menuname = "Hungarian case and accent insensitive dictionary ordering."
+charset = iso88592
+
+description = "Hungarian case and accent insensitive dictionary sort order \
+ for use in Hungary. Uses the ISO 8859-2 character set."
+
+; ligatures
+
+lig = 0xDF, after ss    ; small letter sharp s
+
+; Control characters
+
+char = 0x01      ;(SOH) start of heading
+char = 0x02      ;(STX) start of text
+char = 0x03      ;(ETX) end of text
+char = 0x04      ;(EOT) end of transmission
+char = 0x05      ;(ENQ) enquiry
+char = 0x06      ;(ACK) acknowledge
+char = 0x07      ;(BEL) bell
+char = 0x08      ;(BS) backspace
+char = 0x09      ;(HT) horizontal tab
+char = 0x0A      ;(LF) newline, or line feed
+char = 0x0B      ;(VT) vertical tab
+char = 0x0C      ;(FF) form feed
+char = 0x0D      ;(CR) carriage return
+char = 0x0E      ;(SO) shift out
+char = 0x0F      ;(SI) shift in
+char = 0x10      ;(DLE) data link escape
+char = 0x11      ;(DC1) device control 1
+char = 0x12      ;(DC2) device control 2
+char = 0x13      ;(DC3) device control 3
+char = 0x14      ;(DC4) device control 4
+char = 0x15      ;(NAK) negative acknowledge
+char = 0x16      ;(SYN) synchronous idle
+char = 0x17      ;(ETB) end transmission blk
+char = 0x18      ;(CAN) cancel
+char = 0x19      ;(EM) end of medium
+char = 0x1A      ;(SUB) substitute
+char = 0x1B      ;(ESC) escape
+char = 0x1C      ;(FS) file separator
+char = 0x1D      ;(GS) group separator
+char = 0x1E      ;(RS) record separator
+char = 0x1F      ;(US) unit separator
+char = 0x80	 ; undefined
+char = 0x81	 ; undefined
+char = 0x82	 ; undefined
+char = 0x83	 ; undefined
+char = 0x84	 ; undefined
+char = 0x85	 ; undefined
+char = 0x86	 ; undefined
+char = 0x87	 ; undefined
+char = 0x88	 ; undefined
+char = 0x89	 ; undefined
+char = 0x8A	 ; undefined
+char = 0x8B	 ; undefined
+char = 0x8C	 ; undefined
+char = 0x8D	 ; undefined
+char = 0x8E	 ; undefined
+char = 0x8F	 ; undefined
+char = 0x90	 ; undefined
+char = 0x91	 ; undefined
+char = 0x92	 ; undefined
+char = 0x93	 ; undefined
+char = 0x94	 ; undefined
+char = 0x95	 ; undefined
+char = 0x96	 ; undefined
+char = 0x97	 ; undefined
+char = 0x98	 ; undefined
+char = 0x99	 ; undefined
+char = 0x9A	 ; undefined
+char = 0x9B	 ; undefined
+char = 0x9C	 ; undefined
+char = 0x9D	 ; undefined
+char = 0x9E	 ; undefined
+char = 0x9F	 ; undefined
+
+; All non-alphanumeric characters, including punctuation
+
+char = 0x20 	 ;( ) space
+char = 0x5F      ;(_) low line
+char = 0xAD      ;(SHY)
+char = 0x2D      ;(-) hyphen, minus sign
+char = 0x2C      ;(,) comma
+char = 0x3B      ;(;) semicolon
+char = 0x3A      ;(:) colon
+char = 0x21      ;(!) exclamation mark
+char = 0x3F      ;(?) question mark
+char = 0x2F      ;(/) solidus
+char = 0x2E      ;(.) full stop
+char = 0x60      ;(`) grave accent
+char = 0x27      ;(') apostrophe
+char = 0xA2      ;spacing breve
+char = 0x5E      ;(^) circumflex accent
+char = 0xB7      ;modifier letter hacek
+char = 0xFF      ;spacing dot above
+char = 0xA8      ;spacing diaeresis
+char = 0xBD      ;spacing double acute
+char = 0x7E      ;(~) tilde
+char = 0xB0      ;degree sign
+char = 0xB8      ;spacing cedilla
+char = 0xB2      ;spacing ogonek
+char = 0xB4      ;spacing acute
+char = 0x22      ;(") quotation mark
+char = 0x28      ;(() left parenthesis
+char = 0x29      ;()) right parenthesis
+char = 0x5B      ;([) left square bracket
+char = 0x5D      ;(]) right square bracket
+char = 0x7B      ;({) left curly bracket
+char = 0x7D      ;(}) right curly bracket
+char = 0xA7      ;(PAR) paragraph symbol
+char = 0x40      ;(@) commercial at
+char = 0xA4      ;currency sign
+char = 0x24      ;($) dollar sign
+char = 0x2A      ;(*) asterisk
+char = 0x5C      ;(\) reverse solidus
+char = 0x26      ;(&) ampersand
+char = 0x23      ;(#) number sign
+char = 0x25      ;(%) percent sign
+char = 0x2B      ;(+) plus sign
+char = 0xF7      ;division sign
+char = 0xD7      ;mutiltiplication sign
+char = 0x3C      ;(<) less-than sign
+char = 0x3D      ;(=) equals sign
+char = 0x3E      ;(>) greater-than sign
+char = 0x7C      ;(|) vertical line
+char = 0x7F      ;delete, or rubout
+char = 0xA0	 ;no-break space
+
+; Digits
+	
+char = 0x30      ;(0) digit zero
+char = 0x31      ;(1) digit one
+char = 0x32      ;(2) digit two
+char = 0x33      ;(3) digit three
+char = 0x34      ;(4) digit four
+char = 0x35      ;(5) digit five
+char = 0x36      ;(6) digit six
+char = 0x37      ;(7) digit seven
+char = 0x38      ;(8) digit eight
+char = 0x39      ;(9) digit nine
+
+; Latin Alphabet
+
+char = 0x61=0x41=0xE1=0xC1=0xE3=0xC3=0xE2=0xC2=0xE4=0xC4=0xB1=0xA1
+	;letter a,a-acute,a-breve,a-circumflex,a-diaeresis,a-ogonek
+char = 0x62=0x42	;letter b
+char = 0x63=0x43=0xE6=0xC6=0xE8=0xC8=0xE7=0xC7
+	;letter c,c-acute,c-hacek,c-cedilla
+char = 0x64=0x44=0xEF=0xCF=0xF0=0xD0	;letter d,d hacek,d bar
+char = 0x65=0x45=0xE9=0xC9=0xEC=0xCC=0xEB=0xCB=0xEA=0xCA
+	;letter e,e-acute,e-hacek,e-diaeresis,e-ogonek
+char = 0x66=0x46	;letter f
+char = 0x67=0x47	;letter g
+char = 0x68=0x48	;letter h
+char = 0x69=0x49=0xED=0xCD=0xEE=0xCE	;letter i, i acute, i circumflex
+char = 0x6A=0x4A	;letter j
+char = 0x6B=0x4B	;letter k
+char = 0x6C=0x4C=0xE5=0xC5=0xB5=0xA5=0xB3=0xA3
+	;letter l, l-acute, l-hacek, l-slash
+char = 0x6D=0x4D	;letter m
+char = 0x6E=0x4E=0xF1=0xD1=0xF2=0xD2	;letter n, n acute, n hacek
+char = 0x6F=0x4F=0xF3=0xD3	;letter o,o-acute
+char = 0xF6=0xD6=0xF5=0xD5=0xF4=0xD4
+	;letter o-diaeresis,o-double-acute,o-circumflex
+char = 0x70=0x50	;letter p
+char = 0x71=0x51	;letter q
+char = 0x72=0x52=0xE0=0xC0=0xF8=0xD8	;letter r,r-acute,r-hacek
+char = 0x73=0x53=0xB6=0xA6=0xB9=0xA9=0xBA=0xAA
+	;letter s,s-acute,s-hacek, s-cedilla
+char = 0x74=0x54=0xBB=0xAB=0xFE=0xDE	;letter t, t-hacek, t-cedilla
+char = 0x75=0x55=0xFA=0xDA=0xF9=0xD9	;letter u, u-acute, u-ring
+char = 0xFC=0xDC=0xFB=0xDB	;letter u-diaeresis, u-double-acute
+	
+char = 0x76=0x56	;letter v
+char = 0x77=0x57	;letter w
+char = 0x78=0x58	;letter x
+char = 0x79=0x59,0xFD=0xDD 	;letter y, y-acute
+char = 0x7A=0x5A=0xBC=0xAC=0xBE=0xAE=0xBF=0xAF
+	;letter z, z-acute, z-hacek, z-dot

@@ -1,0 +1,53 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlnovspx]
+
+1 = IPDE_CLOSEFAIL, "Socket close failed - Netware error %1!"
+
+2 = IPDE_PARSEFAIL, "Failed to parse address info"
+
+3 = IPDE_ALLOCEPFAIL, "Unable to allocate memory"
+
+4 = IPDE_NODOSMEM, "No DOS memory available"
+
+5 = IPDE_OPENSOCKFAIL, "Failed to open IPX socket - Netware error %1!"
+
+6 = IPDE_LOCALTGTFAIL, "Failed to get local target node - Netware error %1!"
+
+7 = IPDE_CONNECTFAIL, "Failed to establish connection - Netware error %1!"
+
+8 = IPDE_READFAIL, "Read failed - Netware error %1!"
+
+9 = IPDE_UNSUP, "Unsupported driver operation called"
+
+10 = IPDE_WRITEFAIL, "Write failed - Netware error %1!"
+
+11 = IPDE_SELECTFAIL, "Select failed - Netware error %1!"
+
+; end of wnlnovsp error strings
+;

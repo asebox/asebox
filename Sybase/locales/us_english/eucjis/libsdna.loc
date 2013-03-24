@@ -1,0 +1,62 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libsdna]
+
+1 = IPDE_SETSCKPROC, "Unable to set socket signal process id - errno %1!"
+
+2 = IPDE_SETSCKBLK, "Unable to set socket to non-blocking - errno %1!"
+
+3 = IPDE_INSUFFDS, "Insufficent File Descriptions - errno %1!"
+
+4 = IPDE_CLOSEFAIL, "Socket close failed - errno %1!"
+
+5 = IPDE_PARSEFAIL, "Failed to parse address info"
+
+6 = IPDE_NORESOLVE, "Couldn't resolve host name - errno %1!"
+
+7 = IPDE_CONNECTFAIL, "Socket connect failed - errno %1!"
+
+8 = IPDE_SCKOPTFAIL, "Failed to set socket options - errno %1!"
+
+9 = IPDE_BINDFAIL, "Socket bind failed - errno %1!"
+
+10 = IPDE_LISTENFAIL, "Socket listen failed - errno %1!"
+
+11 = IPDE_RECVFAIL, "Socket recv failed - errno %1!"
+
+12 = IPDE_OOBREADFAIL, "Socket Out-of-band recv failed - errno %1!"
+
+13 = IPDE_UNSUP, "Unsupported driver operation called"
+
+14 = IPDE_SOCKFAIL, "Failed to create new socket - errno %1!"
+
+15 = IPDE_SENDFAIL, "Socket send failed - errno %1!"
+
+; end of insock error strings
+;

@@ -1,0 +1,333 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=polish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "Błąd poziomu sterownika bezpieczeństwa."
+
+2 = SCLE_INITED, "SCL jest już zainicjowany."
+
+3 = SCLE_MEMALLOC, "Próba przydzielenia pamięci nie powiodła się."
+
+4 = SCLE_MUTXALLOC, "Próba przydzielenia semafora mutex nie powiodła się."
+
+5 = SCLE_RMAN, "Błąd w RMAN API."
+
+6 = SCLE_LMAN, "Błąd w LMAN API."
+
+7 = SCLE_VERSION, "Nieprawidłowa wersja biblioteki SCL-Library."
+
+8 = SCLE_PROPCMD, "Określono nieprawidłowe polecenie właściwości."
+
+9 = SCLE_PROPERTY, "Określono nieprawidłową właściwość."
+
+10 = SCLE_PROP_RO, "Właściwość tylko do odczytu."
+
+11 = SCLE_PROP_OF, "Przepełnienie bufora właściwości."
+
+12 = SCLE_OPEN, "Nie można otworzyć sterownika bezpieczeństwa."
+
+13 = SCLE_LOAD, "Nie można załadować sterownika bezpieczeństwa."
+
+14 = SCLE_INTLHOME, "Nie można określić katalogu głównego SYBASE."
+
+15 = SCLE_INTLOPEN, "Nie można otworzyć pliku konfiguracyjnego."
+
+16 = SCLE_INTLNOENT, "Nie znaleziono wpisu SCL w pliku konfiguracyjnym."
+
+18 = SCLE_DRVLOAD, "Załadowanie określonego sterownika bezpieczeństwa nie powiodło się."
+
+19 = SCLE_SESSBOUND, "Sesja jest aktualnie dowiązana."
+
+20 = SCLE_SESSUBOUND, "Sesja nie jest aktualnie dowiązana."
+
+21 = SCLE_CREDACT, "Poświadczenie jest aktualnie używane."
+
+22 = SCLE_CRED_NA, "Poświadczenie nie jest w stanie ACTIVE."
+
+23 = SCLE_UNSUPPORT, "Polecenie nie jest obsługiwane."
+
+24 = SCLE_MUTEXLOCK, "Wywołanie blokady semafora mutex nie powiodło się."
+
+25 = SCLE_MECHNOTFND, "Nie odnaleziono określonego mechanizmu bezpieczeństwa."
+
+26 = SCLE_CFGERR, "Błąd pliku konfiguracyjnego."
+
+27 = SCLE_CREDUSED, "Uchwyt poświadczenia nie został usunięty."
+
+28 = SCLE_DRIVUSED, "Sterownik nie został zamknięty."
+
+29 = SCLE_MECHUSED, "Uchwyt mechanizmu bezpieczeństwa nie został usunięty."
+
+30 = SCLE_MECHOIDNOTFND, "OID mechanizmu bezpieczeństwa nie został odnaleziony."
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "Przydzielanie pamięci nie powiodło się."
+
+2 = MSSPE_SRVNOTSUPP, "Żądana usługa bezpieczeństwa nie jest obsługiwana."
+
+3 = MSSPE_PRINCIPAL, "Określona nazwa główna bezpieczeństwa jest nieznana lub nie należy do właściciela."
+
+4 = MSSPE_PROVIDER, "Dostawca usług bezpieczeństwa nie został odnaleziony lub jego inicjalizacja nie powiodła się."
+
+5 = MSSPE_INITSTR, "Nieprawidłowy ciąg inicjalizujący sterownika."
+
+6 = MSSPE_PROPCMD, "Nieprawidłowe polecenie właściwości bezpieczeństwa."
+
+7 = MSSPE_PROPNOTSUPP, "Nieprawidłowa nazwa właściwości bezpieczeństwa."
+
+8 = MSSPE_CONTEXT, "Odnaleziono złą strukturę kontekstu sterownika."
+
+9 = MSSPE_OPNOTSUPP, "Punkt wejścia sterownika nie jest obsługiwany."
+
+10 = MSSPE_PROPVALLEN, "Długość bufora wartości właściwości jest zbyt mała."
+
+11 = MSSPE_TOKEN, "Nieprawidłowy token bezpieczeństwa."
+
+12 = MSSPE_HANDLE, "Nieprawidłowy uchwyt bezpieczeństwa."
+
+13 = MSSPE_NAMETOOLONG, "Nazwa mechanizmu/główna/docelowa jest zbyt długa."
+
+14 = MSSPE_PACKAGE, "Określony pakiet bezpieczeństwa nie jest obsługiwany."
+
+15 = MSSPE_INTERNAL, "Wystąpił nieoczekiwany błąd wewnętrzny."
+
+16 = MSSPE_DENIED, "Żądanie sesji bezpieczeństwa jest niedozwolone."
+
+17 = MSSPE_RMTNAME, "Nazwa docelowa bezpieczeństwa nie została odnaleziona lub jest nieprawidłowa."
+
+18 = MSSPE_PROVIDERERR, "Wystąpił wewnętrzny błąd %1! dostawcy usług bezpieczeństwa."
+
+19 = MSSPE_MSGALTERED, "Komunikat bezpieczeństwa został zmieniony - weryfikacja podpisu nie powiodła się."
+
+20 = MSSPE_MSGSEQ, "Napotkano komunikat poza kolejnością."
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "Przydzielanie pamięci nie powiodło się."
+
+2 = NDSE_SRVNOTSUPP, "Żądana usługa bezpieczeństwa nie jest obsługiwana."
+
+3 = NDSE_PRINCIPAL, "Określono nieprawidłową nazwę główną."
+
+4 = NDSE_PROVIDER, "Dostawca bezpieczeństwa NDS nie został odnaleziony lub jego inicjalizacja nie powiodła się."
+
+5 = NDSE_INITSTR, "Nieprawidłowy ciąg inicjalizujący."
+
+6 = NDSE_PROPCMD, "Nieprawidłowe polecenie właściwości bezpieczeństwa."
+
+7 = NDSE_PROPNOTSUPP, "Nieprawidłowa nazwa właściwości bezpieczeństwa."
+
+8 = NDSE_CONTEXT, "Określono złą strukturę kontekstu sterownika."
+
+9 = NDSE_OPNOTSUPP, "Określony punkt wejścia sterownika bezpieczeństwa nie jest obsługiwany."
+
+10 = NDSE_PROPVALLEN, "Bufor wartości właściwości jest bardzo mały."
+
+11 = NDSE_DITBASE, "Określono nieprawidłową bazę DIT."
+
+12 = NDSE_VERNOTSUPP, "Określona wersja nie jest obsługiwana przez sterownik."
+
+13 = NDSE_CREDS, "Nieprawidłowe poświadczenia lub użycie typu poświadczenia."
+
+14 = NDSE_INITDITBASE, "Nieprawidłowa inicjalizacja bazy DIT."
+
+15 = NDSE_NAMETOOLONG, "Nazwa główna NDS jest zbyt długa."
+
+16 = NDSE_NWCALLSINIT, "Procedura NetWare NWCallsInit() nie powiodła się (%1!)."
+
+17 = NDSE_NWDSCCTX, "Procedura NetWare NWDSCreateContext() nie powiodła się (%1!)."
+
+18 = NDSE_INIT, "Inicjacja NDS nie powiodła się (%1!)."
+
+19 = NDSE_NDS, "Wywołanie NDS nie powiodło się (%1!)."
+
+20 = NDSE_RMTNAME, "Nazwa docelowa bezpieczeństwa nie została odnaleziona lub jest nieprawidłowa."
+
+21 = NDSE_CHANNELID, "Określony identyfikator kanału nie został odnaleziony lub jest nieprawidłowy."
+
+22 = NDSE_BIND, "Dowiązanie sesji bezpieczeństwa nie powiodło się."
+
+23 = NDSE_PROVIDERVER, "Wersje dostawcy bezpieczeństwa NDS nie są zgodne."
+
+24 = NDSE_NWDSTREE, "Określono nieprawidłową nazwę drzewa katalogu."
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "Przydzielanie pamięci nie powiodło się."
+
+2 = DCEE_SRVNOTSUPP, "Żądana usługa bezpieczeństwa nie jest obsługiwana."
+
+3 = DCEE_PRINCIPAL, "Określona nazwa główna bezpieczeństwa jest nieznana lub nie należy do właściciela."
+
+4 = DCEE_BUFOF, "Błąd przepełnienia bufora wartości właściwości."
+
+5 = DCEE_INITSTR, "Nieprawidłowy ciąg inicjalizujący sterownika."
+
+6 = DCEE_PROPCMD, "Nieprawidłowe polecenie właściwości bezpieczeństwa."
+
+7 = DCEE_PROPNOTSUPP, "Nieprawidłowa nazwa właściwości bezpieczeństwa."
+
+8 = DCEE_CONTEXT, "Odnaleziono złą strukturę kontekstu sterownika (mniej znaczący status %1!)."
+
+9 = DCEE_OPNOTSUPP, "Punkt wejścia sterownika nie jest obsługiwany."
+
+10 = DCEE_PROPVALLEN, "Długość bufora wartości właściwości jest zbyt mała."
+
+11 = DCEE_TOKEN, "Nieprawidłowy token bezpieczeństwa (mniej znaczący status %1!)."
+
+12 = DCEE_HANDLE, "Nieprawidłowy uchwyt bezpieczeństwa."
+
+13 = DCEE_NAMETOOLONG, "Nazwa mechanizmu/główna/docelowa jest zbyt długa."
+
+14 = DCEE_CHKSIGN, "Weryfikacja podpisu nie powiodła się (mniej znaczący status %1!)."
+
+15 = DCEE_INTERNAL, "Wystąpił nieoczekiwany błąd wewnętrzny."
+
+16 = DCEE_DENIED, "Żądanie sesji bezpieczeństwa nie jest dozwolone (mniej znaczący status %1!)."
+
+17 = DCEE_RMTNAME, "Nazwa docelowa bezpieczeństwa nie została odnaleziona lub jest nieprawidłowa (mniej znaczący status %1!)."
+
+18 = DCEE_PROVIDERERR, "Wystąpił wewnętrzny błąd %1! dostawcy usług bezpieczeństwa."
+
+19 = DCEE_MSGALTERED, "Komunikat bezpieczeństwa został zmieniony - weryfikacja podpisu nie powiodła się."
+
+20 = DCEE_MSGSEQ, "Napotkano komunikat poza kolejnością (mniej znaczący status %1!)."
+
+21 = DCEE_BADNAMETYPE, "Znaleziono nieprawidłowy typ nazwy bezpieczeństwa (mniej znaczący status %1!)."
+
+22 = DCEE_BADCHANBIND, "Znaleziono nieprawidłowe/niezgodne dowiązania kanału (mniej znaczący status %1!)."
+
+23 = DCEE_CREDEXPIRED, "Ważność wymaganych poświadczeń wygasła (mniej znaczący status %1!)."
+
+24 = DCEE_BADCRED, "Wykonanie sprawdzenia spójności poświadczeń nie powiodło się (mniej znaczący status %1!)."
+
+25 = DCEE_OLDTOKEN, "Określony token bezpieczeństwa jest zbyt stary, aby mógł być użyty (mniej znaczący status %1!)."
+
+26 = DCEE_DUPTOKEN, "Określony token bezpieczeństwa jest już przetwarzany (mniej znaczący status %1!)."
+
+27 = DCEE_CTXTEXPIRED, "Kontekst bezpieczeństwa już wygasł (mniej znaczący status %1!)."
+
+28 = DCEE_BADNAME, "Przekazano nieprawidłową nazwę bezpieczeństwa (mniej znaczący status %1!)."
+
+29 = DCEE_REGIDENTITY, "Procedura rejestrująca kontekst tożsamości strony akceptującej nie powiodła się (mniej znaczący status %1!)."
+
+30 = DCEE_BADMECH, "Określony mechanizm nie jest obsługiwany lub jest niedostępny (mniej znaczący status %1!)."
+
+31 = DCEE_BADBUF, "Znaleziono nieprawidłowy bufor bezpieczeństwa (mniej znaczący status %1!)."
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "Przydzielanie pamięci nie powiodło się."
+
+2 = KRBE_SRVNOTSUPP, "Żądana usługa bezpieczeństwa nie jest obsługiwana."
+
+3 = KRBE_PRINCIPAL, "Określona nazwa główna bezpieczeństwa jest nieznana lub nie należy do właściciela."
+
+4 = KRBE_BUFOF, "Błąd przepełnienia bufora wartości właściwości."
+
+5 = KRBE_INITSTR, "Nieprawidłowy ciąg inicjalizujący sterownika."
+
+6 = KRBE_PROPCMD, "Nieprawidłowe polecenie właściwości bezpieczeństwa."
+
+7 = KRBE_PROPNOTSUPP, "Nieprawidłowa nazwa właściwości bezpieczeństwa."
+
+8 = KRBE_CONTEXT, "Odnaleziono złą strukturę kontekstu sterownika (mniej znaczący status %1!)."
+
+9 = KRBE_OPNOTSUPP, "Punkt wejścia sterownika nie jest obsługiwany."
+
+10 = KRBE_PROPVALLEN, "Długość bufora wartości właściwości jest zbyt mała."
+
+11 = KRBE_TOKEN, "Nieprawidłowy token bezpieczeństwa (mniej znaczący status %1!)."
+
+12 = KRBE_HANDLE, "Nieprawidłowy uchwyt bezpieczeństwa."
+
+13 = KRBE_NAMETOOLONG, "Nazwa mechanizmu/główna/docelowa jest zbyt długa."
+
+14 = KRBE_CHKSIGN, "Weryfikacja podpisu nie powiodła się (mniej znaczący status %1!)."
+
+15 = KRBE_INTERNAL, "Wystąpił nieoczekiwany błąd wewnętrzny."
+
+16 = KRBE_DENIED, "Żądanie sesji bezpieczeństwa nie jest dozwolone (mniej znaczący status %1!)."
+
+17 = KRBE_RMTNAME, "Nazwa docelowa bezpieczeństwa nie została odnaleziona lub jest nieprawidłowa (mniej znaczący status %1!)."
+
+18 = KRBE_PROVIDERERR, "Wystąpił wewnętrzny błąd %1! dostawcy usług bezpieczeństwa."
+
+19 = KRBE_MSGALTERED, "Komunikat bezpieczeństwa został zmieniony - weryfikacja podpisu nie powiodła się."
+
+20 = KRBE_MSGSEQ, "Napotkano komunikat poza kolejnością (mniej znaczący status %1!)."
+
+21 = KRBE_BADNAMETYPE, "Znaleziono nieprawidłowy typ nazwy bezpieczeństwa (mniej znaczący status %1!)."
+
+22 = KRBE_BADCHANBIND, "Znaleziono nieprawidłowe/niezgodne dowiązania kanału (mniej znaczący status %1!)."
+
+23 = KRBE_CREDEXPIRED, "Ważność wymaganych poświadczeń wygasła (mniej znaczący status %1!)."
+
+24 = KRBE_BADCRED, "Wykonanie sprawdzenia spójności poświadczeń nie powiodło się (mniej znaczący status %1!)."
+
+25 = KRBE_OLDTOKEN, "Określony token bezpieczeństwa jest zbyt stary, aby mógł być użyty (mniej znaczący status %1!)."
+
+26 = KRBE_DUPTOKEN, "Określony token bezpieczeństwa jest już przetwarzany (mniej znaczący status %1!)."
+
+27 = KRBE_CTXTEXPIRED, "Kontekst bezpieczeństwa już wygasł (mniej znaczący status %1!)."
+
+28 = KRBE_BADNAME, "Przekazano nieprawidłową nazwę bezpieczeństwa (mniej znaczący status %1!)."
+
+29 = KRBE_REGIDENTITY, "Procedura rejestrująca kontekst tożsamości strony akceptującej nie powiodła się (mniej znaczący status %1!)."
+
+30 = KRBE_BADMECH, "Określony mechanizm nie jest obsługiwany lub jest niedostępny (mniej znaczący status %1!)."
+
+31 = KRBE_BADBUF, "Znaleziono nieprawidłowy bufor bezpieczeństwa (mniej znaczący status %1!)."
+
+; end of CyberSAFE Kerberos driver error strings
+;
+
+

@@ -1,0 +1,138 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Fatal error: memory allocation failed."
+2 = ZZZZZ, "I/O Error: Insufficient space for input data."
+3 = ZZZZZ, "Failed to open temp file '%1!' for writing in dbedit()."
+4 = ZZZZZ, "Unable to invoke the '%1!' editor."
+5 = ZZZZZ, "Unable to open input file '%1!'."
+6 = ZZZZZ, "Unable to open output file '%1!'."
+7 = ZZZZZ, "bcp: Unknown parameter '%1!'."
+8 = ZZZZZ, "When using the '%1!' flag to set the first row to copy, the row number must be greater than or equal to 1."
+9 = ZZZZZ, "When using the '%1!' and '%2!' flags to set the first and last rows to copy, the first row number must be smaller than the last."
+10 = ZZZZZ, "When using the '%1!' flag to set the last row to copy, the row number must be greater than or equal to 1."
+11 = ZZZZZ, "Copy direction must be either 'in' or 'out'."
+12 = ZZZZZ, "The '%1!' flag must be followed by an integer.  '%2!' is not a legal integer."
+13 = ZZZZZ, "Warning: the '%1!' flag appears more than once.  The new flag's value supersedes the old."
+14 = ZZZZZ, "Warning: '%1!' overrides '%2!'"
+15 = ZZZZZ, "Invalid prefix length. Valid prefix-lengths are 0, 1, 2, or 4."
+16 = ZZZZZ, "Level (1-16): "
+17 = ZZZZZ, "Invalid level"
+18 = ZZZZZ, "Compartment (1-64): "
+19 = ZZZZZ, "Multiple entries, separated by return, allowed;  return when done. "
+20 = ZZZZZ, "Login as SA (n/y): "
+21 = ZZZZZ, "Try again:"
+22 = ZZZZZ, "Invalid compartment"
+23 = ZZZZZ, "Starting copy..."
+24 = ZZZZZ, "%1! rows copied."
+25 = ZZZZZ, "Clock Time (ms.): total = %1!"
+26 = ZZZZZ, "Do you want to save this format information in a file? [Y/n] "
+27 = ZZZZZ, "Host filename [%1!]: "
+28 = ZZZZZ, "Invalid column type. Valid types are:"
+29 = ZZZZZ, "    <cr>: same type as DataServer column."
+30 = ZZZZZ, "  Avg = %1! (%2! rows per sec.)"
+31 = ZZZZZ, "bcp copy %1! failed"
+32 = ZZZZZ, "bcp copy %1! partially failed"
+33 = ZZZZZ, "Invalid precision. Precision should be between %1! and %2!"
+34 = ZZZZZ, "Invalid scale. Scale should be between %1! and %2! and should be less than or equal to the precision."
+35 = ZZZZZ, "Unexpected result type returned."
+36 = ZZZZZ, "Unexpected result returned."
+37 = ZZZZZ, "Error: Writing BCP file (%1!)!"
+38 = ZZZZZ, "Retrieving host file specification failed."
+39 = ZZZZZ, "The table which bulk-copy is attempting to copy to a host-file is shorter than the number of rows which bulk-copy was instructed to skip."
+40 = ZZZZZ, "blk_rowxfer_mult returned unexpected return code."
+41 = ZZZZZ, "Unknown data type '%1!' encountered."
+42 = ZZZZZ, "I/O error while reading bcp error-file."
+43 = ZZZZZ, "I/O error while writing bcp error-file."
+44 = ZZZZZ, "Unable to open error-file."
+45 = ZZZZZ, "Unexpected EOF encountered in BCP data-file."
+46 = ZZZZZ, "Negative length-prefix found in BCP data-file."
+47 = ZZZZZ, "The BCP hostfile '%1!' contains only %2! rows. Skipping all of these rows is not allowed."
+48 = ZZZZZ, "The BCP hostfile '%1!' contains only %2! rows. It was impossible to read the requested number of rows."
+49 = ZZZZZ, "For bulk copy, all variable-length data must have either a length-prefix or a terminator specified."
+50 = ZZZZZ, "Text/image field is larger than the maximum value. Data truncated."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Fatal error: memory allocation failed."
+2 = ZZZZZ, "Copy direction must be either 'in' or 'out'."
+3 = ZZZZZ, "Warning: '%1!' overrides '%2!'."
+4 = ZZZZZ, "When using the '%1!' flag to set the first row to copy, the row number must be greater than or equal to 1."
+5 = ZZZZZ, "When using the '%1!' and '%2!' flags to set the first and last rows to copy, the first row number must be smaller than the last."
+6 = ZZZZZ, "When using the '%1!' flag to set the last row to copy, the row number must be greater than or equal to 1."
+7 = ZZZZZ, "When using the '%1!' flag to set the batch size, the number must be greater than or equal to 1."
+8 = ZZZZZ, "Warning: Ignoring '%1!' flag when copying out."
+9 = ZZZZZ, "You cannot use both '%1!' and '%2!' when copying in."
+10 = ZZZZZ, "When using the '%1!' flag to set the starting value of the identity column, the number must be greater than or equal to 0."
+11 = ZZZZZ, "You cannot use the '%1!' and '%2!' flags together."
+12 = ZZZZZ, "Warning: Resetting batch size from %1! to %2!."
+13 = ZZZZZ, "Setting connection properties failed."
+14 = ZZZZZ, "Establishing connection failed."
+15 = ZZZZZ, "Setting connection options failed."
+16 = ZZZZZ, "Retrieving language failed."
+17 = ZZZZZ, "Setting up defaults failed."
+18 = ZZZZZ, "Retrieving table format failed."
+19 = ZZZZZ, "blk_init failed."
+20 = ZZZZZ, "Could not open error file."
+21 = ZZZZZ, "Unrecognized localization object.  Using default value '%1!'."
+22 = ZZZZZ, "Internal error: An invalid localization type was passed to cs_locale()."
+23 = ZZZZZ, "Warning: option '%1!' not supported, ignored"
+24 = ZZZZZ, "Syntax Error in '%1!'."
+25 = ZZZZZ, "Error in attempting to load a pair of translation tables."
+26 = ZZZZZ, "An error occurred when attempting to configure the application's context for use with localization-related structures."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Batch successfully bulk-copied to SQL Server."
+2 = ZZZZZ, "%1! rows sent to SQL Server."
+3 = ZZZZZ, "%1! rows successfully bulk-copied to host-file."
+4 = ZZZZZ, "Interrupt - Bulk copy aborted."
+5 = ZZZZZ, "Copied %1! rows."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Password: "
+2 = ZZZZZ, "Enter the file storage type of field %1! [%2!]: "
+3 = ZZZZZ, "Enter length of field %1! [no max length]: "
+4 = ZZZZZ, "Enter length of field %1! [%2!]: "
+5 = ZZZZZ, "Enter field terminator [%1!]: "
+6 = ZZZZZ, "Enter prefix-length of field %1! [%2!]: "
+7 = ZZZZZ, "Enter precision of field %1! [%2!]: "
+8 = ZZZZZ, "Enter scale of field %1! [%2!]: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: Unable to open format-file '%2!'."
+2 = ZZZZZ, "I/O error while reading bcp format-file."
+3 = ZZZZZ, "Unable to close bcp format-file."
+4 = ZZZZZ, "Column %1!: Illegal precision value encountered."
+5 = ZZZZZ, "Unknown fixed-length datatype encountered."
+6 = ZZZZZ, "Attempt to read an unknown version of bcp format-file."
+7 = ZZZZZ, "Incorrect host-column number found in bcp format-file."
+8 = ZZZZZ, "Unrecognized datatype '%1!' found in format-file."
+9 = ZZZZZ, "The format-file instructed bcp not to copy the identity column, conflict with the -E option."
+10 = ZZZZZ, "No columns to copy."

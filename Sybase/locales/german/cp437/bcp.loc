@@ -1,0 +1,108 @@
+; comment character is semicolon.
+; "bcp.loc" - Localization file for Bcp.
+;
+; Sccsid @(#) bcp.loc 1.2 8/18/93
+;
+; 
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+Alle Rechte vorbehalten.\
+Gebrauch, VervielfÑltigung oder Bekanntmachung durch die Regierung\
+der Vereinigten Staaten unterliegt den in FAR Unterabschnitten\
+52.227-19(a)-(d) fÅr VertrÑge mit Zivilstellen und in DFARS\
+252.227-7013(c)(1)(ii) fÅr VertrÑge mit dem Department of Defense\
+(US-Verteidigungsministerium) genannten BeschrÑnkungen.\
+Sybase behÑlt sich alle Rechte bezÅglich Nichtverîffentlichungen\
+gemÑ· den Urheberrechtsgesetzen der Vereinigten Staaten vor.\
+Sybase, Inc.  6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+; The strings bcp uses to prompt the user for imformation.
+;
+[prompts]
+; /* BPPASSWORD */
+1 = "Pa·wort: "
+; /* BPCOLTYPE */
+2 = "Geben Sie den Dateispeichertyp von Feld %1! [%2!]: ein"
+; /* BPFLENNOMAX */
+3 = "Geben Sie die LÑnge von Feld %1! ein [keine maximale LÑnge]: "
+; /* BPFLEN */
+4 = "Geben Sie die LÑnge von Feld %1! [%2!]: ein"
+; /* BPFTERM */
+5 = "Geben Sie den Feldbegrenzer [%1!] ein: "
+; /* BPPREFXLEN */
+6 = "Geben Sie die PrÑfixlÑnge von Feld %1! [%2!]: ein"
+;
+; End of prompts section.
+;
+; Now we list the localized error message strings.
+;
+[bcperrors]
+; /* BERRNOMEM */
+1 = "Schwerer Fehler: Speicherzuweisung gescheitert."
+; /* BERRNOREADSPACE */
+2 = "E/A-Fehler: Unzureichender Speicherplatz fÅr Eingabedaten."
+; /* BERRTEMPFILE */
+3 = "ôffnen der temporÑren Datei '%1!' zum Schreiben in dbedit() gescheitert."
+; /* BERREDITFAIL */
+4 = "Kann den '%1!' Editor nicht aufrufen."
+; /* BERRNOINFILE */
+5 = "Kann die Eingabedatei '%1!' nicht îffnen."
+; /* BERRNOOUTFILE */
+6 = "Kann die Ausgabedatei '%1!' nicht îffnen."
+; /* BERRBADARG */
+7 = "bcp: Unbekannter Parameter '%1!'."
+; /* BERRFIRSTROW */
+8 = "When using the '%1!' flag to set the first row to copy, the row number must be greater than or equal to 1."
+; /* BERRFLROW */
+9 = "Wenn Sie die Flaggen '%1!' und '%2!' zum Festlegen der ersten und letzten zu kopierenden Zeilen benutzen, mu· die erste Zeilennummer kleiner als die letzte sein."
+; /* BERRLASTROW */
+10 = "Wenn Sie die Flagge '%1!' zum Festlegen der letzten zu kopierenden Zeile benutzen, mu· die Zeilennummer grî·er oder gleich 1 sein."
+; /* BERRBADDIR */
+11 = "Die Kopierrichtung mu· entweder 'in' oder 'aus' sein."
+; /* BERRBADINTARG */
+12 = "Der Flagge '%1!' mu· eine Ganzzahl folgen. '%2!' ist keine zulÑssige Ganzzahl."
+; /* BERRDUPARGS */
+13 = "Warnung: Die Flagge '%1!' erscheint îfter als einmal. Der Wert der neuen Flagge hebt die alte auf."
+; /* BERROVERRIDE */
+14 = "Warning: '%1!' overrides '%2!'"
+; /* BERRBADPREFXLEN */
+15 = "UngÅltige PrÑfixlÑnge. GÅltige PrÑfixlÑngen sind 0, 1, 2 oder 4."
+; /* BSTRLEVEL */
+16 = "Ebene (1-16): "
+; /* BERRLEVEL */
+17 = "UngÅltige Ebene"
+; /* BSTRCOMP */
+18 = "Fach (1-64): "
+; /* BSTRENTRY */
+19 = "Mehrere EintrÑge, durch Return getrennt, sind zulÑssig;  Return zum AusfÅhren. "
+; /* BERRLOGIN */
+20 = "Anmelden als SA (n/j): "
+; /* BSTRTRY */
+21 = "Versuchen Sie es noch einmal:"
+; /* BERRCOMP */
+22 = "UngÅltiges Fach"
+; /* BSTRSTART */
+23 = "Kopiervorgang beginnt..."
+; /* BSTRROW */
+24 = "%1! Zeilen kopiert."
+; /* BSTRTIME */
+25 = "Zeit des Taktgebers (ms.): Gesamt = %1!"
+; /* BSTRSAVE */
+26 = "Wollen Sie diese Formatinformation in einer Datei speichern? [J/n] "
+; /* BSTRHOST */
+27 = "Hostdateiname [%1!]: "
+; /* BERRCOLTYPE */
+28 = "UnzulÑssiger Spaltentyp. GÅltige Typen sind:"
+; /* BERRDSCOL */
+29 = "\t<cr>: gleicher Typ wie DatenServer Spalte."
+; /* BSTRAVG */
+30 = " Avg = %6! (%2! Zeilen pro Sek.)"
+; /* BERRCOPY */
+31 = "bcp copy %1! gescheitert"
+; /* BERRBADPRECISION */
+32 = "UngÅltige Genauigkeit. Genauigkeit sollte zwischen %1! und %2!"
+; /* BERRBADSCALE */
+33 = "UngÅltiger Ma·stab. Ma·stab sollte zwischen %1! und %2! liegen und \
+sollte kleiner oder gleich der Genauigkeit sein"
+;
+; End of error strings section.

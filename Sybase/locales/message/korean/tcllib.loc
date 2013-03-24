@@ -1,0 +1,423 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=11.5
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=korean
+
+[copyright]
+copyright =  " 저작권 (C) 1990, 2001 Sybase, Inc. \
+모든 저작권은 본사 소유입니다. \
+미 연방 정부에 의한 사용, 복제 또는 공개는 \
+CFR 52.227-7013의 Rights in Technical Data and \
+Computer Software 절에 있는 (c) (1) (ii) 항목에 \
+명시된 규정을 따릅니다. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "프로토콜 드라이버에 필요한 메모리 크기를 결정할 수 없습니다."
+
+2 = NETE_NULLOPT, "네트워크 라이브러리 루틴에 NULL 선택 항목 ptr을 전달하는 것은 잘못입니다."
+
+3 = NETE_UNKWOPT, "요청된 네트워크 라이브러리 선택 항목을 알 수 없습니다."
+
+4 = NETE_UNKWINFCDE, "요청된 주소 정보 코드를 알 수 없습니다."
+
+5 = NETE_BOOLREP, "선택 항목의 값은 NET_TRUE 또는 NET_FALSE이어야 합니다."
+
+6 = NETE_NULLNETBUF, "net_init()에 NULL 버퍼 포인터를 전달하는 것은 잘못입니다."
+
+7 = NETE_NOTSUPPORTED, "기능이 지원되지 않습니다."
+
+8 = NETE_NULLHDLR, "NULL NET_POLL 배열 포인터를 전달하는 것은 잘못입니다."
+
+9 = NETE_BADENGINE, "엔진 구별자가 올바르지 않습니다."
+
+10 = NETE_ALREADYINIT, "현재 프로세스에서 이미 net_init()를 호출하였습니다."
+
+11 = NETE_DICTNOTFOUND, "주소 지정 사전이 없습니다."
+
+12 = NETE_SRVNAMENOTFND, "지정된 서버 이름 속성이 없습니다."
+
+13 = NETE_NODICTS, "사용할 수 있는 주소 사전 구조가 없습니다."
+
+14 = NETE_DRVINIT, "프로토콜 드라이버를 초기화하는 동안 오류가 발생하였습니다."
+
+15 = NETE_NODRIVERS, "사용할 수 있는 프로토콜 드라이버 구조가 없습니다."
+
+16 = NETE_LFNOSECTION , "지역화 파일에 네트워크 라이브러리 오류 섹션이 없습니다."
+
+17 = NETE_DICTSYNTAX, "주소 사전에 구문 오류가 있습니다"
+
+18 = NETE_ADRTYPNOTFND, "지정된 주소 유형 속성이 없습니다."
+
+19 = NETE_DICTCLOSE, "주소 사전을 닫을 때 오류가 발생하였습니다."
+
+20 = NETE_NOEPS, "사용할 수 있는 끝점 구조가 없습니다."
+
+21 = NETE_EPINUSE, "이미 사용 중인 끝점을 사용하려고 하였습니다."
+
+22 = NETE_DRVPROPERTY, "특성을 결정하기 위한 프로토콜 드라이버 호출을 실행할 수 없습니다."
+
+23 = NETE_DRVLISTEN, "청취자를 등록하기 위한 Net-Lib 프로토콜 드라이버 호츨을 실행할 수 없습니다."
+
+24 = NETE_DRVCONNECT, "두 끝점을 연결하기 위한 Net-Lib 프로토콜 드라이버 호출을 실행할 수 없습니다."
+
+25 = NETE_DRVACCEPT, "수신 연결 요청을 받아들이기 위한 프로토콜 드라이버 호출을 실행할 수 없습니다."
+
+26 = NETE_BADIOSTATE, "끝점에 잘못된 I/O 상태가 있습니다."
+
+27 = NETE_DRVNOTAVAIL, "지정된 Net-Lib 프로토콜 드라이버가 없습니다."
+
+28 = NETE_BADPROPERTY, "잘못된 특성 유형 인수입니다."
+
+29 = NETE_DISCONNECT, "연결이 끊겨서 네트워크 라이브러리 작동이 종료되었습니다."
+
+30 = NETE_DRVEXIT, "Net-Lib 프로토콜 드라이버 종료 루틴을 실행할 수 없습니다."
+
+31 = NETE_SUBACCEPT, "청취자 중 한 사람을 받아들이게 할 수 없습니다."
+
+32 = NETE_DRVREAD, "데이타를 읽기 위한 Net-Lib 프로토콜 드라이버 호출을 실행할 수 없습니다."
+
+33 = NETE_RDDATLEN, "읽어야 하는 데이타의 크기가 읽기 버퍼보다 더 큽니다."
+
+34 = NETE_DRVREADOOB, "긴급 데이타를 읽기 위한 Net-Lib 프로토콜 드라이버 호출입니다."
+
+35 = NETE_EXPNOTSUPPORT, "긴급 전송 데이타는 이 Net-Lib 프로토콜 드라이버에서 지원되지 않습니다."
+
+36 = NETE_DRVWRITE, "데이타를 쓰기 위한 Net-Lib 프로토콜 드라이버 호출을 실행할 수 없습니다."
+
+37 = NETE_NULLADDR, "NULL net_addr 포인터를 전달하는 것은 잘못입니다."
+
+38 = NETE_NULLDICT, "NULL 사전 포인터를 전달하는 것은 잘못입니다."
+
+39 = NETE_NULLSTATE, "NULL net_state 포인터를 전달하는 것은 잘못입니다."
+
+40 = NETE_NULLRETRES, "NULL return_reason 포인터를 전달하는 것은 잘못입니다."
+
+41 = NETE_NULLEP, " NULL 끝점 포인터를 전달하는 것은 잘못입니다."
+
+42 = NETE_NULLCBACK, "NULL 콜백 루틴 포인터를 전달하는 것은 잘못입니다."
+
+43 = NETE_NULLDICTNAME, "NULL 사전 ID 포인터를 전달하는 것은 잘못입니다."
+
+44 = NETE_NULLEXPFLAG, "NULL 긴급 전송 데이타 플래그 포인터를 전달하는 것은 잘못입니다."
+
+45 = NETE_NULLDICTPTR, "NULL 사전 핸들 포인터를 전달하는 것은 잘못입니다."
+
+46 = NETE_NULLNEWEP, "NULL 끝점 핸들 포인터를 전달하는 것은 잘못입니다."
+
+47 = NETE_NULLATTRLST, "NULL 주소 정보 포인터를 전달하는 것은 잘못입니다."
+
+48 = NETE_NULLADDRPTR, "NULL net_addr 핸들 포인터를 전달하는 것은 잘못입니다."
+
+49 = NETE_NULLLASTENTRY, "NULL 최종 항목 포인터를 전달하는 것은 잘못입니다."
+
+50 = NETE_NULLRDDATA, "NULL 읽기 버퍼를 전달하는 것은 잘못입니다."
+
+51 = NETE_NOADDRS, "사용할 수 있는 주소 구조가 없습니다."
+
+52 = NETE_NULLBYTSRD, "NULL bytes_read 포인터를 전달하는 것은 잘못입니다."
+
+53 = NETE_EPCLOSING, "지정한 끝점을 닫고 있습니다."
+
+54 = NETE_NULLWRDATA, "NULL 쓰기 버퍼를 전달하는 것은 잘못입니다."
+
+55 = NETE_CANCELLED, "다른 이벤트 때문에 요청된 작동을 취소하였습니다."
+
+56 = NETE_NULLINTL, "NULL NET_INTL 구조를 전달하는 것은 잘못입니다."
+
+57 = NETE_NULLUSERPTR, "NULL 사용자 포인터 버퍼를 전달하는 것은 잘못입니다."
+
+58 = NETE_BADDICT, "잘못된 사전 핸들을 사용하려고 합니다."
+
+59 = NETE_BADADDR, "잘못된 주소 핸들을 사용하려고 합니다"
+
+60 = NETE_BADEP, "잘못된 끝점 핸들을 사용하려고 합니다."
+
+61 = NETE_DRVCLOSE, "끝점을 닫기 위한 Net-Lib 프로토콜 드라이버 호출을 실행할 수 없습니다."
+
+62 = NETE_VERSION, "프로토콜 드라이버가 현재 네트워크 라이브러리와 호환되지 않습니다. 아마도 구 버전의 네트워크 라이브러리일 것입니다."
+
+63 = NETE_NULLSUPPORT, "net_capability()에 'supported' 매개 변수의 NULL 포인터를 전달하는 것은 잘못입니다."
+
+64 = NETE_BADPROCMODE, "잘못된 처리 모드입니다."
+
+65 = NETE_FUNCCODE, "net_report()에 잘못된 기능 코드를 전달하였습니다."
+
+66 = NETE_DRVINUSE, "드라이버를 언로드할 수 없습니다. 드라이버가 아직 사용 중입니다."
+
+67 = NETE_NCONNECTED, "연결되지 않은 끝점에서 I/O를 하려고 하였습니다."
+
+68 = NETE_NOMULTIRW, "둘 이상의 읽기를 수행할 수 없습니다."
+
+69 = NETE_NULLPREVMODE, "잘못된 NULL 이전 모드 포인터입니다"
+
+70 = NETE_NULLREPORT, "net_opt_report()에서 보고를 요청하지 않았으면 net_report()를 호출할 수 없습니다."
+
+71 = NETE_LFILENAME, "net_intl_errstr() 호출에 지역화 파일 이름을 지정하지 않았습니다."
+
+72 = NETE_INTLOPEN, "intl_open을 사용하여 지역화 파일을 열 수 없습니다."
+
+73 = NETE_UP1ENIGNE, "Net-Lib의 단일 프로세서 버전은 단 1개의 엔진만 사용할 수 있습니다."
+
+74 = NETE_NULLCBPARM, "네트워크 라이브러리 루틴에 잘못된 NULL 콜백 매개 변수가 있습니다."
+
+75 = NETE_NULLINFOLEN, "net_address_info()를 가리키는 NULL 정보 길이 포인터가 잘못되었습니다."
+
+76 = NETE_UNKWNMODE, "요청한 콜백 모드를 인식하지 않습니다."
+
+77 = NETE_BADEPNUM, "요청한 끝점 번호는 올바르지 않습니다."
+
+78 = NETE_NULLENGPTR, "net_engine_init()에 NULL 엔진 포인터를 전달하는 것은 잘못입니다."
+
+79 = NETE_NULLENGINE, "네트워크 라이브러리 루틴에 NULL 엔진 포인터를 전달하는 것은 잘못입니다."
+
+80 = NETE_NOENGS, "사용할 수 있는 엔진 구조가 없습니다."
+
+81 = NETE_NOREQUESTS, "사용할 수 있는 요청 구조가 없습니다."
+
+82 = NETE_BADMONFLAG, "요청한 모니터 플래그 마스크가 올바르지 않습니다."
+
+83 = NETE_EPINCLOSE, "필요한 끝점을 닫고 있습니다."
+
+84 = NETE_BADMODE, "요청한 모드는 지원되지 않습니다."
+
+85 = NETE_DRVLOAD, "프로토콜 드라이버를 로드할 수 없습니다."
+
+86 = NETE_DRVUNLOAD, "프로토콜 드라이버를 언로드할 수 없습니다."
+
+87 = NETE_MEMPOLICY, "요청한 메모리 정책이 올바르지 않습니다."
+
+88 = NETE_MEMREALLOC, "메모리를 다시 할당할 수 없습니다."
+
+89 = NETE_MEMALLOC, "메모리를 할당할 수 없습니다."
+
+90 = NETE_NULLSIZE, "net_initsize()에 NULL 크기 포인터를 전달하는 것은 잘못입니다."
+
+91 = NETE_NULLSTATEPTR, "net_init()에 NULL NET_STATE 포인터를 전달하는 것은 잘못입니다."
+
+92 = NETE_NULLSPNLCKCNTPTR, "net_spinlocks()에 NULL spinlock 개수 포인터를 전달하는 것은 잘못입니다."
+
+93 = NETE_ENGACTIVE, "사용 중인 엔진이 있을 때에는 요청한 작동을 수행할 수 없습니다."
+
+94 = NETE_UNKWIDTYPE, "지정한 주소 사전 ID 유형이 올바르지 않습니다."
+
+95 = NETE_SECNOTFOUND, "요청한 구성 파일 섹션이 없습니다."
+
+96 = NETE_DRVNOTLOADED, "지정한 네트워크 프로토콜의 네트워크 드라이버가 로드되지 않습니다."
+
+97 = NETE_NODRVERRSTR, "현재 오류에 사용할 수 있는 프로토콜 드라이버 오류 문자열이 없습니다."
+
+98 = NETE_SHRTINFOBUF, "주소 정보 버퍼가 너무 작습니다."
+
+99 = NETE_NULLNFDS, "net_poll_external()에 NULL nfds 포인터를 전달하는 것은 잘못입니다."
+
+100 = NETE_BADNFDS, "요청한 파일 설명자 개수가 올바르지 않습니다."
+
+101 = NETE_NULLRDBUF, "네트워크 라이브러리에 NULL 읽기 버퍼를 전달하는 것은 잘못입니다."
+
+102 = NETE_NULLWRTBUF, "네트워크 라이브러리에 NULL 쓰기 버퍼를 전달하는 것은 잘못입니다."
+
+103 = NETE_INTLNXTSEC, "intl_nextsection을 호출할 수 없습니다."
+
+104 = NETE_INTLNXTVAL, "intl_nextvalue를 호출할 수 없습니다."
+
+105 = NETE_LFNOVALUE, "오류 메시지가 없는 지역화 파일 항목이 있습니다."
+
+106 = NETE_BADERRID, "잘못된 오류 번호를 가진 지역화 파일 항목이 있습니다."
+
+107 = NETE_INTLNXTENT, "intl_nextentry를 호출할 수 없습니다."
+
+108 = NETE_NULLINTLSIZE, "net_intl_size에 NULL 크기 포인터를 전달하는 것은 잘못입니다."
+
+109 = NETE_NULLINTLBUF, "net_intl_errstr에 NULL 버퍼 포인터를 전달하는 것은 잘못입니다."
+
+110 = NETE_BADMSECS, "밀리초 매개 변수의 값이 올바르지 않습니다."
+
+111 = NETE_NOLISTENERS, "청취 끝점이 없을 때 net_accept를 호출하는 것은 잘못입니다."
+
+112 = NETE_POLLNOTSUP, "net_poll_external() 함수는 지원되지 않습니다."
+
+113 = NETE_NONEQUEUED, "큐에 아무 것도 없을 때에는 요청 완료를 기다릴 수 없습니다."
+
+114 = NETE_BADSIGNAL, "요청한 신호는 네트워크 라이브러리에서 사용되지 않습니다."
+
+115 = NETE_DICTINUSE, "둘 이상의 작업에서 주소 사전을 액세스하려고 합니다."
+
+116 = NETE_NULLEXPFLG, "net_read에 NULL 긴급 전송 플래그 포인터를 전달하는 것은 잘못입니다."
+
+117 = NETE_NODRVCLASS, "요청한 프로토콜 클래스의 드라이버가 없습니다."
+
+118 = NETE_BADSRCHATTR, "속성 찾기 목록에 잘못된 항목이 있습니다."
+	
+119 = NETE_BADDICTID, "net_dict_open에 잘못된 사전 ID를 전달하였습니다."
+
+120 = NETE_INVALIDVERSION, "잘못된 네트워크 라이브러리 버전입니다."
+
+121 = NETE_NULLVALUE, "이 선택 항목의 값 인수는 NULL일 수 없습니다."
+
+122 = NETE_NULLARG, "루틴에 적합하지 않은 NULL 인수입니다."
+
+123 = NETE_BUFTOOSMALL, "버퍼가 너무 작습니다."
+
+124 = NETE_BADCMD, "잘못된 명령어 인수입니다."
+
+125 = NETE_NULLBUF, "Null 버퍼 인수입니다."
+
+126 = NETE_NULLPROPINFO, "Null propinfo 인수입니다."
+
+127 = NETE_SETNOTSUPPORTED, "Net-Lib 특성의 설정은 지원되지 않습니다."
+
+128 = NETE_INTLHOME, "intl_home을 호출할 수 없습니다."
+
+129 = NETE_INVOSERR, "올바른 OS 오류 번호가 아닙니다."
+
+130 = NETE_RLIMITERR, "열린 파일 최대 개수를 가져오거나 설정할 수 없습니다."
+
+131 = NETE_GETEF, "이벤트 플래그를 만들 수 없습니다."
+
+132 = NETE_FREEEF, "이벤트 플래그를 해제할 수 없습니다."
+
+133 = NETE_INSQTI, "연동식(interlocked) 큐에 요소를 삽입할 수 없습니다."
+
+134 = NETE_REMQHI, "연동식(interlocked) 큐에서 요소를 제거할 수 없습니다."
+
+135 = NETE_SETIMR, "타이머를 설정할 수 없습니다."
+
+136 = NETE_CANTIM, "타이머를 취소할 수 없습니다."
+
+137 = NETE_WAITFR, "이벤트를 기다릴 수 없습니다."
+
+138 = NETE_CLREF, "이벤트 플래그를 지울 수 없습니다."
+
+139 = NETE_SETEF, "이벤트 플래그를 설정할 수 없습니다."
+
+140 = NETE_DRVATTNHDLR, "프로토콜 드라이버 주의 핸들러를 설치할 수 없습니다."
+
+141 = NETE_QUEOPEN, "스레드 통신 큐를 열 수 없습니다."
+
+142 = NETE_QUEREAD, "스레드 통신 큐에서 읽을 수 없습니다."
+
+143 = NETE_QUEWRITE, "스레드 통신 큐에 쓸 수 없습니다."
+
+144 = NETE_QUECLOSE, "스레드 통신 큐를 닫을 수 없습니다."
+
+145 = NETE_CREATETHREAD, "스레드를 만들 수 없습니다."
+
+146 = NETE_EVENTCREATE, "이벤트 객체를 만들 수 없습니다."
+
+147 = NETE_EVENTPOST, "이벤트 객체로 발송할 수 없습니다."
+
+148 = NETE_EVENTCLEAR, "이벤트 객체를 지울 수 없습니다."
+
+149 = NETE_EVENTWAIT, "이벤트 객체를 기다릴 수 없습니다."
+
+150 = NETE_CREATEMTX, "mutex 셰마포어를 만들 수 없습니다."
+
+151 = NETE_REQUESTMTX, "mutex 셰마포어의 독점권을 얻을 수 없습니다."
+
+152 = NETE_RELEASEMTX, "mutex 셰마포어를 해제할 수 없습니다."
+
+153 = NETE_DESTROYMTX, "mutex 셰마포어를 삭제할 수 없습니다."
+
+154 = NETE_THRDSPND, "스레드를 일시 중지할 수 없습니다."
+
+155 = NETE_THRDRESUME, "스레드를 다시 계속할 수 없습니다."
+
+156 = NETE_THRDKILL, "스레드를 삭제할 수 없습니다."
+
+157 = NETE_SETSIGHDLR, "적절한 신호 핸들러를 설정할 수 없습니다."
+
+158 = NETE_SELECTFAIL, "select()를 호출할 수 없습니다."
+
+159 = NETE_FDOFLOW, "사용할 수 있는 파일 설명자가 더 이상 없습니다. 청취자를 종료합니다."
+
+160 = NETE_NOPOLLSTRATS, "사용할 수 있는 폴링 전략 구조가 더 이상 없습니다."
+
+161 = NETE_NOSIGNALS, "네트워크 라이브러리는 신호를 생성하는 프로토콜 드라이버를 지원할 수 없습니다."
+
+162 = NETE_UNKNOWN, "알 수 없는 네트워크 라이브러리 오류입니다."
+
+164 = NETE_OODDRIVER, "드라이버의 버전이 지원되는 것보다 이전 버전입니다."
+
+165 = NETE_OSGENERIC, "운영 체제 오류 - %1!"
+
+166 = NETE_DRVLOCFAIL, "드라이버 지역화 파일을 열 수 없습니다."
+
+167 = NETE_OSOBJECT, "OS 객체를 만들 수 없습니다."
+
+168 = NET_QPRFSTR, "주소 파일에서 읽을 때 오류가 발생하였습니다."
+
+170 = NETE_BADHANDLER, "잘못된 신호 핸들러입니다."
+
+171 = NETE_FLTCONNECT, "Net-Lib 필터 드라이버가 두 종료점을 연결할 수 없습니다."
+
+172 = NETE_CONABORTED, "연결이 중단되었습니다."
+
+173 = NETE_TIMEOUT, "Net-lib 작업 시간이 만료되었습니다."
+
+174 = NETE_URGENT, "OOB 데이터를 받았습니다."
+
+[filter]
+
+1 = FLTE_CALLFAIL, "제공자 호출에 실패했습니다."
+2 = FLTE_BUFOF, "버퍼 오버플로 오류입니다."
+3 = FLTE_MALLOC, "메모리 할당 오류입니다."
+4 = FLTE_SRVNOTSUPP, "지원되지 않는 서비스입니다."
+5 = FLTE_INVPRM, "잘못된 매개변수입니다."
+6 = FLTE_BADPOINTER, "잘못된 포인터입니다."
+
+; TLS/SSL specific errors:
+
+60 = FLTE_TLS_MSTRINIT, "SSL/TLS 마스터 콘텍스트를 초기화할 수 없습니다."
+61 = FLTE_TLS_IO_SEMANTICS, "입출력 의미를 부분 입출력으로 설정할 수 없습니다."
+62 = FLTE_TLS_PROTOCOLVER, "SSL/TLS 프로토콜 버전을 설정할 수 없습니다."
+63 = FLTE_TLS_RANDOMOBJ, "PRNG 객체를 작성할 수 없습니다."
+64 = FLTE_TLS_RANDOMINIT, "PRNG 객체를 초기화할 수 없습니다."
+65 = FLTE_TLS_RANDOMSEED, "PRNG를 생성할 수 없습니다."
+66 = FLTE_TLS_RANDOMREF, "PRNG 객체 참조를 설정할 수 없습니다."
+67 = FLTE_TLS_RANDOMFUNC, "PRNG 함수를 설정할 수 없습니다."
+68 = FLTE_TLS_CERTFUNC, "인증서 확인 기능을 설정할 수 없습니다."
+69 = FLTE_TLS_DUPCONTEXT, "SSL/TLS 콘텍스트 정보를 복제할 수 있습니다."
+70 = FLTE_TLS_DUPCHILD, "하위 SSL/TLS 콘텍스트를 생성할 수 없습니다."
+71 = FLTE_TLS_GETVER, "SSL/TLS 프로토콜 버전을 확인할 수 없습니다."
+72 = FLTE_TLS_INVALIDVER, "알 수 없는SSL/TLS 프로토콜 버전입니다."
+73 = FLTE_TLS_NOVALIDCIPHERS, "설정된 암호가 인식할 수 없는 암호 세트입니다."
+74 = FLTE_TLS_SETCIPHER, "암호 세트 설정 중 오류가 발생했습니다."
+75 = FLTE_TLS_LOADCERT, "로컬 ID를 로드하는 데 실패했습니다."
+76 = FLTE_TLS_LOADCA, "CA 정보를 로드하는 데 실패했습니다."
+77 = FLTE_TLS_GETCERTLEN, "피어의 인증서 길이를 알 수 없습니다."
+78 = FLTE_TLS_GETCERT, "피어의 인증서를 확인할 수 없습니다."
+79 = FLTE_TLS_GETNAME, "피어의 공통 이름을 가져올 수 없습니다."
+80 = FLTE_TLS_SETIOREF, "TLS/SSL 입출력 참조를 설정할 수 없습니다."
+81 = FLTE_TLS_SETCERTREF, "TLS/SSL 인증서 참조를 설정할 수 없습니다."
+82 = FLTE_TLS_SETREADFUNC, "TLS/SSL 읽기 콜백 함수를 설정할 수 없습니다."
+83 = FLTE_TLS_SETWRITEFUNC, "TLS/SSL 쓰기 콜백 함수를 설정할 수 없습니다."
+84 = FLTE_TLS_HANDSHAKEFAIL, "TLS/SSL 핸드셰이크에 실패했습니다."
+85 = FLTE_TLS_SERVERSIDE, "TLS/SSL을 서버측에 설정할 수 없습니다."
+86 = FLTE_TLS_CLIENTSIDE, "TLS/SSL을 클라이언트측에 설정할 수 없습니다."
+87 = FLTE_TLS_NOEP, "TLS/SSL이 설정되기 전에 입출력이 시도되었습니다."
+88 = FLTE_TLS_NOCONTEXT, "SSL 핸드셰이크 전에 입출력이 시도되었습니다."
+89 = FLTE_TLS_READERROR, "읽기 도중 오류가 발생했습니다."
+90 = FLTE_TLS_WRITEERROR, "쓰기 도중 오류가 발생했습니다."
+91 = FLTE_TLS_DNFCOUNT, "원격 인증서의 총 DN 필드 수를 확인할 수 없습니다."
+92 = FLTE_TLS_DNFEXTRACT, "원격 인증서에서 식별 이름 정보를 가져올 수 없습니다."
+93 = FLTE_TLS_EXTCOUNT, "원격 인증서의 확장을 셀 수 없습니다."
+94 = FLTE_TLS_EXTEXTRACT, "원격 인증서에서 확장 정보를 가져올 수 없습니다."
+95 = FLTE_TLS_REQCLNT, "클라이언트 인증서 호출 요구에 실패했습니다."
+
+; end of tcllib error strings
+;

@@ -1,0 +1,291 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "パスワード: "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "致命的エラー: 定義ファイル '%1!' がオープンできません。"
+
+2 = ZZZZZ, "致命的エラー: Client-Library 初期化のためのメモリ割り当てに失敗しました。"
+
+3 = ZZZZZ, "致命的エラー: Client-Library の初期化に失敗しました。"
+
+4 = ZZZZZ, "致命的エラー: CS-Library メッセージ・コールバックのインストールに失敗しました。"
+
+5 = ZZZZZ, "致命的エラー: クライアント・メッセージ・コールバックのインストールに失敗しました。"
+
+6 = ZZZZZ, "致命的エラー: サーバ・メッセージ・コールバックのインストールに失敗しました。"
+
+7 = ZZZZZ, "致命的エラー: アプリケーション・コンテキストに interfaces ファイルのパスと名前を与えることに失敗しました。"
+
+8 = ZZZZZ, "致命的エラー: defncopy コンテキスト構造の割り当てに失敗しました。"
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "defncopy 文法エラー"
+
+2 = ZZZZZ, "使用法"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "パスワード"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "サーバ名"
+
+10 = ZZZZZ, "ユーザ名"
+
+11 = ZZZZZ, "セキュリティ・オプション"
+
+12 = ZZZZZ, "セキュリティ・メカニズム"
+
+13 = ZZZZZ, "言語"
+
+14 = ZZZZZ, "ファイル名"
+
+15 = ZZZZZ, "データベース名"
+
+16 = ZZZZZ, "所有者"
+
+17 = ZZZZZ, "オブジェクト名"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "致命的エラー: %1! に十分なメモリを割り当てるのに失敗しました。"
+
+2 = ZZZZZ, "致命的エラー: %1! に十分なメモリを割り当てるのに失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+3 = ZZZZZ, "致命的エラー: メモリの割り当てに失敗しました。"
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "致命的エラー: サーバ名が指定されていません。環境変数 DSQUERY を確認してください。"
+
+2 = ZZZZZ, "致命的エラー: クライアント／サーバ接続構造体の割り当てに失敗しました。"
+
+3 = ZZZZZ, "致命的エラー: クライアント／サーバ接続のユーザ名属性に値 '%1! を設定することに失敗しました。"
+
+4 = ZZZZZ, "致命的エラー: クライアント／サーバ接続のパスワード属性の設定に失敗しました。"
+
+5 = ZZZZZ, "致命的エラー: クライアント／サーバ接続のパスワード暗号化属性の設定に失敗しました。"
+
+6 = ZZZZZ, "致命的エラー: サーバ '%1!' への接続に失敗しました。"
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "致命的エラー: CS-Library コマンド構造体の割り当てにに失敗しました。"
+
+2 = ZZZZZ, "致命的エラー: SQL コマンドが開始できません。"
+
+3 = ZZZZZ, "致命的エラー: SQL コマンドが開始できません。以降のコピー処理をすべてキャンセルしました。"
+
+4 = ZZZZZ, "致命的エラー: SQL コマンドをサーバに送信できません。"
+
+5 = ZZZZZ, "致命的エラー: SQL コマンドをサーバに送信できません。以降のコピー処理をすべてキャンセルしました。"
+
+6 = ZZZZZ, "致命的エラー: SQL コマンドの結果データの設定に失敗しました。"
+
+7 = ZZZZZ, "致命的エラー: SQL コマンドの結果データの設定に失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+8 = ZZZZZ, "致命的エラー: オブジェクト '%1!' に対する SQL コマンドの結果データの設定に失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+9 = ZZZZZ, "致命的エラー: SQL コマンドの結果データをキャンセルしました。"
+
+10 = ZZZZZ, "エラー: SQL コマンドの結果データをキャンセルしました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+11 = ZZZZZ, "エラー: オブジェクト '%1!' に対する SQL コマンドの結果データをキャンセルしました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+12 = ZZZZZ, "致命的エラー: SQL コマンドの結果データの設定処理が、予期しないリターン・コード '%1!' を生成しました。"
+
+13 = ZZZZZ, "エラー: オブジェクト '%1!' に対する SQL コマンドの結果データの設定処理が、予期しないリターン・コード '%1!' を生成しました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+14 = ZZZZZ, "致命的エラー: SQL コマンドの結果データの設定処理が、予期しない結果タイプ '%1!' を生成しました。"
+
+15 = ZZZZZ, "致命的エラー: 結果セット情報の検索に失敗しました。"
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "エラー: ファイル '%1!' 内のオブジェクトが定義として認識できません。"
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "致命的エラー: オブジェクト '%1!' に対する結果セット情報の検索に失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+2 = ZZZZZ, "致命的エラー: オブジェクト '%1!' に対する結果セット・データを内部プログラム変数にバインドすることに失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+3 = ZZZZZ, "致命的エラー: オブジェクト '%1!' に対するロー結果データのフェッチに失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+4 = ZZZZZ, "エラー: オブジェクト '%1!' に対するロー結果データのフェッチに失敗しました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+5 = ZZZZZ, "エラー: オブジェクト '%1!' に対する SQL コマンドの結果データをキャンセルしました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+6 = ZZZZZ, "エラー: オブジェクト '%1!' に対するロー結果データのフェッチ処理が、予期しないリターン・コード '%2!' を生成しました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+7 = ZZZZZ, "致命的エラー: オブジェクト '%1!' に対する SQL コマンドの結果データの設定処理が、予期しない結果タイプ '%2!' を生成しました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "致命的エラー: サーバがデータベース '%1!' にアクセスするときにエラーが発生しました。"
+
+2 = ZZZZZ, "致命的エラー: データベース '%1!' へのアクセスが、予期しない結果タイプ '%2!' を生成しました。"
+
+3 = ZZZZZ, "致命的エラー: SQL コマンドの結果データの設定に失敗しました。データベース '%1!' にアクセスできません。"
+
+4 = ZZZZZ, "致命的エラー: SQL コマンドの結果データをキャンセルしました。データベース '%1!' にアクセスできません。"
+
+5 = ZZZZZ, "致命的エラー: データベース '%1!' へのアクセスが、予期しないリターン・コード '%2!' を生成しました。"
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "エラー: サーバがファイル '%1!' に収められた SQL を実行するときにエラーが発生しました。ファイル内の次のオブジェクトを使ってコピー処理を継続しています。"
+
+2 = ZZZZZ, "エラー: ファイル '%1!' に収められた SQL の実行が、予期しない結果タイプ '%2!' を生成しました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+3 = ZZZZZ, "エラー: ファイル '%1!' に収められた SQL の実行が、予期しないリターン・コード '%2!' を生成しました。このオブジェクトに対するコピー処理をキャンセルしました。"
+
+4 = ZZZZZ, "致命的エラー: ストアド・プロシージャの実行結果の記述の検索に失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+5 = ZZZZZ, "致命的エラー: ストアド・プロシージャの実行結果を内部プログラム変数にバインドすることに失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+6 = ZZZZZ, "エラー: ストアド・プロシージャが予期しない結果ステータスを生成しました。ストアド・プロシージャの実行をキャンセルしました。"
+
+7 = ZZZZZ, "致命的エラー: ストアド・プロシージャの実行結果のフェッチに失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+8 = ZZZZZ, "エラー: ストアド・プロシージャの実行結果のフェッチに失敗しました。ストアド・プロシージャの実行をキャンセルしました。"
+
+9 = ZZZZZ, "エラー: SQL コマンドの結果データをキャンセルしました。ストアド・プロシージャの実行をキャンセルしました。"
+
+10 = ZZZZZ, "エラー: ストアド・プロシージャの実行結果のフェッチ処理が、予期しないリターン・コード '%1!' を生成しました。ストアド・プロシージャの実行をキャンセルしました。"
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "致命的エラー: サーバがデータベース '%1!' の syscomments テーブルからデータを検索するときにエラーが発生しました。"
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "エラー: データベース '%2!' にオブジェクト '%1!' がありません。"
+
+2 = ZZZZZ, "エラー: サーバがデータベース '%1!' の sysobjects テーブルからデータを検索するときにエラーが発生しました。オブジェクト '%2!' に対するコピー処理をキャンセルしました。"
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "エラー: データベース '%2!' にオブジェクト '%1!' の定義がありません。"
+
+2 = ZZZZZ, "エラー: サーバがデータベース '%1!' の syscomments テーブルからデータを検索するときにエラーが発生しました。オブジェクト '%2!' に対するコピー処理をキャンセルしました。"
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "エラー: サーバがデータベース '%1!' の sysobjects テーブルからデータを検索するときにエラーが発生しました。オブジェクト '%2!' に対するコピー処理をキャンセルしました。"
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "エラー: サーバがデータベース '%1!' の syscomments テーブルからデータを検索するときにエラーが発生しました。オブジェクト '%2!' に対するコピー処理をキャンセルしました。"
+
+2 = ZZZZZ, "致命的エラー: データベース '%1!' の syscomments テーブルからのオブジェクト '%1!' の SQL 定義文の読み込みに失敗しました。以降のコピー処理をすべてキャンセルしました。"
+
+3 = ZZZZZ, "致命的エラー: ファイル '%1!' への書き込み処理がファイルの終わりエラーを生成しました; 使用可能なディスク領域をチェックしてください。以降のコピー処理をすべてキャンセルしました。"
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "エラー: Client-Library の終了に失敗しました。"
+
+2 = ZZZZZ, "エラー: CS-Library コマンド構造体の割り当て解除に失敗しました。"
+
+3 = ZZZZZ, "エラー: クライアント・サーバ接続の属性の検索に失敗しました。"
+
+4 = ZZZZZ, "エラー: サーバ '%1!' とのクライアント・サーバ接続のクローズに失敗しました。"
+
+5 = ZZZZZ, "エラー: CS-Library 接続構造体の割り当て解除に失敗しました。"
+
+

@@ -1,0 +1,694 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dblib.loc 1.2 8/18/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=polish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[dbliberrors]
+
+1 = SYBESYNC, "Próba odczytu podczas braku synchronizacji z SQL Server."
+
+2 = SYBEFCON, "Połączenie z SQL Server nie powiodło się."
+
+3 = SYBETIME, "Upłynął limit czasu połączenia z SQL Server."
+
+4 = SYBEREAD, "Odczyt z SQL Server nie powiódł się."
+
+5 = SYBEBUFL, "Błąd wewnętrzny biblioteki DB-LIBRARY - błędna długość buforu nadawania."
+
+6 = SYBEWRIT, "Zapis do SQL Server nie powiódł się."
+
+7 = SYBEVMS, "Sendflush: Błąd we/wy VMS."
+
+8 = SYBESOCK, "Nie można otworzyć gniazda."
+
+9 = SYBECONN, "Nie można połączyć gniazda -- SQL Server jest niedostępny \
+lub nie istnieje."
+
+10 = SYBEMEM, "Nie można przydzielić wystarczającego obszaru pamięci."
+
+11 = SYBEDBPS, "Przydzielono już maksymalną liczbę procesów DBPROCESS."
+
+12 = SYBEINTF, "Nie znaleziono nazwy serwera w pliku interfejsu."
+
+13 = SYBEUHST, "Nieznana nazwa komputera hosta."
+
+14 = SYBEPWD, "Nieprawidłowe logowanie."
+
+15 = SYBEOPIN, "Nie można otworzyć pliku interfejsu."
+
+16 = SYBEINLN, "Plik interfejsu: nieoczekiwany koniec wiersza."
+
+17 = SYBESEOF, "Nieoczekiwany koniec pliku (EOF) z SQL Server."
+
+18 = SYBESMSG, "Błąd ogólny SQL Server: Sprawdź komunikaty pochodzące z SQL Server."
+
+19 = SYBERPND, "Próba zainicjowania nowej operacji SQL Server z \
+oczekującymi wynikami."
+
+20 = SYBEBTOK, "Zły token z SQL Server: Brak synchronizacji przetwarzania strumienia danych."
+
+21 = SYBEITIM, "Określono nieprawidłową wartość limitu czasu."
+
+22 = SYBEOOB, "Błąd wysyłania danych poza pasmem do SQL Server."
+
+23 = SYBEBTYP, "Nieznany typ dowiązania przekazany do funkcji biblioteki DB-LIBRARY."
+
+24 = SYBEBNCR, "Próba dowiązania zmiennej użytkownika do nieistniejącego wiersza compute."
+
+25 = SYBEIICL, "Niedozwolona długość kolumny liczb typu integer zwrócona przez SQL Server. \
+Dozwolone długości liczb typu integer to 1, 2 i 4 bajty."
+
+26 = SYBECNOR , "Numer kolumny poza zakresem."
+
+27 = SYBENPRM, "Parametr NULL nie jest dozwolony dla dboption."
+
+28 = SYBEUVDT , "Napotkano nieznany typ danych o zmiennej długości."
+
+29 = SYBEUFDT , "Napotkano nieznany typ danych o stałej długości."
+
+30 = SYBEWAID, "Wewnętrzny błąd biblioteki DB-LIBRARY: ALTFMT występujący po ALTNAME ma \
+zły identyfikator."
+
+31 = SYBECDNS, "Strumień danych wskazuje, że kolumna compute pochodzi z \
+nieistniejącego elementu listy wyboru."
+
+32 = SYBEABNC, "Próba dowiązania do nieistniejącej kolumny."
+
+33 = SYBEABMT, "Użytkownik próbował wywołać funkcję dbbind() z niezgodnymi typami kolumn \
+i zmiennych."
+
+34 = SYBEABNP, "Próba dowiązania z wykorzystaniem wskaźników o wartości NULL."
+
+35 = SYBEAAMT, "Użytkownik próbował wywołać funkcję dbaltbind() z niezgodnymi typami kolumn \
+i zmiennych."
+
+36 = SYBENXID, "Serwer nie przydzielił nam identyfikatora transakcji rozproszonej."
+
+37 = SYBERXID, "Serwer nie rozpoznał naszego identyfikatora transakcji rozproszonej."
+
+38 = SYBEICN, "Niewłaściwy computeid lub numer kolumny compute."
+
+39 = SYBENMOB, "Nie ma takiego elementu klauzuli 'order by'."
+
+40 = SYBEAPUT, "Próba wydrukowania nieznanego tokenu."
+
+41 = SYBEASNL, "Próba ustawienia pól w loginrec o wartości null."
+
+42 = SYBENTLL, "Zbyt długa nazwa pola loginrec."
+
+43 = SYBEASUL, "Próba ustawienia nieznanego pola loginrec."
+
+44 = SYBERDNR, "Próba pobrania danych z nieistniejącego wiersza."
+
+45 = SYBENSIP, "Ujemny indeks początkowy przekazany do funkcji dbstrcpy()."
+
+46 = SYBEABNV, "Próba dowiązania do zmiennej programowej o wartości NULL."
+
+47 = SYBEDDNE, "Proces DBPROCESS zamknięty lub nie jest włączony."
+
+48 = SYBECUFL, "Konwersja danych spowodowała niedomiar."
+
+49 = SYBECOFL, "Konwersja danych spowodowała nadmiar."
+
+50 = SYBECSYN, "Próba konwersji danych została zatrzymana z powodu błędu składniowego \
+w polu źródłowym."
+
+51 = SYBECLPR, "Konwersja danych spowodowała utratę dokładności."
+
+52 = SYBECNOV, "Próba przypisania zmiennej wartości NULL spowodowała nadmiar."
+
+53 = SYBERDCN, "Żądana konwersja danych nie istnieje."
+
+54 = SYBESFOV, "Funkcja dbsafestr() spowodowała przepełnienie swojego buforu docelowego."
+
+55 = SYBEUNT, "Znaleziono nieznany typ sieci w pliku interfejsu."
+
+56 = SYBECLOS, "Błąd podczas zamykania połączenia sieciowego."
+
+57 = SYBEUAVE, "Nie można przydzielić flagi zdarzenia VMS."
+
+58 = SYBEUSCT, "Nie można ustawić czasomierza komunikacji."
+
+59 = SYBEEQVA, "Błąd kolejkowania procedury VMS AST."
+
+60 = SYBEUDTY, "Napotkano nieznany typ danych."
+
+61 = SYBETSIT, "Próba wywołania funkcji dbtsput() z niewłaściwą sygnaturą czasową."
+
+62 = SYBEAUTN, "Próba aktualizacji sygnatury czasowej tabeli, która nie posiada \
+kolumny sygnatury czasowej."
+
+63 = SYBEBDIO, "Zły kierunek kopiowania zbiorczego.  Musi mieć wartość IN lub OUT."
+
+64 = SYBEBCNT, "Próba użycia kopiowania zbiorczego z nieistniejącą tabelą serwera."
+
+65 = SYBEIFNB, "Niedozwolony numer pola przekazany do funkcji bcp_control()."
+
+66 = SYBETTS, "Tabela, którą procedura kopiowania zbiorczego próbuje skopiować \
+do pliku hosta, jest krótsza niż \
+liczba wierszy wskazanych do pominięcia przy kopiowaniu zbiorczym."
+
+67 = SYBEKBCO, "1000 wierszy zostało pomyślnie skopiowanych zbiorczo do pliku hosta."
+
+68 = SYBEBBCI, "Wsad został pomyślnie skopiowany zbiorczo do SQL Server."
+
+69 = SYBEKBCI, "Bcp: 1000 wierszy zostało wysłanych do SQL Server."
+
+70 = SYBEBCRE, "Błąd we/wy podczas odczytu pliku danych bcp."
+
+71 = SYBETPTN, "Błąd składniowy: W nazwach tabel dozwolone są tylko dwie kropki."
+
+72 = SYBEBCWE, "Błąd we/wy podczas zapisu pliku danych bcp."
+
+73 = SYBEBCNN, "Próba zbiorczego skopiowania wartości NULL do \
+kolumny serwera %1!, która nie akceptuje wartości NULL."
+
+74 = SYBEBCOR, "Próba zbiorczego skopiowania zbyt dużego wiersza do SQL Server."
+
+75 = SYBEBCIS, "Próba zbiorczego skopiowania wartości kolumny o niedozwolonym rozmiarze do \
+SQL Server."
+
+76 = SYBEBCPI, "Funkcja bcp_init() musi zostać wywołana przed wszystkimi procedurami bcp."
+
+77 = SYBEBCPN, "Funkcja bcp_bind(), bcp_collen() i bcp_colptr() \
+mogą zostać użyte tylko po wywołaniu funkcji bcp_init() \
+z kierunkiem kopiowania ustawionym na DB_IN."
+
+78 = SYBEBCPB, "Funkcja bcp_bind() NIE może być użyta po przekazaniu do bcp_init() \
+nazwy pliku wejściowego o wartości różnej od NULL."
+
+79 = SYBEVDPT, "Do celów kopiowania zbiorczego, wszystkie dane o zmiennej długości \
+muszą posiadać określony prefiks długości lub terminator."
+
+80 = SYBEBIVI, "Funkcje bcp_columns() i bcp_colfmt() mogą być użyte \
+tylko po przekazaniu do bcp_init() prawidłowego pliku wejściowego."
+
+81 = SYBEBCBC, "Funkcja bcp_columns() musi być wywołana przed bcp_colfmt()."
+
+82 = SYBEBCFO, "Pliki hosta bcp muszą zawierać co najmniej jedną kolumnę."
+
+83 = SYBEBCVH, "Funkcja bcp_exec() może być wywołana \
+tylko po przekazaniu do bcp_init() prawidłowego pliku hosta."
+
+84 = SYBEBCUO, "Bcp: Nie można otworzyć pliku danych hosta."
+
+85 = SYBEBCUC, "Bcp: Nie można zamknąć pliku danych hosta."
+
+86 = SYBEBUOE, "Bcp: Nie można otworzyć pliku błędów."
+
+87 = SYBEBUCE, "Bcp: Nie można zamknąć pliku błędów."
+
+88 = SYBEBWEF, "Błąd we/wy podczas zapisu pliku błędów bcp."
+
+89 = SYBEASTF, "VMS: Nie można ustawić trybu dla control_c ast."
+
+90 = SYBEUACS, "VMS: Nie można przypisać kanału do sys$command."
+
+91 = SYBEASEC, "Próba wysłania pustego buforu poleceń do SQL Server."
+
+92 = SYBETMTD, "Próba wysłania zbyt dużej ilości danych typu TEXT za pomocą wywołania funkcji dbmoretext()."
+
+93 = SYBENTTN, "Próba użycia funkcji dbtxtsput() do umieszczenia nowej \
+tekstowej sygnatury czasowej w nieistniejącym wierszu danych."
+
+94 = SYBEDNTI, "Próba użycia funkcji dbtxtsput() do umieszczenia nowej \
+tekstowej sygnatury czasowej w kolumnie, której typem danych \
+nie jest SYBTEXT ani SYBIMAGE."
+
+95 = SYBEBTMT, "Próba wysłania zbyt dużej ilości danych typu TEXT za pomocą \
+wywołania funkcji bcp_moretext()."
+
+96 = SYBEORPF, "Próba ustawienia hasła zdalnego spowoduje \
+przepełnienie pola hasła zdalnego w rekordzie logowania."
+
+97 = SYBEUVBF, "Próba odczytu nieznanej wersji pliku formatu BCP."
+
+98 = SYBEBUOF, "Bcp: Nie można otworzyć pliku formatu."
+
+99 = SYBEBUCF, "Bcp: Nie można zamknąć pliku formatu."
+
+100 = SYBEBRFF, "Błąd we/wy podczas odczytu pliku formatu bcp."
+
+101 = SYBEBWFF, "Błąd we/wy podczas zapisu pliku formatu bcp."
+
+102 = SYBEBUDF, "Bcp: W pliku formatu znaleziono nierozpoznany typ danych."
+
+103 = SYBEBIHC, "W pliku formatu bcp znaleziono niewłaściwy numer kolumny hosta."
+
+104 = SYBEBEOF, "Napotkano nieoczekiwany koniec pliku (EOF) w pliku danych BCP."
+
+105 = SYBEBCNL, "W pliku danych BCP znaleziono ujemny prefiks długości."
+
+106 = SYBEBCSI, "Kolumny pliku hosta mogą być pomijane tylko podczas kopiowania do \
+(w kierunku IN) serwera."
+
+107 = SYBEBCIT, "Dozwolone jest używanie terminatorów BCP ze \
+zmiennymi programowymi innymi niż \
+SYBCHAR, SYBBINARY, SYBTEXT lub SYBIMAGE."
+
+108 = SYBEBCSA, "Plik hosta '%1!' BCP zawiera tylko %2! \
+wiersze(-y). Pominięcie wszystkich tych wierszy nie jest dozwolone."
+
+109 = SYBENULL, "Wskaźnik DBPROCESS o wartości NULL przekazany do biblioteki DB-Library."
+
+110 = SYBEUNAM, "Nie można pobrać aktualnej nazwy użytkownika z systemu operacyjnego."
+
+111 = SYBEBCRO, "Plik hosta '%1!' BCP zawiera tylko %2! \
+wiersze(-y). Nie było możliwe odczytanie żądanych %3! wiersze(-y)."
+
+112 = SYBEMPLL, "Próba ustawienia maksymalnej liczby procesów DBPROCESS na wartość mniejszą niż 1."
+
+113 = SYBERPIL, "Nie jest dozwolone przekazanie wartości -1 do funkcji dbrpcparam() \
+jako długości danych (datalen) parametrów, które są \
+typu SYBCHAR, SYBVARCHAR, SYBBINARY lub SYBVARBINARY."
+
+114 = SYBERPUL, "Podczas przekazywania parametrów SYBINTN, SYBDATETIMN, \
+SYBMONEYN lub SYBFLTN za pomocą \
+funkcji rpcparam(), konieczne jest określenie \
+maksymalnej lub rzeczywistej długości parametru, \
+tak aby biblioteka DB-Library mogła rozpoznać je jako \
+SYBINT1, SYBINT2, SYBINT4, SYBMONEY, \
+SYBMONEY4 itd."
+
+115 = SYBEUNOP, "Nieznana opcja przekazana do funkcji dbsetopt()."
+
+116 = SYBECRNC, "Aktualny wiersz nie jest wynikiem klauzuli compute \
+%1!, dlatego nie jest dozwolona próba \
+wybrania danych z tego wiersza."
+
+117 = SYBERTCC, "Funkcja dbreadtext() nie może być używana do odbierania \
+wyników kwerendy, która zawiera \
+klauzulę COMPUTE."
+
+118 = SYBERTSC, "Funkcja dbreadtext() może być używana tylko do odbierania \
+wyników kwerendy, która zawiera \
+pojedynczą kolumnę wynikową."
+
+119 = SYBEUCRR, "Błąd wewnętrzny oprogramowania: Funkcja dbpasswd() zgłosiła nieznany \
+wynik połączenia."
+
+120 = SYBERPNA, "Możliwość obsługi RPC jest dostępna tylko w przypadku \
+korzystania z SQL Server o numerze wersji 4.0 lub większym."
+
+121 = SYBEOPNA, "Możliwość obsługi danych typu text/image jest dostępna tylko w przypadku \
+korzystania z SQL Server o numerze wersji 4.0 lub większym."
+
+122 = SYBEFGTL, "Bcp: Numer pierwszego wiersza do skopiowania \
+nie może być większy niż numer \
+ostatniego wiersza do skopiowania."
+
+123 = SYBECWLL, "Próba ustawienia szerokości kolumny mniejszej niż 1."
+
+124 = SYBEUFDS, "W funkcji dbstrbuild() napotkano nierozpoznany format."
+
+125 = SYBEUCPT, "W funkcji dbstrbuild() napotkano nierozpoznany \
+typ parametru formatu niestandardowego."
+
+126 = SYBETMCF, "Próba zainstalowania zbyt wielu formatów niestandardowych \
+za pomocą dbfmtinstall()."
+
+127 = SYBEAICF, "Błąd podczas próby zainstalowania formatu niestandardowego."
+
+128 = SYBEADST, "Błąd podczas próby określenia rozmiaru pary \
+tabel translacyjnych."
+
+129 = SYBEALTT, "Błąd podczas próby ładowania pary tabel translacyjnych."
+
+130 = SYBEAPCT, "Błąd podczas próby przeprowadzenia translacji zestawu znaków."
+
+131 = SYBEXOCI, "Translacja zestawu znaków spowodowała przepełnienie \
+buforu docelowego podczas korzystania z bcp do kopiowania \
+danych z pliku hosta do SQL Server."
+
+132 = SYBEFSHD, "Błąd podczas próby znalezienia katalogu głównego Sybase."
+
+133 = SYBEAOLF, "Błąd podczas próby otwierania pliku lokalizacyjnego."
+
+134 = SYBEARDI, "Błąd podczas próby odczytania informacji o wartości datetime \
+z pliku lokalizacyjnego."
+
+135 = SYBEURCI, "Nie można odczytać informacji o prawach autorskich \
+z pliku lokalizacyjnego dblib."
+
+136 = SYBEARDL, "Błąd podczas próby odczytania \
+pliku lokalizacyjnego dblib.loc."
+
+137 = SYBEURMI, "Nie można odczytać informacji o formacie walutowym \
+z pliku lokalizacyjnego dblib."
+
+138 = SYBEUREM, "Nie można odczytać informacji o mnemoniku błędu \
+z pliku lokalizacyjnego dblib."
+
+139 = SYBEURES, "Nie można odczytać komunikatu o błędzie \
+z pliku lokalizacyjnego dblib."
+
+140 = SYBEUREI, "Nie można odczytać informacji o błędzie \
+z pliku lokalizacyjnego dblib."
+
+141 = SYBEOREN, "Ostrzeżenie: W pliku dblib.loc napotkano numer błędu \
+spoza zakresu. Maksymalny \
+dozwolony numer błędu jest zdefiniowany \
+w zmiennej DBERRCOUNT w pliku sybdb.h."
+
+142 = SYBEISOI,	"Znaleziono nieprawidłowe informacje o porządku sortowania."
+
+143 = SYBEIDCL, "Niedozwolona długość kolumny datetime zwrócona przez \
+SQL Server. Dozwolone długości typu datetime to 4 i 8 bajtów."
+
+144 = SYBEIMCL, "Niedozwolona długość kolumny typu money zwrócona przez \
+SQL Server. Dozwolone długości typu money to 4 i 8 bajtów."
+
+145 = SYBEIFCL, "Niedozwolona długość kolumny typu floating-point zwrócona przez \
+SQL Server. Dozwolone długości typu floating-point to 4 i 8 bajtów."
+
+146 = SYBEUTDS,	"Nierozpoznana wersja TDS otrzymana z SQL Server."
+
+147 = SYBEBUCF, "Bcp: Nie można utworzyć pliku formatu."
+
+148 = SYBEACNV, " Próba przeprowadzenia konwersji danych ze \
+zmienną docelową o wartości NULL."
+
+149 = SYBEDPOR, "Stała datepart poza zakresem."
+
+150 = SYBENDC, "Data w postaci numerycznej nie może zawierać składnika ujemnego."
+
+151 = SYBEMVOR, "Wartości miesięcy muszą zawierać się w przedziale od 1 do 12."
+
+152 = SYBEDVOR, "Wartości dni muszą zawierać się w przedziale od 1 do 7."
+
+153 = SYBENBVP, "Do funkcji dbsetnull() nie można przekazać wskaźnika bindval o wartości NULL."
+
+154 = SYBESPID, "Wywołanie funkcji dbspid() z dbproc o wartości NULL."
+
+155 = SYBENDTP, "Wywołanie funkcji dbdatecrack() z parametrem datetime o wartości NULL."
+
+156 = SYBEXTN, "Parametry xlt_tosrv i xlt_todisp funkcji dbfree_xlate() miały wartość NULL."
+
+157 = SYBEXTDN, "Ostrzeżenie: Parametr xlt_todisp funkcji dbfree_xlate() miał wartość NULL.  Obszar skojarzony z parametrem xlt_tosrv został zwolniony."
+
+158 = SYBEXTSN, "Ostrzeżenie: Parametr xlt_tosrv funkcji dbfree_xlate() miał wartość NULL.  Obszar skojarzony z parametrem xlt_todisp został zwolniony."
+
+159 = SYBENUM, "Niepoprawna liczba argumentów przekazanych do biblioteki DB-Library."
+
+160 = SYBETYPE, "Niepoprawny typ argumentu przekazany do biblioteki Hyper/DB-Library."
+
+161 = SYBEGENOS, "Błąd ogólny systemu operacyjnego."
+
+162 = SYBEPAGE, "Zły typ zasobu lub długość przekazana do operacji dbpage??()."
+
+163 = SYBEOPTNO, "Opcja nie jest dozwolona."
+
+164 =  SYBEETD, "Wysłanie oczekiwanej ilości danych typu TEXT lub IMAGE za pomocą funkcji dbmoretext() nie powiodło się."
+
+165 = SYBERTYPE, "Niepoprawny typ zasobu przekazany do biblioteki Hyper/DB-Library."
+
+166 = SYBERFILE, "Nie można otworzyć pliku zasobów."
+
+167 = SYBEFMODE, "Odmowa użycia trybu Read/Write/Append dla pliku."
+
+168 = SYBESLCT, "Nie można zaznaczyć lub skopiować określonego pola."
+
+169 = SYBEZTXT, "Próba wysłania danych typu TEXT lub IMAGE o zerowej długości do dataserver za pomocą funkcji dbwritetext()."
+
+170 = SYBENTST, "VMS: Otwierany plik musi być typu stream_lf."
+
+171 = SYBEOSSL, "Niepoprawne logowanie: Poziom bezpieczeństwa logowania systemu operacyjnego nie znajduje się w zakresie Secure SQL Server."
+
+172 = SYBEESSL, "Niepoprawne logowanie: Wprowadzony poziom bezpieczeństwa logowania nie zgadza się z poziomem systemu operacyjnego."
+
+173 = SYBENLNL, "Program nie jest połączony z określoną biblioteką sieciową."
+
+174 = SYBENHAN, "Wywołanie funkcji dbrecvpassthru() z parametrem uchwytu o wartości NULL."
+
+175 = SYBENBUF, "Wywołanie dbsendpassthru() z parametrem buf o wartości NULL."
+
+176 = SYBENULP, "Wywołanie %1! z parametrem %1! o wartości NULL."
+
+177 = SYBENOTI, "Program obsługi zdarzeń musi zostać zainstalowany zanim będzie można wykonać żądanie powiadomienia."
+
+178 = SYBEEVOP, "Wywołanie funkcji dbregwatch() ze złym parametrem opcji."
+
+179 = SYBENEHA, "Wywołanie funkcji dbreghandle() z parametrem programu obsługi o wartości NULL."
+
+180 = SYBETRAN, "DBPROCESS jest używany dla innej transakcji."
+
+181 = SYBEEVST, "Przed wywołaniem funkcji dbregparam() trzeba zainicjować transakcję."
+
+182 = SYBEEINI, "Funkcję dbreginit() należy wywołać przed dbregexec()."
+
+183 = SYBEECRT, "Funkcję dbnpdefine() należy wywołać przed dbnpcreate()."
+
+184 = SYBEECAN, "Próba anulowania niewymaganego powiadomienia o zdarzeniu."
+
+185 = SYBEEUNR, "Otrzymano niezapowiedziane powiadomienie o zdarzeniu."
+
+186 = SYBERPCS, "Funkcję dbrpcinit() należy wywołać przed dbrpcparam() lub dbrpcsend()."
+
+187 = SYBETPAR, "Nie zdefiniowano parametru SYBTEXT lub SYBIMAGE."
+
+188 = SYBETEXS, "Wywołanie funkcji dbmoretext() ze złym parametrem rozmiaru."
+
+189 = SYBETRAC, "Próba wyłączenia flagi śledzenia, która nie była włączona."
+
+190 = SYBETRAS, "Błąd wewnętrzny biblioteki DB-Library - nie znaleziono struktury śledzenia."
+
+191 = SYBEPRTF, "Funkcja dbtracestring() może być wywołana tylko z printfunc()."
+
+192 = SYBETRSN, "Zły parametr numbytes przekazany do dbtracestring()."
+
+193 = SYBEBPKS, "W DBSETLPACKET() parametr rozmiaru pakietu musi mieć wartość z przedziału od 256 do 9999."
+
+194 = SYBEIPV, "Wartość %1! nie jest dozwolona dla parametru %2! %3!."
+
+195 = SYBEMOV, "Obliczenia walutowe spowodowały nadmiar w funkcji %1!."
+
+196 = SYBEDIVZ, "Próba dzielenia przez $0.00 w funkcji %1!."
+
+197 = SYBEASTL, "Próba wykonania synchronicznej operacji we/wy na poziomie AST. "
+
+198 = SYBESEFA, "Nie można wywołać DB_SETEVENT_VMS jeśli występują połączenia."
+
+199 = SYBEPOLL, "Uaktywniono już funkcję dbpoll()."
+
+200 = SYBENOEV, "Nie można wywołać DBPOLL, gdy wyłączone są powiadomienia o zarejestrowanych procedurach"
+
+201 =  SYBEBADPK, "Rozmiar pakietu %1! nie jest obsługiwany -- użyto rozmiaru %2!."
+202 =  SYBESECURE, "Funkcja Secure Server nie jest obsługiwana w tej wersji."
+
+203 =  SYBECAP,  "Możliwości biblioteki DB-Library nie akceptowane przez serwer."
+
+204 =  SYBEFUNC,  "Funkcja nie jest obsługiwana na określonym poziomie wersji."
+
+205 =  SYBERESP, "Adres odpowiedzi funkcji przekazany do funkcji dbresponse() musi mieć wartość różną od NULL."
+
+206 =  SYBEIVERS, "Określono niedozwolony poziom wersji."
+
+207 =  SYBEONCE, "Funkcja może być wywołana tylko raz."
+
+208 =  SYBERPNULL, "Parametr wartości dla funkcji dbprcparam() może mieć wartość NULL, tylko gdy parametr datalen ma wartość 0."
+
+209 =  SYBERPTXTIM, "Parametry RPC nie mogą być typu Text/Image."
+
+210 =  SYBENEG, "Próba logowania negocjowanego nie powiodła się."
+
+211 =  SYBELBLEN, "Etykiety bezpieczeństwa powinny mieć długość mniejszą niż 256 znaków."
+
+212 =  SYBEUMSG, "Nieznany identyfikator komunikatu w strumieniu danych MSG."
+
+213 =  SYBECAPTYP,  "Nieoczekiwany typ możliwości w strumieniu danych CAPABILITY."
+
+214 =  SYBEBNUM, "Zły parametr numbytes przekazany do funkcji dbstrcpy()."
+
+215 =  SYBEBBL, "Zły parametr bindlen przekazany do funkcji dbsetnull()."
+
+216 =  SYBEBPREC, "Określono niedozwoloną dokładność."
+
+217 =  SYBEBSCALE, "Określono niedozwoloną skalę."
+
+218 =  SYBECDOMAIN, "Wartość pola źródłowego nie należy do domeny dozwolonych wartości."
+
+219 =  SYBECINTERNAL, "Wewnętrzny błąd konwersji."
+
+220 =  SYBEBTYPSRV, "Typ danych nie jest obsługiwany przez serwer."
+
+221 =  SYBEBCSET,  "Napotkano nieznany zestaw znaków."
+
+222 =  SYBEFENC,  "Szyfrowanie hasła nie powiodło się."
+
+223 =  SYBEFRES,  "Działanie funkcji Challenge-Response nie powiodło się."
+
+224 =  SYBEISRVPREC, "Niedozwolona dokładność zwrócona przez serwer."
+
+225 =  SYBEISRVSCL, "Niedozwolona skala zwrócona przez serwer."
+
+226 =  SYBEINUMCL, "Nieprawidłowa długość kolumny typu numeric zwrócona przez serwer."
+
+227 =  SYBEIDECCL, "Nieprawidłowa długość kolumny typu decimal zwrócona przez serwer."
+
+228 =  SYBEBCMTXT, "Funkcja bcp_moretext() może być użyta tylko, gdy w tabeli serwerów znajduje się co najmniej jedna kolumna typu text lub image."
+
+229 =  SYBEBCPREC, "Kolumna %1!: Napotkano niedozwoloną wartość dokładności."
+
+230 =  SYBEBCBNPR, "bcp_bind(): Jeśli parametr varaddr ma wartość NULL, to prefixlen musi mieć wartość 0 i nie należy określać terminatora."
+
+231 =  SYBEBCBNTYP, "bcp_bind(): Jeśli parametr varaddr ma wartość NULL i parametr varlen jest większy od 0, to typem kolumny w tabeli musi być SYBTEXT lub SYBIMAGE, a typem zmiennej programowej musi być SYBTEXT, SYBCHAR, SYBIMAGE lub SYBBINARY."
+
+232 =  SYBEBCSNTYP, "kolumna numer %1!: Jeśli parametr varaddr ma wartość NULL i parametr varlen jest większy od 0, to typem kolumny w tabeli musi być SYBTEXT lub SYBIMAGE, a typem zmiennej programowej musi być SYBTEXT, SYBCHAR, SYBIMAGE lub SYBBINARY."
+
+233 =  SYBEBCPCTYP, "bcp_colfmt(): Jeśli parametr table_colnum ma wartość 0, to host_type nie może być równy 0."
+
+234 =  SYBEBCVLEN, "Parametr varlen powinien być większy lub równy -1."
+
+235 =  SYBEBCHLEN, "Parametr host_collen powinien być większy lub równy -1."
+
+236 =  SYBEBCBPREF, "Niedozwolona długość prefiksu. Dozwolone wartości to 0, 1, 2 lub 4."
+
+237 =  SYBEBCPREF, "Niedozwolona długość prefiksu. Dozwolone wartości to -1, 0, 1, 2 lub 4."
+
+238 =  SYBEBCITBNM, "bcp_init(): Parametr tblname nie może mieć wartości NULL."
+
+239 =  SYBEBCITBLEN, "bcp_init(): Parametr tblname jest zbyt długi."
+
+240 =  SYBEBCSNDROW, "NIE można wywołać bcp_sendrow(), jeśli wszystkie dane typu text dla poprzedniego wiersza nie zostały wysłane za pomocą bcp_moretext()."
+
+241 =  SYBEBPROCOL, "Błąd protokołu bcp: Zwrócona liczba kolumn różni się od rzeczywistej liczby odebranych kolumn."
+
+242 =  SYBEBPRODEF, "Błąd protokołu bcp: Oczekiwano informacji domyślnych, a nie otrzymano żadnych."
+
+243 =  SYBEBPRONUMDEF, "Błąd protokołu bcp: Zwrócona liczba wartości domyślnych różni się od rzeczywistej liczby odebranych wartości domyślnych."
+
+244 =  SYBEBPRODEFID, "Błąd protokołu bcp: Domyślny i rzeczywisty identyfikator kolumny nie jest taki sam"
+
+245 =  SYBEBPRONODEF, "Błąd protokołu bcp:  Odebrano wartość domyślną dla kolumny, która nie posiada wartości domyślnej."
+
+246 =  SYBEBPRODEFTYP, "Błąd protokołu bcp:  Typ danych wartości domyślnej różni się od typu danych kolumny."
+
+247 =  SYBEBPROEXTDEF, "Błąd protokołu bcp: Odebrano więcej niż jeden wiersz informacji domyślnych."
+
+248 =  SYBEBPROEXTRES, "Błąd protokołu bcp: Odebrano nieoczekiwany zbiór wynikowy."
+
+249 =  SYBEBPROBADDEF, "Błąd protokołu bcp: Odebrano niedozwolony domyślny identyfikator kolumny."
+
+250 =  SYBEBPROBADTYP, "Błąd protokołu bcp: Nieznany typ danych kolumny."
+
+251 =  SYBEBPROBADLEN, "Błąd protokołu bcp: Odebrano niedozwoloną długość typu danych."
+
+252 =  SYBEBPROBADPREC, "Błąd protokołu bcp: Odebrano niedozwoloną wartość dokładności."
+
+253 =  SYBEBPROBADSCL, "Błąd protokołu bcp: Odebrano niedozwoloną wartość skali."
+
+254 = SYBEBADTYPE, "Niedozwolona wartość parametru typu przekazana do %1!."
+
+255 = SYBECRSNORES, "Instrukcja kursora nie wygenerowała wyników."
+
+256 = SYBECRSNOIND, "Jedna z tabel wywoływanych w instrukcji kursora nie posiada unikalnego indeksu."
+
+257 = SYBECRSVIEW, "W instrukcji kursora nie można wykonać złączenia widoku z inną tabelą lub widokiem."
+
+258 = SYBECRSVIIND, "Widok używany w instrukcji kursora nie zawiera wszystkich unikalnych kolumn indeksu należących do odpowiednich tabel."
+
+259 = SYBECRSORD, "Tylko kursory w pełni sterowane zbiorem kluczy mogą zawierać frazy 'order by', ' group by' lub 'having'."
+
+260 = SYBECRSBUFR, "Nie należy włączać buforowania wierszy, gdy używane są kursory API."
+
+261 = SYBECRSNOFREE, "Nie należy włączać opcji DBNOAUTOFREE, gdy używane są kursory API."
+
+262 = SYBECRSDIS, "Instrukcja kursora zawiera jedną z niedozwolonych fraz: 'compute', 'union', 'for browse' lub 'select into'."
+
+263 = SYBECRSAGR, "Funkcje agregujące nie są dozwolone w instrukcji kursora."
+
+264 = SYBECRSFRAND, "Typy pobierania RANDOM i RELATIVE mogą być używane tylko w ramach zestawu kluczy kursorów sterowanych zestawem kluczy."
+
+265 = SYBECRSFLAST, "Typ pobierania LAST wymaga kursorów w pełni sterowanych zbiorem kluczy."
+
+266 = SYBECRSBROL, "Przewijanie wsteczne nie może być używane dla kursorów przewijania w przód."
+
+267 = SYBECRSFROWN, "Numer wiersza do pobrania znajduje się poza prawidłowym zakresem."
+
+268 = SYBECRSBSKEY, "Zbioru kluczy nie można przewijać wstecz w przypadku kursorów mieszanych z poprzednim typem pobierania."
+
+269 = SYBECRSRO, "Nie można dokonać modyfikacji lub blokowania danych w przypadku korzystania z kursora READONLY."
+
+270 = SYBECRSNOCOUNT, "Nie należy włączać opcji DBNOCOUNT w przypadku wykonywania aktualizacji lub usuwania za pomocą funkcji dbcursor()."
+
+271 = SYBECRSTAB, "Nazwa tabeli musi być określona w przypadku operacji, w skład których wchodzi blokowanie lub modyfikacja danych."
+
+272 = SYBECRSUPDNB, "Operacje aktualizacji lub wstawiania nie mogą korzystać ze zmiennych dowiązania, kiedy typem dowiązania jest NOBIND."
+
+273 = SYBECRSNOWHERE, "Klauzula WHERE nie jest dozwolona w przypadku operacji aktualizacji lub wstawiania kursora."
+
+274 = SYBECRSSET, "Klauzula SET jest wymagana w przypadku operacji aktualizacji lub wstawiania kursora."
+
+275 = SYBECRSUPDTAB, "Operacje aktualizacji lub wstawiania wykorzystujące zmienne dowiązania wymagają pojedynczych kursorów tabel."
+
+276 = SYBECRSNOUPD, "Operacja aktualizacji lub usuwania nie wpłynęła na żaden z wierszy."
+
+277 = SYBECRSINV, "Niewłaściwa instrukcja kursora."
+
+278 = SYBECRSNOKEYS, "Dla kursorów typu KEYSET musi być zdefiniowany cały zestaw kluczy."
+
+279 = SYBECRSNOBIND, "Dowiązanie kursora musi zostać wywołane przed wywołaniem dbcursor."
+
+280 = SYBECRSFTYPE, "Nieznany typ pobierania."
+
+281 = SYBECRSINVALID, "Uchwyt kursora jest nieprawidłowy."
+
+282 = SYBECRSMROWS, "Zwrócono wiele wierszy. Podczas pobierania dbname oczekiwany jest tylko jeden."
+
+283 = SYBECRSNROWS, "Nie zwrócono żadnego wiersza. Oczekiwany jest co najmniej jeden."
+
+284 = SYBECRSNOLEN, "Nie znaleziono unikalnego indeksu."
+
+285 = SYBECRSNOPTCC, "Nie znaleziono OPTCC."
+
+286 = SYBECRSNORDER, "Wymagana kolejność klauzul to: from, where i order by."
+
+287 = SYBECRSNOTABLE, "Nazwa tabeli ma wartość NULL."
+
+288 = SYBECRSNUNIQUE, "Z tym widokiem nie są skojarzone żadne klucze."
+
+289 = SYBECRSVAR, "Z tym dowiązaniem nie jest skojarzony żaden prawidłowy adres."
+
+290 = SYBENOVALUE, "Etykiety bezpieczeństwa wymagają zarówno nazwy jaki i wartości."
+
+291 = SYBEVOIDRET, "Parametr zwrotny nie może być typu SYBVOID."
+
+292 = SYBECLOSEIN, "Nie można zamknąć pliku interfejsów."
+
+293 = SYBEBOOL, "Parametr logiczny powinien mieć wartość TRUE lub FALSE."
+
+294 = SYBEBCPOPT, "Opcja %1! nie może zostać wywołana podczas trwania operacji kopiowania zbiorczego."
+
+295 = SYBEERRLABEL, "Program obsługi etykiety bezpieczeństwa zwrócił niedozwoloną wartość."
+
+296 = SYBEATTNACK, "Przekroczono czas oczekiwania na potwierdzenie ostrzeżenia przez serwer."
+
+297 = SYBEBBFL, "Wykonanie wsadu podczas kopiowania zbiorczego do SQL Server nie powiodło się."
+
+298 = SYBEDCL, "Wystąpił błąd warstwy kontroli katalogu (DCL)."
+
+299 = SYBECS, "Wystąpił błąd funkcji CS."
+
+; end of dblib error strings
+;

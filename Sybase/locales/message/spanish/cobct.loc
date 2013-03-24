@@ -1,0 +1,58 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+ All rights reserved.\
+ Use, duplication, or disclosure by the United States Government\
+ is subject to restrictions as set forth in FAR subparagraphs\
+ 52.227-19(a)-(d) for civilian agency contracts and DFARS\
+ 252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+ Sybase reserves all unpublished rights under the copyright laws\
+ of the United States.\
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "Nivel Veneer de COBOL CT Library"
+2 = ZZZZZ, "Nivel de ejecución COBOL"
+
+[cobcterror]
+
+1 = ZZZZZ, "Tipo incorrecto de CSBDIAG o CTBDIAG."
+2 = ZZZZZ, "Cobol no reconoce la opción CS_USERDATA."
+3 = ZZZZZ, "Código de compilador no reconocido."
+4 = ZZZZZ, "Falló la conversión de la variable de entrada a CTBPARAM."
+5 = 22022, "Error al almacenar o recuperar la información de tipo del indicador."
+6 = ZZZZZ, "Error de asignación de memoria."
+7 = ZZZZZ, "Tipo no aceptado."
+8 = ZZZZZ, "Cobol no reconoce la función CS-ALL-CAPS."
+9 = 22003, "Un número entero tenía demasiados dígitos para el PIC del elemento de datos en que se introdujo."
+10 = ZZZZZ, "Combinación de argumentos incorrecta para SYBSETSQLDA."
+11 = ZZZZZ, "SQLDA-SQLN es menor que SQLDA-SQLD."
+12 = ZZZZZ, "SQLDA-SQLD es negativo."
+
+[cobctorigin]
+
+1 = ZZZZZ, "Error interno"
+2 = ZZZZZ, "Error al llamar el programa: probablemente un código generado por el precompilador"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "Error irrecuperable."
+2 = ZA000, "Error interno."
+3 = ZD000, "Se ha recibido un CS_COMPUTE_RESULT inesperado."
+4 = ZE000, "Se ha recibido un CS_CURSOR_RESULT inesperado."
+5 = ZF000, "Se ha recibido un CS_PARAM_RESULT inesperado."
+6 = ZG000, "Se ha recibido un CS_ROW_RESULT inesperado."
+7 = ZB000, "No se ha devuelto ningún mensaje para sqlca, SQLCODE o SQLSTATE."
+8 = ZC000, "La conexión no se ha definido todavía."
+9 = ZH000, "Se ha recibido un CS_STATUS_RESULT inesperado."
+10 = ZI000, "Se ha recibido un CS_DESCRIBE_RESULT inesprado."
+11 = 22005, "Excepción en los datos: error de asignación del descriptor - tipo del elemento."
+12 = JZ000, "Error de asignación de memoria."
+13 = ZK000, "SQL Server debe ser de versión 10 o posterior."
+14 = ZM000, "Error al inicializar Client Library."
+15 = ZN000, "Error al tomar o liberar un mutex."
+16 = 08002, "Nombre de conexión en uso."
+16 = 25019, "Ha fallado el proceso de HA."

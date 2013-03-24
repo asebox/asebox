@@ -1,0 +1,106 @@
+; comment character is semicolon.
+; "bcp.loc" - Localization file for Bcp.
+;
+; Sccsid @(#) bcp.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1994 Sybase, Inc.\
+	Tous droits réservés.\
+Ce logiciel est diffusé dans le cadre d'un accord de \
+licence ou de non-divulgation et ne peut être utilisé \
+ou copié qu'en conformité avec les stipulations de\
+cet accord.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; The strings bcp uses to prompt the user for imformation.
+;
+[prompts]
+; /* BPPASSWORD */
+1 = "Mot de passe: "
+; /* BPCOLTYPE */
+2 = "Entrez le type de stockage fichier du champ %1! [%2!]: "
+; /* BPFLENNOMAX */
+3 = "Entrez la longueur de champ %1! [pas de longueur max]: "
+; /* BPFLEN */
+4 = "Entrez la longueur du champ %1! [%2!]: "
+; /* BPFTERM */
+5 = "Entrez le terminateur du champ [%1!]: "
+; /* BPPREFXLEN */
+6 = "Entrez la longueur de préfixe de champ %1! [%2!]: "
+;
+; End of prompts section.
+;
+; Now we list the localized error message strings.
+;
+[bcperrors]
+; /* BERRNOMEM */
+1 = "Erreur fatale: échec de l'allocation de mémoire."
+; /* BERRNOREADSPACE */
+2 = "Erreur d'E/S: Espace insuffisant à la saisie de données."
+; /* BERRTEMPFILE */
+3 = "Echec d'ouverture du fichier temp '%1!' pour écriture en dbedit()."
+; /* BERREDITFAIL */
+4 = "Impossible d'appeler l'éditeur '%1!'."
+; /* BERRNOINFILE */
+5 = "Impossible d'ouvrir le fichier d'entrée '%1!'."
+; /* BERRNOOUTFILE */
+6 = "Impossible d'ouvrir le fichier de sortie'%1!'."
+; /* BERRBADARG */
+7 = "bcp: Paramètre inconnu '%1!'."
+; /* BERRFIRSTROW */
+8 = "Pour utiliser le drapeau '%1!' pour copie de la première ligne, le numéro de ligne doit être supérieur ou égal à 1."
+; /* BERRFLROW */
+9 = "Pour utiliser les drapeaux '%1!' et '%2!' pour copie de la première et de la dernière ligne, le numéro de la première ligne doit être inférieur à celui de la dernière."
+; /* BERRLASTROW */
+10 = "Pour utiliser le drapeau '%1!' pour copie de la dernière ligne, le numéro de ligne doit être supérieur ou égal à 1."
+; /* BERRBADDIR */
+11 = "Le sens de la copie doit être soit 'in' soit 'out'."
+; /* BERRBADINTARG */
+12 = "Le drapeau '%1!' doit être suivi d'un nombre entier.  '%2!' n'est pas un nombre entier légal."
+; /* BERRDUPARGS */
+13 = "Avertissement: le drapeau '%1!' apparaît plusieurs fois.  La nouvelle valeur de drapeau remplace l'ancienne."
+; /* BERROVERRIDE */
+14 = "Attention: '%1!' modifie '%2!'"
+; /* BERRBADPREFXLEN */
+15 = "Longueur du préfixe non valide. Les valeurs de préfixe valides sont 0, 1, 2, ou 4."
+; /* BSTRLEVEL */
+16 = "Niveau (1-16): "
+; /* BERRLEVEL */
+17 = "Niveau non valide"
+; /* BSTRCOMP */
+18 = "Compartiment (1-64): "
+; /* BSTRENTRY */
+19 = "Entrée multiples, séparées par return, autorisées;  appuyez sur return quand terminé. "
+; /* BERRLOGIN */
+20 = "Ouverture de session par SA (N/O): "
+; /* BSTRTRY */
+21 = "Réessayer:"
+; /* BERRCOMP */
+22 = "Compartiment non valide"
+; /* BSTRSTART */
+23 = "Début de la copie..."
+; /* BSTRROW */
+24 = "%1! colonnes copiées."
+; /* BSTRTIME */
+25 = "Temps horloge (ms.): total = %1!"
+; /* BSTRSAVE */
+26 = "Voulez-vous sauvegarder ces informations de format dans un fichier? [O/N] "
+; /* BSTRHOST */
+27 = "Nom fichier d'application [%1!]: "
+; /* BERRCOLTYPE */
+28 = "Type de colonne non valide. Types valides:"
+; /* BERRDSCOL */
+29 = "\t<cr>: même type que colonne DataServer."
+; /* BSTRAVG */
+30 = "  Avg = %6! (%2! lignes par sec.)"
+; /* BERRCOPY */
+31 = "Echec de la copie bcp %1!"
+; /* BERRBADPRECISION */
+32  = "Précision incorrecte. La précision doit se situer entre \
+%1! et %2!"
+; /* BERRBADSCALE */
+33  = "Echelle non valide. L'échelle doit se situer entre %1! et %2! \
+et être inférieur ou égale à la précision"
+;
+; End of error strings section.

@@ -1,0 +1,70 @@
+; cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Umschalten auf Datenbank '%1!' mit 'use' fehlgeschlagen." 
+2 = ZZZZZ, "Abruf von Daten in der Tabelle und Abfrage des\\nDeskriptors für Text- oder Bilddaten fehlgeschlagen."
+3 = ZZZZZ, "Aktualisierung der Tabelle mit neuen Text- oder Bilddaten fehlgeschlagen."
+4 = ZZZZZ, "Erstellung der Tabelle fehlgeschlagen."
+5 = ZZZZZ, "Entfernen der Tabelle fehlgeschlagen."
+6 = ZZZZZ, "Ungültige SQL-Abfrage."
+7 = ZZZZZ, "Abruf der Abfrageergebnisse fehlgeschlagen."
+8 = ZZZZZ, "SQL-Abfrage gab mehrere Zeilen zurück. Es wurde erwartet,\\ndass genau eine Zeile zurückgegeben wird."
+9 = ZZZZZ, "SQL-Abfrage gab null Zeilen zurück. Es wurde erwartet,\\ndass genau eine Zeile zurückgegeben wird."
+10 = ZZZZZ, "Datei '%1!' kann nicht geöffnet werden. Vergewissern Sie sich, dass die Datei existiert und Sie Schreibberechtigung dafür besitzen."
+11 = ZZZZZ, "Datei '%1!' kann nicht geöffnet werden. Vergewissern Sie sich, dass die Datei existiert und lesbar ist."
+12 = ZZZZZ, "Datei '%1!' kann nicht geschlossen werden. Vergewissern Sie sich, dass die Datei existiert und bereits offen ist."
+13 = ZZZZZ, "Datei '%1!' kann nicht entfernt werden. Vergewissern Sie sich, dass die Datei existiert und Sie die Berechtigung haben, sie zu löschen."
+14 = ZZZZZ, "Die Größe der Datei '%1!' ist 0. Vergewissern Sie sich, dass die Datei nicht leer ist,"
+15 = ZZZZZ, "JAR-Datei '%1!' ist nicht vorhanden."
+16 = ZZZZZ, "Verarbeitung des Zeitstempels fehlgeschlagen."
+17 = ZZZZZ, "Interner Fehler: ct_send_data() fehlgeschlagen."
+18 = ZZZZZ, "Interner Fehler: ct_get_data() fehlgeschlagen."
+19 = ZZZZZ, "Interner Fehler: ct_data_info() fehlgeschlagen."
+20 = ZZZZZ, "Die Länge von '%1!' überschreitet die Maximallänge von '%2!' Byte."
+21 = ZZZZZ, "Dieser Befehl kann nicht ausgeführt werden, da Java-Dienste nicht aktiviert sind. Ein Benutzer \\nmit der Systemadministrator-Rolle muss das System neu konfigurieren, um Java zu aktivieren."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Der von der DSQUERY angegebene Servername ist ungültig\\noder DSQUERY wird nicht aus der Umgebung gesetzt."
+2 = ZZZZZ, "Ungültiger Benutzer-Login-Name oder Login-Name ist nicht aus der Umgebung gesetzt."
+3 = ZZZZZ, "Das von der Umgebungsvariablen SYBASE gesetzte Verzeichnis ist ungültig oder SYBASE wird nicht aus der Umgebung gesetzt."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Initialisierung der Clientanwendung fehlgeschlagen."
+2 = ZZZZZ, "'%1!' fehlgeschlagen. Prüfen Sie oben stehende Fehlermeldungen."
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Schwer wiegender Fehler: Speicherzuordnung fehlgeschlagen."
+2 = ZZZZZ, "Einstellung der Verbindungseigenschaften fehlgeschlagen."
+3 = ZZZZZ, "Einrichtung der Verbindung fehlgeschlagen."
+4 = ZZZZZ, "Unerkanntes Sprachanpassungsobjekt. Standardwert '%1!' wird verwendet."
+5 = ZZZZZ, "Interner Fehler: Ein ungültiger Sprachanpassungswert wurde an cs_locale() übergeben."
+6 = ZZZZZ, "Syntaxfehler in '%1!'."
+7 = ZZZZZ, "Fehler bei dem Versuch, ein Paar von Übersetzungstabellen zu laden."
+8 = ZZZZZ, "Unterbrechung - Programm abgebrochen."
+
+

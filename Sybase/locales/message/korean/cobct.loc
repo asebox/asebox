@@ -1,0 +1,58 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "저작권 (C) 1990, 2001 Sybase, Inc.\
+ 모든 저작권은 본사 소유입니다.\
+ 미 연방 정부에 의한 사용, 복제 또는 공개는\
+ 민간 대행 계약의 경우 FAR 항목 52.227-19(a)-(d)와\
+ 국방성 계약의 경우 DFARS 252.227-7013(c)(1)(ii)에\
+ 명시된 규정을 따릅니다.\
+ Sybase는 미 저작권법에 따라 발표되지 않은 출판물에 대한\
+ 모든 권리를 가지고 있습니다. \
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "COBOL CT 라이브러리 장식 레이어"
+2 = ZZZZZ, "COBOL 실행시 레이어"
+
+[cobcterror]
+
+1 = ZZZZZ, "CSBDIAG 또는 CTBDIAG에 대한 유형이 잘못되었습니다."
+2 = ZZZZZ, "Cobol에서는 CS_USERDATA 선택 항목을 지원하지 않습니다."
+3 = ZZZZZ, "인식할 수 없는 컴파일러 코드입니다."
+4 = ZZZZZ, "CTBPARAM의 입력 변수를 변환할 수 없습니다."
+5 = 22022, "지시자 유형 정보를 저장하거나 검색할 수 없습니다."
+6 = ZZZZZ, "메모리를 할당할 수 없습니다."
+7 = ZZZZZ, "지원되지 않는 유형입니다."
+8 = ZZZZZ, " Cobol에서는 CS-ALL-CAPS 기능을 지원하지 않습니다."
+9 = 22003, "정수를 페치한 데이타 항목의 PIC에 자릿수가 너무 많습니다."
+10 = ZZZZZ, "SYBSETSQLDA에 대한 인수의 조합이 잘못되었습니다."
+11 = ZZZZZ, "SQLDA-SQLN이 SQLDA-SQLD보다 작습니다."
+12 = ZZZZZ, "SQLDA-SQLD가 음수입니다."
+
+[cobctorigin]
+
+1 = ZZZZZ, "내부 오류"
+2 = ZZZZZ, "프로그램 호출 오류: 아마도 프리컴파일러 생성 코드일 것입니다"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "복구할 수 없는 오류가 발생하였습니다."
+2 = ZA000, "내부 오류가 발생하였습니다."
+3 = ZD000, "예기치 않은 CS_COMPUTE_RESULT를 받았습니다."
+4 = ZE000, "예기치 않은 CS_CURSOR_RESULT를 받았습니다."
+5 = ZF000, "예기치 않은 CS_PARAM_RESULT를 받았습니다."
+6 = ZG000, "예기치 않은 CS_ROW_RESULT를 받았습니다."
+7 = ZB000, "sqlca, SQLCODE 또는 SQLSTATE에 반환된 메시지가 없습니다."
+8 = ZC000, "아직 연결을 정의하지 않았습니다."
+9 = ZH000, "예상치 못한 CS_STATUS_RESULT를 받았습니다."
+10 = ZI000, "예기치 않은 CS_DESCRIBE_RESULT를 받았습니다."
+11 = 22005, "데이타 예외 보고: 항목 설명자 할당 오류입니다 - 유형."
+12 = JZ000, "메모리를 할당할 수 없습니다."
+13 = ZK000, "SQL-Server는 버전 10 이상이어야 합니다."
+14 = ZM000, "클라이언트 라이브러리 초기화할 때 오류가 발생하였습니다."
+15 = ZN000, "mutex를 가져오거나 해제할 때 오류가 발생하였습니다."
+16 = 08002, "사용 중인 연결 이름입니다."
+16 = 25019, "HA FAILOVER가 발생했습니다."
