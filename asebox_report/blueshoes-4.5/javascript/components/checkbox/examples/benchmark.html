@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>JavaScript Bs_Checkbox benchmark</title>
+<script type="text/javascript" src="/_bsJavascript/core/lang/Bs_Misc.lib.js"></script>
+<script type="text/javascript" src="/_bsJavascript/components/checkbox/Bs_Checkbox.class.js"></script>
+</head>
+
+<body>
+
+<h1>JavaScript Bs_Checkbox benchmark</h1>
+
+drawing 1000 checkboxes, please stand by ...<br><br>
+
+
+<script type="text/javascript">
+for (var i=0; i<1000; i++) {
+	var boxName = 'box' + i;
+	window[boxName]
+  window[boxName] = new Bs_Checkbox();
+  window[boxName].objectName   = boxName;
+  window[boxName].caption      = 'blah';
+  window[boxName].checkboxName = 'myCheckbox' + i;
+  window[boxName].write();
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>JavaScript Bs_Radio example 1</title>
+<script type="text/javascript" src="/_bsJavascript/components/radio/Bs_Radio.class.js"></script>
+<script type="text/javascript" src="/_bsJavascript/core/lang/Bs_Misc.lib.js"></script>
+</head>
+
+<body>
+
+<h1>JavaScript Bs_Radio example 1</h1>
+
+This is an example of the <a href="http://www.blueshoes.org/en/javascript/radio/" target="_blank">Radio Control</a>.
+<br><br>
+
+Simple usage of the radio control. Features used:
+<ul>
+  <li>User-defined icons.</li>
+  <li>Default value set to 'mr'.</li>
+  <li>Caption is clickable aswell (default behavior).</li>
+  <li>A CSS style attribute is used to set the text to blue.</li>
+  <li>Uses an attached onChange event that alerts the new value.</li>
+</ul>
+
+<hr>
+<br>
+
+<form action="http://www.blueshoes.org//postDump.php" method="post">
+
+<script type="text/javascript">
+var r = new Bs_Radio();
+r.objectName     = 'r';
+r.radioFieldName = 'myField';
+r.imgDir         = '/_bsJavascript/components/radio/img/bobby/';
+r.imgWidth       = 12;
+r.imgHeight      = 12;
+r.cssStyle       = 'color:blue;';
+r.value          = 'mr';
+r.addOption('mr', 'MR');
+r.addOption('ms', 'MISS');
+r.attachEvent('onChange', myCallbackFunction);
+r.draw('mr');
+document.write('<br>');
+r.draw('ms');
+
+function getRadioValue(fldName) {
+	var t = document.getElementsByName(fldName);
+	for (var i=0; i<t.length; i++) {
+		if (t[i].checked) return t[i].value;
+	}
+	return null;
+}
+
+/**
+* gets called when the radio field's value changes.
+* @param object radioObject (instance of Bs_Radio)
+*/
+function myCallbackFunction(radioObject) {
+  alert('Changed value to: ' + radioObject.getValue());
+}
+</script>
+
+<br><br>
+alert current value by using object: <input type="button" name="alert1" value="go" onclick="alert(r.getValue());"><br>
+alert current value by querying the (hidden) field: <input type="button" name="alert2" value="go" onclick="alert(getRadioValue('myField'));">
+
+<br><br>
+<input type="submit" name="send" value="submit form">
+</form>
+
+</body>
+</html>
