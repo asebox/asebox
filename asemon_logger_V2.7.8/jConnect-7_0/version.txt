@@ -1,0 +1,1 @@
+jConnect (TM) for JDBC(TM)/7.07 ESD #5 (Build 26792)/P/EBF20686/JDK 1.6.0/jdbcmain/OPT/Mon Oct 15 11:36:14 PDT 2012

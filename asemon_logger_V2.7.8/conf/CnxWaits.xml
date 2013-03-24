@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CnxWaits </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select Kpid = W.KPID, Spid = W.SPID, W.WaitEventID, W.Waits, W.WaitTime from master..monProcessWaits W where W.WaitTime > 0 </SQL>
+  <key1 > Kpid </key1>
+  <key2 > Spid </key2>
+  <key3 > WaitEventID </key3>
+  <filterCol > #filter_if_no_change# </filterCol>
+  <delay > 300 </delay>
+  <mandatoryConfigs>
+     <config> process wait events </config>
+  </mandatoryConfigs>
+  <colsCalcDiff >                 
+     <COL> Waits                 </COL>
+     <COL> WaitTime                 </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CnxWaits (
+     Timestamp datetime not null,
+     Interval int not null,
+     Kpid int not null,
+     Spid int not null,
+     WaitEventID smallint not null,
+     Waits int null,
+     WaitTime int null
+  ) lock datarows
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CnxWaits (Timestamp, Kpid, Spid, WaitEventID, Interval )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CnxWaits" >
+  delete ?SERVERNAME?_CnxWaits from ?SERVERNAME?_CnxWaits (index idx) where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

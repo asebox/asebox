@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > DevIO </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select LogicalName, TotIO=1.*Reads+APFReads+Writes, Reads, APFReads, Writes, DevSemaphoreRequests, DevSemaphoreWaits, IOTime from master..monDeviceIO </SQL>
+  <key1 > LogicalName </key1>
+  <key2 >  </key2>
+  <key3 >  </key3>
+  <filterCol > TotIO </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> TotIO                 </COL>
+     <COL> Reads                 </COL>
+     <COL> APFReads              </COL>
+     <COL> Writes                </COL>
+     <COL> DevSemaphoreRequests  </COL> 
+     <COL> DevSemaphoreWaits     </COL> 
+     <COL> IOTime                </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_DevIO (
+     Timestamp datetime not null,
+     Interval int not null,
+     LogicalName varchar(100) null,
+     TotIO int null,
+     Reads int null,
+     APFReads int null,
+     Writes int null,
+     DevSemaphoreRequests int null,
+     DevSemaphoreWaits int null,
+     IOTime int null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_DevIO (Timestamp, LogicalName, Interval)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_DevIO" >
+  delete ?SERVERNAME?_DevIO where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

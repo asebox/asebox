@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > PMemUse </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select AllocatorID, ModuleID, Active, HWM, ChunkHWM, NumReuseCaused, AllocatorName from master..monProcedureCacheMemoryUsage </SQL>
+  <key1 > AllocatorID </key1>
+  <key2 > ModuleID </key2>
+  <key3 >  </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >
+    <COL> NumReuseCaused  </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_PMemUse (
+     Timestamp datetime not null,
+     Interval int not null,
+     AllocatorID int not null,
+     ModuleID int not null,
+     Active int not null,
+     HWM int not null,
+     ChunkHWM int not null,
+     NumReuseCaused int not null,
+     AllocatorName varchar(30) null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_PMemUse (Timestamp, AllocatorID, ModuleID)
+     </I>
+  </createIndexes>
+     <I>
+  create index idx2 on ?SERVERNAME?_PMemUse (Timestamp, ModuleID)
+     </I>
+
+  <purge>
+    <P table="?SERVERNAME?_PMemUse" >
+  delete ?SERVERNAME?_PMemUse where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

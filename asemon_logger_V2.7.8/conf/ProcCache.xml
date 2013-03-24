@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > ProcCache </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select Requests, Loads, Writes, Stalls from master..monProcedureCache </SQL>
+  <key1 >  </key1>
+  <key2 >  </key2>
+  <key3 >  </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> Requests                 </COL>
+     <COL> Loads                 </COL>
+     <COL> Writes                 </COL>
+     <COL> Stalls                 </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_ProcCache (
+     Timestamp datetime not null,
+     Interval int not null,
+     Requests int null,
+     Loads int null,
+     Writes int null,
+     Stalls int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_ProcCache (Timestamp, Interval)
+     </I>
+ </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_ProcCache" >
+  delete ?SERVERNAME?_ProcCache where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > SysThread </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL >  <![CDATA[
+select 
+th.ThreadID, 
+th.ThreadPoolID,
+th.MinorFaults, 
+th.MajorFaults,
+th.UserTime, 
+th.SystemTime,
+th.VoluntaryCtxtSwitches,
+th.NonVoluntaryCtxtSwitches,
+tk.Name "TaskName"
+from master.dbo.monThread th, master.dbo.monTask tk
+where th.KTID *= tk.KTID
+]]>
+  </SQL>
+  <key1 >ThreadID </key1>
+  <key2 > </key2>
+  <key3 > </key3>
+  <filterCol > </filterCol>
+  <delay > 86400 </delay>
+  <colsCalcDiff >                 
+     <COL> MinorFaults                 </COL>
+     <COL> MajorFaults                 </COL>
+     <COL> UserTime                 </COL>
+     <COL> SystemTime                 </COL>
+     <COL> VoluntaryCtxtSwitches                 </COL>
+     <COL> NonVoluntaryCtxtSwitches                 </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_SysThread (
+     Timestamp datetime not null,
+     ThreadID int not null,                
+     ThreadPoolID int not null,            
+     MinorFaults bigint not null,             
+     MajorFaults bigint not null,             
+     UserTime bigint not null,                
+     SystemTime bigint not null,              
+     VoluntaryCtxtSwitches bigint not null,   
+     NonVoluntaryCtxtSwitches bigint not null,
+     TaskName varchar(30)
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_SysThread (Timestamp, ThreadID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_SysThread" >
+  delete ?SERVERNAME?_SysThread where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+</MetricDescriptor>

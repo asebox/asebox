@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > WEvInf </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select WaitEventID, WaitClassID, Description from master..monWaitEventInfo </SQL>
+  <colsCalcDiff >
+  </colsCalcDiff>
+  <delay > 86400 </delay>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_WEvInf (
+     Timestamp datetime not null,
+     Interval int not null,
+     WaitEventID smallint not null,
+     WaitClassID smallint not null,
+     Description varchar(50) not null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create unique index idx on ?SERVERNAME?_WEvInf (WaitEventID, WaitClassID ) with ignore_dup_key
+     </I>
+  </createIndexes>
+
+
+</MetricDescriptor>

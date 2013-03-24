@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > MonSQL </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 5 </delay>
+  <mandatoryConfigs>
+     <config> per object statistics active </config>
+     <config> statement statistics active </config>
+     <config> SQL batch capture </config>
+  </mandatoryConfigs>
+  <parameters>
+     <param name="min_logical_reads"> 10000 </param>
+     <param name="min_elapsed_time_ms"> 10000 </param>
+     <param name="sp_showplan_proc"> sp_showplan </param>
+     <param name="sp_showplan_proc_non_sa"> sp_asemon_showplan </param>
+  </parameters>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_StmtStat (
+     StmtID numeric(14) identity not null,
+     BootID int not null,
+     KPID int not null,
+     SPID int not null,
+     BatchID int not null,
+     StartTime datetime not null,
+     EndTime datetime null,
+     ExactStat char(1) not null,
+     Login varchar(30)null,
+     Application varchar(30)null,
+     ClientHost varchar(30)null,
+     ClientIP varchar(24)null,
+     ClientOSPID varchar(30)null,
+     DBID int not null,
+     ProcName varchar(30) null,
+     PlanID int not null,
+     ContextID int not null,
+     LineNumber int not null,
+     CpuTime int not null,
+     WaitTime int not null,
+     MemUsageKB int not null,
+     PhysicalReads int not null,
+     LogicalReads int not null,
+     PagesModified int not null,
+     PacketsSent int not null,
+     PacketsReceived int not null,
+     NetworkPacketSize int not null,
+     PlansAltered int not null,
+     RowsAffected int null,
+     ClientName varchar(30)null,
+     ClientHostName varchar(30)null,
+     ClientApplName varchar(30)null
+  ) lock datapages with identity_gap=10
+     </T>
+
+     <T>
+  create table ?SERVERNAME?_StmtSQL (
+     Timestamp datetime not null,
+     BootID int not null,
+     KPID int not null,
+     SPID int not null,
+     BatchID int not null,
+     LineNumber int null,
+     SequenceInLine int not null,
+     SQLText varchar(255) null
+  ) lock datapages
+     </T>
+
+     <T>
+  create table ?SERVERNAME?_StmtPlan (
+     StmtID numeric(14) not null,
+     Sequence int not null,
+     SQLPlan varchar(255) null
+  ) lock datapages
+     </T>
+
+     <T>
+  create table ?SERVERNAME?_StmtObj (
+     StmtID numeric(14) not null,
+     DBName varchar(30) null,
+     OwnerUserID int not null,
+     ObjectName varchar(30) null,
+     ObjectType varchar(30) null,
+     IndexID int not null,
+     LogicalReads int not null,
+     PhysicalReads int not null,
+     PhysicalAPFReads int not null,
+     PartitionSize int null,
+     PartitionID int null,
+     PartitionName varchar(30) null,
+     IdxName varchar(30) null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_StmtStat (StartTime, BootID, KPID, SPID, BatchID )
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_StmtStat (StmtID)
+     </I>
+     <I>
+  create index idx2 on ?SERVERNAME?_StmtStat (ProcName)
+     </I>
+     <I>
+  create index idx on ?SERVERNAME?_StmtSQL (BootID,KPID,SPID,BatchID,LineNumber,SequenceInLine)
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_StmtSQL (Timestamp, KPID, SPID)
+     </I>
+     <I>
+  create index idx on ?SERVERNAME?_StmtPlan (StmtID, Sequence )
+     </I>
+     <I>
+  create index idx on ?SERVERNAME?_StmtObj (StmtID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_StmtStat" >
+  delete ?SERVERNAME?_StmtStat where StartTime &lt; ?DATE?
+    </P>
+    <P table="?SERVERNAME?_StmtSQL" >
+  delete ?SERVERNAME?_StmtSQL where Timestamp &lt; ?DATE?
+    </P>
+    <P table="?SERVERNAME?_StmtPlan" >
+  declare @minStmtID numeric(14)
+  select @minStmtID=min(StmtID) FROM ?SERVERNAME?_StmtStat
+  delete ?SERVERNAME?_StmtPlan where StmtID &lt; @minStmtID
+    </P>
+    <P table="?SERVERNAME?_StmtObj" >
+  declare @minStmtID numeric(14)
+  select @minStmtID=min(StmtID) FROM ?SERVERNAME?_StmtStat
+  delete ?SERVERNAME?_StmtObj where StmtID &lt; @minStmtID
+    </P>
+  </purge>
+
+</MetricDescriptor>

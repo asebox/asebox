@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > RSStats </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 60 </delay>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_Instances (
+     Timestamp                datetime not null,
+     ID                       int not null,
+     instance_id              int not null,
+     instance_val             int not null,
+     instance                 varchar(255) not null
+  ) lock datapages
+     </T>
+
+
+     <T>
+  create table ?SERVERNAME?_RSStats (
+     Timestamp                datetime not null,
+     Interval                 int not null,
+     ID                       int not null,
+     counter_id               int not null,
+     counter_obs              numeric(15,0) not null,
+     counter_total            numeric(15,0) null,
+     counter_last             numeric(15,0) null,
+     counter_max              numeric(15,0) null,
+     avg_ttl_obs              numeric(15,0) null,
+     rate_x_sec               numeric(15,0) null
+  ) lock datapages
+     </T>
+
+     <T>
+  create table ?SERVERNAME?_Counters (
+     counter_id               int not null,
+     display_name             varchar(30) not null,
+     module_name              varchar(30) null,
+     description              varchar(255) null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_Instances (Timestamp, instance_id, instance_val)
+     </I>
+     <I>
+  create unique index idx1 on ?SERVERNAME?_Instances (instance_id, instance_val, instance)
+     </I>
+     <I>
+  create unique index idx2 on ?SERVERNAME?_Instances (ID)
+     </I>
+     <I>
+  create index idx2 on ?SERVERNAME?_RSStats (Timestamp, ID, counter_id)
+     </I>
+     <I>
+  create unique index idx on ?SERVERNAME?_Counters (counter_id) with ignore_dup_key
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_RSStats" >
+  delete ?SERVERNAME?_RSStats where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

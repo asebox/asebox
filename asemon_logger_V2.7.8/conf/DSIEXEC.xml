@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > DSIEXEC </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > admin statistics, DSIEXEC </SQL>
+  <key1 > Info </key1>
+  <key2 > Instance_ID </key2>
+  <key3 > Instance_Val </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> TransApplied            </COL>
+     <COL> NgTrans                 </COL>
+     <COL> CmdsApplied             </COL>
+     <COL> BeginsRead              </COL>
+     <COL> CommitsRead             </COL>
+     <COL> SysTransRead            </COL>
+     <COL> InsertsRead             </COL>
+     <COL> UpdatesRead             </COL>
+     <COL> DeletesRead             </COL>
+     <COL> ExecsWritetext          </COL>
+     <COL> ExecsGetTextPtr         </COL>
+     <COL> ExecsUpdThread          </COL>
+     <COL> GetThreadSeq            </COL>
+     <COL> MsgChecks               </COL>
+     <COL> MsgChecksFailed         </COL>
+     <COL> YieldsCheckSeq          </COL>
+     <COL> ErrsDeadlock            </COL>
+     <COL> ErrsOutofLock           </COL>
+     <COL> ErrsLogFull             </COL>
+     <COL> ErrsLogSuspend          </COL>
+     <COL> ErrsNoConn              </COL>
+     <COL> DSIEBFBegin             </COL>
+     <COL> DSIEBFSysTran           </COL>
+     <COL> DSIEBFForced            </COL>
+     <COL> CmdsSQLDDLRead          </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_DSIEXEC (
+     Timestamp               datetime not null,
+     Interval                int not null,
+     Info                    varchar(40) not null,
+     Instance_ID             int not null,
+     Instance_Val            int null,
+     TransApplied            int null,
+     NgTrans                 int null,
+     CmdsApplied             int null,
+     TransLastGroup          int null,
+     TransMaxGroup           int null,
+     MemUsedLastGroup        int null,
+     MemUsedMaxGroup         int null,
+     BeginsRead              int null,
+     CommitsRead             int null,
+     SysTransRead            int null,
+     InsertsRead             int null,
+     UpdatesRead             int null,
+     DeletesRead             int null,
+     ExecsWritetext          int null,
+     ExecsGetTextPtr         int null,
+     ExecsUpdThread          int null,
+     GetThreadSeq            int null,
+     MsgChecks               int null,
+     MsgChecksFailed         int null,
+     YieldsCheckSeq          int null,
+     TPS_Average             int null,
+     TPScurrent              int null,
+     TPSmax                  int null,
+     NgTPSaverage            int null,
+     NgTPScurrent            int null,
+     NgTPSmax                int null,
+     ErrsDeadlock            int null,
+     ErrsOutofLock           int null,
+     ErrsLogFull             int null,
+     ErrsLogSuspend          int null,
+     ErrsNoConn              int null,
+     DSIEBPSaverage          int null,
+     DSIEBPScurrent          int null,
+     DSIEBPSmax              int null,
+     TransAvgGroup           int null,
+     MemUsedAvgGroup         int null,
+     DSIEBatch               int null,
+     DSIEBatchSizeLast       int null,
+     DSIEBatchSizeMax        int null,
+     DSIEBatchSizeAve        int null,
+     DSIEOCmdCountLast       int null,
+     DSIEOCmdCountMax        int null,
+     DSIEOCmdCountAve        int null,
+     DSIEICmdCountLast       int null,
+     DSIEICmdCountMax        int null,
+     DSIEICmdCountAve        int null,
+     DSIEBFResultsProc       int null,
+     DSIEBFCommitNext        int null,
+     DSIEBFMaxCmds           int null,
+     DSIEBFRowRslts          int null,
+     DSIEBFRPCNext           int null,
+     DSIEBFGetTextDesc       int null,
+     DSIEBFBatchOff          int null,
+     DSIEBFMaxBytes          int null,
+     DSIEBFBegin             int null,
+     DSIEBFSysTran           int null,
+     DSIEBFForced            int null,
+     CmdsSQLDDLRead          int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_DSIEXEC (Timestamp, Info, Interval)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_DSIEXEC" >
+  delete ?SERVERNAME?_DSIEXEC where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > WClassInf </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select WaitClassID, Description from master..monWaitClassInfo </SQL>
+  <colsCalcDiff >
+  </colsCalcDiff>
+  <delay > 86400 </delay>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_WClassInf (
+     Timestamp datetime not null,
+     Interval int not null,
+     WaitClassID smallint not null,
+     Description varchar(50) not null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create unique index idx on ?SERVERNAME?_WClassInf ( WaitClassID ) with ignore_dup_key
+     </I>
+  </createIndexes>
+
+
+</MetricDescriptor>

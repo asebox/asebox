@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+
+  <asemon>
+      <admin_port> </admin_port>  <!-- admin_port is not mandatory. If defined, it allows to connect to asemon with isql -->
+      <name> </name>              <!-- asemon_logger name is mandatory only if admin_port is defined. Used to save the sa password of asemon_logger in passwords file -->
+  </asemon>
+
+  <ArchiveSrv>
+      <name> enter_your_archive_server_here </name>
+      <user> enter_archive_user_name_here </user>
+      <useKerberos> enter_YES_or_NO </useKerberos>
+      <database> enter_archive_database_name_here </database>
+      <charset> enter_archive_server_charset_here_or_leave_empty </charset>
+      <GranteeList> enter_list_of_users_groups_or_roles_here_or_leave_blank </GranteeList>
+      <poolsize> 1 </poolsize>
+      <packet_size> </packet_size> <!-- not mandatory. If defined, overrides default network packet size of the archive server -->
+  </ArchiveSrv>
+
+  <MonitoredSrv>
+      <SRV>
+          <name> enter_monitored_server_name_here </name>
+          <user> enter_monitored_user_name_here </user>
+          <useKerberos> enter_YES_or_NO </useKerberos>
+          <charset> enter_monitored_server_charset_here_or_leave_empty </charset>
+          <packet_size> </packet_size> <!-- not mandatory. If defined, overrides default network packet size of the monitored server -->
+          <srvDescriptor> enter_monitored_server_descriptor_name_here_ex_ASEV125 </srvDescriptor>
+          <purgearchive daysToKeep="90"  deleteSleep="100" />
+      </SRV>
+  </MonitoredSrv>
+  
+ 
+  <SrvDescriptors>
+
+      <!-- Standard "Server Descriptor" to use for V12.5.4 ASE monitored servers 
+           See below ASEV1250 for older ASE versions -->
+      <SD>
+          <name> ASEV125 </name>
+          <type checkMonitoringConfig="yes"> ASE </type>
+          <version> 1250 </version>
+          <metricsDescriptorsFiles >                 
+             <md> CachePool.xml                 </md>
+             <md> CnxActiv.xml                 </md>
+             <md> DataCache.xml                 </md>
+             <md> DeadLock.xml                 </md>
+             <md> DevIO.xml                 </md>
+             <md> Engines.xml                 </md>
+             <md> IOQueue.xml                 </md>
+             <md> MonState.xml                 </md>
+             <md> NetworkIO.xml                 </md>
+             <md> OpenDbs.xml                 </md>
+             <md> OpObjAct.xml                 </md>
+             <md> ProcCache.xml                 </md>
+             <md> SysWaits.xml                 </md>
+             <md> MonSQL.xml                 </md>
+             <md> MonConf.xml                 </md>
+             <md> Cnx.xml                 </md>
+             <md> BlockedP.xml                 </md>
+             <md> LogsHold.xml                 </md>
+             <md> ErrLog.xml                 </md>
+             <md> CnxWaits.xml                 </md>
+             <md> WEvInf.xml                 </md>
+             <md> WClassInf.xml                 </md>
+             <md> LockWaits.xml                 </md>
+             <md HOUR_EXEC="7" minpages="1000"> Fragment.xml  </md>
+             <md> SysMonFld.xml                 </md>
+             <md> SysDev.xml                 </md>
+             <md> SysCaches.xml                 </md>
+             <md> SysConf.xml                 </md>
+             <md> SysMon.xml                 </md>
+             <md> Trends.xml                 </md>
+             <md> AseDbSpce.xml                 </md>
+             <md> AmStats.xml                 </md>
+          </metricsDescriptorsFiles>
+      </SD>
+
+
+      <!-- Special "Server Descriptor" to use for OLD V12.5.0.3 ASE monitored servers -->
+      <SD>
+            <name> ASEV1250 </name>
+            <type checkMonitoringConfig="yes"> ASE </type>
+            <version> 1250 </version>
+            <metricsDescriptorsFiles >                 
+               <md> CachePool.xml                 </md>
+               <md> CnxActiv_pre12.5.4.xml         </md>
+               <md> DataCache.xml                 </md>
+               <md> DeadLock.xml                 </md>
+               <md> DevIO.xml                 </md>
+               <md> Engines.xml                 </md>
+               <md> IOQueue.xml                 </md>
+               <md> MonState.xml                 </md>
+               <md> NetworkIO.xml                 </md>
+               <md> OpenDbs.xml                 </md>
+               <md> OpObjAct.xml                 </md>
+               <md> ProcCache.xml                 </md>
+               <md> SysWaits.xml                 </md>
+               <md> MonSQL.xml                 </md>
+               <md> MonConf.xml                 </md>
+               <md> Cnx.xml                 </md>
+               <md> BlockedP.xml                 </md>
+               <md> LogsHold_pre12.5.1.xml                 </md>
+               <md> ErrLog_v125.xml                 </md>
+               <md> CnxWaits.xml                 </md>
+               <md> WEvInf.xml                 </md>
+               <md> WClassInf.xml                 </md>
+               <md> LockWaits.xml                 </md>
+               <md HOUR_EXEC="7" minpages="1000"> Fragment_pre12.5.1.xml  </md>
+               <md> SysMonFld.xml                 </md>
+               <md> SysDev.xml                 </md>
+               <md> SysCaches.xml                 </md>
+               <md> SysConf.xml                 </md>
+               <md> SysMon_pre12.5.1.xml                 </md>
+               <md> Trends.xml                 </md>
+               <md> AseDbSpce_pre12.5.1.xml                 </md>
+               <md> AmStats.xml                 </md>
+            </metricsDescriptorsFiles>
+      </SD>
+
+
+      <!-- Special "Server Descriptor" to use for OLD V12.5.3 ASE monitored servers -->
+      <SD>
+            <name> ASEV1253 </name>
+            <type checkMonitoringConfig="yes"> ASE </type>
+            <version> 1250 </version>
+            <metricsDescriptorsFiles >                 
+               <md> CachePool.xml                 </md>
+               <md> CnxActiv_pre12.5.4.xml         </md>
+               <md> DataCache.xml                 </md>
+               <md> DeadLock.xml                 </md>
+               <md> DevIO.xml                 </md>
+               <md> Engines.xml                 </md>
+               <md> IOQueue.xml                 </md>
+               <md> MonState.xml                 </md>
+               <md> NetworkIO.xml                 </md>
+               <md> OpenDbs.xml                 </md>
+               <md> OpObjAct.xml                 </md>
+               <md> ProcCache.xml                 </md>
+               <md> SysWaits.xml                 </md>
+               <md> MonSQL.xml                 </md>
+               <md> MonConf.xml                 </md>
+               <md> Cnx.xml                 </md>
+               <md> BlockedP.xml                 </md>
+               <md> LogsHold.xml                 </md>
+               <md> ErrLog_v125.xml                 </md>
+               <md> CnxWaits.xml                 </md>
+               <md> WEvInf.xml                 </md>
+               <md> WClassInf.xml                 </md>
+               <md> LockWaits.xml                 </md>
+               <md HOUR_EXEC="7" minpages="1000"> Fragment_pre12.5.1.xml  </md>
+               <md> SysMonFld.xml                 </md>
+               <md> SysDev.xml                 </md>
+               <md> SysCaches.xml                 </md>
+               <md> SysConf.xml                 </md>
+               <md> SysMon.xml                 </md>
+               <md> Trends.xml                 </md>
+               <md> AseDbSpce.xml                 </md>
+               <md> AmStats.xml                 </md>
+            </metricsDescriptorsFiles>
+      </SD>
+
+      
+      <SD>
+          <name> ASEV15 </name>
+          <type checkMonitoringConfig="yes"> ASE </type>
+          <version> 1500 </version>
+          <metricsDescriptorsFiles >                 
+             <md> AmStats.xml                 </md>
+             <md> AseDbSpce.xml                 </md>
+             <md> BlockedP_V15.xml                 </md>
+             <md> CachedPrc.xml                 </md>
+             <md> CachedSTM.xml                 </md>
+
+<!-- Don't use CachedSQL.xml on production servers. An existing bug in sp_showplan for statements in stmt cache can crash the server.
+             <md> CachedSQL.xml                 </md>
+-->
+
+             <md> CachePool.xml                 </md>
+             <md> Cnx.xml                 </md>
+             <md> CnxActiv.xml                 </md>
+             <md> CnxWaits.xml                 </md>
+             <md> DataCache.xml                 </md>
+             <md> DeadLock.xml                 </md>
+             <md> DevIO_V15.xml                 </md>
+             <md> Engines_V15.xml                 </md>
+             <md> ErrLog.xml                 </md>
+             <md HOUR_EXEC="7" minpages="1000"> Fragment_V15.xml  </md>
+             <md> IOQueue.xml                 </md>
+             <md> LockWaits.xml                 </md>
+             <md> LogsHold.xml                 </md>
+             <md> MonConf.xml                 </md>
+             <md> MonSQL_V15.xml                 </md>
+             <md> MonState.xml                 </md>
+             <md> NetworkIO.xml                 </md>
+             <md> OpenDbs.xml                 </md>
+             <md> OpObjAct_V15.xml                 </md>
+             <md> PModUse.xml                 </md>
+             <md> ProcCache.xml                 </md>
+             <md> StmtCache.xml                 </md>
+             <md> SysCaches.xml                 </md>
+             <md> SysConf.xml                 </md>
+             <md> SysDev_V15.xml                 </md>
+             <md> SysMon.xml                 </md>
+             <md> SysMonFld.xml                 </md>
+             <md> SysWaits.xml                 </md>
+             <md> Trends.xml                 </md>
+             <md> WClassInf.xml                 </md>
+             <md> WEvInf.xml                 </md>
+        </metricsDescriptorsFiles>
+      </SD>
+
+
+      <SD>
+          <name> ASEV157_preESD2 </name>
+          <type checkMonitoringConfig="yes"> ASE </type>
+          <version> 1570 </version>
+          <metricsDescriptorsFiles >                 
+             <md> AmStats.xml                                    </md>
+             <md> AseDbSpce.xml                                  </md>
+             <md> BlockedP_V15.xml                               </md>
+             <md> CachedSTM_V157preESD2.xml                      </md>
+             <md> CachedPrc_V157.xml                             </md>
+             <md> CachedSQL.xml                                  </md>
+             <md> CachedXML.xml                                  </md>
+             <md> CachePool_V157.xml                             </md>
+             <md> Cnx.xml                                        </md>
+             <md> CnxActiv.xml                                   </md>
+             <md> CnxWaits.xml                                   </md>
+             <md> Compress.xml                                   </md>
+             <md> DataCache.xml                                  </md>
+             <md> DeadLock_V157.xml                              </md>
+             <md> DevIO_V15.xml                                  </md>
+             <md> Engines_V157.xml                               </md>
+             <md> ErrLog.xml                                     </md>
+             <md HOUR_EXEC="7" minpages="1000"> Fragment_V15.xml </md>
+             <md> IOQueue.xml                                    </md>
+<!-- don't use LockWaits with ASE V15.7. Seen lost of spinlock contention on rdesmgr_spin.
+             <md> LockWaits.xml                                  </md>
+-->
+             <md> LogsHold.xml                                   </md>
+             <md> MonConf.xml                                    </md>
+             <md> MonSQL_V157.xml                                </md>
+             <md> MonState.xml                                   </md>
+             <md> NetworkIO.xml                                  </md>
+             <md> OpenDbs.xml                                    </md>
+             <md> OpObjAct_V157.xml                              </md>
+             <md> PModUse.xml                                    </md>
+             <md> ProcCache.xml                                  </md>
+             <md> StmtCache.xml                                  </md>
+             <md> SysCaches.xml                                  </md>
+             <md> SysConf.xml                                    </md>
+             <md> SysDev_V15.xml                                 </md>
+             <md> SysMon.xml                                     </md>
+             <md> SysMonFld.xml                                  </md>
+
+<!-- next six collectors are used by the new kernel sysmon section. Don't activate them if you don't use this new sysmon section
+             <md> SysEngThr.xml                                  </md>
+             <md> SysThread.xml                                  </md>
+             <md> IOControl.xml                                  </md>
+             <md> WorkQueue.xml                                  </md>
+             <md> ThreaPool.xml                                  </md>
+             <md> SysLoad.xml                                    </md>
+-->
+             <md> SysWaits.xml                                   </md>
+             <md> Trends.xml                                     </md>
+             <md> WClassInf.xml                                  </md>
+             <md> WEvInf.xml                                     </md>
+        </metricsDescriptorsFiles>
+      </SD>
+
+      <SD>
+          <name> ASEV157 </name>
+          <type checkMonitoringConfig="yes"> ASE </type>
+          <version> 1570 </version>
+          <metricsDescriptorsFiles >                 
+             <md> AmStats.xml                                    </md>
+             <md> AseDbSpce_V157.xml                                  </md>
+             <md> BlockedP_V15.xml                               </md>
+             <md> CachedSTM_V157.xml                             </md>
+             <md> CachedPrc_V157.xml                             </md>
+             <md> CachedSQL.xml                                  </md>
+             <md> CachedXML.xml                                  </md>
+             <md> CachePool_V157.xml                             </md>
+             <md> Cnx.xml                                        </md>
+             <md> CnxActiv.xml                                   </md>
+             <md> CnxWaits.xml                                   </md>
+             <md> Compress.xml                                   </md>
+             <md> DataCache.xml                                  </md>
+             <md> DeadLock_V157.xml                              </md>
+             <md> DevIO_V157.xml                                  </md>
+             <md> Engines_V157.xml                               </md>
+             <md> ErrLog.xml                                     </md>
+             <md HOUR_EXEC="7" minpages="1000"> Fragment_V157.xml </md>
+             <md> IOQueue.xml                                    </md>
+
+<!-- don't use LockWaits with ASE V15.7. Seen lost of spinlock contention on rdesmgr_spin.
+             <md> LockWaits.xml                                  </md>
+-->
+             <md> LogsHold_V157.xml                                   </md>
+             <md> MonConf.xml                                    </md>
+             <md> MonSQL_V157.xml                                </md>
+             <md> MonState.xml                                   </md>
+             <md> NetworkIO.xml                                  </md>
+             <md> OpenDbs.xml                                    </md>
+             <md> OpObjAct_V157.xml                              </md>
+             <md> PModUse.xml                                    </md>
+             <md> ProcCache.xml                                  </md>
+             <md> StmtCache.xml                                  </md>
+             <md> SysCaches.xml                                  </md>
+             <md> SysConf.xml                                    </md>
+             <md> SysDev_V15.xml                                 </md>
+             <md> SysMon.xml                                     </md>
+             <md> SysMonFld.xml                                  </md>
+
+<!-- next six collectors are used by the new kernel sysmon section. Don't activate them if you don't use this new sysmon section
+             <md> SysEngThr.xml                                  </md>
+             <md> SysThread.xml                                  </md>
+             <md> IOControl.xml                                  </md>
+             <md> WorkQueue.xml                                  </md>
+             <md> ThreaPool.xml                                  </md>
+             <md> SysLoad.xml                                    </md>
+-->
+             <md> SysWaits.xml                                   </md>
+             <md> Trends.xml                                     </md>
+             <md> WClassInf.xml                                  </md>
+             <md> WEvInf.xml                                     </md>
+        </metricsDescriptorsFiles>
+      </SD>
+
+      <SD>
+          <name> RS126 </name>
+          <type> RS </type>
+          <version> 1260 </version>
+          <metricsDescriptorsFiles >                 
+             <md> DSIEXEC.xml             </md>
+             <md> REPAGENT.xml            </md>
+             <md> SQMR.xml                </md>
+             <md> SQM.xml                 </md>
+             <md> DSI.xml                 </md>
+             <md> SQT.xml                 </md>
+             <md> DISKSPCE.xml            </md>
+             <md> DIST.xml                </md>
+             <md> AmStats.xml                 </md>
+          </metricsDescriptorsFiles>
+      </SD>
+
+      <SD>
+          <name> RS15 </name>
+          <type> RS </type>
+          <version> 1500 </version>
+          <metricsDescriptorsFiles >                 
+             <md> RSConfig.xml                 </md>
+             <md> RSStats_RS15.xml        </md>
+             <md> DISKSPCE.xml            </md>
+             <md> RSMem.xml            </md>
+             <md> RSMemDet.xml            </md>
+             <md> RSWhoSQM.xml                 </md>
+             <md> RSTrends.xml                 </md>
+             <md> AmStats.xml                 </md>
+          </metricsDescriptorsFiles>
+      </SD>
+
+      <SD>
+          <name> IQ127 </name>
+          <type> IQ </type>
+          <version> 1270 </version>
+          <metricsDescriptorsFiles >                 
+             <md> IQStatus.xml              </md>
+             <md> IQAsaStat.xml             </md>
+             <md> IQCnx.xml                 </md>
+             <md> IQCtx.xml                 </md>
+             <md> IQXacts.xml               </md>
+             <md> IQVersUse.xml             </md>
+             <md> AmStats.xml                 </md>
+          </metricsDescriptorsFiles>
+      </SD>
+
+      <SD>
+          <name> IQ15 </name>
+          <type> IQ </type>
+          <version> 1500 </version>
+          <metricsDescriptorsFiles >                 
+             <md> IQStatus.xml             </md>
+             <md> IQAsaStat_V15.xml             </md>
+             <md> IQCnx.xml             </md>
+             <md> IQCtx.xml             </md>
+             <md> IQXacts_V15.xml             </md>
+             <md> IQVersUse.xml             </md>
+             <md> IQTblUse.xml             </md>
+             <md> AmStats.xml                 </md>
+          </metricsDescriptorsFiles>
+      </SD>
+
+      <SD>
+          <name> RAO15 </name>
+          <type> RAO </type>
+          <version> 1500 </version>
+          <metricsDescriptorsFiles >                 
+             <md> RAOSTATS.xml             </md>
+             <md> AmStats.xml                 </md>
+          </metricsDescriptorsFiles>
+      </SD>
+
+  </SrvDescriptors>
+  
+</Config>

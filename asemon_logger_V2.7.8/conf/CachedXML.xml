@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    V15.7 collector used to retreive all new plans in XML (new V15.7 function) of statements in statement cache
+    or dynamic SQL (if "streamlined dynamic SQL" is set)
+    This collector archive XML text of SQL, PLAN, Parameters and Plancost of new plans. This XML data is stored
+    in a TEXT column.
+    
+    This collector replaces CachedSQL.xml.
+-->
+<MetricDescriptor>
+  <metricName > CachedXML </metricName>
+  <metricType > BUILTIN </metricType>
+  <parameters>
+     <param name="LEVEL_OF_DETAIL"> 0 </param>
+     <param name="min_logical_reads"> 10000 </param>
+     <param name="min_usecount"> 10 </param>
+  </parameters>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CachedXML (
+     Timestamp datetime not null,
+     ObjectID int not null,
+     PlanID int not null,
+     InstanceID int not null,
+     OwnerUID int not null,
+     DBID int not null,
+     MemUsageKB int not null,
+     CompileDate datetime not null,
+     xmlinfo text null in row,
+     bootcount int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CachedXML (Timestamp, ObjectID )
+     </I>
+     <I>
+  create unique index idx2 on ?SERVERNAME?_CachedXML (CompileDate, ObjectID, PlanID, Timestamp )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CachedXML" >
+  delete ?SERVERNAME?_CachedXML from ?SERVERNAME?_CachedXML (index idx) where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

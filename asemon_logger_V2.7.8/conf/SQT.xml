@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > SQT </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > admin statistics, SQT </SQL>
+  <key1 > Info </key1>
+  <key2 > Instance_ID </key2>
+  <key3 > Instance_Val </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> CmdsTotal                </COL>
+     <COL> OpenTransTotal           </COL>
+     <COL> CacheMemUsed             </COL>
+     <COL> TransRemoved             </COL>
+     <COL> CacheExceeded            </COL>
+     <COL> TruncTransTotal          </COL>
+     <COL> ClosedTransTotal         </COL>
+     <COL> ReadTransTotal           </COL>
+     <COL> OpenTransRmTotal         </COL>
+     <COL> TruncTransRmTotal        </COL>
+     <COL> ClosedTransRmTotal       </COL>
+     <COL> ReadTransRmTotal         </COL>
+     <COL> EmptyTransRmTotal        </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_SQT (
+     Timestamp                datetime not null,
+     Interval                 int not null,
+     Info                     varchar(40) not null,
+     Instance_ID              int not null,
+     Instance_Val             int not null,
+     CmdsTotal                int null,
+     OpenTransTotal           int null,
+     CmdsLastTran             int null,
+     CmdsMaxTran              int null,
+     CmdsAveTran              int null,
+     CacheMemUsed             int null,
+     MemUsedLastTran          int null,
+     MemUsedMaxTran           int null,
+     MemUsedAveTran           int null,
+     TransRemoved             int null,
+     CacheExceeded            int null,
+     TruncTransTotal          int null,
+     ClosedTransTotal         int null,
+     ReadTransTotal           int null,
+     OpenTransRmTotal         int null,
+     TruncTransRmTotal        int null,
+     ClosedTransRmTotal       int null,
+     ReadTransRmTotal         int null,
+     EmptyTransRmTotal        int null     
+  ) lock datapages  
+     </T>                 
+  </createTables>         
+                          
+  <createIndexes>         
+     <I>                  
+  create index idx on ?SERVERNAME?_SQT (Timestamp, Info, Interval)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_SQT" >
+  delete ?SERVERNAME?_SQT where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CachedSTM </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > 
+  select bootcount=@@bootcount,SSQLID,Hashkey,UserID,SUserID,DBID,UseCount,StatementSize,MinPlanSizeKB,MaxPlanSizeKB,CurrentUsageCount,MaxUsageCount,NumRecompilesSchemaChanges,
+  NumRecompilesPlanFlushes,HasAutoParams,ParallelDegree,QuotedIdentifier,TransactionIsolationLevel,TransactionMode,SAAuthorization,SystemCatalogUpdate,
+  MetricsCount,MinPIO,MaxPIO,AvgPIO,MinLIO,MaxLIO,AvgLIO,MinCpuTime,MaxCpuTime,AvgCpuTime,
+  MinElapsedTime,MaxElapsedTime,AvgElapsedTime,DBName,CachedDate,LastUsedDate,LastRecompiledDate=case when datepart(yy,LastRecompiledDate) between 1900 and 2999 then LastRecompiledDate else null end,
+  OptimizationGoal,               OptimizerLevel
+  from master..monCachedStatement
+  where (UseCount>?min_usecount? or MaxLIO >?min_logical_reads?)
+  </SQL>
+  <key1 > bootcount </key1>
+  <key2 > SSQLID </key2>
+  <key3 > Hashkey </key3>
+  <filterCol > #filter_if_no_change# </filterCol>
+  <delay > 60 </delay>
+  <parameters>
+     <param name="min_logical_reads"> 10000 </param>
+     <param name="min_usecount"> 10 </param>
+  </parameters>
+  <colsCalcDiff >
+       <COL> UseCount                 </COL>
+       <COL> NumRecompilesSchemaChanges                 </COL>
+       <COL> NumRecompilesPlanFlushes                 </COL>
+       <COL> MetricsCount                </COL>
+  </colsCalcDiff>
+  <colsAlias> 
+     <col nameInSQL="UseCount"                    nameInTable="UseCount_smp"  />
+     <col nameInSQL="NumRecompilesSchemaChanges"  nameInTable="NumRecompilesSchemaChanges_smp"  />
+     <col nameInSQL="NumRecompilesPlanFlushes"    nameInTable="NumRecompilesPlanFlushes_smp"  />
+     <col nameInSQL="MetricsCount"                nameInTable="MetricsCount_smp"  />
+  </colsAlias>
+  <mandatoryConfigs>
+     <config>enable stmt cache monitoring</config>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CachedSTM (
+     Timestamp                      datetime not null,
+     Interval                       int      not null,
+     bootcount                      int      not null,
+     SSQLID                         int      not null,
+     Hashkey                        int      not null,
+     UserID                         int      not null,
+     SUserID                        int      not null,
+     DBID                           int      not null,
+     UseCount_smp                   int      not null,       
+     StatementSize                  int      not null,       
+     MinPlanSizeKB                  int      not null,       
+     MaxPlanSizeKB                  int      not null,       
+     CurrentUsageCount              int      not null,       
+     MaxUsageCount                  int      not null,       
+     NumRecompilesSchemaChanges_smp int      not null,       
+     NumRecompilesPlanFlushes_smp   int      not null,       
+     HasAutoParams                  tinyint  not null,       
+     ParallelDegree                 tinyint  not null,       
+     QuotedIdentifier               tinyint  not null,       
+     TransactionIsolationLevel      tinyint  not null,       
+     TransactionMode                tinyint  not null,       
+     SAAuthorization                tinyint  not null,       
+     SystemCatalogUpdate            tinyint  not null,       
+     MetricsCount_smp               int      not null,       
+     MinPIO                         int      not null,       
+     MaxPIO                         int      not null,       
+     AvgPIO                         int      not null,       
+     MinLIO                         int      not null,       
+     MaxLIO                         int      not null,       
+     AvgLIO                         int      not null,       
+     MinCpuTime                     int      not null,       
+     MaxCpuTime                     int      not null,       
+     AvgCpuTime                     int      not null,       
+     MinElapsedTime                 int      not null,       
+     MaxElapsedTime                 int      not null,       
+     AvgElapsedTime                 int      not null,       
+     DBName                         varchar(30)  NULL,
+     CachedDate                     datetime     NULL,   
+     LastUsedDate                   datetime     NULL,   
+     LastRecompiledDate             datetime     NULL,
+     OptimizationGoal               varchar(30)  NULL,
+     OptimizerLevel                 varchar(30)  NULL
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CachedSTM (Timestamp, bootcount, SSQLID, Hashkey)
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_CachedSTM (SSQLID, Hashkey, bootcount)
+     </I>
+     <I>
+  create index idx2 on ?SERVERNAME?_CachedSTM (CachedDate, bootcount)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CachedSTM" >
+  delete ?SERVERNAME?_CachedSTM where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

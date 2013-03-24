@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > DSI </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > admin statistics, DSI </SQL>
+  <key1 > Info </key1>
+  <key2 > Instance_ID </key2>
+  <key3 > Instance_Val </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> TransTotal               </COL>
+     <COL> NgTransTotal             </COL>
+     <COL> TransIgnored             </COL>
+     <COL> TransSkipped             </COL>
+     <COL> TransSucceeded           </COL>
+     <COL> TransFailed              </COL>
+     <COL> TransRetried             </COL>
+     <COL> AttemptsTranRetry        </COL>
+     <COL> CmdGroups                </COL>
+     <COL> TransInCmdGroups         </COL>
+     <COL> CmdGroupsCommit          </COL>
+     <COL> CommitsInCmdGroup        </COL>
+     <COL> CmdsSucceed              </COL>
+     <COL> CmdsRead                 </COL>
+     <COL> CmdsParsedBySQT          </COL>
+     <COL> TransWSBignored          </COL>
+     <COL> ExecsGetLastCommit       </COL>
+     <COL> ExecsUpdLastCommit       </COL>
+     <COL> ExecsGetSortOrder        </COL>
+     <COL> ExecsGetCharSet          </COL>
+     <COL> ExecsInitThread          </COL>
+     <COL> ExecsRsMarkers           </COL>
+     <COL> GroupsClosedBytes        </COL>
+     <COL> GroupsClosedNoneOrig     </COL>
+     <COL> GroupsClosedMixedUser    </COL>
+     <COL> GroupsClosedMixedMode    </COL>
+     <COL> TextBytesLast            </COL>
+     <COL> TextBytesTotal           </COL>
+     <COL> YieldsScheduler          </COL>
+     <COL> GroupsClosedTranPartRule </COL>
+     <COL> PartitioningWaits        </COL>
+     <COL> UserRuleMatchGroup       </COL>
+     <COL> UserRuleMatchDist        </COL>
+     <COL> TimeRuleMatchGroup       </COL>
+     <COL> TimeRuleMatchDist        </COL>
+     <COL> NameRuleMatchGroup       </COL>
+     <COL> NameRuleMatchDist        </COL>
+     <COL> ExecsCheckThrdLock       </COL>
+     <COL> TrueCheckThrdLock        </COL>
+     <COL> GroupsClosedTrans        </COL>
+     <COL> CmdGroupsRollback        </COL>
+     <COL> RollbacksInCmdGroup      </COL>
+     <COL> GroupsClosedLarge        </COL>
+     <COL> GroupsClosedWSBSpec      </COL>
+     <COL> GroupsClosedResume       </COL>
+     <COL> GroupsClosedSpecial      </COL>
+     <COL> OriginRuleMatchGroup     </COL>
+     <COL> OriginRuleMatchDist      </COL>
+     <COL> OSessIDRuleMatchGroup    </COL>
+     <COL> OSessIDRuleMatchDist     </COL>
+     <COL> IgOrigRuleMatchGroup     </COL>
+     <COL> IgOrigRuleMatchDist      </COL>
+     <COL> RSTicket                 </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_DSI (
+     Timestamp                datetime not null,
+     Interval                 int not null,
+     Info                     varchar(40) not null,
+     Instance_ID              int not null,
+     Instance_Val             int null,
+     TransTotal               int null,
+     NgTransTotal             int null,
+     TransIgnored             int null,
+     TransSkipped             int null,
+     TransSucceeded           int null,
+     TransFailed              int null,
+     TransRetried             int null,
+     AttemptsTranRetry        int null,
+     CmdGroups                int null,
+     TransInCmdGroups         int null,
+     CmdGroupsCommit          int null,
+     CommitsInCmdGroup        int null,
+     CmdsSucceed              int null,
+     CmdsRead                 int null,
+     CmdsParsedBySQT          int null,
+     TransWSBignored          int null,
+     ExecsGetLastCommit       int null,
+     ExecsUpdLastCommit       int null,
+     ExecsGetSortOrder        int null,
+     ExecsGetCharSet          int null,
+     ExecsInitThread          int null,
+     ExecsRsMarkers           int null,
+     GroupsClosedBytes        int null,
+     GroupsClosedNoneOrig     int null,
+     GroupsClosedMixedUser    int null,
+     GroupsClosedMixedMode    int null,
+     TextBytesLast            int null,
+     TextBytesTotal           int null,
+     YieldsScheduler          int null,
+     GroupsClosedTranPartRule int null,
+     PartitioningWaits        int null,
+     UserRuleMatchGroup       int null,
+     UserRuleMatchDist        int null,
+     TimeRuleMatchGroup       int null,
+     TimeRuleMatchDist        int null,
+     NameRuleMatchGroup       int null,
+     NameRuleMatchDist        int null,
+     AllThreadsInUse          int null,
+     AllLargeThreadsInUse     int null,
+     ExecsCheckThrdLock       int null,
+     TrueCheckThrdLock        int null,
+     CommitChecksExceeded     int null,
+     GroupsClosedTrans        int null,
+     CmdGroupsRollback        int null,
+     RollbacksInCmdGroup      int null,
+     GroupsClosedLarge        int null,
+     GroupsClosedWSBSpec      int null,
+     GroupsClosedResume       int null,
+     GroupsClosedSpecial      int null,
+     OriginRuleMatchGroup     int null,
+     OriginRuleMatchDist      int null,
+     OSessIDRuleMatchGroup    int null,
+     OSessIDRuleMatchDist     int null,
+     IgOrigRuleMatchGroup     int null,
+     IgOrigRuleMatchDist      int null,
+     RSTicket                 int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_DSI (Timestamp, Info, Interval)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_DSI" >
+  delete ?SERVERNAME?_DSI where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

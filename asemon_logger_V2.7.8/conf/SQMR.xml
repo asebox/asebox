@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > SQMR </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > admin statistics, SQMR </SQL>
+  <key1 > Info </key1>
+  <key2 > Instance_ID </key2>
+  <key3 > Instance_Val </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> CmdsRead                </COL>
+     <COL> BlocksRead              </COL>
+     <COL> BlocksReadCached        </COL>
+     <COL> SleepsWriteQ            </COL>
+     <COL> XNLReads                </COL>
+     <COL> XNLPartials             </COL>
+     <COL> XNLInterrupted          </COL>
+     <COL> SleepsStartQR           </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_SQMR (
+     Timestamp               datetime not null,
+     Interval                int not null,
+     Info                    varchar(40) not null,
+     Instance_ID             int not null,
+     Instance_Val            int null,
+     CmdsRead                int null,
+     BlocksRead              int null,
+     BlocksReadCached        int null,
+     SleepsWriteQ            int null,
+     XNLReads                int null,
+     XNLPartials             int null,
+     XNLInterrupted          int null,
+     SleepsStartQR           int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_SQMR (Timestamp, Info, Interval)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_SQMR" >
+  delete ?SERVERNAME?_SQMR where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

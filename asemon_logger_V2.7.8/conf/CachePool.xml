@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CachePool </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select CacheName, IOBufferSize, AllocatedKB, PagesRead, PhysicalReads, Stalls, PagesTouched, BuffersToMRU, BuffersToLRU from master..monCachePool </SQL>
+  <key1 > CacheName </key1>
+  <key2 > IOBufferSize </key2>
+  <key3 > AllocatedKB </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+     <COL> PagesRead                 </COL>
+     <COL> PhysicalReads                 </COL>
+     <COL> Stalls                 </COL>
+     <COL> PagesTouched                 </COL>
+     <COL> BuffersToMRU                 </COL>
+     <COL> BuffersToLRU                 </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CachePool (
+     Timestamp datetime not null,
+     Interval int not null,
+     CacheName varchar(30) null,
+     IOBufferSize int null,
+     AllocatedKB int null,
+     PagesRead int null,
+     PhysicalReads int null,
+     Stalls int null,
+     PagesTouched int null,
+     BuffersToMRU int null,
+     BuffersToLRU int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CachePool (Timestamp, CacheName, IOBufferSize, Interval)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CachePool" >
+  delete ?SERVERNAME?_CachePool where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

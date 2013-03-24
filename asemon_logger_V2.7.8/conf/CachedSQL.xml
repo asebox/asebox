@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CachedSQL </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 60 </delay>
+  <mandatoryConfigs>
+     <config> enable stmt cache monitoring </config>
+  </mandatoryConfigs>
+  <parameters>
+     <param name="min_logical_reads"> 10000 </param>
+     <param name="min_usecount"> 10 </param>
+     <param name="sp_showplan_proc"> sp_showplan </param>
+     <param name="sp_showplan_proc_non_sa"> sp_asemon_showplan </param>
+  </parameters>
+  <createTables>
+     <T>
+
+  create table ?SERVERNAME?_CachedSQL (
+     Timestamp datetime not null,
+     bootcount int not null,
+     SSQLID int not null,
+     Hashkey int not null,
+     SQLText text null
+  ) lock datapages
+     </T>
+
+     <T>
+  create table ?SERVERNAME?_CachedPLN (
+     Timestamp datetime not null,
+     bootcount int not null,
+     SSQLID int not null,
+     Hashkey int not null,
+     LastRecompiledDate datetime null,
+     Sequence smallint not null,
+     SQLPlan varchar(255) null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CachedSQL (Timestamp, bootcount, SSQLID )
+     </I>
+     <I>
+  create unique index idx2 on ?SERVERNAME?_CachedSQL (Hashkey, bootcount, SSQLID ) with ignore_dup_key
+     </I>
+
+     <I>
+  create index idx on ?SERVERNAME?_CachedPLN (Timestamp, bootcount, SSQLID, Hashkey, LastRecompiledDate )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CachedSQL" >
+  delete ?SERVERNAME?_CachedSQL where Timestamp &lt; ?DATE?
+    </P>
+    <P table="?SERVERNAME?_CachedPLN" >
+  delete ?SERVERNAME?_CachedPLN where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

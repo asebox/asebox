@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > DeadLock </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select 
+DeadlockID         ,
+VictimKPID         ,
+ResolveTime        ,
+ObjectDBID         ,
+PageNumber         ,
+RowNumber          ,
+HeldFamilyID       ,
+HeldSPID           ,
+HeldKPID           ,
+HeldProcDBID       ,
+HeldProcedureID    ,
+HeldBatchID        ,
+HeldContextID      ,
+HeldLineNumber     ,
+WaitFamilyID       ,
+WaitSPID           ,
+WaitKPID           ,
+WaitTime           ,
+ObjectName         ,
+HeldUserName       ,
+HeldApplName       ,
+HeldTranName       ,
+HeldLockType       ,
+HeldCommand        ,
+WaitUserName       ,
+WaitLockType       ,
+WaitTranName       ,
+WaitCommand        ,
+WaitProcDBName     ,
+WaitProcedureName  ,
+HeldSourceCodeID   ,
+WaitSourceCodeID   ,
+InstanceID         ,
+ObjectID           ,
+HeldInstanceID     ,
+HeldStmtNumber     ,
+HeldNumLocks       ,
+WaitProcDBID       ,
+WaitProcedureID    ,
+WaitBatchID        ,
+WaitContextID      ,
+WaitLineNumber     ,
+WaitStmtNumber     ,
+ObjectDBName       ,
+HeldHostName       ,
+HeldClientName     ,
+HeldClientHostName ,
+HeldClientApplName ,
+HeldProcDBName     ,
+HeldProcedureName  ,
+WaitApplName       ,
+WaitHostName       ,
+WaitClientName     ,
+WaitClientHostName ,
+WaitClientApplName 
+ from master..monDeadLock
+</SQL>
+  <key1 > DeadlockID </key1>
+  <key2 >  </key2>
+  <key3 >  </key3>
+  <filterCol >  </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <mandatoryConfigs>
+     <config> deadlock pipe active </config>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_DeadLock (
+     Timestamp datetime not null,
+     Interval int not null,
+     DeadlockID         int,                
+     VictimKPID         int,                
+     ResolveTime        datetime,          
+     ObjectDBID         int,                
+     PageNumber         int,                
+     RowNumber          int,                 
+     HeldFamilyID       int,              
+     HeldSPID           int,                  
+     HeldKPID           int,                  
+     HeldProcDBID       int,              
+     HeldProcedureID    int,           
+     HeldProcName       varchar(30) null, 
+     HeldBatchID        int,               
+     HeldContextID      int,             
+     HeldLineNumber     int,            
+     WaitFamilyID       int,              
+     WaitSPID           int,                  
+     WaitKPID           int,                  
+     WaitTime           int,                  
+     ObjectName         varchar(30) null,   
+     HeldUserName       varchar(30) null, 
+     HeldApplName       varchar(30) null, 
+     HeldTranName       varchar(255) null,
+     HeldLockType       varchar(30) null, 
+     HeldCommand        varchar(30) null,  
+     WaitUserName       varchar(30) null, 
+     WaitLockType       varchar(30) null, 
+     WaitTranName       varchar(255) null,
+     WaitCommand        varchar( 30) null,
+     WaitProcDBName     varchar( 30) null,
+     WaitProcedureName  varchar( 30) null,
+     HeldSourceCodeID   varchar( 30) null,
+     WaitSourceCodeID   varchar( 30) null,
+     InstanceID         tinyint      null,
+     ObjectID           int          null,
+     HeldInstanceID     int          null,
+     HeldStmtNumber     int          null,
+     HeldNumLocks       int          null,
+     WaitProcDBID       int          null,
+     WaitProcedureID    int          null,
+     WaitBatchID        int          null,
+     WaitContextID      int          null,
+     WaitLineNumber     int          null,
+     WaitStmtNumber     int          null,
+     ObjectDBName       varchar(255) null,
+     HeldHostName       varchar( 30) null,
+     HeldClientName     varchar( 30) null,
+     HeldClientHostName varchar( 30) null,
+     HeldClientApplName varchar( 30) null,
+     HeldProcDBName     varchar( 30) null,
+     HeldProcedureName  varchar( 30) null,
+     WaitApplName       varchar( 30) null,
+     WaitHostName       varchar( 30) null,
+     WaitClientName     varchar( 30) null,
+     WaitClientHostName varchar( 30) null,
+     WaitClientApplName varchar( 30) null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create unique index idx on ?SERVERNAME?_DeadLock (DeadlockID, ResolveTime, HeldKPID) with ignore_dup_key
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_DeadLock (Timestamp, Interval, DeadlockID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_DeadLock" >
+  delete ?SERVERNAME?_DeadLock where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

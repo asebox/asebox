@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > Fragment </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > <![CDATA[
+if datepart(hh,getdate()) != ?HOUR_EXEC? return
+set nocount on
+declare @dbid int,  @dbname sysname, @rowcnt int
+
+--          dont't use data_pages and reserved_pages : can take too much time for very large objects
+
+create table #fragment (
+    dbname            sysname       null,
+    owner             sysname       null,
+    tabname           sysname       null,
+    indname           sysname       null,
+    indid             int           null,
+    lockmode          varchar(10)   null,
+    clu               char(3)       null,
+    pagecnt           unsigned int           null,
+    leafcnt           unsigned int           null,
+    emptypgcnt        unsigned int           null,
+    Rowcnt            numeric(10,0) null, 
+    Forwardrowcnt     numeric(10,0) null, 
+    Delrowcnt         numeric(10,0) null, 
+    dpageCR           numeric(10,2) null, 
+    ipageCR           numeric(10,2) null, 
+    drowCR            numeric(10,2) null, 
+    page_utilization  numeric(10,2) null, 
+    space_utilization numeric(10,2) null, 
+    largeIO_eff       numeric(10,2) null, 
+    actual_datapages  int           null,
+    actual_indexpages int           null,
+    reserved_pages    int           null,
+    Dpage_utilization numeric(10,2) null
+)
+
+select dbid, name
+into #db_cursor
+from master..sysdatabases
+where name != 'tempdb'
+and status&1   != 1   -- database upgrading
+and status&32   != 32   -- database created for load
+and status&64   != 64   -- database recovery
+and status&256   != 256   -- database suspect
+and status&4096   != 4096   -- single user
+
+and status2&16   != 16   -- database offline
+and status2&32   != 32   -- database offline
+and status2&512   != 512   -- database currently upgrading
+
+and status3&2   != 2   -- ignore proxy database
+and status3&4   != 4   -- ignore has proxy database
+and status3&8   != 8   -- databse in shutdown
+and status3&256 != 256 -- ignore user created tempdb
+and status3&8192 != 8192 -- drop database in progress
+and status3&4194304 != 4194304 -- ignore archive databases
+
+
+
+-- use this simulated cursor to a avoid a stored proc and because a declare cursor must be alone in a batch
+set rowcount 1
+select @dbid=dbid, @dbname=name from #db_cursor
+select @rowcnt=@@rowcount
+delete #db_cursor where dbid=@dbid
+set rowcount 0
+
+while @rowcnt = 1
+begin
+
+
+    exec (
+    "insert into #fragment                                                                                    "+
+    "select                                                                                                   "+
+    "   @dbname,  owner=U.name,                                                                               "+
+    "	tabname	=O.name,                                                                                      "+
+    "	indname	=I.name,                                                                                      "+
+    "	indid	=S.indid,                                                                                     "+
+    "   lockmode = case when sysstat2&8192=8192   then 'ALLPAGES'                                             "+
+    "                    when sysstat2&16384=16384 then 'DATAPAGES'                                           "+
+    "                    when sysstat2&32768=32768 then 'DATAROWS'                                            "+
+    "                    else 'ALLPAGES'                                                                      "+
+    "               end,                                                                                      "+
+    "	clu	=case when I.status&16=16 OR I.status2&512=512 then 'clu' else '' end,                        "+
+    "	S.pagecnt,                                                                                            "+
+    "	S.leafcnt,                                                                                            "+
+    "	S.emptypgcnt,                                                                                         "+
+    "	Rowcnt	=convert(numeric(10,0),S.rowcnt),                                                             "+
+    "	Forwardrowcnt=convert(numeric(10,0), S.forwrowcnt),                                                   "+
+    "	Delrowcnt=convert(numeric(10,0),S.delrowcnt),                                                         "+
+    "	dpageCR=convert (numeric(10,2),derived_stat(@dbname+'.'+U.name+'.'+O.name, S.indid, 'dpcr')),        "+
+    "	ipageCR=convert (numeric(10,2),derived_stat(@dbname+'.'+U.name+'.'+O.name, S.indid, 'ipcr')),        "+
+    "	drowCR=convert (numeric(10,2),derived_stat(@dbname+'.'+U.name+'.'+O.name, S.indid, 'drcr')),         "+
+    "	page_utilization = null /* convert (numeric(10,2),                                                    "+
+    "                         case when I.indid > 1 or reserved_pages(@dbid, I.id, 0) = 0 then null           "+
+    "                              else 100.*data_pages(@dbid, I.id, 0) / reserved_pages(@dbid, I.id, 0) end)*/,"+
+    "	space_utilization=convert (numeric(10,2),derived_stat(@dbname+'.'+U.name+'.'+O.name, S.indid, 'sput')),"+
+    "	largeIO_eff=convert (numeric(10,2),derived_stat(@dbname+'.'+U.name+'.'+O.name, S.indid, 'lgio')),      "+
+    "   actual_datapages = null /* data_pages (@dbid, I.id, case when I.indid in (0,1) then 0 else -1 end) */,"+
+    "   actual_indexpages= null /*data_pages (@dbid, I.id, case when I.indid in (0,1) then 1 else I.indid end) */,"+
+    "   reserved_pages   = null, /*case when I.indid != 1 then reserved_pages (@dbid, I.id, I.indid)           "+
+    "                                else reserved_pages (@dbid, I.id, 0)+reserved_pages (@dbid, I.id, 1) end */"+
+    " Dpage_utilization = convert (numeric(10,2),                                                            "+
+    "  case when S.indid in (0,1) then                                                                       "+
+    "    case when sysstat2&16384=16384 or sysstat2&32768=32768 then                                         "+
+    "             ceiling(1.*case when S.rowcnt=0 then 1 else S.rowcnt end / floor((@@maxpagesize -46)/((case when I.maxlen<10 then 10 else I.maxlen end)+2))) / S.pagecnt"+
+    "          else"+
+    "             ceiling(1.*case when S.rowcnt=0 then 1 else S.rowcnt end / case when floor((@@maxpagesize -32)/(I.maxlen+2)) > 255 then 255 else floor((@@maxpagesize -32)/(I.maxlen+2)) end) / S.pagecnt"+
+    "    end"+
+    "  else null end)"+
+    "from (select id, indid, pagecnt=sum(1.*pagecnt), leafcnt=sum(1.*leafcnt), emptypgcnt=sum(1.*emptypgcnt), "+
+    "            rowcnt=sum(1.*rowcnt), forwrowcnt=sum(1.*forwrowcnt),delrowcnt=sum(1.*delrowcnt)             "+
+    "       from "+@dbname+"..systabstats                                                                     "+
+    "       group by id,indid                                                                                 "+
+    "      ) S, "+@dbname+"..sysindexes I, "+@dbname+"..sysobjects O, "+@dbname+"..sysusers U                "+
+    "where S.id=I.id                                                                                         "+
+    "and S.indid=I.indid                                                                                     "+
+    "and S.id=O.id    and O.uid=U.uid                                                                        "+
+    "and O.sysstat2&1024 = 0  /* skip proxy tables */                                                         "+
+    "and O.sysstat2&2048 = 0  /* skip existing tables */                                                      "+
+    "and (S.pagecnt+S.leafcnt > ?minpages?  )                                                                 "+
+    "and S.id!=8 /* don't take syslogs */                                                                     "
+    )
+
+    set rowcount 1
+    select @dbid=dbid, @dbname=name from #db_cursor
+    select @rowcnt=@@rowcount
+    delete #db_cursor where dbid=@dbid
+    set rowcount 0
+end
+select * from #fragment
+drop table #fragment
+drop table #db_cursor
+]]>
+ </SQL>
+  <SQL_if_no_sa> 
+if datepart(hh,getdate()) != ?HOUR_EXEC? return
+exec sp_asemon_fragmentation '?minpages?'
+ </SQL_if_no_sa>
+  <key1 > dbname </key1>
+  <key2 > tabname </key2>
+  <key3 > indid </key3>
+  <filterCol >  </filterCol>
+  <delay > 3600 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_Fragment (
+     Timestamp         datetime not null,
+     Interval          int      not null,   
+     dbname            sysname  not null,
+     owner             sysname  not null,
+     tabname           sysname  not null,
+     indname           sysname  not null,
+     indid             int      not null,
+     lockmode          varchar(10) not null,                         
+     clu               char(3) null,
+     pagecnt           unsigned int null,
+     leafcnt           unsigned int null,
+     emptypgcnt        unsigned int null,
+     Rowcnt            numeric(10,0) null,
+     Forwardrowcnt     numeric(10,0) null,
+     Delrowcnt         numeric(10,0) null,
+     dpageCR           numeric(10,2) null,
+     ipageCR           numeric(10,2) null,
+     drowCR            numeric(10,2) null,
+     page_utilization  numeric(10,2) null,
+     space_utilization numeric(10,2) null,
+     largeIO_eff       numeric(10,2) null,
+     actual_datapages  int null,
+     actual_indexpages int null,
+     reserved_pages    int null,
+     Dpage_utilization numeric(10,2) null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create unique index idx on ?SERVERNAME?_Fragment (Timestamp, dbname, owner, tabname, indid)
+     </I>
+     <I>
+  create unique index idx1 on ?SERVERNAME?_Fragment (dbname, owner, tabname, indid, Timestamp)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_Fragment" >
+  delete ?SERVERNAME?_Fragment where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>
