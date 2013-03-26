@@ -31,8 +31,9 @@ Asebox Audience
 
 Support
 -------
-* Enterprise class support, training, and consulting available. 
 * Documentation available at [Wiki](https://github.com/asebox/asebox/wiki "ASEBOX Wiki")
+* Have a bug or a feature request? [Please open a new issue](https://github.com/twitter/bootstrap/issues). Before opening any issue, take a look at the [Issue Guidelines](https://github.com/necolas/issue-guidelines)
+* Enterprise class support, training, and consulting available. 
 
 Installation
 ------------
