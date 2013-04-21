@@ -4,9 +4,11 @@
   include ("../connectArchiveServer.php");
   include ("../".$jpgraph_home."/src/jpgraph.php");
   include ("../".$jpgraph_home."/src/jpgraph_line.php");
+
+		//$SQLText = "select --Ts=convert(varchar,Timestamp,3)+' '+convert(varchar(5),Timestamp,8)
+		// Ts=convert(varchar(5),Timestamp,8)
   
-		$SQLText = "select Ts=convert(varchar,Timestamp,3)
-		+' '+convert(varchar,Timestamp,108)
+		$SQLText = "select Ts=convert(varchar,Timestamp,3)+' '+convert(varchar(8),Timestamp,8)
 		,avgCpu=avg(convert(float,UserCPUTime*1000)/Interval*100)
 		,avgCpuSystem=avg(convert(float,SystemCPUTime*1000)/Interval*100)
 		,avgCpuIdle=avg(convert(float,IdleCPUTime*1000)/Interval*100)

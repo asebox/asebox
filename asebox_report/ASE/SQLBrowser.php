@@ -21,8 +21,41 @@
 </div>
 </div>
 </div>
-<div class="sqlbrowserdiv">
-<iframe src="/SQLBROWSER/AMD1_PAR_PPD_SQL/index.html" width=100% height=6000 border=0 frameborder=0 scrolling="no"> </iframe>
+<div class="sqlbrowserdiv" scrollinf="no">
+
+<style>
+    #scroll-box {
+        width:100%;
+        height: 2000px;
+        overflow-y: auto;
+        overflow-x: hidden; 
+        scrolling: "yes";
+    }
+</style>
+
+
+
+<?php
+$file='/SQLBROWSER/'.$ServerName.'/index.html';
+//if ( file_exists($file) ) 
+//{ 
+  //echo '<iframe src="/SQLBROWSER/'.$ServerName.'/index.html" width=100% height=100% border=0 frameborder=0 scrolling="yes"> </iframe>';
+  
+  echo '<iframe id="scroll-box" src="/SQLBROWSER/'.$ServerName.'/index.html"  > </iframe>';
+   
+   
+   
+   
+   
+//} 
+//else 
+//{ 
+//   echo "SQLBrowser report is not available for server ".$ServerName;
+//   exit();
+//} 
+?>
+
+
 </div>
 
 

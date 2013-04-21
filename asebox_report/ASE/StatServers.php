@@ -50,10 +50,8 @@ setStatMainTableSize(0);
 <div class="boxinmain" style="min-width:600px">
 
 <div class="boxtop">
-  <img src="images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
-  <div style="float:left; position: relative; top: 3px;"><?php include './export/export-table.php' ?></div>
+  <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
   <div class="title"  style="width:75%" ><?php echo $Title ?></div>
-  <img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px"/>
 </div>
 
 <div class="boxcontent">

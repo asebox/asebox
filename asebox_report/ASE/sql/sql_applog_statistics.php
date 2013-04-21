@@ -20,7 +20,7 @@
      ,Time       = convert(varchar,  convert(numeric(10,2), abs(datediff( ms, LogTime, StartTime )/1000.0)    ))
      ,Program 
      ,Message 
-     ,LogType 
+     ,LogType  
      ,Username
      ,Spid    
      ,Scope   

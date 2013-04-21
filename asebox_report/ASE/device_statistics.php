@@ -1,10 +1,8 @@
-<?php
-
-        
-        $filterdevice="";
-
-        include './ASE/sql/sql_devices_statistics.php';
-        $query_name=$forced_query_name;
+<?php        
+   $filterdevice="";
+   
+   include './ASE/sql/sql_devices_statistics.php';
+   $query_name=$forced_query_name;
 ?>
 
 <div  style="overflow:visible;min-width:600px" class="boxinmain" >
@@ -17,17 +15,14 @@
 
 <div class="boxcontent">
 
-
-
-
 <table width="100%" cellspacing="2" cellpadding="4">
     <tr align="center"> 
-      <td class="statTabletitle"> Device     </td>
-      <td class="statTabletitle"> Reads      </td>
-      <td class="statTabletitle"> APFReads   </td>
-      <td class="statTabletitle"> Writes     </td>
-      <td class="statTabletitle"> avgserv_ms </td>
-      <td class="statTabletitle"> DevSemaphoreContentionPCT   </td>
+      <td class="statTabletitle"> Device    </td>
+      <td class="statTabletitle"> Reads     </td>
+      <td class="statTabletitle"> APFReads  </td>
+      <td class="statTabletitle"> Writes    </td>
+      <td class="statTabletitle"> avgserv_ms</td>
+      <td class="statTabletitle"> Contention%</td> <!--Device semaphore contention % -->
     </tr>
 
     <?php
@@ -47,11 +42,11 @@
           <?php
           $cpt=1-$cpt;
           ?>
-              <td class="statTable" align="left"> <?php echo $row["Device"] ?>                    </td>
-              <td class="statTable" align="right"> <?php echo number_format($row["PReads"]) ?>                    </td>
-              <td class="statTable" align="right"> <?php echo number_format($row["AReads"]) ?>                    </td>
-              <td class="statTable" align="right"> <?php echo number_format($row["PWrites"]) ?>                   </td>
-              <td class="statTable" align="right"> <?php echo number_format($row["avgserv_ms"],2) ?>                </td>
+              <td class="statTable" align="left"> <?php echo $row["Device"] ?>                       </td>
+              <td class="statTable" align="right"> <?php echo number_format($row["PReads"]) ?>       </td>
+              <td class="statTable" align="right"> <?php echo number_format($row["AReads"]) ?>       </td>
+              <td class="statTable" align="right"> <?php echo number_format($row["PWrites"]) ?>      </td>
+              <td class="statTable" align="right"> <?php echo number_format($row["avgserv_ms"],2) ?> </td>
               <td class="statTable" align="right"> <?php echo number_format($row["DevSemaphoreContentionPCT"]) ?> </td>
               </tr> 
           <?php

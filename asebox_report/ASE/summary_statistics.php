@@ -3,9 +3,7 @@
 
 
 <div class="boxtop">
-<img src="images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
 <div class="title" style="width:85%" >Summary Statistics</div>
-<img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
 </div>
 <div class="boxcontent">
 
