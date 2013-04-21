@@ -56,7 +56,7 @@
 	    <li><a href="#10" onClick="javascript:setSelector('Spinlocks')"          title="Display spinlocks usage" >Spinlocks</a></li>
 	    <li><a href="#10" onClick="javascript:setSelector('Trends')"             title="Display ASE KPI's trends" >Trends</a></li>
     	<li><a href="#10" onClick="javascript:setSelector('Compress')"           title="Display table compression statistics (V15.7)" >Compression (V15.7)        </a></li>
-    	<li><a href="#11" onClick="javascript:setSelector('Tempdb')"             title="Display tempdb usage" >Tempdb</a></li>
+<!---TODO <li><a href="#11" onClick="javascript:setSelector('Tempdb')"             title="Display tempdb usage" >Tempdb</a></li> -->    	
 	    <li><a href="#12" onClick="javascript:setSelector('Errorlog')"           title="Display Errorlog messages" >Errorlog</a></li>
 	</ul>
 	</li>
@@ -65,12 +65,12 @@
 	<li>
 	<a href="#">Config</a>
 	<ul>
-	    <li><a href="#10" onClick="javascript:setSelector('AmStats')"            title="Display asemon_logger's statistics" >AmStats</a></li>
-	    <li><a href="#13" onClick="javascript:setSelector('show_SrvCollectors')" title="Display Servers" >Display Asemon Tables </a></li>
-	    <li><a href="#14" onClick="javascript:setSelector('SysConf')"            title="Display Server Config" >SysConf</a></li>
-	    <li><a href="#15" onClick="javascript:setSelector('BdmConf')"            title="Display Asemon Config" >BdmConf</a></li>
-	    <li><a href="#12" onClick="javascript:setSelector('StatServersBasic')"       title="Display Servers" >Display Servers</a></li>
-	    <li><a href="#12" onClick="javascript:setSelector('StatServers')"     title="Servers" >All Servers</a></li>
+	    <li><a href="#10" onClick="javascript:setSelector('AmStats')"            title="Display asemon_logger's statistics" >Logger Stats</a></li>
+	    <li><a href="#13" onClick="javascript:setSelector('show_SrvCollectors')" title="Display Servers" >Monitor Tables </a></li>
+	    <li><a href="#14" onClick="javascript:setSelector('SysConf')"            title="Display Server Config" >System Config</a></li>
+	    <li><a href="#15" onClick="javascript:setSelector('BdmConf')"            title="Display Asemon Config" >Bdm Config</a></li>
+	    <li><a href="#12" onClick="javascript:setSelector('StatServersBasic')"   title="Display Servers" >Display Servers</a></li>
+	    <li><a href="#12" onClick="javascript:setSelector('StatServers')"        title="Servers" >All Servers</a></li>
 	</ul>
 	</li>
 
@@ -84,7 +84,7 @@
 		<li><a href="#00">Summary</a></li>
         <li><a href="#18" onClick="javascript:setSelector('AppLog')"         title="Application Log" >Application Log </a></li>
         <li><a href="#19" onClick="javascript:setSelector('SybAudit')"       title="Sybase Audit Log" >Sybase Audit Log </a></li>
-        <li><a href="#1"  onclick="javascript:setSelector('SummaryAvg')"     title="Display summary averaged for a period">Summary Avg     </a></li>
+<!---TODO <li><a href="#1"  onclick="javascript:setSelector('SummaryAvg')"     title="Display summary averaged for a period">Summary Avg</a></li>-->
         <li><a href="#20" onclick="javascript:setSelector('SQLBrowser')"     title="SQLBrowser Report">SQLBrowser Report</a></li>
     <?php
     if ($audit_table_exists==1) { ?>
@@ -100,7 +100,7 @@
 	<ul class="sub_menu">	
 	<li><a href="#01" onclick="javascript:setSelector('compare_Summary')"    title="Display summary statistics and CPU, I/O, proc cache usage... graphs">Summary</a></li>
     <li><a href="#18" onClick="javascript:setSelector('compare_AppLog')"     title="Application Log"                   >Application Log </a></li>
-    <li><a href="#14" onClick="javascript:setSelector('compare_SysConf')"    title="Display Server Config"             >SysConf         </a></li>
+    <li><a href="#14" onClick="javascript:setSelector('compare_SysConf')"    title="Display Server Config"             >System Config   </a></li>
 	</ul>
 </li>
 <?php } //end ASE ?> 
@@ -159,7 +159,7 @@
 <!-- HELP -->
 <li><a href="#50">Help</a>
 	<ul class="sub_menu">
-	<li><a href="http://sourceforge.net/apps/mediawiki/asemon/" title="Wiki">Wiki</a></li>
+	<li><a href="http://github.com/asebox/asebox/" title="Wiki">Wiki</a></li>
 	
 	<li><a href="phpinfo.php" title="Wiki">PHP Info</a></li>
 	</ul>

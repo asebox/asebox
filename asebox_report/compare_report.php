@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <script LANGUAGE="javascript" type="text/javascript" src="scripts/jsDate.js"></script>
@@ -159,10 +159,6 @@ include ("compare_search_panel.php");
     
     <center>
 
-
-
-
-
     <!-- ------------------------------------------------------------------------------------------>
     <!-- Menu on Left (selectbox) -->        
     <INPUT  type="hidden" name="selector" value="<?php echo $selector ?>" />
@@ -170,14 +166,6 @@ include ("compare_search_panel.php");
         <input type="hidden" name="newwindow" value="no" style="width:20px;" <?php if ($newwindow=="yes") echo "CHECKED";   ?> />
     </div>  <!-- end div selectbox -->
     </div>  <!-- end div leftpane -->
-
-
-
-
-
-
-
-
 
 <?php
     // Save AsemonReport Context in ARContext variable, crypt Archive password, and stringify this variable

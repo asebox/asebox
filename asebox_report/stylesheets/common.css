@@ -103,7 +103,7 @@ img {
 
 .TopInputDiv {
 	height: 79px; //was 85px;
-	width: 890px; //was 735px; 
+	width: 840px; //was 735px; 
 
 	position: absolute;
 	padding-top:0px;
@@ -111,14 +111,15 @@ img {
 	left:30px;
 	font-size: 14px;
 	font-weight: bold;
-	color: #141031;
+	color: #FAFA6B;      //was #141031
+	
 
 
 	z-index: 20;
 	margin-left: 290px;                                  //was 420px;
 	//background-image: url(../images/topinputdegra.jpg);
 	//background-repeat: repeat-x;
-	background-color: PaleGoldenRod ;
+	background-color: #F2EDB1 ;     //was PaleGoldenRod 
 	border-radius: 14px;     
 	-moz-border-radius:14px; /* Old Firefox */
 	padding-left:8px;
