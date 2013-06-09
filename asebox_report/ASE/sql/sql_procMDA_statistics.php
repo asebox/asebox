@@ -32,6 +32,7 @@ select DBID, Application,ProcName,
                 and isnull(ProcExec.Application,'')=isnull(S.Application,'')
                 and ProcExec.ProcName=S.ProcName
              )
+into #procmda
 from (
     select Application,ProcName, DBID, SPID, KPID, BatchID, ContextID , 
            CpuTime=sum(1.*CpuTime),
@@ -52,6 +53,21 @@ from (
     group by Application,ProcName, DBID, SPID, KPID,BatchID, ContextID 
     ) ProcExec
 group by DBID, Application,ProcName
+
+select DBID, 
+       Application,
+       ProcName,
+       Executions,
+       CpuTime,
+       WaitTime,
+       MemUsageKB,
+       PhysicalReads,
+       LogicalReads,
+       PagesModified,
+       PacketsSent,
+       PacketsReceived,
+       SumPlans
+from   #procmda
 order by ".$orderProc." 
 set rowcount 0";
 
