@@ -1,5 +1,5 @@
-<?php
-
+<?php 
+  
    if ( isset($_POST['orderAmStats']) ) $orderAmStats=$_POST['orderAmStats'];      else $orderAmStats="Thread";
    
    // Check if AseDbSpce table exist
