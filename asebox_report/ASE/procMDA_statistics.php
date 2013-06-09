@@ -1,25 +1,43 @@
 <?php
-
-	$param_list=array(
-		'orderProc',
-		'rowcnt',
-		'filterdbid',
-		'filterAppname',
-		'filterProcname'
-	);
-	foreach ($param_list as $param)
+  $param_list=array(
+  	'orderProc',
+  	'rowcnt',
+  	'filterdbid',
+  	'filterAppname',
+  	'filterProcname'
+  );
+  foreach ($param_list as $param)
     @$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
  
   if ( !isset($orderProc) ) $orderProc="LogicalReads DESC";
-  if ( !isset($rowcnt) ) $rowcnt=200;
-  if ( !isset($AppName) ) $AppName="";
-  if ( !isset($ProcName) ) $ProcName="";
+  if ( !isset($rowcnt)    ) $rowcnt=200;
+  if ( !isset($AppName)   ) $AppName="";
+  if ( !isset($ProcName)  ) $ProcName="";
 
   if ( isset($_POST['filterTempdbid'        ]) ) $filterTempdbid=        $_POST['filterTempdbid'];         else $filterTempdbid="";
 
-    include ("sql/sql_procMDA_statistics.php");
-?>
+  $result = sybase_query("if object_id('#procmda') is not null drop table #procmda",$pid);
+  $result = sybase_query("if object_id('#sumplanperproc') is not null drop table #sumplanperproc",$pid);
 
+  include ("sql/sql_procMDA_statistics.php");
+  $query_rep=$query;
+  
+  $query = "select DBID, 
+         Application,
+         ProcName,
+         Executions,
+         CpuTime,
+         WaitTime,
+         MemUsageKB,
+         PhysicalReads,
+         LogicalReads,
+         PagesModified,
+         PacketsSent,
+         PacketsReceived,
+         SumPlans
+  from   #procmda
+  order by ".$orderProc;    
+?>
 
 <!-- SRR-->
 <script type="text/javascript">
@@ -46,8 +64,8 @@ function getProcDetail(DBID, ProcName, type)
 <div class="boxinmain" style="min-width:800px;">
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
-<div class="title"><?php echo  $Title ?></div>
-<a   href="http://github.com/asebox/asebox?title=AseRep_ProcMDA" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Procedures help" TITLE="Procedures help"  /> </a>
+<div class="title"><?php echo $Title ?></div>
+<a   href="http://github.com/asebox/asebox/ASE-Procedure-Statistics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Procedures help" TITLE="Procedures help"  /> </a>
 </div>
 
 <div class="boxcontent">
@@ -65,7 +83,7 @@ function getProcDetail(DBID, ProcName, type)
     <img src="images/button_sideRt.gif"  class="btn" height="20px">
 </td>
 <td>
-	<?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; order by : ".$orderProc; ?>
+	<?php //echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; order by : ".$orderProc; ?>
     <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" ?>
 </td>
 </tr></table>
@@ -80,7 +98,7 @@ function getProcDetail(DBID, ProcName, type)
 	  <td> </td>
       <td  class="statTabletitle"> DBID        </td>
       <td  class="statTabletitle"> Application </td>
-      <td  class="statTabletitle"> Proc        </td>
+      <td  class="statTabletitle"> Procedure   </td>
       <td  class="statTabletitle"> Executions  </td>
       <td  class="statTabletitle"> CpuTime     </td>
       <td  class="statTabletitle"> WaitTime    </td>
@@ -94,27 +112,27 @@ function getProcDetail(DBID, ProcName, type)
     </tr>
     <tr class=statTableTitle>   
 	  <td> </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="DBID"                 <?php if ($orderProc=="DBID")        echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="Application"          <?php if ($orderProc=="Application")    echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="ProcName"             <?php if ($orderProc=="ProcName")        echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="Executions DESC"      <?php if ($orderProc=="Executions DESC")   echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="CpuTime DESC"         <?php if ($orderProc=="CpuTime DESC")     echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="WaitTime DESC"        <?php if ($orderProc=="WaitTime DESC")    echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="MemUsageKB DESC"      <?php if ($orderProc=="MemUsageKB DESC")  echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PhysicalReads DESC"   <?php if ($orderProc=="PhysicalReads DESC")      echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="LogicalReads DESC"    <?php if ($orderProc=="LogicalReads DESC")      echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PagesModified DESC"   <?php if ($orderProc=="PagesModified DESC") echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PacketsSent DESC"     <?php if ($orderProc=="PacketsSent DESC")    echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PacketsReceived DESC" <?php if ($orderProc=="PacketsReceived DESC")   echo "CHECKED";  ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="SumPlans DESC"        <?php if ($orderProc=="SumPlans DESC")   echo "CHECKED";  ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="DBID"                 <?php if ($orderProc=="DBID")                 echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="Application"          <?php if ($orderProc=="Application")          echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="ProcName"             <?php if ($orderProc=="ProcName")             echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="Executions DESC"      <?php if ($orderProc=="Executions DESC")      echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="CpuTime DESC"         <?php if ($orderProc=="CpuTime DESC")         echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="WaitTime DESC"        <?php if ($orderProc=="WaitTime DESC")        echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="MemUsageKB DESC"      <?php if ($orderProc=="MemUsageKB DESC")      echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PhysicalReads DESC"   <?php if ($orderProc=="PhysicalReads DESC")   echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="LogicalReads DESC"    <?php if ($orderProc=="LogicalReads DESC")    echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PagesModified DESC"   <?php if ($orderProc=="PagesModified DESC")   echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PacketsSent DESC"     <?php if ($orderProc=="PacketsSent DESC")     echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PacketsReceived DESC" <?php if ($orderProc=="PacketsReceived DESC") echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="SumPlans DESC"        <?php if ($orderProc=="SumPlans DESC")        echo "CHECKED"; ?> ></td>
     </tr>
 
 
     <tr> 
 	  <td> </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbid" size="4" value="<?php if( isset($filterdbid) ){ echo $filterdbid ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterAppname"  value="<?php if( isset($filterAppname) ){ echo $filterAppname ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterProcname"  value="<?php if( isset($filterProcname) ){ echo $filterProcname ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbid" size="4" value="<?php if( isset($filterdbid)    ){ echo $filterdbid     ; } ?>" ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterAppname"       value="<?php if( isset($filterAppname) ){ echo $filterAppname  ; } ?>" ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterProcname"      value="<?php if( isset($filterProcname)){ echo $filterProcname ; } ?>" ></td>
       <td></td> 
       <td></td> 
       <td></td> 
@@ -131,7 +149,7 @@ function getProcDetail(DBID, ProcName, type)
 
 
     <?php 
-	$result = sybase_query($query,$pid);
+	$result = sybase_query($query_rep,$pid);
 	if ($result==false){ 
 		sybase_close($pid); 
 		$pid=0;

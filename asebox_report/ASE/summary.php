@@ -42,6 +42,7 @@ else {
       <img src='<?php echo "./ASE/graphCPUSystem.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
       <img src='<?php echo "./ASE/graphCache.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
       <img src='<?php echo "./ASE/graphIO.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
+      <img src='<?php echo "./ASE/graphNetworkIO.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
 
       <img src='<?php echo "./ASE/graphPieProcess.php?group=program&indicator=physical&filter_clause=&ARContextJSON=".urlencode($ARContextJSON); ?> '>
       <img src='<?php echo "./ASE/graphPieProcess.php?group=program&indicator=logical&filter_clause=&ARContextJSON=".urlencode($ARContextJSON); ?> '>
@@ -51,6 +52,7 @@ else {
       <img src='<?php echo "./ASE/graphActiveCnx.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
       <img src='<?php echo "./ASE/graphProcCacheUsage.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
       <img src='<?php echo "./ASE/graphRecompProcs.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
+      
 
       <?php
       // ------------------------------------------------------------------------------------------

@@ -7,7 +7,26 @@
     if ( isset($_POST['filterusername']) ) $filterusername= $_POST['filterusername']; else $filterusername="";
     if ( isset($_POST['filterspid'    ]) ) $filterspid=     $_POST['filterspid'];     else $filterspid="";
     if ( isset($_POST['filtermintime' ]) ) $filtermintime=  $_POST['filtermintime'];  else $filtermintime="";
-?>     
+?>
+
+
+
+<?php
+//----------------------------------------------------------------------------------------------------
+// Check table exists
+$query = "select cnt=count(*) from sysobjects where name = '".$ServerName."_AppLog'";
+$result = sybase_query($query,$pid);
+
+$row = sybase_fetch_array($result);
+if ($row["cnt"] == 0) {
+//if ($result==false) {
+   echo "Application Logging data is not available. The AppLog collector has not been activated for server ".$ServerName.".";
+   exit();
+}
+	
+//----------------------------------------------------------------------------------------------------
+?>
+
        
 <script type="text/javascript">
 var WindowObjectReference; // global variable
@@ -27,15 +46,14 @@ function getRepartProg()
 </script>
 
 <?php
-   if ($orderPrc == "") 
-      $orderPrc=$order_by;
-      
-//echo "<br>rowcnt=$rowcnt";
-//echo "<br>order_by=$order_by";
-//echo "<br>orderPrc=$orderPrc";
-//$orderPrc=$order_by;
+if ($orderPrc == "") 
+   $orderPrc=$order_by;
 
-        include ("sql/sql_applog_statistics.php");
+$result = sybase_query("if object_id('#applog') is not null drop table #applog",$pid);
+
+include ("sql/sql_applog_statistics.php");
+
+
 $debug=0;
 if ($debug == 1) {
   echo "<br>query=$query";   //debug
@@ -48,8 +66,8 @@ if ($debug == 1) {
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
-<div class="title"><?php echo  $Title ?></div>
-<a   href="http://github.com/asebox/asebox?title=AseRep_Process" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Process help" TITLE="Process help"  /> </a>
+<div class="title"><?php echo "$Title" ?></div>
+<a   href="http://github.com/asebox/asebox/App-Log-Statistics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Process help" TITLE="Process help"  /> </a>
 </div>
 
 <div class="boxcontent">
@@ -89,34 +107,31 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
 </tr></table>
 </div>
 
-
-
 <!-- ---------------------------------------------------------------------------------------------------->
 <!-- Main Table -->
 <div class="statMainTable">
 <table cellspacing=2 cellpadding=4 >
-
     <tr> 
-      <td class="statTabletitle" > LogTime  </td>
-      <td class="statTabletitle" > StartTime</td>
-      <td class="statTabletitle" > Time     </td>
-      <td class="statTabletitle" > Program  </td>
-      <td class="statTabletitle" > Message  </td>
-      <td class="statTabletitle" > Type     </td>
-      <td class="statTabletitle" > User     </td>
-      <td class="statTabletitle" > Spid     </td>
-      <td class="statTabletitle" > Scope    </td>
+      <td class="statTabletitle" > Start Time</td>
+      <td class="statTabletitle" > End Time   </td>
+      <td class="statTabletitle" > Time(sec)  </td>
+      <td class="statTabletitle" > Program    </td>
+      <td class="statTabletitle" > Message    </td>
+      <td class="statTabletitle" > Type       </td>
+      <td class="statTabletitle" > User       </td>
+      <td class="statTabletitle" > Spid       </td>
+      <td class="statTabletitle" > Scope      </td>
     </tr>
     <tr>  
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="convert(datetime,LogTime)"   <?php if ($orderPrc=="convert(datetime,LogTime)"  ) echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="convert(datetime,StartTime)" <?php if ($orderPrc=="convert(datetime,StartTime)") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="abs(datediff( ms, LogTime, StartTime )) DESC  " <?php if ($orderPrc=="abs(datediff( ms, LogTime, StartTime )) DESC  ") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Program    " <?php if ($orderPrc=="Program    ") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Message    " <?php if ($orderPrc=="Message    ") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="LogType    " <?php if ($orderPrc=="LogType    ") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Username   " <?php if ($orderPrc=="Username   ") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Spid       " <?php if ($orderPrc=="Spid       ") echo "CHECKED"; ?> > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Scope      " <?php if ($orderPrc=="Scope      ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="StartTime" <?php if ($orderPrc=="StartTime") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="LogTime  " <?php if ($orderPrc=="LogTime  "  ) echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="datediff(ms,StartTime,LogTime) DESC" <?php if ($orderPrc=="datediff(ms,StartTime,LogTime) DESC") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Program  " <?php if ($orderPrc=="Program  ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Message  " <?php if ($orderPrc=="Message  ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="LogType  " <?php if ($orderPrc=="LogType  ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Username " <?php if ($orderPrc=="Username ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Spid     " <?php if ($orderPrc=="Spid     ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Scope    " <?php if ($orderPrc=="Scope    ") echo "CHECKED"; ?> > </td>
     </tr>
     <tr> 
       <td></td> 
@@ -131,38 +146,38 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
     </tr>
    
 <?php
-        $result = sybase_query("set rowcount ".$rowcnt."
-                               ".$query."
-                               set rowcount 0",
-                               $pid);                       
-        if ($result==false){ 
-                sybase_close($pid); 
-                $pid=0;
-                include ("../connectArchiveServer.php");   
-                echo "<tr><td>Error</td></tr></table>";
-                return(0);
-        }
-        
-        
-        $rw=0;
-        $cpt=0;
-        $TotalTime=0;
-        while($row = sybase_fetch_array($result))
-        {
-            $rw++;
-            $TotalTime = $TotalTime  + $row["Time"];
-            if($cpt==0)
-                 $parite="impair";
-            else
-                 $parite="pair";
-            ?>
-            <tr class="statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';" Onclick='javascript:getPrcDetail("<?php echo $row["Loggedindt"]?>","<?php echo $row["Spid"]?>","<?php echo $StartTimestamp?>","<?php echo $EndTimestamp?>" )' >
-            <?php
-            $cpt=1-$cpt;
+    $result = sybase_query("set rowcount ".$rowcnt."
+                           ".$query."
+                           set rowcount 0",
+                           $pid);                       
+    if ($result==false){ 
+            sybase_close($pid); 
+            $pid=0;
+            include ("../connectArchiveServer.php");   
+            echo "<tr><td>Error</td></tr></table>";
+            return(0);
+    }
+    
+    
+    $rw=0;
+    $cpt=0;
+    $TotalTime=0;
+    while($row = sybase_fetch_array($result))
+    {
+        $rw++;
+        $TotalTime = $TotalTime  + $row["Time"];
+        if($cpt==0)
+             $parite="impair";
+        else
+             $parite="pair";
+        ?>
+        <tr class="statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';" Onclick='javascript:getPrcDetail("<?php echo $row["Loggedindt"]?>","<?php echo $row["Spid"]?>","<?php echo $StartTimestamp?>","<?php echo $EndTimestamp?>" )' >
+        <?php
+        $cpt=1-$cpt;
 ?>
 
-    <td class="statTablePtr" NOWRAP> <?php echo $row["LogTime"] ?>  </td> 
     <td class="statTablePtr" NOWRAP> <?php echo $row["StartTime"] ?>  </td> 
+    <td class="statTablePtr" NOWRAP> <?php echo $row["LogTime"] ?>  </td> 
     <td class="statTablePtr" ALIGN="right"> <?php echo $row["Time"] ?> </td> 
     <td class="statTablePtr" > <?php echo $row["Program"] ?> </td> 
     <td class="statTablePtr" NOWRAP> <?php echo $row["Message"] ?> </td> 

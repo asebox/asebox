@@ -1,28 +1,26 @@
-
 <?php
-
-	$param_list=array(
-		'rowcnt',
-		'pagenum',
-		'showlevel',
-		'selectedTimestamp'
-	);
-	foreach ($param_list as $param)
-		@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+$param_list=array(
+	'rowcnt',
+	'pagenum',
+	'showlevel',
+	'selectedTimestamp'
+);
+foreach ($param_list as $param)
+	@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
  
-  if ( isset($_POST['orderFragment'])) $orderFragment=$_POST['orderFragment']; else $orderFragment="1,2,4";
-  if ( isset($_POST['filterDbName'            ]) ) $filterDbName=            $_POST['filterDbName'];             else $filterDbName="";
-  if ( isset($_POST['filterOwner'            ]) ) $filterOwner=            $_POST['filterOwner'];             else $filterOwner="";
-  if ( isset($_POST['filterTabName'            ]) ) $filterTabName=            $_POST['filterTabName'];             else $filterTabName="";
-  if ( isset($_POST['filterIndName'            ]) ) $filterIndName=            $_POST['filterIndName'];             else $filterIndName="";
-  if ( isset($_POST['filterIndid'            ]) ) $filterIndid=            $_POST['filterIndid'];             else $filterIndid="";
-  if ( isset($_POST['filterLckMode'            ]) ) $filterLckMode=            $_POST['filterLckMode'];             else $filterLckMode="";
-  if ( isset($_POST['filterClu'            ]) ) $filterClu=            $_POST['filterClu'];             else $filterClu="";
+if ( isset($_POST['orderFragment'  ]) ) $orderFragment= $_POST['orderFragment']; else $orderFragment="1,2,4";
+if ( isset($_POST['filterDbName'   ]) ) $filterDbName=  $_POST['filterDbName'];  else $filterDbName="";
+if ( isset($_POST['filterOwner'    ]) ) $filterOwner=   $_POST['filterOwner'];   else $filterOwner="";
+if ( isset($_POST['filterTabName'  ]) ) $filterTabName= $_POST['filterTabName']; else $filterTabName="";
+if ( isset($_POST['filterIndName'  ]) ) $filterIndName= $_POST['filterIndName']; else $filterIndName="";
+if ( isset($_POST['filterIndid'    ]) ) $filterIndid=   $_POST['filterIndid'];   else $filterIndid="";
+if ( isset($_POST['filterLckMode'  ]) ) $filterLckMode= $_POST['filterLckMode']; else $filterLckMode="";
+if ( isset($_POST['filterClu'      ]) ) $filterClu=     $_POST['filterClu'];     else $filterClu="";
 
-  if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=0;
-  if ( isset($_POST['pagenum'])  ) $pagenum=  $_POST['pagenum'];   else $pagenum=1000;
-  if ( isset($_POST['showlevel'])  ) $showlevel=  $_POST['showlevel'];   else $showlevel=2;
-  if ( isset($_POST['selectedTimestamp'])  ) $selectedTimestamp=  $_POST['selectedTimestamp'];   else $selectedTimestamp="";
+if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=0;
+if ( isset($_POST['pagenum'])  ) $pagenum=  $_POST['pagenum'];   else $pagenum=1000;
+if ( isset($_POST['showlevel'])  ) $showlevel=  $_POST['showlevel'];   else $showlevel=2;
+if ( isset($_POST['selectedTimestamp'])  ) $selectedTimestamp=  $_POST['selectedTimestamp'];   else $selectedTimestamp="";
 ?>
 
 
@@ -191,19 +189,14 @@ function getFragmentationDetail(dbname, owner, tabname, indid, indexname, lockmo
      	      else echo "statTable";
   }
 ?>      
-
-        
-        
 <center>
-        
-        
-        
+       
 
 <div class="boxinmain" style="min-width:830px">
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo $Title." (".$selectedTimestamp.")"?></div>
-<a   href="http://github.com/asebox/asebox?title=AseRep_ASEFrag" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Fragmentation help" TITLE="Fragmentation help"  /> </a>
+<a   href="http://github.com/asebox/asebox/ASE-Fragmentation" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Fragmentation help" TITLE="Fragmentation help"  /> </a>
 </div>
 
 <div class="boxcontent">
@@ -240,29 +233,28 @@ function getFragmentationDetail(dbname, owner, tabname, indid, indexname, lockmo
 <div class="statMainTable">
 <table cellspacing=2 cellpadding=4>
     <tr> 
-      <td class="statTabletitle" >  dbname                </td>
-      <td class="statTabletitle" >  owner                 </td>
-      <td class="statTabletitle" >  tabname               </td>
-      <td class="statTabletitle" >  indname               </td>
-      <td class="statTabletitle" >  indid                 </td>
-      <td class="statTabletitle" >  lockmode              </td>
-      <td class="statTabletitle" >  clu                   </td>
-      <td class="statTabletitle" >  Rowcnt                </td>
-      <td class="statTabletitle" >  pagecnt               </td>
-      <td class="statTabletitle" >  leafcnt               </td>
-      <td class="statTabletitle" >  Emptpgcnt             </td>
-      <td class="statTabletitle" >  Fwdrowcnt             </td>
-      <td class="statTabletitle" >  Delrowcnt             </td>
-      <td class="statTabletitle" >  dpageCR               </td>
-      <td class="statTabletitle" >  ipageCR               </td>
-      <td class="statTabletitle" >  drowCR                </td>
-      <td class="statTabletitle" >  space_utilization     </td>
-      <td class="statTabletitle" >  largeIO_eff           </td>
-      <td class="statTabletitle" >  Dpage_utilization     </td>
-      <td class="statTabletitle" >  Object_Mb             </td>
-      <td class="statTabletitle" >  Delta_Mb              </td>
-    </tr>                          
-                                   
+      <td class="statTabletitle" >Database   </td>
+      <td class="statTabletitle" >Owner      </td>
+      <td class="statTabletitle" >Table      </td>
+      <td class="statTabletitle" >Index      </td>
+      <td class="statTabletitle" >indID      </td>
+      <td class="statTabletitle" >Lockmode   </td>
+      <td class="statTabletitle" >Clu        </td>
+      <td class="statTabletitle" >Rowcnt     </td>
+      <td class="statTabletitle" >Pagecnt    </td>
+      <td class="statTabletitle" >Leafcnt    </td>
+      <td class="statTabletitle" >Emptpgs    </td>
+      <td class="statTabletitle" >Fwdrows    </td>
+      <td class="statTabletitle" >Delrows    </td>
+      <td class="statTabletitle" >dpageCR    </td>
+      <td class="statTabletitle" >ipageCR    </td>
+      <td class="statTabletitle" >drowCR     </td>
+      <td class="statTabletitle" >space_util </td>
+      <td class="statTabletitle" >largeIO_eff</td>
+      <td class="statTabletitle" >Dpage_util </td>
+      <td class="statTabletitle" >Object_Mb  </td>
+      <td class="statTabletitle" >Delta_Mb   </td>
+    </tr>                                                             
 
     <tr>  
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderFragment"  VALUE="1"      <?php if ($orderFragment=="1")      echo "CHECKED";  ?> > </td>
@@ -289,13 +281,13 @@ function getFragmentationDetail(dbname, owner, tabname, indid, indexname, lockmo
     </tr>
     
     <tr> 
-      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterDbName"  size="8" value="<?php if( isset($filterDbName) ){ echo $filterDbName ; } ?>" > </td>
-      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterOwner"  size="4" value="<?php if( isset($filterOwner) ){ echo $filterOwner ; } ?>" > </td>
+      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterDbName"   size="8"  value="<?php if( isset($filterDbName) ){ echo $filterDbName ; } ?>" > </td>
+      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterOwner"    size="3"  value="<?php if( isset($filterOwner) ){ echo $filterOwner ; } ?>" > </td>
       <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterTabName"  size="18" value="<?php if( isset($filterTabName) ){ echo $filterTabName ; } ?>" > </td>
       <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterIndName"  size="18" value="<?php if( isset($filterIndName) ){ echo $filterIndName ; } ?>" > </td>
-      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterIndid" size="4"  value="<?php if( isset($filterIndid) ){ echo $filterIndid ; } ?>" > </td>
-      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterLckMode"  size="5" value="<?php if( isset($filterLckMode) ){ echo $filterLckMode ; } ?>" > </td>
-      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterClu"  size="4" value="<?php if( isset($filterClu) ){ echo $filterClu ; } ?>" > </td>
+      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterIndid"    size="4"  value="<?php if( isset($filterIndid) ){ echo $filterIndid ; } ?>" > </td>
+      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterLckMode"  size="5"  value="<?php if( isset($filterLckMode) ){ echo $filterLckMode ; } ?>" > </td>
+      <td  class="statTableBtn" > <INPUT TYPE=text NAME="filterClu"      size="3"  value="<?php if( isset($filterClu) ){ echo $filterClu ; } ?>" > </td>
     </tr>
     <?php
     $result = sybase_query($query,$pid) ;
@@ -329,29 +321,27 @@ function getFragmentationDetail(dbname, owner, tabname, indid, indexname, lockmo
             <?php
             $cpt=1-$cpt;
             ?>
-            <td nowrap class="statTablePtr" align="left">   <?php echo $row["dbname"]             ?> </td>
-            <td nowrap class="statTablePtr" align="left">   <?php echo $row["owner"]              ?> </td>
-            <td nowrap class="statTablePtr" align="left">   <?php echo $row["tabname"]            ?> </td>
-            <td nowrap class="statTablePtr" align="left">   <?php echo $row["indname"]            ?> </td>
-            <td nowrap class="statTablePtr" align="right">  <?php echo $row["indid"]             ?> </td>
-            <td nowrap class="statTablePtr" align="center"> <?php echo $row["lockmode"]         ?> </td>
-            <td nowrap class="statTablePtr" align="center"> <?php echo $row["clu"]              ?> </td>
-            <td nowrap class="statTablePtr" align="right"> <?php echo number_format($row["avg_Rowcnt"])            ?> </td>
-            <td nowrap class="statTablePtr" align="right"> <?php echo number_format($row["avg_pagecnt"])           ?> </td>
-            <td nowrap class="statTablePtr" align="right"> <?php echo number_format($row["avg_leafcnt"] )          ?> </td>
-            <td nowrap class=<?php echo calcColor($row, "avg_emptypgcnt")?> align="right"> <?php echo number_format($row["avg_emptypgcnt"])        ?> </td>
-            <td nowrap class=<?php echo calcColor($row, "avg_Forwardrowcnt")?> align="right"> <?php echo number_format($row["avg_Forwardrowcnt"])     ?> </td>
+            <td nowrap class="statTablePtr" align="left">   <?php echo $row["dbname"]          ?> </td>
+            <td nowrap class="statTablePtr" align="left">   <?php echo $row["owner"]           ?> </td>
+            <td nowrap class="statTablePtr" align="left">   <?php echo $row["tabname"]         ?> </td>
+            <td nowrap class="statTablePtr" align="left">   <?php echo $row["indname"]         ?> </td>
+            <td nowrap class="statTablePtr" align="right">  <?php echo $row["indid"]           ?> </td>
+            <td nowrap class="statTablePtr" align="center"> <?php echo $row["lockmode"]        ?> </td>
+            <td nowrap class="statTablePtr" align="center"> <?php echo $row["clu"]             ?> </td>
+            <td nowrap class="statTablePtr" align="right"> <?php echo number_format($row["avg_Rowcnt"])     ?> </td>
+            <td nowrap class="statTablePtr" align="right"> <?php echo number_format($row["avg_pagecnt"])    ?> </td>
+            <td nowrap class="statTablePtr" align="right"> <?php echo number_format($row["avg_leafcnt"] )   ?> </td>
+            <td nowrap class=<?php echo calcColor($row, "avg_emptypgcnt")?> align="right"> <?php echo number_format($row["avg_emptypgcnt"])       ?> </td>
+            <td nowrap class=<?php echo calcColor($row, "avg_Forwardrowcnt")?> align="right"> <?php echo number_format($row["avg_Forwardrowcnt"]) ?> </td>
             <td nowrap class=<?php echo calcColor($row, "avg_Delrowcnt")?> align="right"> <?php echo number_format($row["avg_Delrowcnt"])         ?> </td>
-            <td nowrap class=<?php echo calcColor($row, "avg_dpageCR")?> align="right"> <?php echo $row["avg_dpageCR"]           ?> </td>
-            <td nowrap class=<?php echo calcColor($row, "avg_ipageCR")?> align="right"> <?php echo $row["avg_ipageCR"]           ?> </td>
-            <td nowrap class=<?php echo calcColor($row, "avg_drowCR")?> align="right"> <?php echo $row["avg_drowCR"]            ?> </td>
+            <td nowrap class=<?php echo calcColor($row, "avg_dpageCR")?> align="right"> <?php echo $row["avg_dpageCR"]    ?> </td>
+            <td nowrap class=<?php echo calcColor($row, "avg_ipageCR")?> align="right"> <?php echo $row["avg_ipageCR"]    ?> </td>
+            <td nowrap class=<?php echo calcColor($row, "avg_drowCR")?> align="right"> <?php echo $row["avg_drowCR"]      ?> </td>
             <td nowrap class="statTablePtr" align="right"> <?php echo $row["avg_space_utilization"] ?> </td>
             <td nowrap class=<?php echo calcColor($row, "avg_largeIO_eff")?> align="right"> <?php echo $row["avg_largeIO_eff"]       ?> </td>
             <td nowrap class=<?php echo calcColor($row, "avg_Dpage_utilization")?> align="right"> <?php if ($Dpage_utilization_selclause != "") echo $row["avg_Dpage_utilization"]; else echo ""; ?> </td>
             <td nowrap class="statTablePtr" align="right"> <?php echo $row["object_Mb"] ?> </td>
             <td nowrap class="statTablePtr" align="right"> <?php echo $row["delta_Mb"] ?> </td>
-
-
 
             </tr> 
             <?php

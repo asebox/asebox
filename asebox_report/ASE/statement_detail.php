@@ -55,9 +55,6 @@
     $displaylevel=2;
     include ("../asemon_search_panel.php");
     ?>
-    <center>
-
-    <H1> Statement detail for statement ID = <?php echo $StmtID; ?> </H1>
    <P>
    <center>
 
@@ -129,11 +126,27 @@
 
 <div class="boxinmain" style="min-width:780px;float:none">
 <div class="boxtop">
-<div class="title" style="width:65%">Statement Statistics</div>
+<div class="title" style="width:65%">Statement Detail</div>
 </div>
 
 <div class="boxcontent">
 <div class="statMainInfo">
+
+
+<table cellspacing=0 cellpadding=0 class="infobox" align="left">
+  <tr class="infobox"><td class="infobox"></td><td><td></td></tr>
+  <tr class="infobox"><td class="infobox" align="left"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp StmtID     </td>   <td>&nbsp:&nbsp</td>  </b><td><b><?php echo $row["StmtID"]                   ?></b></td></tr>  
+  <tr class="infobox"><td class="infobox" align="left"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Elapsed_s  </td>   <td>&nbsp:&nbsp</td>  </b><td><b><?php echo number_format($row["Elapsed_s"]) ?></b></td></tr>
+  <tr class="infobox"><td class="infobox" align="left"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Procedure  </td>   <td>&nbsp:&nbsp</td>  </b><td><b><?php echo $row["ProcName"]                 ?></b></td></tr>
+  <tr class="infobox"><td class="infobox" align="left"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp LineNumber </td>   <td>&nbsp:&nbsp</td>  </b><td><b><?php echo $row["LineNumber"]               ?></b></td></tr>
+  <tr class="infobox"><td class="infobox"></td><td><td></td></tr>
+</table>
+</br>
+</br>
+</br>
+</br>
+
+
 
 
 <table cellspacing=0 cellpadding=0 class="infobox">
@@ -148,9 +161,7 @@
 <tr>
 <td class="infobox" valign="top"> <center>
   <table border="0" cellspacing="1" cellpadding="0" class="statInfo" >
-      <tr> <td> StmtID </td> <td> : </td> <td> <?php echo $row["StmtID"] ?> </td> </tr>
       <tr> <td> StartTime </td> <td> : </td> <td> <?php echo $row["StartTime"] ?> </td> </tr>
-      <tr> <td> Elapsed_s </td> <td> : </td> <td> <?php echo number_format($row["Elapsed_s"]) ?> </td> </tr>
       <tr> <td> Login </td> <td> : </td> <td> <?php echo $row["Login"] ?> </td> </tr>
       <tr> <td> Application </td> <td> : </td> <td> <?php echo $row["Application"] ?> </td> </tr>
       <tr> <td> ClientHost </td> <td> : </td> <td> <?php echo $row["ClientHost"] ?> </td> </tr>
@@ -162,8 +173,6 @@
         <tr> <td> ClientApplName </td> <td> : </td> <td> <?php echo $row["ClientApplName"] ?> </td> </tr>        
       <?php } ?>
       <tr> <td> DBID </td> <td> : </td> <td> <?php echo $row["DBID"] ?> </td> </tr>
-      <tr> <td> ProcName </td> <td> : </td> <td> <?php echo $row["ProcName"] ?> </td> </tr>
-      <tr> <td> LineNumber </td> <td> : </td> <td> <?php echo $row["LineNumber"] ?> </td> </tr>
       <tr> <td> SPID </td> <td> : </td> <td> <?php echo $row["SPID"] ?> </td> </tr>
       <tr> <td> KPID </td> <td> : </td> <td> <?php echo $row["KPID"] ?> </td> </tr>
       <tr> <td> PlanID </td> <td> : </td> <td> <?php echo $row["PlanID"] ?> </td> </tr>
@@ -173,24 +182,24 @@
 </td>
 <td class="infobox" valign="top"> <center>
   <table border="0" cellspacing="1" cellpadding="0" class="statInfo">
-      <tr> <td> CpuTime_ms </td> <td> : </td>        <td align="right">        <?php echo number_format($row["CpuTime"]          ) ?> </td> </tr>
-      <tr> <td> WaitTime_ms </td> <td> : </td>       <td align="right">       <?php echo number_format($row["WaitTime"]         ) ?> </td> </tr>
-      <tr> <td> MemUsageKB </td> <td> : </td>        <td align="right">        <?php echo number_format($row["MemUsageKB"]       ) ?> </td> </tr>
-      <tr> <td> PhysicalReads </td> <td> : </td>     <td align="right">     <?php echo number_format($row["PhysicalReads"]    ) ?> </td> </tr>
-      <tr> <td> LogicalReads </td> <td> : </td>      <td align="right">      <?php echo number_format($row["LogicalReads"]     ) ?> </td> </tr>
-      <tr> <td> PagesModified </td> <td> : </td>     <td align="right">     <?php echo number_format($row["PagesModified"]    ) ?> </td> </tr>
-      <tr> <td> PacketsSent </td> <td> : </td>       <td align="right">       <?php echo number_format($row["PacketsSent"]      ) ?> </td> </tr>
-      <tr> <td> PacketsReceived </td> <td> : </td>   <td align="right">   <?php echo number_format($row["PacketsReceived"]  ) ?> </td> </tr>
-      <tr> <td> NetworkPacketSize </td> <td> : </td> <td align="right"> <?php echo number_format($row["NetworkPacketSize"]) ?> </td> </tr>
-      <tr> <td> PlansAltered </td> <td> : </td>      <td align="right">      <?php echo number_format($row["PlansAltered"]     ) ?> </td> </tr>
-      <tr> <td> RowsAffected </td> <td> : </td>      <td align="right">      <?php echo number_format($row["RowsAffected"]     ) ?> </td> </tr>
+      <tr><td>CpuTime_ms       </td><td>: </td><td align="right"> <?php echo number_format($row["CpuTime"]          ) ?></td></tr>
+      <tr><td>WaitTime_ms      </td><td>: </td><td align="right"> <?php echo number_format($row["WaitTime"]         ) ?></td></tr>
+      <tr><td>MemUsageKB       </td><td>: </td><td align="right"> <?php echo number_format($row["MemUsageKB"]       ) ?></td></tr>
+      <tr><td>PhysicalReads    </td><td>: </td><td align="right"> <?php echo number_format($row["PhysicalReads"]    ) ?></td></tr>
+      <tr><td>LogicalReads     </td><td>: </td><td align="right"> <?php echo number_format($row["LogicalReads"]     ) ?></td></tr>
+      <tr><td>PagesModified    </td><td>: </td><td align="right"> <?php echo number_format($row["PagesModified"]    ) ?></td></tr>
+      <tr><td>PacketsSent      </td><td>: </td><td align="right"> <?php echo number_format($row["PacketsSent"]      ) ?></td></tr>
+      <tr><td>PacketsReceived  </td><td>: </td><td align="right"> <?php echo number_format($row["PacketsReceived"]  ) ?></td></tr>
+      <tr><td>NetworkPacketSize</td><td>: </td><td align="right"> <?php echo number_format($row["NetworkPacketSize"]) ?></td></tr>
+      <tr><td>PlansAltered     </td><td>: </td><td align="right"> <?php echo number_format($row["PlansAltered"]     ) ?></td></tr>
+      <tr><td>RowsAffected     </td><td>: </td><td align="right"> <?php echo number_format($row["RowsAffected"]     ) ?></td></tr>
   </table> </center>
 </td>
 </tr>
 <tr> <td colspan=2  class="infobox">
 <?php
 if ($row["ExactStat"]=="N") 
-   echo "Remark : Statistics information is not exact due to the sampling";
+   echo "Remark : Not exact due to sampling";
 else
    echo "Exact Statistics";
 ?>
@@ -208,9 +217,7 @@ else
 
     <div class="boxinmain" style="min-width:700px;max-width:1000px;float:none;">
     <div class="boxtop">
-    <img src="../images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
     <div class="title" >Objects Statistics</div>
-    <img src="../images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
     </div>
     
     <div class="boxcontent">
@@ -252,10 +259,10 @@ else
               <td class=statTabletitle > Owner </td>
               <td class=statTabletitle > ObjectName </td>
               <td class=statTabletitle > ObjectType </td>
-              <td class=statTabletitle > IndexID </td>
-              <td class=statTabletitle > L_Reads </td>
-              <td class=statTabletitle > P_Reads </td>
-              <td class=statTabletitle > P_APFReads </td>
+              <td class=statTabletitle > IndID </td>
+              <td class=statTabletitle > LogReads </td>
+              <td class=statTabletitle > PhyReads </td>
+              <td class=statTabletitle > PhyAPFRds </td>
               <?php if ($version=="old") { ?>
                  <td class=statTabletitle > TblSize(Kb) </td>
               <?php } else {?>
@@ -330,14 +337,14 @@ else
                 <td class="statTable"> <?php echo $row["ObjectName"] ?> </td>
                 <td class="statTable"> <?php echo $row["ObjectType"] ?> </td>
                 <td class="statTable"> <?php echo $row["IndexID"] ?> </td>
-                <td class="statTable"> <?php echo number_format($row["LogicalReads"]    ) ?> </td>
-                <td class="statTable"> <?php echo number_format($row["PhysicalReads"]   ) ?> </td>
-                <td class="statTable"> <?php echo number_format($row["PhysicalAPFReads"]) ?> </td>
+                <td class="statTable" align="right"> <?php echo number_format($row["LogicalReads"]    ) ?> </td>
+                <td class="statTable" align="right"> <?php echo number_format($row["PhysicalReads"]   ) ?> </td>
+                <td class="statTable" align="right"> <?php echo number_format($row["PhysicalAPFReads"]) ?> </td>
                 <?php if ($version=="old") { ?>
-                   <td class="statTable"> <?php echo number_format($row["TableSize"]) ?> </td>
+                   <td class="statTable" align="right"> <?php echo number_format($row["TableSize"]) ?> </td>
                 <?php } else {?>
     <!--               <td class="statTable"> <?php echo $row["PartitionName"] ?> </td> -->
-                   <td class="statTable"> <?php echo number_format($row["PartitionSize"]) ?> </td>
+                   <td class="statTable" align="right"> <?php echo number_format($row["PartitionSize"]) ?> </td>
                    <td class="statTable"> <?php echo $row["IdxName"] ?> </td>
                 <?php } ?>
                 </tr> 
@@ -386,9 +393,7 @@ else
 
     <div class="boxinmain" style="min-width:600px;max-width:1000px;float:none;">
     <div class="boxtop">
-    <img src="../images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
     <div class="title" >Batch SQL</div>
-    <img src="../images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
     </div>
     <div class="boxcontent">
     <table width="100%" class="statMainTable" cellspacing=10 cellpadding=0> 
@@ -459,9 +464,7 @@ else
 
     <div class="boxinmain" style="min-width:600px;max-width:1000px;float:none;">
     <div class="boxtop">
-    <img src="../images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
     <div class="title" >SQL Plan</div>
-    <img src="../images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
     </div>
     <div class="boxcontent">
     <table width="100%" class="statMainTable" cellspacing=10 cellpadding=0> 

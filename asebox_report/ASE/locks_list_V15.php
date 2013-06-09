@@ -1,5 +1,4 @@
 <?php
-
 	$param_list=array(
 		'orderPrc',
 		'rowcnt',
@@ -27,15 +26,8 @@
         if ( !isset($filterTrn ) ) $filterTrn ="";
         if ( !isset($filterPrg ) ) $filterPrg ="";
 ?>      
-        
-        
-        
+                
 <center>
-        
-        
-        
-        
-        
         
 	<?php 
 		// Prepare lock analysis
@@ -160,7 +152,7 @@ setStatMainTableSize(0);
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
 <div class="title"><?php echo  $Title ?></div>
-<a   href="http://github.com/asebox/asebox?title=AseRep_Locks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Locks help" TITLE="Locks help"  /> </a>
+<a   href="http://github.com/asebox/asebox/ASE-Locks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Locks help" TITLE="Locks help"  /> </a>
 </div>
 
 <div class="boxcontent">
@@ -169,7 +161,7 @@ setStatMainTableSize(0);
 <table align="left" cellspacing="2px" ><tr>
 <td>Max rows (0 = unlimited) :</td>
 <td>
-	<input type="text" name="rowcnt" value="<?php if( isset($rowcnt) ){ echo $rowcnt ; } ?>">
+	<input type="text" SIZE="8" name="rowcnt" value="<?php if( isset($rowcnt) ){ echo $rowcnt ; } ?>">
 </td>
 <td>
 	<img src="images/button_sideLt.gif"  class="btn" height="20px" >
@@ -184,57 +176,55 @@ setStatMainTableSize(0);
 <div class="statMainTable">
 <table cellspacing=2 cellpadding=4>
     <tr> 
-      <td class="statTabletitle" > Timestamp    </td>
-      <td class="statTabletitle" > WaitTime     </td>
-      <td class="statTabletitle" > SPID         </td>
-      <td class="statTabletitle" > KPID         </td>
-      <td class="statTabletitle" > DBID         </td>
-      <td class="statTabletitle" > ParentSPID   </td>
-      <td class="statTabletitle" > LockID       </td>
+      <td class="statTabletitle" > Timestamp  </td>
+      <td class="statTabletitle" > WaitTime   </td>
+      <td class="statTabletitle" > SPID       </td>
+      <td class="statTabletitle" > KPID       </td>
+      <td class="statTabletitle" > DBID       </td>
+      <td class="statTabletitle" > ParentSPID </td>
+      <td class="statTabletitle" > LockID     </td>
       <td class="statTabletitle" > BlockedBy  </td>
-      <td class="statTabletitle" > BlockedState </td>
-      <td class="statTabletitle" > Context      </td>
-      <td class="statTabletitle" > ObjectID     </td>
-      <td class="statTabletitle" > lckBase      </td>
-      <td class="statTabletitle" > lckObjet     </td>
-      <td class="statTabletitle" > lckPage      </td>
-      <td class="statTabletitle" > lckRow       </td>
-      <td class="statTabletitle" > LockState    </td>
-      <td class="statTabletitle" > LockType     </td>
-      <td class="statTabletitle" > LockLevel    </td>
-      <td class="statTabletitle" > Usr          </td>
-      <td class="statTabletitle" > Trn          </td>
-      <td class="statTabletitle" > Prg          </td>
-      <td class="statTabletitle" > Prc          </td>
-      <td class="statTabletitle" > Line         </td>
+      <td class="statTabletitle" > State      </td>
+      <td class="statTabletitle" > Context    </td>
+      <td class="statTabletitle" > ObjectID   </td>
+      <td class="statTabletitle" > Database   </td>
+      <td class="statTabletitle" > Object     </td>
+      <td class="statTabletitle" > Page       </td>
+      <td class="statTabletitle" > Row        </td>
+      <td class="statTabletitle" > State      </td>
+      <td class="statTabletitle" > LockType   </td>
+      <td class="statTabletitle" > LockLevel  </td>
+      <td class="statTabletitle" > User       </td>
+      <td class="statTabletitle" > Trans      </td>
+      <td class="statTabletitle" > Program    </td>
+      <td class="statTabletitle" > Procedure  </td>
+      <td class="statTabletitle" > Line       </td>
     </tr>
     
     <tr> 
       <td></td> 
       <td></td> 
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterSPID"  value="<?php if( isset($filterSPID) ){ echo $filterSPID ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="4" NAME="filterSPID"  value="<?php if( isset($filterSPID) ){ echo $filterSPID ; } ?>" > </td>
       <td></td> 
       <td></td> 
       <td></td> 
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterLockID"  value="<?php if( isset($filterLockID) ){ echo $filterLockID ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterBlockedBy"  value="<?php if( isset($filterLockID) ){ echo $filterBlockedBy ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="5" NAME="filterLockID"  value="<?php if( isset($filterLockID) ){ echo $filterLockID ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="5" NAME="filterBlockedBy"  value="<?php if( isset($filterLockID) ){ echo $filterBlockedBy ; } ?>" > </td>
       <td></td> 
       <td></td> 
       <td></td> 
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterLckBase"  value="<?php if( isset($filterLckBase) ){ echo $filterLckBase ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="10" NAME="filterLckBase"  value="<?php if( isset($filterLckBase) ){ echo $filterLckBase ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterLckObjet"  value="<?php if( isset($filterLckObjet) ){ echo $filterLckObjet ; } ?>" > </td>
       <td></td> 
       <td></td> 
       <td></td> 
       <td></td> 
       <td></td> 
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterUsr"  value="<?php if( isset($filterUsr) ){ echo $filterUsr ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterTrn"  value="<?php if( isset($filterTrn) ){ echo $filterTrn ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterPrg"  value="<?php if( isset($filterPrg) ){ echo $filterPrg ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="10" NAME="filterUsr"  value="<?php if( isset($filterUsr) ){ echo $filterUsr ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="12" NAME="filterTrn"  value="<?php if( isset($filterTrn) ){ echo $filterTrn ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="12" NAME="filterPrg"  value="<?php if( isset($filterPrg) ){ echo $filterPrg ; } ?>" > </td>
 
-
-    </tr>
-    
+    </tr>    
     
     <?php
     // Filter blocking occurences if necessary
@@ -356,7 +346,7 @@ set rowcount 0";
 			<tr class="statTable<?php echo $parite; ?>"   >
 			<?php
     ?>
-      <td nowrap class="statTable" > <?php echo $row["TS"]    ?> </td> 
+      <td nowrap class="statTable" > <?php echo $row["TS"]           ?> </td> 
       <td nowrap class="statTable" > <?php echo $row["WaitTime"]     ?> </td> 
       <td nowrap class="statTable" > <?php echo $row["SPID"]         ?> </td>
       <td nowrap class="statTable" > <?php echo $row["KPID"]         ?> </td>
@@ -402,9 +392,5 @@ set rowcount 0";
 </DIV>
 </DIV>
 </DIV>
-
-
-
-
 
 </center>

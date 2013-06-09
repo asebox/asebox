@@ -1,16 +1,13 @@
 <?php
-
-    $aorder = array("Timestamp","name","parent,name","valuetext","difference desc,name","last_change desc");
-    if ( isset($_POST['orderPrc'         ]) ) $orderPrc=        $_POST['orderPrc'];        else $orderPrc=$order_by;
-    if ( !in_array ($orderPrc, $aorder) ) $orderPrc="name";
-
-    if ( isset($_POST['rowcnt'           ]) ) $rowcnt=          $_POST['rowcnt'];          else $rowcnt=0;
-    if ( isset($_POST['filtername'       ]) ) $filtername=      $_POST['filtername'];      else $filtername="";
-    if ( isset($_POST['filtercomment'     ]) ) $filtercomment=    $_POST['filtercomment'];    else $filtercomment="";
-    if ( isset($_POST['filterparent'     ]) ) $filterparent=    $_POST['filterparent'];    else $filterparent="";
-    if ( isset($_POST['show_diff_post']) ) $show_diff= $_POST['show_diff_post'];  else $show_diff_post="youpostdiff";
-
-           
+   $aorder = array("Timestamp","name","parent,name","valuetext","difference desc,name","last_change desc");
+   if ( isset($_POST['orderPrc'         ]) ) $orderPrc=        $_POST['orderPrc'];        else $orderPrc=$order_by;
+   if ( !in_array ($orderPrc, $aorder) ) $orderPrc="name";
+   
+   if ( isset($_POST['rowcnt'        ]) ) $rowcnt=        $_POST['rowcnt'];         else $rowcnt=0;
+   if ( isset($_POST['filtername'    ]) ) $filtername=    $_POST['filtername'];     else $filtername="";
+   if ( isset($_POST['filtercomment' ]) ) $filtercomment= $_POST['filtercomment'];  else $filtercomment="";
+   if ( isset($_POST['filterparent'  ]) ) $filterparent=  $_POST['filterparent'];   else $filterparent="";
+   if ( isset($_POST['show_diff_post']) ) $show_diff=     $_POST['show_diff_post']; else $show_diff_post="youpostdiff";
 ?>
 
 <script type="text/javascript">
@@ -27,7 +24,6 @@ object.onclick=function(){
    document.inputparam.show_diff.value = "youHitBtnPOST2";
    document.inputparam.show_diff_post.value = "youHitBtnPOST2";
    document.inputparam.submit();	
-
 };
 
 

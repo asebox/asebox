@@ -1,5 +1,5 @@
 <?php
-echo '<p align="left">ServerName='.$ServerName.' ... ServerName1='.$ServerName1.' ... ServerName2='.$ServerName2.'</p>';
+//echo '<p align="left">ServerName='.$ServerName.' ... ServerName1='.$ServerName1.' ... ServerName2='.$ServerName2.'</p>';
 ?>
 <!---------------------------------------------------------------------------------------------------------------->
 <!-- Check Data Available -->

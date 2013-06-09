@@ -18,9 +18,9 @@ if ($selector=="SpaceUsed")      { echo "<P>"; $Title = "Space Used";           
 if ($selector=="LogsHold")       { echo "<P>"; $Title = "Long Transactions (Syslogshold)"; $order_by = ""; include ("syslogshold_statistics.php");    echo "</P>"; }
 if ($selector=="StmtCache")      { echo "<P>"; $Title = "Statement Cache";                 $order_by = ""; include ("CachedStatements_statistics.php"); echo "</P>"; }
 if ($selector=="QPMetrics")      { echo "<P>"; $Title = "Query Processing Metrics";        $order_by = ""; include ("QPMetrics_statistics.php");      echo "</P>"; }
-if ($selector=="Audit")          { echo "<P>"; include ("auditing.php"); echo "</P>"; }
+if ($selector=="Audit")          { echo "<P>"; $Title = "Auditing";                                              include ("auditing.php");            echo "</P>"; }
 if ($selector=="Devices")        { echo "<P>"; $Title = "Device Summary Statistics";       $order_by = "Device"; include ("devices_summary.php");     echo "</P>"; }
-if ($selector=="AmStats")        { echo "<P>"; $Title = "Logger Statistics";                                    include ($rootDir."/AmStats.php");    echo "</P>"; }
+if ($selector=="AmStats")        { echo "<P>"; $Title = "Asemon Logger Statistics";                             include ($rootDir."/AmStats.php");    echo "</P>"; }
 if ($selector=="SysWaits")       { echo "<P>"; $Title = "SysWaits Statistics";                                  include ("syswaits.php");             echo "</P>"; }
 if ($selector=="Compress")       { echo "<P>"; $Title = "Compression Statistics";                               include ("Compress_statistics.php");  echo "</P>"; }
 if ($selector=="Tempdb")         { echo "<P>"; $Title = "Tempdb";                                               include ("Tempdb_statistics.php");    echo "</P>"; }
@@ -32,6 +32,7 @@ if ($selector=="BdmConf")        { echo "<P>"; $Title = "Asemon Settings";  $ord
 if ($selector=="StatServersBasic") { echo "<P>"; $Title = "Servers";                                 $rowcnt=0; include ("StatServersBasic.php");     echo "</P>"; }
 if ($selector=="StatServersNew") { echo "<P>"; $Title = "Servers";                                   $rowcnt=0; include ("StatServersNew.php");       echo "</P>"; }
 if ($selector=="StatServers")    { echo "<P>"; $Title = "Servers";                                   $rowcnt=0; include ("StatServers.php");          echo "</P>"; }
+if ($selector=="AppLogSummary")  { echo "<P>"; $Title = "Application Summary"; $order_by = "Program";$rowcnt=0; include ("AppLog_summary.php");       echo "</P>"; }
 if ($selector=="AppLog")         { echo "<P>"; $Title = "Application Log "; $order_by = "LogTime";   $rowcnt=0; include ("AppLog_statistics.php");    echo "</P>"; }
 if ($selector=="SybAudit")       { echo "<P>"; $Title = "Audit Log ";       $order_by = "eventtime"; $rowcnt=0; include ("Audit_statistics.php");     echo "</P>"; }
 if ($selector=="SummaryAvg")     { include ("summaryavg.php"); }
@@ -39,12 +40,12 @@ if ($selector=="SQLBrowser")     { include ("SQLBrowser.php"); }
 //------------------------------------------------------------------------------------------------------------------------
 //compare
 if ($selector=="compare_Summary") { include ("compare_summary.php"); } 
-if ($selector=="compare_AppLog")  { include ("compare_summary.php"); } 
+if ($selector=="compare_AppLog")  { include ("compare_applog.php"); } 
 if ($selector=="compare_SysConf") { include ("compare_SysConf_list.php"); } 
 
 
 //------------------------------------------------------------------------------------------------------------------------
-if ($selector=="Locks") {
+if ($selector=="Blockages") {
       	
    echo "<P>";
    $Title = "Blocking Occurences ";

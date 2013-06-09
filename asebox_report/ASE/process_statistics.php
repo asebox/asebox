@@ -1,27 +1,24 @@
 <?php
+if ( isset($_POST['orderPrc'            ]) ) $orderPrc=            $_POST['orderPrc'];             else $orderPrc=$order_by;
+if ( isset($_POST['rowcnt'              ]) ) $rowcnt=              $_POST['rowcnt'];               else $rowcnt=200;
+if ( isset($_POST['filterspid'          ]) ) $filterspid=          $_POST['filterspid'];           else $filterspid="";
+if ( isset($_POST['filterusername'      ]) ) $filterusername=      $_POST['filterusername'];       else $filterusername="";
+if ( isset($_POST['filterprogname'      ]) ) $filterprogname=      $_POST['filterprogname'];       else $filterprogname="";
+if ( isset($_POST['filteripaddr'        ]) ) $filteripaddr=        $_POST['filteripaddr'];         else $filteripaddr="";
+if ( isset($_POST['filterhostname'      ]) ) $filterhostname=      $_POST['filterhostname'];       else $filterhostname="";
+if ( isset($_POST['filterhostprocess'   ]) ) $filterhostprocess=   $_POST['filterhostprocess'];    else $filterhostprocess="";
+if ( isset($_POST['filterclientname'    ]) ) $filterclientname=    $_POST['filterclientname'];     else $filterclientname="";
+if ( isset($_POST['filterclienthostname']) ) $filterclienthostname=$_POST['filterclienthostname']; else $filterclienthostname="";
+if ( isset($_POST['filterclientapplname']) ) $filterclientapplname=$_POST['filterclientapplname']; else $filterclientapplname="";
+if ( isset($_POST['filterTempdbid'      ]) ) $filterTempdbid=      $_POST['filterTempdbid'];       else $filterTempdbid="";
+?>
 
-    if ( isset($_POST['orderPrc'              ]) ) $orderPrc=              $_POST['orderPrc'];               else $orderPrc=$order_by;
-    if ( isset($_POST['rowcnt'                ]) ) $rowcnt=                $_POST['rowcnt'];                 else $rowcnt=200;
-    if ( isset($_POST['filterspid'            ]) ) $filterspid=            $_POST['filterspid'];             else $filterspid="";
-    if ( isset($_POST['filterusername'        ]) ) $filterusername=        $_POST['filterusername'];         else $filterusername="";
-    if ( isset($_POST['filterprogname'        ]) ) $filterprogname=        $_POST['filterprogname'];         else $filterprogname="";
-    if ( isset($_POST['filteripaddr'          ]) ) $filteripaddr=          $_POST['filteripaddr'];           else $filteripaddr="";
-    if ( isset($_POST['filterhostname'        ]) ) $filterhostname=        $_POST['filterhostname'];         else $filterhostname="";
-    if ( isset($_POST['filterhostprocess'     ]) ) $filterhostprocess=     $_POST['filterhostprocess'];      else $filterhostprocess="";
-    if ( isset($_POST['filterclientname'      ]) ) $filterclientname=      $_POST['filterclientname'];       else $filterclientname="";
-    if ( isset($_POST['filterclienthostname'  ]) ) $filterclienthostname=  $_POST['filterclienthostname'];   else $filterclienthostname="";
-    if ( isset($_POST['filterclientapplname'  ]) ) $filterclientapplname=  $_POST['filterclientapplname'];   else $filterclientapplname="";
-    if ( isset($_POST['filterTempdbid'        ]) ) $filterTempdbid=        $_POST['filterTempdbid'];         else $filterTempdbid="";
-    
-?>     
-       
+
        
 <script type="text/javascript">
 var WindowObjectReference; // global variable
 
-
 setStatMainTableSize(0);
-
 
 function getPrcDetail(Loggedindatetime,Spid,StartTimestamp,EndTimestamp)
 {
@@ -46,31 +43,40 @@ function getRepartProg()
 </script>
 
 <?php
-        // Check if CnxActiv has tmp_pages fields and Cnx has tempdbid and tempdbname (added in asemon_logger V2.3.4)
-        $result = sybase_query("select cnt=count(*)
-                                from (
-                                select name from syscolumns where id=object_id('".$ServerName."_Cnx') and name in ('tempdbid','tempdbname')
-                                union all
-                                select name from syscolumns where id=object_id('".$ServerName."_CnxActiv') and name in ('tmp_pages')
-                                ) x"
-                                , $pid);
-        if ($result==false){ 
-                sybase_close($pid); 
-                $pid=0;
-                include ("../connectArchiveServer.php");   
-                echo "<tr><td>Error</td></tr></table>";
-                return(0);
-        }
-        $row = sybase_fetch_array($result);
-        if ( $row["cnt"] == 3 )
-                $dbid_tmp_pages_exists = 1;
-        else
-                $dbid_tmp_pages_exists = 0;
+//----------------------------------------------------------------------------------------------------
+// Check table exists
+$query = "select cnt=count(*) from sysobjects where name = '".$ServerName."_Cnx'";
+$result = sybase_query($query,$pid);
+$row = sybase_fetch_array($result);
+if ($row["cnt"] == 0) {
+   echo "<p align='center'><font size='4'  STYLE='font-weight: 900' COLOR='red'>Connection Logging data is not available. The Cnx collector has not been activated for server ".$ServerName.".";
+   exit();
+}
+//----------------------------------------------------------------------------------------------------
+// Check if CnxActiv has tmp_pages fields and Cnx has tempdbid and tempdbname (added in asemon_logger V2.3.4)
+$result = sybase_query("select cnt=count(*)
+                        from (
+                        select name from syscolumns where id=object_id('".$ServerName."_Cnx') and name in ('tempdbid','tempdbname')
+                        union all
+                        select name from syscolumns where id=object_id('".$ServerName."_CnxActiv') and name in ('tmp_pages')
+                        ) x"
+                        , $pid);
+if ($result==false){ 
+        sybase_close($pid); 
+        $pid=0;
+        include ("../connectArchiveServer.php");   
+        echo "<tr><td>Error</td></tr></table>";
+        return(0);
+}
+$row = sybase_fetch_array($result);
+if ( $row["cnt"] == 3 )
+        $dbid_tmp_pages_exists = 1;
+else
+        $dbid_tmp_pages_exists = 0;
 
-
-        include ("sql/sql_process_statistics.php");
-
+include ("sql/sql_process_statistics.php");
 ?>
+
 
 <INPUT type="hidden" name="filter_clause" value='<?php echo urlencode($filter_clause);?>' >
 
@@ -78,11 +84,10 @@ function getRepartProg()
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
-<a   href="http://github.com/asebox/asebox?title=AseRep_Process" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Process help" TITLE="Process help"  /> </a>
+<a   href="http://github.com/asebox/asebox/ASE-Process-Statistics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Process help" TITLE="Process help"  /> </a>
 </div>
 
 <div class="boxcontent">
-
 
 <div class="boxbtns" >
 <table align="left" cellspacing="2px" ><tr>
@@ -96,7 +101,7 @@ function getRepartProg()
     <img src="images/button_sideRt.gif"  class="btn" height="20px">
 </td>
 <td>
-	<?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; order by : ".$orderPrc; ?>
+	<?php //echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; order by : ".$orderPrc; ?>
     <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" ?>
 </td>
 <td>
@@ -113,38 +118,38 @@ function getRepartProg()
 <table cellspacing=2 cellpadding=4 >
 
     <tr> 
-      <td class="statTabletitle" > Loggedindatetime     </td>
-      <td class="statTabletitle" > Spid                 </td>
-      <td class="statTabletitle" > UserName             </td>
-      <td class="statTabletitle" > program_name         </td>
-      <td class="statTabletitle" > CPUTime              </td>
-      <td class="statTabletitle" > LogicalReads         </td>
-      <td class="statTabletitle" > PhysicalReads        </td>
-      <td class="statTabletitle" > PagesRead            </td>
-      <td class="statTabletitle" > PhysicalWrites       </td>
-      <td class="statTabletitle" > PagesWritten         </td>
-      <td class="statTabletitle" > ScanPgs              </td>
-      <td class="statTabletitle" > IdxPgs               </td>
-      <td class="statTabletitle" > UlcBytWrite          </td>
-      <td class="statTabletitle" > UlcFlush             </td>
-      <td class="statTabletitle" > ULCFlushFull         </td>
-      <td class="statTabletitle" > avgUlcSize           </td>
-      <td class="statTabletitle" > Transactions         </td>
-      <td class="statTabletitle" > Commits              </td>
-      <td class="statTabletitle" > Rollbacks            </td>
-      <td class="statTabletitle" > PacketsReceived      </td>
-      <td class="statTabletitle" > PacketsSent          </td>
-      <td class="statTabletitle" > BytesReceived        </td>
-      <td class="statTabletitle" > BytesSent            </td>
-      <td class="statTabletitle" > avgPktRcv            </td>
-      <td class="statTabletitle" > avgPktSent           </td>
-      <td class="statTabletitle" > ipaddr               </td>
-      <td class="statTabletitle" > hostname             </td>
-      <td class="statTabletitle" > hostprocess          </td>
-      <td class="statTabletitle" > execlass             </td>
-      <td class="statTabletitle" > clientname           </td>
-      <td class="statTabletitle" > clienthostname       </td>
-      <td class="statTabletitle" > clientapplname       </td>
+      <td class="statTabletitle" > Loggedin Datetime</td>
+      <td class="statTabletitle" > Spid             </td>
+      <td class="statTabletitle" > User             </td>
+      <td class="statTabletitle" > Program          </td>
+      <td class="statTabletitle" > CPUTime          </td>
+      <td class="statTabletitle" > LogicalReads     </td>
+      <td class="statTabletitle" > PhysicalReads    </td>
+      <td class="statTabletitle" > PagesRead        </td>
+      <td class="statTabletitle" > PhysicalWrites   </td>
+      <td class="statTabletitle" > PagesWritten     </td>
+      <td class="statTabletitle" > ScanPgs          </td>
+      <td class="statTabletitle" > IdxPgs           </td>
+      <td class="statTabletitle" > UlcBytWrite      </td>
+      <td class="statTabletitle" > UlcFlush         </td>
+      <td class="statTabletitle" > ULCFlushFull     </td>
+      <td class="statTabletitle" > avgUlcSize       </td>
+      <td class="statTabletitle" > Transactions     </td>
+      <td class="statTabletitle" > Commits          </td>
+      <td class="statTabletitle" > Rollbacks        </td>
+      <td class="statTabletitle" > PacketsReceived  </td>
+      <td class="statTabletitle" > PacketsSent      </td>
+      <td class="statTabletitle" > BytesReceived    </td>
+      <td class="statTabletitle" > BytesSent        </td>
+      <td class="statTabletitle" > avgPktRcv        </td>
+      <td class="statTabletitle" > avgPktSent       </td>
+      <td class="statTabletitle" > ipaddr           </td>
+      <td class="statTabletitle" > hostname         </td>
+      <td class="statTabletitle" > hostprocess      </td>
+      <td class="statTabletitle" > execlass         </td>
+      <td class="statTabletitle" > clientname       </td>
+      <td class="statTabletitle" > clienthostname   </td>
+      <td class="statTabletitle" > clientapplname   </td>
       <?php 
       if ($dbid_tmp_pages_exists == 1 ) {
       ?>
@@ -207,9 +212,9 @@ function getRepartProg()
     </tr>
     <tr> 
       <td></td> 
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterspid"  value="<?php if( isset($filterspid) ){ echo $filterspid ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterusername"  value="<?php if( isset($filterusername) ){ echo $filterusername ; } ?>" > </td>
-      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterprogname"  value="<?php if( isset($filterprogname) ){ echo $filterprogname ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="4" NAME="filterspid"  value="<?php if( isset($filterspid) ){ echo $filterspid ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="8" NAME="filterusername"  value="<?php if( isset($filterusername) ){ echo $filterusername ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text SIZE="12" NAME="filterprogname"  value="<?php if( isset($filterprogname) ){ echo $filterprogname ; } ?>" > </td>
       <td></td> 
       <td></td> 
       <td></td> 
