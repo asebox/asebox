@@ -1,4 +1,31 @@
 <?php
+
+    if ( !isset($StartTimestamp) || ($StartTimestamp == "")) {
+      if ( $DFormat == "dmy" ) {
+        $StartTimestamp = date("d/m/Y 10:00");
+        $EndTimestamp = date("d/m/Y 23:59");
+      }
+
+      if ( $DFormat == "mdy" ) {
+        $StartTimestamp = date("m/d/Y 11:00");
+        $EndTimestamp = date("m/d/Y 23:39");
+      }
+      $StartTimestamp1 = $StartTimestamp;
+      $EndTimestamp1 = $EndTimestamp;
+    }
+    
+    if ( !isset($StartTimestamp2) || ($StartTimestamp2 == "")) {
+      if ( $DFormat == "dmy" ) {
+        $StartTimestamp2 = date("d/m/Y 00:00");
+        $EndTimestamp2 = date("d/m/Y 23:59");
+      }
+
+      if ( $DFormat == "mdy" ) {
+        $StartTimestamp2 = date("m/d/Y 00:00");
+        $EndTimestamp2 = date("m/d/Y 23:39");
+      }
+    }
+
   if (!isset($ServerName_temp)) $ServerName_temp="";
 ?>
 
@@ -134,7 +161,6 @@
         <td width="100"><input <?php if ($displaylevel>1) echo 'DISABLED'; ?> class="InputDateFld" name="EndTimestamp" type="text" value="<?php if ( isset($EndTimestamp) ){ echo $EndTimestamp ; } ?>" /></td>
         <td align="left"><img src="<?php echo $HomeUrl ?>/images/icon_calendar.gif" width="20" height="20" onclick="dispcalend('EndTimestamp')" /></td>
         <td align="left">&nbsp;</td>        
-
 
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- IncDate Buttons -->        
@@ -323,22 +349,24 @@
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- Date Format Button -->
         <!-- --> 
+        <?php if ($changedate) { ?>
                 <td colspan="2"> </td>
-        <td align="left">&nbsp;</td>        
-        <?php if ($displaylevel < 2 ) { ?> 
-                    <td valign="top">
-                      <select name="DFormat" class="DFormatStyle" >
-                        <option value="dmy" <?php if ($DFormat=="dmy")echo "SELECTED"; ?> >dmy</option>
-                        <option value="mdy" <?php if ($DFormat=="mdy")echo "SELECTED"; ?> >mdy</option>
-                      </select>
-                    </td>
-        <?php } // end test if $displaylevel < 2 ?>
+                <td align="left">&nbsp;</td>        
+                <?php if ($displaylevel < 2 ) { ?> 
+                         <td valign="top">
+                           <select name="DFormat" class="DFormatStyle" >
+                             <option value="dmy" <?php if ($DFormat=="dmy")echo "SELECTED"; ?> >dmy</option>
+                             <option value="mdy" <?php if ($DFormat=="mdy")echo "SELECTED"; ?> >mdy</option>
+                           </select>
+                         </td>
+                <?php } // end test if $displaylevel < 2 ?>
+        <?php } ?>
         <!-- -->
-        <input type="hidden" name="DFormat" value="mdy"> 
-        <?php $DFormat=="mdy"; ?>
+        <input type="hidden" name="DFormat" value="<?php echo $DFormat; ?>"> 
 
 
         </tr>
+
         </table>
         </DIV>
  

@@ -14,4 +14,8 @@ $buttonplus2hours=true;
 $firstweekworkday=1;
 $lastweekworkday=5;
 
+// Date Format
+$defaultdateformat='mdy'; //or dmy
+$changedate=1;
+
 ?>

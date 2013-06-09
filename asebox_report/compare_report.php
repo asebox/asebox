@@ -35,6 +35,8 @@
     require_once ("crypt_phpfunc.php"); 
     require_once ("default_archive_cnx.php"); 
     require_once ("default_archive_server_list.php"); 
+    
+        
 
     // Retreive parameters
     if ( isset($_GET['ArchiveServer'  ]) ) { $ArchiveServer= $_GET['ArchiveServer']; $ArchServPassByType='GET'; }
@@ -76,7 +78,8 @@
       if ( isset($_POST['ARContextJSON'    ]) ) { $ARContextJSON= $_POST['ARContextJSON']; $ArCtxPassByType='POST'; }
     if (!isset($ARContextJSON)) $ARContextJSON="";
 
-    if ( isset($_POST['DFormat'  ]) ) $DFormat= $_POST['DFormat']; else $DFormat='mdy';
+    if ( isset($_POST['DFormat'  ]) ) $DFormat= $_POST['DFormat']; else $DFormat=$defaultdateformat;
+
 
     $cu=0;
     $ARContext = array ( );

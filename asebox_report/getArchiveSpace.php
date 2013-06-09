@@ -78,7 +78,8 @@ if ( isset($pid) && ($ArchSrvType=="Adaptive Server Enterprise") ){
         $query = "select 
          -- DBsize_dataMb=sum(size)*@@maxpagesize/(1024*1024) ,
          -- dbfree_dataMb=sum(curunreservedpgs(db_id('".$ArchiveDatabase."'),lstart,unreservedpgs))*@@maxpagesize/(1024*1024) ,
-         pct_used=(convert(float,sum(size) - sum(curunreservedpgs(db_id('".$ArchiveDatabase."'),lstart,unreservedpgs))) )*100 / sum(size)
+         -- no good -- pct_used=(convert(float,sum(size) - sum(curunreservedpgs(db_id('".$ArchiveDatabase."'),lstart,unreservedpgs))) )*100 / sum(size)
+         pct_used=(convert(float,sum(size) - sum(convert(float,curunreservedpgs(db_id('".$ArchiveDatabase."'),lstart,unreservedpgs)))) )*100 / sum(size)
         from master..sysusages where dbid=db_id('".$ArchiveDatabase."')
         and segmap&2=2";
 	$result = sybase_query($query,$pid);
@@ -86,7 +87,7 @@ if ( isset($pid) && ($ArchSrvType=="Adaptive Server Enterprise") ){
 		sybase_close($pid); 
 		$pid=0;
 		include ("connectArchiveServer.php");	
-		echo "<tr><td>Error</td></tr></table>";
+		echo "<tr><td>Error getting archive space</td></tr></table>";
 		return(0);
 	}
         $row = sybase_fetch_array($result);
