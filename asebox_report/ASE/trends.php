@@ -184,7 +184,11 @@ function refresh()
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
 <div class="title">Trends</div>
+<<<<<<< HEAD
+<a   href="http://github.com/asebox/asebox?title=AseRep_Trends" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Trends help" TITLE="Trends help"  /> </a>
+=======
 <a   href="http://github.com/asebox/asebox/ASE-Trends" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Trends help" TITLE="Trends help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -231,8 +235,16 @@ function refresh()
           <option <?php if ($hourfrom=='22' ) {echo "SELECTED";  } ?> > 22 </option>
           <option <?php if ($hourfrom=='23' ) {echo "SELECTED";  } ?> > 23 </option>
         </select>&nbsp;h
+<<<<<<< HEAD
+
+
 </td>
 <td>
+
+=======
+</td>
+<td>
+>>>>>>> 3.1.0
         &nbsp;&nbsp;to : <select  name="hourto">
           <option <?php if ($hourto==''   ) {echo "SELECTED";  } ?> > 0 </option>
           <option <?php if ($hourto=='1'  ) {echo "SELECTED";  } ?> > 1 </option>

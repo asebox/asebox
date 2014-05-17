@@ -29,13 +29,26 @@ setStatMainTableSize(0);
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title" style="width:65%">SysWaits</div>
+<<<<<<< HEAD
+<a   href="http://github.com/asebox/asebox?title=AseRep_ASESysWaits" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="SysWaits help" TITLE="SysWaits help"  /> </a>
+=======
 <a   href="http://github.com/asebox/asebox/ASE-SysWaits" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="SysWaits help" TITLE="SysWaits help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
 
 <div class="statMainTable">
 
+<<<<<<< HEAD
+       
+        
+
+
+
+
+=======
+>>>>>>> 3.1.0
     <table cellspacing=2 cellpadding=4>
 
     <tr> 
@@ -47,11 +60,19 @@ setStatMainTableSize(0);
     </tr>
 
     <tr>   
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="ClassDesc"      <?php if ($ordersyswaits=="ClassDesc")      echo "CHECKED";  ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="EventDesc"      <?php if ($ordersyswaits=="EventDesc")      echo "CHECKED";  ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="3 desc"      <?php if ($ordersyswaits=="3 desc")      echo "CHECKED";  ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="4 desc"      <?php if ($ordersyswaits=="4 desc")      echo "CHECKED";  ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="5 desc"      <?php if ($ordersyswaits=="5 desc")      echo "CHECKED";  ?> > </td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="ClassDesc"   <?php if ($ordersyswaits=="ClassDesc")  echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="EventDesc"   <?php if ($ordersyswaits=="EventDesc")  echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="3 desc"      <?php if ($ordersyswaits=="3 desc")     echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="4 desc"      <?php if ($ordersyswaits=="4 desc")     echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="ordersyswaits"  VALUE="5 desc"      <?php if ($ordersyswaits=="5 desc")     echo "CHECKED";  ?> > </td>
+>>>>>>> 3.1.0
     </tr>
 
 

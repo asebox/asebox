@@ -1,8 +1,16 @@
 <div  style="overflow:visible" class="boxinmain">
 
+<<<<<<< HEAD
+
+<div class="boxtop">
+<img src="images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
+<div class="title">Lock analysis</div>
+<img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
+=======
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"></div>
 <div class="title">Lock analysis</div>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -11,17 +19,27 @@
 <table width="50%" border="0" cellspacing="1" cellpadding="0" >
 
 
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 3.1.0
 	<?php 
 		// Prepare lock analysis
 
 if ($ArchSrvType=="Adaptive Server Enterprise") {  
     // It is on ASE, isolate declare cursor step
+<<<<<<< HEAD
+=======
 
 		//$result=sybase_query("
                 //        close c
                 //        deallocate cursor c",
 		//	           $pid);
     
+>>>>>>> 3.1.0
 		$result=sybase_query(
 			"declare c cursor for 
                          select blockedSpid,Timestamp,time_blocked
@@ -166,11 +184,19 @@ else {
       <td class="statTableUpperTitle" colspan="5"> Top20 Blocking Objects :</td>
     </tr>
     <tr> 
+<<<<<<< HEAD
+      <td class="statTabletitle" > Database  </td>
+      <td class="statTabletitle" > Table  </td>
+      <td class="statTabletitle" > LockName   </td>
+      <td class="statTabletitle" > nb_block   </td>
+      <td class="statTabletitle" > tps_block_s   </td>
+=======
       <td class="statTabletitle" > Database    </td>
       <td class="statTabletitle" > Table       </td>
       <td class="statTabletitle" > LockName    </td>
       <td class="statTabletitle" > nb_block    </td>
       <td class="statTabletitle" > tps_block_s </td>
+>>>>>>> 3.1.0
     </tr>
  
     <?php

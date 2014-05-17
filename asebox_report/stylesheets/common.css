@@ -1,11 +1,18 @@
+<<<<<<< HEAD
+=======
 /*----------------------------------------------------------------------------------------------------*/
 /* MAIN DOCUMENT
 */
+>>>>>>> 3.1.0
 html {
 	height:100%;
 	margin: 0;
 	padding: 0;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
 body {
 	background-color: #FFFFEF;
 	font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
@@ -15,12 +22,21 @@ body {
 	margin: 0;
 	height: 100%;
 }
+<<<<<<< HEAD
+
+img {
+  cursor:pointer;
+}
+
+
+=======
 img {
   cursor:pointer;
 }
 /*----------------------------------------------------------------------------------------------------*/
 /* HEADER
 */
+>>>>>>> 3.1.0
 .banner {
 	background-image: url(../images/degrade6.jpg);
 	background-repeat:repeat-x;
@@ -29,6 +45,10 @@ img {
 	padding: 0;
 	min-width: 1024px;  //was 1000px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
 #logo {
 	background-image: url(../images/logo6.jpg);
 	height: 90px;  //was 120
@@ -49,6 +69,10 @@ img {
 	background-repeat: no-repeat;
 	z-index: 5;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
 #divVersion {
 	z-index:15;
 	position: absolute;
@@ -56,6 +80,10 @@ img {
 	left: 220px;
 	font-size: 12px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
 #bestview {
 	z-index:15;
 	position: absolute;
@@ -63,6 +91,11 @@ img {
 	left: 220px;
 	font-size: 12px;
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 #copyrighttext {
 	z-index:15;
 	position: absolute;
@@ -71,19 +104,63 @@ img {
 	font-size: 10px;
 	color : #dddddd;
 }
+<<<<<<< HEAD
+
+
+#divPHPInfo {
+	z-index:15;
+	position: absolute;
+	margin: 10px;    //was 10px
+	top: 85px;       //was 85px
+	left: 500px;     //was 0px
+	font-size: 12px;
+}
+
+#divPHPInfo {
+	z-index:15;
+	position: absolute;
+	margin: 10px;
+	top: 72px;       //was 85px
+	left: 100px;
+	font-size: 10px;  //was 12
+}
+
+
+=======
+>>>>>>> 3.1.0
 .TopInputMainBanner {
 	height: 125px;      //was125px
 	min-width: 1000px;
 }
+<<<<<<< HEAD
+
+
+.TopInputDiv {
+	height: 79px; //was 85px;
+	width: 840px; //was 735px; 
+
+=======
 .TopInputDiv {
 	height: 79px; //was 85px;
 	width: 860px; //was 735px; 
+>>>>>>> 3.1.0
 	position: absolute;
 	padding-top:0px;
 	top: 10px;                   //was 40px
 	left:30px;
 	font-size: 14px;
 	font-weight: bold;
+<<<<<<< HEAD
+	color: #FAFA6B;      //was #141031
+	
+
+
+	z-index: 20;
+	margin-left: 290px;                                  //was 420px;
+	//background-image: url(../images/topinputdegra.jpg);
+	//background-repeat: repeat-x;
+	background-color: #F2EDB1 ;     //was PaleGoldenRod 
+=======
 	color: #141031;
 
 	z-index: 20;
@@ -91,20 +168,42 @@ img {
 	//background-image: url(../images/topinputdegra.jpg);
 	//background-repeat: repeat-x;
 	background-color: PaleGoldenRod ;
+>>>>>>> 3.1.0
 	border-radius: 14px;     
 	-moz-border-radius:14px; /* Old Firefox */
 	padding-left:8px;
 }
+<<<<<<< HEAD
+
+
+.srvtype {
+    padding: 0px;
+    font-size: 12px;
+    width: 60px;
+}
+
+=======
 .srvtype {
     padding: 0px;
     font-size: 12px;
     width: 50px;
 }
+>>>>>>> 3.1.0
 .InputDateFld {
 	font-size: 12px;
 	width: 105px;               //was 115
 	padding:0px;
 }
+<<<<<<< HEAD
+
+
+.srvlist {
+	font-size: 12px;
+	width: 140px;                 //was 155px;
+	padding:0px;
+}
+
+=======
 .srvlist {
 	font-size: 12px;
 	width: 140px;                 //was 155px;
@@ -115,6 +214,7 @@ img {
 	width: 140px;                 //was 155px;
 	padding:0px;
 }
+>>>>>>> 3.1.0
 .DFormatStyle {
 	font-size: 12px;
 	width: 55px;
@@ -126,6 +226,11 @@ img.btn {
     float:left;
 	text-align: center; 
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 input.btn{
     float:left;
 	background-color: #FFFFFF;
@@ -149,6 +254,11 @@ input.btn{
 	border-bottom-style: none;
 	border-left-style: none;
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 img.smallbtn {
 	vertical-align: central;
     float:left;
@@ -157,6 +267,11 @@ img.smallbtn {
 	border:0;
 	padding:0;
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 input.smallbtn {
     float:left;
 	background-color: #FFFFFF;
@@ -180,6 +295,13 @@ input.smallbtn {
 }
 
 
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 3.1.0
 .MenuInBanner {
 	height: 30px;
 	width: 300px;
@@ -191,6 +313,11 @@ input.smallbtn {
 
 #menu {
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 #menu ul {
 	margin:0;
 	padding:0;
@@ -198,6 +325,11 @@ input.smallbtn {
 	text-align:center;
 	font-size: 12px;
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 #menu li {
 	float:left;
 	margin:0;
@@ -205,6 +337,11 @@ input.smallbtn {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 .SelectDateInBanner DIV#menu li a {
 	display:block;
 	color:white;
@@ -271,7 +408,26 @@ position:absolute;
 	top:0;
 }
 
+<<<<<<< HEAD
+.leftmaindiv {
+	position:absolute;
+	left:0;
+	top:95px;                   //was 125
+	width: 210px;               //was 210px;
+	color: white;
+	font-size: 12px;
+	background-image: url(../images/back_left_pane.jpg);
+	background-repeat:repeat-y;
+	background-color:#CFC8B8;
+}
 
+.leftmaindiv a {
+	color: #FF3;
+	
+}
+=======
+
+>>>>>>> 3.1.0
 
 .maindiv{
 	position:absolute;
@@ -350,8 +506,13 @@ position:absolute;
 
 
 .selarchbox {
+<<<<<<< HEAD
+	border: thin solid #181435;
+    border-style: inset;
+=======
 	//border: thin solid #181435;
 	//border-style: inset;
+>>>>>>> 3.1.0
 	font-size: 12px;
 	width: 121px;                      //was 121
 	background-color:#FFF;
@@ -446,7 +607,11 @@ padding: 8px 0 0 30px;
 /*----------------------------------------------------------------------------------------------------*/
 #divMenu {
 	height: 30px;
+<<<<<<< HEAD
+	width: 300px;
+=======
 	width: 600px;
+>>>>>>> 3.1.0
 	position: left;
 	float: left;
 	font-size: 16px;

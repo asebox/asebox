@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
     if ( isset($_POST['rowcnt'])           ) $rowcnt=          $_POST['rowcnt'];           else $rowcnt=200;
     if ( isset($_POST['orderCachedObj'])   ) $orderCachedObj=  $_POST['orderCachedObj'];   else $orderCachedObj=$order_by;
     if ( isset($_POST['filterCacheName'])  ) $filterCacheName= $_POST['filterCacheName'];  else $filterCacheName="";
@@ -8,6 +12,10 @@
     if ( isset($_POST['filterIndexID'])    ) $filterIndexID=   $_POST['filterIndexID'];    else $filterIndexID="";
     if ( isset($_POST['filterObjectType']) ) $filterObjectType=$_POST['filterObjectType']; else $filterObjectType="";
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
     // Check if CachedObj table exists
     $query = "select cnt=count(*) 
               from sysobjects 
@@ -17,7 +25,12 @@
     if ($row["cnt"] == 0) {
 
 	echo "Cached objects data is not available. The CachedObj collector has not been activated for server ".$ServerName.", may be for performance reasons. ";
+<<<<<<< HEAD
+        exit();
+        
+=======
         exit();        
+>>>>>>> 3.1.0
     }
 
     // Check number of cols of CachedObj table
@@ -35,6 +48,12 @@
     	$version = "V15";  
         include ("sql/sql_CachedObj_V15_statistics.php");
     }
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 3.1.0
 ?>     
        
        
@@ -72,7 +91,11 @@ function getRepartCaches()
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
+<a   href="http://github.com/asebox/asebox?title=AseRep_CachedObj" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Cached objects help" TITLE="Cached objects help"  /> </a>
+=======
 <a   href="http://github.com/asebox/asebox/ASE-Procedures-Cached" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Cached objects help" TITLE="Cached objects help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -105,6 +128,27 @@ function getRepartCaches()
 <table cellspacing=2 cellpadding=4 >
     <tr> 
     
+<<<<<<< HEAD
+      <td class="statTabletitle" > CacheName              </td>
+      <td class="statTabletitle" > DBName                 </td>
+      <td class="statTabletitle" > OwnerName              </td>
+      <td class="statTabletitle" > ObjectName             </td>
+      <td class="statTabletitle" > IndexID                </td>
+      <td class="statTabletitle" > ObjectType             </td>
+      <td class="statTabletitle" > minCachedKB            </td>
+      <td class="statTabletitle" > avgCachedKB            </td>
+      <td class="statTabletitle" > maxCachedKB            </td>
+      <td class="statTabletitle" > avgProcessesAccessing  </td>
+      <?php if ($version=="V15") { ?>
+      <td class="statTabletitle" > PartitionName          </td>
+      <td class="statTabletitle" > avgTotalSizeKB         </td>
+      <td class="statTabletitle" > PartitionID            </td>
+      <?php } ?>
+      <td class="statTabletitle" > CacheID                </td>
+      <td class="statTabletitle" > DBID                   </td>
+      <td class="statTabletitle" > ObjectID               </td>
+      <td class="statTabletitle" > OwnerUserID            </td>
+=======
       <td class="statTabletitle" > Cache Name    </td>
       <td class="statTabletitle" > Database      </td>
       <td class="statTabletitle" > Owner         </td>
@@ -124,6 +168,7 @@ function getRepartCaches()
       <td class="statTabletitle" > DBID          </td>
       <td class="statTabletitle" > ObjectID      </td>
       <td class="statTabletitle" > OwnerUserID   </td>
+>>>>>>> 3.1.0
 
     </tr>
     <tr>  
@@ -151,12 +196,21 @@ function getRepartCaches()
 
     </tr>
     <tr> 
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterCacheName"  value="<?php if( isset($filterCacheName     ) ){ echo $filterCacheName      ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterDBName"     value="<?php if( isset($filterDBName        ) ){ echo $filterDBName         ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterOwnerName"  value="<?php if( isset($filterOwnerName     ) ){ echo $filterOwnerName      ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterObjectName" value="<?php if( isset($filterObjectName    ) ){ echo $filterObjectName     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterIndexID"    value="<?php if( isset($filterIndexID       ) ){ echo $filterIndexID        ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterObjectType" value="<?php if( isset($filterObjectType    ) ){ echo $filterObjectType     ; } ?>" > </td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterCacheName"  SIZE="14" value="<?php if( isset($filterCacheName     ) ){ echo $filterCacheName      ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterDBName"     SIZE="10" value="<?php if( isset($filterDBName        ) ){ echo $filterDBName         ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterOwnerName"  SIZE="10" value="<?php if( isset($filterOwnerName     ) ){ echo $filterOwnerName      ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterObjectName" value="<?php if( isset($filterObjectName    ) ){ echo $filterObjectName     ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterIndexID"    SIZE="3" value="<?php if( isset($filterIndexID       ) ){ echo $filterIndexID        ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterObjectType" SIZE="8" value="<?php if( isset($filterObjectType    ) ){ echo $filterObjectType     ; } ?>" > </td>
+>>>>>>> 3.1.0
       <td> </td>
       <td> </td>
       <td> </td>
@@ -202,6 +256,27 @@ function getRepartCaches()
             <?php
 			$cpt=1-$cpt;
             ?>
+<<<<<<< HEAD
+              <td class="statTablePtr"> <?php echo $row["CacheName"            ] ?>  </td> 
+              <td class="statTablePtr"> <?php echo $row["DBName"               ] ?>  </td> 
+              <td class="statTablePtr"> <?php echo $row["OwnerN"            ] ?>   </td> 
+              <td class="statTablePtr"> <?php echo $row["ObjectName"           ] ?>   </td> 
+              <td class="statTablePtr"> <?php echo $row["IndexID"              ] ?>  </td> 
+              <td class="statTablePtr"> <?php echo $row["ObjectType"           ] ?>   </td> 
+              <td class="statTablePtr" align="right"> <?php echo number_format($row["minCachedKB"          ]) ?>   </td> 
+              <td class="statTablePtr" align="right"> <?php echo number_format($row["avgCachedKB"          ]) ?>   </td> 
+              <td class="statTablePtr" align="right"> <?php echo number_format($row["maxCachedKB"          ]) ?>  </td> 
+              <td class="statTablePtr" align="right"> <?php echo number_format($row["avgProcessesAccessing"]) ?>   </td> 
+                <?php if ($version=="V15") { ?>
+              <td class="statTablePtr"> <?php echo $row["PartitionName"        ] ?>   </td> 
+              <td class="statTablePtr" align="right"> <?php echo number_format($row["avgTotalSizeKB"       ]) ?>   </td> 
+              <td class="statTablePtr"> <?php echo $row["PartitionID"          ] ?>   </td> 
+                <?php } ?>
+              <td class="statTablePtr"> <?php echo $row["CacheID"              ] ?>   </td> 
+              <td class="statTablePtr"> <?php echo $row["DBID"                 ] ?>   </td> 
+              <td class="statTablePtr"> <?php echo $row["ObjectID"             ] ?>   </td> 
+              <td class="statTablePtr"> <?php echo $row["OwnerUserID"          ] ?>   </td> 
+=======
               <td class="statTablePtr"> <?php echo $row["CacheName"            ] ?> </td> 
               <td class="statTablePtr"> <?php echo $row["DBName"               ] ?> </td> 
               <td class="statTablePtr"> <?php echo $row["OwnerN"               ] ?> </td> 
@@ -221,6 +296,7 @@ function getRepartCaches()
               <td class="statTablePtr"> <?php echo $row["DBID"                 ] ?>  </td> 
               <td class="statTablePtr"> <?php echo $row["ObjectID"             ] ?>  </td> 
               <td class="statTablePtr"> <?php echo $row["OwnerUserID"          ] ?>  </td> 
+>>>>>>> 3.1.0
             </tr> 
             <?php
         }

@@ -1,6 +1,13 @@
 <?php
+<<<<<<< HEAD
+
+  if ( isset($_POST['DatabaseName'     ]) ) $DatabaseName=     $_POST['DatabaseName'];      else $DatabaseName="AllDB";
+  if ( isset($_POST['orderDB']) ) $orderDB=$_POST['orderDB'];      else $orderDB="dbid";
+  
+=======
   if ( isset($_POST['DatabaseName']) ) $DatabaseName=$_POST['DatabaseName'];      else $DatabaseName="AllDB";
   if ( isset($_POST['orderDB'     ]) ) $orderDB=$_POST['orderDB'];      else $orderDB="dbid";  
+>>>>>>> 3.1.0
 
   function calcColor_pctUsed($row, $col) {
     $pctused = $row[$col];
@@ -9,8 +16,13 @@
      	      echo "statTableRed";
     else
         if ( $pctused > 50)
+<<<<<<< HEAD
+     	      echo "statTableYellow";
+     	  else echo "statTableNorm";
+=======
      	     echo "statTableYellow";
      	else echo "statTableNorm";
+>>>>>>> 3.1.0
   }
 
   function calcColor_logUsed($row, $col) {
@@ -59,16 +71,30 @@ function getAseDbSpceDetail(dbid, dbname, isMixedLog)
     "_blank");
   WindowObjectReference.focus();
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 </script>
 
 
 <?php
+<<<<<<< HEAD
+        $query = "declare @pgsz int
+select @pgsz=PageSize from ".$ServerName."_MonState where Timestamp=(select max(Timestamp) from ".$ServerName."_MonState where Timestamp>='".$StartTimestamp."' and Timestamp <='".$EndTimestamp."')
+select dbid,dbname,
+DataSize_Mb=str(1.*(case when isMixedLog=0 then  Total_pgs-logTotal_pgs else  Total_pgs end) * @pgsz/(1024*1024),12,0),
+DataFree_Mb=str(1.*dbFree_pgs*@pgsz/(1024*1024),12,0), 
+PctDatUsed=str(100. - 100.*dbFree_pgs / case when isMixedLog=0 then  Total_pgs-logTotal_pgs else  Total_pgs end ,6,2),  
+=======
 $query = "declare @pgsz numeric(19,1)
 select @pgsz=PageSize from ".$ServerName."_MonState where Timestamp=(select max(Timestamp) from ".$ServerName."_MonState where Timestamp>='".$StartTimestamp."' and Timestamp <='".$EndTimestamp."')
 select dbid,dbname,
 DataSize_Mb=str(1.*(case when isMixedLog=0 then  Total_pgs-logTotal_pgs else  Total_pgs end) * @pgsz/(1024*1024),12,0),
 DataFree_Mb=str(1.*convert(numeric,dbFree_pgs)*@pgsz/(1024*1024),12,0), 
 PctDatUsed=str(100. - 100.*convert(numeric,dbFree_pgs) / case when isMixedLog=0 then  Total_pgs-logTotal_pgs else  Total_pgs end ,6,2),  
+>>>>>>> 3.1.0
 isMixedLog=isMixedLog,  
 LogSize_Mb=  str(1.* (case when isMixedLog=0 then logTotal_pgs else 0 end) * @pgsz/(1024*1024), 12,0),
 LogUsed_Mb=str(1.*logUsed_pgs*@pgsz/(1024*1024),12,0), 
@@ -85,15 +111,29 @@ order by ".$orderDB;
 $query_name = "AseDbSpce_query";
 ?>
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 3.1.0
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title">Space Usage</div>
+<<<<<<< HEAD
+<a   href="http://github.com/asebox/asebox?title=AseRep_ASESpace" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Space help" TITLE="Space help"  /> </a>
+=======
 <a   href="http://github.com/asebox/asebox/ASE-Database-Space" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Space help" TITLE="Space help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
 <div class="boxbtns" >
 <table align="left" cellspacing="2px" ><tr>
 <td>Database :</td>
@@ -112,8 +152,18 @@ $query_name = "AseDbSpce_query";
 </div>
 
 
+<<<<<<< HEAD
+
 <div class="statMainTable">
 
+
+
+
+
+=======
+<div class="statMainTable">
+
+>>>>>>> 3.1.0
 <Table cellspacing=2 cellpadding=4>
     <tr> 
       <td class="statTabletitle" > dbid </td>
@@ -145,7 +195,14 @@ $query_name = "AseDbSpce_query";
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderDB"  VALUE="12 DESC"  <?php if ($orderDB=="12 DESC")  echo "CHECKED";  ?> > </td>
     </tr>
 
+<<<<<<< HEAD
+
     <?php
+
+
+=======
+    <?php
+>>>>>>> 3.1.0
         $result = sybase_query($query,$pid);
         
 	if ($result==false){ 

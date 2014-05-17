@@ -57,8 +57,11 @@
      $EndTimestamp=$EndTimestamp2;
    }   
 
+<<<<<<< HEAD
+=======
   $strSSORoles     = $ARContext['strSSORoles_sav'];
   $strSSOFirstName = $ARContext['strSSOFirstName_sav'];
   $strSSOLastName  = $ARContext['strSSOLastName_sav'];
 
+>>>>>>> 3.1.0
 ?>

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<?php 
+  
+   if ( isset($_POST['orderAmStats']) ) $orderAmStats=$_POST['orderAmStats'];      else $orderAmStats="Thread";
+   
+   // Check if AseDbSpce table exist
+   $query = "select cnt=count(*) 
+             from sysobjects 
+             where name in ( '".$ServerName."_AmStats ')";   
+   $result = sybase_query($query,$pid);
+   $row = sybase_fetch_array($result);
+   if ($row["cnt"] < 1) {
+      echo "Logger statistics (stats on asemon_logger threads) are not available. The AmStats collector has not been activated for server ".$ServerName.".<P> (Add AmStats.xml in the asemon_logger config file)";
+      exit();       
+   }
+=======
 <?php
 
   if ( isset($_POST['orderAmStats']) ) $orderAmStats=$_POST['orderAmStats'];      else $orderAmStats="Thread";
@@ -17,6 +33,7 @@
         exit();
         
     }
+>>>>>>> 3.1.0
 
 $query = "select Thread,
 nbCollect=count(*),
@@ -25,7 +42,10 @@ avgcActive=avg(1.*cActive),
 avgaWait=avg(1.*aWait),
 avgaActive=avg(1.*aActive),
 archRows=case when min(archRows)=-1 then -1 else avg(1.*archRows) end
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3.1.0
 from ".$ServerName."_AmStats
 where Timestamp >='".$StartTimestamp."'        
 and Timestamp <'".$EndTimestamp."'        
@@ -44,10 +64,15 @@ setStatMainTableSize(0);
 
 <div class="boxinmain" style="min-width:500px">
 <div class="boxtop">
+<<<<<<< HEAD
+<div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
+<div class="title" style="width:70%"><?php echo $Title ?></div>
+=======
 <img src="images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
 <div style="float:left; position: relative; top: 3px;"><?php include './export/export-table.php' ?></div>
 <div class="title" style="width:70%"><?php echo  $Title ?></div>
 <img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
+>>>>>>> 3.1.0
 <a   href="http://sourceforge.net/apps/mediawiki/asemon?title=AseRep_AmStats" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="AmStats help" TITLE="AmStats help"  /> </a>
 </div>
 
@@ -69,6 +94,15 @@ setStatMainTableSize(0);
     </tr>
 
     <tr>   
+<<<<<<< HEAD
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="Thread"  <?php if ($orderAmStats=="Thread") echo "CHECKED";  ?> > </td>
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="2 DESC"  <?php if ($orderAmStats=="2 DESC") echo "CHECKED";  ?> > </td>
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="3 DESC"  <?php if ($orderAmStats=="3 DESC") echo "CHECKED";  ?> > </td>
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="4 DESC"  <?php if ($orderAmStats=="4 DESC") echo "CHECKED";  ?> > </td>
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="5 DESC"  <?php if ($orderAmStats=="5 DESC") echo "CHECKED";  ?> > </td>
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="6 DESC"  <?php if ($orderAmStats=="6 DESC") echo "CHECKED";  ?> > </td>
+      <td class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="7 DESC"  <?php if ($orderAmStats=="7 DESC") echo "CHECKED";  ?> > </td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="Thread"      <?php if ($orderAmStats=="Thread")      echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="2 DESC"   <?php if ($orderAmStats=="2 DESC")   echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="3 DESC"   <?php if ($orderAmStats=="3 DESC")   echo "CHECKED";  ?> > </td>
@@ -76,6 +110,7 @@ setStatMainTableSize(0);
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="5 DESC"        <?php if ($orderAmStats=="5 DESC")        echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="6 DESC"     <?php if ($orderAmStats=="6 DESC")     echo "CHECKED";  ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderAmStats"  VALUE="7 DESC"     <?php if ($orderAmStats=="7 DESC")     echo "CHECKED";  ?> > </td>
+>>>>>>> 3.1.0
     </tr>
 
 

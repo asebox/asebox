@@ -8,11 +8,19 @@ $query = "
           IndexID, 
           ObjectType, 
           PartitionName, 
+<<<<<<< HEAD
+          minCachedKB=min(CachedKB),
+          avgCachedKB=avg(CachedKB), 
+          maxCachedKB=max(CachedKB),  
+          avgProcessesAccessing=avg(ProcessesAccessing), 
+          avgTotalSizeKB=avg(TotalSizeKB), 
+=======
           minCachedKB=min(convert( numeric(19,0), CachedKB)),
           avgCachedKB=avg(convert( numeric(19,0), CachedKB)), 
           maxCachedKB=max(convert( numeric(19,0), CachedKB)),  
           avgProcessesAccessing=avg(convert( numeric(19,0), ProcessesAccessing)), 
           avgTotalSizeKB=avg(convert( numeric(19,0), TotalSizeKB)), 
+>>>>>>> 3.1.0
           CacheID, DBID, ObjectID, OwnerUserID, PartitionID
 
 	from ".$ServerName."_CachedObj

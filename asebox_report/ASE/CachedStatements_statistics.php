@@ -1,4 +1,38 @@
 <?php
+<<<<<<< HEAD
+
+        $param_list=array(
+        	'rowcnt'
+        );
+        foreach ($param_list as $param)
+        @$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+
+
+    if ( isset($_POST['orderCachedStmt']) ) $orderCachedStmt=$_POST['orderCachedStmt']; else $orderCachedStmt="SSQLID";
+    if ( isset($_POST['filterbootcount']) ) $filterbootcount=$_POST['filterbootcount']; else $filterbootcount="";
+    if ( isset($_POST['filterSSQLID'])    ) $filterSSQLID=   $_POST['filterSSQLID'];    else $filterSSQLID="";
+    if ( isset($_POST['filterUserID'])    ) $filterUserID=   $_POST['filterUserID'];    else $filterUserID="";
+    if ( isset($_POST['filterSUserID'])   ) $filterSUserID=  $_POST['filterSUserID'];   else $filterSUserID="";
+    if ( isset($_POST['filterDBName'])    ) $filterDBName=   $_POST['filterDBName'];    else $filterDBName="";
+    if ( isset($_POST['filterSQLText'])   ) $filterSQLText=  $_POST['filterSQLText'];   else $filterSQLText="";
+        
+    if ( !isset($rowcnt) )     $rowcnt=200;
+
+
+
+    // Check if CachedSTM table exists
+    $query = "select cnt=count(*) 
+              from sysobjects 
+              where name = '".$ServerName."_CachedSTM'";   
+    $result = sybase_query($query,$pid);
+    $row = sybase_fetch_array($result);
+    if ($row["cnt"] == 0) {
+	      echo "Statement cache data is not available. The CachedSTM and CachedSQL collectors have not been activated for server ".$ServerName.".<P> (Add  CachedSTM.xml and CachedSQL.xml in the asemon_logger config file)";
+        exit();
+    }
+
+
+=======
 $param_list=array(
 	'rowcnt'
 );
@@ -28,6 +62,7 @@ if ($row["cnt"] == 0) {
    echo "Statement cache data is not available. The CachedSTM and CachedSQL collectors have not been activated for server ".$ServerName.".<P> (Add  CachedSTM.xml and CachedSQL.xml in the asemon_logger config file)";
     exit();
 }
+>>>>>>> 3.1.0
 
     // Check if CachedPLN table exists
     $query = "select cnt=count(*) 
@@ -74,7 +109,11 @@ function getCachedStmtDetail(SSQLID, bootcount)
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
+<a   href="http://github.com/asebox/asebox?title=AseRep_ASECachedStmt" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Cached Statement help" TITLE="Cached Statement help"  /> </a>
+=======
 <a   href="http://github.com/asebox/asebox/ASE-Cached-Statements" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Cached Statement help" TITLE="Cached Statement help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">

@@ -25,7 +25,11 @@ echo '</div>';
     create table #ls1 (SrvType char(5), SrvName varchar(30), tablename varchar(30) null)
     create table #ls2 (SrvType char(5), SrvName varchar(30), LastCollect datetime null, Status varchar(30) null)
     insert #ls1 (SrvType, SrvName, tablename)
+<<<<<<< HEAD
+    select SrvType='ASE', SrvName=substring(name,1,datalength(name)-6), name from sysobjects where type='U' and name like '%\_DevIO' escape '\\' and uid = 1
+=======
     select SrvType='ASE', SrvName=substring(name,1,datalength(name)-6), name from sysobjects where type='U' and name not like '%LIV%' and name like '%\_DevIO' escape '\\' and uid = 1
+>>>>>>> 3.1.0
           UNION ALL
           select SrvType='RS',  SrvName=case when name like '%\_REPAGENT' escape '\\' then substring(name,1,datalength(name)-9) when name like '%\_RSStats' escape '\\' then substring(name,1,datalength(name)-8) end, name from sysobjects where type='U' and (name like '%\_REPAGENT' escape '\\'  OR name like '%\_RSStats' escape '\\') and uid = 1
           UNION ALL
@@ -52,12 +56,20 @@ echo '</div>';
     drop table #ls2
     ";
     $query_name = "monservers";
+<<<<<<< HEAD
+    $result = sybase_query($query,$pid);
+=======
     $result = sybase_query($query,$pid);    
+>>>>>>> 3.1.0
 ?>
 
 <div class="boxinmain" style="min-width:300px; vertical-align:top;">
 <div class="boxtop">
+<<<<<<< HEAD
+<div class="title"><?php echo "$ArchiveServer" ?></div>
+=======
 <div class="title"><?php $ArchiveDatabaseShort=str_replace("ASEBOX_","",$ArchiveDatabase); echo "$ArchiveDatabaseShort"; //$ArchiveServer ?></div>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -94,7 +106,10 @@ setStatMainTableSize(0);
         else
             $parite="pair";
         ?>
+<<<<<<< HEAD
+=======
         
+>>>>>>> 3.1.0
         <tr statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';"   onclick="javascript:setSrv( '<?php echo trim($row["SrvType"])?>', '<?php echo trim($row["SrvName"])?>')">
         <?php
         $cpt=1-$cpt;

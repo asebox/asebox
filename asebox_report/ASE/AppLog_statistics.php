@@ -9,6 +9,31 @@
     if ( isset($_POST['filtermintime' ]) ) $filtermintime=  $_POST['filtermintime'];  else $filtermintime="";
 ?>
 
+<<<<<<< HEAD
+
+
+<?php
+//----------------------------------------------------------------------------------------------------
+// Check table exists
+$query = "select cnt=count(*) from sysobjects where name = '".$ServerName."_AppLog'";
+$result = sybase_query($query,$pid);
+
+$row = sybase_fetch_array($result);
+if ($row["cnt"] == 0) {
+//if ($result==false) {
+   echo "Application Logging data is not available. The AppLog collector has not been activated for server ".$ServerName.".";
+   exit();
+}
+	
+//----------------------------------------------------------------------------------------------------
+?>
+
+       
+<script type="text/javascript">
+var WindowObjectReference; // global variable
+
+
+=======
 <?php
 //----------------------------------------------------------------------------------------------------
 // Check table exists
@@ -37,6 +62,7 @@ if ($applog=="sybsystemprocs..boxapplog") {
 <script type="text/javascript">
 var WindowObjectReference; // global variable
 
+>>>>>>> 3.1.0
 setStatMainTableSize(0);
 
 function getRepartProg()
@@ -126,6 +152,19 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
       <td class="statTabletitle" > User       </td>
       <td class="statTabletitle" > Spid       </td>
       <td class="statTabletitle" > Scope      </td>
+<<<<<<< HEAD
+    </tr>
+    <tr>  
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="StartTime" <?php if ($orderPrc=="StartTime") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="LogTime  " <?php if ($orderPrc=="LogTime  "  ) echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="datediff(ms,StartTime,LogTime) DESC" <?php if ($orderPrc=="datediff(ms,StartTime,LogTime) DESC") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Program  " <?php if ($orderPrc=="Program  ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Message  " <?php if ($orderPrc=="Message  ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="LogType  " <?php if ($orderPrc=="LogType  ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Username " <?php if ($orderPrc=="Username ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Spid     " <?php if ($orderPrc=="Spid     ") echo "CHECKED"; ?> > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Scope    " <?php if ($orderPrc=="Scope    ") echo "CHECKED"; ?> > </td>
+=======
       <td class="statTabletitle" > Rate       </td>
     </tr>
     <tr>  
@@ -139,13 +178,18 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Spid      " <?php if ($orderPrc=="Spid      ") echo "CHECKED"; ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Scope DESC" <?php if ($orderPrc=="Scope DESC") echo "CHECKED"; ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="Rate DESC " <?php if ($orderPrc=="Rate DESC ") echo "CHECKED"; ?> > </td>
+>>>>>>> 3.1.0
     </tr>
     <tr> 
       <td></td> 
       <td></td> 
       <td></td> 
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterprogram"            value="<?php if( isset($filterprogram ) ){ echo $filterprogram  ; } ?>" > </td>
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filtermessage"            value="<?php if( isset($filtermessage ) ){ echo $filtermessage  ; } ?>" > </td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filtermessage"  SIZE="60" value="<?php if( isset($filtermessage ) ){ echo $filtermessage  ; } ?>" > </td>
+>>>>>>> 3.1.0
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterlogtype"  SIZE="3"  value="<?php if( isset($filterlogtype ) ){ echo $filterlogtype  ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterusername" SIZE="6"  value="<?php if( isset($filterusername) ){ echo $filterusername ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterspid"     SIZE="3"  value="<?php if( isset($filterusername) ){ echo $filterspid     ; } ?>" > </td>
@@ -153,6 +197,12 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
     </tr>
    
 <?php
+<<<<<<< HEAD
+    $result = sybase_query("set rowcount ".$rowcnt."
+                           ".$query."
+                           set rowcount 0",
+                           $pid);                       
+=======
 
 
    
@@ -162,6 +212,7 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                            ".$query_rep."
                            set rowcount 0",
                            $pidsource);                       
+>>>>>>> 3.1.0
     if ($result==false){ 
             sybase_close($pid); 
             $pid=0;
@@ -177,7 +228,11 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
     while($row = sybase_fetch_array($result))
     {
         $rw++;
+<<<<<<< HEAD
+        $TotalTime = $TotalTime  + $row["Time"];
+=======
         $TotalTime = $TotalTime  + $row["TimeTxt"];
+>>>>>>> 3.1.0
         if($cpt==0)
              $parite="impair";
         else
@@ -188,6 +243,17 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
         $cpt=1-$cpt;
 ?>
 
+<<<<<<< HEAD
+    <td class="statTablePtr" NOWRAP> <?php echo $row["StartTime"] ?>  </td> 
+    <td class="statTablePtr" NOWRAP> <?php echo $row["LogTime"] ?>  </td> 
+    <td class="statTablePtr" ALIGN="right"> <?php echo $row["Time"] ?> </td> 
+    <td class="statTablePtr" > <?php echo $row["Program"] ?> </td> 
+    <td class="statTablePtr" NOWRAP> <?php echo $row["Message"] ?> </td> 
+    <td class="statTablePtr" > <?php echo $row["LogType"] ?> </td> 
+    <td class="statTablePtr" > <?php echo $row["Username"] ?> </td> 
+    <td class="statTablePtr" > <?php echo $row["Spid"] ?> </td> 
+    <td class="statTablePtr" > <?php echo $row["Scope"] ?> </td> 
+=======
     <td class="statTablePtr" NOWRAP>        <?php echo $row["StartTime"] ?> </td> 
     <td class="statTablePtr" NOWRAP>        <?php echo $row["LogTime"]   ?> </td> 
     <td class="statTablePtr" ALIGN="right"> <?php echo $row["TimeTxt"]   ?> </td> 
@@ -198,6 +264,7 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
     <td class="statTablePtr" ALIGN="right"> <?php echo $row["Spid"]      ?> </td> 
     <td class="statTablePtr" ALIGN="right"> <?php echo number_format($row["Scope"]) ?> </td> 
     <td class="statTablePtr" ALIGN="right"> <?php echo number_format($row["Rate"])  ?> </td> 
+>>>>>>> 3.1.0
     </tr> 
     <?php
         }
@@ -212,7 +279,10 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
     <td class="statTable"></td>
     <td class="statTable"></td>
     <td class="statTable"></td>
+<<<<<<< HEAD
+=======
     <td class="statTable"></td>
+>>>>>>> 3.1.0
     </tr> 
 </table>
 </div>

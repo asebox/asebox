@@ -41,7 +41,11 @@ $file='/SQLBROWSER/'.$ServerName.'/index.html';
 //{ 
   //echo '<iframe src="/SQLBROWSER/'.$ServerName.'/index.html" width=100% height=100% border=0 frameborder=0 scrolling="yes"> </iframe>';
   
+<<<<<<< HEAD
+  echo '<iframe id="scroll-box" src="/SQLBROWSER/'.$ServerName.'/index.html"  > </iframe>';
+=======
   echo '<iframe id="scroll-box" src="/SQLBROWSER/sqlbhtml/'.$ServerName.'/index.html"  > </iframe>';
+>>>>>>> 3.1.0
    
    
    

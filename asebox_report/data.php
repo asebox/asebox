@@ -1,4 +1,16 @@
 <?php
+<<<<<<< HEAD
+   $default_archive_server="LIVE-AFS-FAMOO";
+   $default_archive_user="asemon_usr";
+   $default_archive_password="asemon_usr";
+   $default_archive_db="ASEMON_LIVE";
+   $default_archive_charset="iso_1";
+   
+   $ArchiveServer="LIVE-AFS-FAMOO";
+   $ArchiveUser="asemon_usr";
+   $ArchivePassword="asemon_usr";
+   $ArchiveDb="ASEMON_LIVE";
+=======
    $default_archive_server="TEST-AFS-FAMOO";
    $default_archive_user="asemon_usr";
    $default_archive_password="asemon_usr";
@@ -9,6 +21,7 @@
    $ArchiveUser="asemon_usr";
    $ArchivePassword="asemon_usr";
    $ArchiveDb="ASEMON_TEST";
+>>>>>>> 3.1.0
    $ArchiveCharset="iso_1";
 
    $pid=0;

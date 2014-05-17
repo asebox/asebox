@@ -1,4 +1,25 @@
 <?php
+<<<<<<< HEAD
+
+	$param_list=array(
+		'orderPrc',
+		'rowcnt',
+		'filterDbName',
+		'filterTabName'
+	);
+	foreach ($param_list as $param)
+		@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+ 
+
+        if ( !isset($orderPrc) ) $orderPrc=$order_by;
+        if ( !isset($rowcnt) ) $rowcnt=200;
+        if ( !isset($filterDbName       ) ) $filterDbName      ="";
+        if ( !isset($filterTabName       ) ) $filterTabName      ="";
+
+        include ("sql/sql_LockWaits_list.php");
+?>      
+        
+=======
 $param_list=array(
 	'orderPrc',
 	'rowcnt',
@@ -15,6 +36,7 @@ foreach ($param_list as $param)
 
        include ("sql/sql_LockWaits_list.php");
 ?>              
+>>>>>>> 3.1.0
         
 <script type="text/javascript">
 setStatMainTableSize(0);
@@ -26,7 +48,11 @@ setStatMainTableSize(0);
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
+<a   href="http://github.com/asebox/asebox?title=AseRep_Lockwaits" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Lock waits help" TITLE="Lock waits help"  /> </a>
+=======
 <a   href="http://github.com/asebox/asebox/ASE-LockWaits" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Lock waits help" TITLE="Lock waits help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -45,10 +71,30 @@ setStatMainTableSize(0);
 </tr></table>
 </div>
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3.1.0
 <div class="statMainTable">
 <table cellspacing=2 cellpadding=4>
 
     <tr> 
+<<<<<<< HEAD
+      <td class="statTabletitle" > DbName     </td>
+      <td class="statTabletitle" > TabName     </td>
+      <td class="statTabletitle" > LockScheme    </td>
+      <td class="statTabletitle" > Pagetype     </td>
+      <td class="statTabletitle" > StatName     </td>
+      <td class="statTabletitle" > WaitTime_ms      </td>
+      <td class="statTabletitle" > Waits   </td>
+      <td class="statTabletitle" > AvgWaitTime_ms       </td>
+    </tr>
+    
+    <tr class=statTableTitle> 
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterDbName" value="<?php if(isset($filterDbName          ) ) { echo $filterDbName     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterTabName" value="<?php if(isset($filterTabName          ) ) { echo $filterTabName     ; } ?>" > </td>
+=======
       <td class="statTabletitle" > Database      </td>
       <td class="statTabletitle" > Table         </td>
       <td class="statTabletitle" > LockScheme    </td>
@@ -62,6 +108,7 @@ setStatMainTableSize(0);
     <tr class=statTableTitle> 
       <td  class="statTableBtn"> <INPUT TYPE=text Name="filterDbName"  value="<?php if(isset($filterDbName  ) ) { echo $filterDbName     ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text Name="filterTabName" value="<?php if(isset($filterTabName ) ) { echo $filterTabName     ; } ?>" > </td>
+>>>>>>> 3.1.0
     </tr>
     
     

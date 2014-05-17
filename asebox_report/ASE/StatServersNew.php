@@ -13,6 +13,11 @@
 
 $ArchiveServerBack=$ArchiveServer;
 
+<<<<<<< HEAD
+$ArchiveServer="AFS-IRP";
+$ArchiveServer="TEST-AFS-IRP";
+=======
+>>>>>>> 3.1.0
       $pid=sybase_pconnect($ArchiveServer, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asemon_report_".$version_asemon_report);
 
         if (($ArchSrvType=="Adaptive Server Enterprise") && (isset($ArchiveDatabase)) && ( $ArchiveDatabase != "") ) {
@@ -78,7 +83,11 @@ $ArchiveServerBack=$ArchiveServer;
 <!--div style="float:left; position: relative; top: 3px;"><?php include $rootDir.'/export/export-table.php' ?></div-->
 <div class="title" style="width:85%">Monitored Servers</div>
 <img src="<?php echo $HomeUrl; ?>/images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
+<<<<<<< HEAD
+<!--a   href="http://sourceforge.net/apps/mediawiki/asemon?title=AseRep_ASEStmt" TARGET="_blank"> <img class="help" SRC="<?php echo $HomeUrl; ?>/images/Help-circle-blue-32.png" ALT="Statement help" TITLE="Statement help"  /> </a-->
+=======
 <!--a   href="http://www.asebox.com?title=AseRep_ASEStmt" TARGET="_blank"> <img class="help" SRC="<?php echo $HomeUrl; ?>/images/Help-circle-blue-32.png" ALT="Statement help" TITLE="Statement help"  /> </a-->
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">

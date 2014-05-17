@@ -898,8 +898,11 @@ print @blankline
 deallocate tpcursor
 deallocate engcursor
 deallocate epcursor
+<<<<<<< HEAD
+=======
 close tpcursor
 close engcursor
 close epcursor
+>>>>>>> 3.1.0
 
 return 0

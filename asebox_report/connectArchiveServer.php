@@ -31,12 +31,20 @@ if (!function_exists("msg_handler")) {
 if ( !isset($pid) || $pid==0 ) {
 
   if ( (! Empty($ArchiveServer)) && (! Empty($ArchiveUser)) ) {
+<<<<<<< HEAD
+    $pid=sybase_pconnect($ArchiveServer, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asemon_report_".$version_asemon_report);
+//    $pid=sybase_connect($ArchiveServer, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asemon_report_".$version_asemon_report);
+      
+    if (!$pid) {
+         echo "<script>alert('Connection not opened to archive server; bad parameters or server unreachable')</script>";
+=======
     $pid=sybase_connect($ArchiveServer, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asebox_".$version_asemon_report);
 //    $pid=sybase_pconnect($ArchiveServer, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asebox_".$version_asemon_report);
 //    $pid=sybase_connect($ArchiveServer, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asebox_".$version_asemon_report);
       
     if (!$pid) {
          echo "<script>alert('Connection not opened to archive server '.$ArchiveServer.'; bad parameters or server unreachable')</script>";
+>>>>>>> 3.1.0
     }
     else {
       $result=sybase_query("select res=substring(@@version,1,charindex('/',@@version)-1)", $pid);
@@ -57,12 +65,18 @@ if ( !isset($pid) || $pid==0 ) {
 
       sybase_query("set dateformat ".$DFormat);
 
+<<<<<<< HEAD
+      set_time_limit(3600);
+=======
       set_time_limit(7200);   //was 3600
+>>>>>>> 3.1.0
   
       //ini_set ("sybct.timeout", "15");  //marche pas     
     }
   }
 }
+<<<<<<< HEAD
+=======
 //--------------------------------------------------------------------------------------------------------------------------------------------
 if ( !isset($pidsource) || $pidsource==0 ) {
 //$ServerName="XXX";
@@ -83,4 +97,5 @@ if ( !isset($pidsource) || $pidsource==0 ) {
 
   }
 }
+>>>>>>> 3.1.0
 ?>

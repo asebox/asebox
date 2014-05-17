@@ -1,0 +1,5 @@
+# --------- NEW ASEMON ALIASES ---------------- #
+
+
+LIVE-ASE
+        query tcp ether example.fr.net.intra 5511

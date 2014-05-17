@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3.1.0
 	$param_list=array(
 		'orderPrc',
 		'rowcnt',
@@ -31,7 +35,12 @@
 		'filterWaitLockType'
 	);
 	foreach ($param_list as $param)
+<<<<<<< HEAD
+		@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+ 
+=======
 		@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param]; 
+>>>>>>> 3.1.0
 
         if ( !isset($orderPrc) ) $orderPrc=$order_by;
         if ( !isset($rowcnt) ) $rowcnt=200;
@@ -76,8 +85,13 @@ setStatMainTableSize(0);
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
+<<<<<<< HEAD
+<div class="title"><?php echo  $Title ?></div>
+<a   href="http://github.com/asebox/asebox?title=AseRep_DeadLocks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Deadlocks help" TITLE="Deadlocks help"  /> </a>
+=======
 <div class="title"><?php echo $Title ?></div>
 <a   href="http://github.com/asebox/asebox/ASE-Deadlocks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Deadlocks help" TITLE="Deadlocks help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -97,6 +111,22 @@ setStatMainTableSize(0);
 </div>
 
 
+<<<<<<< HEAD
+
+<div class="statMainTable">
+        
+        
+
+<table cellspacing=2 cellpadding=4>
+    <tr> 
+      <td class="statTabletitle" > DeadlockID     </td>
+      <td class="statTabletitle" > VictimKPID     </td>
+      <td class="statTabletitle" > ResolveTime    </td>
+      <td class="statTabletitle" > ObjectDBID     </td>
+      <td class="statTabletitle" > ObjectName     </td>
+      <td class="statTabletitle" > PageNumber     </td>
+      <td class="statTabletitle" > RowNumber      </td>
+=======
 <div class="statMainTable">
         
 <table cellspacing=2 cellpadding=4>
@@ -108,6 +138,7 @@ setStatMainTableSize(0);
       <td class="statTabletitle" > Object         </td>
       <td class="statTabletitle" > Page           </td>
       <td class="statTabletitle" > Row            </td>
+>>>>>>> 3.1.0
       <td class="statTabletitle" > HeldFamilyID   </td>
       <td class="statTabletitle" > HeldSPID       </td>
       <td class="statTabletitle" > HeldKPID       </td>
@@ -131,6 +162,35 @@ setStatMainTableSize(0);
     </tr>
     
     <tr class=statTableTitle> 
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterDeadlockID" value="<?php if(isset($filterDeadlockID          ) ) { echo $filterDeadlockID     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterVictimKPID" value="<?php if(isset($filterVictimKPID          ) ) { echo $filterVictimKPID     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterResolveTime" value="<?php if(isset($filterResolveTime        ) ) { echo $filterResolveTime    ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterObjectDBID" value="<?php if(isset($filterObjectDBID          ) ) { echo $filterObjectDBID     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterObjectName" value="<?php if(isset($filterObjectName          ) ) { echo $filterObjectName     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterPageNumber" value="<?php if(isset($filterPageNumber          ) ) { echo $filterPageNumber     ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterRowNumber" value="<?php if(isset($filterRowNumber            ) ) { echo $filterRowNumber      ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldFamilyID" value="<?php if(isset($filterHeldFamilyID      ) ) { echo $filterHeldFamilyID   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldSPID" value="<?php if(isset($filterHeldSPID              ) ) { echo $filterHeldSPID       ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldKPID" value="<?php if(isset($filterHeldKPID              ) ) { echo $filterHeldKPID       ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldUserName" value="<?php if(isset($filterHeldUserName      ) ) { echo $filterHeldUserName   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldProcDBID" value="<?php if(isset($filterHeldProcDBID      ) ) { echo $filterHeldProcDBID   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldProcedureID" value="<?php if(isset($filterHeldProcedureID) ) { echo $filterHeldProcedureID; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldProcName" value="<?php if(isset($filterHeldProcName      ) ) { echo $filterHeldProcName   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldBatchID" value="<?php if(isset($filterHeldBatchID        ) ) { echo $filterHeldBatchID    ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldContextID" value="<?php if(isset($filterHeldContextID    ) ) { echo $filterHeldContextID  ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldLineNumber" value="<?php if(isset($filterHeldLineNumber  ) ) { echo $filterHeldLineNumber ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldApplName" value="<?php if(isset($filterHeldApplName      ) ) { echo $filterHeldApplName   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldTranName" value="<?php if(isset($filterHeldTranName      ) ) { echo $filterHeldTranName   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldLockType" value="<?php if(isset($filterHeldLockType      ) ) { echo $filterHeldLockType   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterHeldCommand" value="<?php if(isset($filterHeldCommand        ) ) { echo $filterHeldCommand    ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterWaitFamilyID" value="<?php if(isset($filterWaitFamilyID      ) ) { echo $filterWaitFamilyID   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterWaitSPID" value="<?php if(isset($filterWaitSPID              ) ) { echo $filterWaitSPID       ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterWaitKPID" value="<?php if(isset($filterWaitKPID              ) ) { echo $filterWaitKPID       ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterWaitUserName" value="<?php if(isset($filterWaitUserName      ) ) { echo $filterWaitUserName   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterWaitLockType" value="<?php if(isset($filterWaitLockType      ) ) { echo $filterWaitLockType   ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text Name="filterWaitTime" value="<?php if(isset($filterWaitTime              ) ) { echo $filterWaitTime       ; } ?>" > </td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=text SIZE="4"  Name="filterDeadlockID" value="<?php if(isset($filterDeadlockID          ) ) { echo $filterDeadlockID     ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text SIZE="10" Name="filterVictimKPID" value="<?php if(isset($filterVictimKPID          ) ) { echo $filterVictimKPID     ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text           Name="filterResolveTime" value="<?php if(isset($filterResolveTime        ) ) { echo $filterResolveTime    ; } ?>" > </td>
@@ -158,6 +218,7 @@ setStatMainTableSize(0);
       <td  class="statTableBtn"> <INPUT TYPE=text SIZE="10" Name="filterWaitUserName" value="<?php if(isset($filterWaitUserName      ) ) { echo $filterWaitUserName   ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text SIZE="10" Name="filterWaitLockType" value="<?php if(isset($filterWaitLockType      ) ) { echo $filterWaitLockType   ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text SIZE="10" Name="filterWaitTime" value="<?php if(isset($filterWaitTime              ) ) { echo $filterWaitTime       ; } ?>" > </td>
+>>>>>>> 3.1.0
     </tr>
     
     
@@ -216,7 +277,12 @@ setStatMainTableSize(0);
     </tr>
     <?php
         } // end if $result
+<<<<<<< HEAD
+    ?>
+    
+=======
     ?>    
+>>>>>>> 3.1.0
 
 </table>
 

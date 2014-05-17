@@ -2,8 +2,14 @@
 
 
 <div class="boxtop">
+<<<<<<< HEAD
+<img src="images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
+<div class="title">Lock analysis</div>
+<img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
+=======
 <div style="float:left; position: relative; top: 3px; left: 6px"></div>
 <div class="title">Lock analysis </div>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -21,12 +27,15 @@
 
 if ($ArchSrvType=="Adaptive Server Enterprise") {  
     // It is on ASE, isolate declare cursor step
+<<<<<<< HEAD
+=======
 
 		$result=sybase_query("
                         close c1
                         deallocate cursor c1",
 			           $pid);
     
+>>>>>>> 3.1.0
 		$result=sybase_query(
 			"declare c1 cursor for 
                         select BlockedBy,Timestamp,WT=max(WaitTime)

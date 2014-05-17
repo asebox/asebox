@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 x
+>>>>>>> 3.1.0
 This bundle can be used if you don't already have Apache, PHP and eventually Sybase Open Client installed on your machine
 When Apache is stated you can access to the ASEMON_REPORT PHP pages to view your historized
 data recorded with ASEMON_LOGGER
@@ -36,6 +39,10 @@ How to get ASEMON_REPORT pages :
 ------------------------------
 
 1) start IE or FIREFOX
+<<<<<<< HEAD
+2) enter "http://localhost/asebox_report/compare_report.php"
+=======
 2) enter "http://localhost/asemon_report/asemon_report.php"
 
 
+>>>>>>> 3.1.0

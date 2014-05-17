@@ -28,6 +28,9 @@ if ( isset($_POST['selectedTimestamp'])  ) $selectedTimestamp=  $_POST['selected
 
 var WindowObjectReference; // global variable
 
+<<<<<<< HEAD
+setStatMainTableSize(0);
+=======
 <?php
 if ( $Title != "Table Fragmentation Statistics" ) {
 ?>
@@ -35,6 +38,7 @@ if ( $Title != "Table Fragmentation Statistics" ) {
 <?php
 }
 ?>
+>>>>>>> 3.1.0
 
 function getFragmentationDetail(dbname, owner, tabname, indid, indexname, lockmode, clu)
 {

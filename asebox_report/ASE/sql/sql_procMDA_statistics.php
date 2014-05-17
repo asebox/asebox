@@ -60,9 +60,15 @@ select DBID,
        Executions,
        CpuTime,
        WaitTime,
+<<<<<<< HEAD
+       MemUsageKB,
+       PhysicalReads,
+       LogicalReads,
+=======
        PhysicalReads,
        LogicalReads,
        MemUsageKB,
+>>>>>>> 3.1.0
        PagesModified,
        PacketsSent,
        PacketsReceived,

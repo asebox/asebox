@@ -34,12 +34,15 @@
 
 if ($ArchSrvType=="Adaptive Server Enterprise") {  
     // It is on ASE, isolate declare cursor step
+<<<<<<< HEAD
+=======
     
 		$result=sybase_query("
                         close c
                         deallocate cursor c",
 			           $pid);
     
+>>>>>>> 3.1.0
 		$result=sybase_query(
 		               "declare c cursor for 
                         select BlockedBy,Timestamp,WT=max(WaitTime)
@@ -157,7 +160,11 @@ setStatMainTableSize(0);
 
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
+<<<<<<< HEAD
+<div class="title"><?php echo  $Title ?></div>
+=======
 <div class="title"><?php echo $Title ?></div>
+>>>>>>> 3.1.0
 <a   href="http://github.com/asebox/asebox/ASE-Locks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Locks help" TITLE="Locks help"  /> </a>
 </div>
 

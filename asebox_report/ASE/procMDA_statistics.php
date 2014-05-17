@@ -102,12 +102,21 @@ function getProcDetail(DBID, ProcName, type)
       <td  class="statTabletitle"> Executions  </td>
       <td  class="statTabletitle"> CpuTime     </td>
       <td  class="statTabletitle"> WaitTime    </td>
+<<<<<<< HEAD
+      <td  class="statTabletitle"> MemUsageKB  </td>
+      <td  class="statTabletitle"> PReads      </td>
+      <td  class="statTabletitle"> LReads      </td>
+      <td  class="statTabletitle"> PgsModified </td>
+      <td  class="statTabletitle"> PktsSent    </td>
+      <td  class="statTabletitle"> PktsRcved   </td>
+=======
       <td  class="statTabletitle"> PReads      </td>
       <td  class="statTabletitle"> LReads      </td>
       <td  class="statTabletitle"> MemUseKB    </td>
       <td  class="statTabletitle"> PgsMod      </td>
       <td  class="statTabletitle"> PktsSent    </td>
       <td  class="statTabletitle"> PktsRcvd    </td>
+>>>>>>> 3.1.0
       <td  class="statTabletitle"> SumPlans    </td>
     </tr>
     <tr class=statTableTitle>   
@@ -118,9 +127,15 @@ function getProcDetail(DBID, ProcName, type)
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="Executions DESC"      <?php if ($orderProc=="Executions DESC")      echo "CHECKED"; ?> ></td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="CpuTime DESC"         <?php if ($orderProc=="CpuTime DESC")         echo "CHECKED"; ?> ></td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="WaitTime DESC"        <?php if ($orderProc=="WaitTime DESC")        echo "CHECKED"; ?> ></td>
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="MemUsageKB DESC"      <?php if ($orderProc=="MemUsageKB DESC")      echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PhysicalReads DESC"   <?php if ($orderProc=="PhysicalReads DESC")   echo "CHECKED"; ?> ></td>
+      <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="LogicalReads DESC"    <?php if ($orderProc=="LogicalReads DESC")    echo "CHECKED"; ?> ></td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PhysicalReads DESC"   <?php if ($orderProc=="PhysicalReads DESC")   echo "CHECKED"; ?> ></td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="LogicalReads DESC"    <?php if ($orderProc=="LogicalReads DESC")    echo "CHECKED"; ?> ></td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="MemUsageKB DESC"      <?php if ($orderProc=="MemUsageKB DESC")      echo "CHECKED"; ?> ></td>
+>>>>>>> 3.1.0
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PagesModified DESC"   <?php if ($orderProc=="PagesModified DESC")   echo "CHECKED"; ?> ></td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PacketsSent DESC"     <?php if ($orderProc=="PacketsSent DESC")     echo "CHECKED"; ?> ></td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderProc"  VALUE="PacketsReceived DESC" <?php if ($orderProc=="PacketsReceived DESC") echo "CHECKED"; ?> ></td>
@@ -130,7 +145,11 @@ function getProcDetail(DBID, ProcName, type)
 
     <tr> 
 	  <td> </td>
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbid" size="4" value="<?php if( isset($filterdbid)    ){ echo $filterdbid     ; } ?>" ></td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbid" size="3" value="<?php if( isset($filterdbid)    ){ echo $filterdbid     ; } ?>" ></td>
+>>>>>>> 3.1.0
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterAppname"       value="<?php if( isset($filterAppname) ){ echo $filterAppname  ; } ?>" ></td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterProcname"      value="<?php if( isset($filterProcname)){ echo $filterProcname ; } ?>" ></td>
       <td></td> 
@@ -188,9 +207,15 @@ function getProcDetail(DBID, ProcName, type)
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo $row["Executions"] ?>  </td>
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["CpuTime"]) ?>  </td>
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["WaitTime"]) ?>  </td>
+<<<<<<< HEAD
+    <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["MemUsageKB"]) ?>  </td>
+    <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["PhysicalReads"]) ?>  </td>
+    <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["LogicalReads"]) ?>  </td>
+=======
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["PhysicalReads"]) ?>  </td>
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["LogicalReads"]) ?>  </td>
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["MemUsageKB"]) ?>  </td>
+>>>>>>> 3.1.0
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["PagesModified"]) ?>  </td>
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["PacketsSent"]) ?>  </td>
     <td Onclick='javascript:getProcDetail("<?php echo $row["DBID"]?>" , "<?php echo $row["ProcName"]?>", "D" )' class="statTablePtr" align="right"> <?php echo number_format($row["PacketsReceived"]) ?>  </td>

@@ -7,10 +7,17 @@ $query = "
           ObjectName, 
           IndexID, 
           ObjectType, 
+<<<<<<< HEAD
+          minCachedKB=min(CachedKB),
+          avgCachedKB=avg(CachedKB), 
+          maxCachedKB=max(CachedKB),  
+          avgProcessesAccessing=avg(ProcessesAccessing),
+=======
           minCachedKB=min(convert( numeric(19,0), CachedKB)),
           avgCachedKB=avg(convert( numeric(19,0), CachedKB)), 
           maxCachedKB=max(convert( numeric(19,0), CachedKB)),  
           avgProcessesAccessing=avg(convert( numeric(19,0)), ProcessesAccessing),
+>>>>>>> 3.1.0
           CacheID, DBID, ObjectID, OwnerUserID
 	from ".$ServerName."_CachedObj
 	where Timestamp >='".$StartTimestamp."'        

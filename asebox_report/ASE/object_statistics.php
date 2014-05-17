@@ -1,4 +1,77 @@
 <?php
+<<<<<<< HEAD
+
+        if ( isset($_POST['orderObj'])) $orderObj=$_POST['orderObj']; else $orderObj=$order_by;
+        if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=200;
+        if ( isset($_POST['filterdbname']) ) $filterdbname= $_POST['filterdbname'];  else $filterdbname="";
+        if ( isset($_POST['filterobjname']) ) $filterobjname= $_POST['filterobjname'];  else $filterobjname="";
+        if ( isset($_POST['filterindname']) ) $filterindname= $_POST['filterindname'];  else $filterindname="";
+        if ( isset($_POST['filterindid']) ) $filterindid= $_POST['filterindid'];  else $filterindid="";
+        if ( isset($_POST['show_index_not_used']) ) $show_index_not_used= $_POST['show_index_not_used'];  else $show_index_not_used="";
+
+        if ( $show_index_not_used == "") 
+            $index_not_usedBtnValue= "ShowIndexNotUsedOnly";
+        else 
+            $index_not_usedBtnValue= "RemoveShowIndexNotUsedOnly";
+
+        if ( isset($_POST['sc_show_table_scans']) ) $sc_show_table_scans= $_POST['sc_show_table_scans'];  else $sc_show_table_scans="";
+
+        if ( $sc_show_table_scans == "") 
+            $show_table_scanBtnValue= "ShowTableScansOnly";
+        else 
+            $show_table_scanBtnValue= "RemoveShowTableScansOnly";
+
+
+
+  // Check if indname col exists in OpObjAct table
+  $result = sybase_query(
+      "select cnt=count(*) from syscolumns where id=object_id('".$ServerName."_OpObjAct') and name='indname'"
+      , $pid);
+	if ($result==false){ 
+        sybase_close($pid); 
+        $pid=0;
+        include ("../connectArchiveServer.php");	
+        echo "<tr><td>Error</td></tr></table>";
+        return(0);
+	}
+  $row = sybase_fetch_array($result);
+  if ( $row["cnt"] == 1 ) {
+          $indname_clause = ",indname";
+          $indname_filterclause = "and (indname like '".$filterindname."' or '".$filterindname."'='')";
+  }
+  else {
+          $indname_clause = "";
+          $indname_filterclause = "";
+  }
+
+
+  // Check if table xxxx_OpObjAct supports 15.0
+  $query = "select cnt=count(*) from syscolumns where id =object_id('".$ServerName."_OpObjAct') and name in ('HkgcRequests', 'HkgcPending', 'HkgcOverflows')";
+  $result = sybase_query($query,$pid);
+  $row = sybase_fetch_array($result);
+  if ($row["cnt"] == 3)
+      $support150=1;
+  else
+      $support150=0;
+
+  // Check if table xxxx_OpObjAct supports 15.7
+  $query = "select cnt=count(*) from syscolumns where id =object_id('".$ServerName."_OpObjAct') and name in ('SharedLockWaitTime', 'ExclusiveLockWaitTime', 'UpdateLockWaitTime', 'ObjectCacheDate')";
+  $result = sybase_query($query,$pid);
+  $row = sybase_fetch_array($result);
+  if ($row["cnt"] == 4)
+      $support157=1;
+  else
+      $support157=0;
+
+
+	include './ASE/sql/sql_object_statistics.php';
+?>
+
+<script type="text/javascript">
+var WindowObjectReference; // global variable
+
+setStatMainTableSize(0);
+=======
 if ( isset($_POST['orderObj'])) $orderObj=$_POST['orderObj']; else $orderObj=$order_by;
 if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=200;
 if ( isset($_POST['filterdbname']) ) $filterdbname= $_POST['filterdbname'];  else $filterdbname="";
@@ -83,6 +156,7 @@ if ( $Title != "Table Statistics" ) {
 }
 ?>
 
+>>>>>>> 3.1.0
 
 function getObjectDetail(ObjectDbName, ObjectName, IndexID)
 {
@@ -123,20 +197,40 @@ function getTableScans() {
   }
   document.inputparam.submit();
 }
+<<<<<<< HEAD
+
+
+</script>
+
+
+=======
 </script>
 
 <!---------------------------------------------------------------------------------------------------->
 <!--Hidd fields -->
+>>>>>>> 3.1.0
 <input type="hidden" name="show_index_not_used" value="<?php echo $show_index_not_used ?>">
 <input type="hidden" name="sc_show_table_scans" value="<?php echo $sc_show_table_scans ?>">
 
 <center>
 
+<<<<<<< HEAD
+
+
+
+
+
+=======
+>>>>>>> 3.1.0
 <div class="boxinmain" style="min-width:800px">
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
+<a href="http://github.com/asebox/asebox?title=AseRep_ASEObjStats" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Object help" TITLE="Object help"  width="32" height="32" /> </a>
+=======
 <a href="http://github.com/asebox/asebox/ASE-Object-Statistics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Object help" TITLE="Object help"  width="32" height="32" /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -185,6 +279,18 @@ function getTableScans() {
 
 <table cellspacing=2 cellpadding=4 >
     <tr> 
+<<<<<<< HEAD
+      <td class="statTabletitle" > DBName  </td>
+      <td class="statTabletitle" > ObjName  </td>
+      <?php
+      if ($indname_clause!="") {
+      ?>
+          <td class="statTabletitle" > IndName   </td>
+      <?php
+      }
+      ?>
+      <td class="statTabletitle" > IndID   </td>
+=======
       <td class="statTabletitle" > Database  </td>
       <td class="statTabletitle" > Table Name  </td>
       <?php
@@ -195,6 +301,7 @@ function getTableScans() {
       }
       ?>
       <td class="statTabletitle" > IndID</td>
+>>>>>>> 3.1.0
       <td class="statTabletitle" > LReads   </td>
       <td class="statTabletitle" > PReads  </td>
       <td class="statTabletitle" > APFReads   </td>
@@ -261,6 +368,18 @@ function getTableScans() {
 
 
     <tr class=statTableTitle> 
+<<<<<<< HEAD
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbname"  value="<?php if( isset($filterdbname) ){ echo $filterdbname ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterobjname"  value="<?php if( isset($filterobjname) ){ echo $filterobjname ; } ?>" > </td>
+      <?php
+      if ($indname_clause!="") {
+      ?>
+          <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterindname"  value="<?php if( isset($filterindname) ){ echo $filterindname ; } ?>" > </td>
+      <?php
+      }
+      ?>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterindid" SIZE="3" value="<?php if( isset($filterindid) ){ echo $filterindid ; } ?>" > </td>
+=======
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbname"  SIZE="10" value="<?php if( isset($filterdbname) ){ echo $filterdbname ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterobjname" SIZE="13" value="<?php if( isset($filterobjname) ){ echo $filterobjname ; } ?>" > </td>
       <?php
@@ -271,6 +390,7 @@ function getTableScans() {
       }
       ?>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterindid" SIZE="1" value="<?php if( isset($filterindid) ){ echo $filterindid ; } ?>" > </td>
+>>>>>>> 3.1.0
       <td></td> 
       <td></td> 
       <td></td> 
