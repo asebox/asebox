@@ -15,5 +15,4 @@
       //header("Location: ../asebox_report/asebox_main.php");
       print "success";
    }
-   
 ?>
