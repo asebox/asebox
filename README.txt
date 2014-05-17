@@ -1,3 +1,4 @@
+x
 This bundle can be used if you don't already have Apache, PHP and eventually Sybase Open Client installed on your machine
 When Apache is stated you can access to the ASEMON_REPORT PHP pages to view your historized
 data recorded with ASEMON_LOGGER
