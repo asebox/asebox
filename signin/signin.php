@@ -7,7 +7,7 @@
 
    if (( $name == 'guest')    && ($password != 'xxx')) { $f='Guest';  } 
 
-   //It's OK
+   //It's  OK y
    if ( $f !== "" ) { 	
       $_SESSION["asebox_contact"]  = $name;
       $_SESSION["asebox_fullname"] = $f;
