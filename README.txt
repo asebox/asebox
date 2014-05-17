@@ -36,3 +36,5 @@ How to get ASEMON_REPORT pages :
 
 1) start IE or FIREFOX
 2) enter "http://localhost/asemon_report/asemon_report.php"
+
+
