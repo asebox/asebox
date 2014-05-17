@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<<<<<<< HEAD
     <script LANGUAGE="javascript" type="text/javascript" SRC="../scripts/jsDate.js"></script>
     <script LANGUAGE="javascript" SRC="../scripts/json2.js"> </script>
     <script LANGUAGE="javascript" SRC="../scripts/calendrier.js"> </script>
@@ -11,6 +12,14 @@
     <link rel=STYLESHEET type="text/css" href="../stylesheets/maindiv.css" >
     <link rel=STYLESHEET type="text/css" href="../stylesheets/stylecalend.css" >
     <link rel=STYLESHEET type="text/css" href="../stylesheets/menu.css" >
+=======
+    <script LANGUAGE="javascript" SRC="../scripts/aseboxfunc.js"> </script>
+    <script LANGUAGE="javascript" SRC="../scripts/asemon_report.js"> </script>
+    <script LANGUAGE="javascript" SRC="../scripts/jquery.dropdownPlain.js"> </script>   
+    <script LANGUAGE="javascript" src="../scripts/jquery-ui-1.10.1.custom.min.js" ></script>   
+    <script LANGUAGE="javascript" SRC="../scripts/jquery-1.3.1.min.js"> </script>
+    <link rel=STYLESHEET type="text/css" href="../stylesheets/asebox.css" >
+>>>>>>> 3.1.0
 
     <?php
     // Retreive session context
@@ -39,7 +48,11 @@
   <form name="inputparam" method="POST" action="">
   <?php
   $displaylevel=1;
+<<<<<<< HEAD
   include ("../asemon_search_panel.php");
+=======
+  include ("../compare_search_panel.php");
+>>>>>>> 3.1.0
   ?>
 
 
@@ -47,7 +60,11 @@
 
 <div class="maindiv">
 
+<<<<<<< HEAD
 HELLO</br>  
+=======
+
+>>>>>>> 3.1.0
 <div class="divMenu">
 
 <?php                     

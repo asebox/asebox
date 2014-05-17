@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
         
         $param_list=array(
@@ -20,6 +21,27 @@
         if ( !isset($filtername) )     $filtername="";
 
 	include './ASE/sql/sql_SysLogsHold.php';
+=======
+   $param_list=array(
+   	'orderSysLogsHold',
+   	'rowcnt',
+       'filterdbname',
+       'filterdbid',
+       'filterspid',
+       'filterpage',
+       'filtername',
+       'filterxloid'
+   );
+   foreach ($param_list as $param)
+   @$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+   
+   if ( !isset($orderSysLogsHold) )  $orderSysLogsHold="starttime";
+   if ( !isset($rowcnt) )     $rowcnt=200;
+   if ( !isset($filterdbname) )     $filterdbname="";
+   if ( !isset($filtername) )     $filtername="";
+
+   include './ASE/sql/sql_SysLogsHold.php';
+>>>>>>> 3.1.0
 ?>
 
 <script type="text/javascript">
@@ -39,6 +61,7 @@ function getPrcDetail(Spid,StartTimestamp,EndTimestamp)
 }
 </script>
 
+<<<<<<< HEAD
 
 
 <div class="boxinmain" style="min-width:700px">
@@ -48,6 +71,13 @@ function getPrcDetail(Spid,StartTimestamp,EndTimestamp)
 <div class="title"><?php echo  $Title ?></div>
 <img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
 <a href="http://sourceforge.net/apps/mediawiki/asemon?title=AseRep_ASELogsHold" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="LogsHold help" TITLE="LogsHold help"> </a>
+=======
+<div class="boxinmain" style="min-width:700px">
+<div class="boxtop">
+<div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
+<div class="title"><?php echo  $Title ?></div>
+<a href="http://github.com/asebox/asebox/ASE-LogsHold" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="LogsHold help" TITLE="LogsHold help"> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -57,11 +87,19 @@ function getPrcDetail(Spid,StartTimestamp,EndTimestamp)
     <tr> 
       <td  class="statTabletitle"> StartTime</td>
       <td  class="statTabletitle"> Elapsed_s </td>
+<<<<<<< HEAD
       <td  class="statTabletitle"> DBName </td>
       <td  class="statTabletitle"> DBID </td>
       <td  class="statTabletitle"> SPID </td>
       <td  class="statTabletitle"> Page </td>
       <td  class="statTabletitle"> Trans. Name </td>
+=======
+      <td  class="statTabletitle"> Database </td>
+      <td  class="statTabletitle"> DBID </td>
+      <td  class="statTabletitle"> SPID </td>
+      <td  class="statTabletitle"> Page </td>
+      <td  class="statTabletitle"> Transaction Name </td>
+>>>>>>> 3.1.0
       <td  class="statTabletitle"> xloid </td>
     </tr>
     <tr>   
@@ -77,7 +115,11 @@ function getPrcDetail(Spid,StartTimestamp,EndTimestamp)
     <tr> 
       <td></td> 
       <td></td> 
+<<<<<<< HEAD
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbname"  value="<?php if( isset($filterdbname) ){ echo $filterdbname; } ?>" > </td>
+=======
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbname" size="14"  value="<?php if( isset($filterdbname) ){ echo $filterdbname; } ?>" > </td>
+>>>>>>> 3.1.0
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterdbid"  size="4" value="<?php if( isset($filterdbid) ){ echo $filterdbid; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterspid"  size="4"  value="<?php if( isset($filterspid) ){ echo $filterspid; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterpage"  size="4"  value="<?php if( isset($filterpage) ){ echo $filterpage; } ?>" > </td>

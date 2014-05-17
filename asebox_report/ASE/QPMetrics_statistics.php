@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
         $param_list=array(
         	'rowcnt',
@@ -10,6 +11,18 @@
         );
         foreach ($param_list as $param)
         @$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+=======
+$param_list=array(
+	'rowcnt',
+  'filterdbname',
+  'filteruid',
+  'filterid',
+  'filterhashkey',
+  'filterqtext'
+);
+foreach ($param_list as $param)
+@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+>>>>>>> 3.1.0
 
 
     if ( isset($_POST['orderQPMetrics'])   ) $orderQPMetrics=  $_POST['orderQPMetrics'];   else $orderQPMetrics="dbname,lio_avg desc";
@@ -18,7 +31,10 @@
         if ( !isset($rowcnt) )     $rowcnt=200;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
     // Check if QPMetrics table exists
     $query = "select cnt=count(*) 
               from sysobjects 
@@ -30,6 +46,7 @@
         exit();
     }
 
+<<<<<<< HEAD
 
 
 
@@ -39,6 +56,8 @@
 
 
 
+=======
+>>>>>>> 3.1.0
 	include './ASE/sql/sql_QPMetrics_statistics.php';
 ?>
 
@@ -60,7 +79,11 @@ function getQPMetrics_statement_detail(dbname,uid, id, hashkey, StartTimestamp, 
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
 <a   href="http://github.com/asebox/asebox?title=AseRep_QPMetrics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="QPMetrics help" TITLE="QPMetrics help"  /> </a>
+=======
+<a   href="http://github.com/asebox/asebox/ASE-QPMetrics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="QPMetrics help" TITLE="QPMetrics help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -86,7 +109,11 @@ function getQPMetrics_statement_detail(dbname,uid, id, hashkey, StartTimestamp, 
 
     <table cellspacing=2 cellpadding=4>
     <tr> 
+<<<<<<< HEAD
       <td class="statTabletitle"> dbname                        </td>
+=======
+      <td class="statTabletitle"> Database                      </td>
+>>>>>>> 3.1.0
       <td class="statTabletitle"> uid                           </td>
       <td class="statTabletitle"> id                            </td>
       <td class="statTabletitle"> hashkey                       </td>
@@ -95,8 +122,13 @@ function getQPMetrics_statement_detail(dbname,uid, id, hashkey, StartTimestamp, 
       <td class="statTabletitle"> totlio                        </td>
       <td class="statTabletitle"> pio_avg                       </td>
       <td class="statTabletitle"> totpio                        </td>
+<<<<<<< HEAD
       <td class="statTabletitle" title="Average execution time"> exec_avg   </td>
       <td class="statTabletitle" title="Average elapsed time"> elap_avg     </td>
+=======
+      <td class="statTabletitle" title="Avg execution time"> exec_avg   </td>
+      <td class="statTabletitle" title="Avg elapsed time">   elap_avg   </td>
+>>>>>>> 3.1.0
       <td class="statTabletitle"> qtext	                        </td>
 
 

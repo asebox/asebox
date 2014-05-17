@@ -4,9 +4,17 @@ function calcColor($row) {
 
   if ($row["Status"]=="RUNNING")
    	      echo "statTableGreen";
+<<<<<<< HEAD
    	  else if ($row["Status"]=="DELAYED")
    	      echo "statTableYellow";
    	      else echo "statTableRed";
+=======
+  else if ($row["Status"]=="DELAYED")
+   	      echo "statTableYellow";
+  else if ($row["Status"]=="INACTIVE")
+   	      echo "statTableGrey";
+  else echo "statTableRed";
+>>>>>>> 3.1.0
 }
 
 $pid_save=$pid;

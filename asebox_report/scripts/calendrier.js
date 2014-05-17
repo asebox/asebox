@@ -47,7 +47,11 @@ var timeDuChamps = 0;
 var dformat = null;
  
 //########################## Fonction permettant de remplacer "document.getElementById"  ##########################
+<<<<<<< HEAD
 function $(element){
+=======
+function $get(element){
+>>>>>>> 3.1.0
 	return document.getElementById(element);
 }
  
@@ -55,31 +59,51 @@ function $(element){
 //Permet de faire glisser une div de la gauche vers la droite
 function slideUp(bigMenu,smallMenu){
 	//Si le timer n'est pas finit on détruit l'ancienne div
+<<<<<<< HEAD
 	if(parseInt($(bigMenu).style.left) < 0){
 		$(bigMenu).style.left = parseInt($(bigMenu).style.left) + 10 + "px";
 		$(smallMenu).style.left  =parseInt($(smallMenu).style.left) + 10 + "px";
+=======
+	if(parseInt($get(bigMenu).style.left) < 0){
+		$get(bigMenu).style.left = parseInt($get(bigMenu).style.left) + 10 + "px";
+		$get(smallMenu).style.left  =parseInt($get(smallMenu).style.left) + 10 + "px";
+>>>>>>> 3.1.0
 		timer = setTimeout('slideUp("'+bigMenu+'","'+smallMenu+'")',10);
 	}
 	else{
 		clearTimeout(timer);
 		TimerRunning = false;
+<<<<<<< HEAD
 		$(smallMenu).parentNode.removeChild($(smallMenu));
+=======
+		$get(smallMenu).parentNode.removeChild($get(smallMenu));
+>>>>>>> 3.1.0
 		//alert("timer up bien kill");
 	}
 }
  
 //Permet de faire glisser une div de la droite vers la gauche
 function slideDown(bigMenu,smallMenu){
+<<<<<<< HEAD
 	if(parseInt($(bigMenu).style.left) > 0){
 		$(bigMenu).style.left = parseInt($(bigMenu).style.left) - 10 + "px";
 		$(smallMenu).style.left =parseInt($(smallMenu).style.left) - 10 + "px";
+=======
+	if(parseInt($get(bigMenu).style.left) > 0){
+		$get(bigMenu).style.left = parseInt($get(bigMenu).style.left) - 10 + "px";
+		$get(smallMenu).style.left =parseInt($get(smallMenu).style.left) - 10 + "px";
+>>>>>>> 3.1.0
 		timer = setTimeout('slideDown("'+bigMenu+'","'+smallMenu+'")',10);
 	}
 	else{
 		clearTimeout(timer);
 		TimerRunning = false;		
 		//delete de l'ancienne
+<<<<<<< HEAD
 		$(smallMenu).parentNode.removeChild($(smallMenu));
+=======
+		$get(smallMenu).parentNode.removeChild($get(smallMenu));
+>>>>>>> 3.1.0
 		//alert("timer down bien kill");
 	}
 }
@@ -98,7 +122,11 @@ function CreateDivTempo(From){
 		 //remplissage
 		 NewDiv.innerHTML = CreateDayCalandar(year, month, day);
 		 
+<<<<<<< HEAD
 	$("Contenant_Calendar").appendChild(NewDiv);
+=======
+	$get("Contenant_Calendar").appendChild(NewDiv);
+>>>>>>> 3.1.0
 	
 		if(From == "left"){
 			TimerRunning = true;
@@ -114,8 +142,13 @@ function CreateDivTempo(From){
 			"";
 			NewDiv.style.left = 0+"px";
 		}
+<<<<<<< HEAD
 		$('Contenant_Calendar').style.height = NewDiv.offsetHeight+"px";
 		$('Contenant_Calendar').style.zIndex = "200";
+=======
+		$get('Contenant_Calendar').style.height = NewDiv.offsetHeight+"px";
+		$get('Contenant_Calendar').style.zIndex = "200";
+>>>>>>> 3.1.0
 		OldDiv = NewDiv.id;
 	}
 }
@@ -264,7 +297,11 @@ function calendrier(year, month, day){
 	var month_next = "<a href=\"javascript:mois_suivant()\" style=\"position:absolute;right:30px;z-index:200;\"> > </a>";
 	var year_next = "<a href=\"javascript:annee_suivante()\" style=\"position:absolute;right:5px;z-index:200;\" >&nbsp;&nbsp; > > </a>";
 	var year_bef = "<a href=\"javascript:annee_precedente()\" style=\"position:absolute;left:5px;z-index:200;\"  > < < &nbsp;&nbsp;</a>";
+<<<<<<< HEAD
 	calendrierSortie = "<p class=\"titleMonth\" style=\"position:relative;z-index:200;\"> <a href=\"javascript:alimenterChamps('')\" style=\"float:left;margin-left:3px;color:#cccccc;font-size:10px;z-index:200;\"> Effacer la date </a><a href=\"javascript:masquerCalendrier()\" style=\"float:right;margin-right:3px;color:red;font-weight:bold;font-size:12px;z-index:200;\">X</a>&nbsp;</p>";
+=======
+	calendrierSortie = "<p class=\"titleMonth\" style=\"position:relative;z-index:200;\"> <a href=\"javascript:alimenterChamps('')\" style=\"float:left;margin-left:3px;color:#cccccc;font-size:10px;z-index:200;\"> Clear </a><a href=\"javascript:masquerCalendrier()\" style=\"float:right;margin-right:3px;color:red;font-weight:bold;font-size:12px;z-index:200;\">X</a>&nbsp;</p>";
+>>>>>>> 3.1.0
 	//On affiche le mois et l'année en titre
 
                 if (dformat=='dmy') {
@@ -366,7 +403,11 @@ function CreateDayCalandar(){
 		day_calendar = "<span>&nbsp;</span>" + day_calendar;
 	}
 	//On met également a jour le mois et l'année
+<<<<<<< HEAD
 	$('curentDateString').innerHTML = month_name[current_month]+ " "+ current_year;
+=======
+	$get('curentDateString').innerHTML = month_name[current_month]+ " "+ current_year;
+>>>>>>> 3.1.0
 	return (list_day  + day_calendar);
 }
  

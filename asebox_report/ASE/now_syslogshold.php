@@ -45,7 +45,11 @@ function getPrcDetail(Spid,StartTimestamp,EndTimestamp)
 
 <div style="float:left; position: relative; top: 3px; left: 8px;"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo $Title." (".$selectedTimestamp.")"?></div>
+<<<<<<< HEAD
 <a href="http://sourceforge.net/apps/mediawiki/asemon?title=AseRep_ASELogsHold" TARGET="_blank"> 
+=======
+<a href="http://github.com/asebox/asebox/Logshold" TARGET="_blank"> 
+>>>>>>> 3.1.0
 <img class="help" SRC="images/Help-circle-blue-32.png" ALT="LogsHold help" TITLE="LogsHold help"> </a>
 </div>
 

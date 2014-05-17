@@ -32,7 +32,15 @@
       exec ('insert #ls2 (SrvType, SrvName, LastCollect, Status)
              select @SrvType, @SrvName, 
                     (select max(Timestamp) from '+@tablename+'),
+<<<<<<< HEAD
                     (select case when datediff(ss,max(Timestamp),getdate()) > 600 then ''STOPPED'' when datediff(ss,max(Timestamp),getdate()) between 180 and 600 then ''DELAYED'' when datediff(ss,max(Timestamp),getdate()) <180 then ''RUNNING'' end from '+@tablename+')
+=======
+                    (select case when datediff(dd,max(Timestamp),getdate()) is null then ''INACTIVE'' 
+                                 when datediff(dd,max(Timestamp),getdate()) >   4   then ''INACTIVE'' 
+                                 when datediff(ss,max(Timestamp),getdate()) > 600   then ''STOPPED'' 
+                                 when datediff(ss,max(Timestamp),getdate()) between 180 and 600 then ''DELAYED'' 
+                                 when datediff(ss,max(Timestamp),getdate()) <180 then ''RUNNING'' end from '+@tablename+')
+>>>>>>> 3.1.0
             ')
     end
     set rowcount 0
@@ -48,10 +56,13 @@
 
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 3.1.0
 <div class="boxinmain" style="min-width:300px; vertical-align:top;">
 <div class="boxtop">
 <div class="title"><?php echo $temp_archive_server ?></div>
@@ -70,6 +81,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -77,6 +89,8 @@
 
 
 <p></p>
+=======
+>>>>>>> 3.1.0
 <script type="text/javascript">
 setStatMainTableSize(0);
 </script>

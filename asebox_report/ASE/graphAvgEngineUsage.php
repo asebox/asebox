@@ -6,10 +6,18 @@
 	include ("../".$jpgraph_home."/src/jpgraph_bar.php");	
 
 
+<<<<<<< HEAD
 
 
 		$result=sybase_query(
 "select EngineNumber,userCPU_pct=sum(UserCPUTime*1000.)/sum(Interval)*100
+=======
+//"select EngineNumber,userCPU_pct=sum(UserCPUTime*1000.)/sum(Interval)*100
+
+
+		$result=sybase_query(
+"select EngineNumber,userCPU_pct=sum(convert(numeric(19),UserCPUTime*1000.))/sum(Interval)*100.
+>>>>>>> 3.1.0
 from ".$ServerName."_Engines
 where Timestamp >='".$StartTimestamp."'
 and Timestamp <='".$EndTimestamp."'

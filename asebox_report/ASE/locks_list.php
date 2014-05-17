@@ -60,6 +60,15 @@
 
 if ($ArchSrvType=="Adaptive Server Enterprise") {  
     // It is on ASE, isolate declare cursor step
+<<<<<<< HEAD
+=======
+    
+		$result=sybase_query("
+                        close c
+                        deallocate cursor c",
+			           $pid);    
+    
+>>>>>>> 3.1.0
 		$result=sybase_query(
 			"declare c cursor for 
                          select blockedSpid,Timestamp,time_blocked

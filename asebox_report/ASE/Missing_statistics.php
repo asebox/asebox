@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php
 
@@ -15,13 +16,32 @@
 
   if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=200;
 
+=======
+<?php
+$param_list=array(
+	'orderMissStats',
+	'rowcnt'
+);
+foreach ($param_list as $param)
+	@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+
+if ( isset($_POST['orderMissStats'])) $orderMissStats=$_POST['orderMissStats']; else $orderMissStats="1,2,3";
+if ( isset($_POST['filterDbName'     ]) ) $filterDbName=  $_POST['filterDbName'];    else $filterDbName="";
+if ( isset($_POST['filterOwner'      ]) ) $filterOwner=   $_POST['filterOwner'];     else $filterOwner="";
+if ( isset($_POST['filterTabName'    ]) ) $filterTabName= $_POST['filterTabName'];   else $filterTabName="";
+
+if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=200;
+>>>>>>> 3.1.0
 ?>
 
 
 <?php
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 3.1.0
     // Check if MissStats table exists
     $query = "select cnt=count(*) 
               from sysobjects 
@@ -31,12 +51,18 @@
     if ($row["cnt"] == 0) {
 
 	echo "Missing statistics data is not available. This collector works with ASE 15.0.3ESD#1 and upper. Missing stats capture  has not been activated for server ".$ServerName.".<P> (Add  MissStats.xml in the asemon_logger config file, and configure 'capture missing statistics' to 1 on the monitored server)";
+<<<<<<< HEAD
         exit();
         
     }
 
 
 
+=======
+        exit();        
+    }
+
+>>>>>>> 3.1.0
   include ("sql/sql_missing_statistics.php");
 ?>  
   
@@ -49,7 +75,11 @@ setStatMainTableSize(0);
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
 <a   href="http://github.com/asebox/asebox?title=AseRep_MissStats" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Missing stats help" TITLE="Missing stats help"  /> </a>
+=======
+<a   href="http://github.com/asebox/asebox/ASE-Missing-Stats" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Missing stats help" TITLE="Missing stats help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -62,9 +92,13 @@ setStatMainTableSize(0);
 	<input type="text" name="rowcnt" value="<?php if( isset($rowcnt) ){ echo $rowcnt ; } ?>">
 </td>
 <td>
+<<<<<<< HEAD
 	<img src="images/button_sideLt.gif"  class="btn" height="20px" >
     <INPUT style="height:20px; " class="btn" type="submit" value="Refresh" name="RefreshStmt" >
     <img src="images/button_sideRt.gif"  class="btn" height="20px">
+=======
+    <INPUT style="height:20px; " class="btn" type="submit" value="Refresh" name="RefreshStmt" >
+>>>>>>> 3.1.0
 </td>
 
 </tr></table>
@@ -112,9 +146,12 @@ setStatMainTableSize(0);
       <td class="statTabletitle" >  c30                   </td>
       <td class="statTabletitle" >  c31                   </td>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 3.1.0
     </tr>                          
                                    
 
@@ -151,6 +188,7 @@ setStatMainTableSize(0);
             <td nowrap class="statTable" align="left">   <?php echo $row["dbname"]             ?> </td>
             <td nowrap class="statTable" align="left">   <?php echo $row["owner"]              ?> </td>
             <td nowrap class="statTable" align="left">   <?php echo $row["tabname"]            ?> </td>
+<<<<<<< HEAD
             <td nowrap class="statTable" align="right">   <?php echo number_format($row["Counter"])            ?> </td>
             <td nowrap class="statTable" align="left">   <?php echo $row["c1"]            ?> </td>
             <td nowrap class="statTable" align="left">   <?php echo $row["c2"]            ?> </td>
@@ -183,6 +221,40 @@ setStatMainTableSize(0);
             <td nowrap class="statTable" align="left">   <?php echo $row["c29"]            ?> </td>
             <td nowrap class="statTable" align="left">   <?php echo $row["c30"]            ?> </td>
             <td nowrap class="statTable" align="left">   <?php echo $row["c31"]            ?> </td>
+=======
+            <td nowrap class="statTable" align="right">  <?php echo number_format($row["Counter"]) ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c1"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c2"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c3"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c4"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c5"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c6"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c7"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c8"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c9"]     ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c10"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c11"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c12"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c13"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c14"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c15"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c16"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c17"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c18"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c19"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c20"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c21"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c22"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c23"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c24"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c25"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c26"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c27"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c28"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c29"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c30"]    ?> </td>
+            <td nowrap class="statTable" align="left">   <?php echo $row["c31"]    ?> </td>
+>>>>>>> 3.1.0
             </tr> 
             <?php
         } // end while
@@ -194,13 +266,20 @@ setStatMainTableSize(0);
     </tr>
     <?php
         } // end if $result
+<<<<<<< HEAD
     ?>
     
+=======
+    ?>    
+>>>>>>> 3.1.0
 
 </table>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 </DIV>
 </DIV>
 </DIV>

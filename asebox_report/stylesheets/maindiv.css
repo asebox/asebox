@@ -1,5 +1,9 @@
 .boxtop2 {
+<<<<<<< HEAD
 	height: 35px;
+=======
+	height: 33px;     /* was 35   */
+>>>>>>> 3.1.0
 	margin: 0px;
 	padding: 0px;
 	border-radius: 14px 14px 0px 0px ;     
@@ -10,12 +14,20 @@
 	float:left;
 	vertical-align: central;
 	text-align : center;
+<<<<<<< HEAD
 	font-size : 16px;
+=======
+	font-size : 16px;      /* was 16 */
+>>>>>>> 3.1.0
 	padding : 2pt;
 	color : #fff;
 	font-weight : bold;
     position: relative;
+<<<<<<< HEAD
     top: 8px;
+=======
+    top: 6px;
+>>>>>>> 3.1.0
 }
 
 .boxtop2 IMG.help {
@@ -35,7 +47,11 @@
 
 
 .boxtop {
+<<<<<<< HEAD
 	height: 35px;
+=======
+	height: 33px;     /* was 35   */
+>>>>>>> 3.1.0
 	background-image: url(../images/boxtop-bkg.jpg);
 	margin: 0px;
 	padding: 0px;
@@ -47,12 +63,20 @@
 	float:left;
 	vertical-align: central;
 	text-align : center;
+<<<<<<< HEAD
 	font-size : 16px;
+=======
+	font-size : 16px;      /* was 16 */
+>>>>>>> 3.1.0
 	padding : 2pt;
 	color : #fff;
 	font-weight : bold;
     position: relative;
+<<<<<<< HEAD
     top: 8px;
+=======
+    top: 6px;
+>>>>>>> 3.1.0
 }
 
 .boxtop IMG.help {
@@ -72,7 +96,11 @@
 	border-right-style: solid;
 	border-bottom-style: solid;
 	border-left-style: solid;
+<<<<<<< HEAD
 	border-color: #3E7882;
+=======
+	border-color: #3E7882;      --this is green --- blue would be #6699FF;
+>>>>>>> 3.1.0
 	background-color:#FCFCFC;
 	margin:0px;
 }
@@ -244,12 +272,16 @@ td.statTableBold {
 	font-size : 11px;
 	font-weight:bold;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.statTablePtr {
 	padding : 2px;
 	color : #404040;
 	font-size : 11px;
 	cursor: pointer;
+<<<<<<< HEAD
 	###width : 10px;
 	###max-width : 10px;
 }
@@ -276,6 +308,15 @@ tr.statTableGreen {
   	background-color : #B0B0B0;
 }
 
+=======
+}
+tr.statTableimpair { background-color : #ffffff; }
+tr.statTablepair   { background-color : #F3F3FE; }
+.impaironMouseOver { background-color : #99F3FC; } 
+.paironMouseOver   { background-color : #99F3FC; }
+tr.statTableWhite  { background-color : #ffffff; }
+tr.statTableGreen  { background-color : #B0B0B0; }
+>>>>>>> 3.1.0
 td.statTableGreen {
 	padding : 0px;
 	color : #404040;
@@ -283,7 +324,10 @@ td.statTableGreen {
 	background-color : lightgreen;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.statTableRed {
 	padding : 0px;
 	color : white;
@@ -291,7 +335,10 @@ td.statTableRed {
 	background-color : red;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.statTableYellow {
 	padding : 0px;
 	color : #404040;
@@ -299,7 +346,10 @@ td.statTableYellow {
 	background-color : yellow;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.statTableGrey {
 	padding : 0px;
 	color : #404040;
@@ -307,14 +357,20 @@ td.statTableGrey {
 	background-color : lightgrey;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.statTableNorm {
 	padding : 0px;
 	color : #404040;
 	font-size : 11px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.statTableBtnLeft {
 	padding : 0px;
 	color : #404040;
@@ -322,36 +378,55 @@ td.statTableBtnLeft {
   	background-color : #F3F3FE;
         text-align:left;
 }
+<<<<<<< HEAD
  
 
 table.statInfo {
 	width : 400px;    //was 350
+=======
+table.statInfo {
+	width : 350px;   
+>>>>>>> 3.1.0
 	padding : 5px;
 	border-spacing : 4;
 	background-color : #F3F3FE ;
 	font-size : 0.9em;
 }
+<<<<<<< HEAD
 
 
 tr.statInfo {
 }
 
+=======
+tr.statInfo {
+}
+>>>>>>> 3.1.0
 td.statInfo {
 	padding : 5px;
 	color : #404040;
 	font-size : 0.8em;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 .statInfo ul {
 	list-style-position:inside;
 	list-style-type : square;
 }
+<<<<<<< HEAD
 
 .statInfo li {
 	 margin-bottom: 0.5em;
 }
 
 
+=======
+.statInfo li {
+	 margin-bottom: 0.5em;
+}
+>>>>>>> 3.1.0
 .titleTab {
 	padding : 2;
 	border-spacing : 2;
@@ -359,7 +434,10 @@ td.statInfo {
 	font-size : 0.7em;
 	font-weight : bold;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 table.textInfo {
 	width : 100%;
 	padding : 0;
@@ -367,13 +445,19 @@ table.textInfo {
 	font-size : 0.7em;
 	text-align : left;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3.1.0
 tr.textInfo {
 	width : 100%;
 	text-align : left;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.textInfo {
 	padding : 0px;
 	color : #404040;
@@ -386,12 +470,16 @@ td.textLineInfo {
 	padding : 0px;
 	color : #404040;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 td.textInfoError {
 	background-color : #FFFEDD ;
 	padding : 5px;
 	color : red;
 }
+<<<<<<< HEAD
 
 
 b.newsparatitle {
@@ -399,11 +487,19 @@ b.newsparatitle {
 }
 
 
+=======
+b.newsparatitle {
+	color : #505080;
+}
+>>>>>>> 3.1.0
 .infobox A:link  {
 	text-decoration : underline;
 	color : #000000;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 .infobox A:visited  {
 	text-decoration : underline;
 	color : #303080;
@@ -414,8 +510,11 @@ b.newsparatitle {
 	color : #000000;
 	background-color : #C0C0C0;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3.1.0
 .body h1 {
 	margin-top : 0;
 	margin-bottom : 0 ;
@@ -424,8 +523,11 @@ b.newsparatitle {
 	font-weight : bold;
 	text-align : center;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3.1.0
 table.largeinfobox {
 	width : 1250px;
 	padding : 0;
@@ -433,26 +535,40 @@ table.largeinfobox {
 	border : #707070 solid 1px;
 	background-color : #FFFEDD  ;
 }
+<<<<<<< HEAD
 
 
 tr.largeinfobox {
 }
 
+=======
+tr.largeinfobox {
+}
+>>>>>>> 3.1.0
 td.largeinfobox {
 	padding : 5px;
 	color : #404040;
 	font-size : 0.8em;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3.1.0
 .largeinfobox ul {
 	list-style-position:inside;
 	list-style-type : square;
 }
+<<<<<<< HEAD
 
 .largeinfobox li {
 	 margin-bottom: 0.5em;
 }
 
+=======
+.largeinfobox li {
+	 margin-bottom: 0.5em;
+}
+>>>>>>> 3.1.0
 .Info {
 	position: relative;
 	max-width: 1000px;

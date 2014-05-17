@@ -48,6 +48,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<<<<<<< HEAD
     <script LANGUAGE="javascript" type="text/javascript" src="scripts/jsDate.js"></script>
     <script LANGUAGE="javascript" SRC="scripts/json2.js"> </script>
     <script LANGUAGE="javascript" SRC="scripts/calendrier.js"> </script>
@@ -56,6 +57,14 @@
     <link rel=STYLESHEET type="text/css" href="stylesheets/common.css" >
     <link rel=STYLESHEET type="text/css" href="stylesheets/maindiv.css" >
     <link rel=STYLESHEET type="text/css" href="stylesheets/stylecalend.css" >
+=======
+    <script LANGUAGE="javascript" type="text/javascript" SRC="../scripts/jsDate.js"></script>
+    <script LANGUAGE="javascript" SRC="../scripts/json2.js"> </script>
+    <script LANGUAGE="javascript" SRC="../scripts/calendrier.js"> </script>
+    <script LANGUAGE="javascript" SRC="../scripts/parsedate.js"> </script>
+    <script LANGUAGE="javascript" SRC="../scripts/asemon_report.js"> </script>
+    <link rel=STYLESHEET type="text/css" href="../stylesheets/asebox.css" >
+>>>>>>> 3.1.0
 
 <title>Asemon Report - Asemon Parameters </title>
 
@@ -73,7 +82,11 @@
 
   <!--?php
   $displaylevel=1;
+<<<<<<< HEAD
   include ("asemon_search_panel.php");
+=======
+  include ("compare_search_panel.php");
+>>>>>>> 3.1.0
   ?-->
 
 <div class="boxinmain" style="min-width:600px">

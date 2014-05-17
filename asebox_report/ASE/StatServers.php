@@ -50,8 +50,15 @@ setStatMainTableSize(0);
 <div class="boxinmain" style="min-width:600px">
 
 <div class="boxtop">
+<<<<<<< HEAD
   <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
   <div class="title"  style="width:75%" ><?php echo $Title ?></div>
+=======
+  <img src="images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
+  <div style="float:left; position: relative; top: 3px;"><?php include './export/export-table.php' ?></div>
+  <div class="title"  style="width:75%" ><?php echo $Title ?></div>
+  <img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px"/>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -119,7 +126,11 @@ setStatMainTableSize(0);
             else
                  $parite="pair";
             ?>
+<<<<<<< HEAD
             <tr class="statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';"  >
+=======
+            <tr class="statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';"   onclick="javascript:setSrv( '<?php echo trim($row["SrvType"])?>', '<?php echo trim($row["SrvName"])?>')">
+>>>>>>> 3.1.0
 
             <?php
                         $cpt=1-$cpt;

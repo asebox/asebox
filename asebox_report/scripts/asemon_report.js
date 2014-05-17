@@ -318,9 +318,22 @@ function connect() {
  document.inputparam.ArchiveDatabase.length = 0
  
  document.inputparam.SrvType.value = "ASE"
+<<<<<<< HEAD
  document.inputparam.ServerName.value = ""
  document.inputparam.StartTimestamp.value = ""
  document.inputparam.EndTimestamp.value = ""
+=======
+ 
+ document.inputparam.ServerName.length = 0
+ document.inputparam.ServerName_temp.length = 0 
+ 
+ document.inputparam.ServerName.value = ""
+ document.inputparam.StartTimestamp.value = ""
+ document.inputparam.EndTimestamp.value = ""
+ document.inputparam.ServerName2.value = ""
+ document.inputparam.StartTimestamp2.value = ""
+ document.inputparam.EndTimestamp2.value = ""
+>>>>>>> 3.1.0
  document.inputparam.submit()
 }
 

@@ -1,9 +1,25 @@
 <?php
 
+<<<<<<< HEAD
         $query="";
         if ($ArchSrvType=="Adaptive Server Enterprise") {
         	$query = "set forceplan on ";   
         }
+=======
+        $result = sybase_query("if @@trancount > 0 commit",$pid);
+        $result = sybase_query("if object_id('#cnxA') is not null drop table #cnxA",$pid);
+        $result = sybase_query("if object_id('#stmt') is not null drop table #stmt",$pid);
+        $result = sybase_query("if object_id('#block') is not null drop table #block",$pid);
+        
+        if ($orderPrc=="") {
+        	$orderPrc="A.Spid";
+    	}
+
+        $query="";
+        //if ($ArchSrvType=="Adaptive Server Enterprise") {
+        //	$query = "set forceplan on ";   
+        //}
+>>>>>>> 3.1.0
 
         if ($dbid_tmp_pages_exists == 1 ) {
         	$dbid_tmp_pages_clause=", Tempdb_id=max(tempdbid), Maxtmp_pages=max(A.tmp_pages)";
@@ -70,10 +86,17 @@ from ".$ServerName."_StmtStat stat
 where  StartTime > @dt
 group by SPID
 
+<<<<<<< HEAD
 update #cnxA
    set StmtID = stat.StmtID
 from   #stmt stat
 where  #cnxA.Spid = stat.SPID
+=======
+--update #cnxA
+--   set StmtID = stat.StmtID
+--from   #stmt stat
+--where  #cnxA.Spid = stat.SPID
+>>>>>>> 3.1.0
 
 ------------------------------------------------------------------------------------------------------------------------
 --blockages
@@ -86,16 +109,28 @@ from ".$ServerName."_BlockedP
 where  Timestamp = @max_ts_block
 select @rowcount = @@rowcount
 
+<<<<<<< HEAD
 update #cnxA
    set blockingSpid = b.blockingSpid
 from   #block b
 where  #cnxA.Spid = b.blockedSpid
+=======
+--update #cnxA
+--   set blockingSpid = b.blockingSpid
+--from   #block b
+--where  #cnxA.Spid = b.blockedSpid
+>>>>>>> 3.1.0
 
 ------------------------------------------------------------------------------------------------------------------------
 --set rowcount 50
 	select 
+<<<<<<< HEAD
 	  Loggedindt=convert(varchar,A.Loggedindatetime,109),
 	  A.Spid,
+=======
+	  Spid = A.Spid,
+	  Loggedindt=convert(varchar,A.Loggedindatetime,109),
+>>>>>>> 3.1.0
 	  UserName,
 	  program_name, 
 	  CPUTm=convert(numeric(16,0),case when CPUTime <1500000000  then CPUTime else 0 end), 
@@ -137,11 +172,16 @@ where  #cnxA.Spid = b.blockedSpid
 	  --".
 	  $dbid_tmp_pages_clause."
 	from #cnxA A
+<<<<<<< HEAD
 	order by ".$orderPrc."
 	drop table #cnxA
 	drop table #stmt
 	drop table #block
 	";
+=======
+	order by ".$orderPrc." ";
+	
+>>>>>>> 3.1.0
 
 /*  ".$dbid_tmp_page_filter_clause."
 	group by A.Loggedindatetime, A.Spid, UserName, program_name, ipaddr, hostname, hostprocess, clientname, clienthostname, clientapplname, execlass
@@ -151,9 +191,15 @@ where  #cnxA.Spid = b.blockedSpid
 
 
 
+<<<<<<< HEAD
         if ($ArchSrvType=="Adaptive Server Enterprise") {
         	$query = $query . "set forceplan off ";
         }
+=======
+//        if ($ArchSrvType=="Adaptive Server Enterprise") {
+//        	$query = $query . "set forceplan off ";
+//        }
+>>>>>>> 3.1.0
 
   $query_name = "process_statistics";
 

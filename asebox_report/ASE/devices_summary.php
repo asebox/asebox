@@ -41,7 +41,11 @@ function getDeviceDetail(Device)
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title" style="width:65%"><?php echo  $Title ?></div>
+<<<<<<< HEAD
 <a   href="http://github.com/asebox/asebox?title=AseRep_ASEDevices" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Device help" TITLE="Device help"  /> </a>
+=======
+<a   href="http://github.com/asebox/asebox/ASE-Devices-Summary" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Device help" TITLE="Device help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">

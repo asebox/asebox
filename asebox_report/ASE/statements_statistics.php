@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
         $param_list=array(
                 'orderStmt',
@@ -40,6 +41,48 @@
         $support157=0;
 
     include $rootDir.'/ASE/sql/sql_stmt_statistics.php';
+=======
+$param_list=array(
+        'orderStmt',
+        'rowcnt',
+        'ExclHost',
+        'ObjectDbName',
+        'ObjectName',
+        'IndexID',
+        'ExclApp',
+
+        'filterStmtID',
+        'filterDebut',
+        'filterSPID',
+        'filterDBID',
+        'filterApplication',
+        'filterClientHost',
+        'filterProcName',
+        'filterLineNumber',
+        'filterPlanID',
+        'filterBatchID',
+        'filterContextID',
+        'filterClientName',
+        'filterClientHostName',
+        'filterClientApplName'
+);
+foreach ($param_list as $param)
+@$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+
+if ( !isset($orderStmt) )  $orderStmt="stat.StmtID";
+if ( !isset($rowcnt) )     $rowcnt=200;
+
+// Check if table xxxx_StmtStat supports 15.7
+$query = "select cnt=count(*) from syscolumns where id =object_id('".$ServerName."_StmtStat') and name in ('ClientName', 'ClientHostName', 'ClientApplName')";
+$result = sybase_query($query,$pid);
+$row = sybase_fetch_array($result);
+if ($row["cnt"] == 3)
+    $support157=1;
+else
+    $support157=0;
+
+include $rootDir.'/ASE/sql/sql_stmt_statistics.php';
+>>>>>>> 3.1.0
 ?>
 
 <script type="text/javascript">
@@ -61,11 +104,17 @@
 <CENTER>
 <div class="boxinmain" style="float:none;min-width:1000px;">
 <div class="boxtop">
+<<<<<<< HEAD
 <img src="<?php echo $HomeUrl; ?>/images/boxtop-corner-left.jpg" style="float:left;margin:0px"/>
 <div style="float:left; position: relative; top: 3px;"><?php include $rootDir.'/export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
 <img src="<?php echo $HomeUrl; ?>/images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
 <!--a   href="http://sourceforge.net/apps/mediawiki/asemon?title=AseRep_ASEStmt" TARGET="_blank"> <img class="help" SRC="<?php echo $HomeUrl; ?>/images/Help-circle-blue-32.png" ALT="Statement help" TITLE="Statement help"  /> </a-->
+=======
+<div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
+<div class="title"><?php echo $Title ?></div>
+<a href="http://github.com/asebox/asebox/ASE-Statement-Statistics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="LogsHold help" TITLE="LogsHold help"> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
@@ -107,10 +156,17 @@
       <td  class="statTabletitle"> DBID </td>
       <td  class="statTabletitle"> Application </td>
       <td  class="statTabletitle"> Client Host </td>
+<<<<<<< HEAD
       <td  class="statTabletitle"> Proc </td>
       <td  class="statTabletitle"> Line </td>
       <td  class="statTabletitle"> CpuTime_ms </td>
       <td  class="statTabletitle"> WaitTime_ms </td>
+=======
+      <td  class="statTabletitle"> Procedure </td>
+      <td  class="statTabletitle"> Line </td>
+      <td  class="statTabletitle"> Cpu(ms)</td>
+      <td  class="statTabletitle"> Wait(ms)</td>
+>>>>>>> 3.1.0
       <td  class="statTabletitle"> MemUsageKB </td>
       <td  class="statTabletitle"> PReads </td>
       <td  class="statTabletitle"> LReads </td>
@@ -155,14 +211,23 @@
         <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderStmt"  VALUE="ClientApplName"    <?php if ($orderStmt=="ClientApplName")    echo "CHECKED";  ?> > </td>
       <?php } ?>
     </tr>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 3.1.0
     <tr>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterStmtID"  SIZE="3"   value="<?php if( isset($filterStmtID) ){ echo $filterStmtID ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterDebut"  value="<?php if( isset($filterDebut) ){ echo $filterDebut ; } ?>" > </td>
       <td> </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterSPID"  SIZE="3"  value="<?php if( isset($filterSPID) ){ echo $filterSPID ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterDBID"  SIZE="3"  value="<?php if( isset($filterDBID) ){ echo $filterDBID ; } ?>" > </td>
+<<<<<<< HEAD
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterApplication"  value="<?php if( isset($filterApplication) ){ echo $filterApplication ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterClientHost"  value="<?php if( isset($filterClientHost) ){ echo $filterClientHost ; } ?>" > </td>
+=======
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterApplication" size="10"   value="<?php if( isset($filterApplication) ){ echo $filterApplication ; } ?>" > </td>
+      <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterClientHost"  size="8" value="<?php if( isset($filterClientHost) ){ echo $filterClientHost ; } ?>" > </td>
+>>>>>>> 3.1.0
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterProcName"  value="<?php if( isset($filterProcName) ){ echo $filterProcName ; } ?>" > </td>
       <td  class="statTableBtn"> <INPUT TYPE=text NAME="filterLineNumber"  SIZE="3"  value="<?php if( isset($filterLineNumber) ){ echo $filterLineNumber ; } ?>" > </td>
       <td> </td>
@@ -216,6 +281,7 @@
 
                         $cpt=1-$cpt;
 ?>
+<<<<<<< HEAD
     <td class="statTablePtr"> <?php echo $row["StmtID"] ?> </td>
     <td class="statTablePtr" NOWRAP> <?php echo $row["Debut"] ?>  </td>
     <td class="statTablePtr"> <?php echo number_format($row["Elapsed_s"]) ?>  </td>
@@ -233,6 +299,26 @@
     <td class="statTablePtr"> <?php echo number_format($row["PagesModified"]) ?>  </td>
     <td class="statTablePtr"> <?php echo number_format($row["PacketsSent"]) ?>  </td>
     <!--<td class="statTable"> <?php echo $row["PacketsReceived"] ?>  </td>-->
+=======
+
+    <td class="statTablePtr">               <?php echo $row["StmtID"] ?> </td>
+    <td class="statTablePtr" NOWRAP>        <?php echo $row["Debut"] ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["Elapsed_s"]) ?>  </td>
+    <td class="statTablePtr">               <?php echo $row["SPID"] ?>  </td>
+    <td class="statTablePtr">               <?php echo $row["DBID"] ?>  </td>
+    <td class="statTablePtr" NOWRAP>        <?php echo $row["Application"] ?>  </td>
+    <td class="statTablePtr" NOWRAP>        <?php echo $row["ClientHost"] ?>  </td>
+    <td class="statTablePtr" NOWRAP>        <?php echo $row["ProcName"] ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo $row["LineNumber"] ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["CpuTime"]) ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["WaitTime"]) ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["MemUsageKB"]) ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["PhysicalReads"]) ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["LogicalReads"]) ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["PagesModified"]) ?>  </td>
+    <td class="statTablePtr" align="right"> <?php echo number_format($row["PacketsSent"]) ?>  </td>
+<!--<td class="statTable"> <?php echo $row["PacketsReceived"] ?>  </td>-->
+>>>>>>> 3.1.0
     <td class="statTablePtr"> <?php echo $row["planOK"] ?>  </td>
     <td class="statTablePtr"> <?php echo $row["PlanID"] ?>  </td>
     <td class="statTablePtr"> <?php echo $row["BatchID"] ?>  </td>

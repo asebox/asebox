@@ -7,9 +7,13 @@
     <script LANGUAGE="javascript" SRC="../scripts/calendrier.js"> </script>
     <script LANGUAGE="javascript" SRC="../scripts/parsedate.js"> </script>
     <script LANGUAGE="javascript" SRC="../scripts/asemon_report.js"> </script>
+<<<<<<< HEAD
     <link rel=STYLESHEET type="text/css" href="../stylesheets/common.css" >
     <link rel=STYLESHEET type="text/css" href="../stylesheets/maindiv.css" >
     <link rel=STYLESHEET type="text/css" href="../stylesheets/stylecalend.css" >
+=======
+    <link rel=STYLESHEET type="text/css" href="../stylesheets/asebox.css" >
+>>>>>>> 3.1.0
 
     <?php
     // Retreive session context

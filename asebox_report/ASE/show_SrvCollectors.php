@@ -80,8 +80,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
+<<<<<<< HEAD
     <link rel=STYLESHEET type="text/css" href="stylesheets/common.css" >
     <link rel=STYLESHEET type="text/css" href="stylesheets/maindiv.css" >
+=======
+    <link rel=STYLESHEET type="text/css" href="../stylesheets/asebox.css" >
+>>>>>>> 3.1.0
 </head>
 
 <body>

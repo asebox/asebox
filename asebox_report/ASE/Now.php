@@ -1,6 +1,11 @@
 <?php
 
+<<<<<<< HEAD
   if ( isset($_POST['showsys'     ]) ) $showsys=$_POST['showsys'];      else $showsys="NO";
+=======
+  if ( isset($_POST['selectedTimestamp']) ) $selectedTimestamp=$_POST['selectedTimestamp'];   else $selectedTimestamp="";
+  if ( isset($_POST['showsys'          ]) ) $showsys=$_POST['showsys'];      else $showsys="NO";
+>>>>>>> 3.1.0
 
        $query = "select cnt=count(*)
                  from ".$ServerName."_Engines          
@@ -21,6 +26,7 @@
          	?>
 
 
+<<<<<<< HEAD
         <?php
         //====================================================================================================
         // Who
@@ -30,6 +36,26 @@
         echo "</P>";
         ?>
 
+=======
+    
+        <?php
+        //====================================================================================================
+        // Who
+                  $Title = "Running";
+                  $order_by = "A.Spid";
+                  $orderPrc = "A.Spid";
+                  include ("now_statistics.php");
+        ?>
+
+       <?php
+        //====================================================================================================
+        // LogsHold
+                  $Title = "syslogshold";
+                  include ("now_syslogshold.php");
+        ?>
+
+
+>>>>>>> 3.1.0
         <?php
         //====================================================================================================
         // Graphs
@@ -43,6 +69,7 @@
 	        <img src='<?php echo "./ASE/graph_now_LocksUsage.php?ARContextJSON=".urlencode($ARContextJSON); ?> '>
 	      </DIV>
 
+<<<<<<< HEAD
         <?php
         //====================================================================================================
         // LogsHold
@@ -52,6 +79,9 @@
         echo "</P>";
         ?>
 
+=======
+ 
+>>>>>>> 3.1.0
         <?php
         //====================================================================================================
         // Summary Statistics

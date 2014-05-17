@@ -8,7 +8,11 @@
     if ( isset($_POST['selectedTimestamp']) ) $selectedTimestamp=$_POST['selectedTimestamp'];   else $selectedTimestamp="";
     if ( isset($_POST['showsys'          ]) ) $showsys=$_POST['showsys'];      else $showsys="no";
   
+<<<<<<< HEAD
     if ( isset($_POST['orderPrc'              ]) ) $orderPrc=              $_POST['orderPrc'];               else $orderPrc=$order_by;
+=======
+    //if ( isset($_POST['orderPrc'              ]) ) $orderPrc=              $_POST['orderPrc'];               else $orderPrc=$order_by;
+>>>>>>> 3.1.0
     if ( isset($_POST['rowcnt'                ]) ) $rowcnt=                $_POST['rowcnt'];                 else $rowcnt=200;
     if ( isset($_POST['filterspid'            ]) ) $filterspid=            $_POST['filterspid'];             else $filterspid="";
     if ( isset($_POST['filterusername'        ]) ) $filterusername=        $_POST['filterusername'];         else $filterusername="";
@@ -29,10 +33,17 @@
 var WindowObjectReference; // global variable
 setStatMainTableSize(0);
 
+<<<<<<< HEAD
 function getPrcDetail(Loggedindatetime,Spid,StartTimestamp,EndTimestamp)
 {
   ARContextJSON = document.inputparam.ARContextJSON.value;
   WindowObjectReference = window.open("./ASE/process_detail.php?Loggedindatetime="+Loggedindatetime+"&Spid="+Spid+"&StartTimestamp="+StartTimestamp+"&EndTimestamp="+EndTimestamp+"&ARContextJSON="+ARContextJSON+"#top",
+=======
+function getPrcDetail2(Loggedindatetime,Spid,StartTimestamp,EndTimestamp)
+{
+  ARContextJSON = document.inputparam.ARContextJSON.value;
+  WindowObjectReference = window.open("./ASE/process_detail.php?Spid="+Spid+"&Loggedindatetime="+Loggedindatetime+"&Spid="+Spid+"&StartTimestamp="+StartTimestamp+"&EndTimestamp="+EndTimestamp+"&ARContextJSON="+ARContextJSON+"#top",
+>>>>>>> 3.1.0
     "_blank");
   WindowObjectReference.focus();
 }
@@ -162,7 +173,11 @@ function getRepartProg()
 <div class="title"><?php echo $Title." (".$selectedTimestamp.")"?></div>
 
 <img src="images/boxtop-corner-right.jpg" style="float:right;margin:0px;"/>
+<<<<<<< HEAD
 <a   href="http://sourceforge.net/apps/mediawiki/asemon?title=AseRep_Process" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Process help" TITLE="Process help"  /> </a>
+=======
+<a   href="http://github.com/asebox/asebox/ASE-Statement-Statistics" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Process help" TITLE="Process help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent" >
@@ -300,7 +315,11 @@ else
       <td class="statTabletitle" > MaxLocksHeld                 </td>
     </tr>
     <tr>  
+<<<<<<< HEAD
       <td  class="statTableBtn" max-width=10 width=10 style="width=10 min-width=10 max-width=20"> <INPUT max-width=10 width=10 style="width=10 min-width=10 max-width=20" TYPE=radio NAME="orderPrc"  VALUE="A.Spid              " <?php if ($orderPrc=="A.Spid              ") echo "CHECKED"; ?> > </td>
+=======
+      <td  class="statTableBtn" max-width=10 width=10 style="width=10 min-width=10 max-width=20"> <INPUT max-width=10 width=10 style="width=10 min-width=10 max-width=20" TYPE=radio NAME="orderPrc"  VALUE="A.Spid" <?php if ($orderPrc=="A.Spid") echo "CHECKED"; ?> > </td>
+>>>>>>> 3.1.0
       <td  class="statTableBtn" style="min-width=50 max-width=800"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="UserName            " <?php if ($orderPrc=="UserName            ") echo "CHECKED"; ?> > </td>
       <td  class="statTableBtn" style="min-width=50 max-width=200"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="program_name        " <?php if ($orderPrc=="program_name        ") echo "CHECKED"; ?> > </td>
       <td  class="statTableBtn"> <INPUT TYPE=radio NAME="orderPrc"  VALUE="clientapplname      " <?php if ($orderPrc=="clientapplname      ") echo "CHECKED"; ?> > </td>              
@@ -400,8 +419,15 @@ else
 
 <?php
 
+<<<<<<< HEAD
 //echo "QUERY"; 
 //echo $query;  
+=======
+//echo "<br>";
+//echo "QUERY"; 
+//echo $query;  
+//echo "<br>";
+>>>>>>> 3.1.0
 		if ($rowcnt=0) {
         $rowcnt=200;
 	    }
@@ -446,7 +472,11 @@ else
             else
                  $parite="pair";
             ?>
+<<<<<<< HEAD
             <tr class="statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';" Onclick='javascript:getPrcDetail("<?php echo $row["Loggedindt"]?>","<?php echo $row["Spid"]?>","<?php echo $StartTimestamp?>","<?php echo $EndTimestamp?>" )' >
+=======
+            <tr class="statTable<?php echo $parite; ?>" onMouseOut="this.className='statTable<?php echo $parite; ?>';" onMouseOver="this.className='<?php echo $parite; ?>onMouseOver';" Onclick='javascript:getPrcDetail2("<?php echo $row["Loggedindt"]?>","<?php echo $row["Spid"]?>","<?php echo $StartTimestamp?>","<?php echo $EndTimestamp?>" )' >
+>>>>>>> 3.1.0
             <?php
             $cpt=1-$cpt;
 ?>

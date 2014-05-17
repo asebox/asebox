@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
     $param_list=array(
         'orderPrc',
@@ -26,6 +27,33 @@
     exit();
   }
 
+=======
+$param_list=array(
+    'orderPrc',
+    'rowcnt',
+    'groupByName'
+);
+foreach ($param_list as $param)
+    @$$param=${"_$_SERVER[REQUEST_METHOD]"}[$param];
+ 
+if ( isset($_POST['orderSpinlock'])) $orderSpinlock=$_POST['orderSpinlock']; else $orderSpinlock="5 DESC";
+if ( isset($_POST['filterName'            ]) ) $filterName=            $_POST['filterName'];             else $filterName="";
+
+if ( isset($_POST['rowcnt'])  ) $rowcnt=  $_POST['rowcnt'];   else $rowcnt=200;
+if ( isset($_POST['groupByName'])  ) $groupByName=  $_POST['groupByName'];   else $groupByName="Name";
+
+
+// Check if SysMon table exist
+$query = "select cnt=count(*) 
+          from sysobjects 
+          where name in ( '".$ServerName."_SysMon')";   
+$result = sybase_query($query,$pid);
+$row = sybase_fetch_array($result);
+if ($row["cnt"] < 1) {
+     echo "Spinlock data is not available. The sysmon collector has not been activated for server ".$ServerName.".<P> (Add SysMon.xml, SysMonFld.xml, SysDev.xml, SysCaches.xml and SysConf.xml in the asemon_logger config file)";
+  exit();
+}
+>>>>>>> 3.1.0
 
   // check if it is the new version (better compression of fldname, Interval col no longer needed, new row with grpname='Z' and field_id=0 contains Interval value)
   $query = "if exists (select 1 from ".$ServerName."_SysMon
@@ -40,8 +68,11 @@
       include ("sql/sql_spinlock_statistics.php");
   else 
       include ("sql/sql_spinlock_statistics_oldversion.php");
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3.1.0
 ?>      
 
 <script language="JavaScript">
@@ -75,7 +106,11 @@ function setGroupByName() {
 <div class="boxtop">
 <div style="float:left; position: relative; top: 3px; left: 6px"><?php include './export/export-table.php' ?></div>
 <div class="title"><?php echo  $Title ?></div>
+<<<<<<< HEAD
 <a   href="http://github.com/asebox/asebox?title=AseRep_Spinlocks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Spinlocks help" TITLE="Spinlocks help"  /> </a>
+=======
+<a   href="http://github.com/asebox/asebox/ASE-Spinlocks" TARGET="_blank"> <img class="help" SRC="images/Help-circle-blue-32.png" ALT="Spinlocks help" TITLE="Spinlocks help"  /> </a>
+>>>>>>> 3.1.0
 </div>
 
 <div class="boxcontent">
