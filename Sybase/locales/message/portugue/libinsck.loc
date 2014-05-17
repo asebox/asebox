@@ -1,0 +1,64 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=portuguese
+
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc. \
+Todos os direitos reservados.\
+O uso, duplicação ou revelação por parte do Governo dos Estados Unidos\
+estão sujeitos às restrições estabelecidas nos subparágrafos do FAR\
+subparágrafo (c) (1) (ii) sobre os Direitos dos Dados \
+Técnicos e Software para Computador - CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA "
+
+[libinsck]
+
+1 = IPDE_SETSCKPROC, "Impossível definir o ID do processo do sinal do soquete - errno %1!"
+
+2 = IPDE_SETSCKBLK, "Impossível definir o soquete para não-lock - errno %1!"
+
+3 = IPDE_INSUFFDS, "File Descriptions insuficientes - errno %1!"
+
+4 = IPDE_CLOSEFAIL, "Falha de fechamento do soquete - errno %1!"
+
+5 = IPDE_PARSEFAIL, "Falha na análise da informação de endereço "
+
+6 = IPDE_NORESOLVE, "Impossível resolver nome do host - errno %1!"
+
+7 = IPDE_CONNECTFAIL, "Falha de conexão do soquete - errno %1!"
+
+8 = IPDE_SCKOPTFAIL, "Falha de definição das opções do soquete - errno %1!"
+
+9 = IPDE_BINDFAIL, "Falha de vínculo do soquete - errno %1!"
+
+10 = IPDE_LISTENFAIL, "Falha de listen do soquete - errno %1!"
+
+11 = IPDE_RECVFAIL, "Falha de recep do soquete - errno %1!"
+
+12 = IPDE_OOBREADFAIL, "Falha de recep fora-da-faixa do soquete - errno %1!"
+
+13 = IPDE_UNSUP, "Chamada de operação não suportada do driver "
+
+14 = IPDE_SOCKFAIL, "Falha de criação de novo soquete - errno %1!"
+
+15 = IPDE_SENDFAIL, "Falha de envio pelo soquete - errno %1!"
+
+16 = IPDE_GETOPTFAIL, "Falha de obtenção das opções do soquete - errno %1!"
+
+; end of insock error strings
+;

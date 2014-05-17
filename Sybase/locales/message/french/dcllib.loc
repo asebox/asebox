@@ -1,0 +1,347 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=french
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "Classe d'objet incorrecte."
+
+2 = IFACEE_BADOBJ, "Objet incorrect."
+
+3 = IFACEE_OPEN, "Echec de l'ouverture du fichier d'interface."
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "Impossible de trouver le nom du serveur demandé."
+
+6 = IFACEE_DICTSYNTAX, "Syntaxe incorrecte dans le fichier d'interface."
+
+7 = IFACEE_MALLOC, "Erreur d'allocation mémoire."
+
+8 = IFACEE_CLOSE, "Echec de la tentative de fermeture du fichier d'interface."
+
+9 = IFACEE_ENTNOTSUPPORTED, "Le point d'entrée du gestionnaire demandé n'est pas pris en charge."
+
+10 = IFACEE_PROPNOTSUPPORTED, "La propriété demandée n'est pas prise en charge."
+
+11 = IFACEE_INVALID_HANDLE, "Gestionnaire incorrect."
+
+12 = IFACEE_INVALIDARG, "Argument incorrect transmis à l'api du gestionnaire."
+
+13 = IFACEE_CANTMODIFY, "Section du serveur ou fichier d'interface non modifiable."
+
+14 = IFACEE_WRITEFAIL, "Erreur d'écriture du fichier d'interface."
+
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "Erreur renvoyée par le fournisseur de services."
+
+2 = DCLE_INITED, "DCL déjà initialisée."
+
+3 = DCLE_MEMALLOC, "Echec de la tentative d'allocation de mémoire."
+
+4 = DCLE_MUTXALLOC, "Echec de la tentative d'allocation de mutex."
+
+5 = DCLE_RMAN, "Erreur d'interface du gestionnaire de requêtes."
+
+6 = DCLE_LMAN, "Erreur d'interface du gestionnaire de listes."
+
+7 = DCLE_VERSION, "Version de DCL-Library incorrecte."
+
+8 = DCLE_PROPCMD, "Commande de propriété indiquée incorrecte."
+
+9 = DCLE_PROPERTY, "Propriété indiquée incorrecte."
+
+10 = DCLE_OPEN, "Echec de l'ouverture du gestionnaire indiqué."
+
+11 = DCLE_LOAD, "Echec de chargement du gestionnaire indiqué."
+
+12 = DCLE_INTLHOME, "Impossible de déterminer la variable $SYBASE."
+
+13 = DCLE_INTLOPEN, "Impossible d'ouvrir le fichier de configuration."
+
+14 = DCLE_INTLNOENT, "Impossible de trouver l'entrée DCL dans le fichier de configuration."
+
+15 = DCLE_FATAL, "Erreur interne fatale."
+
+16 = DCLE_FAILOVER, "Retour à la sauvegarde lors de la dernière commande."
+
+17 = DCLE_SESSBOUND, "La session est actuellement liée."
+
+18 = DCLE_SESSUBOUND, "La session n'est actuellement pas liée."
+
+19 = DCLE_PROPOF, "Buffer de propriétés en overflow"
+
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "Erreur d'allocation mémoire."
+
+2 = REGE_INVALID_HANDLE, "Gestionnaire incorrect."
+
+3 = REGE_ENTNOTSUPPORTED, "Le point d'entrée du gestionnaire demandé n'est pas pris en charge."
+
+4 = REGE_OPEN_KEY, "Echec de l'ouverture d'une clé de registre."
+
+5 = REGE_NO_VALUE, "Aucun attribut dans la clé de registre."
+
+6 = REGE_ADDRSYNTAX, "Erreur de syntaxe dans la chaîne d'adresse."
+
+7 = REGE_TYPENOTSUPPORTED, "Type de valeur incorrect."
+
+8 = REGE_ENUMKEY, "Echec de l'énumération d'une sous-clé."
+
+9 = REGE_PROPCMD, "Commande de propriété indiquée incorrecte."
+
+10 = REGE_PROP_READONLY, "Impossible de définir/vider une propriété en lecture seule."
+
+11 = REGE_INVALID_ARG, "Argument incorrect."
+
+12 = REGE_CREATE_KEY, "Echec de la création d'une clé."
+
+13 = REGE_ENTRY_EXIST, "La clé de registre existe déjà."
+
+14 = REGE_INVALID_OID, "OID incorrect."
+
+15 = REGE_INVALID_ATTR_VALUE, "Valeur d'attribut incorrecte."
+
+16 = REGE_CREATE_VALUE, "Echec de la définition d'une valeur."
+
+17 = REGE_DELETE_KEY, "Echec de la suppression d'une clé."
+
+18 = REGE_MOD_ADDATTR, "Echec de l'ajout d'un attribut."
+
+19 = REGE_MOD_ADDVALUE, "Echec de l'ajout d'une valeur d'attribut."
+
+20 = REGE_MOD_REMOVEATTR, "Echec de la suppression d'un attribut."
+
+21 = REGE_MOD_REMOVEVALUE, "Echec de la suppression d'une valeur d'attribut."
+
+22 = REGE_READ_VALUE, "Echec de la lecture d'un attribut depuis l'objet."
+
+23 = REGE_PROPNOTSUPPORTED, "Propriété indiquée incorrecte."
+
+24 = REGE_INVALID_VALUENAME, "Aucun OID pour le nom de cette valeur."
+
+25 = REGE_MODIFY, "Echec de la modification d'une entrée."
+
+26 = REGE_ENUMVALUE, "Echec de l'énumération d'une valeur."
+
+27 = REGE_CONNECT_REMOTE, "Echec de la connexion à un registre distant."
+
+28 = REGE_PROPLEN, "Longueur de propriété incorrecte."
+
+29 = REGE_INVALID_INITSTR, "Chaîne d'initialisation incorrecte."
+
+[dcedrv]
+
+1 = DCEE_BADCLASS, "Classe d'objet incorrect."
+
+2 = DCEE_BADOBJ, "Objet incorrect."
+
+3 = DCEE_OPEN, "Echec de l'ouverture de session pour le service de répertoires DCE."
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "Impossible de trouver le nom du serveur demandé."
+
+6 = DCEE_DICTSYNTAX, "Syntaxe incorrecte dans le service de répertoires."
+
+7 = DCEE_MALLOC, "Erreur d'allocation mémoire."
+
+8 = DCEE_CLOSE, "Echec de la tentative de fermeture de la session du service de répertoires DCE."
+
+9 = DCEE_ENTNOTSUPPORTED, "Le point d'entrée du gestionnaire demandé n'est pas pris en charge."
+
+10 = DCEE_PROPNOTSUPPORTED, "La propriété demandée n'est pas prise en charge."
+
+11 = DCEE_INVALID_HANDLE, "Gestionnaire incorrect."
+
+12 = DCEE_BIND, "Echec de la liaison de la session de répertoire DCE."
+
+13 = DCEE_UNBIND, "Echec de l'annulation de la liaison de la session de répertoire DCE."
+
+14 = DCEE_WORKSPACE, "Echec de l'initialisation de l'espace de travail."
+
+15 = DCEE_OMGET, "Echec de DCE omget()."
+
+16 = DCEE_CONTEXT, "Echec de l'allocation de contexte DCE."
+ 
+17 = DCEE_PROPCMD, "Commande de propriété indiquée incorrecte."
+ 
+18 = DCEE_INVALIDARG, "Arguments incorrects."
+ 
+19 = DCEE_INITSTR, "Chaîne d'initialisation incorrecte."
+ 
+20 = DCEE_INVALNAME, "Syntaxe du nom incorrecte."
+ 
+21 = DCEE_CELLNAME, "Erreur lors de la recherche du nom de cellule DCE."
+ 
+22 = DCEE_DITBASE, "ditbase incorrecte."
+ 
+23 = DCEE_SEARCH, "Valeur incorrecte pour le niveau de recherche."
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "Echec d'allocation de mémoire par le pilote LDAP."
+
+2 = E_LOAD, "Echec de chargement du fournisseur LDAP API par le pilote LDAP."
+
+3 = E_VERSION, "Version LDAP API chargée incorrecte"
+
+4 = E_URLPARSE, "Echec de l'analyse de l'URL par le pilote LDAP."
+
+5 = E_INTERRUPTED, "Détection par le pilote LDAP d'un appel système interrompu inattendu."
+
+6 = E_INTERNAL, "Erreur interne (pilote LDAP)."
+
+7 = E_NOTFOUND, "Le pilote LDAP n'a pas réussi à trouver l'entrée."
+
+8 = E_PROPS, "Le pilote LDAP n'a pas réussi à trouver/définir les propriétés."
+
+9 = E__INIT, "Erreur du pilote LDAP dans ldap_init()."
+
+10 = E_BIND, "Erreur du pilote LDAP dans ldap_bind_s()."
+
+11 = E_UNBIND, "Erreur du pilote LDAP dans ldap_unbind_s()."
+
+12 = E_SEARCH, "Erreur du pilote LDAP dans ldap_search_s()."
+
+13 = E_ADDMOD, "Le pilote LDAP n'a pas réussi à ajouter/modifier l'entrée."
+
+14 = E_DELETE, "Le pilote LDAP n'a pas réussi à supprimer l'entrée."
+
+15 = E_PERM, "L'opération demandée n'est pas autorisée."
+
+; End of ldap error strings. 
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "Classe d'objet incorrecte."
+
+2 = NDS_EBADOBJ, "Objet incorrect."
+
+3 = NDS_EOPEN, "Echec de l'ouverture de session pour le service de répertoires NDS."
+
+4 = NDS_ELASTENTRY, "Dernière entrée dépassée."
+
+5 = NDS_ESRVNAMNOTFND, "Impossible de trouver le nom du serveur demandé."
+
+6 = NDS_EDICTSYNTAX, "Syntaxe incorrecte dans le service de répertoires."
+
+7 = NDS_EMALLOC, "Erreur d'allocation mémoire."
+
+8 = NDS_ECLOSE, "Echec de la tentative de fermeture de la session du service de répertoires NDS."
+
+9 = NDS_EENTNOTSUPPORTED, "Le point d'entrée du gestionnaire demandé n'est pas pris en charge."
+
+10 = NDS_EPROPNOTSUPPORTED, "La propriété demandée n'est pas prise en charge."
+
+11 = NDS_EINVALID_HANDLE, "Gestionnaire incorrect."
+
+12 = NDS_EBIND, "Echec de la liaison au service de répertoires NDS."
+
+14 = NDS_EUNBIND, "Echec de l'annulation de liaison au service de répertoires NDS."
+
+15 = NDS_EREAD, "Echec de la lecture depuis le service de répertoires NDS."
+
+16 = NDS_EADDOBJ, "Echec de l'ajout d'un objet au service de répertoires NDS."
+
+17 = NDS_EPROPCMD, "Action incorrecte sur la propriété."
+
+18 = NDS_EINVALIDARG, "Argument incorrect."
+
+19 = NDS_ENDSINIT, "Echec de l'initialisation du buffer NDS."
+
+20 = NDS_EDELOBJ, "Echec de la suppression d'un objet dans le service de répertoires NDS."
+
+21 = NDS_EMODOBJ, "Echec de la modification d'un objet dans le service de répertoires NDS."
+
+22 = NDS_ESEARCH, "Echec de la recherche d'un objet dans le service de répertoires NDS."
+
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "Erreur d'allocation mémoire."
+
+2 = BANE_INVALID_HANDLE, "Gestionnaire incorrect."
+
+3 = BANE_SRVNAMNOTFND, "Impossible de trouver le nom du serveur demandé."
+
+4 = BANE_NO_VALUE, "Aucun attribut trouvé dans l'objet indiqué."
+
+5 = BANE_ADDRSYNTAX, "Erreur de syntaxe dans la chaîne d'adresse."
+
+6 = BANE_TYPENOTSUPPORTED, "Type de valeur incorrect."
+
+7 = BANE_ENUMKEY, "Echec de l'énumération d'une sous-clé."
+
+8 = BANE_PROPCMD, "Commande de propriété indiquée incorrecte."
+
+9 = BANE_PROP_READONLY, "Impossible de définir/vider une propriété en lecture seule."
+
+10 = BANE_INVALID_ARG, "Argument incorrect."
+
+11 = BANE_INVALID_NAME, "Nom d'objet incorrect."
+
+12 = BANE_ENTRY_EXIST, "Cet objet existe."
+
+13 = BANE_INVALID_OID, "ID d'objet incorrect."
+
+14 = BANE_INVALID_ATTR_VALUE, "Valeur d'attribut incorrecte."
+
+15 = BANE_CREATE_VALUE, "Echec de la définition d'une valeur d'attribut pour l'objet."
+
+16 = BANE_MOD_ADDATTR, "Echec de l'ajout d'un attribut."
+
+17 = BANE_MOD_REMOVEATTR, "Echec de la suppression d'un attribut."
+
+18 = BANE_READ_VALUE, "Echec de la lecture de l'attribut depuis l'objet."
+
+19 = BANE_STARTSESS, "Echec de l'ouverture d'une session StreetTalk ou STDA."
+
+20 = BANE_ENDSESS, "Echec de la fermeture d'une session StreetTalk ou STDA."
+
+21 = BANE_DELETE_ENTRY, "Echec de la suppression d'un objet."
+
+22 = BANE_INITSTR, "Chaîne d'initialisation incorrecte."
+
+23 = BANE_NO_ENTRY, "Cet objet n'existe pas."
+
+; end Banyan DSA driver error message
+;
+

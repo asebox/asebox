@@ -1,0 +1,68 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=11.5
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=korean
+
+[copyright]
+copyright =  "저작권 (C) 1990, 2001 Sybase, Inc.\
+모든 저작권은 본사 소유입니다. \
+미 연방 정부에 의한 사용, 복제 또는 공개는 \
+CFR 52.227-7013의 Rights in Technical Data and \
+Computer Software 절에 있는 (c) (1) (ii) 항목에 \
+명시된 규정을 따릅니다. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "끝점의 연결을 끊을 수 없습니다 - 오류는 %1!입니다."
+
+2 = IPDE_ACCEPT, "새 연결을 받아들이는 동안 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+3 = IPDE_EPCLOSE, "끝점을 닫을 수 없습니다 - 오류는 %1!입니다."
+
+4 = IPDE_PARSE, "연결 정보에 잘못된 구문이 있습니다."
+
+5 = IPDE_EPCONNECT, "서버에 연결할 수 없습니다 - 오류는 %1!입니다."
+
+6 = IPDE_EPMODE, "파이프의 모드를 바꿀 수 없습니다 - 오류는 %1!입니다."
+
+7 = IPDE_EVENTOBJ, "이벤트 객체를 만들 수 없습니다 - 오류는 %1!입니다."
+
+8 = IPDE_NPCREATE, "지명 파이프(named pipe)를 만들 수 없습니다 - 오류는 %1!입니다."
+
+9 = IPDE_READ, "지명 파이프(named pipe)에서 읽을 수 없습니다 - 오류는 %1!입니다."
+
+10 = IPDE_WRITE, "지명 파이프(named pipe)에 쓸 수 없습니다 - 오류는 %1!입니다."
+
+11 = IPDE_READOOB, "OOB 데이터를 읽는 동안 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+12 = IPDE_SOCKET, "소켓을 만들 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+13 = IPDE_HOSTNAME, "호스트 이름을 해석할 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+14 = IPDE_EPBIND, "로컬 주소에 바인드할 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+15 = IPDE_EPLISTEN, "청취 지점(listening point)을 만들 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+16 = IPDE_DRVINIT, "드라이버를 초기화할 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+17 = IPDE_DRVINIT, "소켓 선택 항목을 가져올 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+18 = IPDE_DRVINIT, "소켓 선택 항목을 설정할 때 오류가 발생하였습니다 - 오류는 %1!입니다."
+
+
+; end of insock error strings
+;
+

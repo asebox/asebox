@@ -1,0 +1,332 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "Security Driver Level error."
+
+2 = SCLE_INITED, "SCL already initialized."
+
+3 = SCLE_MEMALLOC, "Attempt to allocate memory failed."
+
+4 = SCLE_MUTXALLOC, "Attempt to allocate mutex failed."
+
+5 = SCLE_RMAN, "Error in the RMAN API."
+
+6 = SCLE_LMAN, "Error in the LMAN API."
+
+7 = SCLE_VERSION, "Invalid SCL-Library version."
+
+8 = SCLE_PROPCMD, "Invalid property command specified."
+
+9 = SCLE_PROPERTY, "Invalid property specified."
+
+10 = SCLE_PROP_RO, "Read-only property."
+
+11 = SCLE_PROP_OF, "Property Buffer overflow."
+
+12 = SCLE_OPEN, "Unable to open security driver."
+
+13 = SCLE_LOAD, "Unable to load the security driver."
+
+14 = SCLE_INTLHOME, "Unable to determine SYBASE home directory."
+
+15 = SCLE_INTLOPEN, "Unable to open configuration file."
+
+16 = SCLE_INTLNOENT, "Unable to find SCL entry in configuration file."
+
+18 = SCLE_DRVLOAD, "Failed to load specified security driver."
+
+19 = SCLE_SESSBOUND, "Session is currently bound."
+
+20 = SCLE_SESSUBOUND, "Session is currently unbound."
+
+21 = SCLE_CREDACT, "Credential is currently in use."
+
+22 = SCLE_CRED_NA, "Credential in not ACTIVE."
+
+23 = SCLE_UNSUPPORT, "The command is not supported."
+
+24 = SCLE_MUTEXLOCK, "Mutex lock call failed."
+
+25 = SCLE_MECHNOTFND, "Specified security mechanism not found."
+
+26 = SCLE_CFGERR, "Configuration file error."
+
+27 = SCLE_CREDUSED, "Credential handle not dropped."
+
+28 = SCLE_DRIVUSED, "Driver has not been closed."
+
+29 = SCLE_MECHUSED, "Security mechanism handle not dropped."
+
+30 = SCLE_MECHOIDNOTFND, "Security mechanism OID not found."
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "Memory allocation failed."
+
+2 = MSSPE_SRVNOTSUPP, "Requested security service is not supported."
+
+3 = MSSPE_PRINCIPAL, "Specified security principal name is unknown or it is not the owner."
+
+4 = MSSPE_PROVIDER, "Security provider not found or provider initialization failed."
+
+5 = MSSPE_INITSTR, "Invalid driver initialization string."
+
+6 = MSSPE_PROPCMD, "Invalid security property command."
+
+7 = MSSPE_PROPNOTSUPP, "Invalid security property name."
+
+8 = MSSPE_CONTEXT, "Bad driver context structure found."
+
+9 = MSSPE_OPNOTSUPP, "Driver entry point not supported."
+
+10 = MSSPE_PROPVALLEN, "Property value buffer length too small."
+
+11 = MSSPE_TOKEN, "Invalid security token."
+
+12 = MSSPE_HANDLE, "Invalid security handle."
+
+13 = MSSPE_NAMETOOLONG, "Mechanism/principal/target name is too long."
+
+14 = MSSPE_PACKAGE, "Specified security package is not supported."
+
+15 = MSSPE_INTERNAL, "Unexpected internal error occurred."
+
+16 = MSSPE_DENIED, "Security session request denied."
+
+17 = MSSPE_RMTNAME, "Security target name not found or invalid."
+
+18 = MSSPE_PROVIDERERR, "Security service provider internal error %1! occurred."
+
+19 = MSSPE_MSGALTERED, "Security message altered - signature verification failed."
+
+20 = MSSPE_MSGSEQ, "An out-of-sequence message encountered."
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "Memory allocation failed."
+
+2 = NDSE_SRVNOTSUPP, "Requested security service is not supported."
+
+3 = NDSE_PRINCIPAL, "Invalid principal name specified."
+
+4 = NDSE_PROVIDER, "NDS security provider is not found or initialization failed."
+
+5 = NDSE_INITSTR, "Invalid initialization string."
+
+6 = NDSE_PROPCMD, "Invalid security property command."
+
+7 = NDSE_PROPNOTSUPP, "Invalid security property name."
+
+8 = NDSE_CONTEXT, "Bad driver context structure specified."
+
+9 = NDSE_OPNOTSUPP, "Specified security driver entry point is not supported."
+
+10 = NDSE_PROPVALLEN, "Property value buffer is very small."
+
+11 = NDSE_DITBASE, "Invalid DIT base specified."
+
+12 = NDSE_VERNOTSUPP, "Specified version is not supported by the driver."
+
+13 = NDSE_CREDS, "Invalid credentials or credential usage type."
+
+14 = NDSE_INITDITBASE, "Invalid init DIT base."
+
+15 = NDSE_NAMETOOLONG, "NDS principal name is too long."
+
+16 = NDSE_NWCALLSINIT, "NetWare routine NWCallsInit() failed (%1!)."
+
+17 = NDSE_NWDSCCTX, "NetWare routine NWDSCreateContext() failed (%1!)."
+
+18 = NDSE_INIT, "NDS init failed (%1!)."
+
+19 = NDSE_NDS, "NDS call failed (%1!)."
+
+20 = NDSE_RMTNAME, "Security target name is not found or invalid."
+
+21 = NDSE_CHANNELID, "Specified channel identifier is not found or invalid."
+
+22 = NDSE_BIND, "Security session bind failed."
+
+23 = NDSE_PROVIDERVER, "NDS security provider version mismatch."
+
+24 = NDSE_NWDSTREE, "Invalid directory tree name specified."
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "Memory allocation failed."
+
+2 = DCEE_SRVNOTSUPP, "Requested security service is not supported."
+
+3 = DCEE_PRINCIPAL, "Specified security principal name is unknown or it is not the owner."
+
+4 = DCEE_BUFOF, "Property value buffer overflow error."
+
+5 = DCEE_INITSTR, "Invalid driver initialization string."
+
+6 = DCEE_PROPCMD, "Invalid security property command."
+
+7 = DCEE_PROPNOTSUPP, "Invalid security property name."
+
+8 = DCEE_CONTEXT, "Bad driver context structure found (minor status %1!)."
+
+9 = DCEE_OPNOTSUPP, "Driver entry point not supported."
+
+10 = DCEE_PROPVALLEN, "Property value buffer length too small."
+
+11 = DCEE_TOKEN, "Invalid security token (minor status %1!)."
+
+12 = DCEE_HANDLE, "Invalid security handle."
+
+13 = DCEE_NAMETOOLONG, "Mechanism/principal/target name is too long."
+
+14 = DCEE_CHKSIGN, "Signature verification failed (minor status %1!)."
+
+15 = DCEE_INTERNAL, "Unexpected internal error occurred."
+
+16 = DCEE_DENIED, "Security session request denied (minor status %1!)."
+
+17 = DCEE_RMTNAME, "Security target name is not found or invalid (minor status %1!)."
+
+18 = DCEE_PROVIDERERR, "Security service provider internal error %1! occurred."
+
+19 = DCEE_MSGALTERED, "Security message altered - signature verification failed."
+
+20 = DCEE_MSGSEQ, "An out-of-sequence message encountered (minor status %1!)."
+
+21 = DCEE_BADNAMETYPE, "Invalid security name type found (minor status %1!)."
+
+22 = DCEE_BADCHANBIND, "Invalid/mismatched channel bindings found (minor status %1!)."
+
+23 = DCEE_CREDEXPIRED, "The referenced credentials have expired (minor status %1!)."
+
+24 = DCEE_BADCRED, "Consistency checks performed on the credential failed (minor status %1!)."
+
+25 = DCEE_OLDTOKEN, "Specified security token is too old to be used (minor status %1!)."
+
+26 = DCEE_DUPTOKEN, "Specified security token is already processed (minor status %1!)."
+
+27 = DCEE_CTXTEXPIRED, "The security context has already expired (minor status %1!)."
+
+28 = DCEE_BADNAME, "An invalid security name was passed in (minor status %1!)."
+
+29 = DCEE_REGIDENTITY, "Routine to register context acceptor's identity failed (minor status %1!)."
+
+30 = DCEE_BADMECH, "Specified mechanism is not supported or unavailable (minor status %1!)."
+
+31 = DCEE_BADBUF, "Invalid security buffer found (minor status %1!)."
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "Memory allocation failed."
+
+2 = KRBE_SRVNOTSUPP, "Requested security service is not supported."
+
+3 = KRBE_PRINCIPAL, "Specified security principal name is unknown or it is not the owner."
+
+4 = KRBE_BUFOF, "Property value buffer overflow error."
+
+5 = KRBE_INITSTR, "Invalid driver initialization string."
+
+6 = KRBE_PROPCMD, "Invalid security property command."
+
+7 = KRBE_PROPNOTSUPP, "Invalid security property name."
+
+8 = KRBE_CONTEXT, "Bad driver context structure found (minor status %1!)."
+
+9 = KRBE_OPNOTSUPP, "Driver entry point not supported."
+
+10 = KRBE_PROPVALLEN, "Property value buffer length too small."
+
+11 = KRBE_TOKEN, "Invalid security token (minor status %1!)."
+
+12 = KRBE_HANDLE, "Invalid security handle."
+
+13 = KRBE_NAMETOOLONG, "Mechanism/principal/target name is too long."
+
+14 = KRBE_CHKSIGN, "Signature verification failed (minor status %1!)."
+
+15 = KRBE_INTERNAL, "Unexpected internal error occurred."
+
+16 = KRBE_DENIED, "Security session request denied (minor status %1!)."
+
+17 = KRBE_RMTNAME, "Security target name is not found or invalid (minor status %1!)."
+
+18 = KRBE_PROVIDERERR, "Security service provider internal error %1! occurred."
+
+19 = KRBE_MSGALTERED, "Security message altered - signature verification failed."
+
+20 = KRBE_MSGSEQ, "An out-of-sequence message encountered (minor status %1!)."
+
+21 = KRBE_BADNAMETYPE, "Invalid security name type found (minor status %1!)."
+
+22 = KRBE_BADCHANBIND, "Invalid/mismatched channel bindings found (minor status %1!)."
+
+23 = KRBE_CREDEXPIRED, "The referenced credentials have expired (minor status %1!)."
+
+24 = KRBE_BADCRED, "Consistency checks performed on the credential failed (minor status %1!)."
+
+25 = KRBE_OLDTOKEN, "Specified security token is too old to be used (minor status %1!)."
+
+26 = KRBE_DUPTOKEN, "Specified security token is already processed (minor status %1!)."
+
+27 = KRBE_CTXTEXPIRED, "The security context has already expired (minor status %1!)."
+
+28 = KRBE_BADNAME, "An invalid security name was passed in (minor status %1!)."
+
+29 = KRBE_REGIDENTITY, "Routine to register context acceptor's identity failed (minor status %1!)."
+
+30 = KRBE_BADMECH, "Specified mechanism is not supported or unavailable (minor status %1!)."
+
+31 = KRBE_BADBUF, "Invalid security buffer found (minor status %1!)."
+
+; end of CyberSAFE Kerberos driver error strings
+;
+

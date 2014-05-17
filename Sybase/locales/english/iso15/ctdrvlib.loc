@@ -1,0 +1,125 @@
+; Sccsid @(#) ctdrvlib.loc 1.2 10/7/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1992 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "unable to allocate memory."
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "general error"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, "ctdrv layer"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "user error"
+
+2 = E_ORG_INTRN, "internal CTDRV-Library error"
+
+3 = E_ORG_CT, "CT library error"
+
+4 = E_ORG_ASYNC, "async manager error"
+
+5 = E_ORG_COM, "common library error"
+
+6 = E_ORG_MEM, "memory management error"
+
+7 = E_ORG_SS, "SQL Server error"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, "ctdrv okay"
+
+1 = CTDRVE_MEM_F, "Memory failure in CtDrv routine."
+
+2 = CTDRVE_CTF, "Failed in CtDrv routine  when CT_Lib routine %1! called."
+
+3 = CTDRVE_APIF, "Failed in CtDrv routine when %1! called."
+
+4 = CTDRVE_NOCURSOR, "There is no cursor on this statement handle."
+
+5 = CTDRVE_TRUNCATE, "Entire data could not be returned. %1! truncated."
+
+6 = CTDRVE_DUPCUR, "There is already a cursor named %1!."
+
+7 = CTDRVE_LENCUR, "Cursor name must not exceed %1! characters."
+
+8 = CTDRVE_SEQ, "Function is being called out of sequence."
+
+9 = CTDRVE_ODBCTYPE, "Cannot map the input CT_LIB datatype to an ODBC datatype."
+
+10 = CTDRVE_CTTYPE, "Cannot map the input ODBC datatype to a CT_LIB datatype."
+
+11 = CTDRVE_CTDATYPE, "%1! : cannot find ct_lib datatype."
+
+12 = CTDRVE_ASYNC, "Function out of sequence: another function executing asynchronously."
+
+13 = CTDRVE_BUFF, "Failed in CtDrv routine when allocating SQL buffer."
+
+14 = CTDRVE_SUBF, "Failed in CtDrv routine when doing SQL substitutions."
+
+15 = CTDRVE_STMTNM, "Failed in CtDrv routine when making Statement name."
+
+16 = CTDRVE_CURNM, "Failed in CtDrv routine when making Cursor name."
+
+17 = CTDRVE_RESROW, "Failed in CtDrv routine when getting row results for %1! and %2!."
+
+18 = CTDRVE_RESDCF, "Failed in CtDrv routine when getting results %1!."
+
+19 = CTDRVE_APIF2, "Failed in CtDrv routine when internal function %1! called."
+
+20 = CTDRVE_APIF3, "Failed in internal function %1! when CT_LIB routine %2! called."
+
+21 = CTDRVE_PARF, "Failed in CtDrv routine when doing SQL parsing."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+

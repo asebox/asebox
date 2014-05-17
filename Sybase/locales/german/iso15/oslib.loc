@@ -1,0 +1,787 @@
+; comment character is semicolon.
+
+; "oslib.loc" - Localization file for Open Server
+;
+; Sccsid @(#) oslib.loc 1.4 12/3/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Open Server Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[oserrors]
+
+0 = SRV_EOPTION, "Unbekannte Option '%1!'"
+
+1 = SRV_ENOPROC, "Keine freien Server-Prozesse"
+
+2 = SRV_ELIVEPROC, "Versuch, Client-Server-Prozež '%1!' mit aktivem E/A zu l÷schen"
+
+3 = SRV_ENOEVENT, "Unbekanntes Ereignis '%1!' f’r Prozež '%2!' angefordert"
+
+4 = SRV_EBADEVENT, "Client-Prozež '%1!' kann Ereignis '%2!' nicht ausl÷sen"
+
+5 = SRV_EBADUEVENT, "Unbekanntes Ereignis '%1!' in %2!"
+
+6 = SRV_EIOBADBUF, "Defekter ›bertragungspuffer, sleft < 0 (%1!)"
+
+7 = SRV_EIOBADTYPE, "Unbekannte E/A-Operation (%1!) in srv__buf_io() angefordert"
+
+8 = SRV_EMEMORY, "Speicherzuweisung f’r '%1!' Byte fehlgeschlagen in '%2!' f’r Zuweisung '%3!'"
+
+9 = SRV_ENOPPROC, "Kann Server-Prozež f’r Prozež '%1!' nicht erstellen"
+
+10 = SRV_EEINITNET, "Initialisierung f’r Netzwerk %1! auf Rechner '%2!' fehlgeschlagen"
+
+11 = SRV_EIFILE, "Falsche Datei interfaces"
+
+12 = SRV_EFOPEN, "Kann %1! Datei '%2!' nicht ÷ffnen"
+
+13 = SRV_ESRVNAME, "Konnte Server-Namen '%1!' in Datei interfaces nicht finden"
+
+14 = SRV_EHOMEDIR, "Konnte Home-Verzeichnis des Benutzers (%1!) nicht finden"
+
+15 = SRV_EPROCTYPE, "Unbekannter Prozež-Typ '%1!' Routine '%2!'"
+
+16 = SRV_ENOMSGS, "Keine freien Meldungen"
+
+17 = SRV_EMSGPROC, "%1! Prozež '%2!' f’r Meldung von Prozež '%3!' ist nicht zugewiesen"
+
+18 = SRV_EMSGADDRESS, "Falsche Meldung %1! Prozež '%2!' f’r Meldung von Prozež '%3!'"
+
+19 = SRV_EMSGTYPE, "Falscher Meldungstyp von %1! empfangen"
+
+20 = SRV_EBADIOEVENT, "Falscher Ereignistyp '%1!' von srv__runnet() f’r Client '%2!'"
+
+21 = SRV_EIOERROR, "E/A-Fehler '%1!' (%2!) f’r Client-Prozež '%3!'"
+
+22 = SRV_EQPROC, "Falsche Server-Prozežkennung '%1!' in %2!"
+
+23 = SRV_EQFREE, "Keine freien Strukturen zum Starten der Warteschlange"
+
+24 = SRV_ESRVEVENT, "Meldung vom Typ Kein-Ereignis von Client-Prozež spid %1! empfangen"
+
+25 = SRV_ECLNTMSG, "Unbekannter Meldungstyp '%1!' in %2!"
+
+26 = SRV_ESOCKET, "Kann Listen-Socket nicht erstellen"
+
+27 = SRV_EBIND, "Kann Socket nicht verkn’pfen"
+
+28 = SRV_EGETHOST, "Kann Host '%1!' nicht finden"
+
+29 = SRV_ELISTEN, "Kein Netzwerk-Listener konnte gestartet werden"
+
+30 = SRV_ECNTSOCKET, "Kann Client-Socket nicht verbinden"
+
+31 = SRV_EPROCDEAD, "Server-Prozež '%1!' ist in '%2!' nicht aktiv"
+
+32 = SRV_EBADINDEX, "Falscher STRCHR (%1!) an '%2!' ’bergeben"
+
+33 = SRV_ENOCONVERT, "Kann Typ '%1!' nicht nach '%2!' konvertieren"
+
+34 = SRV_EMAXNAME, "%1!-Namen d’rfen nicht l„nger als %2! Byte sein (%3! angegeben)"
+
+35 = SRV_ECUFLOW, "Konvertierung von Typ '%1!' nach Typ '%2!' f’hrte zu einem Unterlauf"
+
+36 = SRV_ECOFLOW, "Konvertierung von Typ '%1!' nach Typ '%2!' f’hrte zu einem ›berlauf"
+
+37 = SRV_ECBINOFLOW, "Konvertierung in eine Bin„r-Variable f’hrte zu einem ›berlauf"
+
+38 = SRV_ECPREC, "Bei Konvertierung von Typ '%1!' nach Typ '%2!' gingen Nachkommastellen verloren"
+
+39 = SRV_ECSYNTAX, "Konvertierung von Typ '%1!' nach Typ '%2!' wurde von einem Syntaxfehler im Quellfeld gestoppt"
+
+40 = SRV_EBADLEN, "Ung’ltige L„nge %1! der ganzzahligen Spalte. G’ltige Werte sind 1, 2 und 4 Byte"
+
+41 = SRV_EUVDT, "Unbekannter Datentyp variabler L„nge %1! gefunden"
+
+42 = SRV_EUFDT, "Unbekannter Datentyp fester L„nge %1! gefunden"
+
+43 = SRV_ENOROWDESC, "Es wurde versucht, eine Zeile ohne Zeilenbeschreibung zu senden"
+
+44 = SRV_ENOTYPE, "Der %1!-Datentyp '%2!' ist kein bekannter Datentyp"
+
+45 = SRV_ENOITEM, "%1!: Keine Datenelemente f’r %2! vorhanden"
+
+46 = SRV_ESTATSTATE, "%1!: Zustandsfehler bei Ergebnis: %2! wurde bereits an Client gesendet"
+
+47 = SRV_ENOTRACE, "Trace-Flag (%1!) nicht vorhanden"
+
+48 = SRV_ENORPC, "Augenblicklich kein entfernter Prozeduraufruf aktiv"
+
+49 = SRV_ENOITEMNO, "%1!: Kein Datenelement #%2! f’r %3! vorhanden"
+
+50 = SRV_ENORETPARAM, "RPC-Parameter #%1! ist kein R’ckgabe-Parameter"
+
+51 = SRV_EBADPARMLEN, "Ung’ltige L„nge '%1!' f’r Typ '%2!'"
+
+52 = SRV_EBADPARAMMAXLEN, "Tats„chliche L„nge '%1!' kann nicht gr÷žer als Maximall„nge '%2!' sein"
+
+53 = SRV_ESYMBOL, "Unbekannte(r) %1! '%2!' an srv_symbol() ’bergeben"
+
+54 = SRV_ESRVTYPE, "Server-Feld (%1!) nicht vorhanden"
+
+55 = SRV_ESRVPROCTYPE, "Server-Prozežfeld (%1!) nicht vorhanden"
+
+56 = SRV_ENULLPTR, "NULL %1!-Zeiger an %2! ’bergeben"
+
+57 = SRV_ETDSVERSION, "TDS unterer Ebene -- Versuch, Status zu senden, ENVCHANGE oder Parameter ignoriert"
+
+58 = SRV_EOOB, "ATTENTION/OOB-Steuerprogramm f’r Netzwerk konnte nicht installiert werden -- schwerer Fehler"
+
+59 = SRV_ENO_OOB, "TCP-Select hat festgestellt, daž keine Sockets SIGURG gesendet haben -- SIGURG ignoriert"
+
+60 = SRV_ESIGURG_SETUP, "Einrichten von SIGURG f’r TCP-Socket fehlgeschlagen wegen Bedingung %1!"
+
+61 = SRV_ENOTSITE, "Thread %1! ist kein Knoten-Steuerprogramm. Typ = %2!, Funktion = %3!"
+
+62 = SRV_EBADCONFIGOPT, "Falscher Konfigurations-Optionswert (%1!) f’r Option %2!"
+
+63 = SRV_EOBJSYNTAX, "Syntaxfehler bei Objektnamen. Verwenden Sie knoten.db.eigent’mer.objekt;1"
+
+64 = SRV_ENETTERM, "Beenden des Netzwerks ist fehlgeschlagen"
+
+65 = SRV_EBADSTATUS, "%1!: Ung’ltiger Status - %2!"
+
+66 = SRV_ERETVALRPC, "Der aktuelle Client-Befehl ist ein RPC -- Verwenden Sie srv__paramset(), um Parameter zur’ckzuliefern"
+
+67 = SRV_EBADTYPELEN, "Ung’ltige L„nge (%1!) f’r Datentyp '%2!'"
+
+68 = SRV_EPROCFREE, "Es wurde versucht, einen Thread zu l÷schen, der augenblicklich frei ist"
+
+69 = SRV_EINVCHAN, "Lesemeldung f’r einen ung’ltigen Kanal in %1!"
+
+70 = SRV_ENOLOGFILE, "Keine Server-Logdatei offen"
+
+71 = SRV_ECOLNUMBER, "Spaltennummer muž gr÷žer als %1! sein"
+
+72 = SRV_EDUPITEM,  "%1!: Element-Nr. '%2!' wurde bereits beschrieben"
+
+73 = SRV_EINCDESC, "Beschreibung f’r %1! ist unvollst„ndig: %2! f’r %3!"
+
+74 = SRV_EMAXUEVENT, "Die eingerichtete maximale Anzahl von Benutzer-Ereignissen (%1!) wurde bereits definiert"
+
+75 = SRV_EEVENTTYPE, "Falscher Ereignistyp (%1!)"
+
+76 = SRV_EINATTN, "Kann %1! aus einem Attention-Steuerprogramm nicht aufrufen"
+
+77 = SRV_EINCONNECT, "Kann %1! aus einem SRV_CONNECT-Steuerprogramm nicht aufrufen"
+
+78 = SRV_EBLOCKREAD, "Lesesperre von Knoten-Steuerprogramm '%1!' empfangen"
+
+79 = SRV_ESIGIO, "Konnte E/A-INTERRUPT-Steuerprogramm f’r Netzwerk nicht installieren -- Schwerer Fehler"
+
+80 = SRV_EDEFQFULL, "Verz÷gerte Wakeup-Warteschlange ist voll. Vergr÷žern Sie sie ’ber die Server-Funktion SRV_S_DEFQUEUESIZE"
+
+81 = SRV_EFLAGIGN, "Warnung: %1! f’r Signal %2! ignoriert, da von Sybase installiertes Steuerprogramm f’r dieses Signal existiert"
+
+82 = SRV_ESIGSUPERCEDE, "Das Signal-Steuerprogramm f’r %1! wird von einem von Sybase installierten Steuerprogramm f’r dasselbe Signal ausgef’hrt"
+
+83 = SRV_EDEFUNUSED, "Nicht verwendete Fehlerdefinition"
+
+84 = SRV_EBADPROCTYPE, "Unbekannter Aufgabentyp %1! in %2! beim L÷schen des Servers"
+
+85 = SRV_EDNAALLFAIL, "Konnte keinen Speicher f’r Netzwerk-Steuerstruktur f’r DECNET zuweisen"
+
+86 = SRV_EDNACRELSNMBX, "Erstellen der Mailbox f’r DECNET-Listener fehlgeschlagen"
+
+87 = SRV_EDNANETASSIGN, "Zuordnen an _NET f’r DECNET fehlgeschlagen. Kann Netzwerk nicht starten"
+
+88 = SRV_EDNADUPOBJ, "Anschlužname %1! wird bereits f’r DECNET verwendet. Kann Netzwerk nicht starten"
+
+89 = SRV_EDNADECLARE, "Declare-Objekt f’r Objekt %1! fehlgeschlagen f’r DECNET. Kann Netzwerk nicht starten"
+
+90 = SRV_EDNALISTEN, "Lesen f’r listen on DECNET ist fehlgeschlagen"
+
+91 = SRV_EDNAASSIGN, "Konnte keinen neuen Kanal f’r eine Client-Verbindung zuordnen"
+
+92 = SRV_EDNAACCESS, "Neue Client-Verbindung konnte nicht abgeschlossen werden"
+
+93 = SRV_EDNANOLINK, "Keine Eingaben in der Verkn’pfungstabelle f’r Client verf’gbar"
+
+94 = SRV_ENOTSERVICE, "Es wird versucht, den Nicht-Service-Prozež %1! zu l÷schen"
+
+95 = SRV_EEVENTNOSERVICE, "Es wird versucht, ein nicht vom Benutzer definiertes Ereignis von Prozež %1! an Service-Prozež %2! zu senden"
+
+96 = SRV_EDEFHANDLER, "Fehlerverarbeitung verz÷gerte Ereignishinweis f’r Prozež %1!"
+
+97 = SRV_ERPCINCONSIST, "RPC-Parameter m’ssen alle entweder mit Namen oder mit Angabe der Position ’bergeben werden"
+
+98 = SRV_ECHANSETUP, "Das Einrichten eines Unterkanals schlug fehl, da kein Prozežzugewiesen werden konnte"
+
+99 = SRV_ENOSCHEDPROC, "Konnte Thread f’r den Scheduler nicht erstellen"
+
+100 = SRV_EDEFERFAIL, "Fehler bei verz÷gertem Interrupt-Steuerprogramm der Meldungswarteschlange in srv__rundef(), Status = %1!"
+
+101 = SRV_EDEFERINVMSG, "Ung’ltige Meldung von verz÷gertem Interrupt-Steuerprogramm in srv__rundef() empfangen. Typ = %1!, von = %2!"
+
+102 = SRV_EINVEVENT, "Ung’ltiger Ereignistyp von einem Knoten-Steuerprogramm empfangen"
+
+103 = SRV_EINVSTACK, "Ung’ltige Stack-Gr÷že (%1!) an srv_spawn() ’bergeben"
+
+104 = SRV_ESTACKALLOC, "Kann Stack, Gr÷že %1!, f’r neuen Thread nicht zuweisen"
+
+105 = SRV_EINVPRIORITY, "Ung’ltige Priorit„t, %1!, an %2! ’bergeben. G’ltige Priorit„ten sind im Bereich %3! bis %4!"
+
+106 = SRV_EALLOCFAIL, "Speicher f’r freie Prozež-Warteschlange konnten nicht zugewiesen werden"
+
+107 = SRV_ENOPRACK, "Kann Meldung f’r Protokollbest„tigung nicht zuweisen"
+
+108 = SRV_ENULLPARAM, "%1! wurde mit einem NULL %2!-Parameter aufgerufen"
+
+109 = SRV_EPMSTAT, "%1! kann nur aufgerufen werden, nachdem %2! erfolgreich zur’ckgeliefert wurde"
+
+110 = SRV_EBADPARAM, "%1! wurde mit einem falschen %2!-Parameter aufgerufen"
+
+111 = SRV_EPNOTCLIENT, "SRV_PROC an %1! ’bergeben, ist kein Client-Thread"
+
+112 = SRV_EOBJNAME, "Ung’ltiger Objektname in %1! entdeckt"
+
+113 = SRV_EOBJID, "Ung’ltige Objektkennung in %1! entdeckt"
+
+114 = SRV_ELOCKMODE, "Ung’ltiger Sperrmodus in %1! entdeckt"
+
+115 = SRV_ENOSPAWN, "Konnte Thread nicht starten"
+
+116 = SRV_EINRESTART, "Es wurde versucht, Thread %1!, der nicht gestoppt wurde, erneut zu starten"
+
+117 = SRV_EINSTOP, "Es wurde versucht, Thread %1!, der gerade ausgef’hrt wurde, zu stoppen"
+
+118 = SRV_ENOTOWNER, "Es wurde versucht, einen Mutex zu entsperren, der nicht Thread %1! geh÷rt"
+
+119 = SRV_EPRNUM, "Zu viele Parameter f’r Prozedur %1! empfangen"
+
+120 = SRV_EPARAMNAME, "Name f’r Parameter %1! f’r Prozedur %2! muž angegeben werden, sobald Namen f’r andere Parameter verwendet wurden"
+
+121 = SRV_EPTYPE, "Falschen Datentyp f’r Parameter %1! f’r Prozedur %2! erhalten"
+
+122 = SRV_EPUNREGNOPROC, "Es wurde versucht, Registrierung f’r unbekannte Prozedur %1! aufzuheben"
+
+123 = SRV_EPROCNOTREG, "Es wurde versucht, Prozedur %1! auszuf’hren, die nicht registriert war"
+
+124 = SRV_EPEXISTS, "Kann %1! %2! nicht erstellen, da es bereits vorhanden ist"
+
+125 = SRV_EPNOPROC, "Benachrichtigung f’r unbekannte Prozedur %1! angefordert"
+
+126 = SRV_EPNONOTICEREQ, "Client hat keine Benachrichtigungsanforderung f’r Prozedur %1!"
+
+127 = SRV_EPNOSRVPROC, "Konnte SRV_PROC nicht zuweisen, um System-Prozeduren zu registrieren"
+
+128 = SRV_EBUFFSIZE, "Puffergr÷že reicht nicht aus, um %1! Wert in Prozedur %2! zu speichern"
+
+129 = SRV_EPNOPROCEX, "Kann Benachrichtigungsanforderung f’r Prozedur %1! nicht abbrechen, da diese Prozedur nicht existiert"
+
+130 = SRV_ENEEDPARAM, "Prozedur %1! erwartet Parameter %2!, der nicht bereitgestellt wurde"
+
+131 = SRV_EUNKNOWNPARAM, "Der benannte Parameter %1! ist f’r die registrierte Prozedur %2! nicht vorhanden"
+
+132 = SRV_ENOLANG, "Kein aktiver Sprachbefehl vorhanden"
+
+133 = SRV_EMAXCONNECT, "Konfiguration von %1! Verbindungen wurde ’berschritten. Verbindung wurde zur’ckgewiesen"
+
+134 = SRV_EPCALLBACK, "Callback-Routine f’r %1! hat die aktuelle Operation abgebrochen"
+
+135 = SRV_EMAXPARAM, "Die maximale Parameteranzahl f’r Prozedur %1! wurde bereits definiert"
+
+136 = SRV_EBADFLAG, "Ein falscher Flag-Wert wurde der Routine %1! ’bergeben"
+
+137 = SRV_EMAXREMSITES, "Die maximale Anzahl von Knoten-Steuerprogrammen (%1!) wurde ’berschritten"
+
+138 = SRV_EPNOTIFYEXISTS, "Dieser Client hat bereits eine Benachrichtigungsanforderung f’r Prozedur %1!"
+
+139 = SRV_EMAXREMCONNS, "Die maximale Anzahl von entfernten Kan„len (%1!) wurde ’berschritten"
+
+140 = SRV_EMAXRPC, "Maximale Stack-Tiefe f’r RPC-Ausf’hrungen wurde bereits erreicht"
+
+141 = SRV_EPROCNULL, "NULL-Server-Prozež an '%1!' ’bergeben"
+
+142 = SRV_EPROCINVALID, "Server-Prozežadresse 0x%1! nicht im Pool in '%2!'"
+
+143 = SRV_EPROCBOUND, "Server-Prozežadresse 0x%1! liegt auf falscher Grenze in '%2!'"
+
+144 = SRV_EPROCNOTUSED, "Server-Prozež '%1!' wurde in '%2!' nicht zugewiesen"
+
+145 = SRV_EPROCIODEAD, "Server-Prozež '%1!' hat ung’ltige E/A in '%2!'"
+
+146 = SRV_ECONSRVFAIL, "Der Service-Prozež der Verbindung ist fehlgeschlagen"
+
+147 = SRV_ENONETBUF, "Das Zuweisen eines Netzwerkpuffers f’r Thread '%1!' ist fehlgeschlagen"
+
+148 = SRV_ENOTSUPPORTED, "'%1!' ist kein g’ltiger M÷glichkeitswert"
+
+149 = SRV_ECORRUPT, "Schwerer Fehler: Interne Struktur %1! in %2! defekt"
+
+150 = SRV_ELOWSTK, "Es besteht die Gefahr, daž Thread '%1!' den zugewiesenen Stack-Speicher von %2! ’berschreitet"
+
+151 = SRV_EBADSTK, "›berlauf in Thread '%1!' oder dessen Stack wurde besch„digt -- Es wird abgebrochen"
+
+152 = SRV_EIO, "Schwerer Fehler: Fehler w„hrend Netzwerk-E/A entdeckt; Fehler '%1!'"
+
+153 = SRV_EDISC, "Client hat w„hrend eines Netzwerk-Lesevorgangs Verbindung getrennt"
+
+154 = SRV_ENETCLOSE, "Fehler beim Schliežen der Netzwerkverbindung Fehler '%1!'"
+
+155 = SRV_ENODEV, "Schwerer Fehler: Maximale Anzahl von Datei-Deskriptoren ’berschritten"
+
+156 = SRV_ECMD, "Ung’ltiges Befehlsargument (0x%1!)"
+
+157 = SRV_ETYPE, "Ung’ltiges Typargument (0x%1!)"
+
+158 = SRV_EBADCOUNT, "%1!: Ung’ltiger Z„hler (%2!) in CS_DATAFMT"
+
+159 = SRV_EBADSTAT, "%1!: Ung’ltiger Status (0x%2!) in CS_DATAFMT"
+
+160 = SRV_EBADFORMAT, "%1!: Ung’ltiges Format (0x%2!) in CS_DATAFMT"
+
+161 = SRV_ENOMSG, "Muž f’r CS_GET im SRV_MSG-Ereignissteuerprogramm sein"
+
+162 = SRV_ENOBIND, "%1!: Verkn’pfung f’r Elementnummer (%2!) f’r %3! nicht abgeschlossen"
+
+163 = SRV_ETRUNC, "Daten wurden von (%1!) zu (%2!) abgeschnitten"
+
+164 = SRV_ENULLADDR, "Verkn’pfung wurde mit einer NULL-Programmvariablen versucht"
+
+165 = SRV_ESTATE, "%1!: %2! f’r %3! nicht g’ltig"
+
+166 = SRV_ELEN, "%1!: Ung’ltige L„nge f’r Variable; oldvallen(%2!), newvallen(%3!)"
+
+167 = SRV_EDUPROW, "Zeile '%1!' wurde bereits beschrieben"
+
+168 = SRV_ENOROW, "%1!: Keine Compute-Zeile '%2!' f’r aktuellen Thread vorhanden"
+
+169 = SRV_ENOAGG, "%1!: Kein Aggregat-Operator mit Kennung '%2!' vorhanden"
+
+170 = SRV_EDUPTAB, "%1!: Tabelle '%2!' wurde bereits beschrieben"
+
+171 = SRV_ENOTAB, "%1!: Tabelle '%2!' wurde nicht beschrieben"
+
+172 = SRV_EBADROW, "%1!: Falsche Compute-Kennung '%2!'"
+
+173 = SRV_EBADCOMPUTBY, "%1!: Die Liste compute-by stimmt nicht mit der Liste order-by ’berein"
+
+174 = SRV_ENOCOMPUTEBY, "%1!: Keine Liste compute-by in der aktuellen Anweisung"
+
+175 = SRV_EBADNUMBYLIST, "%1!: Falscher Wert '%2!' f’r die Anzahl von compute-by-Spalten"
+
+176 = SRV_ENOORDERBY, "%1!: Keine Liste order-by in der aktuellen Anweisung"
+
+177 = SRV_EBADNUMCOLS, "%1!: Falscher Wert '%2!' f’r die Anzahl von order-by-Spalten"
+
+178 = SRV_EBADTABNUM, "%1!: Falsche Tabellennummer '%2!'"
+
+179 = SRV_EBADNAMELEN, "%1!: Falscher L„ngenwert f’r Namen '%2!'"
+
+180 = SRV_EBADCTRLLEN, "%1!: Falscher L„ngenwert f’r control-format '%2!'"
+
+181 = SRV_ENULLNAME, "%1!: '%2!' Argument darf nicht Null sein"
+
+182 = SRV_EBADTABCOL, "%1!: Spalte '%2!' muž mit einer Tabelle ’ber srv_tabcolname() verkn’pft werden"
+
+183 = SRV_EUNSUPPORTED, "%1!: Nicht unterst’tzte Option (%2!) f’r %3!"
+
+184 = SRV_ENOCHARSET, "Unbekannter Zeichensatz %1! in Funktion '%2!'"
+
+185 = SRV_ECSRFILE, "Falsches Format in csr-Datei '%1!' ('%2!' Zeile)"
+
+186 = SRV_ECHARATTR, "Fehler beim Erstellen der Zeichenattribut-Struktur f’r Zeichensatz '%1!'"
+
+187 = SRV_ENOTHEX, "Hexadezimale Ziffern erwartet. %1! in Funktion %2! erhalten"
+
+188 = SRV_EARG, "Argument %1! %2! in Funktion '%3!' falsch"
+
+189 = SRV_ECSNOCVT, "Konvertierung zwischen Server-Zeichensatz %1!' und Client-Zeichensatz '%2!' nicht m÷glich"
+
+190 = SRV_ECSCVT, "Zeichensatzkonvertierung %1! in '%2!' erfolgt"
+
+191 = SRV_ENORETURN, "Unbekannte R’ckgabe (%1!) in Funktion '%2!'"
+
+192 = SRV_ECSLOGREC, "%1! Zeichensatzkonvertierungs-Fehler in Login-Datensatz"
+
+193 = SRV_ECSMISMATCH, "'%1!' ist nicht '%2!'"
+
+194 = SRV_ECSLOAD, "Kann Definitionsdatei f’r %1! '%2!' nicht laden"
+
+195 = SRV_EBADNULL, "CS_CANBENULL f’r ung’ltigen Datentyp (%1!) gesetzt"
+
+196 = SRV_ECHCONFIG, "Kann Konfigurationsoption %1! nicht nach srv_init() wechseln"
+
+197 = SRV_ELATEORDER, "%1! muž vor srv_alt_header() aufgerufen werden, wenn eine compute-by-Liste vorhanden ist"
+
+198 = SRV_EBADITEM, "Ung’ltige Elementnummer (%1!)"
+
+199 = SRV_ENOTINBULK, "%1!: muž sich im SRV_BULK-Steuerprogramm befinden, um Eigenschaft %2! zu erhalten"
+
+200 = SRV_EBADIOTYPE, "%1!: Ung’ltiger ›bertragungstyp '%2!'"
+
+201 = SRV_EGTONECOL, "%1! kann nur f’r einspaltige Zeilen aufgerufen werden"
+
+202 = SRV_ENONELEFT, "%1!: Nichts f’r %2! vorhanden"
+
+203 = SRV_EWRONGTYPE, "%1!: Spalte muž vom Typ TEXT oder IMAGE sein"
+
+204 = SRV_EBADNUMVAL, "%1!: Falscher Wert %2! f’r Strukturglied '%3!'"
+
+205 = SRV_EDUPPARAM, "%1!: Parameter '%2!' wurde bereits beschrieben"
+
+206 = SRV_ERPCINC, "RPC-Parameterbeschreibung nicht vollst„ndig -- %1! %2! nicht beschrieben"
+
+207 = SRV_EBADROWLEN, "%1!: Eingelesene Zeilen d’rfen %2! Byte nicht ’berschreiten"
+
+208 = SRV_EBADALTCOLTYPE, "%1!: compute row-Spalten d’rfen nicht vom Typ TEXT oder IMAGE sein"
+
+209 = SRV_EIOTYPENOTSET, "%1!: srvp_iotype-Feld von SRV_PROC ist nicht initialisiert"
+
+210 = SRV_EBOUND, "%1!: Spalte %2! sollte nicht verkn’pft sein"
+
+211 = SRV_ETXTLENREAD, "%1!: Text-/Bildl„nge f’r die aktuelle Spalte wurde vom Client bereits gelesen"
+
+212 = SRV_ETXTLENNOTREAD, "%1!: Text-/Bildl„nge f’r die aktuelle Spalte wurde vom Client noch nicht gelesen"
+
+213 = SRV_ENOTIMESTAMP, "Text- oder Bild-Zeitstempel nicht definiert"
+
+214 = SRV_ECSFALLBACK, "Keine Definitionsdatei f’r Zeichensatz verf’gbar -- Zeichensatz des Servers wird auf '%1!' gesetzt"
+
+215 = SRV_ELOGINLEN, "Out-of-range-L„nge (%1!) f’r Login-Feld '%2!'"
+
+216 = SRV_EBADCOLTYPE, "%1! kann Werte f’r TEXT- oder IMAGE-Spalte nicht abfragen"
+
+217 = SRV_ENEEDROW, "%1!: blk_getrow() muž aufgerufen werden, um Zeileninformationen abzufragen"
+
+218 = SRV_ENEEDHANDLE, "%1!: blk_exec() muž aufgerufen werden, um Bulk Copy-Operation zu initialisieren"
+
+219 = SRV_EINTERRUPTED, "Ein Aufruf auf %1! wurde durch ein Attention unterbrochen"
+
+220 = SRV_ESTATUS, "%1!: Ung’ltiges Statusargument (0x%2!)"
+
+221 = SRV_EFLUSH, "%1!: SRV_DONE_FLUSH kann nicht mit SRV_DONE_FINAL gesetzt werden"
+
+222 = SRV_EFLUSHCON, "%1!: SRV_DONE_FLUSH kann nicht von einem SRV_CONNECT-Ereignis aus ausgef’hrt werden"
+
+223 = SRV_EMORE, "%1!: SRV_DONE_MORE kann nicht mit SRV_DONE_FINAL gesetzt werden"
+
+224 = SRV_EMORECON, "%1!: SRV_DONE_MORE kann nicht von einem SRV_CONNECT-Ereignis aus ausgef’hrt werden"
+
+225 = SRV_ECONTEXT, "%1!: Ung’ltiger Kontext"
+
+226 = SRV_EVERSION, "%1!: Ung’ltige Versionsnummer (%1!)"
+
+227 = SRV_EBADTDS, "Unbekannter %1! TDS-Strom von spid %2! empfangen"
+
+228 = SRV_EINOPTION, "%1!: Kann nur im SRV_OPTION-Steuerprogramm aufgerufen werden."
+
+229 = SRV_EWRONGTDSVER, "%1!: Falsche TDS-Version (%2!) in %3!"
+
+230 = SRV_EWRONGOPTCMD, "%1!: Unbekannte Befehlsoption von Client in Funktion %2!"
+
+231 = SRV_EWRONGOPT, "%1!: Unbekannte Option von Client in Funktion %2!"
+
+232 = SRV_ENODATA, "%1!: Keine Daten f’r den aktuellen Token-Strom ’brig"
+
+233 = SRV_ENULLARG, "Argument %1! in Funktion: %2! ist NULL"
+
+234 = SRV_EINUSEREVENT, "Kann %1! im benutzerdefinierten Ereignis-Steuerprogramm nicht aufrufen"
+
+235 = SRV_EBINDARG, "Ung’ltiger Verkn’pfungswert (0x%1!) f’r Spalte (%2!) in Funktion: %3!"
+
+236 = SRV_ESTATECHK, "%1!: Zustandsfehler (0x%2!)"
+
+237 = SRV_ENOVERSION, "%1!: Version nicht mit srv_version gesetzt"
+
+238 = SRV_EBADRESULT, "%1!: Ung’ltiger Ergebnistyp (%2!) f’r Ereignis (%3!)"
+
+239 = SRV_ECONFAIL, "Service-Thread der Verbindung konnte nicht in den Sleep-Modus versetzt werden"
+
+240 = SRV_ENETFUNC, "Net-Library-Routine %1! in %2! fehlgeschlagen"
+
+241 = SRV_EPROCFAIL, "Thread %1! konnte kein neues Ereignis erhalten"
+
+242 = SRV_ECLOSEFAIL, "Schliežen einer Client-Verbindung fehlgeschlagen"
+
+243 = SRV_EREADFAIL, "Leseoperation f’r Prozež %1! fehlgeschlagen"
+
+244 = SRV_EWRITEFAIL, "Schreiboperation f’r Prozež %1! fehlgeschlagen"
+
+245 = SRV_EBLOCK, "Konnte Interrupts nicht sperren"
+
+246 = SRV_EUNBLOCK, "Konnte Interrupts nicht entsperren"
+
+247 = SRV_ECHANNEL, "Knoten-Steuerprogramm spid %1! konnte keinen neuen Kanal einrichten"
+
+248 = SRV_EPOLL, "Fehler in %1! - Datei-Deskriptor %2! ist nicht mehr aktiv"
+
+249 = SRV_EGLOBAL, "%1!: Konnte auf globale Daten der allgemeinen Library nicht zugreifen"
+
+250 = SRV_EIOPOST, "%1!: Konnte Async-Manager nicht ausf’hren"
+
+251 = SRV_EBADLENARG, "%1! hat ung’ltigen L„ngenwert (%2!) in Funktion: %3!"
+
+252 = SRV_EPROCPROPS, "Ung’ltige Thread-Eigenschaft (%1!) in %2!"
+
+253 = SRV_EINSERVTHREAD,"%1!: Eigenschaft %2! nicht f’r Service-Thread g’ltig"
+
+254 = SRV_EFROMDISCONNECT, "%1!: %2! Eigenschaft nur im SRV_DISCONNECT-Handle g’ltig"
+
+255 = SRV_ESMALLBUF, "%1!: Puffergr÷že kleiner (%2!) f’r Eigenschaft %3!"
+
+256 = SRV_ELARGBUF, "%1!: Puffergr÷že darf (%2!) Byte f’r %3! nicht ’berschreiten"
+
+257 = SRV_EFROMCONNECT, "%1!: Sollte im Verbindungs-Steuerprogramm zum Einrichten von Eigenschaft %2! sein"
+
+258 = SRV_EWRONGTDSSET, "%1!: Kann keine TDS-Ebene (%2!) gr÷žer als die aktuelle Ebene (%3!) einstellen"
+
+259 = SRV_EWRONGLANG, "%1!: (%2!) ung’ltig f’r Eigenschaft: %3!"
+
+260 = SRV_ENOPROPSET, "%1!: Eigenschaft - %2! kann nicht gesetzt/gel÷scht werden"
+
+261 = SRV_ESRVPROPS, "Ung’ltige Server-Eigenschaft (%1!) in %2!"
+
+262 = SRV_EPROPCFG, "%1!: Kann Server-Eigenschaft nicht nach srv_init() konfigurieren"
+
+263 = SRV_EBADINTPROP, "%1!: Falscher Wert (%2!) f’r Eigenschaft %3!"
+
+264 = SRV_ECAPMASK, "%1!: Ung’ltige M÷glichkeitsmaske f’r %2!"
+
+265 = SRV_EPROPNOSUPPORT, "%1!: Eigenschaft: %2! wird auf dieser Plattform nicht unterst’tzt"
+
+266 = SRV_ENOPROPCLEAR, "%1!: Eigenschaft: %2! kann nicht gel÷scht werden"
+
+267 = SRV_ENOPROPTDS, "%1!: Eigenschaft - %2! f’r aktuelle TDS-Version (%3!) ung’ltig"
+
+268 = SRV_ENOSERVNAME, "%1!: Kann Eigenschaft %2! nicht vor srv_init erhalten"
+
+269 = SRV_ENOFDONE, "Abschliežendes DONE wurde vom Ereignis-Steuerprogramm nicht gesendet"
+
+270 = SRV_EERROR, "%1!: SRV_DONE_FLUSH kann nicht mit SRV_DONE_ERROR gesetzt werden"
+
+271 = SRV_EENVDB, "Datenbank-Kontext zu '%1!' gewechselt"
+
+272 = SRV_EENVLANG, "Spracheinstellung auf '%1!' ge„ndert"
+
+273 = SRV_EENVCHAR, "Client-Zeichensatzeinstellung auf '%1!' ge„ndert"
+
+274 = SRV_ENOCUR, "%1!: Kein Cursor mit ID %2! oder Namen '%3!' vorhanden"
+
+275 = SRV_ENOCUREVENT, "%1!: Nicht im Ereignis-Steuerprogramm von SRV_CURSOR vorhanden"
+
+276 = SRV_ENOCURPARAMS, "%1!: Keine Cursor-Parameter vorhanden"
+
+277 = SRV_ENOCURPARAM, "%1!: Kein Cursor-Parameter %2! vorhanden"
+
+278 = SRV_ENOCURUPCOLS, "%1!: Keine Cursor-Aktualisierungsspalten vorhanden"
+
+279 = SRV_ENOCURUPCOL, "%1!: Keine Cursor-Aktualisierungsspalte %2! vorhanden"
+
+280 = SRV_EDUPCUR, "%1!: Cursor '%2!' wurde bereits deklariert"
+
+281 = SRV_EBADCUR, "%1!: Ung’ltiger Cursor-Deskriptor"
+
+282 = SRV_ENOCURROWDESC, "%1!: Keine Cursor-Zeilenbeschreibung vorhanden"
+
+283 = SRV_EROWCNT, "%1!: Cursor-Zeilen-Fetch hat Anzahl %2! ’berschritten"
+
+284 = SRV_ENOCURSENT, "%1!: Vor dem Senden von DONE muž Cursor-Info ’ber srv_cursor_props() gesendet werden"
+
+285 = SRV_ECURSENT, "%1!: Cursor-Info wurde bereits ’ber srv_cursor_props() gesendet"
+
+286 = SRV_ENOSENDCUR, "%1!: Fehler beim Senden der Cursor-Info"
+
+287 = SRV_ENOKEY, "%1!: F’r aktuelle Cursor-Zeile wurden keine Schl’sselspalten beschrieben"
+
+288 = SRV_ENOKEYCOL, "%1!: Keine Schl’sselspalte %2! vorhanden"
+
+289 = SRV_ENODYN, "%1!: Keine dynamische SQL-Anweisung '%2!' vorhanden"
+
+290 = SRV_ENODYNEVENT, "%1!: nicht im Ereignis-Steuerprogramm von SRV_DYNAMIC"
+
+291 = SRV_ENODYNPARAMS, "%1!: Keine dynamischen SQL-Parameter vorhanden"
+
+292 = SRV_ENODYNPARAM, "%1!: Kein dynamischer SQL-Parameter %2! vorhanden"
+
+293 = SRV_EDUPDYN, "%1!: Dynamische SQL-Anweisung '%2!' wurde bereits mit prepare vorbereitet"
+
+294 = SRV_EDYNINC, "%1!: Unvollst„ndige dynamische SQL-Parameterliste -- %2! Parameter unbeschrieben"
+
+295 = SRV_ENOSENDDYN, "%1!: Fehler beim Senden der dynamischen SQL-Info"
+
+296 = SRV_ENODYNSENT, "%1!: Vor dem Senden von %2! m’ssen dynamische SQL-Anweisungsinformationen ’ber srv_dynamic() gesendet werden"
+
+297 = SRV_EDYNSENT, "%1!: Dynamische SQL-Anweisungsinformationen wurden bereits ’ber srv_dynamic() gesendet"
+
+298 = SRV_EBADCTXT, "%1!: Ung’ltiger Aufruf f’r %2!"
+
+299 = SRV_EBADRESP, "%1!: Ung’ltige Antwort '%2!' zu '%3!'"
+
+300 = SRV_EBADTOKEN, "Unbekanntes Token 0x%1! vom Client empfangen"
+
+301 = SRV_ENOCONN, "%1!: nicht im SRV_CONNECT-Ereignis-Steuerprogramm"
+
+302 = SRV_EDUPCURID, "%1!: Cursor-Kennung %2! wurde bereits zugewiesen"
+
+303 = SRV_ETEXTLEFT, "Text-/Bildspalte %1! wurde nicht vollst„ndig gesendet"
+
+304 = SRV_EBADALTID, "%1!: Compute-Kennung %2! hat Grenzwert ’berschritten -- muž zwischen 1 und %3! liegen"
+
+305 = SRV_ENOTXTSENT, "%1!: NULL-Daten f’r Spalte %2! gesendet -- L„nge des Textzeigers war 0"
+
+306 = SRV_ENOTEXTPTR, "%1!: Text- oder Bildzeiger nicht definiert"
+
+307 = SRV_ENOPARAMRPC, "%1!: Keine Parameter f’r rpc: %2!"
+
+308 = SRV_ECAPABILITY, "Ung’ltige Eigenschaft (%1!) in %2!"
+
+309 = SRV_ECAPTYPE, "Ung’ltiger Eigenschaftstyp (%1!) in %2!"
+
+310 = SRV_EBADIO, "%1!: Schwerer Fehler bei %2! f’r spid: %3!"
+
+311 = SRV_EBADMSGID, "%1!: hat ung’ltigen Wert (%2!) f’r msgid"
+
+312 = SRV_ENOPARAMMSG, "%1!: Keine aktuellen Parameter f’r aktuelle MSG"
+
+313 = SRV_ENOPARAMNUM, "%1!: Kein Parameter #%2! in aktueller %3!"
+
+314 = SRV_EPARAMINC, "%1!: Parameterbeschreibung nicht vollst„ndig -- %2! %3! nicht beschrieben"
+
+315 = SRV_EPROTERR, "%1!: Protokollfehler: %2!"
+
+316 = SRV_ENOPARAMEED, "%1!: Keine Parameter f’r aktuelle Fehlermeldung"
+
+317 = SRV_ENODYNDESC, "%1!: Dynamische SQL-Daten sollten als CS_DESCIN (Eingabe-Parameterformat) oder CS_DESCOUT (Ausgabe-Spaltenformat) definiert werden"
+
+318 = SRV_ETXTLEFT, "%1!: Es sind noch Text- oder Bildspalten zum Lesen mit blk_gettext() vorhanden"
+
+319 = SRV_EBLKINIT, "%1!: Konnte Tabellenspalteninformationen nicht senden"
+
+320 = SRV_ENONATLOCALE, "Konnte Lokalisierungs-Informationen f’r Locale %1! nicht laden"
+
+321 = SRV_EBADLOCALE, "Ung’ltige CS_LOCALE oder nicht mit Open Server CS_CONTEXT zugewiesen"
+
+322 = SRV_ENOLOCALE, "Konnte Lokalisierungs-Informationen f’r Thread %1! nicht zuweisen"
+
+323 = SRV_ENOCHARLOCALE, "Konnte Lokalisierungs-Informationen f’r Zeichensatz %1! Sprache %2! nicht laden"
+
+324 = SRV_EWRONGNULL, "%1!: Daten f’r Spalte Nr.: %2! kann nicht NULL sein"
+
+325 = SRV_ENOINIT, "srv_init wurde nicht aufgerufen"
+
+326 = SRV_EWRONGARGLEN, "Falsche Argumentl„nge wurde an %1! bei %2! ’bergeben"
+
+327 = SRV_ENONEGPWD, "%1!: Es wurden keine entfernten Server-Informationen vom Client gesendet"
+
+328 = SRV_EREADFAILED, "%1!: Warten auf Antwort des Client fehlgeschlagen"
+
+329 = SRV_EWRONGMSG, "%1!: Falschen Antworttyp %2! in Antwort auf %3! empfangen"
+
+330 = SRV_EINCPASSTHRU, "Unvollst„ndige Durchreiche-Parameter f’r spid: %1!"
+
+331 = SRV_ERECURSIVE, "Eine Dummy-Fehlerzeichenkette. Sollte nirgends ausgegeben werden"
+
+332 = SRV_ENORESCAP, "%1!: %2! Ergebnistypen werden zur’ckgehalten oder nicht unterst’tzt"
+
+333 = SRV_EINSTART, "%1!: Kann SRV_START-Steuerprogramm nicht aufrufen" 
+
+334 = SRV_ESTARTEVENT, "SRV_START-Ereignis hat srv_run abgebrochen"
+
+335 = SRV_ENONULLIND, "%1!: Null-Indikator nicht eingestellt, wenn Datenl„nge = 0 f’r Element-Nr. %2!"
+
+336 = SRV_EBADPREC,  "%1!: Falscher Wert (%2!) f’r Gesamtstellenzahl in CS_DATAFMT"
+
+337 = SRV_EBADSCALE, "%1!: Falscher Wert (%2!) f’r Nachkommastellen in CS_DATAFMT"
+
+338 = SRV_ERUN, "Schwerer Fehler bei srv_run"
+
+339 = SRV_ETAKECOROUTINE, "Konnte Steuerung der Co-Routine in %1! nicht zur’cknehmen"
+
+340 = SRV_ERELEASECOROUTINE, "Konnte Steuerung der Co-Routine in %1! nicht freigeben"
+
+341 = SRV_ETAKEMUTEX, "Konnte System-Mutex in %1! nicht zur’cknehmen"
+
+342 = SRV_ERELEASEMUTEX, "Konnte System-Mutex in %1! nicht freigeben"
+
+;	End of generic error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VOS
+;	platforms.  Generic error numbers should be added above this
+;
+343 = SRV_EMSGSENDREPLY, "Fehler als Folge von spid %1!"
+
+344 = SRV_EFREEBUF, "Ein defekter Lesepuffer wurde freigegeben"
+
+345 = SRV_ENOREADBUFFERS, "Zur Zeit keine Netzwerk-Lesepuffer verf’gbar"
+
+346 = SRV_EDEADCLIENT, "Meldung f’r einen toten oder nicht verbundenen Client erhalten"
+
+347 = SRV_EMSGSKIPPED, "Eine Meldung f’r spid %1! wurde ’bersprungen"
+
+348 = SRV_ECLIENTACCEPT, "Konnte Login-Acceptance-Meldung nicht an procid %1! senden"
+
+349 = SRV_ECLIENTDISCONNECT, "Spid %1! entweder tot oder nicht verbunden"
+
+350 = SRV_EQUEUECREATE, "Fehler beim Erstellen der direkten Warteschlange %1!"
+
+351 = SRV_ESETTINGFASTQ, "Fehler beim Einrichten eines Anschlusses mit s$control()"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VMS
+;	platforms.
+;
+352 = SRV_ETCPALLFAIL, "Konnte f’r die TCP/IP-Netzwerk-Steuerungsstruktur keinen Speicher zuweisen"
+
+353 = SRV_ETCPNETASSIGN, "Konnte TCP/IP-Ger„t %1! nicht zuweisen"
+
+354 = SRV_ETCPSETKEEP, "Kann TCP/IP-Socket-Option SO_KEEPALIVE nicht einrichten"
+
+355 = SRV_ETCPSETREUSE, "Kann TCP/IP-Socket-Option SO_REUSEADDR nicht einrichten"
+
+356 = SRV_ETCPACCEPTW, "Fehler beim Warten auf Statusmeldung TCP/IP accept"
+
+357 = SRV_ETCPASSIGN, "Konnte keinen neuen Kanal f’r Client-Verbindung zuweisen"
+
+358 = SRV_ETCPNOLINK, "Keine Verkn’pfungseintr„ge f’r Client-Verbindung verf’gbar"
+
+359 = SRV_ETCPATTNAST, "Konnte attention ast f’r den Socket nicht einstellen"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported NT
+;	platforms.
+;
+360 = SRV_EWAITFAIL, "WaitForSingleObject() in %1! fehlgeschlagen"
+
+361 = SRV_ECREATEEVENT, "CreateEvent() in %1! fehlgeschlagen"
+
+362 = SRV_ESETEVENT, "SetEvent() in %1! fehlgeschlagen"
+
+363 = SRV_ESTARTCOROUTINE, "Konnte Modus f’r Co-Routine nicht starten"
+
+364 = SRV_EENDCOROUTINE, "Konnte Modus f’r Co-Routine nicht beenden"
+
+365 = SRV_ECREATEMUTEX, "CreateMutex() in %1! fehlgeschlagen"
+
+366 = SRV_EDELETEMUTEX, "L÷schen eines Mutex in %1! fehlgeschlagen"
+
+;
+;	NOTE:  The errors below are additional generic errors,
+;	added after the initial 10.0 release.
+;
+367 = SRV_EBADMSGFIELD, "%1!: Feld %2! des CS_SERVERMSG-Arguments muž f’r den ersten Aufruf auf %3! gesetzt sein"
+
+368 = SRV_ENOMSGSENT, "%1!: Eine Meldung wurde initialisiert, aber nicht abgeschlossen"
+

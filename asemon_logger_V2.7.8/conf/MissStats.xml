@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > MissStats </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > <![CDATA[
+if datepart(hh,getdate()) != ?HOUR_EXEC? return
+set nocount on
+declare @dbid int,  @dbname sysname, @rowcnt int
+
+
+create table #missstats (
+    dbname            sysname       null,
+    owner             sysname       null,
+    tabname           sysname       null,
+    counter           smallint      null,
+    c1                sysname       null,
+    c2                sysname       null,
+    c3                sysname       null,
+    c4                sysname       null,
+    c5                sysname       null,
+    c6                sysname       null,
+    c7                sysname       null,
+    c8                sysname       null,
+    c9                sysname       null,
+    c10               sysname       null,
+    c11               sysname       null,
+    c12               sysname       null,
+    c13               sysname       null,
+    c14               sysname       null,
+    c15               sysname       null,
+    c16               sysname       null,
+    c17               sysname       null,
+    c18               sysname       null,
+    c19               sysname       null,
+    c20               sysname       null,
+    c21               sysname       null,
+    c22               sysname       null,
+    c23               sysname       null,
+    c24               sysname       null,
+    c25               sysname       null,
+    c26               sysname       null,
+    c27               sysname       null,
+    c28               sysname       null,
+    c29               sysname       null,
+    c30               sysname       null,
+    c31               sysname       null
+)
+
+select dbid, name
+into #db_cursor
+from master..sysdatabases
+where name != 'tempdb'
+and name != 'master'
+and status&1   != 1   -- database upgrading
+and status&32   != 32   -- database created for load
+and status&64   != 64   -- database recovery
+and status&256   != 256   -- database suspect
+and status&4096   != 4096   -- single user
+
+and status2&16   != 16   -- database offline
+and status2&32   != 32   -- database offline
+and status2&512   != 512   -- database currently upgrading
+
+and status3&2   != 2   -- ignore proxy database
+and status3&4   != 4   -- ignore has proxy database
+and status3&8   != 8   -- databse in shutdown
+and status3&256 != 256 -- ignore user created tempdb
+and status3&8192 != 8192 -- drop database in progress
+and status3&4194304 != 4194304 -- ignore archive databases
+
+
+
+-- use this simulated cursor to a avoid a stored proc and because a declare cursor must be alone in a batch
+set rowcount 1
+select @dbid=dbid, @dbname=name from #db_cursor
+select @rowcnt=@@rowcount
+delete #db_cursor
+set rowcount 0
+
+while @rowcnt = 1
+begin
+
+
+    exec (
+    "insert into #missstats                                                                                                   "+
+    "select @dbname,                                                                                                          "+
+    "owner=(select U.name from "+@dbname+"..sysobjects O , "+@dbname+"..sysusers U where id=S.id and O.uid=U.uid),            "+ 
+    "name=object_name(id, @dbid),                                                                                             "+
+    "counter=convert(smallint,c0),                                                                                            "+
+    "c1 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,1, 2)) ), "+  
+    "c2 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,3, 2)) ), "+  
+    "c3 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,5, 2)) ), "+  
+    "c4 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,7, 2)) ), "+  
+    "c5 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,9, 2)) ), "+  
+    "c6 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,11, 2)) ),"+  
+    "c7 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,13, 2)) ),"+  
+    "c8 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,15, 2)) ),"+  
+    "c9 =(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,17, 2)) ),"+  
+    "c10=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,19, 2)) ),"+ 
+    "c11=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,21, 2)) ),"+ 
+    "c12=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,23, 2)) ),"+ 
+    "c13=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,25, 2)) ),"+ 
+    "c14=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,27, 2)) ),"+ 
+    "c15=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,29, 2)) ),"+ 
+    "c16=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,31, 2)) ),"+ 
+    "c17=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,33, 2)) ),"+ 
+    "c18=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,35, 2)) ),"+ 
+    "c19=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,37, 2)) ),"+ 
+    "c20=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,39, 2)) ),"+ 
+    "c21=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,41, 2)) ),"+ 
+    "c22=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,43, 2)) ),"+ 
+    "c23=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,45, 2)) ),"+ 
+    "c24=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,47, 2)) ),"+ 
+    "c25=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,49, 2)) ),"+ 
+    "c26=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,51, 2)) ),"+ 
+    "c27=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,53, 2)) ),"+ 
+    "c28=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,55, 2)) ),"+ 
+    "c29=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,57, 2)) ),"+ 
+    "c30=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,59, 2)) ),"+ 
+    "c31=(select name from "+@dbname+"..syscolumns where id=S.id and colid=convert(smallint, substring(S.colidarray,61, 2)) ) "+ 
+    "from "+@dbname+"..sysstatistics S                                                                                        "+ 
+    "where formatid=110                                                                                                       "+
+    "order by 1,2                                                                                                             "
+    )
+
+    set rowcount 1
+    select @dbid=dbid, @dbname=name from #db_cursor
+    select @rowcnt=@@rowcount
+    delete #db_cursor
+    set rowcount 0
+end
+select * from #missstats
+drop table #missstats
+
+drop table #db_cursor
+]]>
+ </SQL>
+  <key1 > dbname </key1>
+  <key2 > owner </key2>
+  <key3 > tabname </key3>
+  <filterCol >  </filterCol>
+  <delay > 3600 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_MissStats (
+     Timestamp         datetime not null,
+     Interval          int      not null,   
+     dbname            sysname  not null,
+     owner             sysname  not null,
+     tabname           sysname  not null,
+     counter           int  not null,
+     c1                sysname null,
+     c2                sysname null,
+     c3                sysname null,
+     c4                sysname null,
+     c5                sysname null,
+     c6                sysname null,
+     c7                sysname null,
+     c8                sysname null,
+     c9                sysname null,
+     c10               sysname null,
+     c11               sysname null,
+     c12               sysname null,
+     c13               sysname null,
+     c14               sysname null,
+     c15               sysname null,
+     c16               sysname null,
+     c17               sysname null,
+     c18               sysname null,
+     c19               sysname null,
+     c20               sysname null,
+     c21               sysname null,
+     c22               sysname null,
+     c23               sysname null,
+     c24               sysname null,
+     c25               sysname null,
+     c26               sysname null,
+     c27               sysname null,
+     c28               sysname null,
+     c29               sysname null,
+     c30               sysname null,
+     c31               sysname null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_MissStats (Timestamp, dbname, owner, tabname)
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_MissStats (dbname, owner, tabname, Timestamp)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_MissStats" >
+  delete ?SERVERNAME?_MissStats where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

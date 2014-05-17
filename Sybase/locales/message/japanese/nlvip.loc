@@ -1,0 +1,46 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=japanese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlvip]
+
+1 = IPDE_EPDISCON, "エンド・ポイントの接続を切断できません。エラーは%1!です。"
+2 = IPDE_ACCEPT, "新しい接続を受け付け中にエラーが発生しました。エラーは%1!です。"
+3 = IPDE_EPCLOSE, "エンド・ポイントをクローズすることができません。エラーは%1!です。"
+4 = IPDE_PARSE, "接続情報に無効な構文があります。"
+5 = IPDE_EPCONNECT, "サーバとの接続に失敗しました。エラーは%1!です。"
+6 = IPDE_EPMODE, "パイプ・モードの変更に失敗しました。エラーは%1!です。"
+7 = IPDE_EVENTOBJ, "イベント・オブジェクトの作成に失敗しました。エラーは%1!です。"
+8 = IPDE_NOSODES, "ソケット記述子を取得できません。エラーは%1!です。"
+9 = IPDE_READ, "socket/cid からの読み込みに失敗しました。エラーは%1!です。"
+10 = IPDE_WRITE, "socket/cid への書き込みに失敗しました。エラーは%1!です。"
+11 = IPDE_SOFLUSH, "ブロードケースのフラッシュに失敗しました。エラーは%1!です。"
+12 = IPDE_SENDFAIL, "VIP ソケットの送信に失敗しました。エラーは%1!です。"
+13 = IPDE_RCVFAIL, "VIP ソケットの受信に失敗しました。エラーは%1!です。"
+14 = IPDE_OPENFAIL, "VIP ソケットのオープンに失敗しました。エラーは%1!です。"
+15 = IPDE_GTPORTFAIL, "リスナ・ポート番号を取得中にエラーが発生しました。エラーは%1!です。"
+16 = IPDE_SPORTFAIL, "リスナ・ポート番号を設定中にエラーが発生しました。エラーは%1!です。"
+17 = IPDE_STSESSFAIL, "StreetTalkセッションをオープン中にエラーが発生しました。エラーは%1!です。"
+18 = IPDE_MEM, "オペレーティング・システムのメモリ・エラーです。エラーは%1!です。"

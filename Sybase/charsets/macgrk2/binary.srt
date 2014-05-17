@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Macintosh, Greek character set, this is a binary sort order.
+;
+; SCCS information:	@(#) generic/localization/charsets/macgrk2/binary.srt 1.3 1/19/95
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Jan 18 1995  7:58AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_macgrk2
+menuname = "Binary ordering, for the Macintosh, Greek character set (macgreek)."
+charset = macgrk2
+ 
+description = "Binary sort order for the Macintosh, Greek character set (macgreek)."
+ 
+binary = "true"

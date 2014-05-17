@@ -1,0 +1,65 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+2068		= "Définissez les libellés de tous les fichiers du répertoire de version", ""
+2069		= "Attribuez les privilèges aux fichiers exécutables requis", ""
+3820		= "CONFIGUREZ LES PARAMETRES B1", ""
+3821		= "", ""
+3822		= "", ""
+3823		= "", ""
+3824	= "La valeur courante de Data High est :", ""
+3825		= "Confirmez la valeur de Data High", ""
+3826		= "La valeur de Data Low est :", ""
+3827		= "Définissez les libellés de tous les fichiers du répertoire de version", ""
+3828		= "Attribuez les privilèges aux fichiers exécutables requis", ""
+3829	= "Entrez la valeur de Data Low", ""
+3830	= "La valeur de Data High est-elle correcte ?", ""
+3831		= "Attribuez à votre libellé Current Process la valeur DATAHI correcte et relancez sybinit", ""
+3832	= "Indiquez si la valeur de DATAHI est correcte", ""
+3833	= "Spécifiez un libellé correct pour DATALO", ""
+3834	= "Achevez la définition des libellés pour tous les fichiers du répertoire de version", ""
+3835	= "Achevez l'attribution des privilèges aux fichiers exécutables requis", ""
+3836	= "Impossible d'obtenir la valeur de DATAHI", ""
+3837	= "La valeur de DATALO n'a pas été spécifiée ou elle est incorrecte", ""
+3838	= "DATAHI est inférieur à DATALO", ""
+3839	= "L'initialisation de B1 n'est pas achevée", ""
+3840	= "Définissez la valeur de Data_Low avant de définir les libellés des fichiers du répertoire de version", ""
+3841		= "Impossible de convertir la valeur de Data_Low en format de libellé hôte", ""
+3842		= "Impossible d'obtenir la valeur de Data_High", ""
+3843	= "Impossible de convertir la valeur de Data_High en format de libellé hôte", ""
+3844	= "Fichier %1! introuvable. Ce dernier répertorie les fichiers dont les libellés doivent être définis", "%s"
+3845		= "Impossible d'ouvrir le fichier %1!. Vérifiez les droits sur ce fichier", "%s"
+3846		= "Echec de la commande shell %1! %2!", "%s %s"
+3847	= "Echec de l'appel système visant à attribuer la valeur  %2! au libellé du fichier %1!", "%s %s"
+3848	= "Fichier %1! introuvable. Ce dernier répertorie les fichiers auxquels les privilèges doivent être attribués", "%s"
+3849	= "Impossible de lire le libellé sensitivity du répertoire %1! spécifié pour le journal d'erreurs", "%s"
+3850	= "Le répertoire %1! spécifié pour le journal d'erreurs n'a pas la valeur Data_High %2!", "%s %s"
+3851	= "Impossible d'obtenir le libellé du journal d'erreurs %1!", "%s"
+3852	= "Impossible de modifier le libellé du journal d'erreurs %1!", "%s"
+3853		= "Echec de la commande d'attribution des privilèges au fichier %1!. Assurez-vous que sybinit dispose des privilèges requis", "%s"
+3854	= "Impossible d'initialiser les attributs de sécurité", ""
+3856		= "Echec de l'appel système visant à obtenir la valeur du libellé sensitivity", ""
+3857	= "Impossible de convertir le libellé hôte en format lisible par l'utilisateur", ""
+3858		= "Echec de la définition du libellé du fichier %1!", "%s"
+3859	= "Echec de l'appel système visant à obtenir le libellé du fichier %1!", "%s"
+3860		= "Echec de la fonction du système d'exploitation visant à comparer les libellés. Assurez-vous que sybinit dispose des privilèges requis", ""
+; End of section.

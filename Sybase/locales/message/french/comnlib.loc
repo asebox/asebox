@@ -1,0 +1,89 @@
+; comment character is semicolon.
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "impossible d'obtenir la chaîne car la mémoire est insuffisante"
+
+2 = ZZZZZ, "impossible d'obtenir la chaîne de messages de la couche"
+
+3 = ZZZZZ, "impossible d'obtenir la chaîne de messages d'origine"
+
+4 = ZZZZZ, "chaîne d'erreur non disponible"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "couche api utilisateur"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "erreur externe"
+
+2 = ZZZZZ, "erreur interne de Client Library"
+
+3 = ZZZZZ, "erreur interne de net library"
+
+4 = ZZZZZ, "erreur interne de common library"
+
+5 = ZZZZZ, "erreur interne d'intl library"
+
+6 = ZZZZZ, "erreur interne du gestionnaire asynchrone"
+
+7 = ZZZZZ, "erreur interne de gestion de la mémoire"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "Pas d'erreur."
+
+1 = ZZZZZ, "Erreur inconnue."
+
+2 = ZZZZZ, "Echec d'allocation mémoire."
+
+3 = ZZX04, "Impossible d'ouvrir le fichier de configuration %1! en lecture."
+
+4 = ZZX05, "La configuration %1! a été supprimée (CS_FORCE)."
+
+5 = ZZX06, "Le nom du fichier de configuration %1! est trop long."
+
+6 = ZZX07, "Erreur de format du fichier, caractère incorrect ligne %1!."
+
+7 = ZZX08, "Section de configuration %1! non trouvée."
+
+8 = 01X09, "Erreur de syntaxe dans le fichier de configuration, ligne %1! (%2!)."
+
+9 = 01X0A, "La configuration %1! a été supprimée (CS_FORCE) alors qu'elle est toujours utilisée."
+

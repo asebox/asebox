@@ -1,0 +1,173 @@
+; comment character is semicolon.
+; "cslib.loc" - Localization file for CS-Library.
+;
+; Sccsid @(#) cslib.loc 1.3 12/19/93
+;
+;
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+Alle Rechte vorbehalten.\
+Gebrauch, VervielfÑltigung oder Bekanntmachung durch die Regierung\
+der Vereinigten Staaten unterliegt den in FAR Unterabschnitten\
+52.227-19(a)-(d) fÅr VertrÑge mit Zivilstellen und in DFARS\
+252.227-7013(c)(1)(ii) fÅr VertrÑge mit dem Department of Defense\
+(US-Verteidigungsministerium) genannten BeschrÑnkungen.\
+Sybase behÑlt sich alle Rechte bezÅglich Nichtverîffentlichungen\
+gemÑ· den Urheberrechtsgesetzen der Vereinigten Staaten vor.\
+Sybase, Inc.  6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csdefaults]
+
+1 = ZZZZZ, "kann keinen Speicherplatz zuweisen"
+
+2 = ZZZZZ, "cslib"
+
+3 = ZZZZZ, "cslib"
+
+4 = ZZZZZ, "allgemeiner Fehler"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CS-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cslayer]
+
+2 = ZZZZZ, "cslib API-Benutzerschicht"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csorigin]
+
+1 = ZZZZZ, "externer Fehler"
+
+2 = ZZZZZ, "interner CS-Library Fehler"
+
+4 = ZZZZZ, "allgemeiner Library-Fehler"
+
+5 = ZZZZZ, "interner Library-Fehler"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csapierror]
+
+0 =  00000, "Kein Fehler."
+
+1 =  ZZZZZ, "Unbekannter Fehler."
+
+2 =  ZZZZZ, "Die abgerufene Information pa·t nicht in Puffer mit %1! Byte."
+
+3 = ZZZZZ, "Speicherzuweisung gescheitert."
+
+4 = 22023, "Der Parameter %1! darf nicht  NULL sein."
+
+5 = 22023, "Wenn %1! NULL ist, mu· der Parameter %2! 0 sein."
+
+6 = 22023, "Ein unzulÑssiger Wert von %1! wurde fÅr den Parameter %2! angegeben."
+
+7 = 22023, "Der Parameter %1! mu· NULL sein."
+
+8 = 22023, "Der Parameter %1! mu· auf CS_UNUSED eingestellt werden."
+
+9 = 22023, "Die Eigenschaft %1! kann nicht gesetzt oder gelîscht werden."
+
+10 = 22023, "Ein ungÅltiger Locale Zeiger wurde Åbergeben."
+
+11 = 22023, "Der Parameter %1! zeigt auf einen illegalen Datentypwert."
+
+12 = 22023, "Ein unbekannter Locale Name wurde Åbergeben."
+
+13 = 22023, "CS_GET kann nicht mit Typ %1! durchgefÅhrt werden."
+
+14 = ZZZZZ, "Lokalisierungsinformation konnte nicht geladen werden."
+
+15 = ZZZZZ, "Fehlerbearbeitung konnte nicht initialisiert werden."
+
+16 = 0A000, "Umwandlung zwischen Datentypen %1! und %2! nicht unterstÅtzt."
+
+17 = 22023, "Formatfeld einer CS_DATAFMT Struktur sollte CS_FMT_UNUSED sein, wenn der Datentyp %1! ist."
+
+18 = 22023, "Ein illegaler Wert von %1! wurde in das Feld %2! der CS_DATAFMT Struktur eingegeben."
+
+19 = 22023, "Illegaler Locale Zeiger wurde in der CS_DATAFMT Struktur angegeben."
+
+20 = ZZZZZ, "Konvertierung/Vorgang hat einen öberlauf ergeben."
+
+21 = ZZZZZ, "Konvertierung/Vorgang hat einen Unterlauf ergeben."
+
+22 = ZZZZZ, "Ein illegaler Genauigkeitswert wurde entdeckt."
+
+23 = ZZZZZ, "Ein illegaler Bereichswert wurde entdeckt."
+
+24 = ZZZZZ, "Konvertierung/Vorgang wurde aufgrund eines Syntaxfehlers im Ursprungsfeld unterbrochen."
+
+25 = ZZZZZ, "Datentypwert liegt au·erhalb des zulÑssigen Wertebereichs fÅr diesen Datentyp."
+
+26 = 22012, "Dividieren durch Null ist nicht zulÑssig."
+
+27 = 01000, "WARNUNG: Existierende Fehler- und Meldungshandler sind entfernt worden."
+
+28 = ZZZZZ, "Nicht genug Speicherplatz fÅr alle Meldungen. Alle vorher gespeicherten Meldungen wurden gelîscht."
+
+29 = ZZZZZ, "In-line-Fehlerbearbeitung mu· mit einem CS_INIT Vorgang initialisiert werden, bevor andere cs_diag() Arbeiten vorgenommen werden."
+
+30 = ZZZZZ, "Die Meldungsgrenze darf nicht auf einen Wert gesetzt werden, der kleiner ist als die Anzahl der gegenwÑrtig gespeicherten CS-Library-Meldungen."
+
+31 = ZZZZZ, "Die Kontextstruktur kann nicht aufgehoben werden, weil die Anwendung %1! nicht verlassen hat."
+
+32 = 22023, "Wenn der Typ CS_DT_CONFMT ist, ist nur ein CS_SET Vorgang zulÑssig."
+
+33 = 0A000, "Die geforderte öbersetzung wird nicht unterstÅtzt."
+ 
+34 = ZZZZZ, "Einige der Zeichen konnten nicht Åbersetzt werden."
+
+35 = ZZZZZ, "Konvertierung/Vorgang wurde aufgrund eines Stilfehlers abgebrochen ."
+
+36 = 22001, "Ergebnis wurde wegen öberlauf bei Konvertierung/Vorgang abgeschnitten."
+
+37 = ZZZZZ, "cs_ctx_name entspricht nicht den angegebenen SchlÅsseln."
+
+38 = ZZZZZ, "Die Zeichenkette wurde nicht kopiert, weil sonst ein öberlauf entstanden wÑre."
+
+39 = ZZZZZ, "Die Zeichenkette konnte nicht erstellt werden. In der Textzeichenkette befindet sich ein illegaler Platzhalter."
+
+40 = ZZZZZ, "Nur 0, 1 oder 2 Sterne sind in der Formatzeichenkette zulÑssig."
+
+41 = ZZZZZ, "Ein unbekanntes Datentyptoken befindet sich in der Formatzeichenkette."
+
+42 = 22023, "Die Formatzeichenkette darf nicht NULL sein."
+
+43 = 22023, "Der kundenspezifische Formatspezifizierer ist zu lang."
+
+44 = 22023, "Es wurde kein kundenspezifischer Formatszpezifizierer gefunden, der dem Spezifizierer in der Formatzeichenkette entspricht."
+
+45 = ZZZZZ, "Bad locale handler for cs_locale on types CS_SYB_LANG, CS_SYB_CHARSET or CS_SYB_LANG_CHARSET."
+ 
+46 = ZZZZZ, "Kann Localization datei %1! nicht zugreifen"
+ 
+47 = 08003, "%1! Verbindungsausnahme -- Verbindung existiert nicht."
+ 
+48 = 08002, "%1! Verbindungsausnahme -- Verbindung Name wird schon benutzt."
+ 
+49 = 34000, "%1! UngÅltiger Cursor Name."
+ 
+50 = 26000, "%1! UngÅltiger SQL Anweisung Bezeichner."
+ 
+51 = ZZZZZ, "%1! cs_objects: Fehler bei der AusfÅhrung der abgefragten Arbeitsgang."
+
+52 = ZZZZZ, "öberflu· eines internen Puffers ist aufgetreten."

@@ -1,0 +1,412 @@
+.boxtop2 {
+	height: 33px;     /* was 35   */
+	margin: 0px;
+	padding: 0px;
+	border-radius: 14px 14px 0px 0px ;     
+	-moz-border-radius:14px 14px 0px 0px ; /* Old Firefox */
+}
+.boxtop2 DIV.title {
+	width:80%;
+	float:left;
+	vertical-align: central;
+	text-align : center;
+	font-size : 16px;      /* was 16 */
+	padding : 2pt;
+	color : #fff;
+	font-weight : bold;
+    position: relative;
+    top: 6px;
+}
+
+.boxtop2 IMG.help {
+	position:relative;
+	top:6px;
+	float: right;
+	right: 6px;
+	cursor:pointer;
+	margin:0px;
+	width: 26px;
+	height: 26px;
+	border: 0px;
+}
+
+
+
+
+
+.boxtop {
+	height: 33px;     /* was 35   */
+	background-image: url(../images/boxtop-bkg.jpg);
+	margin: 0px;
+	padding: 0px;
+	border-radius: 14px 14px 0px 0px ;     
+	-moz-border-radius:14px 14px 0px 0px ; /* Old Firefox */
+}
+.boxtop DIV.title {
+	width:80%;
+	float:left;
+	vertical-align: central;
+	text-align : center;
+	font-size : 16px;      /* was 16 */
+	padding : 2pt;
+	color : #fff;
+	font-weight : bold;
+    position: relative;
+    top: 6px;
+}
+
+.boxtop IMG.help {
+	position:relative;
+	top:6px;
+	float: right;
+	right: 6px;
+	cursor:pointer;
+	margin:0px;
+	width: 26px;
+	height: 26px;
+	border: 0px;
+}
+
+.boxcontent {
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-color: #3E7882;      --this is green --- blue would be #6699FF;
+	background-color:#FCFCFC;
+	margin:0px;
+}
+
+.boxbtns {
+	witdh:100%;
+	height:28px;
+	margin:0px;
+	padding : 0px;
+	background-color:#666;
+	color : #404040;
+	font-size : 0.7em;
+	background-color : #EAEAEA;
+	font-size:1em;
+	clear:right;
+}
+
+
+table.parambox {
+	width : 100%;
+	heigh : 100%;
+	padding : 0;
+	border-spacing : 0;
+	border : #707070 solid 0px;
+/*	background-color : #F0F0F0; */
+	background-color : #DCE6FC;
+}
+
+tr.paramboxtitle {
+	margin : 0pt;
+	padding : 0pt;
+	text-align : center;
+	font-size : 0.9em;
+}
+
+td.paramboxtitle {
+	width : 100%;
+	padding : 2pt;
+	color : #000000;
+	background-color : #8EA3E3;
+	font-weight : bold;
+	border-bottom : #808080 dotted 1px;
+}
+
+tr.parambox {
+}
+
+td.parambox {
+	padding : 5px;
+	color : #404040;
+	font-size : 0.8em;
+	height : 240px;
+}
+
+td.paramboxmenu {
+	padding : 5px;
+	color : #404040;
+	font-size : 0.8em;
+}
+
+
+table.infobox {
+	padding : 0;
+	border-spacing : 0;
+	background-color : #FFFEDD  ;
+}
+
+tr.infoboxtitle {
+	margin : 0pt;
+	padding : 0pt;
+	text-align : center;
+	font-size : 0.9em;
+
+}
+
+td.infoboxtitle {
+	color : #000000;
+	background-color : #8EA3E3;
+	font-weight : bold;
+}
+
+tr.infobox {
+}
+
+td.infobox {
+	padding : 5px;
+	color : #404040;
+}
+
+.infobox ul {
+	list-style-position:inside;
+	list-style-type : square;
+}
+
+.infobox li {
+	 margin-bottom: 0.5em;
+}
+
+.statMainTable {
+	overflow: scroll;
+	margin:3px;
+	text-align:left;
+}
+
+
+.statMainInfo {
+	overflow: visible;
+	#max-height:500px;
+	#min-height:70px;
+	background-color : #FFFEDD  ;
+}
+
+
+td.statTableUpperTitle {
+	padding : 0px;
+	color : #404040;
+	font-size : 14px;
+	font-weight : bold;
+	background-color : #FADB7E;
+	text-align:left;
+	padding:3px;
+}
+
+td.statTabletitle {
+	padding : 0px;
+	color : #404040;
+	font-size : 12px;
+	font-weight : bold;
+	background-color : #FAEDA9;
+	text-align:center;
+	padding:3px;
+	min-width : 30px;
+	max-width : 240px;     //was 200
+}
+
+td.statTableBtn {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+	background-color : #F3F3FE;
+	text-align:center;
+	min-width : 30px;
+	max-width : 200px;
+}
+td.statTableBtnSpid {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+	background-color : #F3F3FE;
+	text-align:center;
+	max-width : 20px;
+}
+td.statTableBtnUser {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+	background-color : #F3F3FE;
+	text-align:center;
+	max-width : 60px;
+}
+td.statTable {
+	padding : 2px;
+	color : #404040;
+	font-size : 11px;
+}
+td.statTableBold {
+	padding : 2px;
+	color : #404040;
+	font-size : 11px;
+	font-weight:bold;
+}
+td.statTablePtr {
+	padding : 2px;
+	color : #404040;
+	font-size : 11px;
+	cursor: pointer;
+}
+tr.statTableimpair { background-color : #ffffff; }
+tr.statTablepair   { background-color : #F3F3FE; }
+.impaironMouseOver { background-color : #99F3FC; } 
+.paironMouseOver   { background-color : #99F3FC; }
+tr.statTableWhite  { background-color : #ffffff; }
+tr.statTableGreen  { background-color : #B0B0B0; }
+td.statTableGreen {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+	background-color : lightgreen;
+    cursor: pointer;
+}
+td.statTableRed {
+	padding : 0px;
+	color : white;
+	font-size : 11px;
+	background-color : red;
+    cursor: pointer;
+}
+td.statTableYellow {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+	background-color : yellow;
+    cursor: pointer;
+}
+td.statTableGrey {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+	background-color : lightgrey;
+    cursor: pointer;
+}
+td.statTableNorm {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+    cursor: pointer;
+}
+td.statTableBtnLeft {
+	padding : 0px;
+	color : #404040;
+	font-size : 11px;
+  	background-color : #F3F3FE;
+        text-align:left;
+}
+table.statInfo {
+	width : 350px;   
+	padding : 5px;
+	border-spacing : 4;
+	background-color : #F3F3FE ;
+	font-size : 0.9em;
+}
+tr.statInfo {
+}
+td.statInfo {
+	padding : 5px;
+	color : #404040;
+	font-size : 0.8em;
+}
+.statInfo ul {
+	list-style-position:inside;
+	list-style-type : square;
+}
+.statInfo li {
+	 margin-bottom: 0.5em;
+}
+.titleTab {
+	padding : 2;
+	border-spacing : 2;
+	background-color : #FFFEDD ;
+	font-size : 0.7em;
+	font-weight : bold;
+}
+table.textInfo {
+	width : 100%;
+	padding : 0;
+	background-color : #FFFEDD ;
+	font-size : 0.7em;
+	text-align : left;
+}
+tr.textInfo {
+	width : 100%;
+	text-align : left;
+}
+td.textInfo {
+	padding : 0px;
+	color : #404040;
+	word-wrap : normal;
+	text-wrap : normal;
+	text-align : left;
+}
+
+td.textLineInfo {
+	padding : 0px;
+	color : #404040;
+}
+td.textInfoError {
+	background-color : #FFFEDD ;
+	padding : 5px;
+	color : red;
+}
+b.newsparatitle {
+	color : #505080;
+}
+.infobox A:link  {
+	text-decoration : underline;
+	color : #000000;
+}
+.infobox A:visited  {
+	text-decoration : underline;
+	color : #303080;
+}
+
+.infobox A:hover  {
+	text-decoration : underline;
+	color : #000000;
+	background-color : #C0C0C0;
+}
+.body h1 {
+	margin-top : 0;
+	margin-bottom : 0 ;
+	background : #eeeeee;
+	font-size : 1em;
+	font-weight : bold;
+	text-align : center;
+}
+table.largeinfobox {
+	width : 1250px;
+	padding : 0;
+	border-spacing : 0;
+	border : #707070 solid 1px;
+	background-color : #FFFEDD  ;
+}
+tr.largeinfobox {
+}
+td.largeinfobox {
+	padding : 5px;
+	color : #404040;
+	font-size : 0.8em;
+}
+.largeinfobox ul {
+	list-style-position:inside;
+	list-style-type : square;
+}
+.largeinfobox li {
+	 margin-bottom: 0.5em;
+}
+.Info {
+	position: relative;
+	max-width: 1000px;
+	float: none;
+    margin: 10px;
+	padding: 5px;
+	background-color : #F3F3FE ;
+	font-size : 0.9em;
+	text-align: left; 
+}
+

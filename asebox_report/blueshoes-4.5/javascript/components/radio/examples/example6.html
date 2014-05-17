@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>JavaScript Bs_Radio example 6</title>
+<script type="text/javascript" src="/_bsJavascript/components/radio/Bs_Radio.class.js"></script>
+<script type="text/javascript" src="/_bsJavascript/core/lang/Bs_Misc.lib.js"></script>
+
+<script type="text/javascript">
+function init() {
+  myRadio = new Bs_Radio();
+  myRadio.radioFieldName   = 'myField';
+  myRadio.captionAsAltText = true;
+  myRadio.imgDir           = '/_bsJavascript/components/radio/examples/flags2/';
+  myRadio.imgWidth         = 40;
+  myRadio.imgHeight        = 20;
+  myRadio.imgType          = 'png';
+  myRadio.iconType         = 'css';
+  myRadio.addOption('usa',  'USA',            null, null, null, {iconPrefix:'usa'});
+  myRadio.addOption('ger',  'Germany',        null, null, null, {iconPrefix:'germ'});
+  myRadio.addOption('ita',  'Italy',          true, null, null, {iconPrefix:'ital'});
+  myRadio.addOption('scan', 'Scandinavia',    null, 'script', null, {iconPrefix:'scan'});
+  myRadio.addOption('spa',  'Spain',          null, null, null, {iconPrefix:'span'});
+  myRadio.addOption('sui',  'Switzerland',    null, null, null, {iconPrefix:'sui'});
+  myRadio.addOption('uk',   'United Kingdom', null, null, null, {iconPrefix:'uk'});
+  myRadio.addOption('fra',  'France',         null, null, null, {iconPrefix:'fran'});
+  myRadio.value            = 'sui';
+  //myRadio.drawInto(null, 'myRadioDiv');
+  var html = myRadio.renderAsTable('horizontal', '<table border="1" cellpadding="2" cellspacing="0">');
+  document.getElementById('myRadioDiv').innerHTML = html;
+  
+  
+  myRadio2 = new Bs_Radio();
+  myRadio2.radioFieldName   = 'myField2';
+  myRadio2.captionAsAltText = true;
+  myRadio2.invertActive     = true;
+  myRadio2.imgDir           = '/_bsJavascript/components/radio/examples/flags2/';
+  myRadio2.imgWidth         = 40;
+  myRadio2.imgHeight        = 20;
+  myRadio2.imgType          = 'png';
+  myRadio2.iconType         = 'css';
+  myRadio2.addOption('usa',  'USA',            null, null, null, {iconPrefix:'usa'});
+  myRadio2.addOption('ger',  'Germany',        null, null, null, {iconPrefix:'germ'});
+  myRadio2.addOption('ita',  'Italy',          true, null, null, {iconPrefix:'ital'});
+  myRadio2.addOption('scan', 'Scandinavia',    null, 'script', null, {iconPrefix:'scan'});
+  myRadio2.addOption('spa',  'Spain',          null, null, null, {iconPrefix:'span'});
+  myRadio2.addOption('sui',  'Switzerland',    null, null, null, {iconPrefix:'sui'});
+  myRadio2.addOption('uk',   'United Kingdom', null, null, null, {iconPrefix:'uk'});
+  myRadio2.addOption('fra',  'France',         null, null, null, {iconPrefix:'fran'});
+  myRadio2.value            = 'sui';
+  //myRadio2.drawInto(null, 'myRadio2Div');
+  var html = myRadio2.renderAsTable('horizontal', '<table border="1" cellpadding="2" cellspacing="0">');
+  document.getElementById('myRadio2Div').innerHTML = html;
+  
+  
+  myRadio3 = new Bs_Radio('myRadio3');
+  myRadio3.radioFieldName   = 'myField3';
+  myRadio3.captionAsAltText = true;
+  myRadio3.pixelate         = 10;
+  myRadio3.imgDir           = '/_bsJavascript/components/radio/examples/flags2/';
+  myRadio3.imgWidth         = 40;
+  myRadio3.imgHeight        = 20;
+  myRadio3.imgType          = 'png';
+  myRadio3.iconType         = 'css';
+  myRadio3.addOption('usa',  'USA',            null, null, null, {iconPrefix:'usa'});
+  myRadio3.addOption('ger',  'Germany',        null, null, null, {iconPrefix:'germ'});
+  myRadio3.addOption('ita',  'Italy',          true, null, null, {iconPrefix:'ital'});
+  myRadio3.addOption('scan', 'Scandinavia',    null, 'script', null, {iconPrefix:'scan'});
+  myRadio3.addOption('spa',  'Spain',          null, null, null, {iconPrefix:'span'});
+  myRadio3.addOption('sui',  'Switzerland',    null, null, null, {iconPrefix:'sui'});
+  myRadio3.addOption('uk',   'United Kingdom', null, null, null, {iconPrefix:'uk'});
+  myRadio3.addOption('fra',  'France',         null, null, null, {iconPrefix:'fran'});
+  myRadio3.value            = 'sui';
+  //myRadio3.drawInto(null, 'myRadio3Div');
+  var html = myRadio3.renderAsTable('horizontal', '<table border="1" cellpadding="2" cellspacing="0">');
+  document.getElementById('myRadio3Div').innerHTML = html;
+}
+</script>
+</head>
+
+<body onload="init();">
+
+<h1>JavaScript Bs_Radio example 6</h1>
+
+This is an example of the <a href="http://www.blueshoes.org/en/javascript/radio/" target="_blank">Radio Control</a>.
+<br><br>
+
+Output is similar to <a href="example3.html" target="_blank">example 3</a>. Features used:
+<ul>
+  <li>Using css instead of images for the 'active' and 'disabled' modes.</li>
+  <li>The option 'Scandinavia' is disabled for the GUI.</li>
+  <li>The option 'Italy' is hidden completely.</li>
+  <li>Radio field 1: the currently active button has a border.</li>
+  <li>Radio field 2: the currently active button has a border and is inverted.</li>
+  <li>Radio field 3: the currently active button has a border, and all other buttons are pixelated.</li>
+</ul>
+
+<hr>
+<br>
+
+<form action="http://www.blueshoes.org//postDump.php" method="post">
+
+<div id="myRadioDiv">rendering radio field...</div><br><br>
+<div id="myRadio2Div">rendering radio field...</div><br><br>
+<div id="myRadio3Div">rendering radio field...</div><br><br>
+<input type="submit" name="send" value="submit form">
+</form>
+
+</body>
+</html>

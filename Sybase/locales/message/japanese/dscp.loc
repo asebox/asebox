@@ -1,0 +1,239 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "セッション"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "メモリの割り当てに失敗しました。"
+
+2  = ZZZZZ, "オブジェクトの読み込み中にエラーが発生しました。"
+
+3  = ZZZZZ, "オブジェクトが見つかりません。"
+
+4  = ZZZZZ, "'%1!' がありません。"
+
+5  = ZZZZZ, "失敗"
+
+6  = ZZZZZ, "ok"
+
+7  = ZZZZZ, "インターフェース・ドライバに対するフェールオーバ。"
+
+8  = ZZZZZ, "オープンしているセッションがありません。"
+
+9  = ZZZZZ, "%1! を追加しました。"
+
+10 = ZZZZZ, "%1! の追加中にエラーが発生しました。"
+
+11 = ZZZZZ, "%1! を修正しました。"
+
+12 = ZZZZZ, "%1! の修正中にエラーが発生しました。"
+
+13 = ZZZZZ, "%1! を削除しました。"
+
+14 = ZZZZZ, "%1! の削除中にエラーが発生しました。"
+
+15 = ZZZZZ, "すべてのサーバ・オブジェクトを削除しました。"
+
+16 = ZZZZZ, "サーバ・オブジェクトの削除中にエラーが発生しました。"
+
+17 = ZZZZZ, "エラー：同一セッション内のオブジェクトにコピーしようとしました。"
+
+18 = ZZZZZ, "セッション %2! の '%1!' をセッション %4! の '%3!' にコピーします。"
+
+19 = ZZZZZ, "%1! のコピー中にエラーが発生しました。"
+
+20 = ZZZZZ, "エラー：同一セッションにコピーしようとしました。"
+
+21 = ZZZZZ, "セッション %1! にすべてをコピーします"
+
+22 = ZZZZZ, "セッション %1! %2!"
+
+23 = ZZZZZ, "current"
+
+24 = ZZZZZ, "構文エラー"
+
+25 = ZZZZZ, "余分な属性があります"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "トランスポート・タイプ"
+
+2 =  ZZZZZ, "トランスポート・アドレス"
+
+3  = ZZZZZ, "サーバ・セキュリティ"
+
+4  = ZZZZZ, "セキュリティ・メカニズム"
+
+5  = ZZZZZ, "** 不明な値 **"
+
+6  = ZZZZZ, "オブジェクトの DIT ベース"
+
+7  = ZZZZZ, "識別名"
+
+8  = ZZZZZ, "見つかったサーバ・オブジェクト"
+
+9  = ZZZZZ, "バージョン"
+
+10 = ZZZZZ, "サービス"
+
+11 = ZZZZZ, "ステータス"
+
+12 = ZZZZZ, "アドレス"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "設定"
+
+15 = ZZZZZ, "DS 名"
+
+16 = ZZZZZ, "HA フェールオーバ・サーバ"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "すべてのサーバ・オブジェクトを削除してもよろしいですか？ (Y/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open"
+
+5  = ZZZZZ, "close"
+
+6  = ZZZZZ, "read"
+
+7  = ZZZZZ, "add"
+
+8  = ZZZZZ, "mod"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "del"
+
+11 = ZZZZZ, "delete-all"
+
+12 = ZZZZZ, "copy"
+
+13 = ZZZZZ, "copyall"
+
+14 = ZZZZZ, "to"
+
+15 = ZZZZZ, "list"
+
+16 = ZZZZZ, "all"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "exit"
+
+20 = ZZZZZ, "quit"
+
+21 = ZZZZZ, "switch"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "SERVER_NAME"
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "この画面。"
+
+; open [DSNAME]
+2  = ZZZZZ, "デフォルトのディレクトリ・サービスまたは DSNAME ディレクトリ・サービスのセッションをオープンします。"
+
+; close [SESS]
+3  = ZZZZZ, "SESS 番のセッション、または現在のセッションをクローズします。"
+
+; sess
+4  = ZZZZZ, "すべてのセッションをリストします。"
+
+; [switch] SESS
+5  = ZZZZZ, "SESS 番のセッションを現在のセッションにします。"
+
+; add SERVER-NAME
+6  = ZZZZZ, "ディレクトリ・サービスに新しいサーバ・オブジェクトを追加します。"
+
+; read SERVER-NAME
+7  = ZZZZZ, "サーバ・オブジェクトの内容を読み込みます。"
+
+; mod SERVER-NAME
+8  = ZZZZZ, "既存のサーバ・オブジェクトを修正します。"
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "既存のサーバ・オブジェクトに属性を追加します。"
+
+; del SERVER-NAME
+10 = ZZZZZ, "既存のサーバ・オブジェクトを削除します。"
+
+; list [all]
+11 = ZZZZZ, "すべてのサーバ・オブジェクトをリストします。"
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "オブジェクト NAME1 を、SESS 番のセッションまたは現在のセッションの新規オブジェクト NAME2 としてコピーします。"
+
+; copyall to SESS
+13 = ZZZZZ, "現在のセッションのすべてのサーバ・オブジェクトを SESS 番のセッションにコピーします。"
+
+; delete-all
+14 = ZZZZZ, "現在のセッションのすべてのサーバ・オブジェクトを削除します。"
+
+; config
+15 = ZZZZZ, "現在の設定をリストします。"
+
+; exit | quit
+16 = ZZZZZ, "プログラムを終了します。"
+

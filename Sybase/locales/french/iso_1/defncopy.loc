@@ -1,0 +1,42 @@
+; comment character is semicolon.
+; "defncopy.loc" - Localization file for defncopy.
+;
+; Sccsid @(#) defncopy.loc 1.3 12/3/93
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Tous droits réservés.\
+Ce logiciel est diffusé dans le cadre d'un accord de \
+licence ou de non-divulgation et ne peut être utilisé \
+ou copié qu'en conformité avec les stipulations de\
+cet accord.\
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;
+[prompts]
+; 
+1 = "Mot de passe: "
+; End of prompts section.
+; Now we list the localized error message strings.
+[dcerrors]
+; ERRNOMEM
+1 = "Erreur fatale: échec de l'allocation de mémoire."
+; ERRNOREADSPACE
+2 = "Erreur d'E/S: espace insuffisant pour les données d'entrée."
+; ERRNOINFILE
+3 = "Impossible d'ouvrir le fichier d'entrée '%1!'."
+; ERRNOOUTFILE
+4 = "Impossible d'ouvrir le fichier de sortie '%1!'."
+; ERRBADARG
+5 = "defncopy: paramètre '%1!' inconnu."
+; ERRNOFLUSH
+6 = "Impossible de vider le fichier '%1!': '%2!'."
+; ERRNOOBJDEF
+7 = "La définition de l'objet '%1!' est introuvable."
+; ERRABORT
+8 = "defncopy a été abandonnée."
+; ERRBADDIRECTION
+9 = "(la direction doit être soit 'in', soit 'out'.)"
+; ERRNOOBJNAME
+10 = "(il faut fournir au moins un nom d'objet.)"
+; End of error strings section.

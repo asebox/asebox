@@ -1,0 +1,367 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=portuguese
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Todos os direitos reservados.\
+O uso, duplicação ou revelação por parte do Governo dos Estados Unidos\
+estão sujeitos às restrições estabelecidas nos subparágrafos do FAR\
+subparágrafo (c) (1) (ii) sobre os Direitos dos Dados \
+Técnicos e Software para Computador - CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA "
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "Impossível determinar a quantidade de memória necessária para o driver de protocolo "
+
+2 = NETE_NULLOPT, "É ilegal passar um ptr de opçes NULL para qualquer rotina da Net-Library "
+
+3 = NETE_UNKWOPT, "Opção da Net-Library é desconhecida "
+
+4 = NETE_UNKWINFCDE, "Código de informação do endereço solicitado é desconhecido."
+
+5 = NETE_BOOLREP, "O valor da opção deve ser ou NET_TRUE ou NET_FALSE "
+
+6 = NETE_NULLNETBUF, "É ilegal passar um ponteiro de buffer NULL para net_init()"
+
+7 = NETE_NOTSUPPORTED, "Recurso não suportado "
+
+8 = NETE_NULLHDLR, "É ilegal passar um ponteiro NULL NET_POLL de matriz "
+
+9 = NETE_BADENGINE, "O identificador do engine é inválido."
+
+10 = NETE_ALREADYINIT, "O processo atual já chamou called net_init()"
+
+11 = NETE_DICTNOTFOUND, "Impossível encontrar dicionário de endereçamento "
+
+12 = NETE_SRVNAMENOTFND, "Impossível encontrar atributo do nome do servidor especificado "
+
+13 = NETE_NODICTS, "Impossível localizar uma estrutura de dicionário de endereço disponível "
+
+14 = NETE_DRVINIT, "Erro durante a inicialização do driver de protocolo."
+
+15 = NETE_NODRIVERS, "Impossível localizar uma estrutura disponível de driver de protocolo "
+
+16 = NETE_LFNOSECTION , "Impossível localizar a seção de erro da Net-Library no arquivo de localização "
+
+17 = NETE_DICTSYNTAX, "Erro de sintaxe no dicionário de endereços "
+
+18 = NETE_ADRTYPNOTFND, "Impossível encontrar o atributo do tipo de endereço "
+
+19 = NETE_DICTCLOSE, "Erro de fechamento do dicionário de endereços "
+
+20 = NETE_NOEPS, "Impossível localizar uma estrutura disponível de ponto final "
+
+21 = NETE_EPINUSE, "Tentativa de utilizar um ponto final que já está sendo usado "
+
+22 = NETE_DRVPROPERTY, "Falha na chamada do driver de protocolo para determinar as propriedades "
+
+23 = NETE_DRVLISTEN, "Falha na chamada do driver de protocolo da Net-Lib para efetivar um listener "
+
+24 = NETE_DRVCONNECT, "Falha na chamada do driver de protocolo da Net-Lib para conectar dois pontos finais "
+
+25 = NETE_DRVACCEPT, "Falha na chamada do driver de protocolo para aceitar solicitar conexão de entrada "
+
+26 = NETE_BADIOSTATE, "Ponto final tem um estado de I/O inválido "
+
+27 = NETE_DRVNOTAVAIL, "Driver de protocolo Net-Lib especificado não está disponível "
+
+28 = NETE_BADPROPERTY, "Argumento inválido do tipo de propriedade "
+
+29 = NETE_DISCONNECT, "Operação de Net-Library encerrada devido a desconexão "
+
+30 = NETE_DRVEXIT, "Falha na rotina de saída do driver de protocolo da Net-Lib "
+
+31 = NETE_SUBACCEPT, "Falha na tentativa de enviar um aceitar por um dos listeners "
+
+32 = NETE_DRVREAD, "Falha na chamada do driver de protocolo da Net-Lib para ler dados "
+
+33 = NETE_RDDATLEN, "O tamanho dos dados que precisam ser lidos é maior que o buffer de leitura "
+
+34 = NETE_DRVREADOOB, "Chamada do driver de protocolo da Net-Lib para ler dados urgentes "
+
+35 = NETE_EXPNOTSUPPORT, "Este driver de protocolo Net-Lib não tem suporte para o uso de expedited data "
+
+36 = NETE_DRVWRITE, "Falha na chamada do driver de protocolo da Net-Lib para gravar dados "
+
+37 = NETE_NULLADDR, "É ilegal passar um ponteiro net_addr NULL "
+
+38 = NETE_NULLDICT, "É ilegal passar um ponteiro de dicionário NULL "
+
+39 = NETE_NULLSTATE, "É ilegal passar um ponteiro net_state NULL "
+
+40 = NETE_NULLRETRES, "É ilegal passar um ponteiro return_reason NULL "
+
+41 = NETE_NULLEP, "É ilegal passar um ponteiro de ponto final NULL "
+
+42 = NETE_NULLCBACK, "É ilegal passar um ponteiro de rotina de callback NULL "
+
+43 = NETE_NULLDICTNAME, "É ilegal passar um ponteiro de id de dicionário NULL "
+
+44 = NETE_NULLEXPFLAG, "É ilegal passar um ponteiro de indicador de expedited data NULL "
+
+45 = NETE_NULLDICTPTR, "É ilegal passar um ponteiro de tratamento de dicionário NULL "
+
+46 = NETE_NULLNEWEP, "É ilegal passar um ponteiro de tratamento de ponto final NULL "
+
+47 = NETE_NULLATTRLST, "É ilegal passar um ponteiro de informação de endereço NULL "
+
+48 = NETE_NULLADDRPTR, "É ilegal passar um ponteiro de tratamento de net_addr NULL "
+
+49 = NETE_NULLLASTENTRY, "É ilegal passar um ponteiro de última entrada NULL "
+
+50 = NETE_NULLRDDATA, "É ilegal passar um buffer de leitura NULL "
+
+51 = NETE_NOADDRS, "Impossível localizar uma estrutura de endereço disponível "
+
+52 = NETE_NULLBYTSRD, "É ilegal passar um ponteiro bytes_read NULL "
+
+53 = NETE_EPCLOSING, "O ponto final especificado está sendo fechado "
+
+54 = NETE_NULLWRDATA, "É ilegal passar um buffer de gravação NULL "
+
+55 = NETE_CANCELLED, "A operação solicitada foi cancelada devido a outros eventos."
+
+56 = NETE_NULLINTL, "É ilegal passar uma estrutura NET-INTL NULL "
+
+57 = NETE_NULLUSERPTR, "É ilegal passar um ponteiro user-pointer NULL "
+
+58 = NETE_BADDICT, "Tentativa de utilizar um ponteiro de dicionário inválido "
+
+59 = NETE_BADADDR, "Tentativa de utilizar um ponteiro de endereço inválido "
+
+60 = NETE_BADEP, "Tentativa de utilizar um ponteiro de ponto final  inválido "
+
+61 = NETE_DRVCLOSE, "Falha na chamada de protocolo de Net-Lib para fechar ponto final "
+
+62 = NETE_VERSION, "Driver de protocolo incompatível com a Net-Lib atual -- provavelmente é uma versão mais antiga da Net-Library "
+
+63 = NETE_NULLSUPPORT, "É ilegal passar um ponteiro NULL do parmetro 'suportado' para net_capability()"
+
+64 = NETE_BADPROCMODE, "Modo de processamento inválido "
+
+65 = NETE_FUNCCODE, "Código de função inválida passado para net_report()"
+
+66 = NETE_DRVINUSE, "Impossível fazer backup do driver -- ele ainda está sendo usado "
+
+67 = NETE_NCONNECTED, "Tentativa de I/O em um ponto final que não está conectado "
+
+68 = NETE_NOMULTIRW, "Impossível realizar mais de uma leitura "
+
+69 = NETE_NULLPREVMODE, "Ponteiro do modo anterior NULL é ilegal "
+
+70 = NETE_NULLREPORT, "Impossível chamar net_report() se não houver sido solicitado relatório através de um net_opt_report()"
+
+71 = NETE_LFILENAME, "Nome do arquivo de localização não especificado na chamada a net_intl_errstr()"
+
+72 = NETE_INTLOPEN, "Falha na tentativa de abrir o arquivo de localização usando intl_open "
+
+73 = NETE_UP1ENIGNE, "A versão monoprocessador de Net-Lib só tem autorização para 1 engine "
+
+74 = NETE_NULLCBPARM, "Parmetro de callback NULL ilegal para a rotina Net-Library "
+
+75 = NETE_NULLINFOLEN, "Ponteiro de comprimento de informação NULL ilegal para net_address_info()"
+
+76 = NETE_UNKWNMODE, "O modo callback solicitado é desconhecido "
+
+77 = NETE_BADEPNUM, "Número do ponto final solicitado é inválido "
+
+78 = NETE_NULLENGPTR, "É ilegal passar um ponteiro de engine NULL para net_engine_init()"
+
+79 = NETE_NULLENGINE, "É ilegal passar um ponteiro de engine NULL para qualquer rotina de Net-Library "
+
+80 = NETE_NOENGS, "Impossível localizar uma estrutura de engine disponível "
+
+81 = NETE_NOREQUESTS, "Impossível localizar uma estrutura de solicitação disponível "
+
+82 = NETE_BADMONFLAG, "A máscara solicitada de indicadores de monitor é inválida "
+
+83 = NETE_EPINCLOSE, "O ponto final desejado está sendo fechado "
+
+84 = NETE_BADMODE, "O modo solicitado não é suportado "
+
+85 = NETE_DRVLOAD, "Falha na tentativa de carregar o driver de protocolo "
+
+86 = NETE_DRVUNLOAD, "Falha na tentativa de fazer backup do protocolo "
+
+87 = NETE_MEMPOLICY, "A política de memória solicitada é inválida "
+
+88 = NETE_MEMREALLOC, "Falha na tentativa de realocar memória "
+
+89 = NETE_MEMALLOC, "Falha na tentativa de alocar memória "
+
+90 = NETE_NULLSIZE, "É ilegal passar um ponteiro de tamanho NULL para net_initsize()"
+
+91 = NETE_NULLSTATEPTR, "É ilegal passar um ponteiro NET_STATE NULL para net_init()"
+
+92 = NETE_NULLSPNLCKCNTPTR, "É ilegal passar um ponteiro de contagem spinlock NULL para net_spinlocks()"
+
+93 = NETE_ENGACTIVE, "Operação solicitada não pode ser realizada enquanto houver engines ativos "
+
+94 = NETE_UNKWIDTYPE, "Tipo de id do dicionário de endereços especificado é inválido "
+
+95 = NETE_SECNOTFOUND, "Seção do arquivo de configuração solicitado não encontrada "
+
+96 = NETE_DRVNOTLOADED, "O driver de rede para o protocolo de rede especificado não está carregado "
+
+97 = NETE_NODRVERRSTR, "Não há string de erro de driver de protocolo disponível para o erro atual "
+
+98 = NETE_SHRTINFOBUF, "O buffer de informações do endereço é demasiadamente pequeno."
+
+99 = NETE_NULLNFDS, "É ilegal passar um ponteiro nfds NULL para net_poll_external()"
+
+100 = NETE_BADNFDS, "O número solicitado de descritores de arquivo é inválido "
+
+101 = NETE_NULLRDBUF, "É ilegal passar um buffer de leitura NULL para Net-Library "
+
+102 = NETE_NULLWRTBUF, "É ilegal passar um buffer de gravação NULL para Net-Library "
+
+103 = NETE_INTLNXTSEC, "Falha na chamada a intl_nextsection "
+
+104 = NETE_INTLNXTVAL, "Falha na chamada a intl_nextvalue "
+
+105 = NETE_LFNOVALUE, "Entrada do arquivo de localização encontrada sem mensagens de erro "
+
+106 = NETE_BADERRID, "Entrada do arquivo de localização encontrada com um número de erro inválido "
+
+107 = NETE_INTLNXTENT, "Falha na chamada a intl_nextentry "
+
+108 = NETE_NULLINTLSIZE, "É ilegal passar um ponteiro de tamanho NULL para net_intl_size "
+
+109 = NETE_NULLINTLBUF, "É ilegal passar um ponteiro de buffer NULL para net_intl_errstr "
+
+110 = NETE_BADMSECS, "O valor do parmetro milisegundos é inválido "
+
+111 = NETE_NOLISTENERS, "É ilegal chamar net_accept se não há pontos finais de listening "
+
+112 = NETE_POLLNOTSUP, "A função net_poll_external() não é suportada "
+
+113 = NETE_NONEQUEUED, "Impossível esperar pela conclusão da solicitação quando não existe nenhuma na fila "
+
+114 = NETE_BADSIGNAL, "O sinal solicitado não é usado por Net-Library "
+
+115 = NETE_DICTINUSE, "Tentativa de acessar o dicionário de endereços com mais de uma tarefa "
+
+116 = NETE_NULLEXPFLG, "É ilegal passar um ponteiro de indicador expedido NULL para net_read "
+
+117 = NETE_NODRVCLASS, "Não há driver da classe de protocolo solicitada disponível "
+
+118 = NETE_BADSRCHATTR, "A lista de pesquisa de atributos contém uma entrada inválida "
+	
+119 = NETE_BADDICTID, "Id de dicionário inválido passado para net_dict_open "
+
+120 = NETE_INVALIDVERSION, "Versão inválida de Net-Library "
+
+121 = NETE_NULLVALUE, "O argumento de valor não pode ser NULL para esta opção "
+
+122 = NETE_NULLARG, "Argumento NULL inválido para a rotina "
+
+123 = NETE_BUFTOOSMALL, "O buffer é pequeno demais "
+
+124 = NETE_BADCMD, "Argumento inválido de comando "
+
+125 = NETE_NULLBUF, "Argumento de buffer nulo "
+
+126 = NETE_NULLPROPINFO, "Argumento propinfo nulo "
+
+127 = NETE_SETNOTSUPPORTED, "Definição das propriedades de Net-Lib não suportada "
+
+128 = NETE_INTLHOME, "Falha na chamada a intl_home "
+
+129 = NETE_INVOSERR, "Número de erro do SO é inválido "
+
+130 = NETE_RLIMITERR, "Impossível obter/definir o número máximo de arquivos abertos "
+
+131 = NETE_GETEF, "Impossível criar indicador de eventos "
+
+132 = NETE_FREEEF, "Impossível liberar indicador de eventos "
+
+133 = NETE_INSQTI, "Falha de inserção de elemento na fila de lock "
+
+134 = NETE_REMQHI, "Falha na remoção de elemento da fila de lock "
+
+135 = NETE_SETIMR, "Falha na tentativa de definir o temporizador "
+
+136 = NETE_CANTIM, "Falha na tentativa de cancelar o temporizador "
+
+137 = NETE_WAITFR, "Falha na tentativa de esperar por um evento "
+
+138 = NETE_CLREF, "Impossível apagar indicador de evento "
+
+139 = NETE_SETEF, "Impossível definir indicador de evento "
+
+140 = NETE_DRVATTNHDLR, "Falha na tentativa de instalação do ponteiro de atenção do driver de protocolo "
+
+141 = NETE_QUEOPEN, "Falha na tentativa de abertura da fila de thread de comunicação "
+
+142 = NETE_QUEREAD, "Falha na tentativa de leitura da fila do thread de comunicação "
+
+143 = NETE_QUEWRITE, "Falha na tentativa de gravação na fila do thread de comunicação "
+
+144 = NETE_QUECLOSE, "Falha na tentativa de fechamento da fila do thread de comunicação "
+
+145 = NETE_CREATETHREAD, "Falha na tentativa de fazer backup do thread "
+
+146 = NETE_EVENTCREATE, "Falha na tentativa de criar objeto de evento "
+
+147 = NETE_EVENTPOST, "Falha na tentativa de enviar objeto de evento "
+
+148 = NETE_EVENTCLEAR, "Falha na tentativa de apagar objeto de evento "
+
+149 = NETE_EVENTWAIT, "Falha na tentativa de esperar por objeto de evento "
+
+150 = NETE_CREATEMTX, "Falha na tentativa de criar uma semáfora mutex "
+
+151 = NETE_REQUESTMTX, "Falha na tentativa de obter propriedade exclusiva de uma semáfora mutex "
+
+152 = NETE_RELEASEMTX, "Falha na tentativa de liberar uma semáfora mutex "
+
+153 = NETE_DESTROYMTX, "Falha na tentativa de destruir uma semáfora mutex "
+
+154 = NETE_THRDSPND, "Falha na tentativa de suspender um thread "
+
+155 = NETE_THRDRESUME, "Falha na tentativa de reiniciar o thread "
+
+156 = NETE_THRDKILL, "Falha na tentativa de eliminar thread "
+
+157 = NETE_SETSIGHDLR, "Impossível definir o ponteiro apropriado de sinal "
+
+158 = NETE_SELECTFAIL, "Falha na chamada a select()"
+
+159 = NETE_FDOFLOW, "Não há mais descritores de arquivo disponíveis; o listener está sendo desativado "
+
+160 = NETE_NOPOLLSTRATS, "Não há mais estruturas disponíveis de estratégias de agrupamento "
+
+161 = NETE_NOSIGNALS, "A Net-Library não tem suporte para um driver de protocolo que gere sinais "
+
+162 = NETE_UNKNOWN, "Erro desconhecido em Net-Library "
+
+164 = NETE_OODDRIVER, "O driver tem uma versão anterior àquela suportada "
+
+165 = NETE_OSGENERIC, "Erro do Sistema Operacional - %1!"
+
+166 = NETE_DRVLOCFAIL, "Falha na abertura do arquivo de localização de driver "
+
+167 = NETE_OSOBJECT, "Falha na criação de um Objeto do SO "
+
+168 = NET_QPRFSTR, "Erro de leitura do arquivo de endereços "
+
+170 = NETE_BADHANDLER, "Ponteiro de sinal inválido "
+
+; end of tcllib error strings
+;

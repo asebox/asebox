@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > IQStatus </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 30 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_IQStatus (
+     Timestamp datetime not null,
+     Interval int not null,
+     NumberMainDBSpace int not null,
+     NumberTempDBSpace int not null,
+     NumberLocalDBSpace int not null,
+     PageSizeBytes float not null,
+     BlockSizeBytes  float not null,
+     BlocksPerPage  float not null,
+     MainIQUsedBlocks  float not null,
+     MainIQCapacityBlocks  float not null,
+     TempIQUsedBlocks  float not null,
+     TempIQCapacityBlocks  float not null,
+     LocalIQUsedBlocks  float not null,
+     LocalIQCapacityBlocks  float not null,
+     OtherVersionsCount  float not null,
+     OtherVersionsMB  float not null,
+     ActiveVersionsCount  float not null,
+     ActiveVersionsCreateMB  float not null,
+     ActiveVersionsDeleteMB  float not null,
+     MainIQBufferCapacityCount  float not null,
+     MainIQBufferCapacityMB  float not null,
+     TempIQBufferCapacityCount  float not null,
+     TempIQBufferCapacityMB  float not null,
+     CurDynMemoryMB  float not null,
+     MaxDynMemoryMB  float not null,
+     MainIQBufferUsedCount  float not null,
+     MainIQBufferLockedCount  float not null,
+     TempIQBufferUsedCount  float not null,
+     TempIQBufferLockedCount  float not null,
+     d_MainLogicalReads  float not null,
+     d_MainPhysicalReads  float not null,
+     d_MainPhysicalWrites  float not null,
+     d_TempLogicalReads  float not null,
+     d_TempPhysicalReads  float not null,
+     d_TempPhysicalWrites  float not null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_IQStatus (Timestamp, Interval )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_IQStatus" >
+  delete ?SERVERNAME?_IQStatus where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

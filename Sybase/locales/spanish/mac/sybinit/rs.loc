@@ -1,0 +1,988 @@
+
+; comment character is semicolon.
+; "rssrv.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) rssrv.hdr 99.1 11/2/93 17:45:09
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2003 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. One Sybase Drive, Dublin, CA 94568, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+
+100 = "'%1!' comienza por 'rs_'. Las entidades definidas por el usuario no pueden comenzar con el prefijo 'rs_'.","%s"
+101 = "ID_Server_user y RS_RS_user ('%1!') son iguales, pero sus contraseñas son distintas. Si especifica el mismo nombre para ambos, sus contraseñas también deben ser iguales.","%s"
+102 = "LTM_RS_user y ID_user ('%1!') son iguales, pero sus contraseñas son distintas. Si especifica el mismo nombre para ambos, las contraseñas también deben ser iguales.","%s"
+103 = "El nombre de servidor no puede ser NULL",""
+104 = "El nombre de base de datos no puede ser NULL",""
+105 = "El tamaño no puede ser NULL",""
+106 = "Sybase recomienda no utilizar el \
+dispositivo master para la base de datos RSSD. Si decide usar el dispositivo \
+master, asegúrese de que éste dispone de espacio suficiente.",""
+107 = "El nombre de ruta física para este dispositivo no puede ser NULL.",""
+108 = "El tamaño no puede ser NULL",""
+109 = "El tamaño de la partición no puede ser NULL",""
+110 = "El tamaño de la partición especificada ('%1!') es demasiado pequeño. El tamaño mínimo es '%2!' megabytes.", "%s %s"
+111 = "El tamaño no puede ser NULL",""
+112 = "El tamaño de la partición no puede ser NULL",""
+113 = "La ID de sitio especificada ('%1!') es inferior al valor mínimo. ('%2!')", "%d %d"
+114 = "La ID de sitio especificada ('%1!') es superior al valor máximo. ('%2!')", "%d %d"
+115 = "La DBID especificada ('%1!') es inferior al valor mínimo. ('%2!')", "%d %d"
+116 = "La DBID especificada ('%1!') es superior al valor máximo. ('%2!')", "%d %d"
+117 = "El usuario primario de RSSD no puede ser sa. Cambie el nombre de usuario.",""
+118 = "El usuario primario de RSSD ('%1!') no puede ser el mismo que el usuario de mantenimiento de RSSD. Cambie uno de los nombres de usuario.","%s"
+119 = "El usuario de mantenimiento de RSSD no puede ser sa. Cambie el nombre de usuario.",""
+120 = "LTM_RS_user y RS_RS_user ('%1!') son iguales, pero sus contraseñas son distintas. Si especifica los mismos nombres, las contraseñas también deben ser iguales.", "%s"
+121 = "El atributo 'do_add_id_server' está definido en no, pero no hay ninguna entrada en el archivo de interfaces para el ID Server '%1!'. ", "%s"
+122 = "El atributo 'do_add_replication_server' está definido en no, pero no hay ninguna entrada en el archivo de interfaces para el Replication Server '%1!'. ", "%s"
+123 = "El atributo 'do_add_ltm' está definido en no, pero no hay ninguna entrada en el archivo de interfaces para el Log Transfer Manager '%1!'.", "%s"
+124 = "El nombre de ID Server no puede ser igual que el nombre de Replication Server ('%1!') si este Replication Server no es el ID Server.","%s %s"
+125 = "El nombre de Replication Server y el nombre del Log Transfer Manager ('%1!') no pueden ser iguales.","%s"
+126 = "El nombre de ID Server y el nombre de Log Transfer Manager ('%1!') no pueden ser iguales.","%s"
+127 = "El nombre del ID Server ('%1!') no es igual que el nombre del Replication Server ('%2!').","%s %s"
+128 = "No hay ninguna entrada para el servidor '%1!' en el archivo de interfaces. El servidor debe tener una entrada en el archivo de interfaces.","%s"
+129 = "La partición de disco de Replication Server ('%1!') no existe.","%s"
+130 = "'%2!' tiene una cantidad máxima de espacio libre de '%3!' megabytes. Se necesitan '%1!' megabytes.","%s %s %f"
+131 = "SQL Server y el ID Server ('%1!') no pueden tener el mismo nombre.","%s"
+132 = "SQL Server y el Replication Server ('%1!') no pueden tener el mismo nombre.","%s"
+133 = "SQL Server y el Log Transfer Manager ('%1!') no pueden tener el mismo nombre.","%s"
+134 = "'%1!' es demasiado largo. La longitud máxima asciende a '%2!' caracteres.","%s %d"
+135 = "'%1!' no encontrado. Instale LTM si es necesario. Consulte la ayuda para obtener información detallada.","%s"
+136 = "El valor vstart ('%1!') debe ser inferior al tamaño total de la partición ('%2!').","%s %d"
+137 = "vstart no puede ser NULL.",""
+138 = "Sybase recomienda no utilizar el \
+dispositivo master para incluir el diario de RSSD. Si decide utilizar el \
+dispositivo master, asegúrese de que éste dispone de espacio suficiente.",""
+139 = "'%1!' es un diccionario. Es necesario especificar un nombre de archivo.","%s"
+140 = "Ambos atributos 'rs_requires_ltm' y \
+'rs_needs_repagent' no pueden definirse en sí.",""
+141 = "El nombre ERSSD no puede ser NULL.",""
+142 = "El directorio '%1!' no existe.","%s"
+143 = "Nombre de dispositivo de sistema '%1!' no válido: se permiten 30 caracteres máx.", "%s"
+200 = "verifique información de usuario y contraseña",""
+201 = "actualice información de interfaces para ID Server",""
+202 = "actualice información de interfaces para Replication Server",""
+203 = "actualice información de interfaces para Log Transfer Manager",""
+204 = "cierre Replication Server",""
+205 = "cierre Log Transfer Manager",""
+206 = "configure la Base de datos del sistema de Replication Server",""
+207 = "cree el archivo de configuración de Replication Server",""
+208 = "cree el archivo de configuración de Log Transfer Manager",""
+209 = "cree el archivo runserver de Replication Server",""
+210 = "cree el archivo runserver de Log Transfer Manager",""
+211 = "verifique el SQL Server de RSSD",""
+212 = "inicie Replication Server",""
+213 = "configure Replication Server",""
+214 = "inicie Log Transfer Manager",""
+215 = "verifique los usuarios y sus contraseñas",""
+216 = "configure la base de datos para la réplica de datos",""
+217 = "configure la base de datos para datos primarios",""
+218 = "verifique la base de datos",""
+219 = "verifique SQL Server",""
+220 = "defina la conexión con la base de datos",""
+221 = "actualice la RSSD",""
+222 = "rebaje la RSSD a versión inferior",""
+223 = "active la codificación para un Replication Server", ""
+224 = "active la codificación para un LTM", ""
+225 = "modifique la contraseña del archivo de configuración de Replication Server", ""
+226 = "modifique la contraseña del archivo de configuración de LTM", ""
+227 = "cargue un guión SQL en una base de datos", ""
+228 = "configure Replication Agent",""
+229 = "inicie Replication Agent",""
+230 = "detenga Replication Agent", ""
+231 = "convierta de LTM a Replication Agent", ""
+232 = "inicializar ERSSD", ""
+233 = "configurar BD de sistema de servidor de replicación cifrado",""
+300 = "No es posible conectarse al SQL Server '%1!' de RSSD. Asegúrese de que SQL Server está ejecutándose y de que la contraseña 'sa' es correcta.","%s"
+301 = "No es posible ejecutar la consulta '%2!' en el servidor '%1!'.","%s %s"
+302 = "El SQL Server '%1!' de RSSD no admite replicación. Consulte el Release Bulletin para obtener información de compatibilidad.","%s"
+303 = "No es posible localizar el guión '%1!' para configurar la RSSD.","%s"
+304 = "La Base de datos del sistema de Replication Server '%2!' para el SQL Server '%1!' de RSSD no existe. Especifique una base de datos existente o solicite a rs_init que la cree.","%s %s"
+305 = "No es posible crear el dispositivo '%1!' porque ya existe. Especifique otro dispositivo si desea que rs_init lo cree.","%s"
+306 = "Creando la Base de datos del sistema de Replication Server '%1!'.","%s"
+307 = "Creando el dispositivo lógico '%1!' para la base de datos RSSD.","%s"
+308 = "Dispositivo lógico '%1!' creado para la base de datos RSSD.","%s"
+309 = "Creando el dispositivo lógico '%1!' para el diario de RSSD.","%s"
+310 = "Dispositivo lógico '%1!' creado para el diario de RSSD.","%s"
+311 = "No es posible crear la base de datos '%1!' en el dispositivo '%2!'. La base de datos necesita '%4!' páginas, pero el dispositivo sólo dispone de '%3!'.", "%s %s %d %d"
+312 = "No es posible convertir '%2!' en el DBO de '%1!'.", "%s %s"
+313 = "Se ha verificado que el usuario primario '%1!' está definido en la base de datos '%2!'.", "%s %s"
+314 = "Fallo al añadir el usuario primario '%2!' a la base de datos '%1!'.","%s %s"
+315 = "Login primario '%1!' añadido a la base de datos '%2!' como usuario.","%s %s"
+316 = "Fallo al añadir el login primario '%1!'.", "%s"
+317 = "Se ha verificado que el usuario de mantenimiento '%1!' se ha definido en la base de datos '%2!'.", "%s %s"
+318 = "Login de usuario de mantenimiento '%1!' añadido a la base de datos '%2!'.","%s %s"
+319 = "Fallo al añadir el usuario de mantenimiento '%2!' a la base de datos '%1!'.","%s %s"
+320 = "Fallo al añadir el login de mantenimiento '%1!'.", "%s"
+321 = "Fallo del usuario primario '%1!' al hacer login en el SQL Server '%2!'. La contraseña suministrada puede ser incorrecta.", "%s %s"
+322 = "Fallo del usuario de mantenimiento '%1!' al hacer login en el SQL Server '%2!'. La contraseña suministrada puede ser incorrecta.", "%s %s"
+323 = "Cargando la Base de datos del sistema de Replication Server en '%1!'. Tardará unos minutos.","%s"
+324 = "No es posible cargar la Base de datos del sistema de Replication Server en '%1!'.", "%s"
+325 = "La Base de datos del sistema de Replication Server se ha cargado correctamente en '%1!'.", "%s"
+326 = "Fallo del usuario DBO '%1!' al hacer login en el SQL Server '%2!' de RSSD. La contraseña suministrada puede ser incorrecta.", "%s %s"
+327 = "'%1!' se convirtió en propietario de la base de datos RSSD '%2!'.", "%s %s"
+328 = "No es posible definir el punto de truncado en IGNORE.",""
+329 = "El punto de truncado se ha definido correctamente en IGNORE porque el Replication Server no contendrá datos primarios.",""
+330 = "No es posible purgar el diario de base de datos de '%1!'.","%s"
+331 = "El diario de base de datos '%1!' se ha truncado correctamente.","%s"
+332 = "No es posible definir el punto de truncado en VALID.",""
+333 = "Añadiendo usuarios de mantenimiento y primario al grupo rs_systabgroup.", ""
+334 = "No es posible cambiar el grupo del usuario '%1!'.", "%s"
+335 = "Los usuarios de mantenimiento y primario se han añadido correctamente al grupo rs_systabgroup.", ""
+336 = "Archivo de configuración para Replication Server '%%s'. Creado por rs_init.","%s"
+337 = "Archivo de configuración para Log Transfer Manager '%%s'. Creado por rs_init.","%s"
+338 = "No es posible abrir el archivo de configuración '%1!' de Replication Server.","%s"
+339 = "No es posible abrir el archivo de configuración '%1!' de Log Transfer Manager.","%s"
+340 = "No es posible abrir el archivo runserver '%1!' de Replication Server.","%s"
+341 = "Archivo runserver para Replication Server '%%s'. Creado por rs_init.","%s"
+342 = "No es posible abrir el archivo runserver '%1!' de Log Transfer Manager.","%s"
+343 = "Archivo runserver para Log Transfer Manager '%%s'. Creado por rs_init.","%s"
+344 = "No es posible conectarse a Replication Server '%1!'.","%s"
+345 = "Modificando la conexión con '%1!' para permitir a LTM/Replication Agent que se conecte con Replication Server.","%s"
+346 = "Añadiendo partición '%1!'.","%s"
+347 = "Partición '%1!' añadida correctamente.","%s"
+348 = "No es posible modificar la conexión con '%1!'.","%s"
+349 = "Conexión con '%1!' modificada correctamente.","%s"
+350 = "La base de datos '%1!' ya existe. Se omitirá y volverá a crearse.","%s"
+351 = "Conectando con Replication Server y definiendo usuarios para LTM/Replication Agent y otros Replication Servers.",""
+352 = "Usuario definidos correctamente en Replication Server.",""
+353 = "Aplazando los comandos de configuración de Replication Server. Los comandos estarán en el archivo '%1!'.","%s"
+354 = "No es posible crear el archivo '%1!'.","%s"
+355 = "Se han escrito los comandos de configuración de Replication Server.",""
+356 = "No se pudo encontrar ninguna entrada para el SQL Server '%1!' de RSSD en el archivo de interfaces.", "%s"
+357 = "No se pudo determinar si Replication Server '%1!' está ejecutándose. Fallo al hacer login como usuario '%2!' con contraseña '%3!'.","%s %s %s"
+358 = "No se pudo determinar si el Log Transfer Manager '%1!' está ejecutándose. Fallo al hacer login como usuario '%2!' con contraseña '%3!'.","%s %s %s"
+359 = "No se pudo determinar si el ID Server '%1!' está ejecutándose. Fallo al hacer login como usuario '%2!' con contraseña '%3!'.","%s %s %s"
+360 = "El ID Server '%1!' no está ejecutándose. Inícielo y vuelva a realizar la instalación.","%s"
+361 = "No es posible hacer login en el Replication Server '%1!' como usuario '%2!'.","%s %s"
+362 = "Se ha verificado que '%2!' puede hacer login en el Replication Server '%1!'.", "%s %s"
+363 = "Se ha verificado que el DBO '%2!' puede hacer login en el SQL Server '%1!'.", "%s %s"
+364 = "No se pudo encontrar ninguna entrada para el SQL Server '%1!' en el archivo de interfaces.", "%s"
+365 = "No es posible conectarse al SQL Server '%1!'. Asegúrese de que SQL Server está ejecutándose y de que la contraseña SA es correcta.","%s"
+366 = "La base de datos '%2!' no existe en el SQL Server '%1!'.","%s %s"
+367 = "El SQL Server '%1!' no admite replicación. No puede contener datos primarios. Consulte el Release Bulletin para obtener información de compatibilidad.","%s"
+368 = "Se ha verificado que el SQL Server '%1!' admite replicación.","%s"
+369 = "Se ha verificado que la base de datos '%1!' existe.","%s"
+370 = "Se ha verificado que el usuario de mantenimiento '%1!' tiene alias en la base de datos '%2!'.", "%s %s"
+371 = "Se ha verificado que el usuario de mantenimiento '%1!' puede hacer login en el SQL Server '%2!'.", "%s %s"
+372 = "No es posible localizar el guión '%1!' para configurar la réplica de base de datos.","%s"
+373 = "Cargando el guión '%1!' en la base de datos '%2!'.","%s %s"
+374 = "Error al cargar '%1!' para SQL Server.","%s"
+375 = "Guión '%1!' cargado correctamente.","%s"
+376 = "Concediendo permisos sobre las funciones 'lastcommit'.",""
+377 = "Permisos concedidos al usuario de mantenimiento sobre las funciones 'lastcommit'.",""
+378 = "No es posible localizar el guión '%1!' para configurar la base de datos primaria.","%s"
+379 = "Concediendo permisos sobre las funciones 'lastcommit' y rs_marker.",""
+380 = "Permisos concedidos al usuario de mantenimiento sobre las funciones 'lastcommit' y rs_marker.",""
+381 = "Añadiendo la base de datos '%1!' al sistema de replicación.", "%s"
+382 = "'create connection' se ha ejecutado correctamente. Ahora, el Replication Server '%2!' administra la base de datos '%1!'.", "%s %s"
+383 = "rs_init necesita información adicional. Consulte las pantallas marcadas 'Incomplete' y proporcione la información necesaria.",""
+384 = "El Replication Server'%1!' no está ejecutándose. Inícielo y vuelva a realizar la configuración.","%s"
+385 = "El nombre de la base de datos y el del dispositivo de diario ('%1!') no pueden ser iguales si rs_init va a crearlos.","%s"
+386 = "Definiendo contraseña para el usuario '%1!'.","%s"
+387 = "Contraseña definida correctamente para el usuario '%1!'.","%s"
+388 = "Cargando procedimientos almacenados de Replication Server en la RSSD '%1!'.","%s"
+389 = "No es posible cargar procedimientos almacenados de Replication Server en la RSSD '%1!'.", "%s"
+390 = "Un LTM recupera transacciones de datos primarios o ejecuciones de procedimientos asíncronos desde un diario de transacciones de base de datos.",""
+391 = "rs_init necesita información adicional. Suministre dicha información.",""
+392 = "%1!.","%s"
+393 = "No es posible ascender o rebajar una RSSD recientemente instalada a una versión superior o inferior. Verifique el archivo de recursos.",""
+394 = "Los parámetros siguientes tienen los valores por defectos suministrados.",""
+395 = "Es posible ascender o rebajar una RSSD a una versión superior \
+o inferior, pero no a ambas. Verifique el archivo de recursos.",""
+396 = "El Replication Server '%1!' puede reiniciarse ahora.","%s" 
+397 = "No es posible crear un nombre temporal para una copia del archivo '%1!'.","%s" 
+398 = "Error en el archivo de configuración '%1!', línea '%2!'.","%s %s" 
+399 = "Error en el archivo de configuración '%1!' al codificar la contraseña '%2!'.","%s %s" 
+400 = "No es posible abrir el archivo de configuración '%1!'.","%s" 
+401 = "Suministre un atributo de archivo de configuración que sea una contraseña. ('%1!' no es un atributo de contraseña)","%s" 
+402 = "El archivo de configuración '%1!' no existe.", "%s"
+403 = "Fallo al codificar contraseñas en la RSSD", ""
+404 = "Se han codificado las contraseñas del archivo de configuración '%1!'.","%s" 
+405 = "Las contraseñas del archivo de configuración '%1!' no se han codificado debido a un error.","%s" 
+406 = "El parámetro de configuración '%1!' del archivo '%2!' ha cambiado.","%s %s" 
+407 = "El parámetro de configuración '%1!' del archivo '%2!' no ha cambiado debido a un error.","%s %s" 
+408 = "Se ha proporcionado la operación '%1!' incorrecta.","%s"
+409 = "Se ha proporcionado la enumeración de tareas '%1!' incorrecta.","%d"
+410 = "Se ha configurado un atributo de operación de RS no válido.",""
+411 = "No es posible disponer de new_config, rs_upgrade ni rs_downgrade en la configuración del archivo de recursos si se utiliza el atributo rs_operation.",""
+412 = "Se admite la codificación de contraseñas en la versión '%1!' o superior de RSSD. La versión actual de RSSD es '%2!'.","%d %d"
+413 = "El Log Transfer Manager '%1!' puede reiniciarse ahora.","%s"
+414 = "Fallo al convertir mensajes de guión SQL en juegos de caracteres del servidor.",""
+415 = "Fallo al configurar tablas de conversión de juegos de caracteres. Verifique la instalación del archivo locale en el directorio de versión.",""
+416 = "Se ha concedido el rol de replicación al usuario de mantenimiento ",""
+417 = "ADVERTENCIA: ha fallado la concesión del rol de replicación al usuario %1!. ","%s"
+418 = "ADVERTENCIA: algunas funciones de 11.0 requieren un SQL Server más reciente. Es preciso conceder el rol de replicación manualmente",""
+419 = "El usuario de mantenimiento '%1!' no existe en el SQL server primario '%2!'.","%s %s"
+420 = "ADVERTENCIA: verifique que las suids de la tabla syslogins de SQL server de Standby se corresponden con syslogins de SQL Server activo",""
+421 = "El SQL Server '%1!' no admite \
+subprocesos de Replication Agent.","%s"
+422 = "El SQL Server '%1!' admite subprocesos de Replication Agent. \
+Se utilizará un Replication Agent en lugar de un LTM.","%s"
+423 = "Se ha asignado nombre al SQL Server '%1!' y su nombre físico\
+'%2!' es diferente del nombre esperado. Ejecute sp_addserver en '%1!'\
+para añadir el SQL Server con el nombre físico correcto.", "%s %s"
+424 = "sp_addserver se ha ejecutado correctamente en \
+el SQL Server '%1!'.","%s"
+425 = "La variable de entorno SYBASE_REP no está \
+definida. Se establecerá a '%1!' porque rs_init está siendo llamado \
+desde este directorio. ", "%s"
+426 = "La variable de entorno SYBASE_REP \
+ha sido temporalmente establecida a '%1!' porque rs_init está siendo llamado \
+desde este directorio. ", "%s"
+427 = "No es posible definir el atributo de directorio \
+de componente Replication Server.", ""
+428 = "No es posible determinar el directorio de componente REP \
+desde '%1!'.", "%s"
+429 = "Directorio de componente:",   ""
+430 = "El archivo de configuración '%1!' existente ha sido renombrado '%2!'.","%s %s"
+431 = "No se puede obtener nº de puerto RSSD cifrado \
+del archivo de interfaz. Asegúrese de que la entrada de interfaz '%1!' existe \
+y es válida.", "%s"
+432 = "Directorio de copia de seg. ERSSD no puede coincidir \
+con la BD o el directorio de reg. de transacción. ", ""
+433 = "No edite las siguientes líneas ERSSD.", ""
+434 = "'%1!' no se encontró en el archivo de config. '%2!'.","%s %s"
+500 = "CONFIGURE EL SISTEMA DE REPLICACIÓN",""
+501 = "",""
+502 = "CONFIGURE EL SISTEMA DE REPLICACIÓN", ""
+503 = "Instale un Replication Server nuevo\\n\\n\
+Seleccione esta opción para instalar un Replication Server nuevo.\\n\\n\
+Añada una base de datos al sistema de replicación\\n\\n\
+Seleccione esta opción para añadir una base de datos primaria o una \
+réplica de base de datos al sistema de replicación .\\n\\n\
+Actualice un Replication Server existente\\n\\n\
+Seleccione esta opción para actualizar las tablas del sistema de una \
+base de datos del sistema de Replication Server y (opcionalmente) del \
+archivo de configuración.\\n\\n\
+Rebaje la RSSD a una versión inferior para un Replication Server \
+existente\\n\\n\
+Seleccione esta opción para devolver las tablas del sistema de una RSSD a \
+un estado compatible con una versión anterior de Replication Server.\\n\\n\
+Active la codificación de contraseña para un Replication Server\\n\\n\
+Seleccione esta opción para activar la codificación de contraseña \
+para un Replication Server.\\n\\n\
+Active la codificación de contraseña para un LTM\\n\\n\
+Elija esta opción para activar la codificación de contraseña para \
+un LTM\\n\\n\Modifique la contraseña del archivo de configuración de \
+un Replication Server\\n\\n\
+Seleccione esta opción para cambiar una contraseña en un archivo \
+de configuración de de Replication Server.\\n\\n\
+Modifique una contraseña en un archivo de configuración de LTM\\n\\n\
+Seleccione esta opción para cambiar una contraseña en un archivo de \
+configuración de LTM", ""
+504 = "Instale un Replication Server nuevo",    ""
+505 = "Añada una base de datos al sistema de replicación",    ""
+506 = "REPLICATION SERVER NUEVO",    ""
+507 = "",    ""
+508 = "REPLICATION SERVER NUEVO",    ""
+509 = "Para instalar un Replication Server nuevo, complete la \
+información necesaria en cada pantalla. rs_init puede completar \
+la configuración cuando el estado de cada pantalla es 'Completed'.", ""
+510 = "Información de ID Server",    ""
+511 = "Información de Replication Server",    ""
+512 = "Base de datos del sistema de Replication Server",    ""
+513 = "Partición de disco",    ""
+514 = "Conexiones de sitio remoto",    ""
+515 = "Log Transfer Manager de base de datos",    ""
+516 = "INFORMACIÓN DE ID SERVER",    ""
+517 = "",    ""
+518 = "INFORMACIÓN DE ID SERVER", ""
+519 = "Usuario de ID Server:\\n\\n\
+Registre un nombre de login que otros Replication Servers \
+utilizarán para conectarse con ID Server. rs_init crea este nombre \
+de login si el Replication Server que está instalando es el ID Server.\\n\\n\
+Contraseña del ID Server:\\n\\nRegistre la contraseña para el \
+usuario de ID Server.\\n\\n\
+Iniciando la ID de Replication Server:\\n\\n\
+Registre la primera ID de Replication Server que va a usarse en este dominio \
+de ID Server. Esto sólo es necesario si está configurando varios dominios de \
+ID Server. El número de ID debe estar comprendido entre 16777216 y 33554431. \
+El valor por defecto es 16777216. \
+Consulte Replication Server Installation Guide \
+para obtener más información.\\n\\n\
+Iniciando ID de base de datos:\\n\\n\
+Registre la primera ID de base de datos que va a usar en este dominio de \
+ID Server. Esto sólo es necesario si está configurando varios dominios de \
+ID Server. El número de ID debe estar comprendido entre 101 y 16777215. \
+El valor por defecto es 101. \
+Consulte Replicación Server Installation Guide para obtener más  \
+más información.", ""
+520 = "Nombre de ID Server: ",    ""
+521 = "Usuario de ID Server: ",    ""
+522 = "Contraseña de ID Server: ",    ""
+523 = "Introduzca el nombre de ID Server: ",    ""
+524 = "Introduzca el nombre de usuario de ID Server: ",    ""
+525 = "Introduzca la contraseña para el usuario de ID Server: ",    ""
+526 = "Introduzca el nombre del Replication Server: ",    ""
+527 = "INFORMACIÓN DE REPLICATION SERVER",    ""
+528 = "",    ""
+529 = "INFORMACIÓN DE REPLICATION SERVER",    ""
+530 = "¿Es este Replication Server el ID Server?\\n\\n\
+Seleccione Sí, si está instalando el ID Server.\\n\\n\
+Diario de errores de Replication Server\\n\\nEspecifique la ubicación de \
+del archivo de diario de errores de Replication Server.\\n\\n\
+Archivo de configuración de Replication Server:\\n\\nEspecifique la \
+ubicación del archivo de configuración de \
+Replication Server. Replication Server lee el archivo de configuración \
+al iniciarse.\\n\\n\
+Codificación de contraseña en Replication Server\\n\\n\
+Si selecciona sí\, rs_init instala el Replication Server con \
+la codificación de contraseña activada. El archivo de configuración \
+de Replication Server contendrá contraseñas codificadas. Las tablas \
+rs_users y rs_maintusers de RSSD contendrán \
+contraseñas codificadas.", ""
+531 = "Nombre de Replication Server ",    ""
+532 = "RSSD se replicará: ",    ""
+533 = "Nombre de ruta de acceso completo de una partición de disco para Replication Server: ",  ""
+534 = "Nombre de identificador lógico para la partición de disco: ",    ""
+535 = "Tamaño, en megabytes, de la partición de disco: ",    ""
+536 = "INFORMACIÓN DE PARTICIÓN DE DISCO",    ""
+537 = "",    ""
+538 = "INFORMACIÓN DE PARTICIÓN DE DISCO",    ""
+539 = "Ruta de acceso de partición de disco\\n\\nRegistre el nombre de \
+ruta de acceso completo de una partición de disco para \
+Replication Server. Es posible añadir más particiones \
+después de instalar Replication Server. Consulte \
+``Capacity Planning'' en Replication Server Design Guide para obtener \
+ayuda sobre cómo determinar la cantidad de espacio necesaria.\\n\\n\
+Identificador lógico para partición de disco\\n\\nRegistre un nombre de \
+identificador lógico para la partición de disco de Replication Server. \
+Este nombre se usa en comandos RCL y en mensajes de Replication Server \
+para identificar la partición de disco. Consulte Replication Server \
+Administration Guide para obtener más \
+información.\\n\\n\
+Tamaño de partición de disco\\n\\nRegistre el tamaño (en MB) de la \
+partición de disco. No especifique el tamaño en bloques de 2K. La \
+partición debe ser de 10 MB como mínimo.\\n\\n\
+Valor Vstart para la partición\\n\\nRegistre el desplazamiento \
+(en MB) en la partición de disco donde Replication Server debe \
+comenzar a escribir.",    ""
+540 = "Ruta de acceso de partición de disco: ",    ""
+541 = "Identificador lógico para partición de disco: ",    ""
+542 = "Tamaño de partición de disco: ",    ""
+543 = "Nombre de login de Replication Server usado por otros Replication Servers: ",    ""
+544 = "Contraseña para el nombre de login de Replication Server: ",    ""
+545 = "CONEXIONES DE SITIO REMOTO",    ""
+546 = "",    ""
+547 = "CONEXIONES DE SITIO REMOTO",    ""
+548 = "Nombre de login de Replication Server\\n\\n\
+Registre el nombre de login de Replication Server que otros \
+Replication Servers usarán para conectarse con este Replication Server. \
+rs_init crea este nombre de login en el Replication Server.\\n\\n\
+Contraseña de Replication Server\\n\\nRegistre la contraseña para el \
+nombre de login de Replication Server.", ""
+549 = "Nombre de login de Replication Server: ",    ""
+550 = "Contraseña de Replication Server: ",    ""
+551 = "Nombre de LTM: ",    ""
+552 = "Nombre de login usado por LTM para conectarse a RS: ", ""
+553 = "Contraseña para el nombre de login de RS: ",    ""
+554 = "Usuario de administración para LTM: ",    ""
+555 = "Contraseña para el usuario de administración de LTM: ",    ""
+556 = "REPLICATION AGENT O LTM DE BASE DE DATOS",    ""
+557 = "",    ""
+558 = "REPLICATION AGENT O LTM DE BASE DE DATOS",    ""
+559 = "Usuario de RS\\n\\n\
+Registre un nombre de login de Replication Server \
+que Replication Agent(LTM) utilizará para conectarse a \
+Replication Server. \\n\\n\
+Contraseña de RS\\n\\n\
+Registre la contraseña para el nombre de login de Replication Server.\\n\\n\
+Usuario de administración de LTM\\n\\n\
+Registre el nombre de login para el usuario que inicia \
+y cierra el servidor de LTM.\\n\\n\
+Contraseña de administración de LTM\\n\\n\
+Registre la contraseña para el nombre de login de usuario de administración \
+de LTM.\\n\\n\
+Diario de errores de LTM\\n\\n\
+Especifique la ubicación del archivo de diario de errores de LTM.\\n\\n\
+Archivo de configuración de LTM\\n\\n\
+Especifique la ubicación del archivo de configuración de LTM.\\n\\n\
+Codificación de contraseña de LTM\\n\\n\
+Elija Sí para codificar contraseñas en el archivo de configuración de LTM.\
+Si elige No, las contraseñas del archivo de configuración de LTM \
+no se codifican.\\n\\n\
+Usuario DBO\\n\\n\
+Registre el nombre del propietario de base de datos para la base de datos. \
+LTM usa esta cuenta para leer el diario de transacciones. Si \
+deja esta información en blanco\, LTM usa la cuenta 'sa' para \
+hacer un barrido del diario.\\n\\n\
+Contraseña de DBO\\n\\n\
+Registre la contraseña para el nombre de login de usuario DBO.",    ""
+560 = "Nombre de LTM: ",    ""
+561 = "Usuario de RS: ", ""
+562 = "Contraseña de RS: ",    ""
+563 = "Usuario de administración de LTM: ",    ""
+564 = "Contraseña de administración de LTM: ",    ""
+565 = "Nombre del SQL Server que administrará \
+la RSSD: ",    ""
+566 = "Nombre de la base de datos RSSD: ",    ""
+567 = "Nombre del usuario SA: ",    ""
+568 = "Contraseña del usuario SA: ",    ""
+569 = "Nombre del usuario primario de la base de datos del sistema: ",    ""
+570 = "Contraseña para el usuario primario: ",    ""
+571 = "Nombre del usuario de mantenimiento de la base de datos del sistema: ",    ""
+572 = "Contraseña para el usuario de mantenimiento: ",    ""
+573 = "Nombre del propietario de base de datos para la RSSD: ",    ""
+574 = "Contraseña para el DBO: ",    ""
+575 = "BASE DE DATOS DEL SISTEMA DE REPLICATION SERVER",    ""
+576 = "",    ""
+577 = "BASE DE DATOS DEL SISTEMA DE REPLICATION SERVER",    ""
+578 = "Nombre del servidor RSSD SQL\\n\\n\
+Registre el nombre del SQL Server que administrará la base de datos de \
+del sistema de Replication Server. Consulte Replication Server Release \
+Bulletin para conocer los requisitos de SQL Server de RSSD.\\n\\n\
+Nombre de RSSD\\n\\n\
+Registre el nombre de la base de datos donde se almacenarán las tablas \
+del sistema de Replication Server. La base de datos debe estar dedicada a \
+Replication Server y ha de contener una cantidad de espacio mínima de 10 \\n\\n\
+Mb para datos y de 10 Mb para diario.\\n\\n\
+RSSD se replicará:\\n\\nSeleccione Sí\, si \
+Replication Server administrará bases de datos con datos primarios, \
+enviará transacciones asíncronas, o actuará como sitio intermedio \
+en una ruta indirecta. No es necesario replicar la RSSD si sólo dispone \
+de un Replication Server. Seleccione No si Replication Server administrará \
+bases de datos que sólo contienen datos replicados\, no enviará transacciones \, \
+asíncronas y no actuará como sitio intermedio en una ruta indirecta. \\n\\n\
+Si selecciona Sí, RSSD necesita un LTM o Replication Agent.\\n\\n \
+Permite HA Failover para las conexiones RSSD\\n\\n\
+Elija Sí para autorizar las conexiones failover al configurar el servidor RSSD \
+como el servidor compañero primario en un cluster de cargas de trabajo distribuido.\\n\\n\
+Cree una RSSD\\n\\n\
+Seleccione Sí\, si desea que rs_init cree la base de datos del sistema.\
+Seleccione No\, si la base de datos del sistema ya existe\, o si desea crearla \
+personalmente. rs_init no activa la opción de base de datos \
+\"trunc. log on chkpt.\" \
+Como resultado de ello\, es preciso truncar el diario periódicamente.\\n\\n\
+Usuario SA\\n\\n\
+rs_init usa este nombre de login para hacer login en SQL Server del \
+sistema\, y crear cuentas de usuario y tablas del sistema en RSSD.\\n\\n\
+Contraseña de SA\\n\\n\
+Registre la contraseña del usuario 'sa' para el SQL Server de RSSD.\\n\\n\
+Usuario primario\\n\\n\
+Registre el nombre del usuario primario para la base de datos del \
+sistema. Replication Server usa este nombre de login para actualizaciones \
+de tablas del sistema que se replican en \
+otros sitios. rs_init creará este usuario para usted.\\n\\n\
+Contraseña primaria\\n\\n\
+Registre la contraseña del usuario primario para la base de datos del\
+sistema.\\n\\n\
+Login de mantenimiento\\n\\n\
+Registre el nombre del usuario de mantenimiento para la base de datos \
+del sistema. Replication Server usa este nombre de login para \
+actualizaciones de tablas del sistema que no están replicadas \
+en otros sitios. rs_init creará este usuario para usted.\\n\\n\
+Contraseña de mantenimiento\\n\\n\
+Registre la contraseña del usuario de mantenimiento para la base de \
+datos del sistema.", ""
+579 = "Nombre del servidor RSSD SQL: ",    ""
+580 = "Contraseña DBO: ",    ""
+581 = "Usuario DBO: ",    ""
+582 = "Contraseña de mantenimiento: ",    ""
+583 = "Conexión de mantenimiento: ",    ""
+584 = "Contraseña primaria: ",    ""
+585 = "Usuario primario: ",    ""
+586 = "Contraseña SA: ",    ""
+587 = "Usuario SA: ",    ""
+588 = "Crear RSSD: ",    ""
+589 = "Nombre RSSD: ",    ""
+590 = "¿Es este Replication Server el servidor de identificación? ",    ""
+591 = "¿Ejecutar las tareas de Replication Server ahora? ",    ""
+592 = "Información del dispositivo RSSD",    ""
+593 = "INFORMACION DEL DISPOSITIVO RSSD",    ""
+594 = " ",    ""
+595 = "INFORMACION DEL DISPOSITIVO RSSD",    ""
+596 = "Tamaño de la base de datos RSSD\\n\\n\
+Registre el tamaño (en MB) de la base de datos RSSD. El valor \
+por defecto es 10 MB.\\n\\n\
+Nombre de dispositivo de RSSD\\n\\nRegistre el nombre del dispositivo \
+para RSSD.\\n\\n\
+Cree el dispositivo de RSSD\\n\\n Seleccione Sí, si desea que rs_init cree \
+el dispositivo de base de datos. Seleccione No si el dispositivo existe\
+o desea crearlo personalmente. Si selecciona Sí, suministre\
+el nombre y el tamaño de la ruta de acceso física del dispositivo de \
+base de datos.\\n\\n\
+Tamaño del diario de RSSD\\n\\nRegistre el tamaño (en MB) del diario de \
+RSSD. El valor por defecto es 10 MB.\\n\\n\
+Nombre del dispositivo de diario de RSSD\\n\\nRegistre el nombre del \
+dispositivo para el diario de RSSD.\\n\\n\
+Cree el dispositivo de diario de RSSD:\\n\\nSeleccione Sí, si desea \
+que rs_init cree el dispositivo de diario. Seleccione No si el \
+dispositivo existe o si desea crearlo personalmente. Si selecciona Sí, \
+suministre el nombre y el tamaño de la ruta de acceso física y el \
+tamaño del dispositivo de diario.",    ""
+597 = "Cree el dispositivo de RSSD: ",    ""
+598 = "Nombre de dispositivo de RSSD: ",    ""
+599 = "Nombre físico de dispositivo de RSSD: ",    ""
+600 = "Tamaño de dispositivo de RSSD: ",    ""
+601 = "Cree el dispositivo de diario de RSSD: ",    ""
+602 = "Nombre de dispositivo de diario de RSSD: ",    ""
+603 = "Nombre físico de dispositivo de diario de RSSD: ",    ""
+604 = "Tamaño de diario de RSSD: ",    ""
+605 = "Introduzca el nombre del dispositivo de base de datos de RSSD: ",    ""
+606 = "Introduzca el nombre del dispositivo de diario de RSSD: ",    ""
+607 = "Introduzca la ruta de acceso física del dispositivo de base de datos: ",    ""
+608 = "Introduzca la ruta física del dispositivo de diario: ",    ""
+609 = "Introduzca el tamaño (en megabytes) del dispositivo de base de datos: ",    ""
+610 = "Introduzca el tamaño (en megabytes) del dispositivo de diario: ",    ""
+611 = "Tamaño del diario de RSSD: ",    ""
+612 = "Tamaño de la base de datos de RSSD: ",    ""
+613 = "Introduzca el tamaño (en megabytes) del diario de RSSD: ",    ""
+614 = "Introduzca el tamaño (en megabytes) de la base de datos de RSSD: ",    ""
+615 = "Información de interfaces de Replication Server ",    ""
+616 = "Información de interfaces de LTM ",    ""
+617 = "Información de interfaces de ID Server ",    ""
+618 = "AÑADA BASE DE DATOS AL SISTEMA DE REPLICACIÓN",    ""
+619 = "",    ""
+620 = "AÑADA BASE DE DATOS AL SISTEMA DE REPLICACIÓN",    ""
+621 = "Para añadir una base de datos al sistema de replicación, \
+proporcione la información necesaria en cada pantalla. rs_init puede \
+completar la configuración cuando el estado de cada pantalla \
+es 'Complete'.",    ""
+622 = "Información de Replication Server",    ""
+623 = "Información de base de datos",    ""
+624 = "Introduzca el usuario SA para este Replication Server: ",    ""
+625 = "Introduzca la contraseña de SA para este Replication Server: ",    ""
+626 = "INFORMACIÓN DE REPLICATION SERVER",    ""
+627 = "",    ""
+628 = "INFORMACIÓN DE REPLICATION SERVER",    ""
+629 = "Usuario SA de RS\\n\\n\
+Introduzca la cuenta de login 'sa' para Replication Server.\\n\\n\
+Contraseña de SA de RS\\n\\n\
+Introduzca una contraseña para utilizarla con la cuenta de login 'sa' \
+de Replication Server.",   ""
+630 = "Usuario SA de RS: ",    ""
+631 = "Contraseña de SA de RS: ",    ""
+632 = "Introduzca el nombre de SQL Server: ",    ""
+633 = "Introduzca el nombre de la base de datos: ",    ""
+634 = "Introduzca el usuario SA para este SQL Server: ",    ""
+635 = "Introduzca la contraseña de SA para este SQL Server: ",    ""
+636 = "Introduzca el login de usuario de mantenimiento: ",    ""
+637 = "Introduzca la contraseña del usuario de mantenimiento: ",    ""
+638 = "Introduzca el login de DBO: ",    ""
+639 = "Introduzca la contraseña del DBO: ",    ""
+640 = "INFORMACIÓN DE BASE DE DATOS",    ""
+641 = "",    ""
+642 = "INFORMACIÓN DE BASE DE DATOS",    ""
+643 = "Nombre de SQL Server\\n\\nIntroduzca el nombre de \
+SQL Server con la base de datos que está añadiendo al sistema de \
+replicación.\\n\\n\
+Usuario SA\\n\\nIntroduzca la cuenta de login 'sa' para SQL Server. rs_init \
+usa la cuenta 'sa' para cargar procedimientos y tablas del sistema \
+necesarios en la base de datos y para añadir cuentas.\\n\\n\
+Contraseña de SA\\n\\nIntroduzca la contraseña para la cuenta de login 'sa' \
+de SQL Server.\\n\\n\
+Nombre de base de datos\\n\\nIntroduzca el nombre de la base de datos \
+que está añadiendo al sistema de replicación.\\n\\n\
+¿Se replicará la base de datos?\\n\\nSeleccione Sí, si la base de \
+datos contiene datos primarios, o si las transacciones asíncronas \
+se originarán en la base de datos. \
+Seleccione No si ninguna de estas condiciones es verdadera.\\n\\n\
+Usuario de mantenimiento\\n\\nIntroduzca el nombre de login para \
+que Replication Server lo use al actualizar datos replicados. Este nombre \
+de login debe ser un usuario en la réplica de base de datos, así como \
+disponer de todos los permisos necesarios sobre los datos replicados.\
+Si es necesario\, rs_init creará esta cuenta de usuario.\\n\\n\
+Contraseña de mantenimiento\\n\\nIntroduzca la contraseña para el usuario de \
+mantenimiento.", ""
+644 = "Nombre de SQL Server: ",    ""
+645 = "Usuario SA: ",    ""
+646 = "Contraseña de SA: ",    ""
+647 = "Nombre de base de datos: ",    ""
+648 = "La base de datos se replicará: ",    ""
+649 = "Usuario de mantenimiento: ",    ""
+650 = "Contraseña de mantenimiento: ",    ""
+651 = "Usuario DBO: ",    ""
+652 = "Contraseña de DBO: ",    ""
+653 = "Introduzca la ubicación del diario de errores de Replication Server: ",    ""
+654 = "Diario de errores de Replication Server: ",    ""
+655 = "Archivo de configuración de Replication Server: ",    ""
+656 = "Introduzca la ubicación del archivo de configuración de Replication Server: ",    ""
+657 = "Introduzca la ubicación del diario de errores de LTM: ",    ""
+658 = "Introduzca la ubicación del diario de configuración de LTM: ",    ""
+659 = "Diario de errores de LTM: ",    ""
+660 = "Archivo de configuración de LTM: ",    ""
+661 = "Configuración avanzada de Replication Server",    ""
+662 = "Introduzca la primera ID para Replication Servers en \
+este dominio de ID Server: ",    ""
+663 = "Introduzca la primera ID para bases de datos en este \
+dominio de ID Server: ",    ""
+664 = "CONFIGURACIÓN AVANZADA DE REPLICATION SERVER",    ""
+665 = "",    ""
+666 = "CONFIGURACIÓN AVANZADA DE REPLICATION SERVER",    ""
+667 = " ¿Aplazar la configuración de Replication Server ?\\n\\n\
+Use esta opción si desea que rs_init cree los archivos de configuración, \
+pero no desea que inicie el Replication Server. Si selecciona  \
+esta opción, deberá iniciar Replication Server y ejecutar \
+los comandos diferidos manualmente. rs_init creará el archivo de comandos \
+diferidos en el directorio de trabajo actual.\\n\\n \
+ID de sitio:\\n\\nEsta información sólo es necesaria si está configurando\
+varios dominios de ID Server.\\n\\n\
+ID de base de datos:\\n\\nEsta información sólo es necesaria si está \
+configurando varios dominios de ID Server.",    ""
+668 = "¿Aplazar la configuración de Replication Server? ",    ""
+669 = "ID de sitio: ",    ""
+670 = "ID de base de datos: ",    ""
+671 = "NOMBRE DE REPLICATION SERVER",    ""
+672 = "",    ""
+673 = "NOMBRE DE REPLICATION SERVER",    ""
+674 = "Nombre de Replication Server:\\n\\n\
+Introduzca el nombre para el Replication Server. \
+El nombre debe ser exclusivo en el sistema de replicación.",""
+675 = "NOMBRE DE ID SERVER",    ""
+676 = "",    ""
+677 = "NOMBRE DE ID SERVER",    ""
+678 = "Nombre de ID Server\\n\\n\
+Registre el nombre del ID Server para el sistema de Replication Server.\\n\\n\
+Un Replication Server de cada sistema de replicación es el ID Server,\
+que registra otros Replication Servers y bases de datos \
+a medida que se añaden al sistema. El ID Server debe ejecutarse cuando \
+se inician otros Replication Servers por primera vez, se asignan bases \
+de datos por primera vez a Replication Servers y se crean rutas. \
+Por lo tanto, debe ser el primer Replication Server que se instala. \
+Un Replication Server en un \
+sitio centralizado es una buena opción para el ID Server.",    ""
+679 = "NOMBRE DE LTM",    ""
+680 = "",    ""
+681 = "NOMBRE DE LTM",    ""
+682 = "Nombre de LTM\\n\\n\
+Introduzca el nombre de LTM para RSSD.\
+LTM necesita una entrada en el archivo de interfaces.",    ""
+683 = "Juego de caracteres de Replication: ",""
+684 = "JUEGO DE CARACTERES DE REPLICATION SERVER",""
+685 = "",""
+686 = "JUEGO DE CARACTERES DE REPLICATION SERVER",""
+687 = "Juego de caracteres de Replication Server\\n\\n\
+Seleccione el juego de caracteres que Replication Server va a utilizar.",""
+688 = "Juego de caracteres actual: ",""
+689 = "",""
+690 = "",""
+691 = "Juego de caracteres del Log Transfer Manager ",""
+692 = "JUEGO DE CARACTERES DEL LOG TRANSFER MANAGER",""
+693 = "",""
+694 = "JUEGO DE CARACTERES DEL LOG TRANSFER MANAGER",""
+695 = "Juego de caracteres del Log Transfer Manager\\n\\n\
+Seleccione el juego de caracteres que LTM va a utilizar.",""
+696 = "Juego de caracteres actual: ",""
+697 = "Iniciando la ID de Replication Server: ",    ""
+698 = "Iniciando la ID de base de datos: ",    ""
+699 = "Introduzca la primera ID para Replication \
+Servers en este dominio de ID Server: ", ""
+700 = "Introduzca la primera ID para bases de datos en este \
+dominio de ID Server: ", ""
+701 = "El desplazamiento en Replication Server \
+debe comenzar a escribir en la partición: ", ""
+702 = "Valor Vstart para la partición: ", ""
+703 = "ACTUALICE EL REPLICATION SERVER EXISTENTE" ,""
+704 = "",""
+705 = "ACTUALICE REPLICATION SERVER.",""
+706 = "Nombre de Replication Server\\n\\n\
+Introduzca el nombre del Replication Server que está actualizando.\\n\\n\
+Usuario SA de RS\\n\\n\
+Introduzca la cuenta de login 'sa' para Replication Server.\\n\
+Contraseña SA de RS\\n\\n\
+Introduzca una contraseña para utilizarla con la cuenta de login 'sa' \
+de Replication Server.\\n\\n\
+Codificación de contraseñas activada para Replication Server:\\n\\n\
+Si selecciona Sí\, rs_init codificará todas las contraseñas en el \
+archivo de configuración de Replication Server y RSSD, y activará \
+la configuración para Replication Server.\\n\\n\
+Archivo de configuración de Replication Server \\n\\n\
+Si selecciona la activación de la codificación de contraseñas, \
+introduzca la ubicación del archivo de configuración para el Replication \
+Server que está actualizando. rs_init codificará las contraseñas en \
+el archivo.\\n\\n\
+SQL Server que contiene RSSD\\n\\n\
+Introduzca el nombre del SQL Server con la RSSD para el Replication Server \
+que está actualizando.\\n\\n\
+Nombre de la base de datos RSSD\\n\\n\
+Introduzca el nombre de la RSSD que desea actualizar.\\n\\n\
+Usuario de SA \\n\\n\
+Introduzca el login para el usuario 'sa' de SQL Server.\\n\\n\
+Contraseña de SA\\n\\n\
+Introduzca la contraseña para el usuario 'sa' de SQL Server.\\n\\n\
+RSSD dispone de LTM\\n\\n\
+Seleccione Sí\, si la RSSD del Replication Server que está actualizando \
+dispone de un LTM. Los siguientes campos sólo estarán visibles si \
+selecciona Sí.\\n\\n\
+Nombre de LTM de RSSD\\n\\n\
+Introduzca el nombre del LTM de RSSD para el Replication Server que está \
+actualizando.\\n\\n\
+Usuario de administración de LTM de RSSD\\n\\n\
+Introduzca el nombre del usuario de administración de LTM de RSSD.\\n\\n\
+Contraseña de administración de LTM de RSSD\\n\\n\
+Introduzca la contraseña para el usuario de administración de LTM de RSSD.", ""
+707 = "Actualice un Replication Server existente", ""
+708 = "Rebaje la RSSD a una versión inferior para el Replication Server existente", ""
+709 = "Nombre de Replication Server: ",""
+710 = "Contraseña para el usuario SA en Replication Server:",""
+711 = "SQL Server que contiene RSSD: ",""
+712 = "Nombre de base de datos de RSSD: ","" 
+713 = "Contraseña para el usuario SA en SQL Server:","" 
+714 = "REBAJE LA RSSD A VERSIÓN INFERIOR PARA REPLICATION SERVER" ,""
+715 = "",""
+716 = "REBAJE LA RSSD A VERSIÓN INFERIOR PARA REPLICATION SERVER.",""
+717 = "Nombre de Replication Server\\n\\n\
+Introduzca el nombre del Replication Server rebajado a versión inferior.\\n\\n\
+Usuario SA de RS\\n\\n\
+Introduzca la cuenta de login 'sa' para Replication Server.\\n\
+Contraseña SA de RS\\n\\n\
+Introduzca una contraseña para utilizarla con la cuenta de login 'sa' de \
+Replication Server.\\n\\n\
+SQL Server que contiene RSSD\\n\\n\
+Introduzca el nombre del SQL Server que dispone de la RSSD para el \
+Replication Server rebajado a versión inferior.\\n\\n\
+Nombre de base de datos RSSD\\n\\n\
+Introduzca el nombre de la RSSD que desea rebajar a versión inferior.\\n\\n\
+Usuario de SA\\n\\n\
+Introduzca el login para el usuario 'sa' de SQL Server. \\n\\n\
+Contraseña de SA\\n\\n\
+Introduzca la contraseña para el usuario 'sa' de SQL Server.", ""
+718 = "¿Actualizar RSSD ahora?",""
+719 = "¿Actualizar RSSD ahora?",""
+720 = "Codificación de contraseñas de Replication Server: ",    ""
+721 = "Codificación de contraseñas de LTM: ", ""
+722 = "Codificación de contraseñas activada para \
+Replication Server: ","" 
+723 = "Archivo de configuración de Replication Server: ",""
+724 = "ACTIVE CODIFICACIÓN DE CONTRASEÑAS EN RS", ""
+725 = "",""
+726 = "ACTIVE CODIFICACIÓN DE CONTRASEÑAS DE REPLICATION SERVER", ""
+727 = "Nombre de Replication Server\\n\\n\
+Introduzca el nombre de Replication Server.\\n\\n\
+Usuario SA de RS\\n\\n\
+Introduzca la cuenta de login 'sa' para Replication Server.\\n\
+Contraseña de SA de RS\\n\\n\
+Introduzca una contraseña para usarla con la cuenta de login 'sa' de \
+Replication Server.\\n\\n\
+Archivo de configuración de Replication Server\\n\\n\
+Introduzca el nombre del archivo de configuración que desea modificar\\n\\n\
+SQL Server que contiene RSSD\\n\\n\
+Introduzca el nombre de SQL server de RSSD.\\n\\n\
+Nombre de base de datos de RSSD\\n\\n\
+Introduzca el nombre de la base de datos RSSD.\\n\\n\
+Usuario SA\\n\\n\
+Introduzca el nombre de login de un usuario con la autoridad de 'sa' \
+para el SQL Server de RSSD. \\n\\n\
+Contraseña de SA\\n\\n\
+Introduzca la contraseña para el SQL Server de RSSD.",""
+728 = "Active la codificación de contraseñas para un Replication Server", ""
+729 = "ACTIVE CODIFICACIÓN DE CONTRASEÑAS EN LTM", ""
+730 = "",""
+731 = "ACTIVE CODIFICACIÓN DE CONTRASEÑAS EN LTM", ""
+732 = "Nombre de LTM\\n\\n\
+Introduzca el nombre de LTM.\\n\\n\
+Usuario de administración de LTM\\n\\n\
+Introduzca el login de usuario de administración de LTM.\\n\\n\
+Contraseña de administración de LTM\\n\\n\
+Introduzca la contraseña para el usuario de administración de LTM.\\n\\n\
+Archivo de configuración de LTM \\n\\n\
+Introduzca el nombre del archivo de configuración que desea modificar",""
+734 = "Active la codificación de contraseña para un LTM", ""
+735 = "CAMBIE UNA CONTRASEÑA DEL ARCHIVO DE CONFIGURACIÓN DE REPLICATION SERVER", ""
+736 = "",""
+737 = "CAMBIE UNA CONTRASEÑA DEL ARCHIVO DE CONFIGURACIÓN DE REPLICATION SERVER", ""
+738 = "Nombre de Replication Server\\n\\n\
+Introduzca el nombre de Replication Server.\\n\\n\
+Usuario SA de RS\\n\\n\
+Introduzca la cuenta de login 'sa' para Replication Server.\\n\
+Contraseña de SA de RS\\n\\n\
+Introduzca una contraseña para utilizarla con la cuenta de login \
+'sa' de Replication Server.\\n\\n\
+Archivo de configuración de Replication Server\\n\\n\
+Introduzca el nombre del archivo de configuración que desea modificar. \\n\\n\
+Parámetro del archivo de configuración para contraseña\\n\\n\
+Introduzca el nombre del atributo de contraseña que desea cambiar en el \
+archivo de configuración. Las opciones posibles son RSSD_primary_pw_enc\, \
+RSSD_maint_pw_enc\ e ID_pw_enc.\\n\\n\
+Contraseña nueva\\n\\n\
+Introduzca la contraseña nueva",""
+739 = "Cambie una contraseña del archivo de configuración de Replication Server", ""
+740 = "CAMBIE UNA CONTRASEÑA DEL ARCHIVO DE CONFIGURACIÓN DE LTM", ""
+741 = "",""
+742 = "CAMBIE UNA CONTRASEÑA DEL ARCHIVO DE CONFIGURACIÓN DE LTM", ""
+743 = "Nombre de LTM\\n\\n\
+Introduzca el nombre de LTM.\\n\\n\
+Usuario de administración de LTM\\n\\n\
+Introduzca el login del usuario de administración de LTM.\\n\\n\
+Contraseña de administración de LTM\\n\\n\
+Introduzca la contraseña para el usuario de administración de LTM.\\n\\n\
+Archivo de configuración de LTM \\n\\n\
+Introduzca el nombre del archivo de configuración que desea modificar.\\n\\n\
+Nombre de parámetro del archivo de configuración para contraseña \\n\\n\
+Introduzca el nombre del atributo de contraseña que desea cambiar en el \
+archivo de configuración. Las opciones posibles son SQL_pw_enc\, RS_pw_enc y \
+LTM_admin_pw_enc.\\n\\n\
+Contraseña nueva\\n\\n\
+Introduzca la contraseña nueva",""
+744 = "Cambie una contraseña en un archivo de configuración de LTM", ""
+745 = "Parámetro de archivo de configuración para contraseña: ", ""
+746 = "Contraseña nueva: ",""
+747 = "Nombre del parámetro de contraseña \
+del archivo de configuración que desea modificar: ", ""
+748 = "Introduzca la contraseña nueva: ", ""
+749 = "Nombre de LTM: ",""
+750 = "Nombre de LTM de RSSD: ",    ""
+751 = "Usuario de administración de LTM de RSSD: ",""
+752 = "Contraseña de administración de LTM de RSSD: ", ""
+753 = "RSSD dispone de LTM: ",""
+754 = "RS_INIT",""
+755 = "",""
+756 = "RS_INIT", ""
+757 = "\
+1. Directorio de versión\\n\\nSi está configurando un servidor nuevo y el \
+directorio mostrado no es el mismo que el directorio donde cargó los \
+archivos de SYBASE, salga de rs_init. Restablezca la variable de entorno \
+SYBASE para apuntar al directorio en el que cargó los archivos de \
+SYBASE. Reinicie rs_init y vuelva a comenzar. Si está actualizando, \
+elija esta opción para definir el directorio de versión del servidor que \
+está actualizando.\\n\\n2. Editar / Ver archivo de interfaces\\n\\nSeleccione \
+este elemento si desea\\n- Añadir una entrada de interfaces para un producto \
+de servidor\\n- \Modificar una entrada de interfaces para un producto de \
+servidor\\n- Añadir una entrada de interfaces \
+de clientes nuevos\\n- Modificar una entrada de interfaces de clientes\\n- \
+Visualizar una entrada de interfaces existentes\\n\\n3. Configurar un \
+producto de servidor\\n\\nSeleccione este elemento si desea configurar el \
+sistema de replicación. \\\n\\n* Teclas de control *\\n\\nPulse \
+Ctrl-x para salir de rs_init",""
+758 = "Idioma de Replication Server: ",""
+759 = "IDIOMA DE REPLICATION SERVER",""
+760 = "",""
+761 = "IDIOMA DE REPLICATION SERVER",""
+762 = "Idioma de Replication Server\\n\\n\
+Seleccione el idioma que Replication Server va a usar.",""
+763 = "Idioma actual: ",""
+764 = "",""
+765 = "",""
+766 = "Idioma del Log Transfer Manager ",""
+767 = "IDIOMA DEL LOG TRANSFER MANAGER",""
+768 = "",""
+769 = "IDIOMA DEL LOG TRANSFER MANAGER",""
+770 = "Idioma del Log Transfer Manager\\n\\n\
+Seleccione el idioma que LTM va a utilizar.",""
+771 = "Idioma actual: ",""
+772 = "Criterio de ordenación de Replication Server: ",""
+773 = "CRITERIO DE ORDENACIÓN DE REPLICATION SERVER",""
+774 = "",""
+775 = "CRITERIO DE ORDENACIÓN DE REPLICATION SERVER",""
+776 = "Criterio de ordenación de Replication Server\\n\\n\
+Seleccione el criterio de ordenación que Replication Server va a utilizar.",""
+777 = "Criterio de ordenación actual: ",""
+778 = "",""
+779 = "",""
+780 = "Criterio de ordenación de Log Transfer Manager ",""
+781 = "CRITERIO DE ORDENACIÓN DE LOG TRANSFER MANAGER",""
+782 = "",""
+783 = "CRITERIO DE ORDENACIÓN DE LOG TRANSFER MANAGER",""
+784 = "Criterio de ordenación de Log Transfer Manager\\n\\n\
+Seleccione el criterio de ordenación que LTM va a utilizar.",""
+785 = "Criterio de ordenación actual: ",""
+786 = "Actualice una base de datos existente en el \
+sistema de replicación",""
+787 = "ACTUALICE UNA BASE DE DATOS EXISTENTE EN UN SISTEMA DE REPLICACIÓN",""
+788 = "",""
+789 = "ACTUALICE UNA BASE DE DATOS EXISTENTE EN UN SISTEMA DE REPLICACIÓN",""
+790 = "Use esta operación a fin de preparar una base de datos existente\\n\
+para utilizarla con la última versión de Replication Server.\\n\
+La base de datos ya debe formar parte del sistema de replicación.",""
+
+791 = "¿Es una conexión física para una conexión lógica existente?:",  ""
+792 = "¿Es una conexión activa o una conexión de Standby?:",    ""
+793 = "Nombre de DS lógico:",    ""
+794 = "Nombre de DB lógica:",    ""
+795 = "Debe ser 'active' o 'standby'",    ""
+796 = "El nombre lógico no puede estar en blanco",    ""
+797 = "Configuración de DB lógica",    ""
+798 = "INFORMACIÓN DE CONEXIÓN LÓGICA",    ""
+799 = "",    ""
+800 = "INFORMACIÓN DE CONEXIÓN LÓGICA",    ""
+801 = "Introduzca información de conexión lógica\\n Introduzca \
+'active' o 'standby' \\n Nombre de conexión lógica existente:\\n\\n", ""
+802 = "Use el marcador de volcado para iniciar la replicación en Standby:",    ""
+803 = "Fallo al conectarse a SQL Server:",    ""
+804 = "Fallo al ejecutar 'use db' en SQL Server:",    ""
+805 = "No es posible ejecutar comandos de standby con esta versión de repserver '%1!'.","%s"
+806 = "Nombre de DS activo:",    ""
+807 = "Nombre de DB activa:",    ""
+808 = "Usuario sa de DB activa:",    ""
+809 = "Contraseña de sa de DB activa:",    ""
+810 = "Inicialice standby utilizando volcado y carga:",    ""
+811 = "Replication Agent de base de datos",    ""
+812 = "REPLICATION AGENT DE BASE DE DATOS",    ""
+813 = "",    ""
+814 = "REPLICATION AGENT DE BASE DE DATOS",    ""
+815 = "Usuario de RS\\n\\n\
+Registre un nombre de login de Replication Server \
+para que el Replication Agent lo utilice al conectarse a \
+Replication Server. \\n\\n\
+Contraseña de RS\\n\\n\
+Registre la contraseña para el nombre de login de Replication Server.",""
+820 = "Activar la seguridad de la red: ", ""
+821 = "Sistema de seguridad (dce o \
+csfkrb5): ", ""
+822 = "Nombre del archivo Keytab: ", ""
+823 = "Escriba la ruta completa de acceso al archivo Keytab: ", ""
+824 = "Autorizar la función HA Failover para las \
+conexiones RSSD: ", ""
+825 = "Utilice un editor de interfaz para añadir esta \
+entrada de servicio.", ""
+826 = "Utilizar el servicio SSL: ", ""
+827 = "Nombre del archivo de identidad: ", ""
+828 = "Escriba la ruta completa de acceso al archivo de identidad: ", ""
+829 = "Contraseña de la clave privada: ", ""
+830 = "Escriba la contraseña para la clave privada \
+de certificado: ", ""
+831 = "ELECCIÓN DE BD DEL SISTEMA DE SERVIDOR DE REPLICACIÓN",    ""
+832 = "", ""
+833 = "ELECCIÓN DE BD DEL SISTEMA DE SERVIDOR DE REPLICACIÓN",""
+834 = "Elección de BD del sistema de servidor de replicación:\\n\\n\
+Seleccione la BD del sistema de servidor de replicación para uso de RSSD cifrado en \
+Adaptive Server Anywhere.\\n\\n\
+Seleccione la BD del sistema de servidor de replicación para uso de RSSD en Adaptive \
+Server Enterprise.", ""
+835 = "Desea cifrar la BD del sistema de servidor de replicación:", ""
+836 = "BD del sistema de servidor de replicación cifrada",    ""
+837 = "BD del sistema de servidor de replicación en ASE",   ""
+838 = "BD DEL SISTEMA DE SERVIDOR DE REPLICACIÓN CIFRADA", ""
+839 = "", ""
+840 = "BD DEL SISTEMA DE SERVIDOR DE REPLICACIÓN CIFRADA", ""
+841 = "Directorio de BD ERSSD: Nombre del directorio del archivo \
+de BD ERSSD.\\n\\n\
+Directorio de reg. de transacción ERSSD: Nombre del directorio del archivo \
+transacción ERSSD.\\n\\n\
+Directorio de copia de seg. de ERSSD: Nombre del directorio de archivos de copia de seg. ERSSD.\\n\\n\
+Se recomienda colocar los archivos de BD, copia de seg. y reg. de transacción \
+en dispositivos diferentes.", ""
+842 = "Directorio de BD ERSSD: ",""
+843 = "Escriba el nombre del directorio de BD de ERSSD: ", ""
+844 = "Directorio de reg. de transacción ERSSD: ",""
+845 = "Escriba el nombre del directorio de reg. de transacción de ERSSD: ", ""
+846 = "Directorio de copia de seg. de ERSSD: ",""
+847 = "Escriba el nombre del directorio de copia de seg. de ERSSD: ", ""
+848 = "ERSSD se va a replicar: ",""
+849 = "Nombre ERSSD: ",""
+850 = "Escriba el nombre de RSSD cifrado: ",    ""
+851 = "Información de interfaz ERSSD ",""
+852 = "Directorio de reg. de errores ERSSD: ",""
+853 = "Escriba el nombre del directorio de reg. de errores de ERSSD: ", ""
+854 = "NOMBRE ERSSD",    ""
+855 = "",    ""
+856 = "NOMBRE ERSSD",    ""
+857 = "Nombre ERSSD:\\n\\n\
+Escriba el nombre del ERSSD. \
+Debe ser único en el sistema de replicación.",""
+; End of section.
+

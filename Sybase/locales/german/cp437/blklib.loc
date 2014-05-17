@@ -1,0 +1,146 @@
+; comment character is semicolon.
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.3 12/3/93
+;
+; 
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+Alle Rechte vorbehalten.\
+Gebrauch, VervielfÑltigung oder Bekanntmachung durch die Regierung\
+der Vereinigten Staaten unterliegt den in FAR Unterabschnitten\
+52.227-19(a)-(d) fÅr VertrÑge mit Zivilstellen und in DFARS\
+252.227-7013(c)(1)(ii) fÅr VertrÑge mit dem Department of Defense\
+(US-Verteidigungsministerium) genannten BeschrÑnkungen.\
+Sybase behÑlt sich alle Rechte bezÅglich Nichtverîffentlichungen\
+gemÑ· den Urheberrechtsgesetzen der Vereinigten Staaten vor.\
+Sybase, Inc.  6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "kann keinen Speicherplatz zuweisen."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "allgemeiner Fehler"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "blk Schicht"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "Benutzerfehler"
+
+2 = ZZZZZ, "Interner BLK-Library-Fehler"
+
+3 = ZZZZZ, "CT-Library-Fehler"
+
+4 = ZZZZZ, "async Managerfehler"
+
+5 = ZZZZZ, "allgemeiner Library-Fehler"
+
+6 = ZZZZZ, "Speicherverwaltungsfehler"
+
+7 = ZZZZZ, "SQL Serverfehler"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk okay"
+
+1 = ZZZZZ, "Kann API %1! von  Zustand %2! aus nicht aufrufen"
+
+2 = ZZZZZ, "API %1! nur fÅr Operation Bulkcopy IN zulÑssig"
+
+3 = ZZZZZ, "API %1! darf nicht durch RÅckruf (Zustand = %2!) aufgerufen werden"
+
+4 = ZZZZZ, "Parameter %1! hat unzulÑssigen Wert %2!"
+
+5 = ZZZZZ, "Feld %1! der CS_DATAFMT Struktur hat unzulÑssigen Wert %2!."
+
+6 = ZZZZZ, "Der Parameter %1! darf nicht  NULL sein."
+
+7 = ZZZZZ, "Die abgerufene Information pa·t nicht in einen Puffer mit %1! Byte."
+
+8 = ZZZZZ, "Die PrÑzision mu· grî·er als oder gleich der Bereich sein"
+
+9 = ZZZZZ, "Kann eine NULL %1! nicht an einen Datentyp von %2! binden."
+
+10 = ZZZZZ, "Tabellenspalte vom Typ %1! kann nicht an eine Programmvariable vom Typ %2!. gebunden werden."
+
+11 = ZZZZZ, "Kann nicht gleichzeitig Textxfer und Array-Bindung haben."
+
+12 = ZZZZZ, "Alle Spalten mÅssen denselben TabellenzÑhlwert fÅr Array-Bindung haben."
+
+13 = ZZZZZ, "Kann keinen Ñquivalenten CS_TYPE fÅr diesen TDS Datentyp %1! finden"
+
+14 = ZZZZZ, "Gescheitert beim Aufruf von CT_Lib Routine %1!."
+
+15 = ZZZZZ, "Verwenden Sie Richtung CS_BLK_IN oder CS_BLK_OUT fÅr eine Bulkcopy-Operation."
+
+16 = ZZZZZ, "Verwenden Sie die Option CS_BLK_ALL, um eine Bulkcopy OUT zu beenden."
+
+17 = ZZZZZ, "Falscher Proze· %1! Status fÅr %2! - sollte hier nicht auftreten."
+
+18 = ZZZZZ, "Falscher Status fÅr %1! - sollte hier nicht auftreten."
+
+19 = ZZZZZ, "Die Spalte und der Standardwert %1! , die vom Server gesendet wurden, sind nicht gleich."
+
+20 = ZZZZZ, "Falscher Status fÅr %1! - ist aber wiederherstellbar - Verarbeitung geht weiter."
+
+21 = ZZZZZ, "Vom Server erwartete Anzahl der Spalten entspricht nicht der empfangenen %1!."
+
+22 = ZZZZZ, "Anwendung mit Eigenschaftssatz %1! anmelden."
+
+23 = ZZZZZ, "Versionen fÅr Bulkcopy-Library und CT_Lib sind nicht kompatibel."
+
+24 = ZZZZZ, "Kein Wert oder Standardwert verfÅgbar und NULL unzulÑssig Spalte = %1! Zeile = %2!."
+
+25 = ZZZZZ, "Konvertierungsroutine gescheitert - BedingungsÅberlauf. Spalte = %1! Zeile = %2!."
+
+26 = ZZZZZ, "Konvertierungsroutine gescheitert  - Syntaxfehler. Spalte = %1! Zeile = %2!."
+
+27 = ZZZZZ, "Falsche Reihenfolge beim Binden - eine gebundene Spalte folgt einer fÅr textxfer markierten Spalte."
+
+28 = ZZZZZ, "Gesamtgrî·e von textxfer %1! Åberschreitet LÑnge der Eingabedaten %2!"
+
+29 = ZZZZZ, "Anzahl der Standardwerte %1! entspricht nicht der StandardzÑhlung %2!"
+
+30 = ZZZZZ, "Ausgabe von CS_END_RESULTS fÅr die Datei, die fÅr die Ausgabe der Bulkcopy angefordert wurde. Datei womîglich leer."
+
+31 = ZZZZZ, "The parameter %1! is required to be NULL."
+
+32 = ZZZZZ, "The parameter %1! is required to be CS_UNUSED."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

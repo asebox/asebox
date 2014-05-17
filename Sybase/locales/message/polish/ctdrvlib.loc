@@ -1,0 +1,125 @@
+; Sccsid @(#) ctdrvlib.loc 1.2 10/7/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "nie można przydzielić pamięci."
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "błąd ogólny"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, "warstwa ctdrv"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "błąd użytkownika"
+
+2 = E_ORG_INTRN, "błąd wewnętrzny biblioteki CTDRV"
+
+3 = E_ORG_CT, "błąd biblioteki CT"
+
+4 = E_ORG_ASYNC, "błąd menedżera asynchronicznego"
+
+5 = E_ORG_COM, "błąd biblioteki wspólnej"
+
+6 = E_ORG_MEM, "błąd zarządzania pamięcią"
+
+7 = E_ORG_SS, "błąd serwera SQL Server"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, "ctdrv prawidłowe"
+
+1 = CTDRVE_MEM_F, "Błąd pamięci w procedurze CtDrv."
+
+2 = CTDRVE_CTF, "Podczas wywoływania procedury %1! CT_lib, wystąpił błąd w procedurze CtDrv."
+
+3 = CTDRVE_APIF, "Podczas wywoływania %1!, wystąpił błąd w procedurze CtDrv."
+
+4 = CTDRVE_NOCURSOR, "Brak kursora w uchwycie instrukcji."
+
+5 = CTDRVE_TRUNCATE, "Nie można zwrócić wszystkich danych. Obcięte: %1!."
+
+6 = CTDRVE_DUPCUR, "Istnieje już kursor o nazwie %1!."
+
+7 = CTDRVE_LENCUR, "Nazwa kursora nie może przekraczać %1! znaków."
+
+8 = CTDRVE_SEQ, "Funkcja została wywołana poza kolejnością."
+
+9 = CTDRVE_ODBCTYPE, "Nie można odwzorować wejściowego typu danych CT_LIB na typ danych ODBC."
+
+10 = CTDRVE_CTTYPE, "Nie można odwzorować wejściowego typu danych ODBC na typ danych CT_LIB."
+
+11 = CTDRVE_CTDATYPE, "%1! : nie można znaleźć typu danych ct_lib."
+
+12 = CTDRVE_ASYNC, "Funkcja poza kolejnością: Inna funkcja jest wykonywana asynchronicznie."
+
+13 = CTDRVE_BUFF, "Podczas przydzielania bufora SQL wystąpił błąd w procedurze CtDrv."
+
+14 = CTDRVE_SUBF, "Podczas wykonywania podstawiania SQL wystąpił błąd w procedurze CtDrv."
+
+15 = CTDRVE_STMTNM, "Podczas tworzenia nazwy instrukcji wystąpił błąd w procedurze CtDrv."
+
+16 = CTDRVE_CURNM, "Podczas tworzenia nazwy kursora wystąpił błąd w procedurze CtDrv."
+
+17 = CTDRVE_RESROW, "Podczas pobierania wyników wierszy dla %1! i %2! wystąpił błąd w procedurze CtDrv."
+
+18 = CTDRVE_RESDCF, "Podczas pobierania wyników %1! wystąpił błąd w procedurze CtDrv."
+
+19 = CTDRVE_APIF2, "Podczas wywoływania funkcji wewnętrznej %1! wystąpił błąd w procedurze CtDrv."
+
+20 = CTDRVE_APIF3, "Podczas wywoływania procedury %2! CT_LIB wystąpił błąd w funkcji wewnętrznej %1!."
+
+21 = CTDRVE_PARF, "Podczas wykonywania analizy składni SQL wystąpił błąd w procedurze CtDrv."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+

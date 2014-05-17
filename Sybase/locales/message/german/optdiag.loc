@@ -1,0 +1,284 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "Der Adaptive Server Enterprise Servername in der Optdiag-Ausgabedatei\\npasst nicht zum Servernamen des aktuellen Adaptive Server Enterprise."
+3 = ZZZZZ, "Optdiag-Version passt nicht zur Version von Adaptive Server Enterprise.\\n Verwenden Sie dieselbe Version für beide Programme."
+10 = ZZZZZ, "Die Adaptive Server Enterprise Version in der Optdiag-Ausgabedatei\\npasst nicht zur Version des aktuellen Adaptive Server Enterprise."
+11 = ZZZZZ, "Tabellenname '%1!' passt nicht zum angegebenen Tabellennamen '%2!'."
+12 = ZZZZZ, "Problem mit Anführungszeichen in der folgenden Zeichenfolge:"
+13 = ZZZZZ, "Keine Wert-Zeichenfolge in der folgenden Zeile gefunden:"
+14 = ZZZZZ, "Spaltenname '%1!' passt nicht zum angegebenen Spaltennamen '%2!'."
+15 = ZZZZZ, "Aktualisierung der Spaltenstatistiken fehlgeschlagen."
+16 = ZZZZZ, "Histogramm-Spaltenname '%1!' passt nicht zum vorherigen Spaltennamen\\n'%2!' für verschiedene Statistiken."
+17 = ZZZZZ, "Schritt %1! des Histogramms für '%2!.%3!.%4!': "
+18 = ZZZZZ, "Problem mit der Anzahl der Anführungszeichen."
+19 = ZZZZZ, "Daten konnten nicht gelesen werden. "
+20 = ZZZZZ, "Schrittnummer 1 wurde erwartet."
+21 = ZZZZZ, "Die Schrittnummer wurde nicht um 1 erhöht."
+22 = ZZZZZ, "Die kumulative Histogrammgewichtung überschritt 1.0 plus eine Fehlermarge."
+23 = ZZZZZ, "Zwei nebeneinander liegende Zellen können nicht beide den Operator < haben."
+24 = ZZZZZ, "Histogramm für '%1!.%2!.%3!':"
+26 = ZZZZZ, "Beginn der Transaktion fehlgeschlagen."
+27 = ZZZZZ, "Aktualisierung der Histogrammstatistiken fehlgeschlagen."
+28 = ZZZZZ, "Löschen der Histogrammstatistiken fehlgeschlagen."
+29 = ZZZZZ, "Einfügen der Histogrammgewichtungen fehlgeschlagen."
+30 = ZZZZZ, "Festschreiben der Transaktion fehlgeschlagen."
+31 = ZZZZZ, "Datenbank '%1!' auf diesem Server nicht vorhanden."
+32 = ZZZZZ, "Der angegebene Tabelleneigentümer besitzt keine Tabelle in der Datenbank '%1!'."
+33 = ZZZZZ, "Benutzer '%1!' ist in der Datenbank '%2!' nicht vorhanden."
+34 = ZZZZZ, "Tabelle '%1!' gehört nicht dem Benutzer '%2!' in dieser Datenbank."
+35 = ZZZZZ, "Tabelle '%1!' existiert nicht in der Datenbank '%2!'."
+36 = ZZZZZ, "Tabelle '%1!' enthält die Spalte '%2!' nicht."
+37 = ZZZZZ, "Für diesen Index gibt es keine Statistiken in 'systabstats'."
+38 = ZZZZZ, "Datentyp '%1!' wird von Optdiag nicht unterstützt."
+39 = ZZZZZ, "Datentyp '%1!' mit Länge %2! wird von Optdiag nicht unterstützt."
+40 = ZZZZZ, "Für diese Spalten oder Spaltengruppe wurden in 'sysstatistics' keine Statistiken gefunden."
+41 = ZZZZZ, "Für diese Spalte oder Spaltengruppe wurden in 'sysstatistics' \\nkeine Histogrammdaten gefunden."
+42 = ZZZZZ, "Interner Fehler mit Trace-Flag 3."
+43 = ZZZZZ, "Interner Fehler: Tabelleneigentümer '%1!' und Tabelle '%2!' wiederholen sich."
+44 = ZZZZZ, "Interner Fehler: ct_results() gab den unerwarteten Ergebnistyp %1! zurück."
+45 = ZZZZZ, "Interner Fehler: Datenlänge in ct_fetch() passt nicht."
+48 = ZZZZZ, "Unerwarteter Wert %1!"
+; Next is "returned", as in "a function returned a value".
+49 = ZZZZZ, "gab zurück: "
+50 = ZZZZZ, "Interner Fehler: ct_results() gab Ergebnistyp CS_CMD_FAIL zurück."
+51 = ZZZZZ, "Interner Fehler: cs_convert() fehlgeschlagen."
+52 = ZZZZZ, "Fehler beim Lesen der Zeile %1!."
+53 = ZZZZZ, "Interner Fehler: Tatsächliche Spaltenanzahl (%1!) entspricht nicht der erwarteten Anzahl (%2!)."
+54 = ZZZZZ, "Interner Fehler: Tatsächliche maximale Datenlänge (%1!) überschreitet den erwarteten Wert (%2!)."
+55 = ZZZZZ, "Auf nicht für die Cache-Einstellungen bestimmte Konfigurationsparameter muss das Suffix '%1!' folgen."
+56 = ZZZZZ, "Cache '%1!' nicht gefunden."
+57 = ZZZZZ, "Index '%1!.%2!.%3!' nicht gefunden."
+58 = ZZZZZ, "Ungültiger Wert in folgender Zeile ignoriert:"
+59 = ZZZZZ, "Simulierte Konfigurationswerte nicht aktualisiert."
+60 = ZZZZZ, "Simulierte Tabellenstatistiken wurden für die Tabelle '%1!.%2!' nicht aktualisiert."
+61 = ZZZZZ, "Nullwerte und eine untere Grenze für Nicht-Nullwerte fehlen eventuell."
+62 = ZZZZZ, "Möglicherweise fehlen Schritte."
+63 = ZZZZZ, "Die Gewichtung liegt nicht zwischen 0.0 und 1.0."
+64 = ZZZZZ, "Eine kürzlich gelesene Gewichtung kann daran schuld sein."
+65 = ZZZZZ, "Der Schrittwert nimmt nicht zu."
+66 = ZZZZZ, "Die gesamte Gewichtung unterschied sich von 1.0 um mehr als die Fehlermarge."
+67 = ZZZZZ, "Einfügung von Histogramm-Schrittwerten fehlgeschlagen."
+68 = ZZZZZ, "Suche nach Zeilen-Label '%1!'.\\nEnde von Eingabedatei unerwartet erreicht.\\nUrsache ist möglicherweise ein fehlendes Anführungszeichen."
+69 = ZZZZZ, "Interner Fehler: Tabelle '%1!' und Spalte '%2!' wiederholen sich."
+70 = ZZZZZ, "Ende der Eingabedatei erreicht, ohne dass die Optdiag-Erfolgsmeldung gelesen wurde."
+71 = ZZZZZ, "Die Systemsprache des Benutzers muss durch die Umgebungsvariable LANG\\noder den Befehlszeilenparameter -z festgelegt werden."
+72 = ZZZZZ, "Die aktuellen und vorherigen Schrittwerte dürfen nicht identisch sein,\\nda dieser Schritt keine Frequenzzählung ist."
+73 = ZZZZZ, "Unterschiedliche Binärwerte in SYSSTATISTICS sind vielleicht\\nauf denselben lesbaren Wert gerundet."
+74 = ZZZZZ, "Aktualisierung von SYSSTATISTICS mit diesen Schrittwerten würde eine Inkonsistenz bewirken."
+75 = ZZZZZ, "Dieses Histogramm wird übersprungen. Wenn Sie dieses Histogramm aktualisieren wollen,\\nführen Sie Optdiag im binären Modus aus und bearbeiten Sie die binären Schrittwerte."
+76 = ZZZZZ, "Für die Ausführung dieses Befehls sind folgende Berechtigungen erforderlich: '%1!'.\\nWenden Sie sich an einen Benutzer mit der entsprechenden Berechtigung."
+77 = ZZZZZ, "Optdiag-Zeilenlabel überschreitet die maximal zulässige Länge."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Syntaxfehler durch fehlerhafte Anführungszeichen."
+2 = ZZZZZ, "Spaltenname wurde angegeben, der Tabellenname nicht."
+3 = ZZZZZ, "Trace-Flag-Nummer überschreitet %1!, den maximal zulässigen Wert."
+5 = ZZZZZ, "Eingabe- und Ausgabedateinamen wurden angegeben."
+6 = ZZZZZ, "Die Argumente für die Datenbank und die Eingabedatei wurden nicht gelesen, sodass die\\nZieldatenbank unbekannt ist."
+7 = ZZZZZ, "Die Eingabedatei konnte nicht geöffnet werden."
+8 = ZZZZZ, "Ausgabedatei konnte nicht geöffnet werden."
+9 = ZZZZZ, "Die Datei ist vielleicht nicht vorhanden, oder Optdiag hat nicht \\ndie erforderlichen Berechtigungen."
+10 = ZZZZZ, "Syntaxfehler in der Befehlszeile vor dem Schlüsselwort 'statistics' gefunden."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Optdiag fehlgeschlagen. Siehe Fehlermeldungen oben."
+2 = ZZZZZ, "Optdiag erfolgreich."
+3 = ZZZZZ, "Setzen Sie Trace-Flag 1 in der Befehlszeile (-T1), um eine Differenz\\nin den Versionen des Adaptive Server Enterprise zu ignorieren."
+5 = ZZZZZ, "Setzen Sie Trace-Flag 4 in der Befehlszeile (-T4), um diese\\nKonsistenzprüfung zu überspringen."
+7 = ZZZZZ, "nicht angegeben"
+8 = ZZZZZ, " (Clustered)"
+9 = ZZZZZ, " (Nonclustered)"
+10 = ZZZZZ, "Standardwert wird verwendet"
+11 = ZZZZZ, "Standardwert"
+12 = ZZZZZ, "Nächste Tabelle ist '%1!', und der Eigentümer ist '%2!'."
+13 = ZZZZZ, "Wenn nicht klar ist, wo das Problem herkommt, sollten Sie Optdiag\\nim Eingabemodus mit Trace-Flag 6 ausführen, um die Ursache des Problems zu ermitteln."
+14 = ZZZZZ, "Optdiag ist fertig, aber einige Statistiken wurden übersprungen.\\nPrüfen Sie die Fehlermeldungen oben."
+15 = ZZZZZ, " (tatsächlich)"
+16 = ZZZZZ, " (simuliert)"
+17 = ZZZZZ, "Statistik stammt aus Upgrade der Distributionsseite."
+18 = ZZZZZ, "Statistik aus Optdiag geladen"
+19 = ZZZZZ, " (nur 255 Byte verwendet)"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Kennwort: "
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+
+;
+[format]
+
+1 = ZZZZZ, "Servername:"
+2 = ZZZZZ, "Angegebene Datenbank:"
+3 = ZZZZZ, "Angegebener Tabelleneigentümer:"
+4 = ZZZZZ, "Tabelleneigentümer:"
+5 = ZZZZZ, "Angegebene Tabelle:"
+6 = ZZZZZ, "Angegebene Spalte:"
+7 = ZZZZZ, "Statistiken für Index:"
+8 = ZZZZZ, "Index-Spaltenliste:"
+9 = ZZZZZ, "Statistiken für Tabelle:"
+10 = ZZZZZ, "Statistiken für Spalten:"
+11 = ZZZZZ, "Keine Statistiken für restliche Spalten:"
+12 = ZZZZZ, "(Standardwerte benutzt)"
+13 = ZZZZZ, "Statistiken für Spaltengruppe:"
+14 = ZZZZZ, "Letzte Aktualisierung der Spaltenstatistiken:"
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "Statistik stammt aus Upgrade der Distributionsseite."
+16 = ZZZZZ, "Statistik aus Optdiag geladen"
+17 = ZZZZZ, "Histogramm für Spalte:"
+18 = ZZZZZ, "Spalten-Datentyp:"
+19 = ZZZZZ, "Erforderliche Schrittanzahl:"
+20 = ZZZZZ, "Aktuelle Schrittanzahl:"
+21 = ZZZZZ, "Letzte Histogramm-Aktualisierung:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+22 = ZZZZZ, "Schritt  Gewichtung                Wert"
+23 = ZZZZZ, "Bereich-Zellendichte:"
+24 = ZZZZZ, "Gesamte Dichte:"
+25 = ZZZZZ, "Datentyp:"
+26 = ZZZZZ, "Bereichselektivität:"
+27 = ZZZZZ, "Zwischen-Selektivität:"
+28 = ZZZZZ, "Blattanzahl:"
+29 = ZZZZZ, "Anzahl Datenseiten:"
+30 = ZZZZZ, "Anzahl leere Datenseiten:"
+31 = ZZZZZ, "Anzahl leere Blätter:"
+32 = ZZZZZ, "Anzahl Datenzeilen:"
+33 = ZZZZZ, "Anzahl weitergegebene Zeilen:"
+34 = ZZZZZ, "Anzahl gelöschte Zeilen:"
+35 = ZZZZZ, "Anzahl Wagenrückläufe pro Datenseite:"
+36 = ZZZZZ, "Anzahl Wagenrückläufe pro Indexseite:"
+37 = ZZZZZ, "Anzahl Wagenrückläufe pro Datenzeile:"
+38 = ZZZZZ, "Anzahl OAM + Zuordnungsseiten:"
+39 = ZZZZZ, "Datenseiten des ersten Extents:"
+40 = ZZZZZ, "Blattseiten des ersten Extents:"
+41 = ZZZZZ, "Datenzeilengröße:"
+42 = ZZZZZ, "Blattzeilengröße:"
+43 = ZZZZZ, "Indexhöhe:"
+44 = ZZZZZ, "Abgeleitete Statistiken:"
+45 = ZZZZZ, "Datenseiten-Clusterverh.:"
+46 = ZZZZZ, "Indexseiten-Clusterverh.:"
+47 = ZZZZZ, "Datenzeilen-Clusterverh.:"
+48 = ZZZZZ, "Tabellenname:"
+49 = ZZZZZ, "Seiten in größter Partition:"
+50 = ZZZZZ, "Konfigurationsparameter:"
+51 = ZZZZZ, "Max. Parallelitätsgrad:"
+52 = ZZZZZ, "Max. Parallelitätsgrad-Scan:"
+53 = ZZZZZ, "Konfiguration für Cache:"
+54 = ZZZZZ, "Größe des 2-KB-Pools in KB:"
+55 = ZZZZZ, "Größe des 4-KB-Pools in KB:"
+56 = ZZZZZ, "Größe des 8-KB-Pools in KB:"
+57 = ZZZZZ, "Größe des 16-KB-Pools in KB:"
+58 = ZZZZZ, "Letzte Aktualisierung der Simulation:"
+59 = ZZZZZ, "Platznutzung:"
+60 = ZZZZZ, "Wirkungsgrad großer I/O-Vorgänge:"
+61 = ZZZZZ, "Anzahl der Worker-Prozesse:"
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "Histogramm für Spalte:"
+66 = ZZZZZ, "Spalten-Datentyp:"
+67 = ZZZZZ, "Erforderliche Schrittanzahl:"
+68 = ZZZZZ, "Aktuelle Schrittanzahl:"
+69 = ZZZZZ, "Letzte Histogramm-Aktualisierung:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "Schritt  Gewichtung                Wert"
+71 = ZZZZZ, "     Bereich-Zellendichte:"
+72 = ZZZZZ, "     Gesamte Dichte:"
+73 = ZZZZZ, "Datentyp:"
+74 = ZZZZZ, "     Bereichselektivität:"
+75 = ZZZZZ, "     Zwischen-Selektivität:"
+76 = ZZZZZ, "     Blattanzahl:"
+77 = ZZZZZ, "     Anzahl Datenseiten:"
+78 = ZZZZZ, "     Anzahl leere Datenseiten:"
+79 = ZZZZZ, "     Anzahl leere Blätter:"
+80 = ZZZZZ, "     Anzahl Datenzeilen:"
+81 = ZZZZZ, "     Anzahl weitergegebene Zeilen:"
+82 = ZZZZZ, "     Anzahl gelöschte Zeilen:"
+83 = ZZZZZ, "     Anzahl Wagenrückläufe pro Datenseite:"
+84 = ZZZZZ, "     Anzahl Wagenrückläufe pro Indexseite:"
+85 = ZZZZZ, "     Anzahl Wagenrückläufe pro Datenzeile:"
+86 = ZZZZZ, "     Anzahl OAM + Zuordnungsseiten:"
+87 = ZZZZZ, "     Datenseiten des ersten Extents:"
+88 = ZZZZZ, "     Blattseiten des ersten Extents:"
+89 = ZZZZZ, "     Datenzeilengröße:"
+90 = ZZZZZ, "     Blattzeilengröße:"
+91 = ZZZZZ, "     Indexhöhe:"
+92 = ZZZZZ, "     Datenseiten-Clusterverh.:"
+93 = ZZZZZ, "     Indexseiten-Clusterverh.:"
+94 = ZZZZZ, "     Datenzeilen-Clusterverh.:"
+95 = ZZZZZ, "Tabellenname:"
+96 = ZZZZZ, "     Seiten in größter Partition:"
+97 = ZZZZZ, "     Max. Parallelitätsgrad:"
+98 = ZZZZZ, "     Max. Parallelitätsgrad-Scan:"
+99 = ZZZZZ, "Konfiguration für Cache:"
+100 = ZZZZZ, "     Größe des 2-KB-Pools in KB:"
+101 = ZZZZZ, "     Größe des 4-KB-Pools in KB:"
+102 = ZZZZZ, "     Größe des 8-KB-Pools in KB:"
+103 = ZZZZZ, "     Größe des 16-KB-Pools in KB:"
+104 = ZZZZZ, "     Größe des 32-KB-Pools in KB:"
+105 = ZZZZZ, "     Größe des 64-KB-Pools in KB:"
+106 = ZZZZZ, "     Größe des 128-KB-Pools in KB:"
+107 = ZZZZZ, "Letzte Aktualisierung der Simulation:"
+108 = ZZZZZ, "     Platznutzung:"
+109 = ZZZZZ, "     Wirkungsgrad großer I/O-Vorgänge:"
+110 = ZZZZZ, "     Anzahl der Worker-Prozesse:"
+111 = ZZZZZ, "  Abgeleitete Statistiken:"
+112 = ZZZZZ, "Konfigurationsparameter:"
+113 = ZZZZZ, "Stichproben-Prozentsatz:"
+
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Schwer wiegender Fehler: Speicherzuweisung fehlgeschlagen."
+2 = ZZZZZ, "Einstellung der Verbindungseigenschaften fehlgeschlagen."
+3 = ZZZZZ, "Einrichtung der Verbindung fehlgeschlagen."
+4 = ZZZZZ, "Nicht erkanntes Lokalisierungsobjekt. Standardwert '%1!' wird verwendet."
+5 = ZZZZZ, "Interner Fehler: Ein ungültiger Lokalisierungstyp wurde an cs_locale() übergeben."
+6 = ZZZZZ, "Syntaxfehler in '%1!'."
+7 = ZZZZZ, "Fehler beim Laden eines Paars von Übersetzungstabellen."
+8 = ZZZZZ, "Unterbrechung - Optdiag abgebrochen."

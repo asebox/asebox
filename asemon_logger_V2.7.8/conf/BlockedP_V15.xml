@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > BlockedP </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > <![CDATA[
+select  
+    time_blocked=0,
+    blockedSpid=0,
+    blockingSpid=0,
+
+    L.SPID,
+    L.KPID,
+    L.DBID,
+    ParentSPID,
+    LockID,
+    BlockedBy,
+    BlockedState,
+    Context,
+    ObjectID,
+    LockState,
+    LockType,
+    LockLevel,
+    WaitTime,
+    PageNumber,
+    RowNumber,
+
+    Usr=substring(suser_name(P.suid),1,30),
+    Trn=substring(P.tran_name,1,30),
+    Prg=substring(P.program_name,1,30),
+    Prc=substring(object_name(P.id,P.dbid),1,30),
+    Line=P.linenum,
+    lckBase=substring(db_name(L.DBID),1,30),
+    lckObjet=substring(object_name(L.ObjectID, L.DBID),1,30)
+    
+
+from master.dbo.monLocks L left outer join
+     master.dbo.sysprocesses P on L.SPID=P.spid
+where L.BlockedState is not null
+]]>
+ </SQL>
+  <colsAlias>
+     <col nameInSQL="PageNumber"        nameInTable="lckPage"      />
+     <col nameInSQL="RowNumber"        nameInTable="lckRow"      />
+
+  </colsAlias>
+  <key1 >  </key1>
+  <key2 >  </key2>
+  <key3 > </key3>
+  <filterCol >  </filterCol>
+  <delay > 5 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_BlockedP (
+     Timestamp datetime not null,
+     time_blocked int not null,  /* col no longer used */
+     blockedSpid int not null,  /* col no longer used */
+     blockedUsr varchar(30) null,  /* col no longer used */
+     blockedTran varchar(30) null,  /* col no longer used */
+     blockedProg varchar(30) null,  /* col no longer used */
+     blockedProc varchar(30) null,  /* col no longer used */
+     blockedLine int null,  /* col no longer used */
+     blockingSpid int not null,  /* col no longer used */
+     blockingUsr varchar(30) null,  /* col no longer used */
+     blockingTran varchar(30) null,  /* col no longer used */
+     blockingProg varchar(30) null,  /* col no longer used */
+     blockingProc varchar(30) null,  /* col no longer used */
+     blockingLine int null,  /* col no longer used */
+     lckBase varchar(30) null,
+     lckObjet varchar(30) null,
+     lckPage int null,
+     lckRow int null,
+     lckName varchar(30) null,  /* col no longer used */
+     SPID smallint null,
+     KPID int null,
+     DBID int null,
+     ParentSPID smallint null,
+     LockID int null,
+     BlockedBy int null,
+     BlockedState varchar(64) null,
+     Context int null,
+     ObjectID int null,
+     LockState varchar(20) null,
+     LockType varchar(20) null,
+     LockLevel varchar(30) null,
+     WaitTime int null,
+     Usr varchar(30) null,
+     Trn varchar(30) null,
+     Prg varchar(30) null,
+     Prc varchar(30) null,
+     Line int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx1 on ?SERVERNAME?_BlockedP (Timestamp, BlockedBy )
+     </I>
+     <I>
+  create index idx2 on ?SERVERNAME?_BlockedP (Timestamp, LockID )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_BlockedP" >
+  delete ?SERVERNAME?_BlockedP where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

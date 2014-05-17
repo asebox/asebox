@@ -1,0 +1,185 @@
+; comment character is semicolon.
+
+; "cslib.loc" - Localization file for CS-Library.
+;
+; Sccsid @(#) cslib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+p;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csdefaults]
+
+1 = ZZZZZ, "nie można przydzielić pamięci."
+
+2 = ZZZZZ, "cslib"
+
+3 = ZZZZZ, "cslib"
+
+4 = ZZZZZ, "błąd ogólny"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CS-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cslayer]
+
+2 = ZZZZZ, "warstwa api użytkownika cslib"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csorigin]
+
+1 = ZZZZZ, "błąd zewnętrzny"
+
+2 = ZZZZZ, "błąd wewnętrzny biblioteki CS"
+
+4 = ZZZZZ, "błąd biblioteki wspólnej"
+
+5 = ZZZZZ,"błąd biblioteki intl"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csapierror]
+
+0 = 00000, "Brak błędu."
+
+1 = ZZZZZ, "Nieznany błąd."
+
+2 = ZZZZZ, "Pobierana informacja nie zmieści się w buforze o wielkości %1! bajtów."
+
+3 = ZZZZZ, "Przydzielanie pamięci nie powiodło się."
+
+4 = 22023, "Parametr %1! nie może mieć wartości NULL."
+
+5 = 22023, "Gdy %1! ma wartość NULL, parametr %2! musi mieć wartość 0."
+
+6 = 22023, "Podano niedozwoloną wartość %1! dla parametru %2!."
+
+7 = 22023, "Parametr %1! musi mieć wartości NULL."
+
+8 = 22023, "Parametr %1! musi być ustawiony na CS_UNUSED."
+
+9 = 22023, "Nie można ustawić ani wyczyścić właściwości %1!."
+
+10 = 22023, "Przekazano nieprawidłowy wskaźnik ustawień lokalnych."
+
+11 = 22023, "Parametr %1! wskazuje na niedozwoloną wartość typu danych."
+
+12 = 22023, "Przekazano nieznaną nazwę ustawień lokalnych."
+
+13 = 22023, "Operacja CS_GET nie może zostać wykonana na typie %1!."
+
+14 = ZZZZZ, "Ładowanie informacji o lokalizacji nie powiodło się."
+
+15 = ZZZZZ, "Inicjalizacja obsługi błędów nie powiodła się."
+
+16 = 0A000, "Konwersja pomiędzy typami danych %1! i %2! nie jest obsługiwana."
+
+17 = 22023, "Pole formatu struktury CS_DATAFMT powinno być ustawione na CS_FMT_UNUSED, gdy typem danych jest %1!."
+
+18 = 22023, "W polu %2! struktury CS_DATAFMT\
+wstawiono niedozwoloną wartość %1!."
+
+19 = 22023, "W strukturze CS_DATAFMT określono niedozwolony wskaźnik ustawień lokalnych."
+
+20 = ZZZZZ, "Konwersja/operacja spowodowała nadmiar."
+
+21 = ZZZZZ, "Konwersja/operacja spowodowała nadmiar."
+
+22 = ZZZZZ, "Napotkano niedozwoloną wartość dokładności."
+
+23 = ZZZZZ, "Napotkano niedozwoloną wartość skali."
+
+24 = ZZZZZ, "Konwersja/operacja została zatrzymana z powodu błędu składniowego w polu źródłowym."
+
+25 = ZZZZZ, "Wartość typu danych znajduje się poza domeną dozwolonych wartości dla typu danych."
+
+26 = 22012, "Dzielenie przez zero nie jest dozwolone."
+
+27 = 01000, "OSTRZEŻENIE: Zdeinstalowano istniejące programy obsługi błędów i komunikatów."
+
+28 = ZZZZZ, "Zapisanie komunikatów nie było możliwe z powodu braku pamięci. Wszystkie wcześniej przechowywane komunikaty zostały wyczyszczone."
+
+29 = ZZZZZ, "Wbudowana obsługa błędów musi być zainicjowana podczas operacji CS_INIT zanim będą mogły być wykonane inne akcje cs_diag()."
+
+30 = ZZZZZ, "Limit komunikatów nie może być mniejszy niż liczba obecnie zapisanych komunikatów biblioteki CS."
+
+31 = ZZZZZ, "Nie można usunąć struktury kontekstu, ponieważ aplikacja nie zakończyła działania w %1!."
+
+32 = 22023, "Operacja CS_SET jest dozwolona tylko wtedy, gdy typem jest CS_DT_CONVFMT."
+
+33 = 0A000, "Żądana translacja nie jest obsługiwana."
+ 
+34 = ZZZZZ, "Translacja niektórych znaków nie powiodła się."
+
+35 = ZZZZZ, "Konwersja/operacja została zatrzymana z powodu błędu stylu."
+
+36 = 22001, "Wynik jest obcięty, ponieważ konwersja/operacja spowodowała nadmiar."
+
+37 = ZZZZZ, "cs_ctx_name nie jest dopasowana do podanych kluczy."
+
+38 = ZZZZZ, "Łańcuch nie został skopiowany, ponieważ czynność ta spowodowałaby nadmiar."
+
+39 = ZZZZZ, "Utworzenie łańcucha nie powiodło się.  W łańcuchu tekstowym znaleziono niedozwolony symbol zastępczy."
+
+40 = ZZZZZ, "W łańcuchu formatującym dozwolonych jest 0, 1 lub 2 gwiazdki."
+
+41 = ZZZZZ, "W łańcuchu formatującym znaleziono nieznany token typu danych."
+
+42 = 22023, "Łańcuch formatujący nie może mieć wartości NULL."
+
+43 = 22023, "Niestandardowy określnik formatu jest za długi."
+
+44 = 22023, "Nie znaleziono niestandardowego określnika formatu, który odpowiada określnikowi w łańcuchu formatującym."
+
+45 = ZZZZZ, "Zły program obsługi ustawień lokalnych dla cs_locale, dla typów CS_SYB_LANG, CS_SYB_CHARSET lub CS_SYB_LANG_CHARSET."
+ 
+46 = ZZZZZ, "Nie można uzyskać dostępu do pliku lokalizacyjnego %1!."
+ 
+47 = 08003, "%1! Wyjątek połączenia - Połączenie nie istnieje."
+ 
+48 = 08002, "%1! Wyjątek połączenia - Połączenie w użyciu."
+ 
+49 = 34000, "%1! Nieprawidłowa nazwa kursora."
+ 
+50 = 26000, "%1! Nieprawidłowy identyfikator instrukcji SQL."
+ 
+51 = ZZZZZ, "%1! cs_objects: błąd podczas wykonywania żądanej operacji."
+
+52 = ZZZZZ, "Wystąpiło przepełnienie bufora wewnętrznego."
+
+;CSE_ERROPENFILE
+53 = ZZZZZ, "Błąd otwarcia pliku lokalizacyjnego!"
+
+;CSE_USEREP
+54 = ZZZZZ, "Ostrzeżenie: W miejscu docelowym używany jest znak zastępczy braku odwzorowania, ponieważ niektóre znaki nie mogą zostać przekonwertowane."
+
+;CSE_CTBCORRUPT
+55 = ZZZZZ, "Plik tabeli konwersji (plik .ctb) jest uszkodzony. Zainstaluj lub wygeneruj go ponownie."
+
+;CSE_NOOID
+56 = ZZZZZ, "Odwzorowanie nazwy lokalnej na identyfikator obiektu nie powiodło się!"
+

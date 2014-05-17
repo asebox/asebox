@@ -1,0 +1,283 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "Le nom du serveur ASE figurant dans le fichier de r≈sultats Optdiag \\ndiff…re du nom de serveur de l'Adaptive Server Enterprise courant."
+3 = ZZZZZ, "La version d'Optdiag ne correspond pas » la version \\nd'Adaptive Server Enterprise. Utilisez la m¡me version des deux programmes."
+10 = ZZZZZ, "La version d'Adaptive Server Enterprise dans le fichier de \\nr≈sultats Optdiag diff…re de celle de l'Adaptive Server Enterprise courant."
+11 = ZZZZZ, "Le nom de table '%1!' ne correspond pas au nom de table sp≈cifi≈ '%2!'."
+; The translation for 'Statistics for column' here should agree with that in
+; the format section below.
+12 = ZZZZZ, "Probl…me de guillemets dans la cha—ne suivante :"
+13 = ZZZZZ, "Aucune valeur n'a ≈t≈ trouv≈e dans la ligne :"
+14 = ZZZZZ, "Le nom de colonne '%1!' ne correspond pas au nom de colonne sp≈cifi≈ '%2!'."
+15 = ZZZZZ, "Echec de la mise » jour des statistiques sur la colonne."
+16 = ZZZZZ, "Le nom de la colonne d'histogramme, '%1!', diff…re de celui indiqu≈ pr≈c≈demment \\n'%2!' dans les statistiques g≈n≈rales."
+17 = ZZZZZ, "Au pas %1! de l'histogramme concernant '%2!.%3!.%4!', "
+18 = ZZZZZ, "il existe un probl…me de guillemets."
+19 = ZZZZZ, "les donn≈es n'ont pas pu ¡tre lues.  "
+20 = ZZZZZ, "Pas 1 attendu."
+21 = ZZZZZ, "le num≈ro de pas n'a pas augment≈ de 1."
+22 = ZZZZZ, "le poids de l'histogramme cumul≈  d≈passait 1.0 plus la marge d'erreur."
+23 = ZZZZZ, "deux cellules adjacentes ne peuvent pas utiliser l'op≈rateur <."
+24 = ZZZZZ, "Dans l'histogramme concernant '%1!.%2!.%3!',"
+26 = ZZZZZ, "Echec de la commande begin transaction."
+27 = ZZZZZ, "Echec de la mise » jour des statistiques de l'histogramme."
+28 = ZZZZZ, "Echec de la suppression des statistiques de l'histogramme."
+29 = ZZZZZ, "Echec de l'insertion de poids dans l'histogramme."
+30 = ZZZZZ, "Echec de la commande commit transaction."
+31 = ZZZZZ, "La base de donn≈es '%1!' n'existe pas sur ce serveur."
+32 = ZZZZZ, "Aucune table de la base de donn≈es '%1!'n'appartient au propri≈taire de table sp≈cifi≈."
+33 = ZZZZZ, "L'utilisateur '%1!' n'existe pas dans la base de donn≈es '%2!'."
+34 = ZZZZZ, "La table '%1!' n'appartient pas » l'utilisateur '%2!' dans cette base de donn≈es."
+35 = ZZZZZ, "La table '%1!' n'existe pas dans la base de donn≈es '%2!'."
+36 = ZZZZZ, "La table '%1!' ne contient pas la colonne '%2!'."
+37 = ZZZZZ, "Aucune statistique dans systabstats concernant cet index."
+38 = ZZZZZ, "Le type de donn≈es '%1!' n'est pas support≈ par Optdiag."
+39 = ZZZZZ, "Le type de donn≈es '%1!' de longueur %2! n'est pas support≈ par Optdiag."
+40 = ZZZZZ, "Aucune statistique dans sysstatistics sur cette colonne ou ce groupe de colonnes."
+41 = ZZZZZ, "sysstatistics ne contient aucune donn≈e d'histogramme sur cette\\ncolonne ou ce groupe de colonnes."
+42 = ZZZZZ, "Erreur interne relative » l'indicateur de trace 3."
+43 = ZZZZZ, "Erreur interne : le propri≈taire de table '%1!' et la table '%2!' sont redondants."
+44 = ZZZZZ, "Erreur interne : ct_results() a retourn≈ un type de r≈sultat impr≈vu, %1!."
+45 = ZZZZZ, "Erreur interne : longueur de donn≈es incorrecte dans ct_fetch()."
+48 = ZZZZZ, "la valeur inattendue %1! "
+49 = ZZZZZ, "renvoy≈"
+50 = ZZZZZ, "Erreur interne : ct_results() a renvoy≈ un r≈sultat de type CS_CMD_FAIL."
+51 = ZZZZZ, "Erreur interne : ≈chec de cs_convert()."
+52 = ZZZZZ, "Erreur lors de la lecture de la ligne %1!."
+53 = ZZZZZ, "Erreur interne : le nombre r≈el de colonnes (%1!) est diff≈rent du nombre pr≈vu (%2!)."
+54 = ZZZZZ, "Erreur interne : la longueur de donn≈es maximale r≈elle (%1!) d≈passe la longueur pr≈vue (%2!)."
+55 = ZZZZZ, "Les param…tres de configuration qui ne concernent pas le cache doivent ¡tre suivis de '%1!'."
+56 = ZZZZZ, "Cache '%1!' introuvable."
+57 = ZZZZZ, "Index '%1!.%2!.%3!' introuvable."
+58 = ZZZZZ, "Valeur incorrecte ignor≈e sur la ligne suivante :"
+59 = ZZZZZ, "Les valeurs de configuration simul≈es n'ont pas ≈t≈ mises » jour."
+60 = ZZZZZ, "Les statistiques sur la table simul≈es n'ont pas ≈t≈ mises » jour pour la table '%1!.%2!'."
+61 = ZZZZZ, "Des valeurs null et une limite inf≈rieure pour les valeurs not null sont peut-¡tre manquantes."
+62 = ZZZZZ, "Certains pas peuvent ¡tre manquants."
+63 = ZZZZZ, "le poids n'est pas compris entre 0.0 et 1.0."
+64 = ZZZZZ, "Ceci peut ¡tre caus≈ par un poids lu r≈cemment."
+65 = ZZZZZ, "le num≈ro de pas n'augmente pas."
+66 = ZZZZZ, "le poids total est sup≈rieur de 1.0 » la marge d'erreur."
+67 = ZZZZZ, "Echec de l'ajout de valeurs pour les pas d'histogramme."
+68 = ZZZZZ, "Recherche du label de ligne '%1!'.\\nFin de fichier atteinte de mani…re impr≈vue.\\nCeci peut avoir ≈t≈ caus≈ par un guillemet manquant."
+69 = ZZZZZ, "Erreur interne : la table '%1!' et la colonne '%2!' apparaissent plusieurs fois."
+70 = ZZZZZ, "La fin du fichier a ≈t≈ atteinte sans d≈tection de message de r≈ussite d'Optdiag."
+71 = ZZZZZ, "Les options de localisation de l'utilisateur doivent ¡tre \\nsp≈cifi≈es dans la variable d'environnement LANG ou par l'option de ligne de commande -z."
+72 = ZZZZZ, "les num≈ros de pas courant et pr≈c≈dent doivent ¡tre diff≈rents \\ncar il ne s'agit pas d'un calcul des fr≈quences."
+73 = ZZZZZ, "Il est possible que diff≈rentes valeurs binaires aient ≈t≈ \\narrondies » la m¡me valeur dans SYSSTATISTICS."
+74 = ZZZZZ, "Toute mise » jour de SYSSTATISTICS avec ces valeurs de pas \\nentra—nerait une incoh≈rence."
+75 = ZZZZZ, "Histogramme ignor≈. Si vous souhaitez mettre » jour ce dernier, \\nex≈cutez Optdiag en mode binaire et modifiez les valeurs de pas en binaire."
+76 = ZZZZZ, "Vous devez ¡tre habilit≈ » l'une des fonctions suivantes pour ex≈cuter cette commande : '%1!'.\\nDemandez de l'aide » un utilisateur habilit≈."
+77 = ZZZZZ, "Lí≈tiquette de ligne d'Optdiag d≈passe la longueur maximale admise."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+1 = ZZZZZ, "Erreur de syntaxe dans les guillemets ou les apostrophes."
+2 = ZZZZZ, "Le nom de colonne a ≈t≈ sp≈cifi≈ mais le nom de table a ≈t≈ omis."
+3 = ZZZZZ, "Le num≈ro d'indicateur de trace d≈passe la valeur maximale admise, \\nsoit %1!."
+5 = ZZZZZ, "Les noms de fichiers d'entr≈e et de r≈sultats ont ≈t≈ sp≈cifi≈s."
+6 = ZZZZZ, "Les arguments propres » la base de donn≈es et au fichier d'entr≈e \\nn'ont pas ≈t≈ lus. Par cons≈quent, la base de donn≈es cible est inconnue."
+7 = ZZZZZ, "Echec lors de l'ouverture du fichier d'entr≈e."
+8 = ZZZZZ, "Echec lors de l'ouverture du fichier de r≈sultats."
+9 = ZZZZZ, "Il est probable que le fichier n'existe pas ou que Optdiag ne \\ndispose pas des autorisations n≈cessaires."
+10 = ZZZZZ, "Une erreur de syntaxe a ≈t≈ d≈tect≈e sur la ligne de commande, \\navant le mot-cl≈ 'statistics'."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Echec d'Optdiag. V≈rifiez les messages d'erreur qui pr≈c…dent."
+2 = ZZZZZ, "R≈ussite d'Optdiag."
+3 = ZZZZZ, "Param≈trez l'indicateur de trace (set trace flag) 1 sur la ligne \\nde commande (-T1) pour qu'il ignore les diff≈rences de version des Adaptive Server Enterprise."
+5 = ZZZZZ, "Param≈trez l'indicateur de trace (set trace flag) 4 sur la ligne  \\nde commande (-T4) pour ≈viter le contr¬le de coh≈rence."
+7 = ZZZZZ, "non sp≈cifi≈(e)"
+8 = ZZZZZ, " (clusteris≈)"
+9 = ZZZZZ, " (non clusteris≈)"
+10 = ZZZZZ, "valeur par d≈faut utilis≈e"
+11 = ZZZZZ, "valeur par d≈faut"
+12 = ZZZZZ, "La table suivante est '%1!' ; son propri≈taire est '%2!'."
+13 = ZZZZZ, "Si vous avez du mal » localiser le probl…me, vous pouvez relancer \\nOptdiag en mode input, avec l'indicateur de trace 6 pour vous aider dans \\nvotre recherche."
+14 = ZZZZZ, "Optdiag a ≈t≈ ex≈cut≈ mais les statistiques ont ≈t≈ ignor≈es. \\nReportez-vous aux messages d'erreur qui pr≈c…dent."
+15 = ZZZZZ, " (r≈el)"
+16 = ZZZZZ, " (simul≈)"
+17 = ZZZZZ, "Statistiques issues de la mise » niveau de la page de statistiques."
+18 = ZZZZZ, "Statistiques charg≈es depuis Optdiag."
+19 = ZZZZZ, "  (seulement 255 octets utilis≈s)"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog (skip for optdiag)
+;
+[dialog]
+
+1 = ZZZZZ, "Mot de passe : "
+
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+;
+[format]
+
+1 = ZZZZZ, "Nom du serveur :"
+2 = ZZZZZ, "Base de donn≈es sp≈cifi≈e :"
+3 = ZZZZZ, "Propri≈taire de BdD sp≈cifi≈ :"
+4 = ZZZZZ, "Propri≈taire de la table :"
+5 = ZZZZZ, "Table sp≈cifi≈e :"
+6 = ZZZZZ, "Colonne sp≈cifi≈e :"
+7 = ZZZZZ, "Statistiques sur l'index :"
+8 = ZZZZZ, "Liste des colonnes de l'index :"
+9 = ZZZZZ, "Statistiques sur la table :"
+; The translation for 'Statistics for column' here should agree with that in
+; the errors section above.
+10 = ZZZZZ, "Statistiques sur la colonne :"
+11 = ZZZZZ, "Aucune stat. sur colonnes restantes :"
+12 = ZZZZZ, "(valeurs par d≈faut utilis≈es)"
+13 = ZZZZZ, "Statistiques sur le groupe de colonnes :"
+14 = ZZZZZ, "Derni…re M»J des stat. sur colonnes :"
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "Statistiques issues de la mise » niveau de la page de statistiques."
+16 = ZZZZZ, "Statistiques charg≈es depuis Optdiag."
+17 = ZZZZZ, "Histogramme de la colonne :"
+18 = ZZZZZ, "Type de donn≈es de la colonne :"
+19 = ZZZZZ, "Nombre de pas requis :"
+20 = ZZZZZ, "Nombre de pas r≈els :"
+21 = ZZZZZ, "Derni…re mise » jour de l'histogramme :"
+; Adjust spacing between histogram headings for locale display width.
+22 = ZZZZZ, "Pas     Poids                    Valeur"
+23 = ZZZZZ, "Densit≈ de l'intervalle de cellules :"
+24 = ZZZZZ, "Densit≈ totale :"
+25 = ZZZZZ, "Type de donn≈es :"
+26 = ZZZZZ, "S≈lectivit≈ de l'intervalle :"
+27 = ZZZZZ, "S≈lectivit≈ entre intervalles :"
+28 = ZZZZZ, "Nombre de pages de niveau feuille :"
+29 = ZZZZZ, "Nombre de pages de donn≈es :"
+30 = ZZZZZ, "Nombre de pages de donn≈es vides :"
+31 = ZZZZZ, "Nombre de pages de niveau feuille vides :"
+32 = ZZZZZ, "Nombre de lignes de donn≈es :"
+33 = ZZZZZ, "Nombre de lignes transmises :"
+34 = ZZZZZ, "Nombre de lignes supprim≈es :"
+35 = ZZZZZ, "Nombre de pages de donn≈es CR :"
+36 = ZZZZZ, "Nombre de pages d'index CR :"
+37 = ZZZZZ, "Nombre de lignes de donn≈es CR :"
+38 = ZZZZZ, "OAM + nombre de pages d'allocation :"
+39 = ZZZZZ, "Pages de donn≈es du premier extent :"
+40 = ZZZZZ, "Pages de niveau feuille du premier extent :"
+41 = ZZZZZ, "Taille de la ligne de donn≈es :"
+42 = ZZZZZ, "Taille de la ligne dans la page de niveau feuille :"
+43 = ZZZZZ, "Hauteur de l'index :"
+44 = ZZZZZ, " Statistiques d≈riv≈es :"
+45 = ZZZZZ, "Taux de clusters dans les pages de donn≈es :"
+46 = ZZZZZ, "Taux de clusters dans les pages d'index :"
+47 = ZZZZZ, "Taux de clusters dans les lignes de donn≈es :"
+48 = ZZZZZ, "Nom de table :"
+49 = ZZZZZ, "Pages dans la partition la plus large :"
+50 = ZZZZZ, "Param…tres de configuration :"
+51 = ZZZZZ, "Degr≈ de parall≈lisation max :"
+52 = ZZZZZ, "Degr≈ de parall≈lisation de balayage max :"
+53 = ZZZZZ, "Configuration du cache:"
+54 = ZZZZZ, "Taille de la zone de 2 ko, en kb :"
+55 = ZZZZZ, "Taille de la zone de 4 ko, en kb :"
+56 = ZZZZZ, "Taille de la zone de 8 ko, en kb :"
+57 = ZZZZZ, "Taille de la zone de 16 ko, en kb :"
+58 = ZZZZZ, "Derni…re mise » jour de la simulation :"
+59 = ZZZZZ, "Espace utilis≈ :" 
+60 = ZZZZZ, "Performances E/S ≈lev≈es :"
+61 = ZZZZZ, "EN: Number of worker processes:"
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "Histogramme de la colonne :"
+66 = ZZZZZ, "Type de donn≈es de la colonne :"
+67 = ZZZZZ, "Nombre de pas requis :"
+68 = ZZZZZ, "Nombre de pas r≈els :"
+69 = ZZZZZ, "Derni…re mise » jour de l'histogramme :"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight and value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "Pas      Poids                     Val."
+71 = ZZZZZ, "     Densit≈ de l'interv. de cellules :"
+72 = ZZZZZ, "     Densit≈ totale :"
+73 = ZZZZZ, "Type de donn≈es :"
+74 = ZZZZZ, "     S≈lectivit≈ de l'intervalle :"
+75 = ZZZZZ, "     S≈lectivit≈ entre intervalles :"
+76 = ZZZZZ, "     Nombre de pages de niveau feuille :"
+77 = ZZZZZ, "     Nombre de pages de donn≈es :"
+78 = ZZZZZ, "     Nombre de pages de donn≈es vides :"
+79 = ZZZZZ, "     Nb de pages de niv. feuille vides :"
+80 = ZZZZZ, "     Nombre de lignes de donn≈es :"
+81 = ZZZZZ, "     Nombre de lignes transmises :"
+82 = ZZZZZ, "     Nombre de lignes supprim≈es :"
+83 = ZZZZZ, "     Nombre de pages de donn≈es CR :"
+84 = ZZZZZ, "     Nombre de pages d'index CR :"
+85 = ZZZZZ, "     Nombre de lignes de donn≈es CR :"
+86 = ZZZZZ, "     OAM + nb de pages d'allocation :"
+87 = ZZZZZ, "     Pages de donn≈es du 1er extent :"
+88 = ZZZZZ, "     Pages de niv. feuille 1er extent :"
+89 = ZZZZZ, "     Taille de la ligne de donn≈es :"
+90 = ZZZZZ, "     Taille de ligne de la  feuille :"
+91 = ZZZZZ, "     Hauteur de l'index :"
+92 = ZZZZZ, "     Taux clusters dans pages donn≈es :"
+93 = ZZZZZ, "     Taux de clusters dans pages index :"
+94 = ZZZZZ, "     Taux clusters dans lignes donn≈es :"
+95 = ZZZZZ, "Nom de table :"
+96 = ZZZZZ, "     Page dans la plus large partition :"
+97 = ZZZZZ, "     Degr≈ de parall≈lisation max :"
+98 = ZZZZZ, "     Degr≈ de parall≈l. de balay. max :"
+99 = ZZZZZ, "Configuration du cache:"
+100 = ZZZZZ, "     Taille de la zone de 2 ko en kb :"
+101 = ZZZZZ, "     Taille de la zone de 4 ko, en kb :"
+102 = ZZZZZ, "     Taille de la zone de 8 ko, en kb :"
+103 = ZZZZZ, "     Taille de la zone de 16 ko, en kb :"
+104 = ZZZZZ, "     Taille de la zone de 32 ko en kb†:"
+105 = ZZZZZ, "     Taille de la zone de 64 ko en kb†:"
+106 = ZZZZZ, "     Taille de zone de 128 ko en kb :"
+107 = ZZZZZ, "Derni…re mise » jour de la simulation :"
+108 = ZZZZZ, "     Espace utilis≈ :"
+109 = ZZZZZ, "     Performances E/S ≈lev≈es :"
+110 = ZZZZZ, "     Nombre de processus de travail :"
+111 = ZZZZZ, "  Statistiques d≈riv≈es :"
+112 = ZZZZZ, "Param…tres de configuration :"
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Erreur fatale : l'allocation de m≈moire a ≈chou≈."
+2 = ZZZZZ, "Echec du param≈trage des propri≈t≈s de connexion."
+3 = ZZZZZ, "Echec de l'≈tablissement de la connexion."
+4 = ZZZZZ, "Objet de localisation non reconnu. La valeur par d≈faut '%1!' va ¡tre utilis≈e."
+5 = ZZZZZ, "Erreur interne : un type de localisation incorrect a ≈t≈ transmis » cs_locale()."
+6 = ZZZZZ, "Erreur de syntaxe dans '%1!'."
+7 = ZZZZZ, "Erreur lors de la tentative de chargement d'une paire de tables de conversion."
+8 = ZZZZZ, "Interruption - Abandon d'Optdiag."
+
+; End of file

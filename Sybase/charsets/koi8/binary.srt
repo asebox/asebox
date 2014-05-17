@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the KOI-8 Cyrillic 8-bit character set character set, this is a binary sort order.
+;
+; SCCS information:	@(#) generic/localization/charsets/koi8/binary.srt 1.1 11/11/94
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 16 1994  3:47AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_koi8
+menuname = "Binary ordering, for the KOI-8 Cyrillic 8-bit character set character set (koi8)."
+charset = koi8
+ 
+description = "Binary sort order for the KOI-8 Cyrillic 8-bit character set character set (koi8)."
+ 
+binary = "true"

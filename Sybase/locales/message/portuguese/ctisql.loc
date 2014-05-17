@@ -1,0 +1,94 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "Senha:"
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "Erro fatal: falha de alocação de memória."
+
+2 = ZZZZZ, "Objeto para localização não reconhecido. Usando o valor default '%1!'."
+
+3 = ZZZZZ, "Erro interno: Um tipo inválido de localização foi passado para cs_locale()."
+
+4 = ZZZZZ, "Erro na tentativa de carregar um par de tabelas de tradução."
+
+5 = ZZZZZ, "Erro ao tentar configurar o contexto do aplicativo a ser usado com estruturas relacionadas à localização."
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "Erro fatal: falha de alocação de memória."
+
+2 = ZZZZZ, "Erro de I/O: Espaço insuficiente para os dados de entrada."
+
+3 = ZZZZZ, "Falha na abertura de arquivo temporário '%1!' para uso com o editor."
+
+4 = ZZZZZ, "Impossível chamar o editor '%1!'."
+
+5 = ZZZZZ, "Impossível abrir o arquivo de entrada '%1!'."
+
+6 = ZZZZZ, "Impossível abrir o arquivo de saída '%1!'."
+
+7 = ZZZZZ, "Isql: Parâmetro '%1!' desconhecido."
+
+8 = ZZZZZ, "O nome do banco de dados é longo demais."
+
+9 = ZZZZZ, "Impossível instalar a rotina de callback de mensagens de CS-Library."
+
+10 = ZZZZZ, "Impossível inicializar Client Library."
+
+11 = ZZZZZ, "Impossível instalar a rotina de callback de mensagens do cliente Client Library."
+
+12 = ZZZZZ, "Encontrado tipo de dados não suportado."
+
+13 = ZZZZZ, "Estouro de buffer ocorreu ao imprimir linha."
+
+14 = ZZZZZ, "Encontrado tipo de resultado não suportado."
+
+15 = ZZZZZ, "Tamanho inválido de memória especificado."
+
+16 = ZZZZZ, "Tratamento de memória inválido especificado."
+
+17 = ZZZZZ, "Erro isql interno de alocação de memória."
+
+18 = ZZZZZ, "Linha de comando para chamar o editor é muito longa."
+
+19 = ZZZZZ, "Não foi inicializado um contexto de aplicação isql."
+
+20 = ZZZZZ, "Não foi estabelecida conexão com um Servidor SQL."
+
+21 = ZZZZZ, "Nenhum tratamento de comando está disponível."
+
+22 = ZZZZZ, "Impossível abrir o arquivo buffer."
+
+23 = ZZZZZ, "Falha na redefinição do indicador da posição do arquivo para o início do arquivo."
+
+24 = ZZZZZ, "Falha de apagamento do buffer de comando."
+
+25 = ZZZZZ, "Impossível iniciar o comando."
+
+26 = ZZZZZ, "Falha no apagamento do comando no ponteiro de comando."
+
+27 = ZZZZZ, "Erro na tentativa de carregar um par de tabelas de tradução."
+
+
+

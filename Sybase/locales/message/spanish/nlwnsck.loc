@@ -1,0 +1,67 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=spanish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "No es posible desconectar el punto de terminación. Error: %1!"
+
+2 = IPDE_ACCEPT, "Error durante la aceptación de una nueva conexión. Error: %1!"
+
+3 = IPDE_EPCLOSE, "No es posible cerrar el punto de terminación. Error: %1!"
+
+4 = IPDE_PARSE, "La información de conexión tiene una sintaxis incorrecta"
+
+5 = IPDE_EPCONNECT, "Error de conexión con el servidor. Error: %1!"
+
+6 = IPDE_EPMODE, "Error al cambiar el modo del conducto. Error: %1!"
+
+7 = IPDE_EVENTOBJ, "Error al crear un objeto de evento. Error: %1!"
+
+8 = IPDE_NPCREATE, "Error al crear un conducto nombrado. Error: %1!"
+
+9 = IPDE_READ, "Error de lectura del conducto nombrado. Error: %1!"
+
+10 = IPDE_WRITE, "Error de escritura en el conducto nombrado. Error: %1!"
+
+11 = IPDE_READOOB, "Error durante la lectura de los datos OOB. Error: %1!"
+
+12 = IPDE_SOCKET, "Error al crear un zócalo. Error: %1!"
+
+13 = IPDE_HOSTNAME, "Error al determinar el nombre del host - El error es %1!"
+
+14 = IPDE_EPBIND, "Error de enlace con la dirección local. Error: %1!"
+
+15 = IPDE_EPLISTEN, "Error al crear un punto de escucha. Error: %1!"
+
+16 = IPDE_DRVINIT, "Error al inicializar el controlador. Error: %1!"
+
+17 = IPDE_DRVINIT, "Error al obtener una opción de socket. Error: %1!"
+
+18 = IPDE_DRVINIT, "Error al definir una opción de socket. Error: %1!"
+
+; end of insock error strings
+;
+

@@ -1,0 +1,68 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "Verbindung zum Endpunkt kann nicht getrennt werden - Fehler ist %1!"
+
+2 = IPDE_ACCEPT, "Fehler beim Herstellen einer neuen Verbindung - Fehler ist %1!"
+
+3 = IPDE_EPCLOSE, "Endpunkt kann nicht geschlossen werden - Fehler ist %1!"
+
+4 = IPDE_PARSE, "Verbindungsinformationen haben ungültige Syntax"
+
+5 = IPDE_EPCONNECT, "Verbindung mit Server kann nicht hergestellt werden - Fehler ist %1!"
+
+6 = IPDE_EPMODE, "Änderung des Pipe-Modus fehlgeschlagen. Fehler: %1!"
+
+7 = IPDE_EVENTOBJ, "Anlegen des Ereignis-Objekts fehlgeschlagen. Fehler: %1!"
+
+8 = IPDE_NPCREATE, "Anlegen der Named Pipe fehlgeschlagen. Fehler: %1!"
+
+9 = IPDE_READ, "Lesen der Named Pipe fehlgeschlagen. Fehler: %1!"
+
+10 = IPDE_WRITE, "Schreibzugriff auf Named Pipe fehlgeschlagen. Fehler: %1!"
+
+11 = IPDE_READOOB, "Fehler beim Lesen von OOB-Daten - Fehler: %1!"
+
+12 = IPDE_SOCKET, "Fehler beim Anlegen des Sockets - Fehler: %1!"
+
+13 = IPDE_HOSTNAME, "Fehler beim Auflösen des Hostnamens - Fehler: %1!"
+
+14 = IPDE_EPBIND, "Fehler beim Binden an lokale Adresse - Fehler: %1!"
+
+15 = IPDE_EPLISTEN, "Fehler beim Anlegen eines Listening-Punktes - Fehler: %1!"
+
+16 = IPDE_DRVINIT, "Fehler bei der Treiber-Initialisierung - Fehler: %1!"
+
+17 = IPDE_DRVINIT, "Fehler beim Beziehen einer Socket-Option - Fehler %1!"
+
+18 = IPDE_DRVINIT, "Fehler beim Setzen einer Socket-Option - Fehler %1!"
+
+
+; end of insock error strings
+;
+

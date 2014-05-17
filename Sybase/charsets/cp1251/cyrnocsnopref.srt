@@ -1,0 +1,232 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#)cyrnocsnopref.srt     88.1   3/17/2003 
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Windows codepage 1251 character set, this sort order is a
+;   case-insensitive ordering. 
+;
+;   It is useful for the Belorussian, Bulgarian, Macedonian, and
+;   and Serbian languages.
+;
+;
+;   The ordering:
+;   --------------
+;   first all non-printing characters in binary order
+;   followed by all non-alphanumeric characters
+;   followed by all numeric digits
+;   followed by all Roman alphabetic characters
+;   followed by Russian Cyrillic characters, with non-Russian Cyrillic
+;       interspersed as appropriate.
+;===============================================================================
+
+class = 0x01                             ; Class `1' sort order
+id = 0x41                                ; Unique ID # (65) for the sort order
+name = cyrnocsnopref_cp1251
+menuname = "East European case-insensitive dictionary ordering without preference."
+charset = cp1251
+preference = false			; Without case preference
+
+description = "East European case-insensitive dictionary sort order, without \
+case preference for collating purposes. Uses the Windows codepage 1251 \
+character set and is case-insensitive."
+
+; Control characters
+
+char = 0x01		;START OF HEADING (SOH)
+char = 0x02		;START OF TEXT (STX)
+char = 0x03		;END OF TEXT (ETX)
+char = 0x04		;END OF TRANSMISSION (EOT)
+char = 0x05		;ENQUIRY (ENQ)
+char = 0x06		;ACKNOWLEDGE (ACK)
+char = 0x07		;BELL (BEL)
+char = 0x08		;BACKSPACE (BS)
+char = 0x09		;CHARACTER TABULATION (HT)
+char = 0x0a		;LINE FEED (LF)
+char = 0x0b		;LINE TABULATION (VT)
+char = 0x0c		;FORM FEED (FF)
+char = 0x0d		;CARRIAGE RETURN (CR)
+char = 0x0e		;SHIFT OUT (SO)
+char = 0x0f		;SHIFT IN (SI)
+char = 0x10		;DATALINK ESCAPE (DLE)
+char = 0x11		;DEVICE CONTROL ONE (DC1)
+char = 0x12		;DEVICE CONTROL TWO (DC2)
+char = 0x13		;DEVICE CONTROL THREE (DC3)
+char = 0x14		;DEVICE CONTROL FOUR (DC4)
+char = 0x15		;NEGATIVE ACKNOWLEDGE (NAK)
+char = 0x16		;SYNCRONOUS IDLE (SYN)
+char = 0x17		;END OF TRANSMISSION BLOCK (ETB)
+char = 0x18		;CANCEL (CAN)
+char = 0x19		;END OF MEDIUM (EM)
+char = 0x1a		;SUBSTITUTE (SUB)
+char = 0x1b		;ESCAPE (ESC)
+char = 0x1c		;FILE SEPARATOR (IS4)
+char = 0x1d		;GROUP SEPARATOR (IS3)
+char = 0x1e		;RECORD SEPARATOR (IS2)
+char = 0x1f		;UNIT SEPARATOR (IS1)
+
+; All non-alphanumeric characters, including punctuation
+
+char = 0x20		;SPACE
+char = 0x5f		;LOW LINE
+char = 0xad		;SOFT HYPHEN
+char = 0x2d		;HYPHEN-MINUS
+char = 0x2c		;COMMA
+char = 0x3b		;SEMICOLON
+char = 0x3a		;COLON
+char = 0x21		;EXCLAMATION MARK
+char = 0x3f		;QUESTION MARK
+char = 0x2f		;SOLIDUS
+char = 0x2e		;FULL STOP
+char = 0x60		;GRAVE ACCENT
+char = 0x5e		;CIRCUMFLEX ACCENT
+char = 0x7e		;TILDE
+char = 0x27		;APOSTROPHE
+char = 0x22		;QUOTATION MARK
+char = 0x28		;LEFT PARENTHESIS
+char = 0x29		;RIGHT PARENTHESIS
+char = 0x5b		;LEFT SQUARE BRACKET
+char = 0x5d		;RIGHT SQUARE BRACKET
+char = 0x7b		;LEFT CURLY BRACKET
+char = 0x7d		;RIGHT CURLY BRACKET
+char = 0xa7		;SECTION SIGN
+char = 0x40		;COMMERCIAL AT
+char = 0x24		;DOLLAR SIGN
+char = 0x2a		;ASTERISK
+char = 0x5c		;REVERSE SOLIDUS
+char = 0x26		;AMPERSAND
+char = 0xb9		;NUMERO SIGN
+char = 0x23		;NUMBER SIGN
+char = 0x25		;PERCENT SIGN
+char = 0x2b		;PLUS SIGN
+char = 0x3c		;LESS-THAN SIGN
+char = 0x3d		;EQUALS SIGN
+char = 0x3e		;GREATER-THAN SIGN
+char = 0x7c		;VERTICAL LINE
+char = 0x7f		;DELETE (DEL)
+char = 0x82
+char = 0x84
+char = 0x85
+char = 0x86
+char = 0x87
+char = 0x88
+char = 0x89
+char = 0x8b
+char = 0x91
+char = 0x92
+char = 0x93
+char = 0x94
+char = 0x95
+char = 0x96
+char = 0x97
+char = 0x98
+char = 0x99
+char = 0x9b
+char = 0xa4
+char = 0xa6
+char = 0xa9
+char = 0xab
+char = 0xac
+char = 0xae
+char = 0xb0
+char = 0xb1
+char = 0xb5
+char = 0xb6
+char = 0xb7
+char = 0xbb
+char = 0xa0		;NO-BREAK SPACE
+
+; Digits
+
+char = 0x30		;DIGIT ZERO
+char = 0x31		;DIGIT ONE
+char = 0x32		;DIGIT TWO
+char = 0x33		;DIGIT THREE
+char = 0x34		;DIGIT FOUR
+char = 0x35		;DIGIT FIVE
+char = 0x36		;DIGIT SIX
+char = 0x37		;DIGIT SEVEN
+char = 0x38		;DIGIT EIGHT
+char = 0x39		;DIGIT NINE
+
+;  Latin Alphabet
+
+char = 0x61=0x41		;LATIN LETTER A
+char = 0x62=0x42		;LATIN LETTER B
+char = 0x63=0x43		;LATIN LETTER C
+char = 0x64=0x44		;LATIN LETTER D
+char = 0x65=0x45		;LATIN LETTER E
+char = 0x66=0x46		;LATIN LETTER F
+char = 0x67=0x47		;LATIN LETTER G
+char = 0x68=0x48		;LATIN LETTER H
+char = 0x69=0x49		;LATIN LETTER I
+char = 0x6a=0x4a		;LATIN LETTER J
+char = 0x6b=0x4b		;LATIN LETTER K
+char = 0x6c=0x4c		;LATIN LETTER L
+char = 0x6d=0x4d		;LATIN LETTER M
+char = 0x6e=0x4e		;LATIN LETTER N
+char = 0x6f=0x4f		;LATIN LETTER O
+char = 0x70=0x50		;LATIN LETTER P
+char = 0x71=0x51		;LATIN LETTER Q
+char = 0x72=0x52		;LATIN LETTER R
+char = 0x73=0x53		;LATIN LETTER S
+char = 0x74=0x54		;LATIN LETTER T
+char = 0x75=0x55		;LATIN LETTER U
+char = 0x76=0x56		;LATIN LETTER V
+char = 0x77=0x57		;LATIN LETTER W
+char = 0x78=0x58		;LATIN LETTER X
+char = 0x79=0x59		;LATIN LETTER Y
+char = 0x7a=0x5a		;LATIN LETTER Z
+
+;  Cyrillic Characters
+
+char = 0xe0=0xc0		;CYRILLIC LETTER A
+char = 0xe1=0xc1		;CYRILLIC LETTER BE
+char = 0xe2=0xc2		;CYRILLIC LETTER VE
+char = 0xe3=0xc3		;CYRILLIC LETTER GHE
+char = 0xb4=0xa5		;CYRILLIC LETTER GE WITH UPTURN
+char = 0xe4=0xc4		;CYRILLIC LETTER DE
+char = 0x83=0x81		;CYRILLIC LETTER GJE
+char = 0x90=0x80		;CYRILLIC LETTER DJE
+char = 0xe5=0xc5		;CYRILLIC LETTER IE
+char = 0xba=0xaa		;CYRILLIC LETTER UKRAINIAN IE
+char = 0xb8=0xa8		;CYRILLIC LETTER IO
+char = 0xe6=0xc6		;CYRILLIC LETTER ZHE
+char = 0xe7=0xc7		;CYRILLIC LETTER ZE
+char = 0xbe=0xbd		;CYRILLIC LETTER DZE
+char = 0xe8=0xc8		;CYRILLIC LETTER I
+char = 0xb3=0xb2		;CYRILLIC LETTER BYELORUSSIAN-UKRAINIAN I
+char = 0xbf=0xaf		;CYRILLIC LETTER YI
+char = 0xe9=0xc9		;CYRILLIC LETTER SHORT I
+char = 0xbc=0xa3		;CYRILLIC LETTER JE
+char = 0xea=0xca		;CYRILLIC LETTER KA
+char = 0xeb=0xcb		;CYRILLIC LETTER EL
+char = 0x9a=0x8a		;CYRILLIC LETTER LJE
+char = 0xec=0xcc		;CYRILLIC LETTER EM
+char = 0xed=0xcd		;CYRILLIC LETTER EN
+char = 0x9c=0x8c		;CYRILLIC LETTER NJE
+char = 0xee=0xce		;CYRILLIC LETTER O
+char = 0xef=0xcf		;CYRILLIC LETTER PE
+char = 0xf0=0xd0		;CYRILLIC LETTER ER
+char = 0xf1=0xd1		;CYRILLIC LETTER ES
+char = 0xf2=0xd2		;CYRILLIC LETTER TE
+char = 0x9d=0x8d		;CYRILLIC LETTER KJE
+char = 0x9e=0x8e		;CYRILLIC LETTER TSHE
+char = 0xf3=0xd3		;CYRILLIC LETTER U
+char = 0xa2=0xa1		;CYRILLIC LETTER SHORT U
+char = 0xf4=0xd4		;CYRILLIC LETTER EF
+char = 0xf5=0xd5		;CYRILLIC LETTER HA
+char = 0xf6=0xd6		;CYRILLIC LETTER TSE
+char = 0xf7=0xd7		;CYRILLIC LETTER CHE
+char = 0x9f=0x8f		;CYRILLIC LETTER DZHE
+char = 0xf8=0xd8		;CYRILLIC LETTER SHA
+char = 0xf9=0xd9		;CYRILLIC LETTER SHCHA
+char = 0xfa=0xda		;CYRILLIC LETTER HARD SIGN
+char = 0xfb=0xdb		;CYRILLIC LETTER YERU
+char = 0xfc=0xdc		;CYRILLIC LETTER SOFT SIGN
+char = 0xfd=0xdd		;CYRILLIC LETTER E
+char = 0xfe=0xde		;CYRILLIC LETTER YU
+char = 0xff=0xdf		;CYRILLIC LETTER YA

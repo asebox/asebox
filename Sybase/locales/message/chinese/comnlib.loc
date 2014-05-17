@@ -1,0 +1,89 @@
+; comment character is semicolon.
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "由于缺乏内存不能获得字符串"
+
+2 = ZZZZZ, "不能获得消息层字符串"
+
+3 = ZZZZZ, "不能获得初始消息字符串"
+
+4 = ZZZZZ, "错误字符串不可用"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "用户api 层"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "外部错误"
+
+2 = ZZZZZ, "内部Client Library错误"
+
+3 = ZZZZZ, "内部net library错误"
+
+4 = ZZZZZ, "内部common library错误"
+
+5 = ZZZZZ, "内部intl library错误"
+
+6 = ZZZZZ, "内部异步管理者错误"
+
+7 = ZZZZZ, "内部内存管理错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "无错误."
+
+1 = ZZZZZ, "未知错误."
+
+2 = ZZZZZ, "内存分配失败."
+
+3 = ZZX04, "不能打开读取配置文件%1!."
+
+4 = ZZX05, "删除配置%1! (CS_FORCE)."
+
+5 = ZZX06, "配置文件名%1! 太长."
+
+6 = ZZX07, "文件格式错误, 非法的字符,行%1!."
+
+7 = ZZX08, "没找到配置段%1!."
+
+8 = 01X09, "配置文件语法错误,行%1! (%2!)附近."
+
+9 = 01X0一个, "删除正在使用的配置%1! (CS_FORCE)."
+

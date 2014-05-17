@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > OpObjAct </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > <![CDATA[
+  select DBID,ObjectID,IndexID, LogicalReads, PhysicalReads, APFReads, PagesRead, PhysicalWrites, PagesWritten, UsedCount, RowsInserted, RowsDeleted, RowsUpdated, Operations, LockRequests, LockWaits, OptSelectCount,
+  HkgcRequests, HkgcPending, HkgcOverflows,
+  SharedLockWaitTime, ExclusiveLockWaitTime, UpdateLockWaitTime, ObjectCacheDate
+  into #tmpOpObjectAct
+  from master..monOpenObjectActivity 
+  where LogicalReads > 0 
+  ?FILTER_CLAUSE?
+  
+  
+  select dbname=db_name(O.DBID),objname=isnull(object_name(ObjectID, O.DBID),convert(varchar,ObjectID)), IndID=IndexID,
+  LogicalReads, PhysicalReads, APFReads, PagesRead, PhysicalWrites, PagesWritten, UsedCount, RowsInserted, RowsDeleted, RowsUpdated,
+  Operations, LockRequests, LockWaits, OptSelectCount,
+  indname=isnull(index_name(O.DBID,ObjectID, IndexID),convert(varchar,IndexID)),
+  HkgcRequests, HkgcPending, HkgcOverflows,
+  SharedLockWaitTime, ExclusiveLockWaitTime, UpdateLockWaitTime, ObjectCacheDate
+  from #tmpOpObjectAct O left outer join master..sysdatabases D
+  on O.DBID=D.dbid
+  and D.status&1        != 1        /* database upgrading              */
+  and D.status&32       != 32       /* database created for load       */
+  and D.status&64       != 64       /* database recovery               */
+  and D.status&256      != 256      /* database suspect                */
+  and D.status&2048     != 2048     /* dbo use only                    */
+  and D.status&4096     != 4096     /* single user                     */
+  and D.status2&16      != 16       /* database offline                */
+  and D.status2&32      != 32       /* database offline                */
+  and D.status2&512     != 512      /* database currently upgrading    */
+  and D.status3&8       != 8        /* databse in shutdown             */
+  and D.status3&8192    != 8192     /* A drop database is in progress. */
+
+
+  drop table #tmpOpObjectAct
+]]>
+  </SQL>
+  <parameters>
+     <param name="FILTER_CLAUSE">  </param>
+  </parameters>
+  <key1 > dbname </key1>
+  <key2 > objname </key2>
+  <key3 > IndID </key3>
+  <filterCol > LogicalReads </filterCol>
+  <delay > 300 </delay>
+  <colsCalcDiff >                 
+     <COL> LogicalReads                 </COL>
+     <COL> PhysicalReads                 </COL>
+     <COL> APFReads                 </COL>
+     <COL> PagesRead                 </COL>
+     <COL> PhysicalWrites                 </COL>
+     <COL> PagesWritten                 </COL>
+     <COL> UsedCount                 </COL>
+     <COL> RowsInserted                 </COL>
+     <COL> RowsDeleted                 </COL>
+     <COL> RowsUpdated                 </COL>
+     <COL> Operations                 </COL>
+     <COL> LockRequests                 </COL>
+     <COL> LockWaits                 </COL>
+     <COL> OptSelectCount                 </COL>
+     <COL> HkgcRequests              </COL>
+     <COL> HkgcOverflows             </COL>
+     <COL> SharedLockWaitTime                 </COL>
+     <COL> ExclusiveLockWaitTime                 </COL>
+     <COL> UpdateLockWaitTime                 </COL>
+  </colsCalcDiff>
+  <mandatoryConfigs>
+     <config>per object statistics active</config>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_OpObjAct (
+     Timestamp datetime not null,
+     Interval int not null,
+     dbname varchar(30) null,
+     objname varchar(255) null,
+     IndID int null,
+     LogicalReads numeric(14,0) null,
+     PhysicalReads numeric(14,0) null,
+     APFReads numeric(14,0) null,
+     PagesRead numeric(14,0) null,
+     PhysicalWrites numeric(14,0) null,
+     PagesWritten numeric(14,0) null,
+     UsedCount numeric(14,0) null,
+     RowsInserted numeric(14,0) null,
+     RowsDeleted numeric(14,0) null,
+     RowsUpdated numeric(14,0) null,
+     Operations numeric(14,0) null,
+     LockRequests numeric(14,0) null,
+     LockWaits numeric(14,0) null,
+     OptSelectCount numeric(14,0) null,
+     indname varchar(255) null,
+     HkgcRequests      int null,
+     HkgcPending       int null,
+     HkgcOverflows     int null,
+     SharedLockWaitTime int null,
+     ExclusiveLockWaitTime int null,
+     UpdateLockWaitTime int null,
+     ObjectCacheDate datetime null
+  ) lock datapages
+     </T>
+  </createTables>
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_OpObjAct (Timestamp, dbname, objname, IndID, Interval )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_OpObjAct" >
+  delete ?SERVERNAME?_OpObjAct where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

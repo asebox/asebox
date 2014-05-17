@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > IQVersUse </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > 
+    sp_iqversionuse
+ </SQL>
+  <key1 > VersionID </key1>
+  <key2 > Server </key2>
+  <key3 > IQconnID </key3>
+  <filterCol > </filterCol>
+  <delay > 30 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+
+  <colsAlias> 
+     <col nameInSQL="IQConnID"  nameInTable="IQconnID"  />
+  </colsAlias>
+
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_IQVersUse (
+     Timestamp               datetime not null,
+     Interval                int not null,
+     VersionID               numeric(12,0) null, -- ATTENTION : should be a 'unsigned bigint'
+     Server                  varchar(255) null,
+     IQconnID                numeric(12,0) null, -- ATTENTION : should be a 'unsigned bigint'
+     WasReported             numeric(12,0) null, -- ATTENTION : should be a 'unsigned bigint'
+     MinKBRelease            numeric(12,0) null, -- ATTENTION : should be a 'unsigned bigint'
+     MaxKBRelease            numeric(12,0) null  -- ATTENTION : should be a 'unsigned bigint'
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_IQVersUse (Timestamp, Interval, IQconnID, VersionID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_IQVersUse" >
+  delete ?SERVERNAME?_IQVersUse where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

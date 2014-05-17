@@ -1,0 +1,76 @@
+<MetricDescriptor>
+  <metricName > IQSQL </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > 
+exec sa_server_option 'requestlogging', 'SQL'
+exec sa_get_request_times
+select 
+req_id              ,
+conn_id        ,
+conn_handle    ,
+stmt_num       ,
+millisecs      ,
+stmt_id        ,
+stmt=substring(stmt,1,1500)           ,
+prefix=substring(prefix,1,16)         ,
+isolation_level,
+[rowcount]     ,
+triggers       ,
+proc_name=substring(proc_name,1,30)      ,
+proc_line      ,
+cursor_type=substring(cursor_type,1,16)    ,
+[plan]=substring([plan],1,16)         ,                                                                                                                                                                                                                                                                                   
+start_time
+ from  satmp_request_time  where start_time > '?ASM$LASTCOLLECT?'
+declare @trcname varchar(256)
+select @trcname='tracesql_'+convert(varchar,getdate(),102)+'_'+convert(varchar,datepart(hh,getdate()))+'h'
+exec sa_server_option 'requestlogfile', @trcname
+ </SQL>                                                                        
+  <key1 > </key1>                                                   
+  <key2 > </key2>
+  <key3 > </key3>
+  <filterCol > </filterCol>
+  <delay > 60 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_IQSQL (
+     Timestamp               datetime not null,
+     req_id                int not null,           
+     conn_id                int not null,               /* should be BIGINT */
+     conn_handle                int not null,               /* should be BIGINT */
+     stmt_num                int not null,    
+     millisecs                int not null,
+     stmt_id                int not null,
+     stmt                  varchar(1500) null,      /* 32768 max */
+     prefix                varchar(16) null,      /* 32768 max */
+     isolation_level       int null,
+     [rowcount]              int null,               /* should be BIGINT */
+     triggers              int null,               /* should be BIGINT */
+     proc_name             varchar(30) null,      /* 128 max */
+     proc_line                  int null,
+     cursor_type           varchar(16) null,      /* 32768 max */
+     [plan]                  varchar(16) null,      /* 32768 max */
+     start_time            datetime not null
+  ) lock datapages
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_IQSQL (Timestamp, req_id)
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_IQSQL (start_time)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_IQSQL" >
+  delete ?SERVERNAME?_IQSQL where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

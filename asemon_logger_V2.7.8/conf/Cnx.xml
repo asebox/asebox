@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > Cnx </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 30 </delay>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_Cnx (
+     Loggedindatetime datetime not null,
+     Kpid int null,
+     Spid int null,
+     UserName varchar(30) null,
+     program_name varchar(30) null,
+     DBName varchar(30) null,
+     execlass varchar(30) null,
+     ipaddr varchar(15) null,
+     hostname char(10) null,
+     hostprocess char(8) null,
+     clientname varchar(30) null,
+     clienthostname varchar(30) null,
+     clientapplname varchar(30) null,
+     tempdbid   int null,
+     tempdbname varchar(30) null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create unique index idx on ?SERVERNAME?_Cnx (Loggedindatetime, Kpid, Spid ) with ignore_dup_key
+     </I>
+     <I>
+  create unique index idx1 on ?SERVERNAME?_Cnx (Kpid, Spid, Loggedindatetime ) with ignore_dup_key
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_Cnx" >
+<![CDATA[
+  delete ?SERVERNAME?_Cnx
+  from ?SERVERNAME?_Cnx C
+  where C.Loggedindatetime < ?DATE?
+  and not exists (select * from ?SERVERNAME?_CnxActiv A (index idx1)
+                  where C.Loggedindatetime =A.Loggedindatetime
+                    and C.Spid = A.Spid
+                    and C.Kpid = A.Kpid
+                    and A.Timestamp > ?DATE?)
+]]>
+
+    </P>
+  </purge>
+
+</MetricDescriptor>

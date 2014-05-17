@@ -1,0 +1,183 @@
+; comment character is semicolon.
+
+
+; "blklib.loc"- Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "impossível alocar memória."
+
+2 = ZZZZZ, "blklib "
+
+3 = ZZZZZ, "blklib "
+
+4 = ZZZZZ, "erro geral "
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "camada blk "
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origem do erro "definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "erro do usuário "
+
+2 = ZZZZZ, "erro interno em BLK-Library "
+
+3 = ZZZZZ, "erro de biblioteca CT "
+
+4 = ZZZZZ, "erro do gerenciador assíncrono "
+
+5 = ZZZZZ, "erro de biblioteca comum "
+
+6 = ZZZZZ, "erro de gerenciamento de memória "
+
+7 = ZZZZZ, "erro no Servidor SQL "
+
+8 = ZZZZZ, "Erro de formato dos dados do cliente"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk OK "
+
+1 = ZZZZZ, "Impossível chamar API %1! a partir deste estado: %2!"
+
+2 = ZZZZZ, "API %1! só permitido para operações IN de cópia de massa "
+
+3 = ZZZZZ, "API %1! não pode ser chamado de um callback (estado = %2!)"
+
+4 = ZZZZZ, "O parâmetro %1! tem um valor ilegal de %2!"
+
+5 = ZZZZZ, "O campo %1! da estrutura CS_DATAFMT está com um valor ilegal \
+de %2!."
+
+6 = ZZZZZ, "O parâmetro %1! não pode ser NULL."
+
+7 = ZZZZZ, "O buffer dado de %1! bytes excedeu o tamanho total do valor a ser transferido."
+
+8 = ZZZZZ, "A precisão deve ser maior que ou igual à escala "
+
+9 = ZZZZZ, "Impossível vincular um NULL %1! com um tipo de dados %2!."
+
+10 = ZZZZZ, "uma coluna de tabela do tipo %1! não pode ser ligada a um programa \
+variável do tipo %2!."
+
+11 = ZZZZZ, "Impossível interligar textxfer e matriz."
+
+12 = ZZZZZ, "Todas as colunas devem ter o mesmo valor de contagem de matriz para o vínculo \
+da matriz."
+
+13 = ZZZZZ, "Impossível localizar um equivalente CS_TYPE para este tipo de dados TDS \
+%1!"
+
+14 = ZZZZZ, "Falha quando a rotina %1! de CT_Lib chamou."
+
+15 = ZZZZZ, "Use a direção CS_BLK_IN ou CS_BLK_OUT para uma operação de cópia de massa."
+
+16 = ZZZZZ, "Use a opção CS_BLK_ALL para encerrar uma cópia de massa OUT."
+
+17 = ZZZZZ, "Estado errado do processo %1! para %2! - ele não deveria estar aqui."
+
+18 = ZZZZZ, "Estado errado para %1! - ele não deveria estar aqui."
+
+19 = ZZZZZ, "A coluna e o default %1! enviados do servidor não são \
+os mesmos."
+
+20 = ZZZZZ, "Estado errado para %1! - porém é possível recuperar - continuar processando."
+
+21 = ZZZZZ, "O número de colunas esperado do servidor não é o mesmo \
+que o %1! recebido."
+
+22 = ZZZZZ, "A aplicação deve fazer o login com o conjunto de propriedades  %1!."
+
+23 = ZZZZZ, "As versões da biblioteca de cópia de massa e CT_Lib são incompatíveis."
+
+24 = ZZZZZ, "Não há valor ou o valor default disponível e NULL não são permitidos. \
+col = %1! lin = %2!."
+
+25 = ZZZZZ, "Falha na rotina de conversão - estouro de condição. \
+col = %1! lin = %2!."
+
+26 = ZZZZZ, "Falha na rotina de conversão - erro de sintaxe. \
+col = %1! lin = %2!."
+
+27 = ZZZZZ, "Seqüência errada de vínculo - uma coluna ligada vem após uma coluna marcada \
+para textxfer."
+
+28 = ZZZZZ, "O tamanho total do textxfer %1! ultrapassa o tamanho %2! dos dados de entrada "
+
+29 = ZZZZZ, "O número de valores %1! default não é o mesmo que a contagem default %2!"
+
+30 = ZZZZZ, "Retorno de CS_END_RESULTS para o arquivo solicitado para \
+cópia de massa de saída. O arquivo pode estar vazio."
+
+31 = ZZZZZ, "O parâmetro %1! deve ser NULL."
+
+32 = ZZZZZ, "O parâmetro %1! deve ser CS_UNUSED."
+
+33 = ZZZZZ, "Impossível definir uma contagem de linhas maior que a contagem de vínculo de matriz."
+
+34 = ZZZZZ, "Apenas BLK_IDENTITY ou BLK_IDSTARTNUM pode ser habilitado."
+
+35 = ZZZZZ, "O valor da propriedade %1! não pode ser recuperado porque não foi estabelecido \
+o valor para a propriedade."
+
+36 = ZZZZZ, "Um erro de conversão ou adição ocorreu ao atualizar o \
+valor de partida da coluna de identidade."
+
+37 = ZZZZZ, "Erro durante a criação do comando para inserir massa."
+
+38 = ZZZZZ, "O valor de partida da coluna de identidade deve ter uma escala de 0."
+
+39 = ZZZZZ, "Falha ao criar o comando de linguagem que obtém o formato da linha. "
+
+40 = ZZZZZ, "O buffer de %1! bytes tem um valor illegal e deve ser maior que zero. "
+
+41 = ZZZZZ, "BCP falhou ao criar linhas na tabela de destino. A coluna %1! começaria \
+em um deslocamento acima de 8191 bytes; esta localização inicial não pode ser representada \
+com exatidão no formato da tabela (linha)."
+
+42 = ZZZZZ, "Dados truncados durante a conversão do conjunto de caracteres local. \
+ col = %1! row = %2!."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

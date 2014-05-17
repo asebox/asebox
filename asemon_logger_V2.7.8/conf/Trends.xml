@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > Trends </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL >
+  return
+  </SQL>
+  <key1 > </key1>
+  <key2 > </key2>
+  <key3 > </key3>
+  <filterCol > </filterCol>
+  <delay > 86400 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <createTables>
+     <T>
+create table ?SERVERNAME?_Trends
+(
+ TrendID smallint not null,
+ dt smalldatetime not null,
+ Value float null
+) lock allpages
+     </T>
+     <T> 
+create table ?SERVERNAME?_TrendsCfg
+(TrendID int not null,
+ grpname varchar(30) null,
+ SQL text, 
+ description varchar(255) null,
+ aggfunction varchar(10) not null  check (aggfunction in( 'AVG', 'SUM', 'MIN', 'MAX', 'COUNT'))
+) lock datarows
+
+     </T>
+     
+     
+     <T> 
+create table ?SERVERNAME?_TrendProc (
+day datetime not null,
+DBID int not null,
+ProcName varchar(30) null,
+Executions int not null,                                        
+AvgCpuTime real not null,                                       
+AvgWaitTime real not null,                                      
+AvgMemUsageKB real not null,                                    
+AvgPhysicalReads real not null,                                 
+AvgLogicalReads real not null,                                  
+AvgPagesModified real not null,                                 
+AvgPacketsSent real not null,                                   
+AvgPacketsReceived real not null,                               
+AvgRowsAffected  real not null,
+RequestCnt int null,        
+TempdbRemapCnt int null,    
+AvgTempdbRemapTime real null,
+AvgPhysicalWrites real null,    
+AvgPagesWritten real null,
+NbPlans int null
+)
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+create unique clustered index icu on ?SERVERNAME?_Trends (TrendID, dt)
+     </I>
+     <I>
+create unique index iu on ?SERVERNAME?_TrendsCfg (TrendID)
+     </I>
+     <I>
+create unique clustered index icu on ?SERVERNAME?_TrendProc (ProcName, DBID, day)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_Trends" > <![CDATA[
+
+-- Insert default trends if not yet defined
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=1)
+insert into ?SERVERNAME?_TrendsCfg
+values (1,
+"Kernel",
+"insert into ?SERVERNAME?_Trends
+select 1, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), Value=avg(UserCPUTimePCT_AVG)
+from
+  (select Timestamp, UserCPUTimePCT_AVG=sum(100000.0*UserCPUTime/Interval)/avg(count (*))    
+  from ?SERVERNAME?_Engines 
+    where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=1) ),'1/1/1900')
+    and Timestamp < convert(varchar,getdate(), 102)
+  group by Timestamp) avgBySample
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )"
+, "User CPU",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=2)
+insert into ?SERVERNAME?_TrendsCfg
+values (2,
+"Kernel",
+"insert into ?SERVERNAME?_Trends
+select 2, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), avg(SystemCPUTimePCT_AVG)
+from
+  (select Timestamp, SystemCPUTimePCT_AVG=sum(100000.0*SystemCPUTime/Interval)/avg(count (*)) 
+  from ?SERVERNAME?_Engines
+    where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=2) ),'1/1/1900')
+    and Timestamp < convert(varchar,getdate(), 102)
+  group by Timestamp) avgBySample
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"System CPU",
+'AVG'
+)
+   
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=3)
+insert into ?SERVERNAME?_TrendsCfg
+values (3,
+"Kernel",
+"insert into ?SERVERNAME?_Trends
+select 3, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), avg(EngineNumber)
+from
+  (select Timestamp, EngineNumber=count (*)
+    from ?SERVERNAME?_Engines
+    where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=3) ),'1/1/1900')
+    and Timestamp < convert(varchar,getdate(), 102)
+    and ContextSwitches >0
+  group by Timestamp) avgBySample
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Online engines",
+'AVG'
+)
+   
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=4)
+insert into ?SERVERNAME?_TrendsCfg
+values (4,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 4, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(NumDeadlocks )
+from ?SERVERNAME?_MonState 
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=4) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Nb. deadlocks",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=5)
+insert into ?SERVERNAME?_TrendsCfg
+values (5,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 5, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(Requests)
+from ?SERVERNAME?_ProcCache
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=5) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Procedure request",
+'SUM'
+)
+   
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=6)
+insert into ?SERVERNAME?_TrendsCfg
+values (6,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 6, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(Loads)
+from ?SERVERNAME?_ProcCache
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=6) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Procedure load",
+'SUM'
+)
+   
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=7)
+insert into ?SERVERNAME?_TrendsCfg
+values (7,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 7, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(Writes)
+from ?SERVERNAME?_ProcCache
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=7) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Procedure Writes",
+'SUM'
+)
+   
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=8)
+insert into ?SERVERNAME?_TrendsCfg
+values (8,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 8, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(1.0*PacketsReceived)
+from ?SERVERNAME?_NetworkIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=8) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Network packets received",
+'SUM'
+)
+   
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=9)
+insert into ?SERVERNAME?_TrendsCfg
+values (9,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 9, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(1.0*PacketsSent)
+from ?SERVERNAME?_NetworkIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=9) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Network packets sent",
+'SUM'
+)
+   
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=10)
+insert into ?SERVERNAME?_TrendsCfg
+values (10,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 10, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), sum(OpenedConnections )
+from ?SERVERNAME?_MonState
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=10) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Open connections",
+'SUM'
+)
+   
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=11)
+insert into ?SERVERNAME?_TrendsCfg
+values (11,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 11, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=11) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of open objects'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free object descriptors",
+'MIN'
+)
+   
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=12)
+insert into ?SERVERNAME?_TrendsCfg
+values (12,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 12, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=12) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of open indexes'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free index descriptors",
+'MIN'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=13) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (13,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 13, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=13) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : total spins",
+'SUM'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=14) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (14,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 14, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=14) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and s.fldname='81'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : Kernel->erunqspinlock spins",
+'SUM'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=15) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (15,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 15, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=15) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and s.fldname='89'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : Resource->rdesmgr_spin spins",
+'SUM'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=16) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (16,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 16, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=16) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and (s.fldname='46' or s.fldname='default data cache')
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : default data cache spins",
+'SUM'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=17) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (17,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 17, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=17) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and s.fldname='10'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : fglockspins spins",
+'SUM'
+)
+   
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=18) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (18,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 18, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=18) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and s.fldname='18'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : tablockspins spins",
+'SUM'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=19) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (19,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 19, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=19) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and s.fldname='25'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : addrlockspins spins",
+'SUM'
+)
+   
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=20) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (20,
+"Spinlock",
+"insert into ?SERVERNAME?_Trends
+select 20, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    total_spins=sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=20) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'S'
+and s.fldname='69'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Spinlocks : Networking_spinlock spins",
+'SUM'
+)
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=21)
+insert into ?SERVERNAME?_TrendsCfg
+values (21,
+"Disk IO",
+"insert into ?SERVERNAME?_Trends
+select 21, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    TotReads= sum (1.*Reads+APFReads )
+from ?SERVERNAME?_DevIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=21) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and LogicalName not like 'SYSDEV$[_][_]%'
+and lower(LogicalName) not like '%tempdb%'
+and lower(LogicalName) not like '%ramfs%'
+and lower(LogicalName) not like '%log%'
+and lower(LogicalName) not like 'vdisk%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"DATA Reads",
+'SUM'
+)
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=22)
+insert into ?SERVERNAME?_TrendsCfg
+values (22,
+"Disk IO",
+"insert into ?SERVERNAME?_Trends
+select 22, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    TotWrites= sum (1.*Writes)
+from ?SERVERNAME?_DevIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=22) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and LogicalName not like 'SYSDEV$[_][_]%'
+and lower(LogicalName) not like '%tempdb%'
+and lower(LogicalName) not like '%ramfs%'
+and lower(LogicalName) not like '%log%'
+and lower(LogicalName) not like 'vdisk%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"DATA Writes",
+'SUM'
+)
+
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=23)
+insert into ?SERVERNAME?_TrendsCfg
+values (23,
+"Disk IO",
+"insert into ?SERVERNAME?_Trends
+select 23, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    TotReads= sum (1.*Reads+APFReads )
+from ?SERVERNAME?_DevIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=23) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and lower(LogicalName) like '%log%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"LOG Reads",
+'SUM'
+)
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=24)
+insert into ?SERVERNAME?_TrendsCfg
+values (24,
+"Disk IO",
+"insert into ?SERVERNAME?_Trends
+select 24, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    TotWrites= sum (1.*Writes)
+from ?SERVERNAME?_DevIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=24) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and lower(LogicalName) like '%log%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"LOG Writes",
+'SUM'
+)
+
+
+
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=25)
+insert into ?SERVERNAME?_TrendsCfg
+values (25,
+"Disk IO",
+"insert into ?SERVERNAME?_Trends
+select 25, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    TotReads= sum (1.*Reads+APFReads )
+from ?SERVERNAME?_DevIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=25) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and (lower(LogicalName) like '%tempdb%'
+or lower(LogicalName) like '%ramfs%'
+or lower(LogicalName) like 'vdisk%')
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"TEMPDB Reads",
+'SUM'
+)
+
+if not exists (select 1 from ?SERVERNAME?_TrendsCfg where TrendID=26)
+insert into ?SERVERNAME?_TrendsCfg
+values (26,
+"Disk IO",
+"insert into ?SERVERNAME?_Trends
+select 26, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    TotWrites= sum (1.*Writes)
+from ?SERVERNAME?_DevIO
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=26) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and (lower(LogicalName) like '%tempdb%'
+or lower(LogicalName) like '%ramfs%'
+or lower(LogicalName) like 'vdisk%')
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"TEMPDB Writes",
+'SUM'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=27)
+insert into ?SERVERNAME?_TrendsCfg
+values (27,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 27, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=27) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='additional network memory'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free additional network memory",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=28)
+insert into ?SERVERNAME?_TrendsCfg
+values (28,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 28, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=28) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='audit queue size'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free audit queue size",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=29)
+insert into ?SERVERNAME?_TrendsCfg
+values (29,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 29, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=29) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='disk i/o structures'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free disk i/o structures",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=30)
+insert into ?SERVERNAME?_TrendsCfg
+values (30,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 30, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=30) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='heap memory per user'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free heap memory per user",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=31)
+insert into ?SERVERNAME?_TrendsCfg
+values (31,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 31, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=31) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='max cis remote connection'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free max cis remote connection",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=32)
+insert into ?SERVERNAME?_TrendsCfg
+values (32,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 32, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=32) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='max memory'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free max memory",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=33)
+insert into ?SERVERNAME?_TrendsCfg
+values (33,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 33, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=33) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name like 'number of aux scan descri%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free number of aux scan descriptors",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=34)
+insert into ?SERVERNAME?_TrendsCfg
+values (34,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 34, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=34) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of devices'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"Free number of devices",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=35)
+insert into ?SERVERNAME?_TrendsCfg
+values (35,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 35, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=35) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of dtx participant'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of dtx participant",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=36)
+insert into ?SERVERNAME?_TrendsCfg
+values (36,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 36, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=36) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of locks'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of locks",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=37)
+insert into ?SERVERNAME?_TrendsCfg
+values (37,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 37, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=37) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of open databases'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of open databases",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=38)
+insert into ?SERVERNAME?_TrendsCfg
+values (38,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 38, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=38) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name='number of open partitions'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of open partitions",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=39)
+insert into ?SERVERNAME?_TrendsCfg
+values (39,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 39, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=39) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name like 'number of remote connecti%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of remote connections",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=40)
+insert into ?SERVERNAME?_TrendsCfg
+values (40,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 40, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=40) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name = 'number of remote logins'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of remote logins",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=41)
+insert into ?SERVERNAME?_TrendsCfg
+values (41,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 41, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=41) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name = 'number of remote sites'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of remote sites",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=42)
+insert into ?SERVERNAME?_TrendsCfg
+values (42,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 42, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=42) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name like 'number of user connection%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of user connection",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=43)
+insert into ?SERVERNAME?_TrendsCfg
+values (43,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 43, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=43) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name like 'number of worker processe%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free number of worker processes",
+'MIN'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=44)
+insert into ?SERVERNAME?_TrendsCfg
+values (44,
+"Config",
+"insert into ?SERVERNAME?_Trends
+select 44, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), min(Num_Free )
+from ?SERVERNAME?_MonConf
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=44) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and Name like 'procedure cache size%'
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"free procedure cache size",
+'MIN'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=45) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (45,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 45, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=45) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 19
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recompilation_exec (Execution Phase)",
+'SUM'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=46) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (46,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 46, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=46) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 20
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recompilation_comp (Compilation Phase)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=47) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (47,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 47, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=47) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 21
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recompilation_exec_curs (Execute Cursor Execution)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=48) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (48,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 48, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=48) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 22
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recompilation_redef (Redefinition Phase)",
+'SUM'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=49) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (49,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 49, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=49) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 23
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_tabmissing (Table Missing)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=50) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (50,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 50, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=50) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 24
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_idxchange (Index Change)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=51) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (51,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 51, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=51) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 25
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_schemacount (Schema Change)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=52) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (52,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 52, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=52) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 26
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_cursor_perm (Cursor Permissions Change)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=53) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (53,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 53, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=53) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 27
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_tempmissing (Temporary Table Missing)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=54) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (54,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 54, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=54) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 28
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_permissions (Permissions Change)",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=55) and exists (select 1 from sysobjects where name ='?SERVERNAME?_SysMon')
+insert into ?SERVERNAME?_TrendsCfg
+values (55,
+"Application",
+"insert into ?SERVERNAME?_Trends
+select 55, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ), 
+    sum(1.*s.d_value)
+from ?SERVERNAME?_SysMon s
+where Timestamp >= isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=55) ),'1/1/1900')
+and Timestamp < convert(varchar,getdate(), 102)
+and s.grpname = 'G4'
+and s.field_id = 29
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )",
+"proc_recomp_isolevel (Isolation Level Change)",
+'SUM'
+)
+
+     
+      
+      
+      
+         
+
+
+delete ?SERVERNAME?_TrendsCfg where TrendID=100
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=100) and not exists (select * from syscolumns where id=object_id('?SERVERNAME?_CachedPrc') and name='ExecutionCount')
+insert into ?SERVERNAME?_TrendsCfg
+values (100,
+"Procedures",
+"
+declare @dayToCompute datetime
+select @dayToCompute=convert(varchar,isnull(dateadd(dd,1,max(day)), (select min(StartTime) from ?SERVERNAME?_StmtStat) ), 102) from ?SERVERNAME?_TrendProc
+while @dayToCompute < convert(varchar,getdate(),102)
+begin
+insert into ?SERVERNAME?_TrendProc (
+day,
+DBID,
+ProcName,
+Executions,
+AvgCpuTime,
+AvgWaitTime,
+AvgMemUsageKB,
+AvgPhysicalReads,
+AvgLogicalReads,
+AvgPagesModified,
+AvgPacketsSent,
+AvgPacketsReceived,
+AvgRowsAffected,
+NbPlans)
+select day, DBID, ProcName,
+    Executions=count(*),
+    AvgCpuTime=sum(CpuTime)/count(*),
+    AvgWaitTime=sum(WaitTime)/count(*),
+    AvgMemUsageKB=max(MemUsageKB)/count(*),
+    AvgPhysicalReads=sum(PhysicalReads)/count(*),
+    AvgLogicalReads=sum(LogicalReads)/count(*),
+    AvgPagesModified=sum(PagesModified)/count(*),
+    AvgPacketsSent=sum(PacketsSent)/count(*),
+    AvgPacketsReceived=sum(PacketsReceived)/count(*),
+    AvgRowsAffected =sum(RowsAffected )/count(*),
+    SumPlans = sum(NbPlans)
+from (
+    select day=convert(varchar,StartTime ,102),ProcName, DBID, SPID, KPID, BatchID, ContextID , 
+           CpuTime=sum(1.*CpuTime),
+           WaitTime=sum(1.*WaitTime), 
+           MemUsageKB=max(MemUsageKB), 
+           PhysicalReads=sum(1.*PhysicalReads),
+           LogicalReads=sum(1.*LogicalReads), 
+           PagesModified=sum(1.*PagesModified),
+           PacketsSent=sum(1.*PacketsSent), 
+           PacketsReceived=sum(1.*PacketsReceived),
+           RowsAffected=sum(1.*RowsAffected),
+           NbPlans=count(distinct PlanID)
+    from ?SERVERNAME?_StmtStat (index idx)
+    where StartTime >= @dayToCompute
+          and StartTime < dateadd(dd, 1, @dayToCompute)
+    group by convert(varchar,StartTime ,102),ProcName, DBID, SPID, KPID,BatchID, ContextID 
+    ) ProcExec
+group by day, DBID, ProcName
+select @dayToCompute=dateadd(dd,1, @dayToCompute)
+end
+",
+"Procedures statistics",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=100) and exists (select * from syscolumns where id=object_id('?SERVERNAME?_CachedPrc') and name='ExecutionCount')
+insert into ?SERVERNAME?_TrendsCfg
+values (100,
+"Procedures",
+"
+declare @dayToCompute datetime
+select @dayToCompute=convert(varchar,isnull(dateadd(dd,1,max(day)), (select min(StartTime) from ?SERVERNAME?_StmtStat) ), 102) from ?SERVERNAME?_TrendProc
+while @dayToCompute < convert(varchar,getdate(),102)
+begin
+insert into ?SERVERNAME?_TrendProc(
+day,
+DBID,
+ProcName,
+Executions,
+AvgCpuTime,
+AvgWaitTime,
+AvgMemUsageKB,
+AvgPhysicalReads,
+AvgLogicalReads,
+AvgPagesModified,
+AvgPacketsSent,
+AvgPacketsReceived,
+AvgRowsAffected,
+RequestCnt,        
+TempdbRemapCnt,    
+AvgTempdbRemapTime,
+AvgPhysicalWrites,    
+AvgPagesWritten,
+NbPlans)
+
+    select day=convert(varchar,Timestamp ,102), DBID, ObjectName,
+           Executions= sum(ExecutionCount),
+           AvgCpuTime=case when sum(ExecutionCount)=0 then 0 else sum(1.*CPUTime)/sum(ExecutionCount) end,
+           AvgWaitTime=case when sum(ExecutionCount)=0 then 0 else sum(1.*(ExecutionTime-CPUTime))/sum(ExecutionCount) end, 
+           AvgMemUsageKB=avg(MemUsageKB), 
+           AvgPhysicalReads=case when sum(ExecutionCount)=0 then 0 else sum(1.*PhysicalReads)/sum(ExecutionCount) end,
+           AvgLogicalReads=case when sum(ExecutionCount)=0 then 0 else sum(1.*LogicalReads)/sum(ExecutionCount) end, 
+           AvgPagesModified=-1.,
+           AvgPacketsSent=-1., 
+           AvgPacketsReceived=-1.,
+           AvgRowsAffected=-1.,
+           RequestCnt=sum(1.*RequestCnt),
+           TempdbRemapCnt=sum(1.*TempdbRemapCnt),
+           AvgTempdbRemapTime=avg(1.*AvgTempdbRemapTime),
+           AvgPhysicalWrites=case when sum(ExecutionCount)=0 then null else sum(1.*PhysicalWrites)/sum(ExecutionCount) end,
+           AvgPagesWritten= case when sum(ExecutionCount)=0 then null else sum(1.*PagesWritten)/sum(ExecutionCount) end,
+           NbPlans=count(distinct PlanID)
+    from ?SERVERNAME?_CachedPrc
+    where Timestamp >= @dayToCompute
+      and Timestamp < dateadd(dd, 1, @dayToCompute)
+      and RequestCnt is not null
+    group by convert(varchar,Timestamp ,102), DBID, ObjectName
+select @dayToCompute=dateadd(dd,1, @dayToCompute)
+end
+",
+"Procedures statistics",
+'AVG'
+)
+
+
+
+
+-- aggregate indicators according to their descriptors
+
+  set nocount on
+  set rowcount 0
+  select TrendID, SQL 
+  into #trendList
+  from ?SERVERNAME?_TrendsCfg
+  
+  declare @TrendID smallint,
+  @SQL varchar(16384)
+  set rowcount 1
+  select @TrendID=TrendID, @SQL=convert(varchar(16384),SQL )
+  from #trendList
+  delete #trendList
+  while (@@rowcount =1)
+  begin
+    set rowcount 0
+    exec (@SQL)
+    set rowcount 1
+    select @TrendID=TrendID, @SQL=convert(varchar(16384),SQL )
+    from #trendList
+    delete #trendList
+  end
+  set rowcount 0
+  drop table #trendList
+  set nocount off
+
+
+
+
+
+
+]]>
+    </P>
+  </purge>
+</MetricDescriptor>

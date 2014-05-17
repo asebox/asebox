@@ -1,0 +1,126 @@
+; Sccsid @(#) ctdrvlib.loc 1.2 10/7/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "ไม่สามารถจัดสรรหน่วยความจำ"
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "ข้อผิดพลาดทั่วไป"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, " เลเยอร์ ctdrv "
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "ข้อผิดพลาดผู้ใช้"
+
+2 = E_ORG_INTRN, "ข้อผิดพลาดภายใน CTDRV-Library"
+
+3 = E_ORG_CT, "ข้อผิดพลาดไลบรารี CT"
+
+4 = E_ORG_ASYNC, "ข้อผิดพลาด async แมเนเจอร์"
+
+5 = E_ORG_COM, "ข้อผิดพลาดไลบรารีทั่วไป"
+
+6 = E_ORG_MEM, "ข้อผิดพลาดการจัดการหน่วยความจำ"
+
+7 = E_ORG_SS, "ข้อผิดพลาด SQL Server"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, "ctdrv ใช้ได้"
+
+1 = CTDRVE_MEM_F, "หน่วยความจำล้มเหลวในรูทีน CtDrv"
+
+2 = CTDRVE_CTF, " รูทีน CtDrv ล้มเหลว เมื่อเรียกรูทีน CT_Lib %1! "
+
+3 = CTDRVE_APIF, "รูทีน CtDrv ล้มเหลว เมื่อเรียก %1!"
+
+4 = CTDRVE_NOCURSOR, "ไม่มีเคอร์เซอร์ในการจัดการสเตตเมนต์นี้"
+
+5 = CTDRVE_TRUNCATE, " ไม่สามารถส่งกลับข้อมูลทั้งหมด  %1! ถูกตัด"
+
+6 = CTDRVE_DUPCUR, "มีเคอร์เซอร์ชื่อ %1! อยู่แล้ว"
+
+7 = CTDRVE_LENCUR, "ชื่อเคอร์เซอร์ต้องไม่เกิน %1! ตัวอักษร"
+
+8 = CTDRVE_SEQ, "มีการเรียกฟังก์ชันในลำดับที่ไม่ถูกต้อง"
+
+9 = CTDRVE_ODBCTYPE, "ไม่สามารถแมปประเภทข้อมูลอินพุต CT_LIB ไปเป็นข้อมูลประเภท ODBC"
+
+10 = CTDRVE_CTTYPE, " ไม่สามารถแมปประเภทข้อมูลอินพุต ODBC ไปเป็นข้อมูลประเภท CT_LIB"
+
+11 = CTDRVE_CTDATYPE, "%1! : ไม่พบข้อมูลประเภท ct_lib"
+
+12 = CTDRVE_ASYNC, "ฟังก์ชันไม่เป็นลำดับ: มีอีกฟังก์ชันหนึ่งกำลังเอ็กซีคิวต์แบบอะซิงโครนัส"
+
+13 = CTDRVE_BUFF, "รูทีน CtDrv ล้มเหลวในขณะที่กำลังจัดสรรบัฟเฟอร์ SQL"
+
+14 = CTDRVE_SUBF, "รูทีน CtDrv ล้มเหลวในขณะที่กำลังแทนที่ SQL"
+
+15 = CTDRVE_STMTNM, "รูทีน CtDrv ล้มเหลวในขณะที่กำลังตั้งชื่อสเตตเมนต์"
+
+16 = CTDRVE_CURNM, "รูทีน  CtDrv ล้มเหลวในขณะที่กำลังตั้งชื่อเคอร์เซอร์"
+
+17 = CTDRVE_RESROW, "รูทีน CtDrv ล้มเหลวในขณะที่กำลังดึงผลลัพธ์แถวของ %1! และ %2!"
+
+18 = CTDRVE_RESDCF, "รูทีน CtDrv ล้มเหลวในขณะที่กำลังดึงผลลัพธ์ %1!"
+
+19 = CTDRVE_APIF2, "รูทีน CtDrv ล้มเหลวเมื่อเรียกฟังก์ชันภายใน %1!"
+
+20 = CTDRVE_APIF3, "ฟังก์ชันภายใน %1! ล้มเหลวเมื่อเรียกรูทีน CT_LIB %2!"
+
+21 = CTDRVE_PARF, "รูทีน CtDrv ล้มเหลวในขณะที่กำลังพาร์ส SQL"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+

@@ -1,0 +1,72 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) common.loc 1.2 8/18/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line.
+	version=12.0  		; International Release 
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=portuguese
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	Todos os direitos reservados.\
+	O uso, duplicação ou revelação por parte do Governo dos Estados Unidos\
+	estão sujeitos às restrições estabelecidas nos subparágrafos do FAR\
+	52.227-19(a)-(d) para contratos com agências civis e DFARS\
+	252.227-7013(c)(1)(ii) para contratos com o Departamento de Defesa.\
+	A Sybase se reserva todos os direitos não publicados de acordo com as leis de copyright\
+	dos Estados Unidos.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA "
+[datetime] 
+	months= Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, \
+	Setembro, Outubro, Novembro, Dezembro 
+
+	shortmonths= Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Seto, Out, \
+		Nov, Dez 
+
+	; The list of day-names must begin with the local equivalent of 
+	; Monday, which is the first day of the week in most places. 
+
+	days= Segunda_feira, Terça_feira, Quarta_feira, Quinta_feira, Sexta_feira, Sábado, Domingo 
+
+	firstday = 1	; Monday is the first day of a Brazilian week. 
+
+	; The date format specifier consists of the 3 characters 
+	; 'm', 'd', and 'y' in any order. The order of these characters 
+	; determines the appearance of the month, day, and year in 
+	; a datetime string. Each of the characters 'm', 'd', and 'y' 
+	; must appear exactly once. 
+
+	dateformat=dmy 
+
+	; The time format specifier consists of the number "12" or "24", 
+	; to designate the 12-hour or 24-hour time system. 
+
+	timeformat=24
+[money] 
+	; The currency format specifier consists of two parts: 
+	; 
+	;	1) The letter "B" or "A", which means that the currency 
+	;	   symbol should appear before or after the amount, 
+	;	   respectively. 
+	;
+	;	2) The currency symbol. It may consist of more than one 
+	;	   character (e.g. "kr" for kroner). If the currency 
+	;	   symbol is unavailable on your keyboard, it may 
+	;	   be described as a hexadecimal character constant 
+	;	   (e.g. 0x23 or 0xe322). 
+	;
+	; More than one money format may be specified. DB-Library 
+	; will properly ignore any specified currency symbol when 
+	; converting from character to money. Character strings 
+	; without a currency symbol will also be accepted. 
+
+	moneyformat=B,R$ 
+	moneyformat=A,Reais

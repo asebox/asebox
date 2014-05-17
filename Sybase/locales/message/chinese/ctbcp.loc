@@ -1,0 +1,138 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "致命错误: 内存分配失败."
+2 = ZZZZZ, "I/O 错误: 输入数据空间不足."
+3 = ZZZZZ, "dbedit()写时打开临时文件'%1!'失败."
+4 = ZZZZZ, "不能激活'%1!' 编辑器."
+5 = ZZZZZ, "不能打开输入文件'%1!'."
+6 = ZZZZZ, "不能打开输出文件'%1!'."
+7 = ZZZZZ, "bcp: 未知的参数'%1!'."
+8 = ZZZZZ, "使用'%1!' 标志设置第一行拷贝时, 行号必须大于或等于1."
+9 = ZZZZZ, "使用'%1!' 和'%2!' 标志设置第一和最后行拷贝时, 第一行号必须小于最后行号."
+10 = ZZZZZ, "使用'%1!' 标志设置拷贝最后行时, 行号必须大于或等于1."
+11 = ZZZZZ, "拷贝方向必须是 'in' 或者'out'."
+12 = ZZZZZ, "'%1!' 标志必须在整型后.  '%2!' 不是合法整型."
+13 = ZZZZZ, "警告: '%1!' 标志出现大于一次.  新的标志取代旧值."
+14 = ZZZZZ, "警告: '%1!' 覆盖 '%2!'"
+15 = ZZZZZ, "非法的前缀长度. 有效的前缀长度为 0, 1, 2, 或者4."
+16 = ZZZZZ, "级(1-16): "
+17 = ZZZZZ, "非法的级"
+18 = ZZZZZ, "间隔 (1-64): "
+19 = ZZZZZ, "多记录项返回时被分隔;  完成后返回. "
+20 = ZZZZZ, "以SA 登录 (n/y): "
+21 = ZZZZZ, "再试:"
+22 = ZZZZZ, "非法的间隔"
+23 = ZZZZZ, "启动拷贝..."
+24 = ZZZZZ, "已拷贝%1! 行."
+25 = ZZZZZ, "时钟时间(ms.): 共计= %1!"
+26 = ZZZZZ, "想要保存此格式信息在一个文件? [Y/n] "
+27 = ZZZZZ, "主机文件名[%1!]: "
+28 = ZZZZZ, "非法的列类型. 有效的类型是:"
+29 = ZZZZZ, "    <cr>: 与DataServer 列类型相同."
+30 = ZZZZZ, " 平均 = %1! (%2! 行每秒.)"
+31 = ZZZZZ, "bcp 拷贝%1! 失败"
+32 = ZZZZZ, "bcp 拷贝%1! 部分失败"
+33 = ZZZZZ, "非法的精度. 精度应在%1! 和%2!之间"
+34 = ZZZZZ, "非法的标量. 标量应在%1! 和%2!之间并应少于或等于精度."
+35 = ZZZZZ, "返回非期望的结果类型."
+36 = ZZZZZ, "返回非期望的结果."
+37 = ZZZZZ, "错误: 写入BCP 文件(%1!)!"
+38 = ZZZZZ, "查询指定主机文件失败."
+39 = ZZZZZ, "bulk-copy 到主机文件的表的行数小于bulk-copy 可忽略的行数."
+40 = ZZZZZ, "blk_rowxfer_mult 返回非期望的返回代码."
+41 = ZZZZZ, "遇到未知的数据类型'%1!'."
+42 = ZZZZZ, "读bcp 错误文件时I/O 错."
+43 = ZZZZZ, "写bcp 错误文件时I/O 错."
+44 = ZZZZZ, "不能打开错误文件."
+45 = ZZZZZ, "在BCP 数据文件中遇到非期望的文件结束符."
+46 = ZZZZZ, "在BCP 数据文件中发现负的前缀长度."
+47 = ZZZZZ, "BCP hostfile '%1!' 只包括%2!行. 不允许跳过所有这些行."
+48 = ZZZZZ, "BCP hostfile '%1!' 只包括%2!行. 不可能读要求的行数."
+49 = ZZZZZ, "大量拷贝时, 所有变长数据必须有长度前缀或结束符指定."
+50 = ZZZZZ, "Text/image 域大于最大值. 数据被截断."
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "致命错误: 内存分配失败."
+2 = ZZZZZ, "拷贝方向必须是 'in' 或者'out'."
+3 = ZZZZZ, "警告: '%1!' 覆盖 '%2!'."
+4 = ZZZZZ, "使用'%1!' 标志设置拷贝的第一行, 行号必须大于或等于1."
+5 = ZZZZZ, "使用'%1!' 和'%2!' 标志设置拷贝的第一和最后行, 第一行号必须小于最后行."
+6 = ZZZZZ, "使用'%1!' 标志设置拷贝的最后行, 行号必须大于或等于1."
+7 = ZZZZZ, "使用'%1!' 标志设置批处理大小, 行数必须大于或等于1."
+8 = ZZZZZ, "警告: 拷出时忽略'%1!' 标志."
+9 = ZZZZZ, "拷入时不能同时使用'%1!' 和'%2!'."
+10 = ZZZZZ, "使用'%1!' 标志设置标识列起始值, 值必须大于或等于0."
+11 = ZZZZZ, "不能一起使用'%1!' 和'%2!' 标志."
+12 = ZZZZZ, "警告: 批处理大小从%1! 重置为 %2!."
+13 = ZZZZZ, "设置连接属性失败."
+14 = ZZZZZ, "建立连接失败."
+15 = ZZZZZ, "设置连接选项失败."
+16 = ZZZZZ, "查询语言失败."
+17 = ZZZZZ, "设置缺省失败."
+18 = ZZZZZ, "查询表格式失败."
+19 = ZZZZZ, "blk_init 失败."
+20 = ZZZZZ, "不能打开错误文件."
+21 = ZZZZZ, "不认识的本地化对象.  使用缺省值'%1!'."
+22 = ZZZZZ, "内部错误: 一个非法的本地化类型传递到cs_locale()."
+23 = ZZZZZ, "警告: 不支持选项'%1!', 忽略"
+24 = ZZZZZ, "'%1!'语法错."
+25 = ZZZZZ, "装载一对翻译表出错."
+26 = ZZZZZ, "在尝试配置应用程序环境以便用于与本地化相关的结构时出现错误。"
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "批成功地大量拷贝到 SQL Server."
+2 = ZZZZZ, "%1! 行发送到SQL Server."
+3 = ZZZZZ, "%1! 行成功地大量拷贝到主机文件."
+4 = ZZZZZ, "中断 - 大量拷贝被异常中止."
+5 = ZZZZZ, "拷贝 %1! 行."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "保密字: "
+2 = ZZZZZ, "输入域%1!的文件存储类型 [%2!]: "
+3 = ZZZZZ, "输入域%1!的长度 [无最大长度]: "
+4 = ZZZZZ, "输入域%1!的长度 [%2!]: "
+5 = ZZZZZ, "输入域结束符[%1!]: "
+6 = ZZZZZ, "输入域%1!的前缀长度 [%2!]: "
+7 = ZZZZZ, "输入域%1!的精度 [%2!]: "
+8 = ZZZZZ, "输入域%1!的标量 [%2!]: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: 不能打开格式文件 '%2!'."
+2 = ZZZZZ, "读bcp 格式文件时I/O 错."
+3 = ZZZZZ, "不能关闭bcp 格式文件."
+4 = ZZZZZ, "列%1!: 遇到非法精度值."
+5 = ZZZZZ, "遇到未知的定长数据类型."
+6 = ZZZZZ, "企图读 bcp 格式文件的未知版本."
+7 = ZZZZZ, "在bcp 格式文件找到不正确的主机列数."
+8 = ZZZZZ, "在格式文件找到不认知的数据类型'%1!'."
+9 = ZZZZZ, "格式文件指示bcp 不拷贝标识列, 与E选项冲突."
+10 = ZZZZZ, "无列拷贝."

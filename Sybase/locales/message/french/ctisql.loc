@@ -1,0 +1,94 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "Mot de passe : "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "Erreur fatale : échec de l'allocation mémoire."
+ 
+2 = ZZZZZ, "Objet de localisation non reconnu. La valeur par défaut sera utilisée '%1!'."
+ 
+3 = ZZZZZ, "Erreur interne : type de localisation incorrect passé à cs_locale()."
+ 
+4 = ZZZZZ, "Erreur lors du chargement d'un couple de tables de traduction." 
+
+5 = ZZZZZ, "Une erreur s'est produite lors de la tentative de configuration du contexte de l'application pour une utilisation avec des structures de localisation."
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "Erreur fatale : échec de l'allocation mémoire."
+
+2 = ZZZZZ, "Erreur d'E/S : espace insuffisant pour les données en entrée."
+
+3 = ZZZZZ, "Echec de l'ouverture du fichier temporaire '%1!' pour l'utiliser avec l'éditeur."
+
+4 = ZZZZZ, "Impossible d'appeler l'éditeur '%1!'."
+
+5 = ZZZZZ, "Impossible d'ouvrir le fichier d'entrée '%1!'."
+
+6 = ZZZZZ, "Impossible d'ouvrir le fichier résultat '%1!'."
+
+7 = ZZZZZ, "Isql : paramètre '%1!' inconnu."
+
+8 = ZZZZZ, "Le nom de la base de données est trop long."
+
+9 = ZZZZZ, "Impossible d'installer la routine callback de messages CS-Library."
+
+10 = ZZZZZ, "Impossible d'initialiser Client Library."
+
+11 = ZZZZZ, "Impossible d'installer la routine d'action de messages clients Client Library."
+
+12 = ZZZZZ, "Détection d'un type de données non pris en charge."
+
+13 = ZZZZZ, "Overflow de buffer lors de l'affichage de la ligne."
+
+14 = ZZZZZ, "Détection d'un type de résultat non pris en charge."
+
+15 = ZZZZZ, "Taille de bloc mémoire incorrecte."
+
+16 = ZZZZZ, "Gestionnaire de mémoire incorrect."
+
+17 = ZZZZZ, "Erreur interne d'allocation mémoire isql."
+
+18 = ZZZZZ, "La ligne de commande appelant l'éditeur est trop longue."
+
+19 = ZZZZZ, "Un contexte d'application isql n'a pas été initialisé."
+
+20 = ZZZZZ, "Une connexion avec un SQL Server n'a pas été établie."
+
+21 = ZZZZZ, "Aucun gestionnaire de commandes disponible."
+
+22 = ZZZZZ, "Impossible d'ouvrir le fichier de buffer."
+
+23 = ZZZZZ, "Echec de la restauration de l'indicateur de position de fichier au début du fichier."
+
+24 = ZZZZZ, "Echec du vidage du buffer de commandes."
+
+25 = ZZZZZ, "Impossible de lancer la commande."
+
+26 = ZZZZZ, "Echec du vidage de la commande dans le gestionnaire de commandes."
+
+27 = ZZZZZ, "Erreur lors du chargement d'un couple de tables de traduction."
+
+
+

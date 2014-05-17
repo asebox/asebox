@@ -1,0 +1,94 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "Password: "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "Fatal error: memory allocation failed."
+
+2 = ZZZZZ, "Unrecognized localization object.  Using default value '%1!'."
+
+3 = ZZZZZ, "Internal error: An invalid localization type was passed to cs_locale()."
+
+4 = ZZZZZ, "Error in attempting to load a pair of translation tables."
+
+5 = ZZZZZ, "An error occurred when attempting to configure the application's context for use with localization-related structures."
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "Fatal error: memory allocation failed."
+
+2 = ZZZZZ, "I/O Error: Insufficient space for input data."
+
+3 = ZZZZZ, "Failed to open temp file '%1!' for use with editor."
+
+4 = ZZZZZ, "Unable to invoke the '%1!' editor."
+
+5 = ZZZZZ, "Unable to open input file '%1!'."
+
+6 = ZZZZZ, "Unable to open output file '%1!'."
+
+7 = ZZZZZ, "Isql: Unknown parameter '%1!'."
+
+8 = ZZZZZ, "Database name too long."
+
+9 = ZZZZZ, "Unable to install CS-Library message callback routine."
+
+10 = ZZZZZ, "Unable to initialize Client Library."
+
+11 = ZZZZZ, "Unable to install Client Library client message callback routine."
+
+12 = ZZZZZ, "Unsupported datatype encountered."
+
+13 = ZZZZZ, "Buffer overflow occurred while printing row."
+
+14 = ZZZZZ, "Unsupported result type encountered."
+
+15 = ZZZZZ, "Invalid memory block size specified."
+
+16 = ZZZZZ, "Invalid memory handle specified."
+
+17 = ZZZZZ, "Internal isql memory allocation error."
+
+18 = ZZZZZ, "Command line to invoke editor too long."
+
+19 = ZZZZZ, "An isql application context has not been initialized."
+
+20 = ZZZZZ, "A connection with a SQL Server has not been established."
+
+21 = ZZZZZ, "No command handle is available."
+
+22 = ZZZZZ, "Unable to open buffer file."
+
+23 = ZZZZZ, "Failed to reset the file's position indicator to the beginning of the file."
+
+24 = ZZZZZ, "Failed to clear the command buffer."
+
+25 = ZZZZZ, "Unable to initiate the command."
+
+26 = ZZZZZ, "Failed to clear the command in the command handle."
+
+27 = ZZZZZ, "Error in attempting to load a pair of translation tables."
+
+
+

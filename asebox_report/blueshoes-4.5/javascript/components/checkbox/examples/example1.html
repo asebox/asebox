@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>JavaScript Bs_Checkbox example 1</title>
+
+<script type="text/javascript" src="/_bsJavascript/core/lang/Bs_Misc.lib.js"></script>
+<script type="text/javascript" src="/_bsJavascript/components/checkbox/Bs_Checkbox.class.js"></script>
+
+<script type="text/javascript">
+function init() {
+  bsChkA = new Bs_Checkbox();
+  bsChkA.caption      = 'blah';
+  bsChkA.checkboxName = 'checkboxA';
+  bsChkA.drawInto('myCheckboxSpan1');
+  
+  bsChkB = new Bs_Checkbox();
+  bsChkB.caption      = 'foobar';
+  bsChkB.checkboxName = 'checkboxB';
+  bsChkB.value        = 1;
+  bsChkB.drawInto('myCheckboxSpan2');
+  
+  bsChkC = new Bs_Checkbox();
+  bsChkC.caption      = 'foobar';
+  bsChkC.checkboxName = 'checkboxC';
+  bsChkC.imgDir       = '/_bsJavascript/components/checkbox/img/bobby/';
+  bsChkC.imgWidth     = '11';
+  bsChkC.imgHeight    = '11';
+  bsChkC.useMouseover = true;
+  bsChkC.drawInto('myCheckboxSpan3');
+}
+</script>
+</head>
+
+<body onLoad="init();">
+
+<h1>JavaScript Bs_Checkbox example 1</h1>
+
+This is an example of the <a href="http://www.blueshoes.org/en/javascript/checkbox/">Checkbox Control</a>.
+<br><br>
+
+<form  name="test" id="test" action="http://www.blueshoes.org/postDump.php" method="post">
+	<table border="1" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td valign="top">
+	      <ul>
+	        <li>caption is clickable</li>
+	      </ul>
+	    </td>
+	    <td valign="top">
+	      <ul>
+	        <li>caption is clickable</li>
+	        <li>by default the box is "partly" checked.</li>
+	      </ul>
+	    </td>
+	    <td valign="top">
+	      <ul>
+	        <li>caption is clickable</li>
+	        <li>uses it's own icons, even with a built-in onmouseover effect.</li>
+	      </ul>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td height="60" align="center" valign="middle">
+	      <span id="myCheckboxSpan1"></span>
+	    </td>
+	    <td height="60" align="center" valign="middle">
+	      <span id="myCheckboxSpan2"></span>
+	    </td>
+	    <td height="60" align="center" valign="middle">
+	      <span id="myCheckboxSpan3"></span>
+	    </td>
+	  </tr>
+	</table>
+	<br>
+	<input type="submit">
+</form>
+
+
+</body>
+</html>

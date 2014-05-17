@@ -1,0 +1,59 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+ All rights reserved.\
+ Use, duplication, or disclosure by the United States Government\
+ is subject to restrictions as set forth in FAR subparagraphs\
+ 52.227-19(a)-(d) for civilian agency contracts and DFARS\
+ 252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+ Sybase reserves all unpublished rights under the copyright laws\
+ of the United States.\
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "วีเนียร์เลเยอร์ COBOL CT Library "
+2 = ZZZZZ, "รันไทม์เลเยอร์ COBOL"
+
+[cobcterror]
+
+1 = ZZZZZ, "ประเภทที่ระบุใน CSBDIAG หรือ CTBDIAG ไม่ถูกต้อง"
+2 = ZZZZZ, "Cobol ไม่สนับสนุนออปชัน  CS_USERDATA"
+3 = ZZZZZ, "ไม่รู้จักรหัสคอมไพเลอร์"
+4 = ZZZZZ, "การแปลงตัวแปรอินพุตใน CTBPARAM ล้มเหลว"
+5 = 22022, "ไม่สามารถเก็บ หรือเรียกข้อมูลประเภทตัวระบุได้"
+6 = ZZZZZ, "การจัดสรรหน่วยความจำล้มเหลว"
+7 = ZZZZZ, "ประเภทที่ไม่สนับสนุน"
+8 = ZZZZZ, "Cobol ไม่สนับสนุนความสามารถ CS-ALL-CAPS"
+9 = 22003, "จำนวนเต็มของรายการข้อมูลของ PIC ที่ดึงเข้ามามีเลขหลายหลักมากเกินไป"
+10 = ZZZZZ, "ค่าอาร์กิวเมนต์ที่ผสมกันและส่งไปยัง SYBSETSQLDA ไม่ถูกต้อง"
+11 = ZZZZZ, "SQLDA-SQLN น้อยกว่า SQLDA-SQLD"
+12 = ZZZZZ, "SQLDA-SQLD เป็นลบ"
+
+[cobctorigin]
+
+1 = ZZZZZ, "ข้อผิดพลาดภายใน"
+2 = ZZZZZ, "เกิดข้อผิดพลาดในการเรียกโปรแกรม  น่าจะมีสาเหตุจากรหัสที่พรีคอมไพเลอร์สร้างขึ้น"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "เกิดข้อผิดพลาดที่ไม่สามารถกู้คืน"
+2 = ZA000, "เกิดข้อผิดพลาดภายใน"
+3 = ZD000, "ได้รับ CS_COMPUTE_RESULT ที่ไม่คาดหวัง"
+4 = ZE000, "ได้รับ  CS_CURSOR_RESULT ที่ไม่คาดหวัง"
+5 = ZF000, "ได้รับ  CS_PARAM_RESULT ที่ไม่คาดหวัง"
+6 = ZG000, "ได้รับ  CS_ROW_RESULT ที่ไม่คาดหวัง"
+7 = ZB000, "ไม่มีข้อความส่งคืนมาสำหรับ sqlca, SQLCODE หรือ SQLSTATE"
+8 = ZC000, "ยังไม่ได้กำหนดการเชื่อมต่อ"
+9 = ZH000, "รับ CS_STATUS_RESULT โดยไม่คาดหมาย"
+10 = ZI000, "ได้รับ CS_DESCRIBE_RESULT ที่ไม่คาดหวัง"
+11 = 22005, "การทำงานที่ล้มเหลวของข้อมูล -- เกิดข้อผิดพลาดในการกำหนดประเภท-เดสคริปเตอร์รายการ"
+12 = JZ000, "การจัดสรรหน่วยความจำล้มเหลว"
+13 = ZK000, "SQL-Server จะต้องเป็นเวอร์ชัน 10 ขึ้นไป"
+14 = ZM000, "เกิดข้อผิดพลาดในการตั้งค่าเริ่มต้นไคลเอ็นต์ไลบราลี"
+15 = ZN000, "เกิดข้อผิดพลาดในการรับหรือคลายมิวเท็กซ์"
+16 = 08002, "มีการใช้ชื่อการเชื่อมต่ออยู่"
+16 = 25019, "HA FAILOVER เกิดขึ้น"
+

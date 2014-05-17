@@ -1,0 +1,95 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "Hasło: "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "Błąd krytyczny: Przydzielanie pamięci nie powiodło się."
+
+2 = ZZZZZ, "Nierozpoznany obiekt lokalizacji.  Używanie wartości domyślnej '%1!'."
+
+3 = ZZZZZ, "Błąd wewnętrzny: Nieprawidłowy typ lokalizacji został przekazany do funkcji cs_locale()."
+
+4 = ZZZZZ, "Błąd podczas próby ładowania pary tabel translacji."
+
+5 = ZZZZZ, "Wystąpił błąd podczas próby skonfigurowania kontekstu aplikacji na potrzeby struktur związanych z lokalizacją."
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "Błąd krytyczny: Przydzielanie pamięci nie powiodło się."
+
+2 = ZZZZZ, "Błąd we/wy: Za mało miejsca na dane wejściowe."
+
+3 = ZZZZZ, "Otwarcie pliku tymczasowego '%1!' do użycia w edytorze nie powiodło się."
+
+4 = ZZZZZ, "Nie można wywołać edytora '%1!'."
+
+5 = ZZZZZ, "Nie można otworzyć pliku wejściowego '%1!'."
+
+6 = ZZZZZ, "Nie można otworzyć pliku wyjściowego '%1!'."
+
+7 = ZZZZZ, "Isql: Nieznany parametr '%1!'."
+
+8 = ZZZZZ, "Nazwa bazy danych jest za długa."
+
+9 = ZZZZZ, "Nie można przeprowadzić instalacji procedury wywołania zwrotnego komunikatu biblioteki CS-Library."
+
+10 = ZZZZZ, "Nie można zainicjować biblioteki Client-Library."
+
+11 = ZZZZZ, "Nie można przeprowadzić instalacji procedury wywołania zwrotnego komunikatu klienta biblioteki Client Library."
+
+12 = ZZZZZ, "Napotkano nieobsługiwany typ danych."
+
+13 = ZZZZZ, "Podczas drukowania wiersza wystąpiło przepełnienie bufora."
+
+14 = ZZZZZ, "Napotkano nieobsługiwany typ wyniku."
+
+15 = ZZZZZ, "Określono nieprawidłowy rozmiar bloku pamięci."
+
+16 = ZZZZZ, "Określono nieprawidłowy uchwyt pamięci."
+
+17 = ZZZZZ, "Błąd wewnętrzny przydzielania pamięci w programie isql."
+
+18 = ZZZZZ, "Wiersz poleceń do wywołania edytora jest zbyt długi."
+
+19 = ZZZZZ, "Kontekst aplikacji isql nie został zainicjowany."
+
+20 = ZZZZZ, "Połączenie z serwerem SQL Server nie zostało ustanowione."
+
+21 = ZZZZZ, "Uchwyt polecenia nie jest dostępny."
+
+22 = ZZZZZ, "Nie można otworzyć pliku bufora."
+
+23 = ZZZZZ, "Ustawienie wskaźnika pozycji pliku na początek pliku nie powiodło się."
+
+24 = ZZZZZ, "Wyczyszczenie bufora polecenia nie powiodło się."
+
+25 = ZZZZZ, "Nie można zainicjować polecenia."
+
+26 = ZZZZZ, "Wyczyszczenie polecenia w uchwycie polecenia nie powiodło się."
+
+27 = ZZZZZ, "Błąd podczas próby ładowania pary tabel translacji."
+
+
+
+

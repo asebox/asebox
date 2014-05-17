@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>JavaScript Bs_Checkbox example 2</title>
+
+<script type="text/javascript" src="../../../core/lang/Bs_Misc.lib.js"></script>
+<script type="text/javascript" src="../Bs_Checkbox.class.js"></script>
+
+<script type="text/javascript">
+function init() {
+  bsChkA = new Bs_Checkbox();
+	bsChkA.imgDir       = '../img/bobby/';
+  bsChkA.imgWidth     = '11';
+  bsChkA.imgHeight    = '11';
+	bsChkA.imgStyle     = 'margin:3px; vertical-align:middle;';
+  bsChkA.useMouseover = true;
+  bsChkA.convertField('chkSpam');
+	
+  bsChkB = new Bs_Checkbox();
+	bsChkB.caption      = 'Yes please';
+	bsChkB.imgDir       = '../img/bobby/';
+  bsChkB.imgWidth     = '11';
+  bsChkB.imgHeight    = '11';
+	bsChkB.imgStyle     = 'margin:3px; vertical-align:middle;';
+  bsChkB.useMouseover = true;
+  bsChkB.drawInto('spanChkMoney');
+}
+</script>
+
+<style>
+body {
+	font-family:arial;
+	font-size:  11px;
+}
+td {
+	font-size:  11px;
+}
+</style>
+</head>
+
+<body onLoad="init();">
+
+<h1>JavaScript Bs_Checkbox example 2</h1>
+
+This is an example of the <a href="http://www.blueshoes.org/en/javascript/checkbox/">Checkbox Control</a>.
+<br><br>
+
+<ul>
+	<li>Ignore the "Email" text field. </li>
+	<li>The first checkbox "Nesletter" is a conventional one. The text "Yes please" uses the label tag to make it clickable too.</li>
+	<li>The second checkbox "Spam" is a conventional too, but is converted into a Bs_Checkbox on the fly using convertField(). It uses a custom icon. Unfortunately, because of the transformation, the label tag on the text "Yes please" does not work anymore.</li>
+	<li>The third checkbox "Money" works like the "Spam" one. But the conversion is done on a wrapping span tag. This way the caption is spitted out along with the Bs_Checkbox, and thus it is still clickable. Same with the onmouseover.</li>
+  <li>All 3 checkbox field have a default "value" setting of "1". The first field, as it is not touched, keeps that. The later 2 fields, when checked submitted, send the value "2" to the server. This is because the Bs_Checkbox supports "partly" checked boxes, which then use the reserved value "1". Rule of thumb: If you receive the checkbox on the server, it was checked, no matter what the value is.</li>
+</ul>
+
+<form  name="test" id="test" action="http://www.blueshoes.org/postDump.php" method="post">
+	<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td width="100">Email:</td>
+	    <td><input type="text" name="myEmail" value=""></td>
+	  </tr>
+	  <tr>
+	    <td width="100">Newsletter:</td>
+	    <td><input type="checkbox" name="chkNewsletter" id="chkNewsletter" value="1"> <label for="chkNewsletter">Yes please</label></td>
+	  </tr>
+	  <tr>
+	    <td width="100">Spam:</td>
+	    <td><input type="checkbox" name="chkSpam" id="chkSpam" value="1"> <label for="chkSpam">Yes please</label></td>
+	  </tr>
+	  <tr>
+	    <td width="100">Money:</td>
+	    <td><span id="spanChkMoney"><input type="checkbox" name="chkMoney" value="1"> Yes please</span></td>
+	  </tr>
+	</table>
+	<br>
+	<input type="submit" name="send" value="Submit">
+</form>
+
+
+</body>
+</html>

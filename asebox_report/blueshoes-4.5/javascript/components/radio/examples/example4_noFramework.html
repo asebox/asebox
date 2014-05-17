@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>JavaScript Bs_Radio Example 4</title>
+<script type="text/javascript" src="../../../components/radio/Bs_Radio.class.js"></script>
+<script type="text/javascript" src="../../../core/lang/Bs_Misc.lib.js"></script>
+
+<script>
+function init() {
+	myRadioObj = new Bs_Radio();
+	myRadioObj.imgDir     = '../img/bobby/';
+	myRadioObj.imgWidth   = 12;
+	myRadioObj.imgHeight  = 12;
+	myRadioObj.convertField('myRadio');
+}
+</script>
+</head>
+
+<body onload="init();">
+
+<h1>JavaScript Bs_Radio Example 4</h1>
+
+This is an example of the <a href="http://www.blueshoes.org/en/javascript/radio/" target="_blank">Radio Control</a>.
+<br><br>
+
+<ul>
+  <li>Using existing radio fields and the convertField() method.</li>
+  <li>The third option "three" is the default value.</li>
+	<li>The labels (clickable captions "one", "two" and "three") still work after the transformation because the id uses the convention "fieldname underscore fieldvalue".</li>
+</ul>
+
+<hr>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="10">
+	<tr>
+		<td valign="top">
+			<b>Standard Radio Fields:</b><br>
+			<table border="1" cellspacing="0" cellpadding="2">
+				<tr>
+					<td>option 1</td>
+					<td><input type="radio" name="someRadio" id="someRadio_one" value="one"> <label for="someRadio_one">one</label></td>
+				</tr>
+				<tr>
+					<td>option 2</td>
+					<td><input type="radio" name="someRadio" id="someRadio_two" value="two"> <label for="someRadio_two">two</label></td>
+				</tr>
+				<tr>
+					<td>option 3</td>
+					<td><input type="radio" name="someRadio" id="someRadio_three" value="three" checked> <label for="someRadio_three">three</label></td>
+				</tr>
+			</table>
+		</td>
+		<td valign="top">
+			<b>Converted into Bs_Radio fields:</b><br>
+			<table border="1" cellspacing="0" cellpadding="2">
+				<tr>
+					<td>option 1</td>
+					<td><input type="radio" name="myRadio" id="myRadio_one" value="one"> <label for="myRadio_one">one</label></td>
+				</tr>
+				<tr>
+					<td>option 2</td>
+					<td><input type="radio" name="myRadio" id="myRadio_two" value="two"> <label for="myRadio_two">two</label></td>
+				</tr>
+				<tr>
+					<td>option 3</td>
+					<td><input type="radio" name="myRadio" id="myRadio_three" value="three" checked> <label for="myRadio_three">three</label></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

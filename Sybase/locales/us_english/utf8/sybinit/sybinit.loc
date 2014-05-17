@@ -1,0 +1,958 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; NOTE: This file will be empty for the language 'us_english'
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+0    = "", 	""
+1    = "Cannot create file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+2    = "Cannot open file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+3    = "Cannot write file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+4    = "Cannot read file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+5    = "Cannot close file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+6    = "Cannot access directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+7    = "%1! ", 	"%s"
+8    = "Cannot create a temporary file.", 	""
+9    = "Output from '%1!' cannot be captured.", 	"%s"
+10    = "Error creating path name '%1!': too long.", 	"%s"
+11    = "Error creating list of objects.", 	""
+12    = "Attribute '%1!' is not set.", 	"%s"
+13    = "Attribute '%1!' does not exist.", 	"%s"
+14    = "File '%1!' does not exist.", 	"%s"
+15    = "Could not create the path for the interfaces file.", 	""
+16    = ".", 	""
+17    = "%1!", 	"%s"
+18    = "Done", 	""
+19    = "Unable to obtain information about '%1!' with call to '%2!'.  Operating system returned: %3!.", 	"%s %s %s"
+20    = "y", 	""
+21    = "n", 	""
+24    = "Internal buffer overflow sending '%1!' to the shell.", 	"%s"
+25    = "Shell called with no command.", 	" "
+26    = "Calling the shell with '%1!'.", 	"%s"
+27    = "fork() failed with the following message: %1!.", 	"%s"
+28    = "execl() returned: operating system error.", 	""
+29    = "syb_system_datetime() called with NULL buffer.", 	""
+32    = "syb_user_username() called with NULL buffer.", 	 ""
+33    = "Unable to determine user name of the current user.", 	""
+34    = "syb_user_get_env() called with NULL environment buffer.", 	""
+35    = "syb_user_get_env() called with NULL environment variable buffer.", 	""
+36    = "The environment variable '%1!' is not defined.", 	"%s"
+37    = "syb_user_curdir() called with NULL buffer.", 	""
+38    = "Could not get the current working directory.", 	""
+39    = "syb_user_chdir() called with NULL buffer.", 	""
+40    = "Could not change current working directory to '%1!'.", 	"%s"
+41    = "syb_file_exists() called with NULL buffer.", 	""
+42    = "Could not determine if '%1!' exists.  Operating system returned: %2!.", 	"%s %s"
+43    = "Could not determine if '%1!' exists.  Operating system returned: %2!.", 	"%s %d"
+44    = "syb_file_delete() called with NULL buffer.", 	""
+45    = "Could not delete file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+46    = "Could not delete file '%1!'.  Operating system returned: %2!.", 	"%s %d"
+47    = "syb_file_get_mode() called with NULL filename.", 	""
+48    = "Could not get permissions for file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+49    = "Could not get permissions for file '%1!'.  Operating system returned: %2!.", 	"%s %d"
+50    = "syb_file_set_mode() called with NULL filename.", 	""
+51    = "Could not set permissions for file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+52    = "Could not set permissions for file '%1!'.  Operating system returned: %2!.", 	"%s %d"
+53    = "syb_file_copy() called with NULL source filename.", 	""
+54    = "syb_file_copy() called with NULL destination filename.", 	""
+55    = "Could not open file '%1!' to copy from.", 	"%s"
+56    = "Could not open file '%1!' to copy to.", 	"%s"
+57    = "Error during file copy:  read count = '%1!', write count = '%2!'.", 	"%d %d"
+58    = "Could not get permissions of file '%1!' after copying.  Operating system returned: %2!.", 	"%s %s"
+59    = "Could not get permissions of file '%1!' after copying.  Operating system returned: %2!.", 	"%s %d"
+60    = "Could not set permissions of file '%1!' after copying.  Operating system returned: %2!.", 	"%s %s"
+61    = "Could not set permission of file '%1!' after copying.  Operating system returned: %2!.", 	"%s %d"
+62    = "syb_file_rename() called with NULL source buffer.", 	""
+63    = "syb_file_rename() called with NULL destination buffer.", 	""
+64    = "Could not rename file '%1!' to '%2!'.  Operating system returned: %3!.", 	"%s %s %s"
+65    = "Could not rename file '%1!' to '%2!'.  Operating system returned: %3!.", 	"%s %s %d"
+66    = "syb_file_size() called with NULL filename.", 	""
+67    = "Could not determine size of '%1!'.  Operating system returned: %2!.", 	"%s %s"
+68    = "Could not determine size of '%1!'.  Operating system returned: %2!.", 	"%s %d"
+69    = "syb_file_isdir() called with NULL path.", 	""
+70    = "Could not determine if '%1!' is a directory.  Operating system returned: %2!.", 	"%s %s"
+71    = "Could not determine if '%1!' is a directory.  Operating system returned: %2!.", 	"%s %d"
+72    = "syb_user_default_charset() called with NULL buffer.", 	""
+73    = "syb_user_default_language() called with NULL buffer.", 	""
+74    = "syb_file_date() called with NULL filename.", 	""
+75    = "Could not get modification date for '%1!'.  Operating system returned: %2!.", 	"%s %s"
+76    = "Could not get modification date for '%1!'.  Operating system returned: %2!.", 	"%s %d"
+77    = "Could not get modification date for '%1!'.  Operating system returned: %2!.", 	"%s %s"
+78    = "Could not get modification date for '%1!'.  Operating system returned: %2!.", 	"%s %d"
+79    = "syb_path_basename() called with NULL pathname.", 	""
+80    = "syb_path_basename() called with NULL buffer.", 	""
+81    = "The pathname '%1!' to syb_path_basename() exceeds the maximum length ('%2!').", 	"%s %d"
+82    = "syb_path_dirname() called with NULL pathname.", 	""
+83    = "syb_path_dirname() called with NULL buffer.", 	""
+84    = "The pathname '%1!' to syb_path_dirname() exceeds the maximum length ('%2!').", 	"%s %d"
+85    = "syb_path_append_dir() called with NULL path.", 	""
+86    = "syb_path_append_dir() called with NULL dirname.", 	""
+87    = "The pathname formed by appending '%1!' to '%2!' will exceed the maximum allowed length for a path name ('%3!').", 	"%s %s %d"
+88    = "syb_path_append_file() called with NULL pathname.", 	""
+89    = "syb_path_append_file() called with NULL filename.", 	""
+90    = "Could not append '%1!' to '%2!'.", 	"%s %s"
+91    = "syb_path_convert () called with NULL path.", 	""
+92    = "The pathname '%1!' to syb_file_convert() exceeds the maximum length ('%2!').", 	"%s %d"
+93    = "Syb_file_convert() was called with no filename.", 	""
+94    = "The filename '%1!' parameter to syb_file_convert() does not have the expected terminal delimiter.", 	"%s"
+95    = "syb_file_convert() called with Invalid File Type '%1!'.", 	"%d"
+96    = "syb_file_list() called with NULL directory name.", 	""
+97    = "Could not open the directory '%1!'.  Operating system returned: %2!.", 	 "%s %s"
+98    = "Could not open the directory '%1!'.  Operating system returned: %2!.", 	 "%s %d"
+99    = "Could not read the directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+100    = "Could not read the directory '%1!'.  Operating system returned: %2!.", 	"%s %d"
+101    = "Could not close the directory '%1!'.  Operating system returned: %2!", 	"%s %s"
+102    = "Could not close the directory '%1!'.  Operating system returned: %2!", 	"%s %d"
+103    = "Could not allocate list_head in syb_file_list().", 	""
+104    = "Could not allocate syb_file structure in syb_file_list().", 	""
+105    = "syb_file_list_first() called with a NULL buffer.", 	""
+106    = "syb_file_list_first() called with a NULL file_list.", 	""
+107    = "syb_file_list_next() called with a NULL buffer.", 	""
+108    = "syb_file_list_next() called with a NULL file_list.", 	""
+109    = "syb_dir_delete() called with a NULL directory name.", 	""
+110    = "Could not open directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+111    = "Could not open directory '%1!'. Operating system returned: %2!.", 	"%s %d"
+112    = "Could not obtain information about '%1!'. Operating system returned: %2!.", 	"%s %s"
+113    = "Could not obtain information about '%1!'. Operating system returned: %2!.", 	"%s %d"
+114    = "Could not delete file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+115    = "Could not delete file '%1!'.  Operating system returned: %2!.", 	"%s %d"
+116    = "Could not read directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+117    = "Could not read directory '%1!'.  Operating system returned: %2!.", 	"%s %d"
+118    = "Unable to delete directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+119    = "Unable to delete directory '%1!'.  Operating system returned: %2!.", 	"%s %d"
+120    = "syb_dir_create() called with NULL directory.", 	""
+121    = "Unable to create directory '%1!'. Operating system returned: %2!.", 	"%s %s"
+122    = "Unable to create directory '%1!'. Operating system returned: %2!.", 	"%s %d"
+123    = "syb_dir_get_mode() called with NULL directory.", 	""
+124    = "Unable to obtain information about directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+125    = "Unable to obtain information about directory '%1!'.  Operating system returned: %2!.", 	"%s %d"
+126    = "'%1!' is Not a directory.", 	"%s"
+127    = "syb_dir_set_mode() called with NULL directory.", 	""
+128    = "Unable to obtain information about directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+129    = "Unable to obtain information about directory '%1!'.  Operating system returned: %2!.", 	"%s %d"
+130    = "'%1!' is not a directory.", 	"%s"
+131    = "Unable to set the permissions for directory '%1!'.  Operating system returned: %2!.", 	"%s %s"
+132    = "Unable to set the permissions for directory '%1!'.  Operating system returned: %2!.", 	"%s %d"
+133    = "syb_net_get_inet_address() called with a NULL buffer.", 	""
+134    = "syb_net_get_ethernet_address() called with a NULL buffer.", 	""
+135    = "Could not get Ethernet address for '%1!'.", 	"%s"
+136    = "syb_net_get_hostname_from_enet() called with a NULL buffer.", 	""
+137    = "Could not convert Ethernet address '%1!' to a Ethernet number.", 	"%s"
+138    = "Could not obtain hostname for Ethernet address '%1!'.", 	"%s"
+139    = "Host '%1!' not found.", 	"%s"
+140    = "syb_net_get_hostname_from_inet() called with a NULL buffer.", 	""
+141    = "Could not obtain Hostname for Internet address '%1!'.", 	"%s"
+142    = "Could not allocate context structure in syb_system_default_charset().", 	""
+143    = "Unable to obtain default localization information in syb_system_default_charset().", 	""
+144    = "Could not close the context structure in syb_system_default_charset().", 	""
+145    = "Unable to close the locale structure in syb_system_default_charset().", 	""
+146    = "Unable to allocate locale structure in syb_system_default_charset().", 	""
+147    = "Unable to determine default charset information.", 	""
+148    = "Could not allocate context structure in syb_system_default_language().", 	""
+149    = "Could not close the context structure in syb_system_default_language().", 	""
+150    = "Invalid command line argument '%1!'.", 	"%s"
+151    = "Unable to set the debug flag '%1!'.", 	"%s"
+152    = "Unable to set the trace flag '%1!'.", 	"%s"
+153    = "Unable to get path information.", 	""
+154    = "Unable to determine auditinit release directory.", 	""
+155    = "Unable to determine auditinit release directory.", 	""
+156    = "Unable to determine auditinit release directory.", 	""
+157    = "Unable to determine default language information.", 	""
+158    = "Unable to obtain default localization information in syb_system_default_language().", 	""
+159    = "syb_get_home_directory() called with NULL user.", 	""
+160    = "syb_get_home_directory() called with NULL buffer.", 	""
+161    = "Could not get home directory information for '%1!'.", 	"%s"
+162    = "Could not compile the regular expression '%1!'.", 	"%s"
+163    = "syb_file_touch_date() called with NULL filename.", 	""
+164    = "Could not update modification date for '%1!'.  Operating system returned: %2!.", 	"%s %s"
+165    = "Could not update modification date for '%1!'.  Operating system returned: %2!.", 	"%s %d"
+166    = "Could not allocate context structure in syb_system_datetime().", 	""
+167    = "Could not obtain time information from cs_time() in syb_system_datetime().", 	""
+168    = "Could not close the context structure in syb_system_datetime().", 	""
+169    = "Could not allocate context structure in syb_system_month().", 	""
+172    = "Could not obtain time information from cs_time() in syb_system_month().", 	""
+173    = "Could not close the context structure in syb_system_month().", 	""
+174    = "Unable to close the locale structure in syb_system_default_language().", 	""
+175    = "Unable to allocate locale structure in syb_system_default_language().", 	""
+176    = "Could not allocate context structure in syb_system_day().", 	""
+177    = "Could not obtain time information from cs_time() in syb_system_day().", 	""
+178    = "Could not close the context structure in syb_system_day().", 	""
+179    = "Charset can only be specified once on the command line.", 	""
+180    = "Language can only be specified once on the command line.", 	""
+181    = "The log file can only be specified once on the command line.", 	""
+182    = "The resource file can only be specified once on the command line.", 	""
+183    = "The release directory can only be specified once on the command line.", 	 ""
+184    = "syb_file_date_buffer() called with NULL buffer.", 	""
+185    = "Unexpected date order string detected '%1!'.", 	"%s"
+186    = "Could not allocate context structure in syb_file_date_buffer().", 	""
+187    = "Could not close the context structure in syb_file_date_buffer().", 	""
+188    = "syb_net_get_hostname() called with NULL hostname.", 	""
+189    = "Could not get hostname.  Operating system returned: %1!.", 	"%s"
+190    = "Could not get hostname.  Operating system returned: %1!.", 	"%d"
+191    = "Bad argument passed to syb_file_is_regular_file.", 	""
+192    = "Could not determine if %1! is a block device.  Operating system returned: %2!.", 	"%s %s"
+193    = "Could not determine if %1! is a block device.  Operating system returned: %2!.", 	"%s %d"
+194    = "Could not determine if %1! is a character device.  Operating system returned: %2!.", 	"%s %s"
+195    = "Could not determine if %1! is a character device.  Operating system returned: %2!.", 	"%s %d"
+196    = "Attempt to set environment variable '%1!' to '%2!' failed.", 	"%s %s"
+197    = "Cannot initialize library '%1!': file does not exist.", 	"%s"
+198    = "Attempt to initialize library '%1!' failed.  See the log for more information.", 	"%s"
+199    = "Validation check for valid directory called with NULL pointer.", 	""	
+200    = "Could not obtain directory component for '%1!'.", 	"%s"
+201    = "Fully qualified pathname required (%1!).", 	"%s"
+202    = "Error on directory '%1!'.", 	"%s"
+203    = "'%1!' is not a directory.", 	"%s"
+204    = "Directory '%1!' must have read, write and execute permissions.", 	"%s"
+205    = "'%1!' did not return an exit status to auditinit.", 	"%s"
+206    = "Unable to determine the value of the SYBASE environment variable.", 	""
+207    = "AUDITINIT.NLM does NOT exist in the location indicated by the SYBASE environment variable : '%1!'.", 	"%s"
+208    = "SYBASE environment variable file '%1!' not found.", 	"%s"
+209    = "Unable to close the Sybase environment variable file '%1!'.", 	"%s"
+210    = "Unable to create the Sybase environment variable file '%1!'.", 	"%s"
+211    = "Unable to determine directory component of '%1!'.", 	"%s"
+212    = "Unable to rename Sybase environment variable file '%1!' to '%2!'.", 	"%s %s"
+213    = "Unable to determine filename suffix for Sybase environment file '%1!'.", 	"%s"
+214    = "Unable to append '%1!' to '%2!' to obtain the backup auditinit environment filename.", 	"%s %s"
+215    = "Unable to spawn %1!. Please check the System Console Screen for additional information.", 	"%s"
+216    = "Hostname '%1!' is not valid. Hostnames may include only Roman characters.", 	"%s"
+217    = "Unable to expand path '%1!' using call to '%2!'.  Operating system returned: %3!.", 	"%s %s %s"
+218    = "Unable to obtain information about file system '%1!'.  Operating system returned: %2!.", 	"%s %s"
+219    = "Unable to determine the character file interface for path '%1!'.", 	"%s"
+220    = "Cannot append '%1! to '%2!': '%3!' is not a valid directory.", 	"%s %s %s"
+221    = "Unable to determine whether '%1!' is a member of this cluster.  Operating system returned: %2!.", 	"%s %s"
+227    = "The NLM '%1!' is already loaded.", 	"%s"
+231    = "Address '%1!' is not valid. SPX addresses may include only characters that represent hexadecimal digits ('0'-'9' and 'a'-'f').", 	"%s"
+244    = "yes", 	""
+245    = "no", 	""
+250    = "Error waiting for process '%1!' to complete.  Operation system returned: %2!.  WARNING: will not be able to determine completion status.", 	"%s %s"
+251    = "Error checking the status of process '%1!'.  Operation system returned: %2!.", 	"%s %s"
+252    = "You do not have write permission for '%1!'.  Write permission to this directory may be required later, please resolve before continuing.", 	"%s"
+300    = "WARNING:", 	""
+301    = "TRACE:", 	""
+302    = "", 	""
+303    = "SYSTEM ERROR:", 	""
+304    = "INTERNAL ERROR:", 	""
+305    = "Check the log (%1!) for more information.  Please make a note of this error and contact your Sybase representative.", 	"%s"
+306    = "CONNECTIVITY ERROR:", 	""
+307    = "SERVER ERROR:", 	""
+308    = "Please make a note of this error and contact your Sybase representative.", 	""
+401    = "inf_ifile_read() called with NULL filename.", 	""
+402    = "Interfaces file '%1!' is already loaded.  The interfaces file should be unloaded before loading interfaces file '%2!'.", 	"%s %s"
+403    = "Interfaces file '%1!' not found.", 	"%s"
+404    = "Could not open interfaces file '%1!'.", 	"%s"
+405    = "Syntax error in line '%1!'.", 	"%s"
+406    = "Could not close interfaces file '%1!'.", 	"%s"
+407    = "Could not close interfaces file '%1!' when freeing in-core image.", 	"%s"
+408    = "Unable to allocate memory for an interfaces entry structure.", 	""
+409    = "Unable to allocate memory for an interfaces service structure.", 	""
+410    = "Syntax error while parsing service '%1!'.", 	"%s"
+411    = "Unknown service type '%1!' in service '%2!'.", 	"%s %s"
+412    = "Parse error on service line '%1!'.", 	"%s"
+413    = "Parse error on service line '%2!': unknown protocol '%1!'.", 	"%s %s"
+414    = "Could not determine current hostname.", 	""
+415    = "Could not determine Internet address for '%1!'.", 	"%s"
+416    = "Protocol '%1!' is currently not supported on '%2!'.", 	"%s %s"
+417    = "Unable to parse the TLI address for  '%1!'.", 	"%s"
+418    = "Interfaces file '%1!' is already open.  File should be closed before writing.", 	"%s"
+419    = "No interfaces filename specified to write to.", 	""
+420    = "Could not obtain directory component of interfaces file name '%1!'.", 	"%s"
+421    = "Unable to determine sequential interfaces file backup file name.", 	""
+422    = "Unable to append '%1!' to '%2!' to obtain the backup interfaces filename.", 	"%s %s"
+423    = "Unable to rename '%1!' to '%2!'.", 	"%s %s"
+424    = "Unable to open interfaces file '%1!' for writing.", 	"%s"
+425    = "Unable to write to the interfaces file '%1!'.", 	"%s"
+426    = "Unable to close the interfaces file '%1!'.", 	"%s"
+427    = "Unable to convert service for entry '%1!' to a string format.", 	"%s"
+428    = "inf_service_construct_string() called with NULL service.", 	""
+429    = "inf_service_construct_string() called with NULL buffer.", 	""
+430    = "Unknown service type '%1!'; discarding this service.", 	"%d"
+431    = "Unknown protocol '%1!'; discarding this service.", 	"%d"
+432    = "TCP is the only protocol supported on TLI.", 	""
+433    = "Unknown network API.  Valid network APIs are TLI, Sockets or none.", 	""
+434    = "A service has been detected on line '%1!' before its entry.", 	"%s"
+435    = "Unable to parse the TLI port number '%1!'.", 	"%s"
+436    = "Unable to determine Internet address for '%1!'.", 	"%s"
+437    = "Unable to parse Internet address '%1!' to a TLI format.", 	"%s"
+438    = "Unknown protocol detected for entry '%1!'; discarding this entry.", 	"%s"
+439    = "Unknown service detected for entry '%1!'; discarding this service.", 	"%s"
+440    = "Could not determine hostname for address '%1!'; discarding this service.", 	"%s"
+441    = "A duplicate entry '%1!' has been detected. The first entry will be retained and all others discarded.", 	"%s"
+442    = "Could not setup all the listener aliases.", 	""
+443    = "Parsing Error: '%1!' has a listener '%2!', which already has '%3!' as its listener.", 	"%s %s %s"
+444    = " inf_service_copy() called with NULL services.", 	 ""
+445    = "No service detected in the interfaces file for entry '%1!'; discarding this entry.", 	"%s"
+446    = "Interfaces entry '%1!' already exists: duplicate insertion disallowed.", 	"%s"
+447    = "Interfaces entry '%1!' would be a listener of '%2!'.  However, '%3!' already has an association with '%4!'.", 	"%s %s %s %s"
+448    = "Listener Entry '%1!' has '%2!' specified as its master, but corresponds to '%3!' in the interfaces file.", 	"%s %s %s"
+449    = "Unable to allocate memory for interfaces entry list head.", 	""
+450    = "Unable to allocate memory for interfaces entry list element.", 	""
+451    = "Duplicate service detected in interfaces entry '%1!'; service not inserted.", 	"%s"
+452    = "Service in interfaces entry '%1!' not completely specified; service not inserted.", 	"%s"
+453    = "inf_service_get_alias() called with NULL buffer.", 	""
+454    = "Could not mark interfaces entry '%1!' as a master of '%2!' as '%3!' is already associated with '%4!'.", 	"%s %s %s %s"
+455    = "Attempt to associate '%1!' as a listener of '%2!' failed, because '%3!' has no interfaces services.", 	"%s %s %s"
+456    = "Attempt to associate '%1!' as a listener of '%2!' failed, because '%3!'  does not have a query service (there should be exactly ONE query service).", 	"%s %s %s"
+457    = "Attempt to associate '%1!' as a listener of '%2!' failed, because '%3!' has multiple services (there should be exactly ONE query service).", 	"%s %s %s"
+458    = "Unable to allocate memory for the listener entry of '%1!'.", 	"%s"
+459    = "Unable to allocate memory for the listener entry service of '%1!'.", 	"%s"
+460    = "Unable to insert the listener alias '%1!' of '%2!' into the interfaces file.", 	"%s %s"
+461    = "inf_service_set_alias() called with NULL buffer.", 	""
+463    = "Could not locate interfaces entry '%1!' in the interfaces file.", 	"%s"
+464    = "Null interface entries. Please check the interfaces file", 	""
+500    = "Could not locate message number '%1!' for product '%2!' in message cache.", 	"%d %s"
+501    = "Could not locate auditinit message number '%1!'.", 	"%d"
+502    = "Could not build message '%1!' for product '%2!'.  Unbuilt text is: '%3!', and format string is '%4!'.", 	"%d %s %s %s"
+503    = "Using 'us_english' for this message.", 	""
+504    = "Unable to load messages for product '%1!' using language '%2!' and character set '%3!': could not locate the localization file '%4!'.", 	"%s %s %s %s"
+505    = "Unable to load messages for product number '%1!' using language '%2!' and character set '%3!':  bad product number.", 	"%d %s %s"
+506    = "Using 'us_english' for all messages.", 	""
+507    = "Format error in localization file '%1!': could not find '%2!' section.  Aborting language load.", 	"%s %s"
+508    = "Error opening '%1!' for product '%2!' localization. Aborting language load.", 	"%s %s"
+509    = "Using '%1!' as default for all messages.", 	"%s"
+600    = "Boot directory unset; cannot create session log.", 	""
+601    = "Cannot locate log directory; cannot create session log.", 	""
+602    = "Cannot read log directory; cannot create session log.", 	""
+603    = "Cannot open log file '%1!'. Operating system returned: %2!.", 	"%s %s"
+604    = "Log write failed. Operating system returned: %1!.", 	"%s"
+605    = "Log close failed. Operating system returned: %1!.", 	"%s"
+607    = "Cannot write log: log has not been created.", 	""
+608    = "BEGIN ENVIRONMENT INFORMATION", 	""
+609    = "END ENVIRONMENT INFORMATION", 	""
+610    = "Log close.", 	""
+611    = "Log name is too long; log cannot be created.", 	""
+612    = "OPERATING SYSTEM ENVIRONMENT", 	""
+613    = "USER ENVIRONMENT", 	""
+614    = "PROCESS LIMITS", 	""
+615    = "Begin output from '%1!':", 	"%s"
+616    = "End output from '%1!'.", 	"%s"
+617    = "Unable to generate log file name from '%1!'.", 	"%s"
+640    = "character set:", 	""
+641    = "language:", 	""
+642    = "auditinit release directory:", 	""
+643    = "working release directory:", 	""
+644    = "user name:", 	""
+645    = "current directory:", 	""
+700    = "Yes", 	""
+701    = "No", 	""
+702    = "(Please enter Yes or No): ", 	""
+703    = "Continue", 	""
+704    = "Enter the number of your choice and press return: ", 	""
+705    = "Menu Manager initialization failed.", 	""
+706    = "Cannot create menu, exceeded maximum number of screens.", 	""
+707    = "Cannot create menu, screen name is NULL.", 	""
+708    = "Cannot create a menu (screen name = %1!) which already exists.", 	"%s"
+709    = "Cannot set screen attribute; no screen is opened.", 	""
+710    = "NULL current screen.", 	""
+711    = "Ctrl-a Accept and Continue, Ctrl-x Exit Screen, ? Help.", 	""
+712    = "Ctrl-f Scroll Forward,  Ctrl-b Scroll Backward.", 	""
+714    = "<More>", 	""
+715    = "Press <return> to continue. ", 	""
+716    = "Your selection is out of range.  Please try again.", 	""
+717    = "Press Ctrl-x to exit help: ", 	""
+718    = "<F1> : Help                                       <F3> : View Auditinit Error Log", 	""
+719    = "<Esc> :  Exit Help Screen", 	""
+720    = "Auditinit Error : ", 	""
+721    = "Auditinit Warning : ", 	""
+722    = "Auditinit Message : ", 	""
+723    = "Sybinit-The System 10 Installer", 	""
+724    = "<F1> : Help                                       <F3> : View Auditinit Error Log", 	""
+725    = "Exit AUDITINIT?", 	""
+726    = "<ENTER> : Select An Option     <Esc> : Previous Screen      <F10> : Next Screen", 	""
+727    = "<ENTER> : Select An Option                                 <Esc> : Exit Auditinit", 	""
+728    = "Auditinit Error Log: %1!", 	"%s"
+729    = "<Esc> :  Exit Auditinit Error Log Screen", 	""
+730    = "<F3>  : Change Source Drive                            <Esc> : Abort File Copy", 	""
+731    = "Specify the location of the install disk: ", 	""
+732    = "<Esc> : Abort Installation", 	""
+733    = "Copying File : %1!", 	"%s"
+734    = "Abort the Installation?", 	""
+735    = "Specify the location of diskette %1!", 	"%s"
+736    = "Source Path : %1!\\", 	"%s"
+737    = "Target Path : %1!\\", 	"%s"
+738    = "Diskette    : %1!", 	"%s"
+739    = "Please insert diskette %1! in drive %2!", 	"%s %s"
+740    = "%1! Installation Complete.", 	"%s"
+741    = "Sybase Product Configuration file not found.", 	""
+742    = "Please insert the INSTALL diskette.", 	""
+743    = "Select A Product to Install", 	""
+744    = "%1! Installation", 	"%s"
+745    = "Change diskette:", 	""
+746    = "Internal Error: Field Type for %1! is Invalid", 	"%s"
+800    = "Invalid product number '%1!':  product not in internal registry.", 	"%d"
+801    = "reg_product_num_name() called with NULL buffer.", 	""
+802    = "reg_product_name() called with NULL buffer.", 	""
+803    = "Product '%1!' not registered in internal registry.", 	"%s"
+804    = "reg_product_firstscreen() called with NULL buffer.", 	""
+900    = "Unexpected EOF in replay file!", 	""
+1100    = "Initialization of auditinit connectivity module failed.", 	"" 
+1101    = "Could not get login record for connection: server = '%1!'.", 	"%s"
+1102    = "DBPROCESS buffer overflow. SQL text is: '%1!'.", 	"%s"
+1103    = "Error sending SQL to server '%1!'.", 	"%s"
+1104    = "Login attempt failed: server = '%1!'.", 	"%s"
+1105    = "Failed to open file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+1106    = "Error reading file '%1!'.  Operating system returned: %2!.", 	"%s %s"
+1107    = "Error getting results from server '%1!'.", 	"%s"
+1108    = "Auditinit connectivity module not initialized.", 	""
+1109    = "DB-Library error: '%1!'.", 	"%s"
+1110    = "DB-Library operating system error: '%1!'.", 	"%s"
+1111    = "Adaptive Server message: msg %1!, level %2!, state %3!", 	"%d %d %d"
+1112    = "server", 	""
+1113    = "procedure", 	""
+1114    = "line", 	""
+1115    = "Error binding results from server '%1!'.", 	"%s"
+1120    = "Error initializing rpc to server '%1!'.", 	"%s"
+1121    = "Error setting rpc parameters to server '%1!'.", 	"%s"
+1122    = "Error sending rpc to server '%1!'.", 	"%s"
+1123    = "Sending the following SQL command to the server: '%1!'.", 	"%s"
+1200    = "Cannot locate task list; cannot execute configuration.", 	""
+1201    = "Cannot execute configuration because validation of input values failed.", 	""
+1202    = "WARNING: will not be able to recover from this configuration due to error writing out attribute dump.", 	""
+1203    = "Beginning task %1!.", 	"%s"
+1204    = "Ending task %1!.", 	"%s"
+1205    = "...need_to %1!.", 	"%s"
+1206    = "...need_to is null -- executing by default.", 	""
+1207    = "...able_to %1!.", 	"%s"
+1208    = "...able_to is null -- not executing.", 	""
+1209    = "...task actions %1!.", 	"%s"
+1210    = "...WARNING: task actions null -- not executing.", 	""
+1211    = "...task succeed %1!.", 	"%s"
+1212    = "...task succeed null -- not executing.", 	""
+1213    = "Running task: %1!.", 	"%s"
+1214    = "Task succeeded: %1!.", 	"%s"
+1215    = "Task failed: %1!. Terminating configuration.", 	"%s"
+1216    = "Configuration completed successfully.", 	""
+1217    = "Configuration failed.", 	""
+1218    = "Because this auditinit session was invoked with the '%1! %2!' flag, the above warning(s) will be ignored and the configuration will proceed.", 	"%s %s"
+1219    = "Exiting auditinit because of the above warning(s). To proceed with the configuration despite the above warning(s), invoke auditinit with the '%1! %2!' flag.", 	"%s %s"
+1230    = "Tasklist terminated at the user's behest", 	""
+1300    = "Unable to determine the auditinit release directory.", 	""
+1302    = "Unable to set the auditinit release directory attribute.", 	""
+1303    = "Unable to initialize the Localization Manager.", 	 ""
+1304    = "The validate only flag must be specified with the resource file.", 	""
+1305    = "Unable to determine the auditinit directory pathname.", 	""
+1306    = "Unable to determine the Sybase release directory.", 	""
+1308    = "Unable to set the Sybase release directory attribute.", 	""
+1310    = "Unable to set the Sybase resource file attribute.", 	""
+1311    = "Unable to initialize the Log Manager.", 	""
+1312    = "Error while accessing attribute dump in the process of recovering previous configuration session.", 	""
+1313    = "Could not load the attribute dump in the process of recovering previous configuration session.", 	""
+1314    = "Error in auditinit recovery log: no product specified in recovery log.", 	""
+1315    = "Do you wish to recover the previous configuration session? ", 	""
+1316    = "  '%1!'.", 	"%s"
+1319    = "Invalid product '%1!' specified in auditinit recovery log attribute dump.", 	"%s"
+1320    = "Error in auditinit recoverly log: no language specified in attribute dump.", 	""
+1321    = "Task list for product '%1!' not in auditinit recovery log.", 	"%s"
+1322    = "Unable to execute task list for product '%1!'.", 	"%s"
+1323    = "Unable to load in resource file '%1!'.", 	"%s"
+1324    = "No product specified in resource file '%1!'.", 	"%s"
+1325    = "Unknown product '%1!' specified in resource file '%2!'.", 	"%s %s"
+1326    = "Unable to verify the resource file '%1!'.", 	"%s"
+1327    = "No setup from resources file function in registry for '%1!'.", 	"%s"
+1328    = "No language specified in the resource file '%1!'.", 	"%s"
+1329    = "Could not obtain first screen for '%1!'.", 	"%s"
+1330    = "Could not open and display first screen for '%1!'.", 	"%s"
+1331    = "No language specified in interactive mode.", 	""
+1332    = "Could not obtain first screen for auditinit.", 	""
+1333    = "Could not open and display auditinit first screen.", 	""
+1334    = "Auditinit : \\n\\tauditinit\\n\\t [-a]\\n\\t [-c charset]\\n\\t [-e]\\n\\t [-h]\\n\\t [-l language]\\n\\t [-log log_file]\\n\\t [-r resource_file]\\n\\t [-s release_directory]\\n\\t [-v]", 	""
+1336    = "'%1!'", 	"%s"
+1338    = "Unable to initialize the Screen Manager.", 	""
+1339    = "Unable to initialize the SQL Execution Module.", 	""
+1340    = "Unable to create Attributes.", 	""
+1341    = "Unable to create screens.", 	""
+1342    = " Unable to setup auditinit environment.", 	""
+1343    = "Ignoring recovery log from previous session.", 	""
+1344    = "Recovering configuration session for product '%1!'.", 	"%s"
+1345    = "Exiting.", 	""
+1346    = "Exit auditinit? ", 	""
+1347    = "There are tasks that are currently running.  Do you REALLY want to terminate the tasks? ", 	""
+1348    = "Dump out current attributes?", 	""
+1349    = "Enter an attribute resource filename (default is '%1!'): ",         "%s"
+1350    = "Attributes successfully dumped to '%1!'.", 	"%s"
+1400    = "Auditinit : \\n\\tauditinit\\n\\t [/validate]\\n\\t [/charset=charset]\\n\\t [/environment]\\n\\t [/help]\\n\\t [/language=language]\\n\\t [/log=log_file]\\n\\t [/resource=resource_file]\\n\\t [/sybase=release_directory]\\n\\t [/version]", 	""
+1401    = "Directory '%1!' already exists, and is not a valid Adaptive Server Release directory. Please specify a different Release directory location.", 	"%s"
+1402    = "Directory '%1!' is a Sybase Server Release directory. Overwrite?", 	"%s"
+1403    = "The log file for this session is '%1!'.", 	"%s"
+1404    = "Using resource file '%1!' for product attributes.", 	"%s"
+1405    = "AUDITINIT NO LONGER SUPPORTS INTERFACES FILE EDITING.  All \
+resource file attributes concerning interfaces files (including \
+do_add_server and do_add_backup_server) will be ignored.\\n\\n\
+SYBSETUP, DSEDIT, DSEDIT_DCE, or a text editor must be used for this \
+purpose before using auditinit to install, modify, or upgrade any server:\\n\
+- before installing, create a new interfaces file entry\\n\
+- before modifying a server in other ways, modify its interfaces file entry\\n\
+- before upgrading, copy the entry for the server to be upgraded\
+  from the old interfaces file to the new one.\\n\\n\
+See your documentation for more details.", 	"%s"
+1502    = "Cannot allocate memory of size %1!: invalid size.", 	"%d"
+1503    = "Attempt to allocate memory failed.", 	""
+1506    = "Cannot add memory of size %1! to existing memory: invalid size.", 	"%d"
+1507    = "Attempt to add memory to an invalid memory pointer.", 	""
+1508    = "Attempt to add memory failed.", 	""
+1509    = "Invalid arguments to syb_calloc(): number = %1!, size = %2!.", 	"%d %d"
+1510    = "Attempt to allocate memory via calloc() failed.", 	""
+1511    = "Operating system swap space is low.  The operating system may kill auditinit.", 	""
+1650    = "In resource file '%1!': '%2!' is an invalid product name.", 	"%s %s"
+1651    = "In resource file '%3!': '%2!' is an invalid attribute for product '%1!'.", 	"%s %s %s"
+1652    = "Syntax error in resource file '%1!': %2!.", 	"%s %s"
+1653    = "%1! is an incomplete attribute dump.", 	"%s"
+1654    = "The attribute '%1!' is required for configuration of product '%2!' but is not set in resource file '%3!'.", 	 "%s %s %s"
+1655    = "The attribute '%1!' for product '%2!' was specified more than once in resource file '%3!'.", 	 "%s %s %s"
+1656    = "Internal product registry error.  There are '%1!' registered products.", 	 "%d"
+1657    = "Attribute '%1!' could not be set because '%2!' is an invalid value.", 	 "%s %s"
+3101    = "AUDITINIT", 	""
+3102    = "", 	""
+3103    = "AUDITINIT", 	""
+3104    = "\
+1. Release Directory\\n\\nIf you are configuring a server, and the \
+displayed directory is not the same as the directory into which you \
+loaded the SYBASE files, exit auditinit. Reset the SYBASE environment variable \
+to point to the directory into which you loaded the SYBASE \
+files. Restart auditinit, and begin again.\\n\\n2. Configure a Server \
+Product\\n\\nSelect this item if you want to install auditing in \
+an existing Adaptive Server. \\n\\n \
+* Control Keys *\\n\\nPress Ctrl-x to exit auditinit.", 	""
+3105    = "\
+1. Release Directory\\n\\nIf you are configuring a server, and the \
+displayed directory is not the same as the directory into which you \
+loaded the SYBASE files, exit auditinit. Reset the SYBASE logical \
+to point to the directory into which you loaded the SYBASE \
+files. Restart auditinit, and begin again.\\n\\nType of Installation: \
+This item displays whether this SYBASE installation is primary or secondary. \
+A primary installation is for a \
+production environment, and has logicals defined in a SYBASE command file. \
+A secondary installation is for a test environment and has logicals defined \
+at a process level.  You indicated the installation type when you ran \
+VMSINSTAL.\\\n\\\n2. Configure a Server \
+Product\\n\\nSelect this item if you want to install auditing in \
+an existing Adaptive Server.n\\n \
+* Control Keys *\\n\\nPress Ctrl-x to exit auditinit.", 	""
+3107    = "AUDITINIT NO LONGER SUPPORTS INTERFACES FILE EDITING.\\nSee \
+the Help screen or your documentation for details.\\n\\n", 	""
+3111    = "CONFIGURE SERVER PRODUCTS", 	""
+3112    = "", 	""
+3113    = "CONFIGURE SERVER PRODUCTS", 	""
+3114    = "\
+Select the number of the product you want to configure, and press \
+Return.\\n\\n* Control Keys *\\n\\nYou do not need to press Ctrl-a to continue \
+to the next screen, as your selection of a product automatically leads \
+to the next screen.\\n\\nPress Ctrl-x to \
+exit this screen and cancel any selections you have made in this \
+screen. Auditinit will return to the previous menu. You can repeat \
+Ctrl-x to return to previous menus and exit auditinit to the operating \
+system prompt.", 	""
+3121    = "CONFIGURE CONNECTIVITY PRODUCTS", 	""
+3122    = "", 	""
+3123    = "CONFIGURE CONNECTIVITY PRODUCTS", 	""
+3124    = "\
+Auditinit presents a list of available Connectivity products. Select the \
+one you want to configure, and press Return.\\n\\n* Control Keys \
+*\\n\\nYou do not need to press Ctrl-a to continue \
+to the next screen, as your selection of a product automatically leads \
+to the next screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.", 	""
+3131    = "CONFIGURE FRONT END PRODUCTS", 	""
+3132    = "", 	""
+3133    = "CONFIGURE FRONT END PRODUCTS", 	""
+3134    = "\
+Auditinit presents a list of available front end. Select the \
+one you want to configure, and press Return.\\n\\n* Control Keys \
+*\\n\\nYou do not need to press Ctrl-a to continue \
+to the next screen, as your selection of a product automatically leads \
+to the next screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.", 	""
+3141    = "INTERFACES FILE TOP SCREEN", 	""
+3142    = "", 	""
+3143    = "INTERFACES FILE TOP SCREEN", 	""
+3144    = "\
+1. Add a new entry\\n\\nSelect this option to add a new listener \
+service.\\n\\n2. Modify an existing entry\\n\\nSelect this option to \
+change any of the values associated with any interfaces file \
+entry.\\n\\n3. View an existing entry\\n\\nSelect this option to look \
+at any previously defined interfaces file entry.\\n\\n4. Delete an \
+existing entry\\n\\nSelect this option to remove an existing entry \
+from your interfaces file.\\n\\n* Control Keys *\\n\\nYou do not need to \
+press Ctrl-a to continue \
+to the next screen, as your selection of an item automatically leads \
+to the next screen.\\n\\nPress Ctrl-x to exit this screen and cancel any \
+selections you have made in this screen. Auditinit will return to the \
+previous menu. You can repeat Ctrl-x to return to previous menus and \
+exit auditinit to the operating system prompt.", 	""
+3151    = "CREATE NEW INTERFACES FILE ENTRY", 	""
+3152    = "", 	""
+3153    = "CREATE NEW INTERFACES FILE ENTRY", 	""
+3154    = "\
+1. Server Name:\\n\\nSelect this option to enter the name of the \
+server for which you want to create an interfaces file entry.  Type \
+the name at the prompt.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to \
+accept the displayed name and proceed to the next menu.\\n\\nPress \
+Ctrl-x to exit this screen.  Auditinit will return to the previous menu.  \
+You can repeat Ctrl-x to return to previous menus and exit \
+auditinit to the operating system prompt.", 	""
+3161    = "CHOOSE INTERFACES FILE ENTRY", 	""
+3162    = "", 	""
+3163    = "CHOOSE INTERFACES FILE ENTRY", 	""
+3164    = "\
+Auditinit displays a list of available interfaces file entries.  This \
+list contains entries for Adaptive Servers and Backup Servers.  If the \
+entire list does not fit on one screen, scroll to the end of the \
+list.  Select the interfaces file entry you want to modify.\\n\\n* \
+Control Keys *\\n\\nPress Ctrl-f if you want to scroll forward through \
+the list of available interfaces file entries.  You must scroll to the \
+end of the list before selecting an entry.\\n\\nPress Ctrl-b if you \
+want to scroll backward through the list of available interfaces file \
+entries.\\n\\nYou do not need to press Ctrl-a to continue to the next \
+screen, as your selection of an interfaces file entry automatically \
+leads to the next screen.\\n\\nPress Ctrl-x to exit this screen.  \
+Auditinit will return to the previous menu.  You can repeat Ctrl-x to \
+return to previous menus and exit auditinit to the operating system \
+prompt.", 	""
+3171    = "SERVER INTERFACES FILE ENTRY SCREEN", 	""
+3172    = "", 	""
+3173    = "SERVER INTERFACES FILE ENTRY SCREEN", 	""
+3174    = "\
+1. Retry count:\\n\\nThis option allows you to specify the number of \
+times a client will repeat an attempt to connect with the Adaptive Server \
+after an initial failure to connect.  Select this option if you want \
+to change the displayed value.\\n\\n2. Retry delay:\\n\\nThis option \
+allows you to specify how many seconds a client will wait between \
+retries to connect with the Adaptive Server.  Select this option if you \
+want to change the displayed value.\\n\\n3. Add a new listener \
+service:\\n\\nSelect this option if you want to add a listener service \
+that will allow network connections to the Adaptive Server.  Note that \
+auditinit displays any currently available listener services at the \
+bottom of the screen.\\n\\nModify or delete a listener \
+service:\\n\\nIf you have previously configured listener services, \
+auditinit displays each currently available listener service as a \
+separate menu option. Select the listener service that you want to \
+modify or delete.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept \
+all of the displayed values for the interfaces file entry.  Auditinit \
+will prompt you to verify that you want to write these changes to the \
+interfaces file.  Type 'y' at the prompt to write the \
+changes.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will return \
+to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", 	""
+3191    = "SELECT NETWORK PROTOCOL", 	""
+3192    = "", 	""
+3193    = "SELECT NETWORK PROTOCOL", 	""
+3194    = "\
+Select the name of a network protocol to use for the new service.  The \
+actual list of available protocols will differ depending on which \
+operating system you are using, and what network software you have \
+installed.  See your SYBASE Adaptive Server installation guide for details \
+on supported \
+protocols.\\n\\n* Control Keys *\\n\\nPress Ctrl-x to exit this screen \
+and cancel any changes you have made to the screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", 	""
+3201    = "EDIT TCP SERVICE", 	""
+3202    = "", 	""
+3203    = "EDIT TCP SERVICE", 	""
+3204    = "\
+1. Hostname/Address\\n\\nSelect this entry to change the displayed TCP \
+host name or IP address of the Adaptive Server you are installing.  By \
+default, auditinit displays the host name of the machine you are \
+currently using.\\n\\n2. Port\\n\\nSelect this entry to enter the 4- \
+or 5-digit port number for Adaptive Server.  Valid port numbers range from \
+1024 to 65535.  See your SYBASE Adaptive Server installation \
+guide for \
+information on selecting an unused port number.\\n\\nAdaptive Server will \
+use this port number to manage connections from clients. \
+(Clients must use the same port number to establish a connection with \
+this Adaptive Server.)\\n\\n3. Name \
+Alias\\n\\nSelect this entry if you would like to define an alias (a \
+\"nickname\") for the TCP service.  On multiple-protocol networks, \
+you can use the alias to distinguish the TCP service from other \
+services you have defined.\\n\\n4. Delete this service from the \
+interfaces entry\\n\\nSelect this entry to delete an existing service \
+(the displayed host name, port, and name alias) from the server's \
+interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept \
+the displayed TCP service.\\n\\nPress Ctrl-x to exit this screen and \
+cancel any changes you have made to the screen.  Auditinit will return \
+to the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.", 	""
+3205    = "\
+1. Hostname/Address\\n\\nSelect this entry to change the displayed TCP \
+host name or IP address of the Adaptive Server you are installing.  By \
+default, auditinit displays the host name of the machine you are \
+currently using.\\n\\n2. Port\\n\\nSelect this entry to enter the 4- \
+or 5-digit port number for Adaptive Server.  Valid port numbers range from \
+1024 to 65535.  See your SYBASE Adaptive Server installation \
+guide for \
+information on selecting an unused port number.\\n\\nAdaptive Server will \
+use this port number to manage connections from clients. \
+(Clients must use the same port number to establish a connection with \
+this Adaptive Server.)\\n\\n3. Name \
+Alias\\n\\nSelect this entry if you would like to define an alias (a \
+\"nickname\") for the TCP service.  On multiple-protocol networks, \
+you can use the alias to distinguish the TCP service from other \
+services you have defined.\\n\\n4.  Server type\\n\\nSelect this \
+option if you want to change the server type from a master server to a \
+companion server.  By default, auditinit installs a master server.  If \
+you want to install a master server only, ignore this \
+option.\\n\\nSee your SYBASE Adaptive Server installation guide for more \
+information on \
+installing companion servers.\\n\\n5. Delete this service from the \
+interfaces entry\\n\\nSelect this entry to delete an existing service \
+(the displayed host name, port, and name alias) from the server's \
+interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept \
+the displayed TCP service.\\n\\nPress Ctrl-x to exit this screen and \
+cancel any changes you have made to the screen.  Auditinit will return \
+to the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.", 	""
+3211    = "EDIT DECNET SERVICE", 	""
+3212    = "", 	""
+3213    = "EDIT DECNET SERVICE", 	""
+3214    = "\
+1. Nodename\\n\\nSelect this option to change the displayed nodename \
+for the Adaptive Server you are installing.  By default, auditinit displays \
+the current nodename.\\n\\n2. Object\\n\\nSelect this option if you \
+choose to enter a network object number for Adaptive Server.  Valid object \
+numbers range from 128 to 253.\\n\\nSybase recommends that you avoid \
+using object numbers.  Adaptive Server contains object number support to \
+maintain compatibility with earlier releases.\\n\\n3. Name \
+Alias\\n\\nSelect this entry if you would like to define an alias (a \
+\"nickname\") for the DECnet service.  On multiple-protocol networks, \
+you can use the alias to distinguish the DECnet service from other \
+services you have defined.\\n\\n5. Delete this service from the \
+interfaces entry\\n\\nSelect this entry to delete an existing service \
+(the displayed nodename, object, and name alias) from the server's \
+interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept \
+the displayed DECnet service.\\n\\nPress Ctrl-x to exit this screen \
+and cancel any changes you have made to the screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", 	""
+3215    = "\
+1. Nodename\\n\\nSelect this option to change the displayed nodename \
+for the Adaptive Server you are installing.  By default, auditinit displays \
+the current nodename.\\n\\n2. Object\\n\\nSelect this option if you \
+choose to enter a network object number for Adaptive Server.  Valid object \
+numbers range from 128 to 253.\\n\\nSybase recommends that you avoid \
+using object numbers.  Adaptive Server contains object number support to \
+maintain compatibility with earlier releases.\\n\\n3. Name \
+Alias\\n\\nSelect this entry if you would like to define an alias (a \
+\"nickname\") for the DECnet service.  On multiple-protocol networks, \
+you can use the alias to distinguish the DECnet service from other \
+services you have defined.\\n\\n4.  Server type\\n\\nSelect this \
+option if you want to change the server type from a master server to a \
+companion server.  By default, auditinit installs a master server.  If \
+you want to install a master server only, ignore this \
+option.\\n\\nSee your SYBASE Adaptive Server installation guide for more \
+information on \
+installing companion servers.\\n\\n5. Delete this service from the \
+interfaces entry\\n\\nSelect this entry to delete an existing service \
+(the displayed nodename, object, and name alias) from the server's \
+interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept \
+the displayed DECnet service.\\n\\nPress Ctrl-x to exit this screen \
+and cancel any changes you have made to the screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", 	""
+3221    = "EDIT SPX SERVICE", 	""
+3222    = "", 	""
+3223    = "EDIT SPX SERVICE", 	""
+3224    = "\
+1. Hostname/Address\\n\\nSelect this option to enter the host name on \
+which the server will operate.  By default, auditinit lists the current \
+host name.  An example of a valid host name/address is \
+00000001,AA0004002104.\\n\\n2. Socket\\n\\nSelect this option to \
+enter the socket that the server will use to listen for client \
+connections.  Valid socket numbers range from 0x8000 to 0xBFFF.  You \
+may enter the socket number in either hex or decimal format; entries \
+beginning with \"0x\" are interpreted as hex.\\n\\n3. Name Alias\\n\\nSelect this option if you would like \
+to define an alias (a \"nickname\") for the SPX service.  On \
+multiple-protocol networks, you can use the alias to distinguish the \
+SPX service from other services you have defined.\\n\\n4. Delete this \
+service from the interfaces entry\\n\\nSelect this entry to delete an \
+existing service (the displayed host name, socket, and name alias) \
+from the server's interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a \
+to accept the displayed SPX service.\\n\\nPress Ctrl-x to exit this \
+screen and cancel any changes you have made to the screen.  Auditinit \
+will return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", 	""
+3225    = "\
+1. Hostname/Address\\n\\nSelect this option to enter the host name on \
+which the server will operate.  By default, auditinit lists the current \
+host name.  An example of a valid host name/address is \
+00000001,AA0004002104.\\n\\n2. Socket\\n\\nSelect this option to \
+enter the socket that the server will use to listen for client \
+connections.  Valid socket numbers range from 0x8000 to 0xBFFF.  You \
+may enter the socket number in either hex or decimal format; entries \
+beginning with \"0x\" are interpreted as hex.\\n\\nRefer to \
+your SYBASE Adaptive Server installation guide for information on valid \
+socket numbers.\\n\\n3. Name Alias\\n\\nSelect this option if you would like \
+to define an alias (a \"nickname\") for the SPX service.  On \
+multiple-protocol networks, you can use the alias to distinguish the \
+SPX service from other services you have defined.\\n\\n4.  Server type\\n\\nSelect this \
+option if you want to change the server type from a master server to a \
+companion server.  By default, auditinit installs a master server.  If \
+you want to install a master server only, ignore this \
+option.\\n\\nSee your SYBASE Adaptive Server installation guide for more \
+information on \
+installing companion servers.\\n\\n5. Delete this \
+service from the interfaces entry\\n\\nSelect this entry to delete an \
+existing service (the displayed host name, socket, and name alias) \
+from the server's interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a \
+to accept the displayed SPX service.\\n\\nPress Ctrl-x to exit this \
+screen and cancel any changes you have made to the screen.  Auditinit \
+will return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.", 	""
+3231    = "EDIT APPLETALK SERVICE", 	""
+3232    = "", 	""
+3233    = "", 	""
+3234    = "", 	""
+3241    = "EDIT BSD NAMED PIPES SERVICE", 	""
+3242    = "", 	""
+3243    = "EDIT BSD NAMED PIPES SERVICE", 	""
+3244    = "\
+1. Listener Path\\n\\nSelect this entry to enter the path of the BSD named \
+pipes listener. The path must be reachable on the local machine \
+where the server is running. \\n\\n 2. Named Alias \\n\\n Select this entry \
+to enter the named pipes alias. \\n\\n 3. Delete this service from the \
+interfaces entry\\n\\nSelect this entry to delete an existing service \
+(the displayed bsd named pipes listener, and its alias) from the server's \
+interfaces entry.\\n\\n* Control Keys *\\n\\nPress Ctrl-a to accept \
+the displayed TCP service.\\n\\nPress Ctrl-x to exit this screen and \
+cancel any changes you have made to the screen.  Auditinit will return \
+to the previous menu.  You can repeat Ctrl-x to return to previous \
+menus and exit auditinit to the operating system prompt.", 	""
+3245    = "Configure Interfaces For Secure SQL Server ?", 	"" 
+3301    = "Enter the pathname of the release directory to use (default is '%1!'): ", 	"%s"
+3302    = "Release directory: ", 	""
+3303    = "Edit / View Interfaces File", 	""
+3304    = "Configure a Server product", 	""
+3305    = "Configure an Open Client/Server product", 	""
+3306    = "Configure a Front End product", 	""
+3307    = "Copy Files from Diskette", 	""
+3308    = "View / Edit Environment Values", 	""
+3309    = "Check System Consistency", 	""
+3310    = "Type of installation: ", 	""
+3311    = "primary (system-level access)", 	""
+3312    = "secondary (process-level or group-level access)", 	""
+3401    = "Could not load localized messages for product '%1!'.", 	"%s"
+3402    = "Product", 	""
+3403    = "Date Installed", 	""
+3404    = "Date Configured", 	""
+3405    = "Products:", 	""
+3501    = "Interfaces File: ", 	""
+3502    = "Add a new entry", 	""
+3503    = "Modify an existing entry", 	""
+3504    = "View an existing entry", 	""
+3505    = "Delete an existing entry", 	""
+3511    = "An entry with that name already exists in the interfaces file.", 	""
+3512    = "Enter the name of the server to add (default is '%1!'): ", 	"%s"
+3513    = "Server name: ", 	""
+3514    = "Select one of the following interfaces entries:", 	""
+3522    = "Entry '%1!' not found in interfaces file.", 	"%s"
+3530    = "This entry is invalid because it has no listeners.  Please add one or more listeners to the entry, or enter Ctrl-x to leave this screen without writing the entry to the interfaces file.", 	""
+3531    = "Write the changes to the interfaces file now? ", 	""
+3532    = "Are you sure you want to cancel? ", 	""
+3533    = "Enter the retry count (default is '%1!'): ", 	"%s"
+3534    = "Enter the delay interval between retries (default is '%1!'): ", 	"%s"
+3535    = "Remove this entry from the interfaces file? ", 	""
+3536    = "Backup Server: ", 	""
+3537    = "Retry Count: ", 	""
+3538    = "Retry Delay: ", 	""
+3539    = "Add a new listener service", 	""
+3540    = "Modify or delete a service", 	""
+3541    = "Protocol", 	""
+3542    = "Address", 	""
+3543    = "Port", 	""
+3544    = "Name Alias", 	""
+3545    = "Type", 	""
+3546    = "Listener services available:", 	""
+3547    = "Add a new query service", 	""
+3548    = "Query services available:", 	""
+3551    = "TCP", 	""
+3552    = "DECnet", 	""
+3553    = "SPX", 	""
+3554    = "ADSP", 	""
+3555    = "BSD NAMED PIPES", 	""
+3561    = "Enter the name alias to use for this entry (default is '%1!'): ", 	"%s"
+3562    = "Enter the hostname or Internet address to use for this entry (default is '%1!'): ", 	"%s"
+3563    = "Enter the port number to use for this entry (default is '%1!'): ", 	"%s"
+3564    = "Name Alias:", 	""
+3565    = "Hostname/Address:", 	""
+3566    = "Port:", 	""
+3567    = "Is this information correct? ", 	""
+3568    = "Remove this service from the interfaces entry? ", 	""
+3569    = "Delete this service from the interfaces entry", 	""
+3570    = "master", 	""
+3571    = "companion", 	""
+3572    = "Please specify a hostname first.", 	""
+3573    = "Is this server a companion server? ", 	""
+3574    = "Server type:", 	""
+3581    = "Enter the name alias to use for this entry (default is '%1!'): ", 	"%s"
+3582    = "Enter the nodename to use for this entry (default is '%1!'): ", 	"%s"
+3583    = "Enter the object number to use for this entry (default is '%1!'): ", 	"%s"
+3584    = "Name Alias:", 	""
+3585    = "Nodename:", 	""
+3586    = "Object:", 	""
+3591    = "Enter the name alias to use for this entry (default is '%1!'): ", 	"%s"
+3592    = "Enter the hostname or Internet address to use for this entry (default is '%1!'): ", 	"%s"
+3593    = "Enter the socket number to use for this entry (default is '%1!'): ", 	"%s"
+3594    = "Name alias:", 	""
+3595    = "Hostname / Address:", 	""
+3596    = "Socket:", 	""
+3597    = "Enter the name alias to use for this entry (default is '%1!'): ", 	"%s"
+3598    = "Enter the AppleTalk zone name to use for this entry (default is '%1!'): ", 	"%s"
+3599    = "Enter the Appletalk object name to use for this entry (default is '%1!'): ", 	"%s"
+3600    = "Zone name:", 	""
+3601    = "Object name:", 	""
+3602    = "Name alias:", 	""
+3611    = "Enter the hexadecimal Internet address to use for this entry (default is '%1!'): ", 	"%s"
+3612    = "Internet address:", 	""
+3620    = "Enter the name alias to use for this entry (default is '%1!'): ", 	"%s"
+3621    = "Enter the listener path to use for this entry (default is '%1!'): ", 	"%s"
+3622    = "Name Alias:", 	""
+3623    = "Listener Path:", 	""
+3624    = "Port: ", 	""
+3650    = "Netware system check", 	""
+3651    = "", 	""
+3652    = "", 	""
+3653    = "", 	""
+3654    = "Major", 	""
+3655    = "Minor", 	""
+3656    = "Rev.", 	""
+3657    = "Month", 	""
+3658    = "Day", 	""
+3659    = "Year", 	""
+3660    = "NLM check results : ", 	""
+4000    = "Validation function for server name called with NULL pointer.", 	""
+4001    = "Server name '%1!' is too long; the maximum number of characters allowed is '%2!'.", 	"%s %d"
+4002    = "Adaptive Server name was not supplied.", 	""
+4003    = "Name '%1!' is not valid.  Server names may include only alphanumeric Roman characters or punctuation marks.", 	"%s"
+4004    = "Interfaces entry name '%1!' already exists.", 	"%s"
+4005    = "Port '%1!' is not valid.  Port descriptions may include only alphanumeric Roman characters.", 	"%s"
+4006    = "Use of object names (%1!) is not recommeded due to negative impact on performance.", 	"%s"
+4007    = "No products detected in internal registry.", 	""
+4008    = "Product short names not detected in the internal registry.", 	""
+4009    = "Product short name '%1!' is not valid.", 	"%s"
+4010    = "Sybase recommends against using DECnet object names (%1!); please use an object number instead.", 	"%s"
+4011    = "Object name '%1!' is too long.  Object names are restricted to %2! characters.", 	"%s %d"
+4012    = "Runserver file '%1!' already exists.  Runserver file names are restricted to 8 characters.  Please choose a different server name, or delete the existing runserver file.", 	"%s"
+4013    = "Port '%1!' is registered to '%2!'.  Either choose a different port address or make sure that this port is available before continuing.", 	"%d %s"
+4014    = "Port '%1!' is out of the valid range of Sybase supported ports.", 	"%s"
+; End of section.

@@ -1,0 +1,952 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; NOTE: This file will be empty for the language 'us_english'
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+0    = "", 	""
+1    = "Impossible de cr‚er le fichier '%1!'.Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+2    = "Impossible d'ouvrir le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+3    = "Impossible d'‚crire dans le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+4    = "Impossible de lire le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+5    = "Impossible de fermer le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+6    = "Impossible d'acc‚der au r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+7    = "%1! ", 	"%s"
+8    = "Impossible de cr‚er un fichier temporaire.", 	""
+9    = "Impossible de saisir le r‚sultat de '%1!'.", 	"%s"
+10    = "Une erreur s'est produite lors de la cr‚ation du chemin d'accŠs '%1!' : son nom est trop long.", 	"%s"
+11    = "Une erreur s'est produite lors de la cr‚ation de la liste d'objets.", 	""
+12    = "L'attribut '%1!' n'est pas d‚fini.", 	"%s"
+13    = "L'attribut '%1!' n'existe pas.", 	"%s"
+14    = "Le fichier '%1!' n'existe pas.", 	"%s"
+15    = "Impossible de cr‚er le chemin d'accŠs du fichier d'interface.", 	""
+16    = ".", 	""
+17    = "%1!", 	"%s"
+18    = "Fait", 	""
+19    = "Impossible d'obtenir des informations sur '%1!' en faisant appel … '%2!'. Le systŠme d'exploitation a communiqu‚ : %3!.", 	"%s %s %s"
+20    = "o", 	""
+21    = "n", 	""
+24    = "La capacit‚ du tampon interne a ‚t‚ d‚pass‚e lors de l'envoi de '%1!' au shell.", 	"%s"
+25    = "Le shell n'a pas ‚t‚ appel‚ par une commande.", 	" "
+26    = "Appel du shell … l'aide de '%1!'.", 	"%s"
+27    = "fork() a ‚chou‚ et affich‚ le message suivant : %1!.", 	"%s"
+28    = "execl() a renvoy‚ le message : erreur du systŠme d'exploitation.", 	""
+29    = "syb_system_datetime() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+32    = "syb_user_username() a ‚t‚ appel‚ avec un tampon NULL.", 	 ""
+33    = "Impossible de d‚terminer le nom de l'utilisateur courant.", 	""
+34    = "syb_user_get_env() a ‚t‚ appel‚ avec un tampon d'environnement NULL.", 	""
+35    = "syb_user_get_env() a ‚t‚ appel‚ avec un tampon de variable d'environnement NULL.", 	""
+36    = "La variable d'environnement '%1!' n'est pas d‚finie.", 	"%s"
+37    = "syb_user_curdir() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+38    = "Impossible de trouver le r‚pertoire de travail courant.", 	""
+39    = "syb_user_chdir()a ‚t‚ appel‚ avec un tampon NULL.", 	"" 
+40    = "Impossible de quitter le r‚pertoire courant et passer au r‚pertoire '%1!'.", 	"%s"
+41    = "syb_file_exists() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+42    = "Impossible de d‚terminer si '%1!' existe. Le systŠme d'exploitation a communiqu‚ : %2!.", "%s %s"
+43    = "Impossible de d‚terminer si '%1!' existe. Le systŠme d'exploitation a communiqu‚ : %2!.", "%s %d"
+44    = "syb_file_delete() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+45    = "Impossible de supprimer le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+46    = "Impossible de supprimer le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+47    = "syb_file_get_mode() a ‚t‚ appel‚ avec un nom de fichier NULL.", 	""
+48    = "Impossible d'obtenir les autorisations pour le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+49    = "Impossible d'obtenir les autorisations pour le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+50    = "syb_file_set_mode() a ‚t‚ appel‚ avec un nom de fichier NULL.", 	""
+51    = "Impossible de d‚finir des autorisations pour le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+52    = "Impossible de d‚finir des autorisations pour le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+53    = "syb_file_copy() a ‚t‚ appel‚ avec un nom de fichier source NULL.", 	""
+54    = "syb_file_copy() a ‚t‚ appel‚ avec un nom de fichier destination NULL.", 	""
+55    = "Impossible d'ouvrir le fichier '%1!' … copier.", 	"%s"
+56    = "Impossible d'ouvrir le fichier '%1!' .", 	"%s"
+57    = "Une erreur s'est produite pendant la copie : read count = '%1!', write count = '%2!'.", 	"%d %d"
+58    = "Impossible d'obtenir les autorisations pour le fichier '%1!' aprŠs copie. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+59    = "Impossible d'obtenir les autorisations pour le fichier '%1!' aprŠs copie. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+60    = "Impossible de d‚finir des autorisations pour le fichier '%1!' aprŠs copie. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+61    = "Impossible de d‚finir des autorisations pour le fichier '%1!' aprŠs copie. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+62    = "syb_file_rename() a ‚t‚ appel‚ avec un tampon source NULL.", 	""
+63    = "syb_file_rename() a ‚t‚ appel‚ avec un tampon destination NULL.", 	""
+64    = "Impossible de renommer le fichier '%1!' en '%2!'. Le systŠme d'exploitation a communiqu‚ : %3!.", 	"%s %s %s"
+65    = "Impossible de renommer le fichier '%1!' en '%2!'. Le systŠme d'exploitation a communiqu‚ : %3!.", 	"%s %s %d"
+66    = "syb_file_size() a ‚t‚ appel‚ avec un nom de fichier NUL.", 	""
+67    = "Impossible de d‚terminer la taille de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+68    = "Impossible de d‚terminer la taille de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+69    = "syb_file_isdir() a ‚t‚ appel‚ avec un chemin d'accŠs NULL.", 	""
+70    = "Impossible de d‚terminer si '%1!' est un r‚pertoire. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+71    = "Impossible de d‚terminer si '%1!' est un r‚pertoire. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+72    = "syb_user_default_charset() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+73    = "syb_user_default_language() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+74    = "syb_file_date() a ‚t‚ appel‚ par un nom de fichier NULL.", 	""
+75    = "Impossible d'obtenir la date de modification de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+76    = "Impossible d'obtenir la date de modification de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+77    = "Impossible d'obtenir la date de modification de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+78    = "Impossible d'obtenir la date de modification de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+79    = "syb_path_basename() a ‚t‚ appel‚ avec un chemin d'accŠs NULL.", 	""
+80    = "syb_path_basename() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+81    = "Le chemin d'accŠs '%1!' de syb_path_basename() d‚passe la longueur maximale de ('%2!').", 	"%s %d"
+82    = "syb_path_dirname() a ‚t‚ appel‚ avec un chemin d'accŠs NULL.", 	""
+83    = "syb_path_dirname() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+84    = "Le chemin d'accŠs '%1!' de syb_path_dirname() d‚passe la longueur maximale ('%2!').", 	"%s %d"
+85    = "syb_path_append_dir() a ‚t‚ appel‚ avec un chemin d'accŠs NULL.", 	""
+86    = "syb_path_append_dir() a ‚t‚ appel‚ avec un nom de r‚pertoire NULL.", 	""
+87    = "Le nom chemin constitu‚ par l'ajout de '%1!' … '%2!' risque de d‚passer la longueur maximale autoris‚e ('%3!').", 	"%s %s %d"
+88    = "syb_path_append_file() a ‚t‚ appel‚ avec un nom de r‚pertoire NULL.", 	""
+89    = "syb_path_append_file() a ‚t‚ appel‚ avec un nom de fichier NULL.", 	""
+90    = "Impossible d'ajouter '%1!' … '%2!'.", 	"%s %s"
+91    = "syb_path_convert () a ‚t‚ appel‚ avec un chemin NUL.", 	""
+92    = "Le chemin d'accŠs '%1!' … syb_file_convert() d‚passe la longueur maximale ('%2!').", 	"%s %d"
+93    = "Vous n'avez pas indiqu‚ de nom de fichier pour Syb_file_convert().", 	""
+94    = "Le paramŠtre '%1!' de syb_file_convert() ne contient pas le d‚limiteur voulu.", 	"%s"
+95    = "Le type '%1! indiqu‚ pour syb_file_convert() est incorrect'.", 	"%d"
+96    = "syb_file_list() calleda ‚t‚ appel‚ avec un nom de r‚pertoire NULL.", 	""
+97    = "Impossible d'ouvrir le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	 "%s %s"
+98    = "Impossible d'ouvrir le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	 "%s %d"
+99    = "Impossible de lire le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+100    = "Impossible de lire le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+101    = "Impossible de fermer le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!", "%s %s"
+102    = "Impossible de fermer le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!", 	"%s %d"
+103    = "Impossible d'allouer l'en-tˆte de liste … syb_file_list().", 	""
+104    = "Impossible d'allouer la structure de syb_file … syb_file_list().", 	""
+105    = "syb_file_list_first() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+106    = "syb_file_list_first() a ‚t‚ appel‚ avec une liste de fichiers NULLE .", 	""
+107    = "syb_file_list_next() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+108    = "syb_file_list_next() a ‚t‚ appel‚ avec une liste de fichiers NULLE.", 	""
+109    = "syb_dir_delete() a ‚t‚ appel‚ avec un nom de r‚pertoire NULL.", 	""
+110    = "Impossible d'ouvrir le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+111    = "Impossible d'ouvrir le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+112    = "Impossible d'obtenir des informations sur '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+113    = "Impossible d'obtenir des informations sur '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+114    = "Impossible de supprimer le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+115    = "Impossible de supprimer le fichier '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+116    = "Impossible de lire le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+117    = "Impossible de lire le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+118    = "Impossible de supprimer le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+119    = "Impossible de de supprimer le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+120    = "syb_dir_create() a ‚t‚ appel‚ avec un nom de r‚pertoire NULL.", 	""
+121    = "Impossible de cr‚er le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+122    = "Impossible de cr‚er le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+123    = "syb_dir_get_mode() a ‚t‚ appel‚ avec un nom de chemin NULL.", 	""
+124    = "Impossible d'obtenir des informations sur le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+125    = "Impossible  d'obtenir des informations sur le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+126    = "'%1!' n'est PAS un r‚pertoire.", 	"%s"
+127    = "syb_dir_set_mode() a ‚t‚ appel‚ avec un nom de r‚pertoire NULL.", 	""
+128    = "Impossible d'obtenir des informations sur le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+129    = "Impossible  d'obtenir des informations sur le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+130    = "'%1!' n'est pas un r‚pertoire.", 	"%s"
+131    = "Impossible de d‚finir les permissions pour le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+132    = "Impossible de d‚finir les permissions pour le r‚pertoire '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+133    = "syb_net_get_inet_address() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+134    = "syb_net_get_ethernet_address() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+135    = "Impossible d'obtenir l'adresse Ethernet '%1!'.", 	"%s"
+136    = "syb_net_get_hostname_from_enet() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+137    = "Impossible de convertir l'adresse Ethernet '%1!' en valeur Ethernet.", 	"%s"
+138    = "Impossible d'obtenir le nom de l'h“te pour l'adresse Ethernet '%1!'.", 	"%s"
+139    = "H“te '%1!' introuvable.", 	"%s"
+140    = "syb_net_get_hostname_from_inet() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+141    = "Impossible d'obtenir le nom de l'h“te pour l'adresse Internet '%1!'.", 	"%s"
+142    = "Impossible d'allouer la structure contextuelle de syb_system_default_charset().", 	""
+143    = "Impossible d'obtenir les informations sur la localisation par d‚faut de syb_system_default_charset().", 	""
+144    = "Impossible de fermer la structure contextuelle de syb_system_default_charset().", 	""
+145    = "Impossible de fermer la structure de localisation dans syb_system_default_charset().", 	""
+146    = "Impossible d'allouer la structure de localisation … syb_system_default_charset().", 	""
+147    = "Impossible de d‚terminer les informations sur le jeu de caractŠres par d‚faut.", 	""
+148    = "Impossible d'allouer la structure contextuelle dans syb_system_default_language().", 	""
+149    = "Impossible de fermer la structure contextuelle de syb_system_default_language().", 	""
+150    = "Argument de la ligne de commande incorrect '%1!'.", 	"%s"
+151    = "Impossible de d‚finir le drapeau de d‚bogage '%1!'.", 	"%s"
+152    = "Impossible de d‚finir le drapeau d'analyse '%1!'.", 	"%s"
+153    = "Impossible d'obtenir des informations sur le chemin d'accŠs.", 	""
+154    = "Impossible de d‚terminer le r‚pertoire de version auditinit.", 	""
+155    = "Impossible de d‚terminer le r‚pertoire de version auditinit.", 	""
+156    = "Impossible de d‚terminer le r‚pertoire de version auditinit.", 	""
+157    = "Impossible de d‚terminer les informations sur la langue par d‚faut.", 	""
+158    = "Impossible d'obtenir les informations sur la localisation de syb_system_default_language().", 	""
+159    = "syb_get_home_directory() a ‚t‚ appel‚ par un utilisateur NULL.", 	""
+160    = "syb_get_home_directory() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+161    = "Impossible d'obtenir des informations sur le r‚pertoire d'accueil de '%1!'.", 	"%s"
+162    = "Impossible de compiler l'expression '%1!'.", 	"%s"
+163    = "syb_file_touch_date() a ‚t‚ appel‚ avec un nom de fichier NULL.",	""
+164    = "Impossible de mettre … jour la date de modification de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+165    = "Impossible d'‚diter la date de modification de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %d"
+166    = "Impossible d'allouer la structure contextuelle de syb_system_datetime().", 	""
+167    = "Impossible d'obtenir des informations sur la date … partir de cs_time() dans syb_system_datetime().", 	""
+168    = "Impossible de fermer la structure contextuelle de syb_system_datetime().", 	""
+169    = "Impossible d'allouer la structure contextuelle dans syb_system_month().", 	""
+172    = "Impossible d'obtenir des informations sur l'heure … partir de cs_time() dans syb_system_month().", 	""
+173    = "Impossible de fermer la structure contextuelle dans syb_system_month().", 	""
+174    = "Impossible de fermer la structure de localisation dans syb_system_default_language().", 	""
+175    = "Impossible d'allouer la structure de localisation dans syb_system_default_language().", 	""
+176    = "Impossible d'allouer la structure contextuelle dans syb_system_day().", 	""
+177    = "Impossible d'obtenir des informations sur l'heure … partir de cs_time() dans syb_system_day().", 	""
+178    = "Impossible de fermer la structure contextuelle dans syb_system_day().", 	""
+179    = "Charset ne peut ˆtre indiqu‚ qu'une seule fois dans la ligne de commande.", 	""
+180    = "La langue ne peut ˆtre indiqu‚e qu'une seule fois dans la ligne de commande.", 	""
+181    = "Le journal ne peut ˆtre indiqu‚ qu'une seule fois dans la ligne de commande.", 	""
+182    = "Le fichier de ressources ne peut ˆtre indiqu‚ qu'une seule fois dans la ligne de commande.", 	""
+183    = "Le r‚pertoire de version ne peut ˆtre indiqu‚ qu'une seule fois dans la ligne de commande.", 	 ""
+184    = "syb_file_date_buffer() a ‚t‚ appel‚ avec un tampon NUL.", 	""
+185    = "Un ordre de date impr‚vu '%1!' a ‚t‚ d‚tect‚.", 	"%s"
+186    = "Impossible d'allouer la structure contextuelle dans syb_file_date_buffer().", 	""
+187    = "Impossible de fermer la structure contextuelle dans syb_file_date_buffer().", 	""
+188    = "syb_net_get_hostname() a ‚t‚ appel‚ avec un nom d'h“te NULL.", 	""
+189    = "Impossible d'obtenir le nom de l'h“te. Le systŠme d'exploitation a communiqu‚ : %1!.",	"%s"
+190    = "Impossible d'obtenir le nom de l'h“te. Le systŠme d'exploitation a communiqu‚ : %1!.", 	"%d"
+191    = "Un argument incorrect a ‚t‚ utilis‚ dans syb_file_is_regular_file.", 	""
+192    = "Impossible de d‚terminer si %1! est un device en mode bloc. Le systŠme d'exploitation signale %2!.", 	"%s %s"
+193    = "Impossible de d‚terminer si %1! est un device en mode bloc. Le systŠme d'exploitation signale %2!.", 	"%s %d"
+194    = "Impossible de d‚terminer si %1! est un gestionnaire de caractŠres. Le systŠme d'exploitation signale %2!.", 	"%s %s"
+195    = "Impossible de d‚terminer si %1! est un gestionnaire de caractŠres. Le systŠme d'exploitation signale %2!.", 	"%s %d"
+196    = "La tentative de modification de la variable d'environnement '%1!' en '%2!' a ‚chou‚.", 	"%s %s"
+197    = "Impossible d'initialiser la bibliothŠque '%1!' : le fichier n'existe pas.", 	"%s"
+198    = "La tentative d'initialisation de la bibliothŠque '%1!' a ‚chou‚. Consultez le journal pour plus d'informations.", 	"%s"
+199    = "La demande de validation sur le r‚pertoire en cours a ‚t‚ effectu‚e avec un pointeur NUL.", 	""	
+200    = "Impossible d'obtenir un ‚l‚ment de r‚pertoire pour '%1!'.", 	"%s"
+201    = "Le chemin (%1!) doit ˆtre indiqu‚ int‚gralement.", 	"%s"
+202    = "Une erreur a ‚t‚ d‚tect‚e dans le r‚pertoire '%1!'.", 	"%s"
+203    = "'%1!' n'est pas un r‚pertoire.", 	"%s"
+204    = "Le r‚pertoire '%1!' doit poss‚der des permissions en ‚criture, lecture et ex‚cution.", 	"%s"
+205    = "'%1!' n'a renvoy‚ aucun ‚tat de sortie … auditinit.", 	"%s"
+206    = "Impossible de d‚terminer la valeur de la variable d'environnement SYBASE.", 	""
+207    = "AUDITINIT.NLM n'existe PAS … l'emplacement indiqu‚ par la variable d'environnement SYBASE : '%1!'.", 	"%s"
+208    = "Le fichier contenant la variable d'environnement SYBASE '%1!' est introuvable.", 	"%s"
+209    = "Impossible de fermer le fichier '%1!' contenant la variable d'environnement.", 	"%s"
+210    = "Impossible de cr‚er le fichier '%1!' contenant la variable d'environnement Sybase.", 	"%s"
+211    = "Impossible de d‚terminer l'‚l‚ment du r‚pertoire '%1!'.", 	"%s"
+212    = "Impossible de renommer le fichier '%1!' contenant la variable d'environnement Sybase en '%2!'.", 	"%s %s"
+213    = "Impossible de d‚terminer le suffixe du fichier Sybase '%1!' contenant les variables d'environnement.", 	"%s"
+214    = "Impossible d'ajouter '%1!' … '%2!' pour obtenir le nom du fichier d'environnement de sauvegarde de auditinit.", 	"%s %s"
+215    = "Impossible d'‚tendre %1!. Consultez l'‚cran de la console systŠme pour plus d'informations.", 	"%s"
+216    = "Le nom de l'h“te '%1!' est incorrect. Il ne doit contenir que des caractŠres roman.", 	"%s"
+217    = "Impossible de compl‚ter le chemin d'accŠs '%1!' en faisant appel … '%2!'. Le systŠme d'exploitation a communiqu‚ : %3!.", 	"%s %s %s"
+218    = "Impossible d'obtenir des informations sur le systŠme de fichiers '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+219    = "Impossible de d‚terminer l'interface du fichier contenant les caractŠres dans le chemin '%1!'.", 	"%s"
+220    = "Impossible d'ajouter '%1! … '%2!' : '%3!' est un r‚pertoire incorrect.", 	"%s %s %s"
+221    = "Impossible de d‚terminer si '%1!' est un membre de ce cluster. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+227    = "NLM '%1!' est d‚j… charg‚.", 	"%s"
+231    = "Adresse '%1!' incorrecte. Les adresses SPX ne peuvent comporter que des caractŠres repr‚sentant des chiffres hexad‚cimaux ('0' … '9' et 'a' … 'f').", 	"%s"
+244    = "oui", 	""
+245    = "non", 	""
+250    = "Une erreur a ‚t‚ d‚tect‚e pendant le d‚roulement du processus '%1!'.  Le systŠme d'exploitation a communiqu‚ : %2!.  ATTENTION : il est impossible de d‚terminer l'‚tat d'achŠvement de la transaction .", 	"%s %s"
+251    = "Une erreur s'est produite lors de la v‚rification de l'‚tat du processus '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+252    = "Vous ne pouvez pas ‚crire sur '%1!'. Le droit d'‚criture sur ce r‚pertoire peut ˆtre requis ult‚rieurement ; d‚finissez-le avant de poursuivre.", 	"%s"
+300    = "ATTENTION :", 	""
+301    = "ANALYSE :", 	""
+302    = "", 	""
+303    = "ERREUR SYSTEME :", 	""
+304    = "ERREUR INTERNE :", 	""
+305    = "Reportez-vous au journal (%1!) pour plus d'informations. Faites un rapport sur cette erreur et contactez votre distributeur Sybase.", 	"%s"
+306    = "ERREUR DE CONNECTIVITE :", 	""
+307    = "ERREUR SERVEUR :", 	""
+308    = "Faites un rapport sur cette erreur et contactez votre distributeur Sybase.", 	""
+401    = "inf_ifile_read() a ‚t‚ appel‚ avec un nom de fichier NUL.", 	""
+402    = "Le fichier d'interfaces '%1!' est d‚j… charg‚. Vous devez d‚charger ce fichier avant de charger le fichier '%2!'.", 	"%s %s"
+403    = "Le fichier d'interface '%1!' est introuvable.", 	"%s"
+404    = "Impossible d'ouvrir le fichier d'interface '%1!'.", 	"%s"
+405    = "Erreur de syntaxe … la ligne '%1!'.", 	"%s"
+406    = "Impossible de fermer le fichier d'interface '%1!'.", 	"%s"
+407    = "Impossible de fermer le ficher d'interface '%1!' tout en lib‚rant l'image m‚moire.", 	"%s"
+408    = "Impossible d'allouer de la m‚moire … une structure d'interface.", 	""
+409    = "Impossible d'allouer de la m‚moire … la structure d'un service d'interface.", 	""
+410    = "Une erreur de syntaxe a ‚t‚ d‚tect‚e lors de l'analyse du service '%1!'.", 	"%s"
+411    = "Type inconnu '%1!' dans le service '%2!'.", 	"%s %s"
+412    = "Erreur d'analyse sur la ligne '%1!'.", 	"%s"
+413    = "Erreur d'analyse sur la ligne '%2!' : protocole inconnu '%1!'.", 	"%s %s"
+414    = "Impossible de d‚terminer le nom d'h“te courant.", 	""
+415    = "Impossible de d‚terminer l'adresse Internet de '%1!'.", 	"%s"
+416    = "Le protocole '%1!' n'est pas support‚ actuellement par '%2!'.", 	"%s %s"
+417    = "Impossible d'analyser l'adresse TLI pour '%1!'.", 	"%s"
+418    = "Le fichier d'interface '%1!' est d‚j… ouvert. Vous devez d'abord fermer le fichier avant de l'‚diter.", 	"%s"
+419    = "Vous n'avez indiqu‚ aucun nom de fichier … ‚diter.", 	""
+420    = "Impossible d'obtenir l'‚l‚ment de r‚pertoire du fichier d'interface '%1!'.", 	"%s"
+421    = "Impossible de d‚terminer le nom du fichier d'interface de sauvegarde s‚quentiel.", 	""
+422    = "Impossible d'ajouter '%1!' … '%2!' pour obtenir le nom du fichier d'interface de sauvegarde.", 	"%s %s"
+423    = "Impossible de renommer '%1!' en '%2!'.", 	"%s %s"
+424    = "Impossible d'ouvrir le fichier d'interface '%1!' en ‚criture.", 	"%s"
+425    = "Impossible d'‚crire dans le fichier d'interface '%1!'.", 	"%s"
+426    = "Impossible de fermer le fichier d'interface '%1!'.", 	"%s"
+427    = "Impossible de convertir le service au format de chaŒne pour l'entr‚e '%1!'.", 	"%s"
+428    = "inf_service_construct_string() a ‚t‚ appel‚ avec un service NULL.", 	""
+429    = "inf_service_construct_string() a ‚t‚ appel‚ avec un tampon NULL.", 	""
+430    = "Type de service inconnu '%1!'; il va ˆtre ‚limin‚.", 	"%d"
+431    = "Protocole '%1!' inconnu; le service va ˆtre ‚limin‚.", 	"%d"
+432    = "TCP est le seul protocole support‚ par TLI.", 	""
+433    = "API r‚seau inconnue. Les API r‚seau admises sont TLI, Sockets ou aucune.", 	""
+434    = "Un service a ‚t‚ d‚tect‚ … la ligne '%1!', devant son entr‚e.", 	"%s"
+435    = "Impossible d'analyser le num‚ro de port TLI '%1!'.", 	"%s"
+436    = "Impossible de d‚terminer l'adresse Internet de '%1!'.", 	"%s"
+437    = "Impossible d'analyser l'adresse Internet '%1!' au format TLI.", 	"%s"
+438    = "Un protocole inconnu a ‚t‚ d‚tect‚ pour l'entr‚e '%1!' ; cette entr‚e va ˆtre ‚limin‚e.", 	"%s"
+439    = "Un service inconnu a ‚t‚ d‚tect‚ pour l'entr‚e '%1!' ; ce service va ˆtre ‚limin‚.", 	"%s"
+440    = "Impossible de d‚terminer le nom de l'h“te pour l'adresse '%1!' ; ce service va ˆtre ‚limin‚.", 	"%s"
+441    = "Une entr‚e dupliqu‚e '%1!' a ‚t‚ d‚tect‚e. La premiŠre entr‚e sera conserv‚e et les autres entr‚es ‚limin‚es.", 	"%s"
+442    = "Impossible de d‚finir l'alias de tous les r‚cepteurs.", 	""
+443    = "Erreur d'analyse : '%1!' possŠde le r‚cepteur '%2!', qui possŠde son propre r‚cepteur '%3!'.", 	"%s %s %s"
+444    = " inf_service_copy() a ‚t‚ appel‚ avec un service NUL .", 	 ""
+445    = "Aucun service n'a ‚t‚ d‚tect‚ dans le fichier d'interface pour l'entr‚e '%1!' ; cette entr‚e va ˆtre ‚limin‚e.", 	"%s"
+446    = "L'entr‚e '%1!' existe d‚j… : les duplications sont interdites.", 	"%s"
+447    = "L'entr‚e '%1!' peut ˆtre un r‚cepteur de '%2!'. Cependant, '%3!' est d‚j… associ‚ … '%4!'.", 	"%s %s %s %s"
+448    = "L'entr‚e r‚cepteur '%1!' possŠde d‚j… '%2!' comme maitre mais il correspond … '%3!' dans le fichier d'interface.", 	"%s %s %s"
+449    = "Impossible d'allouer de la m‚moire … l'en-tˆte du ficher d'interface.", 	""
+450    = "Impossible d'allouer de la m‚moire … des ‚l‚ments de la liste d'interface.", 	""
+451    = "Un service dupliqu‚ a ‚t‚ d‚tect‚ dans l'entr‚e d'interface '%1!'; le service n'a pas ‚t‚ ajout‚.", 	"%s"
+452    = "Le service de l'entr‚e d'interface '%1!' n'ayant pas ‚t‚ complŠtement sp‚cifi‚ il n'a pas ‚t‚ ajout‚.", 	"%s"
+453    = "inf_service_get_alias() a ‚t‚ appel‚ avec un tampon NUL.", 	""
+454    = "Impossible de rep‚rer l'entr‚e d'interface '%1!' en tant que maitre de '%2!' car '%3!' est d‚j… associ‚ … '%4!'.", 	"%s %s %s %s"
+455    = "La tentative d'associer '%1!' comme r‚cepteur de '%2!' a ‚chou‚ car '%3!' ne possŠde aucun service d'interface.", 	"%s %s %s"
+456    = "La tentative d'associer '%1!' comme r‚cepteur de '%2!' a ‚chou‚ car '%3!' ne possŠde pas de service de requˆtes (il ne doit y avoir qu'UN service de requˆtes).", 	"%s %s %s"
+457    = "La tentative d'associer '%1!' comme r‚cepteur de '%2!' a ‚chou‚ car '%3!' possŠde diff‚rents services (il ne doit y avoir qu'UN service de requˆtes).", 	"%s %s %s"
+458    = "Impossible d'allouer de la m‚moire … l'entr‚e du r‚cepteur '%1!'.", 	"%s"
+459    = "Impossible d'allouer de la m‚moire au service d'entr‚e du r‚cepteur '%1!'.", 	"%s"
+460    = "Impossible d'ins‚rer l'alias du r‚cepteur '%1!' de '%2!' dans le fichier d'interface.", 	"%s %s"
+461    = "inf_service_set_alias() a ‚t‚ appel‚ avec un tampon NUL.", 	""
+463    = "Impossible de localiser l'entr‚e '%1!' dans le fichier d'interface.", 	"%s"
+464    = "Entr‚es NULL. V‚rifiez le fichier d'interface", 	""
+500    = "Impossible de localiser le num‚ro de message '%1!' du produit '%2!' dans le cache du message.", 	"%d %s"
+501    = "Impossible de trouver le message auditinit num‚ro '%1!'.", 	"%d"
+502    = "Impossible de construire le message '%1!' pour le produit '%2!'. Le texte Unbuilt est le suivant : '%3!' et le format de chaŒne est '%4!'.", 	"%d %s %s %s"
+503    = "Une variante linguistique a ‚t‚ utilis‚e pour ce message.", 	""
+504    = "Impossible de charger les messages produit '%1!' en utilisant la langue '%2!' et le jeu de caractŠres '%3!' : impossible de retrouver le fichier de localisation '%4!'.", 	"%s %s %s %s"
+505    = "Impossible de charger les messages produit '%1!'en utilisant la langue '%2!' et le jeu de caractŠres '%3!' : num‚ro de produit incorrect.", 	"%d %s %s"
+506    = "Une variante linguistique a ‚t‚ utilis‚e pour tous les messages.", 	""
+507    = "Format du fichier de localisation '%1!' incorrect : la section '%2!' est introuvable. Chargement du module langue annul‚.", 	"%s %s"
+508    = "Erreur lors de l'ouverture de '%1!' pour la localisation du produit '%2!'. Chargement du module de langue annul‚.", 	"%s %s"
+509    = "'%1!' utilis‚ comme valeur par d‚faut pour tous les messages.", 	"%s"
+600    = "Le r‚pertoire d'amor‡age n'est pas d‚fini ; impossible de cr‚er le journal.", 	""
+601    = "Impossible de retrouver le r‚pertoire de journal ; impossible de cr‚er le journal.", 	""
+602    = "Impossible de lire le r‚pertoire de journal ; impossible de cr‚er le journal.", 	""
+603    = "Impossible d'ouvrir le journal '%1!'. Le systŠme d'exploitation signale : %2!.", 	"%s %s"
+604    = "Impossible d'‚crire dans le journal. Le systŠme d'exploitation signale : %1!.", 	"%s"
+605    = "Impossible de fermer le journal. Le systŠme d'exploitation signale : %1!.", 	"%s"
+607    = "Impossible d'‚crire dans le journal : il n'a pas ‚t‚ cr‚‚.", 	""
+608    = "DEBUT DES INFORMATIONS SUR L'ENVIRONNEMENT", 	""
+609    = "FIN DES INFORMATIONS SUR L'ENVIRONNEMENT", 	""
+610    = "Fermeture du journal.", 	""
+611    = "Le nom du journal est trop long ; le journal ne peut ˆtre cr‚‚.", 	""
+612    = "ENVIRONNEMENT DU SYSTEME D'EXPLOITATION", 	""
+613    = "ENVIRONNEMENT UTILISATEUR", 	""
+614    = "LIMITES DU PROCESSUS", 	""
+615    = "D‚but de r‚sultat … partir de '%1!' :", 	"%s"
+616    = "Fin de r‚sultat … partir de '%1!'.", 	"%s"
+617    = "Impossible de cr‚er le nom du journal … partir de '%1!'.", 	"%s"
+640    = "jeu de caractŠres :", 	""
+641    = "langue :", 	""
+642    = "r‚pertoire de version auditinit  :", 	""
+643    = "r‚pertoire de version de travail :", 	""
+644    = "nom de l'utilisateur :", 	""
+645    = "r‚pertoire courant :", 	""
+700    = "Oui", 	""
+701    = "Non", 	""
+702    = "(tapez Oui ou Non) : ", 	""
+703    = "Continuer", 	""
+704    = "Entrez le num‚ro de votre choix et validez : ", 	""
+705    = "L'initialisation de Menu Manager a ‚chou‚.", 	""
+706    = "Impossible de cr‚er le menu, le nombre maximal d'‚crans a ‚t‚ d‚pass‚.", 	""
+707    = "Impossible de cr‚er le menu, le nom de l'‚cran est NUL.", 	""
+708    = "Impossible de cr‚er un menu (nom de l'‚cran = %1!) d‚j… existant.", 	"%s"
+709    = "Impossible de d‚finir les attributs de l'‚cran ; aucun ‚cran n'est ouvert.", 	""
+710    = "L'‚cran courant est NUL.", 	""
+711    = "Ctrl-a Valider et continuer, Ctrl-x Quitter l'‚cran, ? Aide.", 	""
+712    = "Ctrl-f D‚filement vers le haut,  Ctrl-b D‚filement vers le bas.", 	""
+714    = "<More>", 	""
+715    = "Appuyez sur <Entr‚e> pour continuer. ", 	""
+716    = "Votre s‚lection est en dehors de l'intervalle admis. Veuillez r‚essayer.", 	""
+717    = "Appuyez sur Ctrl-x pour quitter l'aide : ", 	""
+718    = "<F1> : Aide                                       <F3> : Afficher le journal d'erreurs auditinit", 	""
+719    = "<Esc> :  Quitter l'aide en ligne", 	""
+720    = "Erreur auditinit : ", 	""
+721    = "Avertissement auditinit : ", 	""
+722    = "Message auditinit : ", 	""
+723    = "Sybinit-Programme d'installation System 10", 	""
+724    = "<F1> : Aide                                       <F3> : Afficher le journal d'erreurs auditinit", 	""
+725    = "Quitter AUDITINIT ?", 	""
+726    = "<ENTER> : S‚lectionner une option     <Esc>: Ecran pr‚c‚dent      <F10>: Ecran suivant", 	""
+727    = "<ENTREE> : S‚lectionner une option                                 <Esc> : Quitter Auditinit", 	""
+728    = "Journal d'erreurs auditinit : %1!", 	"%s"
+729    = "<Esc> : Quitter le journal d'erreurs auditinit", 	""
+730    = "<F3> : Changer le lecteur source                            <Esc> : Annuler la copie", 	""
+731    = "Indiquer l'emplacement du disque d'installation : ", 	""
+732    = "<Esc>: Annuler l'installation", 	""
+733    = "Copie du fichier : %1!", 	"%s"
+734    = "Annuler l'installation ?", 	""
+735    = "Indiquer l'emplacement de la disquette %1!", 	"%s"
+736    = "Chemin source : %1!", 	"%s"
+737    = "Chemin cible  : %1!", 	"%s"
+738    = "Disquette     : %1!", 	"%s"
+739    = "Veuillez ins‚rer la disquette %1! dans le lecteur %2!", 	"%s %s"
+740    = "%1! installation complŠte.", 	"%s"
+741    = "Le fichier de configuration produit de Sybase est introuvable.", 	""
+742    = "Veuillez ins‚rer la disquette INSTALL.", 	""
+743    = "S‚lectionnez le produit … installer", 	""
+744    = "%1! installation", 	"%s"
+745    = "Changez de disquette :", 	""
+746    = "Erreur interne : la zone Type de %1! est incorrect", 	"%s"
+800    = "Num‚ro de produit incorrect '%1!' : il n'appartient pas aux registres internes.", 	"%d"
+801    = "reg_product_num_name() a ‚t‚ appel‚ avec un tampon NUL.", 	""
+802    = "reg_product_name() a ‚t‚ appel‚ avec un tampon NUL.", 	""
+803    = "Le produit '%1!' n'appartient pas aucun registre interne.", 	"%s"
+804    = "reg_product_firstscreen() a ‚t‚ appel‚ avec un tampon NUL.", 	""
+900    = "Fin de fichier inattendue dans le fichier !", 	""
+1100    = "Echec d'initialisation du module de connectivit‚ auditinit.", 	"" 
+1101    = "Impossible d'obtenir l'enregistrement du login pour la connexion : serveur = '%1!'.", 	"%s"
+1102    = "D‚passement du tampon DBPROCESS. SQL a communiqu‚ : '%1!'.", 	"%s"
+1103    = "Erreur lors de l'envoi de SQL au serveur '%1!'.", 	"%s"
+1104    = "La tentative de connexion a ‚chou‚ : serveur = '%1!'.", 	"%s"
+1105    = "L'ouverture de '%1!' a ‚chou‚. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+1106    = "Erreur lors de la lecture de '%1!'. Le systŠme d'exploitation a communiqu‚ : %2!.", 	"%s %s"
+1107    = "Erreur lors de la communication des r‚sultats par le serveur '%1!'.", 	"%s"
+1108    = "Module de connectivit‚ auditinit non initialis‚.", 	""
+1109    = "Erreur dans DB-Library : '%1!'.", 	"%s"
+1110    = "Erreur au niveau du systŠme d'exploitation de DB-Library : '%1!'.", 	"%s"
+1111    = "Message Adaptive Server : msg %1!, niveau %2!, ‚tat %3!", 	"%d %d %d"
+1112    = "serveur", 	""
+1113    = "proc‚dure", 	""
+1114    = "ligne", 	""
+1115    = "Erreur lors de la liaison des r‚sultats du serveur '%1!'.", 	"%s"
+1120    = "Erreur lors de l'initialisation de rpc par rapport au serveur '%1!'.", 	"%s"
+1121    = "Erreur lors de la d‚finition des paramŠtres rpc du serveur '%1!'.", 	"%s"
+1122    = "Erreur lors de l'envoi de rpc au serveur '%1!'.", 	"%s"
+1123    = "Envoi de la commande SQL suivante au serveur : '%1!'.", 	"%s"
+1200    = "Impossible de retrouver la task list; impossible de proc‚der … la configuration.", 	""
+1201    = "Impossible de proc‚der … la configuration car la validation des valeurs entr‚es a ‚cjou‚.", 	""
+1202    = "ATTENTION : il est impossible de reprendre cette configuration … cause d'une erreur lors de l'‚criture aprŠs sauvegarde des attributs.", 	""
+1203    = "D‚but de la tƒche %1!.", 	"%s"
+1204    = "Fin de la tƒche %1!.", 	"%s"
+1205    = "...need_to %1!.", 	"%s"
+1206    = "...need_to est null -- ex‚cution d‚clench‚e par d‚faut.", 	""
+1207    = "...able_to %1!.", 	"%s"
+1208    = "...able_to est null -- aucune ex‚cution.", 	""
+1209    = "...task actions %1!.", 	"%s"
+1210    = "...ATTENTION : tƒche nulle -- aucune ex‚cution.", 	""
+1211    = "...la tƒche %1! a abouti.", 	"%s"
+1212    = "...le r‚sultat obtenu est nul -- aucune ex‚cution.", 	""
+1213    = "Tƒche en cours d'ex‚cution : %1!.", 	"%s"
+1214    = "Tƒche r‚ussie : %1!.", 	"%s"
+1215    = "Echec de la tƒche : %1!. AchŠvement de la configuration.", 	"%s"
+1216    = "La configuration a abouti.", 	""
+1217    = "La configuration a ‚chou‚.", 	""
+1218    = "Cette session auditinit ayant ‚t‚ ouverte avec l'option '%1! %2!', ces avertissements ne seront pas pris en compte. La configuration sera effectu‚e.", 	"%s %s"
+1219    = "Sortie de auditinit en raison des avertissements pr‚c‚dents. Pour proc‚der malgr‚ tout … la configuration, appelez auditinit avec l'option '%1! %2!'.", 	"%s %s"
+1230    = "La liste des tƒches a ‚t‚ interrompue sur ordre de l'utilisateur", 	""
+1300    = "Impossible de d‚terminer le r‚pertoire de version auditinit.", 	""
+1302    = "Impossible de d‚finir les attributs du r‚pertoire de version auditinit.", 	""
+1303    = "Impossible d'initialiser le Localization Manager.", 	 ""
+1304    = "Le drapeau validate only doit ˆtre indiqu‚ avec le fichier de ressources.", 	""
+1305    = "Impossible de d‚terminer le chemin du r‚pertoire auditinit.", 	""
+1306    = "Impossible de d‚terminer le r‚pertoire de version Sybase.", 	""
+1308    = "Impossible de d‚finir les attributs du r‚pertoire de version Sybase.", 	""
+1310    = "Impossible de d‚finir les attributs du fichier de ressources Sybase.", 	""
+1311    = "Impossible d'initialiser le Log Manager.", 	""
+1312    = "Erreur lors de l'accŠs … la version de sauvegarde des attributs pour r‚cup‚rer la configuration de la session pr‚c‚dente.", 	""
+1313    = "Impossible de charger la version de sauvegarde des attributs pour r‚cup‚rer la configuration de la session pr‚c‚dente.", 	""
+1314    = "Erreur dans le journal de reprise auditinit : aucun produit sp‚cifi‚.", 	""
+1315    = "Souhaitez-vous r‚cup‚rer la configuration de la session pr‚c‚dente ? ", 	""
+1316    = "  '%1!'.", 	"%s"
+1319    = "Produit incorrect '%1!' sp‚cifi‚ dans la sauvegarde des attributs du journal de reprise auditinit.", 	"%s"
+1320    = "Erreur dans le journal de reprise auditinit : aucune langue sp‚cifi‚e dans la sauvegarde des attributs.", 	""
+1321    = "Liste des tƒches du produit '%1!' absente du journal de reprise auditinit.", 	"%s"
+1322    = "Impossible d'ex‚cuter la liste des tƒches du produit '%1!'.", 	"%s"
+1323    = "Impossible de charger le fichier de ressources '%1!'.", 	"%s"
+1324    = "Aucun produit n'a ‚t‚ sp‚cifi‚ dans le fichier de ressources '%1!'.", 	"%s"
+1325    = "Un produit inconnu '%1!' a ‚t‚ sp‚cifi‚ dans le fichier de ressources '%2!'.", 	"%s %s"
+1326    = "Impossible de v‚rifier le fichier de ressources '%1!'.", 	"%s"
+1327    = "Aucune fonction du fichier de ressources n'a ‚t‚ d‚finie dans le registre pour '%1!'.", 	"%s"
+1328    = "Aucune langue n'a ‚t‚ sp‚cifi‚e dans le fichier de ressources '%1!'.", 	"%s"
+1329    = "Impossible d'obtenir le premier ‚cran de '%1!'.", 	"%s"
+1330    = "Impossible d'ouvrir et afficher le premier ‚cran de '%1!'.", 	"%s"
+1331    = "Aucune langue n'a ‚t‚ sp‚cifi‚e en mode interactif.", 	""
+1332    = "Impossible d'obtenir le premier ‚cran de auditinit.", 	""
+1333    = "Impossible d'ouvrir et d'afficher le premier ‚cran de auditinit.", 	""
+1334    = "Auditinit : \\n\\tauditinit\\n\\t [-a]\\n\\t [-c jeu-car]\\n\\t [-e]\\n\\t [-h]\\n\\t [-l langue]\\n\\t [-log fichier-trace]\\n\\t [-r fichier-ressource]\\n\\t [-s r‚pertoire-version]\\n\\t [-v]", 	""
+1336    = "'%1!'", 	"%s"
+1338    = "Impossible d'initialiser le Screen Manager.", 	""
+1339    = "Impossible d'initialiser SQL Execution Module.", 	""
+1340    = "Impossible de cr‚er des attributs.", 	""
+1341    = "Impossible de cr‚er des ‚crans.", 	""
+1342    = " Impossible de configurer l'environnement de auditinit.", 	""
+1343    = "Le journal de la session pr‚c‚dente a ‚t‚ ignor‚.", 	""
+1344    = "La configuration est en cours de r‚cup‚ration pour le produit '%1!'.", 	"%s"
+1345    = "Sortie en cours.", 	""
+1346    = "Quitter auditinit ? ", 	""
+1347    = "Vous avez des tƒches en cours. D‚sirez-vous VRAIMENT les interrompre ? ", 	""
+1348    = "Voulez-vous sauvegarder les attributs courants ?", 	""
+1349    = "Entrez un nom de ficher de ressources contenant des attributs ('%1!' est le fichier par d‚faut) : ",         "%s"
+1350    = "La sauvegarde des attributs s'est effectu‚e correctement dans '%1!'.", 	"%s"
+1400    = "Auditinit : \\n\\tauditinit\\n\\t [/validate]\\n\\t [/charset=jeu-car]\\n\\t [/environment]\\n\\t [/help]\\n\\t [/language=langue]\\n\\t [/log=fichier-trace]\\n\\t [/resource=fichier-ressource]\\n\\t [/sybase=r‚pertoire-version]\\n\\t [/version]", 	""
+1401    = "Le r‚pertoire '%1!' existe d‚j… et n'est pas un r‚pertoire de version Adaptive Server admis. Indiquez un autre r‚pertoire de version.", 	"%s"
+1402    = "'%1!' est un r‚pertoire de version Sybase Server. Voulez-vous l'‚craser ?", 	"%s"
+1403    = "Le journal de cette session est '%1!'.", 	"%s"
+1404    = "Le fichier de ressources '%1!' a ‚t‚ utilis‚ pour les attributs produit.", 	"%s"
+1405    = "AUDITINIT NE SUPPORTE PLUS L'EDITION DE FICHIERS D'INTERFACE. Tous les \
+attributs de fichiers de ressource relatifs aux fichiers d'interface (y compris \
+do_add_server et do_add_backup_server) seront ignor‚s.\\n\\n\
+Vous devez utiliser SYBSETUP, DSEDIT, DSEDIT_DCE ou un ‚diteur de texte avant \
+de lancer auditinit pour installer, modifier ou mettre … niveau un serveur :\\n\
+- avant l'installation, cr‚ez une entr‚e dans le fichier d'interface,\\n\
+- avant de modifier un serveur, modifiez son entr‚e dans le fichier d'interface,\\n\
+- avant de proc‚der … la mise … niveau, copiez l'entr‚e du serveur concern‚\
+  du pr‚c‚dent fichier d'interface vers le nouveau.\\n\\n\
+Pour plus de d‚tails, consultez votre documentation.", 	"%s"
+1410    = "Impossible de d‚finir l'attribut du r‚pertoire d'Adaptive Server Enterprise.",        ""
+1411    = "Impossible de d‚finir l'attribut de r‚pertoire de bibliothŠque Open Client/Server.",       ""
+1502    = "Impossible d'allouer %1! de m‚moire : volume incorrect.", 	"%d"
+1503    = "La tentative d'allocation m‚moire a ‚chou‚.", 	""
+1506    = "Impossible d'ajouter %1! de m‚moire … la m‚moire existante : volume incorrect.", 	"%d"
+1507    = "Vous avez essay‚ d'ajouter de la m‚moire … un pointeur m‚moire incorrect.", 	""
+1508    = "La tentative d'extension m‚moire a ‚chou‚.", 	""
+1509    = "Arguments incorrects pour syb_calloc() : num‚ro = %1!, taille = %2!.", 	"%d %d"
+1510    = "La tentative d'allocation de m‚moire … l'aide de calloc() a ‚chou‚.", 	""
+1511    = "L'espace swap du systŠme d'exploitation est insuffisant. La session auditinit risque d'ˆtre ferm‚e.", 	""
+1650    = "Le fichier de ressources '%1!' contient un nom de produit incorrect '%2!'.", 	"%s %s"
+1651    = "Le fichier de ressources '%3!' contient l'attribut '%2!' de produit '%1!' incorrect.", 	"%s %s %s"
+1652    = "Une erreur de syntaxe a ‚t‚ d‚tect‚e dans le fichier de ressources '%1!' : %2!.", 	"%s %s"
+1653    = "%1! est une version de sauvegarde d'attributs incomplŠte.", 	"%s"
+1654    = "L'attribut '%1!' est n‚cessaire … la configuration du produit '%2!' mais il n'a pas ‚t‚ d‚fini dans le fichier de ressources '%3!'.", 	 "%s %s %s"
+1655    = "L'attribut '%1!' du produit '%2!' a ‚t‚ sp‚cifi‚ plusieurs fois dans le fichier de ressources '%3!'.", 	 "%s %s %s"
+1656    = "Une erreur a ‚t‚ d‚tect‚e dans le registre interne du produit. '%1!' produit(s) enregistr‚(s).", 	 "%d"
+1657    = "L'attribut '%1!' n'a pu ˆtre d‚fini parce que la valeur '%2!' est incorrecte.", 	 "%s %s"
+3101    = "AUDITINIT", 	""
+3102    = "", 	""
+3103    = "AUDITINIT", 	""
+3104    = "\
+1. R‚pertoire de version\\n\\nSi vous configurez un serveur et que le r‚pertoire \
+affich‚ est diff‚rent de celui dans lequel vous avez charg‚ les fichiers \
+SYBASE, quittez auditinit. Red‚finissez la variable d'environnement SYBASE \
+pour d‚signer le r‚pertoire dans lequel vous avez charg‚ les fichiers SYBASE. \
+Relancez auditinit et recommencez.\\n\\n2. Configurer un produit serveur \
+\\n\\nS‚lectionnez cette option pour installer le systŠme d'audit \
+sur un Adaptive Server existant. \\n\\n \
+* Touches de contr“le *\\n\\nAppuyez sur Ctrl-x pour quitter auditinit.", 	""
+3105    = "\
+1. R‚pertoire de version\\n\\nSi vous configurez un serveur et que le r‚pertoire \
+affich‚ est diff‚rent de celui dans lequel vous avez charg‚ les fichiers \
+SYBASE, quittez auditinit. Red‚finissez la variable logique SYBASE \
+pour d‚signer le r‚pertoire dans lequel vous avez charg‚ les fichiers SYBASE. \
+Relancez auditinit et recommencez.\\n\\nType d'installation : \
+Cette option indique si l'installation SYBASE est primaire ou secondaire. \
+Une installation primaire concerne un environnement de production \
+et possŠde des ‚l‚ments logiques d‚finis dans un fichier de commande SYBASE. \
+Une installation secondaire concerne un environnement de test et possŠde des \
+‚l‚ments logiques d‚finis au niveau des processus. Vous indiquez le type \
+d'installation lorsque vous ex‚cutez VMSINSTAL.\\\n\\\n2. Configurer un produit \
+serveur\\n\\nS‚lectionnez cette option pour installer le systŠme d'audit \
+sur un Adaptive Server existant.n\\n \
+* Touches de contr“le *\\n\\nAppuyez sur Ctrl-x pour quitter auditinit.", 	""
+3107    = "AUDITINIT NE SUPPORTE PLUS L'EDITION DE FICHIERS D'INTERFACE.\\nPour \plus de d‚tails, consultez l'Aide ou votre documentation.\\n\\n", 	""
+3111    = "CONFIGUREZ LES PRODUITS SERVEUR", 	""
+3112    = "", 	""
+3113    = "CONFIGUREZ LES PRODUITS SERVEUR", 	""
+3114    = "\
+S‚lectionnez le num‚ro du produit … configurer et appuyez sur Entr‚e. \
+\\n\\n* Touches de contr“le *\\n\\nVous n'avez pas besoin d'appuyer sur Ctrl-a \pour passer … l'‚cran suivant car la s‚lection d'un produit appelle \
+automatiquement l'‚cran suivant.\\n\\nAppuyez sur Ctrl-x pour quitter \
+cet ‚cran et annuler les s‚lections que vous y avez effectu‚es. \
+auditinit revient au menu pr‚c‚dent. En appuyant … nouveau sur Ctrl-x, \
+vous pouvez revenir aux menus pr‚c‚dents et quitter auditinit pour \
+retourner … l'invite du systŠme d'exploitation .", 	""
+3121    = "CONFIGUREZ LES PRODUITS DE CONNECTIVITE", 	""
+3122    = "", 	""
+3123    = "CONFIGUREZ LES PRODUITS DE CONNECTIVITE", 	""
+3124    = "\
+auditinit affiche la liste de tous les produits de connectivit‚ disponibles. \
+S‚lectionnez le produit … configurer et appuyez sur Entr‚e.\\n\\n* Touches de \
+contr“le *\\n\\nVous n'avez pas besoin d'appuyer sur Ctrl-a pour passer … l'‚cran \
+suivant car la s‚lection d'un produit appelle automatiquement l'‚cran suivant. \
+\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et annuler les s‚lections \
+que vous y avez effectu‚es. auditinit revient au menu pr‚c‚dent. En appuyant \
+… nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents et quitter \
+auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3131    = "CONFIGUREZ LES PRODUITS FRONTAUX", 	""
+3132    = "", 	""
+3133    = "CONFIGUREZ LES PRODUITS FRONTAUX", 	""
+3134    = "\
+auditinit affiche la liste de tous les produits frontaux disponibles. S‚lectionnez \
+le produit … configurer et appuyez sur Entr‚e.\\n\\n* Touches de contr“le \
+*\\n\\nVous n'avez pas besoin d'appuyer sur Ctrl-a pour passer … l'‚cran \
+suivant car la s‚lection d'un produit appelle automatiquement l'‚cran suivant.\
+\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et annuler les s‚lections \
+que vous y avez effectu‚es. auditinit revient au menu pr‚c‚dent. En appuyant \
+… nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents et quitter \
+auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3141    = "PREMIER ECRAN DU FICHIER D'INTERFACE", 	""
+3142    = "", 	""
+3143    = "PREMIER ECRAN DU FICHIER D'INTERFACE", 	""
+3144    = "\
+1. Ajouter une nouvelle entr‚e\\n\\nS‚lectionnez cette option pour ajouter un \
+nouveau service r‚cepteur.\\n\\n2. Modifier une entr‚e existante\
+\\n\\nS‚lectionnez cette option pour modifier des valeurs associ‚es aux \
+entr‚es des fichiers d'interface.\\n\\n3. Afficher une entr‚e existante \
+\\n\\nS‚lectionnez cette option pour consulter les entr‚es du fichier \
+d'interface pr‚c‚demment d‚finies.\\n\\n4. Supprimer une entr‚e existante\
+\\n\\nS‚lectionnez cette option pour supprimer une entr‚e existante dans votre fichier d'interface.\\n\\n* Touches de contr“le *\\n\\nVous n'avez pas besoin \
+d'appuyer sur Ctrl-a pour passer … l'‚cran suivant car la s‚lection d'un \
+produit appelle automatiquement l'‚cran suivant \\n\\nAppuyez sur Ctrl-x pour \
+quitter cet ‚cran et annuler les s‚lections que vous y avez effectu‚es. \
+auditinit revient au menu pr‚c‚dent. En appuyant … nouveau sur Ctrl-x, vous \
+pouvez revenir aux menus pr‚c‚dents et quitter auditinit pour retourner … \
+l'invite du systŠme d'exploitation.", 	""
+3151    = "CREEZ UNE NOUVELLE ENTREE DANS LE FICHIER D'INTERFACE", 	""
+3152    = "", 	""
+3153    = "CREEZ UNE NOUVELLE ENTREE DANS LE FICHIER D'INTERFACE", 	""
+3154    = "\1. Nom du serveur :\\n\\nS‚lectionnez cette option pour entrer \
+le nom du serveur pour lequel vous voulez cr‚er une entr‚e dans le fichier \
+d'interface. Entrez le nom … l'invite du systŠme.\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le nom affich‚ et passer au menu suivant.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran. auditinit revient au menu \
+pr‚c‚dent. En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus \
+pr‚c‚dents et quitter auditinit pour retourner … l'invite du systŠme \
+d'exploitation.", 	""
+3161    = "CHOISISSEZ UNE ENTREE DU FICHIER D'INTERFACE", 	""
+3162    = "", 	""
+3163    = "CHOISISSEZ UNE ENTREE DU FICHIER D'INTERFACE", 	""
+3164    = "\
+auditinit affiche la liste des entr‚es du fichier d'interface disponibles. \
+Cette liste r‚pertorie les entr‚es des serveurs Adaptive Server et \
+Backup Server. Si la liste occupe plusieurs ‚crans, faites-la d‚filer. \
+S‚lectionnez l'entr‚e du fichier d'interface … modifier.\\n\\n* Touches de \
+contr“le *\\n\\nAppuyez sur Ctrl-f pour faire d‚filer la liste des \
+entr‚es disponibles. Vous devez atteindre la fin de la liste pour pouvoir \
+s‚lectionner une entr‚e.\\n\\nAppuyez sur Ctrl-b pour remonter dans la \
+liste des entr‚es disponibles.\\n\\nVous n'avez pas besoin d'appuyer sur \
+Ctrl-a pour passer … l'‚cran suivant car la s‚lection d'une entr‚e du \
+fichier d'interface appelle automatiquement l'‚cran suivant.\\n\\nAppuyez \
+sur Ctrl-x pour quitter cet ‚cran. auditinit revient au menu pr‚c‚dent. \
+En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents \
+et quitter auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3171    = "ECRAN D'ENTREE DU FICHIER D'INTERFACE DU SERVEUR", 	""
+3172    = "", 	""
+3173    = "ECRAN D'ENTREE DU FICHIER D'INTERFACE DU SERVEUR", 	""
+3174    = "\
+1. Nombre de tentatives :\\n\\nCette option permet de sp‚cifier, pour un client, \
+le nombre maximal de tentatives de connexion … Adaptive Server aprŠs ‚chec. \
+S‚lectionnez cette option pour modifier les valeurs affich‚es. \
+\\n\\n2. Intervalle entre deux tentatives :\\n\\nCette option permet de \
+sp‚cifier, pour un client, l'intervalle d'attente, en secondes, entre deux \
+tentatives de connexion … Adaptive Server. S‚lectionnez cette option pour \
+modifier les valeurs affich‚es.\\n\\n3. Ajouter un nouveau service \
+r‚cepteur :\\n\\nS‚lectionnez cette option pour ajouter un service r‚cepteur \
+charg‚ d'assurer les connexions r‚seau avec Adaptive Server. Au bas de l'‚cran, \
+auditinit affiche l'ensemble des services r‚cepteurs actuellement disponibles. \
+\\n\\nModifier ou supprimer un service r‚cepteur : \
+\\n\\nSi vous avez d‚j… configur‚ des services r‚cepteurs, auditinit \
+affiche, sous forme d'options, la liste des services disponibles. \
+S‚lectionnez le service r‚cepteur … modifier ou … supprimer. \\n\\n* Touches de \
+contr“le *\\n\\nAppuyez sur Ctrl-a pour valider les valeurs affich‚es \
+pour les entr‚es du fichier d'interface. auditinit vous demande de confirmer \
+les modifications que vous avez apport‚es dans le fichier d'interface. \
+Tapez 'o' aprŠs l'invite pour appliquer les modifications. \\n\\nAppuyez sur \
+Ctrl-x pour quitter cet ‚cran. auditinit revient au menu pr‚c‚dent. \
+En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents \
+et quitter auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3191    = "SELECTIONNEZ LE PROTOCOLE RESEAU", 	""
+3192    = "", 	""
+3193    = "SELECTIONNEZ LE PROTOCOLE RESEAU", 	""
+3194    = "\
+S‚lectionnez le nom du protocole r‚seau … utiliser pour le nouveau service. \
+La liste des protocoles disponibles varie en fonction du systŠme \
+d'exploitation utilis‚ et du logiciel r‚seau install‚. Pour plus d'informations \
+sur les protocoles support‚s, reportez-vous … SYBASE Adaptive Server - \
+Guide d'installation .\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-x \
+pour quitter cet ‚cran et annuler les modifications que vous y avez \
+apport‚es. auditinit revient au menu pr‚c‚dent. En appuyant … nouveau \
+sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents et quitter auditinit \
+pour retourner … l'invite du systŠme d'exploitation.", 	""
+3201    = "MODIFIEZ LE SERVICE TCP", 	""
+3202    = "", 	""
+3203    = "MODIFIEZ LE SERVICE TCP", 	""
+3204    = "\
+1. Nom d'h“te/adresse\\n\\nS‚lectionnez cette option pour modifier \
+le nom de l'h“te TCP ou l'adresse IP affich‚s pour le serveur Adaptive Server \
+que vous installez. Par d‚faut, auditinit affiche le nom de la machine que \
+vous utilisez.\\n\\n2. Port\\n\\nS‚lectionnez cette option pour entrer le \
+num‚ro de port … 4 ou 5 chiffres pour Adaptive Server. Les num‚ros de port \
+admis sont compris entre 1024 et 65535. Pour plus d'informations sur le choix \
+d'un num‚ro de port inutilis‚, reportez-vous … SYBASE Adaptive Server - \
+Guide d'installation.\\n\\nAdaptive Server utilise ce num‚ro de port pour \
+g‚rer les connexions demand‚es par les clients. Ces derniers doivent utiliser \
+le mˆme num‚ro de port pour ‚tablir la connexion avec Adaptive Server. \
+\\n\\n3. Alias \\n\\nS‚lectionnez cette option pour d‚finir un alias \
+(\"pseudonyme\") pour le service TCP. Dans des r‚seaux multiprotocole, \
+cet alias permet de diff‚rencier le service TCP des autres types de \
+services d‚finis.\\n\\n4. Supprimer ce service du fichier d'interface \
+\\n\\nS‚lectionnez cette option pour supprimer un service existant \
+(nom d'h“te, port et alias affich‚s) du fichier d'interface du serveur. \
+\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le \
+service TCP affich‚.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et \
+annuler les modifications que vous y avez apport‚es. auditinit revient \
+au menu pr‚c‚dent. En appuyant … nouveau Ctrl-x, vous pouvez revenir \
+aux menus pr‚c‚dents et quitter auditinit pour retourner … \
+l'invite du systŠme d'exploitation.", 	""
+3205    = "\
+1. Nom d'h“te/adresse\\n\\nS‚lectionnez cette option pour modifier \
+le nom de l'h“te TCP ou l'adresse IP affich‚s pour le serveur Adaptive Server \
+que vous installez. Par d‚faut, auditinit affiche le nom de la machine que \
+vous utilisez.\\n\\n2. Port\\n\\nS‚lectionnez cette option pour entrer le \
+num‚ro de port … 4 ou 5 chiffres pour Adaptive Server. Les num‚ros de port \
+admis sont compris entre 1024 et 65535. Pour plus d'informations sur le choix \
+d'un num‚ro de port inutilis‚, reportez-vous … SYBASE Adaptive Server - \
+Guide d'installation.\\n\\nAdaptive Server utilise ce num‚ro de port pour \
+g‚rer les connexions demand‚es par les clients. Ces derniers doivent utiliser \
+le mˆme num‚ro de port pour ‚tablir la connexion avec Adaptive Server. \
+\\n\\n3. Alias \\n\\nS‚lectionnez cette option pour d‚finir un alias \
+(\"pseudonyme\") pour le service TCP. Dans des r‚seaux multiprotocole, \
+cet alias permet de diff‚rencier le service TCP des autres types de \
+services d‚finis.\\n\\n4. Type de serveur\\n\\nS‚lectionnez cette option \
+pour faire passer le serveur du type maitre au type compagnon. Par d‚faut, \
+auditinit installe un serveur maŒtre. Si vous ne voulez installer qu'un \
+serveur de type maŒtre, ne tenez pas compte de cette option.  \
+\\n\\nPour plus d'informations sur l'installation d'un serveur de type \
+compagnon, reportez-vous … SYBASE Adaptive Server - Guide d'installation. \
+\\n\\n5. Supprimer ce service du fichier d'interface \
+\\n\\nS‚lectionnez cette option pour supprimer un service existant \
+(nom d'h“te, port et alias affich‚s) du fichier d'interface du serveur. \
+\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le \
+service TCP affich‚. \\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et \
+annuler les modifications que vous y avez apport‚es. auditinit revient \
+au menu pr‚c‚dent. En appuyant … nouveau Ctrl-x, vous pouvez revenir \
+aux menus pr‚c‚dents et quitter auditinit pour retourner … l'invite \
+du systŠme d'exploitation.", 	""
+3211    = "MODIFIEZ LE SERVICE DECNET", 	""
+3212    = "", 	""
+3213    = "MODIFIEZ LE SERVICE DECNET", 	""
+3214    = "\
+1. Nom du noeud\\n\\nS‚lectionnez cette option pour modifier le nom du noeud affich‚ \
+pour l'Adaptive Server que vous installez. Par d‚faut, auditinit affiche le \
+nom du noeud courant.\\n\\n2. Objet\\n\\nS‚lectionnez cette option si vous voulez \
+entrer un num‚ro d'objet r‚seau pour Adaptive Server. Les num‚ros d'objets \
+corrects varient de 128 … 253.\\n\\nIl est recommand‚ d'‚viter d'utiliser \
+des num‚ros d'objet. Adaptive Server prend en charge les num‚ros d'objets \
+pour assurer la compatibilit‚ avec les versions pr‚c‚dentes.\\n\\n3. \
+Alias\\n\\nS‚lectionnez cette option pour d‚finir un alias (un \
+\"surnom\") pour le service DECnet. Sur des r‚seaux … plusieurs protocoles\, \
+vous pouvez utiliser cet alias pour distinguer le service DECnet des autres \
+services que vous avez d‚finis.\\n\\n5. Supprimer ce service de l'entr‚e \
+d'interface\\n\\nS‚lectionnez cette option pour supprimer un service existant \
+(nom de noeud, objet et alias affich‚s) de l'entr‚e d'interface du \
+serveur.\\n\\n* Touches de commandes *\\n\\nAppuyez sur Ctrl-a pour accepter \
+le service DECnet affich‚.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran \
+et annuler toute modification que vous y avez apport‚e. auditinit reviendra \
+au menu pr‚c‚dent. Vous pouvez r‚appuyer sur Ctrl-x pour retourner aux menus \
+pr‚c‚dents et quitter auditinit en revenant … l'invite du systŠme d'exploitation.",     ""
+3215    = "\
+1. Nom de noeud\\n\\nS‚lectionnez cette option pour modifier le nom du noeud \
+affich‚ pour le serveur Adaptive Server que vous installez. Par d‚faut, \
+auditinit affiche le nom du noeud courant.\\n\\n2. Objet\\n\\nS‚lectionnez \
+cette option pour entrer un num‚ro d'objet r‚seau pour Adaptive Server.  \
+Les num‚ros d'objet admis sont compris entre 128 et 253.\\n\\nToutefois, il  \
+est d‚conseill‚ de les utiliser. En effet, Adaptive Server intŠgre un support \pour les num‚ros d'objet afin d'assurer la compatibilit‚ avec les versions  \
+inf‚rieures.\\n\\n3. \
+Alias\\n\\nS‚lectionnez cette option pour d‚finir un alias (\"pseudonyme\") \
+pour le service DECnet. Dans des r‚seaux multiprotocole, cet alias permet \
+de diff‚rencier le service DECnet des autres types de services d‚finis. \
+\\n\\n4. Type de serveur\\n\\nS‚lectionnez cette option pour faire passer le \
+serveur du type maitre au type compagnon. Par d‚faut, auditinit installe \
+un serveur maŒtre. Si vous ne voulez installer qu'un serveur de type maŒtre, \
+ne tenez pas compte de cette option.\\n\\nPour plus d'informations sur \
+l'installation d'un serveur de type compagnon, reportez-vous … SYBASE Adaptive Server - Guide d'installation.\\n\\n5. Supprimer ce service du fichier \
+d'interface\\n\\nS‚lectionnez cette option pour supprimer un service existant \
+(nom de noeud, objet et alias affich‚s) du fichier d'interface du serveur. \
+\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le service \
+DECnet affich‚.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et annuler les \
+modifications que vous y avez apport‚es. auditinit revient au menu pr‚c‚dent. \
+En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents \
+et quitter auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3221    = "MODIFIEZ LE SERVICE SPX", 	""
+3222    = "", 	""
+3223    = "MODIFIEZ LE SERVICE SPX", 	""
+3224    = "\1. Nom d'h“te/adresse\\n\\nS‚lectionnez cette option pour entrer \
+le nom de l'h“te sur lequel le serveur fonctionne. Par d‚faut, auditinit affiche l'h“te courant. Par exemple, le nom d'h“te et l'adresse suivants sont \
+corrects : 00000001,AA0004002104.\\n\\n2.Socket\\n\\nS‚lectionnez cette option pour entrer le socket sur lequel le serveur recevra les demandes de connexion \
+des clients. Les num‚ros de socket admis sont compris entre 0x8000 et 0xBFFF. \
+Vous pouvez utiliser le format hexad‚cimal ou d‚cimal. Les entr‚es commen‡ant \
+par \"0x\" sont interpr‚t‚es comme de l'hexad‚cimal.\\n\\n3. Alias\\n\\n\
+S‚lectionnez cette option pour d‚finir un alias pour le service SPX. Dans des r‚seaux multiprotocole, cet alias permet diff‚rencier le service SPX des autres types de services d‚finis.\\n\\n4. Supprimer ce service du fichier d'interface\\n\\nS‚lectionnez cette option pour supprimer un service existant (nom d'h“te, socket et alias affich‚s) du fichier d'interface du serveur. \
+\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le service \
+SPX affich‚.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et annuler les \
+modifications que vous y avez apport‚es. auditinit revient au menu pr‚c‚dent. \
+En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents \
+et quitter auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3225    = "\
+1. Nom d'h“te/adresse\\n\\nS‚lectionnez cette option pour entrer le nom de \
+l'h“te sur lequel le serveur fonctionne. Par d‚faut, auditinit affiche l'h“te \
+courant. Par exemple, le nom d'h“te et l'adresse suivants sont corrects : \
+00000001,AA0004002104.\\n\\n2. Socket\\n\\nS‚lectionnez cette option pour \
+entrer le socket sur lequel le serveur recevra les demandes de connexion des \
+clients. Les num‚ros de socket admis sont compris entre 0x8000 et 0xBFFF. Vous pouvez utiliser le format hexad‚cimal ou d‚cimal. Les entr‚es commen‡ant par \
+\"0x\" sont interpr‚t‚es comme de l'hexad‚cimal.\\n\\nPour plus de d‚tails sur les num‚ros de socket admis, reportez-vous … SYBASE Adaptive Server - Guide \
+d'installation.\\n\\n3. Alias\\n\\nS‚lectionnez cette option pour d‚finir \
+un alias (\"pseudonyme\") pour le service SPX. Dans des r‚seaux multiprotocole, cet alias permet diff‚rencier le service SPX des autres types de services \
+d‚finis.\\n\\n4.  Type de serveur\\n\\nS‚lectionnez cette option pour faire \
+passer le serveur du type maŒtre au type compagnon. Par d‚faut, auditinit \
+installe un serveur maŒtre. Si vous ne voulez installer qu'un serveur de \
+type maŒtre, ne tenez pas compte de cette option. \\n\\nPour plus \
+d'informations sur l'installation d'un serveur de type compagnon, \
+reportez-vous … SYBASE Adaptive Server - Guide d'installation.\\n\\n5. \
+Supprimer ce service du fichier d'interface\\n\\nS‚lectionnez cette option \
+pour supprimer un service existant (nom d'h“te, socket et alias affich‚s) du \
+fichier d'interface du serveur. \
+\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le service \
+SPX affich‚.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et annuler les \
+modifications que vous y avez apport‚es. auditinit revient au menu pr‚c‚dent. \
+En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents \
+et quitter auditinit pour retourner … l'invite du systŠme d'exploitation.", 	""
+3231    = "MODIFIEZ LE SERVICE APPLETALK", 	""
+3232    = "", 	""
+3233    = "", 	""
+3234    = "", 	""
+3241    = "MODIFIEZ LE SERVICE BSD NAMED PIPES", 	""
+3242    = "", 	""
+3243    = "MODIFIEZ LE SERVICE BSD NAMED PIPES", 	""
+3244    = "\
+1. Chemin du r‚cepteur\\n\\nS‚lectionnez cette option pour entrer le chemin \
+du r‚cepteur BSD named pipes. Ce chemin doit ˆtre accessible sur la machine \
+locale o— le serveur s'ex‚cute. \\n\\n 2. Alias \\n\\nS‚lectionnez cette option \
+pour entrer l'alias des named pipes. \\n\\n 3. Supprimer ce service du fichier \
+d'interface\\n\\nS‚lectionnez cette option pour supprimer un service existant \
+(r‚cepteur BSD named pipes et alias affich‚s) du fichier d'interface du serveur. \
+\\n\\n* Touches de contr“le *\\n\\nAppuyez sur Ctrl-a pour valider le service \
+TCP affich‚.\\n\\nAppuyez sur Ctrl-x pour quitter cet ‚cran et annuler les \
+modifications que vous y avez apport‚es. auditinit revient au menu pr‚c‚dent. \
+En appuyant … nouveau sur Ctrl-x, vous pouvez revenir aux menus pr‚c‚dents \
+et quitter auditinit pour retourner … l'invite du systŠme d'exploitation .", 	""
+3245    = "Configurer le fichier d'interface pour Secure SQL Server ?", 	"" 
+3301    = "Entrez le chemin d'accŠs du r‚pertoire de la version … utiliser ('%1!' par d‚faut) : ", 	"%s"
+3302    = "R‚pertoire de version : ", 	""
+3303    = "Modifier/afficher le fichier d'interface", 	""
+3304    = "Configurer un produit serveur", 	""
+3305    = "Configurer un produit Open Client/Server", 	""
+3306    = "Configurer un produit frontal", 	""
+3307    = "Copier les fichiers … partir de la disquette", 	""
+3308    = "Modifier/afficher les valeurs d'environnement", 	""
+3309    = "Contr“ler la coh‚rence du systŠme", 	""
+3310    = "Type d'installation : ", 	""
+3311    = "primaire (accŠs au niveau du systŠme)", 	""
+3312    = "secondaire (accŠs au niveau processus ou groupe)", 	""
+3401    = "Impossible de charger les messages localis‚s pour le produit '%1!'.", 	"%s"
+3402    = "Produit", 	""
+3403    = "Date d'installation", 	""
+3404    = "Date de configuration", 	""
+3405    = "Produits :", 	""
+3501    = "Fichier d'interface : ", 	""
+3502    = "Ajouter une nouvelle entr‚e", 	""
+3503    = "Modifier une entr‚e existante", 	""
+3504    = "Afficher une entr‚e existante", 	""
+3505    = "Supprimer une entr‚e existante", 	""
+3511    = "Une entr‚e de ce nom existe d‚j… dans le fichier d'interface.", 	""
+3512    = "Entrez le nom du serveur … ajouter ('%1!' par d‚faut) : ", 	"%s"
+3513    = "Nom du serveur : ", 	""
+3514    = "S‚lectionnez l'une des entr‚es suivantes du fichier d'interface :", 	""
+3522    = "Impossible de trouver l'entr‚e '%1!' dans le fichier d'interface.", 	"%s"
+3530    = "Cette entr‚e est incorrecte car elle ne possŠde pas de r‚cepteur. Ajoutez un ou plusieurs r‚cepteurs ou appuyez sur Ctrl-x pour quitter cet ‚cran sans ajouter cette entr‚e dans le fichier d'interface.", 	""
+3531    = "Valider les modifications dans le fichier d'interface maintenant ? ", 	""
+3532    = "Voulez-vous vraiment annuler cette op‚ration ? ", 	""
+3533    = "Entrez le nombre de tentatives ('%1!' par d‚faut) : ", 	"%s"
+3534    = "Indiquez l'intervalle entre deux tentatives ('%1!' par d‚faut) : ", 	"%s"
+3535    = "Supprimer cette entr‚e du fichier d'interface ? ", 	""
+3536    = "Backup Server : ", 	""
+3537    = "Nombre de tentatives : ", 	""
+3538    = "Intervalle entre deux tentatives : ", 	""
+3539    = "Ajouter un nouveau service r‚cepteur", 	""
+3540    = "Modifier ou supprimer un service", 	""
+3541    = "Protocole", 	""
+3542    = "Adresse", 	""
+3543    = "Port", 	""
+3544    = "Alias", 	""
+3545    = "Type", 	""
+3546    = "Services r‚cepteurs disponibles :", 	""
+3547    = "Ajouter un nouveau service de requˆte", 	""
+3548    = "Services de requˆte disponibles :", 	""
+3551    = "TCP", 	""
+3552    = "DECnet", 	""
+3553    = "SPX", 	""
+3554    = "ADSP", 	""
+3555    = "BSD NAMED PIPES", 	""
+3561    = "Entrez l'alias … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3562    = "Entrez le nom d'h“te ou l'adresse Internet … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3563    = "Entrez le num‚ro du port … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3564    = "Alias :", 	""
+3565    = "Nom d'h“te/adresse :", 	""
+3566    = "Port :", 	""
+3567    = "Ces informations sont-elles correctes ? ", 	""
+3568    = "Supprimer ce service du fichier d'interface ? ", 	""
+3569    = "Supprimez ce service du fichier d'interface", 	""
+3570    = "maŒtre", 	""
+3571    = "compagnon", 	""
+3572    = "Indiquez d'abord un nom d'h“te.", 	""
+3573    = "Ce serveur est-il de type compagnon ? ", 	""
+3574    = "Type de serveur :", 	""
+3581    = "Entrez l'alias … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3582    = "Entrez le nom du noeud … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3583    = "Entrez le num‚ro d'objet … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3584    = "Alias :", 	""
+3585    = "Nom du noeud :", 	""
+3586    = "Objet :", 	""
+3591    = "Entrez l'alias … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3592    = "Entrez le nom d'h“te ou l'adresse Internet … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3593    = "Entrez le num‚ro de socket … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3594    = "Alias :", 	""
+3595    = "Nom d'h“te/adresse :", 	""
+3596    = "Socket :", 	""
+3597    = "Entrez l'alias … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3598    = "Entrez le nom de zone AppleTalk … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3599    = "Entrez le nom d'objet Appletalk … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3600    = "Nom de zone :", 	""
+3601    = "Nom d'objet :", 	""
+3602    = "Alias :", 	""
+3611    = "Entrez l'adresse Internet, au format hexad‚cimal, … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3612    = "Adresse Internet :", 	""
+3620    = "Entrez l'alias … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3621    = "Entrez le nom du r‚cepteur … utiliser pour cette entr‚e ('%1!' par d‚faut) : ", 	"%s"
+3622    = "Alias :", 	""
+3623    = "Chemin du r‚cepteur :", 	""
+3624    = "Port : ", 	""
+3650    = "Contr“le du systŠme Netware", 	""
+3651    = "", 	""
+3652    = "", 	""
+3653    = "", 	""
+3654    = "Majeur", 	""
+3655    = "Mineur", 	""
+3656    = "R‚v.", 	""
+3657    = "Mois", 	""
+3658    = "Jour", 	""
+3659    = "Ann‚e", 	""
+3660    = "R‚sultats de contr“le NLM : ", 	""
+4000    = "La fonction de validation du serveur a ‚t‚ appel‚e avec un pointeur NULL.", 	""
+4001    = "Le nom de serveur '%1!' est trop long. Le nombre maximal de caractŠres admis est '%2!'.", 	"%s %d"
+4002    = "Le nom du serveur Adaptive Server n'a pas ‚t‚ indiqu‚.", 	""
+4003    = "Le nom '%1!' est incorrect. Les noms de serveur ne peuvent contenir que des caractŠres alphanum‚riques roman ou des signes de ponctuation.", 	"%s"
+4004    = "Le nom de l'entr‚e '%1!' du fichier d'interface existe d‚j….", 	"%s"
+4005    = "Le port '%1!' est incorrect. Les descriptions de port ne peuvent contenir que des caractŠres alphanum‚riques roman.", 	"%s"
+4006    = "Il est d‚conseill‚ d'utiliser des noms d'objets (%1!) car les performances en sont diminu‚es.", 	"%s"
+4007    = "Aucun produit n'a ‚t‚ d‚tect‚ dans le registre interne.", 	""
+4008    = "Les noms abr‚g‚s de produits n'ont pas ‚t‚ d‚tect‚s dans le registre interne.", 	""
+4009    = "Le nom abr‚g‚ de produit '%1!' est incorrect.", 	"%s"
+4010    = "Il est d‚conseill‚ d'utiliser des noms d'objets DECnet (%1!). Utilisez plut“t un num‚ro d'objet.", 	"%s"
+4011    = "Le nom d'objet '%1!' est trop long. Les noms d'objet ne peuvent pas d‚passer %2! caractŠres.", 	"%s %d"
+4012    = "Le fichier runserver '%1!' existe d‚j…. Les noms de fichiers runserver ne peuvent pas d‚passer 8 caractŠres. Choisissez un autre nom de serveur ou supprimez le fichier runserver existant.", 	"%s"
+4013    = "Le port '%1!' est enregistr‚ sous l'adresse '%2!'. Choisissez une autre adresse de port ou v‚rifiez que ce port est disponible avant de poursuivre.", 	"%d %s"
+4014    = "Le num‚ro du port '%1!' est en dehors de l'intervalle des ports admis par Sybase.", 	"%s"
+5000    = "Echec de la d‚finition de la structure locale pour le jeu de caractŠres %1!.", 	"%s"
+5001    = "Echec de la connexion au serveur : %1!.",         "%s"
+5002    = "Echec d'initialisation de la connexion … Adaptive Server.",         ""
+5003    = "Erreur : ‚chec de la commande alloc.",         ""
+5004    = "Erreur de requˆte : '%1!'.",         "%s"
+5005    = "Erreur de lecture des r‚sultats de la requˆte : '%1!'.",         "%s"
+5006    = "Erreur de traitement du texte pour la requˆte : '%1!'.",         "%s"
+5007    = "Message Open Client : '%1!'.",         "%s"
+5008    = "Message Adaptive Server : '%1!'.",         "%s"
+; End of section.

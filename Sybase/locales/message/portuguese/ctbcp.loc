@@ -1,0 +1,139 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Erro fatal: falha de alocação de memória."
+2 = ZZZZZ, "Erro de I/O: Espaço insuficiente para os dados de entrada."
+3 = ZZZZZ, "Falha na abertura do arquivo temporário '%1!' para gravação em dbedit()."
+4 = ZZZZZ, "Impossível chamar o editor '%1!'."
+5 = ZZZZZ, "Impossível abrir o arquivo de entrada '%1!'."
+6 = ZZZZZ, "Impossível abrir o arquivo de saída '%1!'."
+7 = ZZZZZ, "bcp: Parâmetro desconhecido '%1!'."
+8 = ZZZZZ, "Ao utilizar o indicador '%1!' para definir a primeira linha a copiar, o número da linha deve ser maior ou igual a 1."
+9 = ZZZZZ, "Ao utilizar os indicadores '%1!' e '%2!' para definir a primeira e última linhas a copiar, o número da primeira linha deve ser menor que o último."
+10 = ZZZZZ, "Ao utilizar o indicador '%1!' para definir a última linha a copiar, o número da linha deve ser maior ou igual a 1."
+11 = ZZZZZ, "A direção da cópia deve ser 'in' ou 'out'."
+12 = ZZZZZ, "O indicador '%1!' deve ser seguido de um número inteiro. '%2!' não é um número inteiro válido."
+13 = ZZZZZ, "Aviso: o indicador '%1!' aparece mais de uma vez. O valor do novo indicador substitui o antigo."
+14 = ZZZZZ, "Aviso: '%1!' substitui '%2!'"
+15 = ZZZZZ, "Tamanho do prefixo inválido. Os tamanhos válidos de prefixo são 0, 1, 2 ou 4."
+16 = ZZZZZ, "Nível (1-16):"
+17 = ZZZZZ, "Nível inválido "
+18 = ZZZZZ, "Compartimento (1-64):"
+19 = ZZZZZ, "São permitidas múltiplas entradas, separadas por um return; pressione return ao terminar."
+20 = ZZZZZ, "Login como AS (n/s):"
+21 = ZZZZZ, "Tente novamente:"
+22 = ZZZZZ, "Compartimento inválido "
+23 = ZZZZZ, "Iniciando a cópia..."
+24 = ZZZZZ, "%1! linhas copiadas."
+25 = ZZZZZ, "Clock Time (ms.): total = %1!"
+26 = ZZZZZ, "Deseja gravar esta informação em um arquivo? [S/n]"
+27 = ZZZZZ, "Nome do arquivo no host [%1!]:"
+28 = ZZZZZ, "Tipo inválido de coluna. Os tipos válidos são:"
+29 = ZZZZZ, "<cr>: mesmo tipo que a coluna DataServer."
+30 = ZZZZZ, "Méd = %1! (%2! linhas por seg.)"
+31 = ZZZZZ, "falha na cópia bcp %1!"
+32 = ZZZZZ, "falha parcial da cópia %1!  do bcp "
+33 = ZZZZZ, "Precisão inválida. A precisão deve estar entre %1! e %2!"
+34 = ZZZZZ, "Escala inválida. A escala deve estar entre %1! e %2! e deve ser menor ou igual à precisão."
+35 = ZZZZZ, "Tipo inesperado de resultado retornado."
+36 = ZZZZZ, "Resultado inesperado retornado."
+37 = ZZZZZ, "Erro: Gravação do arquivo BCP (%1!)!"
+38 = ZZZZZ, "Falha na recuperação de especificação de arquivo do host."
+39 = ZZZZZ, "A tabela que a cópia de massa está tentando copiar para um arquivo no host é menor que o número de linhas que a cópia de massa foi orientada a saltar."
+40 = ZZZZZ, "blk_rowxfer_mult retornou um código de retorno inesperado."
+41 = ZZZZZ, "Tipo de dados desconhecido '%1!' encontrado."
+42 = ZZZZZ, "Erro de I/O ao ler o arquivo de erro bcp."
+43 = ZZZZZ, "Erro de I/O ao gravar no arquivo de erro bpc."
+44 = ZZZZZ, "Impossível abrir arquivo de erro."
+45 = ZZZZZ, "EOF inesperado encontrado no arquivo de dados BCP."
+46 = ZZZZZ, "Encontrado tamanho negativo do prefixo no arquivo de dados BCP."
+47 = ZZZZZ, "O arquivo do host '%1!' BCP  só contém %2! linhas. Não é permitido o salto dessas linhas."
+48 = ZZZZZ, "O arquivo do host '%1!' BCP só contém %2! linhas. Foi impossível ler o número solicitado de linhas."
+49 = ZZZZZ, "Para cópia de massa, todos os dados de tamanho variável devem ter um prefixo com o tamanho ou um caractere de fim especificado."
+50 = ZZZZZ, "Text/image field is larger than the maximum value. Data truncated."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Erro fatal: falha de alocação de memória."
+2 = ZZZZZ, "A direção da cópia deve ser 'in' ou 'out'."
+3 = ZZZZZ, "Aviso: '%1!' substitui '%2!'."
+4 = ZZZZZ, "Ao utilizar o indicador '%1!' para definir a primeira linha a copiar, o número da linha deve ser maior ou igual a 1."
+5 = ZZZZZ, "Ao utilizar os indicadores '%1!' e '%2!' para definir a primeira e última linhas a copiar, o número da primeira linha deve ser menor que o último."
+6 = ZZZZZ, "Ao utilizar o indicador '%1!' para definir a última linha a copiar, o número da linha deve ser maior ou igual a 1."
+7 = ZZZZZ, "Ao utilizar o indicador '%1!' para definir o tamanho do lote, esse número deve ser maior ou igual a 1."
+8 = ZZZZZ, "Aviso: Ignorando o indicador '%1!' ao copiar para fora."
+9 = ZZZZZ, "Impossível utilizar '%1!' e '%2!' ao copiar para dentro."
+10 = ZZZZZ, "Ao utilizar o indicador '%1!' para definir o valor de partida da coluna identidade, esse número deve ser maior ou igual a 0."
+11 = ZZZZZ, "Impossível utilizar os indicadores '%1!' e '%2!' juntos."
+12 = ZZZZZ, "Aviso: Redefinindo tamanho do lote de %1! para %2!."
+13 = ZZZZZ, "Falha de definição das propriedades de conexão."
+14 = ZZZZZ, "Falha de estabelecimento de conexão."
+15 = ZZZZZ, "Falha na definição das opções de conexão."
+16 = ZZZZZ, "Falha de recuperação do idioma."
+17 = ZZZZZ, "Falha na definição dos padrões."
+18 = ZZZZZ, "Falha de recuperação do formato da tabela."
+19 = ZZZZZ, "Falha em blk_init."
+20 = ZZZZZ, "Impossível abrir arquivo de erro."
+21 = ZZZZZ, "Objeto para localização não reconhecido. Usando o valor default '%1!'."
+22 = ZZZZZ, "Erro interno: Um tipo inválido de localização foi passado para cs_locale()."
+23 = ZZZZZ, "Aviso: opção '%1!' não suportada, ignorada "
+24 = ZZZZZ, "Erro de Sintaxe em '%1!'."
+25 = ZZZZZ, "Erro na tentativa de carregar um par de tabelas de tradução."
+26 = ZZZZZ, "Erro ao tentar configurar o contexto do aplicativo a ser usado com estruturas relacionadas à localização."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Cópia de massa em lote feita com sucesso para o Servidor SQL."
+2 = ZZZZZ, "%1! filas enviadas para o Servidor SQL."
+3 = ZZZZZ, "Cópia em massa com sucesso de %1! filas para o arquivo do host."
+4 = ZZZZZ, "Interrupção - Cópia de massa abortada."
+5 = ZZZZZ, "Copiadas %1! linhas."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Senha:"
+2 = ZZZZZ, "Informe o tipo de arquivo para armazenamento do campo %1! [%2!]:"
+3 = ZZZZZ, "Informe o tamanho do campo %1! [sem tamanho máximo]:"
+4 = ZZZZZ, "Informe o tamanho do campo %1! [%2!]:"
+5 = ZZZZZ, "Informe o delimitador de campo [%1!]:"
+6 = ZZZZZ, "Informe o tamanho do prefixo do campo %1! [%2!]:"
+7 = ZZZZZ, "Informe a precisão do campo %1! [%2!]:"
+8 = ZZZZZ, "Informe a escala do campo %1! [%2!]:"
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: Impossível abrir o arquivo de formatos '%2!'."
+2 = ZZZZZ, "Erro de I/O ao ler arquivo de formatos bcp."
+3 = ZZZZZ, "Impossível fechar arquivo de formatos bcp."
+4 = ZZZZZ, "Coluna %1!: Valor inválido de precisão encontrado."
+5 = ZZZZZ, "Tipo de dados desconhecido de tamanho fixo encontrado."
+6 = ZZZZZ, "Tentativa de ler uma versão desconhecida do arquivo de formatos bcp."
+7 = ZZZZZ, "Número incorreto de colunas do host encontrado no arquivo de formatos bcp."
+8 = ZZZZZ, "Tipo de dados não reconhecido '%1!' encontrado no arquivo de formatos."
+9 = ZZZZZ, "O arquivo de formatos instruiu o bcp para não copiar a coluna identidade, conflito com a opção -E."
+10 = ZZZZZ, "Não há colunas a copiar."

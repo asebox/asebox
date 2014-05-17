@@ -1,0 +1,92 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "Kennwort: "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "Schwer wiegender Fehler: Speicherzuweisung fehlgeschlagen."
+
+2 = ZZZZZ, "Nicht erkanntes Sprachenanpassungsobjekt. Standardwert '%1!' wird verwendet."
+
+3 = ZZZZZ, "Interner Fehler: Ein ungültiger Sprachenanpassungstyp wurde an cs_locale() übergeben."
+
+4 = ZZZZZ, "Fehler bei dem Versuch, ein Paar von Übersetzungstabellen zu laden."
+
+5 = ZZZZZ, "Beim Versuch, den Anwendungskontext zur Verwendung mit lokalisierungsbezogenen Strukturen zu konfigurieren, ist ein Fehler aufgetreten."
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "Schwer wiegender Fehler: Speicherzuordnung fehgeschlagen."
+
+2 = ZZZZZ, "I/O-Fehler: Zu wenig Speicherplatz für Eingabedaten."
+
+3 = ZZZZZ, "Temporärdatei '%1!' für den Editor konnte nicht geöffnet werden."
+
+4 = ZZZZZ, "Der Editor '%1!' konnte nicht aufgerufen werden."
+
+5 = ZZZZZ, "Eingabedatei '%1!' konnte nicht geöffnet werden."
+
+6 = ZZZZZ, "Ausgabedatei '%1!' konnte nicht geöffnet werden."
+
+7 = ZZZZZ, "Isql: Unbekannter Parameter '%1!'."
+
+8 = ZZZZZ, "Datenbankname zu lang."
+
+9 = ZZZZZ, "Meldungs-Callback-Routine der CS-Bibliothek konnte nicht installiert werden."
+
+10 = ZZZZZ, "Clientbibliothek konnte nicht installiert werden."
+
+11 = ZZZZZ, " Client-Meldungs-Callback-Routine der Client-bibliothek konnte nicht installiert werden."
+
+12 = ZZZZZ, "Nicht unterstützter Datentyp aufgetreten."
+
+13 = ZZZZZ, "Pufferüberlauf bei der Ausgabe der Zeile."
+
+14 = ZZZZZ, "Nicht unterstützter Ergebnistyp aufgetreten."
+
+15 = ZZZZZ, "Ungültige Speicherblockgröße angegeben."
+
+16 = ZZZZZ, "Ungültiger Speicher-Steuercode angegeben."
+
+17 = ZZZZZ, "Interner Speicherzuordnungsfehler in isql."
+
+18 = ZZZZZ, "Befehlszeile für den Aufruf des Editors ist zu lang."
+
+19 = ZZZZZ, "Ein isql-Anwendungskontext wurde nicht initialisiert."
+
+20 = ZZZZZ, "Eine Verbindung mit einem SQL Server wurde nicht eingerichtet."
+
+21 = ZZZZZ, "Kein Befehlszeilen-Handle verfügbar."
+
+22 = ZZZZZ, "Pufferdatei konnte nicht geöffnet werden."
+
+23 = ZZZZZ, "Positionsindikator der Datei konnte nicht auf den Beginn der Datei gesetzt werden."
+
+24 = ZZZZZ, "Befehlspuffer konnte nicht gelöscht werden."
+
+25 = ZZZZZ, "Befehl konnte nicht eingeleitet werden."
+
+26 = ZZZZZ, "Befehl konnte im Befehls-Handle nicht gelöscht werden."
+
+27 = ZZZZZ, "Fehler beim Versuch, ein Umwandlungstabellenpaar zu laden."
+

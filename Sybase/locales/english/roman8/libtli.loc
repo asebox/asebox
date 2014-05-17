@@ -1,0 +1,65 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) libtli.loc 1.1 11/5/93
+;
+[file format]
+	; left and right brackets will delimit section titles.
+	; Any special character, including the comment character
+	; and the section-title delimiters, may be interpreted
+	; literally by preceding them with the escape character.
+	; In addition, any line that ends with the escape character
+	; will be continued onto the next line.
+	version=10.0
+	list_separator=,	; commas will separate the members of a list.
+	escape=\		; backslash is the escape symbol.
+[language]
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libtli]
+
+1 = IPDE_ACCEPTFAIL, "TLI accept call failed - t_errno %1!"
+
+2 = IPDE_BINDFAIL, "TLI bind call failed - t_errno %1!"
+
+3 = IPDE_BADADDR, "The address provided has an incorrect format"
+
+4 = IPDE_BADBIND, "Could not bind to the correct address"
+
+5 = IPDE_CONECTFAIL, "TLI connect call failed - t_errno %1!"
+
+6 = IPDE_GETINFO, "TLI get info call failed - t_errno %1!"
+
+7 = IPDE_LISTENFAIL, "TLI listen call failed - t_errno %1!"
+
+8 = IPDE_NOCOTS, "Transport provider not connection-oriented"
+
+9 = IPDE_OPTFAIL, "Unable to set protocol options"
+
+10 = IPDE_OPENFAIL, "TLI open call failed - t_errno %1!"
+
+11 = IPDE_PARSEFAIL, "Failed to parse address info"
+
+12 = IPDE_RCVCONNECT, "TLI rcvconnect call failed - t_errno %1!"
+
+13 = IPDE_RECVFAIL, "TLI recv call failed - t_errno %1!"
+
+14 = IPDE_SETSIG, "Unable to set signal process id - t_errno %1!"
+
+15 = IPDE_SENDFAIL, "TLI send call failed - t_errno %1!"
+
+16 = IPDE_BADINITSTRING, "Bad init string from TCL"
+ 
+17 = IPDE_TALLOCFAIL, "TLI t_alloc failed - t_errno %1!"
+
+; end of tli error strings
+;

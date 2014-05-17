@@ -1,0 +1,29 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Microsoft Windows Codepage 1256, Arabic character set, this is a binary sort order.
+;
+; SCCS information:	@(#) generic/localization/charsets/cp1256/binary.srt 1.2 2/22/95
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 16 1994  3:43AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp1256
+menuname = "Binary ordering, for the Microsoft Windows Codepage 1256, Arabic character set (cp1256)."
+charset = cp1256
+preference = false
+ 
+description = "Binary sort order for the Microsoft Windows Codepage 1256, Arabic character set (cp1256)."
+ 
+binary = "true"

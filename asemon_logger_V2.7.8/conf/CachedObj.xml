@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CachedObj </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select CacheID, DBID, IndexID, CachedKB, CacheName, ObjectID, DBName, OwnerUserID, OwnerName, ObjectName, ObjectType, ProcessesAccessing
+         from master..monCachedObject
+         where CachedKB &gt;=?minCachedKB?
+         and ObjectID is not null
+  </SQL>
+  <key1 > DBID </key1>
+  <key2 > ObjectID </key2>
+  <key3 > IndexID </key3>
+  <filterCol >  </filterCol>
+  <delay > 600 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <parameters>
+     <param name="minCachedKB"> 100 </param>
+  </parameters>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CachedObj (
+     Timestamp datetime not null,
+     Interval int not null,
+     CacheID int not null,
+     DBID int not null,
+     IndexID int not null,
+     CachedKB int not null,
+     CacheName varchar(30) null,
+     ObjectID int not null,
+     DBName varchar(30) null,
+     OwnerUserID int not null,
+     OwnerName varchar(30) null,
+     ObjectName varchar(30) null,
+     ObjectType varchar(30) null,
+     ProcessesAccessing int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CachedObj (Timestamp, DBID, ObjectID, IndexID , Interval)
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_CachedObj (ObjectName, DBName, Timestamp)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CachedObj" >
+  delete ?SERVERNAME?_CachedObj where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

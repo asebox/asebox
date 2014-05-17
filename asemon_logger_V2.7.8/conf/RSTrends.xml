@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > Trends </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL >
+  /* fake cmd */
+  </SQL>
+  <key1 > </key1>
+  <key2 > </key2>
+  <key3 > </key3>
+  <filterCol > </filterCol>
+  <delay > 86400 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <createTables>
+     <T>
+create table ?SERVERNAME?_Trends
+(
+ TrendID smallint not null,
+ dt smalldatetime not null,
+ Value float null
+) lock allpages
+     </T>
+     <T> 
+create table ?SERVERNAME?_TrendsCfg
+(TrendID int not null,
+ grpname varchar(30) null,
+ SQL text, 
+ description varchar(255) null,
+ aggfunction varchar(10) not null  check (aggfunction in( 'AVG', 'SUM', 'MIN', 'MAX', 'COUNT'))
+) lock datarows
+
+     </T>
+     
+  </createTables>
+
+  <createIndexes>
+     <I>
+create unique clustered index icu on ?SERVERNAME?_Trends (TrendID, dt)
+     </I>
+     <I>
+create unique index iu on ?SERVERNAME?_TrendsCfg (TrendID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_Trends" > <![CDATA[
+
+-- Insert default trends if not yet defined
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=1)
+insert into ?SERVERNAME?_TrendsCfg
+values (1,
+"Devices",
+"
+declare @trendid int, @startts datetime, @endts datetime, @block_size int
+select @trendid=1
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+select @block_size=isnull(convert(int,[Run Value]), 16) from ?SERVERNAME?_RSConfig where Configuration='block_size'
+and Timestamp = (select max(Timestamp) from ?SERVERNAME?_RSConfig where Timestamp >= @startts and Timestamp < @endts)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(Total_segs_byts)*64*@block_size/1024
+from
+  (select Timestamp, Total_segs_byts=sum(1.*Total_segs)
+   from ?SERVERNAME?_DISKSPCE
+    where Timestamp >= @startts
+    and Timestamp < @endts
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "Stable Device Total capacity (Mb)",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=2)
+insert into ?SERVERNAME?_TrendsCfg
+values (2,
+"Devices",
+"
+declare @trendid int, @startts datetime, @endts datetime, @block_size int
+select @trendid=2
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+select @block_size=isnull(convert(int,[Run Value]), 16) from ?SERVERNAME?_RSConfig where Configuration='block_size'
+and Timestamp = (select max(Timestamp) from ?SERVERNAME?_RSConfig where Timestamp >= @startts and Timestamp < @endts)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(Used_segs_byts)*64*@block_size/1024
+from
+  (select Timestamp, Used_segs_byts=sum(1.*Used_segs)
+   from ?SERVERNAME?_DISKSPCE
+    where Timestamp >= @startts
+    and Timestamp < @endts
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "Stable Device Avg use (Mb)",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=3)
+insert into ?SERVERNAME?_TrendsCfg
+values (3,
+"Admin",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=3
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=max(Memory_in_Use_Mb)
+from
+  (select Timestamp, Memory_in_Use_Mb= 1.*Memory_in_Use/(1024*1024)
+   from ?SERVERNAME?_RSMem
+    where Timestamp >= @startts
+    and Timestamp < @endts
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "Memory used",
+'MAX'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=4)
+insert into ?SERVERNAME?_TrendsCfg
+values (4,
+"RepAgent",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=4
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=58000
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "RA Commands received",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=5)
+insert into ?SERVERNAME?_TrendsCfg
+values (5,
+"RepAgent",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=5
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=58001
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "RA Commands applied",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=6)
+insert into ?SERVERNAME?_TrendsCfg
+values (6,
+"RepAgent",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=6
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)/1024
+from
+  (select Timestamp, val=sum(1.*counter_total)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=58011
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "RA Kb received",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=7)
+insert into ?SERVERNAME?_TrendsCfg
+values (7,
+"RepAgent",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=7
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(val)
+from
+  (select Timestamp, val=sum(1.*counter_total/1024)/ avg(Interval)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=58011
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "RA Kb/s received",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=8)
+insert into ?SERVERNAME?_TrendsCfg
+values (8,
+"DSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=8
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=5028
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "DSI Cmds succeed",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=9)
+insert into ?SERVERNAME?_TrendsCfg
+values (9,
+"DSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=9
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(val)
+from
+  (select Timestamp, val=sum(1.*counter_total/1024)/ avg(Interval)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=57148
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "DSI Output Kb/s",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=10)
+insert into ?SERVERNAME?_TrendsCfg
+values (10,
+"DSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=10
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=5024
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "DSI Tran group commit",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=11)
+insert into ?SERVERNAME?_TrendsCfg
+values (11,
+"DSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=11
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=5026
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "DSI Tran ungroup commit",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=12)
+insert into ?SERVERNAME?_TrendsCfg
+values (12,
+"SQM",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=12
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=6002
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "SQM BlocksWritten",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=13)
+insert into ?SERVERNAME?_TrendsCfg
+values (13,
+"SQM",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=13
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id=6057
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+
+, "SQM writes",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=14)
+insert into ?SERVERNAME?_TrendsCfg
+values (14,
+"SQM",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=14
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)/sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 6057
+	and counter_obs > 0
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQM avgWriteTime_ms",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=15)
+insert into ?SERVERNAME?_TrendsCfg
+values (15,
+"SQM",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=15
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)/1024
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 6004
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQM KBWritten",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=16)
+insert into ?SERVERNAME?_TrendsCfg
+values (16,
+"SQM",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=16
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(val)
+from
+  (select Timestamp, val=sum(1.*counter_total/1024)/ avg(Interval)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 6004
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQM AvgWrite Kb/s",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=17)
+insert into ?SERVERNAME?_TrendsCfg
+values (17,
+"SQMR",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=17
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 62002
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQMR BlocksRead",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=18)
+insert into ?SERVERNAME?_TrendsCfg
+values (18,
+"SQMR",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=18
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 62011
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQMR Reads",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=19)
+insert into ?SERVERNAME?_TrendsCfg
+values (19,
+"SQMR",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=19
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)/sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 62011
+	and counter_obs > 0
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQMR avgReadTime_ms",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=20)
+insert into ?SERVERNAME?_TrendsCfg
+values (20,
+"SQMR",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=20
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 62000
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQMR CmdsReads",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=21)
+insert into ?SERVERNAME?_TrendsCfg
+values (21,
+"SQMR",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=21
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 62004
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "SQMR BlocksReadCached ",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=22)
+insert into ?SERVERNAME?_TrendsCfg
+values (22,
+"RSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=22
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 4000
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "RSI BytesSent_Kb ",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=23)
+insert into ?SERVERNAME?_TrendsCfg
+values (23,
+"RSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=23
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 4002
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "RSI PacketsSent ",
+'SUM'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=24)
+insert into ?SERVERNAME?_TrendsCfg
+values (24,
+"RSI",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=24
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=avg(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)/sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 4009
+	and counter_obs > 0
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "RSI AvgSendPTTime_ms",
+'AVG'
+)
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=25)
+insert into ?SERVERNAME?_TrendsCfg
+values (25,
+"RSIUSER",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=25
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_total)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 59016
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "RSIUSER RSIUBytsRcvd_Kb ",
+'SUM'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=26)
+insert into ?SERVERNAME?_TrendsCfg
+values (26,
+"RSIUSER",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=26
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 59013
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "RSIUSER RSIUBuffsRcvd",
+'SUM'
+)
+
+
+if not exists (select * from ?SERVERNAME?_TrendsCfg where TrendID=27)
+insert into ?SERVERNAME?_TrendsCfg
+values (27,
+"RSIUSER",
+"
+declare @trendid int, @startts datetime, @endts datetime
+select @trendid=27
+select
+@startts=isnull(dateadd(dd, 1, (select convert(varchar, max(dt),102) from ?SERVERNAME?_Trends where TrendID=@trendid) ),'1/1/1900'),
+@endts=convert(varchar,getdate(), 102)
+
+insert into ?SERVERNAME?_Trends
+select @trendid, dt=dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) ),
+Value=sum(val)
+from
+  (select Timestamp, val=sum(1.*counter_obs)
+   from ?SERVERNAME?_RSStats 
+    where Timestamp >= @startts
+    and Timestamp < @endts
+	and counter_id = 59001
+  group by Timestamp) grpByTs
+group by dateadd(hh,datepart(hh, Timestamp), convert(datetime,convert(varchar,Timestamp,102)) )
+"
+, "RSIUSER RSIUMsgRecv",
+'SUM'
+)
+
+-- aggregate indicators according to their descriptors
+
+  set nocount on
+  set rowcount 0
+  select TrendID, SQL 
+  into #trendList
+  from ?SERVERNAME?_TrendsCfg
+  
+  declare @TrendID smallint,
+  @SQL varchar(16384)
+  set rowcount 1
+  select @TrendID=TrendID, @SQL=convert(varchar(16384),SQL )
+  from #trendList
+  delete #trendList
+  while (@@rowcount =1)
+  begin
+    set rowcount 0
+    exec (@SQL)
+    set rowcount 1
+    select @TrendID=TrendID, @SQL=convert(varchar(16384),SQL )
+    from #trendList
+    delete #trendList
+  end
+  set rowcount 0
+  drop table #trendList
+  set nocount off
+
+
+
+
+
+
+]]>
+    </P>
+  </purge>
+</MetricDescriptor>

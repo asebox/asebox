@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > SysLoad </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL >  <![CDATA[
+select StatisticID, l.EngineNumber, Avg_1min, Avg_5min, 
+	Avg_15min, ThreadPoolID
+from master.dbo.monSysLoad l, 
+	master.dbo.monEngine e,
+	master.dbo.monThread t
+where l.StatisticID in (4, 5)
+and l.EngineNumber = e.EngineNumber
+and e.ThreadID = t.ThreadID
+]]>
+  </SQL>
+  <key1 > </key1>
+  <key2 > </key2>
+  <key3 > </key3>
+  <filterCol > </filterCol>
+  <delay > 300 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <colsAlias>
+  </colsAlias>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_SysLoad (
+     Timestamp datetime not null,
+     StatisticID int not null,
+     EngineNumber smallint not null,
+     Avg_1min real not null,
+     Avg_5min real not null,
+     Avg_15min real not null,
+     ThreadPoolID int not null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_SysLoad (Timestamp, StatisticID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_SysLoad" >
+  delete ?SERVERNAME?_SysLoad where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+</MetricDescriptor>

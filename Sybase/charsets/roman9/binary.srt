@@ -1,0 +1,21 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#)binary.srt	84.1
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Roman9 character set, this is a binary sort order.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_roman9
+menuname = "Binary ordering, for use with the HP Roman9 character set (roman9)."
+charset = roman9
+
+description = "Binary Sort Order for the HP Roman9 Character Set (roman9)."
+
+binary = "true"

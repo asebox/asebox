@@ -1,0 +1,240 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Session"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "Echec de l'allocation mémoire."
+
+2  = ZZZZZ, "Erreur lors de la lecture des objets."
+
+3  = ZZZZZ, "Aucun objet trouvé."
+
+4  = ZZZZZ, "'%1!' n'existe pas."
+
+5  = ZZZZZ, "échec"
+
+6  = ZZZZZ, "ok"
+
+7  = ZZZZZ, "Retour à la sauvegarde du gestionnaire d'interface."
+
+8  = ZZZZZ, "Aucune session ouverte."
+
+9  = ZZZZZ, "Ajout de %1!"
+
+10 = ZZZZZ, "Erreur lors de l'ajout de %1!"
+
+11 = ZZZZZ, "Modification de %1!"
+
+12 = ZZZZZ, "Erreur lors de la modification de %1!"
+
+13 = ZZZZZ, "Suppression de %1!"
+
+14 = ZZZZZ, "Erreur lors de la suppression de %1!"
+
+15 = ZZZZZ, "Suppression de tous les objets serveur."
+
+16 = ZZZZZ, "Erreur lors de la suppression des objets serveur."
+
+17 = ZZZZZ, "Erreur : tentative de copie vers l'objet dans la même session."
+
+18 = ZZZZZ, "Copie de '%1!' de la session %2! vers '%3!' dans la session %4!"
+
+19 = ZZZZZ, "Erreur lors de la copie de %1!"
+
+20 = ZZZZZ, "Erreur : tentative de copie vers la même session."
+
+21 = ZZZZZ, "Copie vers la session %1!"
+
+22 = ZZZZZ, "Session %1! %2!"
+
+23 = ZZZZZ, "courant"
+
+24 = ZZZZZ, "Erreur de syntaxe"
+
+25 = ZZZZZ, "Attribut supplémentaire"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "Type de transport"
+
+2 =  ZZZZZ, "Adresse de transport"
+
+3  = ZZZZZ, "Sécurité du serveur"
+
+4  = ZZZZZ, "Mécanisme de sécurité"
+
+5  = ZZZZZ, "**Valeur inconnue**"
+
+6  = ZZZZZ, "Base DIT pour l'objet"
+
+7  = ZZZZZ, "Caractérisez le nom"
+
+8  = ZZZZZ, "Objets serveur détectés"
+
+9  = ZZZZZ, "Version"
+
+10 = ZZZZZ, "Service"
+
+11 = ZZZZZ, "Etat"
+
+12 = ZZZZZ, "Adresse"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "Configuration"
+
+15 = ZZZZZ, "Nom DS"
+
+16 = ZZZZZ, "HA Failoverserver"
+
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "Confirmez-vous la suppression de tous les objets serveur ? (O/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "aide"
+
+2  = ZZZZZ, "a"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "ouvrir"
+
+5  = ZZZZZ, "fermer"
+
+6  = ZZZZZ, "lire"
+
+7  = ZZZZZ, "ajouter"
+
+8  = ZZZZZ, "modifier"
+
+9  = ZZZZZ, "ajouter-attribut"
+
+10 = ZZZZZ, "supprimer"
+
+11 = ZZZZZ, "supprimer-tout"
+
+12 = ZZZZZ, "copier"
+
+13 = ZZZZZ, "copier-tout"
+
+14 = ZZZZZ, "vers"
+
+15 = ZZZZZ, "liste"
+
+16 = ZZZZZ, "tout"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "sortir"
+
+20 = ZZZZZ, "quitter"
+
+21 = ZZZZZ, "basculer"
+
+22 = ZZZZZ, "#fait"
+
+23 = ZZZZZ, "#supprimé"
+
+24 = ZZZZZ, "O"
+
+25 = ZZZZZ, "o"
+
+26 = ZZZZZ, "NOM_DS"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "NOM_SERVEUR"
+
+29 = ZZZZZ, "NOM1"
+
+30 = ZZZZZ, "NOM2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "Cet écran."
+
+; open [DSNAME]
+2  = ZZZZZ, "Ouvre une session pour le service de répertoire par défaut ou pour le service de répertoire NOM_DS."
+
+; close [SESS]
+3  = ZZZZZ, "Ferme la session SESS ou la session courante."
+
+; sess
+4  = ZZZZZ, "Répertorie toutes les sessions."
+
+; [switch] SESS
+5  = ZZZZZ, "Bascule la session SESS en session courante."
+
+; add SERVER-NAME
+6  = ZZZZZ, "Ajoute un nouvel objet serveur au service de répertoire."
+
+; read SERVER-NAME
+7  = ZZZZZ, "Affiche le contenu d'un objet serveur."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "Modifie un objet serveur existant."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "Ajoute un attribut à un objet serveur existant."
+
+; del SERVER-NAME
+10 = ZZZZZ, "Supprime un objet serveur existant."
+
+; list [all]
+11 = ZZZZZ, "Répertorie tous les objets serveur."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "Copie l'objet NOM1 dans un nouvel objet NOM2 dans la session SESS ou la session courante."
+
+; copyall to SESS
+13 = ZZZZZ, "Copie tous les objets serveur de la session courante vers la session SESS."
+
+; delete-all
+14 = ZZZZZ, "Supprime tous les objets serveur de la session courante."
+
+; config
+15 = ZZZZZ, "Affiche la configuration courante."
+
+; exit | quit
+16 = ZZZZZ, "Quitte le programme."
+

@@ -1,0 +1,291 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "암호: "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "중대 오류: '%1!' 정의 파일을 열 수 없습니다."
+
+2 = ZZZZZ, "중대 오류: 클라이언트 라이브러리 초기화에 메모리를 할당할 수 없습니다."
+
+3 = ZZZZZ, "중대 오류: 클라이언트 라이브러리를 초기화할 수 없습니다."
+
+4 = ZZZZZ, "중대 오류: CS 라이브러리 메시지 콜백 루틴을 설치할 수 없습니다."
+
+5 = ZZZZZ, "중대 오류: 클라이언트 메시지 콜백 루틴을 설치할 수 없습니다."
+
+6 = ZZZZZ, "중대 오류: 서버 메시지 콜백 루틴을 설치할 수 없습니다."
+
+7 = ZZZZZ, "중대 오류: 응용프로그램 문맥에 인터페이스 파일의 경로와 이름을 넣을 수 없습니다."
+
+8 = ZZZZZ, "중대 오류: defncopy 문맥 구조를 할당할 수 없습니다."
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "defncopy 구문 오류"
+
+2 = ZZZZZ, "사용법"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "암호"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "server_name"
+
+10 = ZZZZZ, "user_name"
+
+11 = ZZZZZ, "security_options"
+
+12 = ZZZZZ, "security_mechanism"
+
+13 = ZZZZZ, "언어"
+
+14 = ZZZZZ, "file_name"
+
+15 = ZZZZZ, "database_name"
+
+16 = ZZZZZ, "소유자"
+
+17 = ZZZZZ, "object_name"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "중대 오류: %1!에 충분한 메모리를 할당할 수 없습니다."
+
+2 = ZZZZZ, "중대 오류: %1!에 충분한 메모리를 할당할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+3 = ZZZZZ, "중대 오류: 메모리를 할당할 수 없습니다."
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "중대 오류: 서버 이름을 지정하지 않았습니다. DSQUERY 환경 변수의 값을 검사하십시오."
+
+2 = ZZZZZ, "중대 오류: 클라이언트/서버 연결 구조를 할당할 수 없습니다."
+
+3 = ZZZZZ, "중대 오류: 값 '%1!'(으)로 클라이언트/서버 연결의 사용자 이름 특성을 설정할 수 없습니다."
+
+4 = ZZZZZ, "중대 오류: 클라이언트/서버 연결의 암호 특성을 설정할 수 없습니다."
+
+5 = ZZZZZ, "중대 오류: 클라이언트/서버 연결의 암호화 특성을 설정할 수 없습니다."
+
+6 = ZZZZZ, "중대 오류: '%1!' 서버에 연결할 수 없습니다."
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "중대 오류: CS 라이브러리 명령어 구조를 할당할 수 없습니다."
+
+2 = ZZZZZ, "중대 오류: SQL 명령어를 시작할 수 없습니다."
+
+3 = ZZZZZ, "중대 오류: SQL 명령어를 시작할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+4 = ZZZZZ, "중대 오류: SQL 명령어를 서버에 보낼 수 없습니다."
+
+5 = ZZZZZ, "중대 오류: 명령어를 서버에 보낼 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+6 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 설치할 수 없습니다."
+
+7 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 설치할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+8 = ZZZZZ, "중대 오류: '%1!' 객체의 SQL 명령어 결과 데이타를 설치할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+9 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 취소하였습니다."
+
+10 = ZZZZZ, "오류: SQL 명령어 결과 데이타를 취소하였습니다. 이 객체의 복사가 취소됩니다."
+
+11 = ZZZZZ, "오류: '%1!' 객체의 SQL 명령어 결과 데이타를 취소하였습니다. 이 객체의 복사가 취소됩니다."
+
+12 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 설치하려고 할 때 예기치 않은 '%1!' 반환 코드가 발생하였습니다."
+
+13 = ZZZZZ, "오류: '%1!' 객체의 SQL 명령어 결과 데이타를 설치하려고 할 때 예기치 않은 '%1!' 반환 코드가 발생하였습니다'. 이 객체의 복사가 취소됩니다."
+
+14 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 설치하려고 할 때 예기치 않은 '%1!' 결과 유형이 발생하였습니다."
+
+15 = ZZZZZ, "중대 오류: 결과 세트 정보를 검색할 수 없습니다."
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "오류: '%1!' 파일의 객체가 정의로 인식되지 않습니다."
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "중대 오류: '%1!' 객체의 결과 세트 정보를 검색할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+2 = ZZZZZ, "중대 오류: '%1!' 객체의 결과 세트 데이타를 내부 프로그램 변수에 바인드할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+3 = ZZZZZ, "중대 오류: '%1!' 객체의 로우 결과 데이타를 페치할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+4 = ZZZZZ, "오류: '%1!' 객체의 로우 결과 데이타를 페치할 수 없습니다. 이 객체의 복사가 취소됩니다."
+
+5 = ZZZZZ, "오류: '%1!' 객체의 SQL 명령어 결과 데이타를 취소하였습니다. 이 객체의 복사가 취소됩니다."
+
+6 = ZZZZZ, "오류: '%1!' 객체의 로우 결과 데이타를 페치하려고 할 때 예기치 않은 '%2!' 반환 코드가 발생하였습니다. 이 객체의 복사가 취소됩니다."
+
+7 = ZZZZZ, "중대 오류: '%1!' 객체의 SQL 명령어 결과 데이타를 설치하려고 할 때 예기치 않은 '%2!' 결과 유형이 발생하였습니다. 이 객체의 복사가 취소됩니다."
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "중대 오류: 서버에서 '%1!' 데이타베이스를 액세스하려고 할 때 오류가 발생하였습니다."
+
+2 = ZZZZZ, "중대 오류: '%1!' 데이타베이스를 액세스하려고 할 때 예기치 않은 '%2!' 결과 유형이 발생하였습니다."
+
+3 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 설치할 수 없습니다. '%1!' 데이타베이스를 액세스할 수 없습니다."
+
+4 = ZZZZZ, "중대 오류: SQL 명령어 결과 데이타를 취소하였습니다. '%1!' 데이타베이스를 액세스할 수 없습니다."
+
+5 = ZZZZZ, "중대 오류: '%1!' 데이타베이스를 액세스하려고 할 때 예기치 않은 '%2!' 결과 코드가 발생하였습니다."
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "오류: '%1!' 파일에 포함된 SQL을 실행하려고 할 때 서버에서 오류가 발생하였습니다."
+
+2 = ZZZZZ, "오류: '%1!' 파일에 포함된 SQL을 실행하려고 할 때 예기치 않은 '%2!' 결과 유형이 발생하였습니다."
+
+3 = ZZZZZ, "오류: '%1!' 파일에 포함된 SQL을 실행하려고 할 때 예기치 않은 '%2!' 결과 코드가 발생하였습니다. 이 객체의 복사가 취소됩니다."
+
+4 = ZZZZZ, "중대 오류: 저장 프로시저를 실행한 결과 설명을 검색할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+5 = ZZZZZ, "중대 오류: 저장 프로시져를 실행한 결과를 내부 프로그램 변수에 바인드할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+6 = ZZZZZ, "오류: 저장 프로시저에서 예기치 않은 상태 결과가 발생하였습니다. 저장 프로시저 실행이 취소됩니다."
+
+7 = ZZZZZ, "중대 오류: 저장 프로시저 실행한 결과를 페치할 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+8 = ZZZZZ, "오류: 저장 프로시저 실행한 결과를 페치할 수 없습니다. 저장 프로시저 실행이 취소됩니다."
+
+9 = ZZZZZ, "오류: SQL 명령어 결과 데이타를 취소하였습니다. 저장 프로시저 실행이 취소됩니다."
+
+10 = ZZZZZ, "오류: 저장 프로시저를 실행한 결과를 페치하려고 할 때 예기치 않은 '%1!' 반환 코드가 발생하였습니다'. 저장 프로시저 실행이 취소됩니다."
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "중대 오류: '%1!' 데이타베이스의 syscomments 테이블에서 데이타를 검색하려고 할 때 서버에서 오류가 발생하였습니다."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "오류: '%1!' 객체가 '%2!' 데이타베이스에 없습니다."
+
+2 = ZZZZZ, "오류: '%1!' 데이타베이스의 sysobjects 테이블에서 데이타를 검색하려고 할 때 서버에서 오류가 발생하였습니다. '%2!' 객체의 복사가 취소됩니다."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "오류: '%1!' 객체의 정의가 '%2!' 데이타베이스에 없습니다."
+
+2 = ZZZZZ, "오류: '%1!' 데이타베이스의 syscomments 테이블에서 데이타를 검색하려고 할 때 서버에서 오류가 발생하였습니다. '%2!' 객체의 복사가 취소됩니다."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "오류: '%1!' 데이타베이스의 sysobjects 테이블에서 데이타를 검색하려고 할 때 서버 오류가 있습니다. 객체 '%2!'의 복사가 취소되었습니다."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "오류: '%1!' 데이타베이스의 syscomments 테이블에서 데이타를 검색하려고 할 때 서버에서 오류가 발생하였습니다. '%2!' 객체의 복사가 취소됩니다."
+
+2 = ZZZZZ, "중대 오류: '%1!' 데이타베이스의 syscomments 테이블에서 '%1!' 객체의 SQL 정의 명령문을 읽을 수 없습니다. 이후의 모든 복사는 취소됩니다."
+
+3 = ZZZZZ, "중대 오류: '%1!' 파일에 쓰려고 할 때 파일 끝(EOF) 오류가 발생하였습니다. 사용할 수 있는 디스크 공간을 검사하십시오. 이후의 모든 복사는 취소됩니다."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "오류: 클라이언트 라이브러리를 종료할 수 없습니다."
+
+2 = ZZZZZ, "오류: CS 라이브러리 명령어 구조의 할당을 해제할 수 없습니다."
+
+3 = ZZZZZ, "오류: 클라이언트/서버 연결과 연관된 특성을 검색할 수 없습니다."
+
+4 = ZZZZZ, "오류: '%1!' 서버와의 클라이언트/서버 연결을 끊을 수 없습니다."
+
+5 = ZZZZZ, "오류: CS 라이브러리 연결 구조의 할당을 해제할 수 없습니다."
+
+

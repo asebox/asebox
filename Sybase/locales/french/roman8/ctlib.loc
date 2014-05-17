@@ -1,0 +1,700 @@
+; comment character is semicolon.
+
+
+
+; "ctlib.loc" - Localization file for Client-Library.
+;
+; Sccsid @(#) ctlib.loc 1.8 12/3/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library Default Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdefaults]
+
+1 = ZZZZZ, "Impossible de retrouver la cha—ne en raison d'une rupture de liens en m≈moire"
+
+2 = ZZZZZ, "Impossible de retrouver la cha—ne de messages de la couche"
+
+3 = ZZZZZ, "Impossible de retrouver la cha—ne de messages d'origine"
+
+4 = ZZZZZ, "Cha—ne d'erreur non disponible"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctlayer]
+
+1 = ZZZZZ, "couche api utilisateur"
+
+2 = ZZZZZ, "couche api utilisateur"
+
+3 = ZZZZZ, "couche protocole g≈n≈rique"
+
+4 = ZZZZZ, "couche protocole sp≈cifique"
+
+5 = ZZZZZ, "couche paquet r≈seau"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitions.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctorigin]
+
+1 = ZZZZZ, "erreur externe"
+
+2 = ZZZZZ, "erreur interne Client-Library"
+
+3 = ZZZZZ, "erreur interne biblioth…que r≈seau"
+
+4 = ZZZZZ, "erreur interne biblioth…que commune"
+
+5 = ZZZZZ, "erreur interne biblioth…que intl"
+
+6 = ZZZZZ, "erreur interne routine de gestion async"
+
+7 = ZZZZZ, "erreur interne de gestion de m≈moire"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctapierror]
+
+0 = ZZZZZ, "Validation d'≈tat r≈ussie."
+
+1 = ZZZZZ, "Les informations recherch≈es ne tiennent pas dans un tampon de %1! octets."
+
+
+2 = ZZZZZ, "Erreur d'allocation de m≈moire."
+
+3 = 22023, "Le param…tre %1! ne peut pas ¡tre NULL."
+
+
+4 = 22023, "Lorsque %1! est NULL le param…tre %2! doit ¡tre 0."
+
+
+5 = 22023, "Valeur non admise de %1! donn≈e pour le param…tre %2!."
+
+
+6 = 08000, "Le nombre maximum de connexions a d≈j» ≈t≈ ouvert."
+
+
+7 = ZZZZZ, "Le serveur ne prend pas en charge la fonction KEEP_CON."
+
+
+8 = 22023, "Le param…tre %1! doit ¡tre NULL."
+
+
+9 = 22023, "Le param…tre %1! doit ¡tre CS_UNUSED."
+
+
+10 = 22023, "Les valeurs bool≈ennes doivent ¡tre CS_TRUE ou CS_FALSE."
+
+
+11 = ZZZZZ,	"Impossible d'installer un CS_SIGNAL_CB car la plate-forme ne g…re pas les E/S r≈seau g≈r≈es par interruptions."
+
+
+12 = ZZZZZ,	"Impossible d'installer un CS_COMPLETION_CB car la plate-forme ne fournit pas les fonctions d'interruption ou d'interrogation n≈cessaires."
+
+
+13 = ZZZZZ,	"Impossible de d≈finir cette propri≈t≈ lorsqu'une connexion au serveur a ≈t≈ ≈tablie."
+
+
+14 = ZZZZZ,	"Impossible de d≈finir cette propri≈t≈/fonction."
+
+
+15 = ZZZZZ,	"L'acc…s » cette propri≈t≈/fonction implique une connexion pr≈alable au serveur."
+
+
+16 = ZZZZZ, "Impossible d'appeler cette routine pendant l'attente de r≈sultats d'une commande envoy≈e au serveur."
+
+
+17 = 36001, "La structure de commande supporte d≈j» un curseur d≈clar≈."
+
+
+18 = 24000,	"Un curseur doit ¡tre d≈clar≈ pour que ce type de commande puisse ¡tre initialis≈."
+
+
+19 = ZZZZZ,	"Cette routine ne peut ¡tre appel≈e qu'apr…s initialisation d'une commande CS_SEND_DATA_CMD."
+
+
+20 = ZZZZZ,	"Une commande doit ¡tre initialis≈e pour que cette routine puisse ¡tre appel≈e."
+
+
+21 = ZZZZZ,	"Cette routine ne peut pas ¡tre utilis≈e lorsque le curseur est d≈clar≈ sur la structure de commande."
+
+
+22 = 24000,	"Un curseur a d≈j» ≈t≈ d≈clar≈ sur cette structure de commande."
+
+
+23 = 24000,	"La commande ne peut pas ¡tre initialis≈e une fois le curseur ouvert."
+
+
+24 = 24000,	"Le curseur de cette structure de commande a d≈j» ≈t≈ ouvert."
+
+
+25 = 24000,	"Les mises » jour et les suppressions du curseur sont interdites une fois que ct_fetch() renvoie CS_END_DATA."
+
+
+26 = ZZZZZ,	"Une commande a d≈j» ≈t≈ initialis≈e sur cette structure de commande."
+
+
+27 = ZZZZZ,	"La commande initialis≈e ne peut pas comporter de param…tres."
+
+
+28 = ZZZZZ,	"Une commande a d≈j» ≈t≈ initialis≈e."
+
+
+29 = ZZZZZ,	"Ce type de commande ne peut pas ¡tre trait≈ par lots lorsque la commande est d≈j» ≈t≈ initialis≈e sur la structure de commande."
+
+
+30 = ZZZZZ, "Il est n≈cessaire d'extraire une ligne avant d'utiliser cette routine."
+
+
+31 = 36001,	"Impossible d'initialiser une commande de curseur de lignes apr…s l'initialisation d'une commande d'ouverture du curseur."
+
+
+32 = 08000,	 "Les fonctions de connexion ne g…rent pas ce type de requ¡te."
+
+
+33 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_CURSOR_RESULT."
+
+
+34 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_CMD_DONE."
+
+
+35 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_COMPUTE_RESULT."
+
+
+36 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_COMPFMT_RESULT."
+
+
+37 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_MSG_RESULT."
+
+
+38 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_PARAM_RESULT."
+
+
+39 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_ROWFMT_RESULT."
+
+
+40 = ZZZZZ, "Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_CMD_FAIL."
+
+
+41 = ZZZZZ, "Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_CMD_SUCCEED."
+
+
+42 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_ROW_RESULT."
+
+
+43 = ZZZZZ,	"Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_STATUS_RESULT."
+
+
+44 = ZZZZZ,	"Impossible d'appeler cette routine car une op≈ration asynchrone est en attente."
+
+
+45 = ZZZZZ,	"Erreur interne sur la couche api utilisateur."
+
+
+46 = 22023,	"Une valeur non admise de %1! a ≈t≈ plac≈e dans le champ %2! de la structure CS_DATAFMT."
+
+
+47 = ZZZZZ,	"Lorsque vous d≈finissez des param…tres, vous devez indiquer des noms soit pour tous les param…tres soit pour aucun d'eux."
+
+
+48 = ZZZZZ,	"Le serveur n'accepte pas les param…tres de type %1!."
+
+
+49 = ZZZZZ,	"Impossible d'appeler cette routine car une autre structure de commande est en attente de r≈sultats."
+
+
+50 = ZZZZZ,	"La connexion est indiqu≈e comme arr¡t≈e."
+
+
+51 = 22023,	"Soit %1! soit %2! doit ¡tre non-NULL."
+
+
+52 = ZZZZZ,	"Le traitement d'erreur en ligne doit ¡tre initialis≈ avec l'op≈ration CS_INIT avant que toute autre action ct_diag() puisse ¡tre entreprise."
+
+
+53 = ZZZZZ,	"M≈moire insuffisante pour sauvegarder les messages. Tous les messages stock≈s auparavant ont ≈t≈s supprim≈s."
+
+
+54 = ZZZZZ,	"Le traitement d'erreur en ligne a d≈j» ≈t≈ initialis≈ pour cette structure de connexion."
+
+
+55 = ZZZZZ,	"ATTENTION :  des routines de gestion d'erreurs et de messages existants ont ≈t≈ retir≈es."
+
+
+56 = ZZZZZ,	"La limite de message ne peut pas ¡tre d≈finie » une valeur inf≈rieure au nombre de messages de Client-Library ou du serveur actuellement sauvegard≈s."
+
+
+57 = ZZZZZ,	"Un r≈sultat de type %1! ne peut pas ¡tre li≈ » une variable de programme de type %2!."
+
+
+58 = 22023,	"Le champ format de la structure CS_DATAFMT doit ¡tre CS_FMT_UNUSED si le champ type de donn≈es est %1!."
+
+
+59 = 22023,	"Si le param…tre du tampon est NULL alors le param…tre %1! doit ≈galement ¡tre NULL."
+
+
+60 = ZZZZZ,	"Erreur d'utilisation.  Cette routine a ≈t≈ appel≈e » un moment non admis."
+
+
+61 = ZZZZZ,	"L'≈l≈ment de %1! n'est pas sup≈rieur au plus grand ≈l≈ment li≈."
+
+
+62 = ZZZZZ,	"L'≈l≈ment %1! a d≈j» ≈t≈ lu."
+
+
+63 = ZZZZZ,	"La lecture depuis le serveur a d≈pass≈ le temps imparti."
+
+
+64 = ZZZZZ,	"L'option permettant d'indiquer les fichiers de d≈bogage n'est pas encore g≈r≈e. Toutes les informations de d≈bogage seront orient≈es sur stdout."
+
+
+65 = ZZZZZ,	"Le type de requ¡te d'information de suivi n'est pas encore g≈r≈."
+
+
+66 = ZZZZZ,	"Une structure de contexte doit ¡tre fournie lors de la d≈finition/suppression de ce type d'information de d≈bogage."
+
+
+67 = ZZZZZ,	"Une structure de connexion doit ¡tre fournie lors de la d≈finition/suppression de ce type d'information de d≈bogage."
+
+68 = ZZZZZ,	"Descripteur non trouv≈."
+
+69 = ZZZZZ,	"Un descripteur du nom de %1! existe d≈j» sur la connexion"
+
+70 = 07008,	"Le d≈compte du descripteur de %1! est impossible car il d≈passe le d≈compte maximal de %2!."
+
+72 = ZZZZZ,	"Le descripteur %1! a d≈j» ≈t≈ associ≈ » une structure de commande."
+
+73 = 22023,	"Le champ %1! de la structure CS_DATAFMT doit indiquer la valeur CS_UNUSED."
+
+74 = 22023,	"Lorsque %1! est NULL le champ %2! de la structure CS_DATAFMT doit indiquer la valeur 0."
+
+75 = 07001, "Des d≈finitions de param…tres incoh≈rentes ont ≈t≈ d≈tect≈es au niveau du descripteur dynamique lorsqu'il a ≈t≈ utilis≈ sous forme de param…tres d'entr≈e d'une commande. Toutes les valeurs de descripteur doivent ¡tre d≈finies."
+
+76 = 07001,	"Des noms de param…tres incoh≈rents ont ≈t≈ d≈tect≈s au niveau du descripteur dynamique lorsqu'il a ≈t≈ utilis≈ sous forme de param…tres d'entr≈e d'une commande. Vous devez indiquer un nom soit pour tous les param…tres, soit pour aucun d'eux."
+
+77 = ZZZZZ,	"Un descripteur dynamique est utilis≈ pour les param…tres d'entr≈e ; c'est pourquoi ct_param() ne peut pas ¡tre appel≈."
+
+78 = 02000,	"Aucune ligne n'est affect≈e."
+
+79 = 22003, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a entra—n≈ un d≈passement sup≈rieur."
+
+80 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a entra—n≈ un d≈passement inf≈rieur."
+
+81 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ car une valeur de pr≈cision non admise a ≈t≈ indiqu≈e."
+
+82 = ZZZZZ,	"La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ car une valeur d'≈chelle non admise a ≈t≈ indiqu≈e."
+
+83 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ en raison d'une erreur de syntaxe dans les donn≈es source."
+
+84 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ en raison d'une valeur non admise dans le champ format d'une structure CS_DATAFMT."
+
+85 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ car la valeur du champ source ne faisait pas partie des valeurs admises."
+
+86 = 22012, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ en raison d'une tentative de division par z≈ro."
+
+87 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈ car Client-Library n'a pas pu acc≈der » une ressource."
+
+88 = ZZZZZ, "La liaison de l'≈l≈ment du jeu de r≈sultats %1! a ≈chou≈. La cause de cette erreur est inconnue."
+
+89 = 22002, "Les donn≈es de la colonne %1! sont NULL mais aucun indicateur n'≈tait disponible."
+
+90 = 01004, "Les donn≈es de la colonne %1! ont ≈t≈ tronqu≈es mais aucun indicateur n'≈tait disponible."
+
+91 = ZZZZZ, "La liaison ≈tait manquante pour la colonne %1!."
+
+92 = ZZZZZ,	"Une structure CS_IODESC doit ¡tre renseign≈e avec ct_data_info() pour que ct_send_data() puisse ¡tre appel≈."
+
+93 = ZZZZZ, "Le nombre de %1! octets d≈passe la quantit≈ d'octets indiqu≈e pour cette op≈ration d'envoi de donn≈es.  Seuls %2! octets suppl≈mentaires peuvent ¡tre envoy≈s."
+
+94 = ZZZZZ, "Le nombre d'octets indiqu≈ pour cette op≈ration d'envoi de donn≈es n'a pas ≈t≈ envoy≈. L'envoi de %1! octets suppl≈mentaires est n≈cessaire."
+
+95 = 22001, "La valeur %1! a ≈t≈ tronqu≈e."
+
+96 = ZZZZZ, "Aucune information de survol n'existe."
+
+97 = ZZZZZ,	"Un CS_IODESC ne peut ¡tre recherch≈ que pour des colonnes texte ou image. La colonne %1! n'est pas une colonne texte ou image."
+
+98 = ZZZZZ,	"Impossible de rechercher un CS_IODESC pour une colonne qui n'a pas ≈t≈ lue. La colonne %1! n'a pas ≈t≈ lue."
+
+99 = 0A000,	"Les fonctions ne peuvent pas ¡tre d≈finies apr…s ≈tablissement d'une connexion."
+
+100 = ZZZZZ, "Les fonctions de requ¡te ne peuvent pas ¡tre d≈finies."
+
+101 = ZZZZZ, "Erreur lors de l'initialisation du cache d'erreur de Client-Library."
+
+102 = 0A000, "Cette option n'est pas g≈r≈e par le serveur."
+
+103 = ZZZZZ, "Cette routine ne peut ¡tre appel≈e que si la propri≈t≈ CS_HIDDEN_KEYS » la valeur CS_TRUE."
+
+104 = ZZZZZ, "Ce message ne devrait pas appara—tre."
+
+105 = ZZZZZ, "Erreur inattendue lors de la recherche de donn≈es cl≈s."
+
+106 = ZZZZZ, "La colonne %1! n'est pas une colonne cl≈."
+
+107 = ZZZZZ, "La colonne %1! n'accepte pas les valeurs nulles. Les valeurs de cl≈ de la colonne ne peuvent ¡tre NULL que si la colonne accepte les valeurs NULL."
+
+108 = ZZZZZ, "Les valeurs de cl≈s fournies pour la colonne %1! d≈passent la longueur maximum d≈finie pour la colonne."
+
+109 = ZZZZZ, "Une erreur inattendue s'est produite lors de la d≈finition de donn≈es cl≈s."
+
+110 = 07008, "Il n'existe pas de nombre correct pour le descripteur." 
+
+111 = ZZZZZ, "Ce message ne devrait pas appara—tre."
+
+112 = 00000, "%1! lignes affect≈es."
+
+113 = ZZZZZ, "La structure de commande indiqu≈e pour cette routine comporte des donn≈es de notification ou des donn≈es d'erreur ≈tendues.  Cette routine n'accepte pas ce type de structure de commande."
+
+114 = ZZZZZ, "Des donn≈es d'erreur ≈tendues n'existent pas pour le message %1!."
+
+115 = ZZZZZ, "Un mot de passe distant ne peut pas ¡tre d≈fini lorsqu'il existe d≈j» une connexion » un serveur."
+
+116 = ZZZZZ, "La combinaison fournie nom/mot de passe du serveur d≈passe la limite de 255 octets appliqu≈e par Client-Library."
+
+117 = ZZZZZ, "La propri≈t≈ CS_DISABLE_POLL doit indiquer la valeur CS_FALSE lorsque cette routine est appel≈e."
+
+118 = ZZZZZ, "Impossible d'ouvrir le fichier %1!."
+
+119 = 22023, "Les donn≈es doivent ¡tre NULL lors de la d≈finition des param…tres CS_INPUTVALUE pour une commande ct_cursor(CS_CURSOR_DECLARE)."
+
+120 = 22023, "Le tampon doit ¡tre NULL lorsque le jeu de r≈sultats en cours ne comporte que des informations de format."
+
+121 = ZZZZZ, "Aucune donn≈e n'est associ≈e » l'≈l≈ment de descripteur %1!."
+
+122 = ZZZZZ, "Les r≈sultats sont actuellement recherch≈s dans ce descripteur.  Le d≈compte de descripteur de %1! est inf≈rieur » la taille du jeu de r≈sultats de %2!."
+
+123 = ZZZZZ, "Un descripteur a d≈j» ≈t≈ sp≈cifi≈ pour la commande en cours."
+
+124 = ZZZZZ, "ct_param()  a d≈j» ≈t≈ utilis≈ pour d≈finir des param…tres de la commande."
+
+125 = ZZZZZ, "Un descripteur de taille %1! ne suffit pas pour un jeu de r≈sultats de taille %2!."
+
+126 = ZZZZZ, "Une autre structure de commande utilise le descripteur."
+
+127 = ZZZZZ, "Cette routine ne peut pas ¡tre appel≈e si ct_bind() a d≈j» ≈t≈ appel≈ pour le jeu de r≈sultats."
+
+128 = 22023, "Le champ type de donn≈es d'un CS_IODESC doit indiquer les valeurs CS_TEXT_TYPE ou CS_IMAGE_TYPE."
+
+129 = 22023, "Une localisation incorrecte a ≈t≈ fournie dans la structure %1!."
+
+130 = 22023, "Une pr≈cision ou ≈chelle incorrecte dans la valeur CS_NUMERIC ou CS_DECIMAL a ≈t≈ fournie."
+
+131 = ZZZZZ, "Impossible de d≈finir ou d'initialiser la zone m≈moire s'il existe des connexions ouvertes sur la structure de contexte."
+
+132 = 22001, "La liaison d'un ≈l≈ment du jeu de r≈sultats %1! a g≈n≈r≈ une troncature."
+
+133 = 02000, "Aucune ligne n'est affect≈e.  D'autres jeux de r≈sultats suivent."
+
+134 = ZZZZZ, "L'id sp≈cifi≈ existe d≈j» sur cette connexion."
+
+135 = ZZZZZ, "L'id sp≈cifi≈ n'existe pas sur cette connexion."
+
+136 = 22023, "Une cha—ne de longueur 0 n'est pas autoris≈e pour le param…tre %1!."
+
+137 = ZZZZZ, "Le num≈ro de liaison de %1! ne co›ncide pas avec le num≈ro fourni pour les liaisons existantes. Le num≈ro de liaison courant est %2!."
+
+138 = ZZZZZ, "Une longueur de donn≈es de %1! d≈passe la longueur maximale admise pour les donn≈es %2!."
+
+139 = ZZZZZ, "La d≈finition de la pr≈cision ou de l'≈chelle pour la valeur CS_SRC_VALUE n'est permise que si la colonne du jeu de r≈sultats correspondant est de type num≈rique ou d≈cimal."
+
+140 = ZZZZZ, "La valeur d'≈chelle ne peut pas d≈passer la valeur de pr≈cision."
+
+141 = 22023, "%1! doit avoir la valeur 0 ou CS_UNUSED lorsque %2! est NULL."
+
+142 = ZZZZZ, "Cette propri≈t≈ ne peut ¡tre utilis≈e que dans l'action Client-Library appropri≈e.  Cette propri≈t≈ ne peut pas ¡tre utilis≈e dans le code g≈n≈ral."
+
+143 = ZZZZZ, "Impossible de d≈finir un nombre maximum de connexions inf≈rieur au nombre de connexions existantes."
+
+144 = ZZZZZ, "Cette propri≈t≈ ne peut ¡tre utilis≈e que s'il existe un curseur sur la structure de commande."
+
+145 = ZZZZZ, "Impossible de d≈finir cette propri≈t≈ lorsque la structure de commande comporte des r≈sultats en attente ou un curseur ouvert."
+
+146 = ZZZZZ, "La structure CS_LOCALE fournie est incorrecte."
+
+147 = ZZZZZ, "Cette routine ne peut ¡tre utilis≈e qu'avec la version de d≈bogage de Client-Library."
+
+148 = ZZZZZ, "Le routine de gestion async de Client-Library n'a pas pu continuer. Cette connexion a ≈t≈ marqu≈e » l'arr¡t."
+
+149 = ZZZZZ, "La cl≈ de la ligne courante a ≈t≈ partiellement d≈finie avec ct_keydata().  Chaque colonne cl≈ doit ¡tre d≈finie avec ct_keydata() pour que cette op≈ration puisse continuer."
+
+150 = ZZZZZ, "Impossible d'appeler cette routine car la structure du contexte est dans un ≈tat ind≈fini. Ceci est probablement d√ » une erreur ct_exit()." 
+
+151 = ZZZZZ, "Une connexion au serveur doit exister sur la structure de connexion pour que cette routine puisse ¡tre appel≈e." 
+
+152 = ZZZZZ, "Une structure de commande doit ¡tre fournie pour une op≈ration CS_CANCEL_CURRENT."
+
+153 = ZZZZZ, "Impossible d'appeler cette routine lorsqu'une connexion » un serveur existe sur la structure CS_CONNECTION."
+
+154 = ZZZZZ, "Impossible d'appeler cette routine car la structure de connexion est dans un ≈tat ind≈fini." 
+
+155 = ZZZZZ, "Impossible d'appeler cette routine lorsque la structure de commande est en veille."
+
+156 = ZZZZZ, "Impossible d'appeler cette routine lorsque la commande a ≈t≈ initialis≈e, mais pas envoy≈e."
+
+157 = ZZZZZ, "Impossible d'appeler cette routine jusqu'» ce que ct_results() ait ≈t≈ appel≈ pour la commande envoy≈e au serveur."
+
+158 = ZZZZZ, "Cette routine ne peut ¡tre appel≈e que si des r≈sultats extractibles sont disponibles en lecture."
+
+159 = ZZZZZ, "Cette routine ne peut ¡tre appel≈e que si la structure de commande est en veille."
+
+160 = ZZZZZ, "Cette routine ne peut ¡tre appel≈e que si les lignes du curseur sont disponibles pour lecture."
+
+161 = ZZZZZ, "Cette routine ne peut ¡tre appel≈e que si des r≈sultats de ligne identiques sont disponibles."
+
+162 = ZZZZZ, "Une op≈ration d'≈mulation de r≈ception est non admise lorsque la connexion est en train de traiter des r≈sultats de mani…re standard."
+
+163 = 21000, "Cette routine ne peut pas ¡tre appel≈e tant que tous les r≈sultats pouvant ¡tre extraits n'ont pas ≈t≈ compl…tement trait≈s."
+
+164 = ZZZZZ, "Cette routine ne peut ¡tre appel≈e que si les r≈sultats de calculs sont disponibles."
+
+165 = ZZZZZ, "Impossible d'appeler cette routine lors de l'initialisation d'une commande curseur imbriqu≈e."
+
+166 = ZZZZZ, "Impossible d'appeler cette routine tant que les r≈sultats d'une commande curseur imbriqu≈e ne sont pas compl…tement trait≈s."
+
+167 = ZZZZZ, "Impossible d'appeler cette routine lorsque la structure de commande est dans un ≈tat ind≈fini." 
+
+168 = ZZZZZ, "Impossible d'appeler cette routine car une op≈ration d'≈mulation de r≈ception est en cours sur cette structure de commande."
+
+169 = ZZZZZ, "Impossible d'appeler cette routine car une op≈ration d'≈mulation d'envoi est en cours sur cette structure de commande."
+
+170 = ZZZZZ, "Impossible d'appeler cette routine lorsque ct_results() a renvoy≈ un type de r≈sultat CS_DESCRIBE_RESULT."
+
+171 = 24000, "Un curseur doit ¡tre ouvert pour que ce type de commande puisse ¡tre initialis≈."
+
+172 = ZZZZZ, "Impossible d'appeler cette routine car la structure CS_COMMAND est en cours d'envoi de donn≈es."
+
+173 = ZZZZZ, "Un ≈tat retour de CS_PENDING doit ¡tre renvoy≈ de l'action de compl≈tion si des op≈rations async suppl≈mentaires ont ≈t≈ lanc≈es."
+
+174 = ZZZZZ, "Une structure de contexte doit ¡tre fournie lors de la d≈finition/suppression de ce type d'action."
+
+175 = ZZZZZ, "Aucune routine de gestion d'actions n'est install≈e pour le signal %1!."
+
+176 = ZZZZZ, "Le serveur ne prend pas en charge les param…tres nuls du type %1!."
+
+177 = 22023, "La longueur du param…tre de cha—ne termin≈ par une valeur nulle %1! d≈passe la limite maximale autoris≈e."
+
+178 = ZZZZZ, "Impossible d'appeler cette routine avant qu'au moins un appel de ct_send_data() n'ait ≈t≈ effectu≈."
+
+179 = 24000, "Une ligne de curseur doit ¡tre recherch≈e pour que cette commande puisse ¡tre initialis≈e."
+
+180 = ZZZZZ, "Cette commande doit ¡tre ex≈cut≈e imm≈diatement apr…s initialisation d'une commande CS_CURSOR_DECLARE."
+
+181 = 24000, "Cette commande n'est pas autoris≈e lorsque le curseur est ferm≈."
+
+182 = 24000, "Cette commande n'est pas autoris≈e lorsque toutes les lignes du curseur ont ≈t≈ extraites."
+
+183 = ZZZZZ, "Une erreur a ≈t≈ renvoy≈e par le serveur lors du param≈trage des options, reportez-vous au message serveur pour plus de d≈tails."
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Generic Protocol Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctgperror]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The TDS Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cttdserror]
+
+1 = ZZZZZ, "Erreur de protocole tds. Fin pr≈matur≈e du flux de donn≈es." 
+
+2 = ZZZZZ, "Erreur de protocole tds. R≈ception d'une version non admise de tds." 
+
+3 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ≈tat de connexion non admis." 
+
+4 = ZZZZZ, "Erreur de protocole tds. Trop d'octets dans le flux de donn≈es." 
+
+5 = ZZZZZ, "Erreur d'allocation de m≈moire."
+
+6 = ZZZZZ, "Erreur de protocole tds. Double ALT ID d≈tect≈ lors du traitement des r≈sultats." 
+
+7 = ZZZZZ, "Erreur de protocole tds. Op≈rateur ALT incorrect d≈tect≈ lors du traitement des r≈sultats." 
+
+8 = ZZZZZ, "Erreur de protocole tds. ALT Id incorrect d≈tect≈ lors du traitement des r≈sultats." 
+
+9 = ZZZZZ, "Erreur de protocole tds. D≈compte de colonne ALT incorrect d≈tect≈ lors du traitement des r≈sultats." 
+
+10 = ZZZZZ, "Erreur de protocole tds. Nombre de colonnes incorrect d≈tect≈ lors du traitement des r≈sultats." 
+
+11 = ZZZZZ, "Erreur de protocole tds. Index de table incorrect d≈tect≈ lors du traitement des r≈sultats." 
+
+12 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ≈tat de survol non admis." 
+
+13 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un type de fonction non admis." 
+
+14 = 34000, "Erreur de protocole tds. R≈ception d'un nom de curseur incorrect." 
+
+15 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un identificateur de curseur double." 
+
+16 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un identificateur de curseur incorrect."
+
+17 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un d≈compte de lignes de curseur incorrect." 
+
+18 = 24000, "Erreur de protocole tds. R≈ception d'un ≈tat de curseur incorrect." 
+
+19 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ≈tat DONE incorrect." 
+
+20 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un flux de jetons DONEINPROC non admis." 
+
+21 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ≈tat dynamique incorrect." 
+
+22 = ZZZZZ, "Erreur de protocole tds. R≈ception d'une longueur d'instruction dynamique incorrecte." 
+
+23 = 07000, "Erreur de protocole tds. R≈ception d'un type dynamique incorrect." 
+
+24 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un identificateur dynamique incorrect." 
+
+25 = ZZZZZ, "Erreur de protocole tds. R≈ception d'une taille de paquet incorrecte." 
+
+26 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un type ENVCHANGE non admis." 
+
+27 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ≈tat de message incorrect." 
+
+28 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un jeton non admis." 
+
+29 = ZZZZZ, "Erreur de protocole tds. R≈ception d'une option de commande incorrecte." 
+
+30 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un type d'option incorrect." 
+
+31 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un flux orderby incorrect." 
+
+32 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un PARAMFMT sans param…tres sp≈cifi≈s." 
+
+33 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un flux PARAMFMT incorrect." 
+
+34 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ROWFMT sans sp≈cification de colonne." 
+
+35 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un flux ROWFMT incorrect." 
+
+36 = ZZZZZ, "Erreur d'≈tat machine tds. R≈ception d'une s≈quence de jeton tds non admise." 
+
+37 = ZZZZZ, "Erreur d'≈tat machine tds. Les r≈sultats de l'op≈ration tent≈e sont en attente. Erreur interne." 
+
+38 = ZZZZZ, "Erreur de connexion tds. Nombre de param…tres incorrect d≈tect≈ pendant la n≈gociation." 
+
+39 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un identificateur de message incorrect pendant la n≈gociation de connexion." 
+
+40 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un ≈tat de colonne incorrect." 
+
+41 = ZZZZZ, "Erreur de protocole tds. R≈ception d'un type de donn≈es incorrect." 
+
+42 = ZZZZZ, "Erreur de protocole tds. R≈ception d'une pr≈cision num≈rique incorrecte." 
+
+43 = ZZZZZ, "Erreur de protocole tds. R≈ception d'une ≈chelle num≈rique incorrecte." 
+
+44 = 08001,	"Echec de la tentative de connexion au serveur."
+
+45 = ZZZZZ, "Erreur interne de la couche tds. Echec de l'acc…s » la routine de gestion du tampon de la ligne."
+
+46 = ZZZZZ, "Erreur de connexion tds. Le serveur a tent≈ de coder un mot de passe, mais aucune routine de gestion de codage n'≈tait install≈e."
+
+47 = ZZZZZ, "Erreur de connexion tds. La routine de gestion de codage install≈e a renvoy≈ un ≈tat diff≈rent de CS_SUCCEED."
+
+48 = ZZZZZ, "Erreur de connexion tds. Le serveur a tent≈ d'≈mettre un challenge de s≈curit≈, mais aucune routine de gestion de challenge n'≈tait install≈e."
+
+49 = ZZZZZ, "Erreur de connexion tds. La routine de gestion de challenge install≈e a renvoy≈ un ≈tat diff≈rent de CS_SUCCEED."
+
+50 = ZZZZZ, "Erreur interne de couche tds. Erreur renvoy≈e par le serveur lors du traitement d'un flux tds interne."
+
+51 = ZZZZZ, "Erreur interne de couche tds. Erreur inattendue renvoy≈e par la biblioth…que commune."
+
+52 = ZZZZZ, "Erreur interne de couche tds. Erreur inattendue renvoy≈e par la routine de gestion async."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Network Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctnperror]
+
+1 = 01002, "Erreur lors de la fermeture de la connexion."
+
+2 = ZZZZZ, "Erreur lors de la lib≈ration de l'adresse."
+
+3 = ZZZZZ, "Erreur lors de la r≈solution de l'adresse."
+
+4 = 08001, "Erreur lors de l'≈tablissement de la connexion."
+
+5 = ZZZZZ, "Erreur lors de l'ex≈cution d'acc≈l≈ration de l'≈criture."
+
+6 = ZZZZZ, "Erreur lors de l'ex≈cution de la lecture r≈seau."
+
+7 = ZZZZZ, "Erreur lors de l'ex≈cution de l'≈criture r≈seau."
+
+8 = ZZZZZ, "Erreur lors de l'ouverture du dictionnaire d'adresses."
+
+9 = ZZZZZ, "Erreur lors de la fermeture du dictionnaire d'adresses."
+
+10 = ZZZZZ, "Tentative de lecture sur une connexion ex≈cutant d≈j» une op≈ration de lecture."
+
+11 = ZZZZZ, "Tentative d'≈criture sur une connexion ex≈cutant d≈j» une op≈ration d'≈criture."
+
+12 = ZZZZZ, "Erreur d'≈tat : tentative d'≈criture alors que la connexion est en attente d'une op≈ration de lecture."
+
+13 = ZZZZZ, "Erreur d'≈tat : tentative de lecture alors que la connexion est en attente d'une op≈ration d'≈criture."
+
+14 = ZZZZZ, "Le tampon est trop petit pour contenir la totalit≈ d'un paquet."
+
+15 = ZZZZZ, "Lecture sur le r≈seau alors que des donn≈es de la derni…re op≈ration de lecture n'ont pas ≈t≈ trait≈es."
+
+16 = ZZZZZ, "Erreur lors de l'acc…s aux informations d'adresse."
+
+17 = ZZZZZ, "Erreur lors de l'acc…s » la propri≈t≈ des adresses."
+
+18 = ZZZZZ, "Erreur sur le paquet reµu par le protocole. Longueur non admise reµue"
+
+128 = ZZZZZ, "Erreur lors de l'initialisation de l'archivage des options r≈seau."
+
+129 = ZZZZZ, "Erreur lors de la d≈finition d'une option r≈seau."
+
+130 = ZZZZZ, "inutilis≈."
+
+131 = ZZZZZ, "Erreur lors de l'initialisation de Net-Library."
+
+132 = ZZZZZ, "Erreur lors de l'initialisation de la machine Net-Library."
+
+133 = ZZZZZ, "Erreur lors de la d≈finition d'action de Net-Library."
+
+134 = ZZZZZ, "Erreur lors de la sortie de la machine Net-Library."
+
+135 = ZZZZZ, "Erreur lors de la sortie de Net-Library."
+
+136 = ZZZZZ, "Erreur lors de la d≈finition du mode d'action Net-Library."
+
+137 = ZZZZZ, "Erreur lors du cha—nage de signaux dans Net-Library."
+
+

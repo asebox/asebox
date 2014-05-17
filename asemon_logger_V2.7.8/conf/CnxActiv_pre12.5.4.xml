@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CnxActiv </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > 
+     set forceplan on 
+     select Loggedindatetime = loggedindatetime ,Kpid = P.kpid , Spid = P.spid ,CPUTime ,WaitTime ,LogicalReads ,PhysicalReads ,PagesRead ,PhysicalWrites ,PagesWritten ,ScanPgs =  TableAccesses,IdxPgs = IndexAccesses,TmpTbl = TempDbObjects,UlcBytWrite =  ULCBytesWritten, UlcFlush = ULCFlushes, ULCFlushFull,Transactions ,Commits ,Rollbacks ,PacketsSent ,PacketsReceived ,BytesSent ,BytesReceived ,LocksHeld ,tran_name ,proc_name=object_name(P.id,P.dbid) ,linenum ,memusage , P.dbid, tmp_pages=0
+     from master..sysprocesses P , master..monProcessActivity A, master..monProcessNetIO N 
+     where P.kpid=A.KPID and N.KPID=P.kpid 
+     set forceplan off 
+  </SQL>
+  <key1 > Loggedindatetime </key1>
+  <key2 > Kpid </key2>
+  <key3 > Spid </key3>
+  <filterCol > #filter_if_no_change# </filterCol>
+  <delay > 30 </delay>
+  <colsCalcDiff >                 
+     <COL> CPUTime                 </COL>
+     <COL> LogicalReads                 </COL>
+     <COL> PhysicalReads                 </COL>
+     <COL> PagesRead                 </COL>
+     <COL> PhysicalWrites                 </COL>
+     <COL> PagesWritten                 </COL>
+     <COL> ScanPgs                 </COL>
+     <COL> IdxPgs                 </COL>
+     <COL> TmpTbl                 </COL>
+     <COL> UlcBytWrite                 </COL>
+     <COL> UlcFlush                 </COL>
+     <COL> ULCFlushFull                 </COL>
+     <COL> Transactions                 </COL>
+     <COL> Commits                 </COL>
+     <COL> Rollbacks                 </COL>
+     <COL> PacketsSent                 </COL>
+     <COL> PacketsReceived                 </COL>
+     <COL> BytesSent                 </COL>
+     <COL> BytesReceived                 </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CnxActiv (
+     Timestamp datetime not null,
+     Interval int not null,
+     Loggedindatetime datetime not null,
+     Kpid int null,
+     Spid int null,
+     CPUTime int null,
+     WaitTime int null,
+     LogicalReads int null,
+     PhysicalReads int null,
+     PagesRead int null,
+     PhysicalWrites int null,
+     PagesWritten int null,
+     ScanPgs int null,
+     IdxPgs int null,
+     TmpTbl int null,
+     UlcBytWrite int null,
+     UlcFlush int null,
+     ULCFlushFull int null,
+     Transactions int null,
+     Commits int null,
+     Rollbacks int null,
+     PacketsSent int null,
+     PacketsReceived int null,
+     BytesSent int null,
+     BytesReceived int null,
+     LocksHeld int null,
+     tran_name varchar(30) null,
+     proc_name varchar(30) null,
+     linenum int null,
+     memusage int null,
+     dbid     int null,
+     tmp_pages int null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CnxActiv (Timestamp, Loggedindatetime, Kpid, Spid, Interval )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CnxActiv" >
+  delete ?SERVERNAME?_CnxActiv from ?SERVERNAME?_CnxActiv (index idx) where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

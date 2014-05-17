@@ -1,0 +1,22 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#)binary.srt	84.1	6/23/93
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Shift JIS character set, this sort order is a
+;   binary ordering.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_sjis
+menuname = "Binary ordering, for the Japanese Shift JIS character set (sjis)."
+charset = sjis
+
+description = "Binary sort order for Japanese using the Shift JIS character set (sjis)."
+
+binary = "true"

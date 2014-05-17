@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > IQCnx </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > 
+    select *,
+       case when charindex('HOST=',connection_property('AppInfo',ConnHandle)) != 0 then
+          substring(substring(
+          connection_property('AppInfo',ConnHandle),
+          charindex('HOST=',connection_property('AppInfo',ConnHandle))+5 ),
+          1,
+          charindex(';',substring(
+             connection_property('AppInfo',ConnHandle)+';',
+             charindex('HOST=',connection_property('AppInfo',ConnHandle))+6 )
+       ))
+           else null
+       end as Hostname,
+       case when charindex('EXE=',connection_property('AppInfo',ConnHandle)) != 0 then
+       substring(substring(
+          connection_property('AppInfo',ConnHandle),
+          charindex('EXE=',connection_property('AppInfo',ConnHandle))+4 ),
+          1,
+          charindex(';',substring(
+             connection_property('AppInfo',ConnHandle),
+             charindex('EXE=',connection_property('AppInfo',ConnHandle))+5 )
+       ))
+       else null
+       end as Programname,
+       case connection_property('ClientLibrary',ConnHandle)
+            when 'CmdSeq' then 'ODBC'
+            else connection_property('ClientLibrary',ConnHandle)
+       end as ClientLibrary
+   from sp_iqconnection ()
+ </SQL>
+  <key1 > ConnHandle </key1>
+  <key2 > IQconnID </key2>
+  <key3 > ConnCreateTime </key3>
+  <filterCol > </filterCol>
+  <delay > 30 </delay>
+  <colsCalcDiff >                 
+     <COL> satoiq_count         </COL>
+     <COL> iqtosa_count         </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_IQCnx (
+     Timestamp               datetime not null,
+     Interval                int not null,
+     ConnHandle              unsigned bigint not null,
+     Name                    varchar(255) null,
+     Userid                  varchar(255) null,
+     LastReqTime             varchar(255) null,
+     ReqType                 varchar(255) null,
+     IQCmdType               char(32) null,
+     LastIQCmdTime           datetime null,
+     IQCursors               integer null,
+     LowestIQCursorState     char(16) null,
+     IQthreads               integer null,
+     TxnID                   unsigned bigint null,
+     ConnCreateTime          datetime null,
+     TempTableSpaceKB        unsigned bigint null,
+     TempWorkSpaceKB         unsigned bigint null,
+     IQconnID                unsigned bigint null,
+     satoiq_count            unsigned bigint null,
+     iqtosa_count            unsigned bigint null,
+     CommLink                varchar(255) null,
+     NodeAddr                varchar(255) null,
+     LastIdle                integer null,
+     Dbremote                char(1) null,
+     Hostname                varchar(32) null,
+     Programname             varchar(64) null,
+     ClientLibrary           varchar(14) null
+  )
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_IQCnx (Timestamp, Interval, ConnHandle, IQconnID)
+     </I>
+     <I>
+  create index idx1 on ?SERVERNAME?_IQCnx (ConnCreateTime, IQconnID, ConnHandle)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_IQCnx" >
+  delete ?SERVERNAME?_IQCnx where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

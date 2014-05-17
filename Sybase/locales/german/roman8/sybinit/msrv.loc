@@ -1,0 +1,35 @@
+; comment character is semicolon.
+; "msrv.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) msrv.hdr 101.1 1/21/94 19:19:48
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+1                = "Server '%1!' ist kein Sybase Monitor Server.",        "%s"
+10        = "Aktualisierung des Eintrags fœr den Monitor Server in der Interface-Datei",        ""
+11        = "Aktualisierung der Runserver-Datei des Monitor Servers",                ""
+12        = "Booten des Monitor Servers",                                ""
+13        = "Starten des Monitor Servers",                                ""
+450        = "Konfiguration des Monitor Servers jetzt ausfœhren? ",  ""
+451                = "Kein Eintrag in der Interface-Datei fœr '%1!' vorhanden. Erstellen Sie einen Eintrag in der Interface-Datei fœr '%2!', bevor Sie die Konfiguration ausfœhren.",        "%s %s"
+500        = "Der Monitor Server '%1!' wurde konfiguriert. Die neue Konfiguration wird wirksam, wenn der Monitor Server das nÃchste Mal gestartet wird. ",        "%s"
+501         = "Aktualisierung des Eintrags fœr den Monitor Server in der Registrierung",        ""         
+502        = "Erstellung des Eintrags im Dienststeuerungs-Manager (Service Control Manager) fœr Monitor Server '%1!' nicht mŒglich. Das Betriebssystem meldet einen Fehler: '%2!'",        "%s%s"
+
+; End of section.

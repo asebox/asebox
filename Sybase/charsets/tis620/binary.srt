@@ -1,0 +1,34 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Thailand Industrial Standard character set, this is a binary sort order.
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Oct 30 1995  8:03AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+; All rights reserved.
+; Use, duplication, or disclosure by the United States
+; Government is subject to restrictions as set forth in
+; FARS subparagraphs 52.227-19(a)-(d) for civilian
+; agency contracts and DFARS 252.227-7013(c)(1)(ii)
+; for Department of Defense contracts. Sybase reserves
+; all unpublished rights under the copyright laws of
+; the United States.
+; Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_tis620
+menuname = "Binary order"
+charset = tis620
+ 
+description = "Binary sort order for the Thailand Industrial Standard character set (tis620)."
+ 
+binary = "true"

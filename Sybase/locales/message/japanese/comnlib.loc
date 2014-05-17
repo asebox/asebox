@@ -1,0 +1,89 @@
+; comment character is semicolon.
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "メモリが不足しているため文字列を取得できません。"
+
+2 = ZZZZZ, "レイヤ・メッセージ文字列を取得できません。"
+
+3 = ZZZZZ, "オリジンのメッセージ文字列を取得できません。"
+
+4 = ZZZZZ, "エラー文字列が使用可能ではありません。"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "ユーザ api レイヤ"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "外部エラー"
+
+2 = ZZZZZ, "内部 Client Library エラー"
+
+3 = ZZZZZ, "内部 Net Library エラー"
+
+4 = ZZZZZ, "内部 Common Library エラー"
+
+5 = ZZZZZ, "内部 intl library エラー"
+
+6 = ZZZZZ, "内部 async manager エラー"
+
+7 = ZZZZZ, "内部メモリ管理エラー"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "エラーはありません。"
+
+1 = ZZZZZ, "原因不明のエラーです。"
+
+2 = ZZZZZ, "メモリ割り当てができません。"
+
+3 = ZZX04, "読み込みのための設定ファイル %1! のオープンができません。"
+
+4 = ZZX05, "設定 %1! が削除されています (CS_FORCE)。"
+
+5 = ZZX06, "設定ファイル名 %1! が長すぎます。"
+
+6 = ZZX07, "ファイル・フォーマット・エラー。行 %1! に正しくない文字があります。"
+
+7 = ZZX08, "設定セクション %1! がありません。"
+
+8 = 01X09, "設定ファイルの行 %1!、(%2!) 付近に構文エラーがあります。"
+
+9 = 01X0A, "設定 %1! が、使用中に削除されました (CS_FORCE)。"
+

@@ -1,0 +1,35 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1994 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+1 		= "Failed to initialize library '%1!'.",		"%s"
+2 	= "'%1!' is an unknown internal TCP/IP number.",	"%d"
+3 	= "'%1!' is an unknown internal protocol number.",	"%d"
+100		= "Could not initialize '%1!'.",			"%s"
+101		= "Successfully initialized '%1!'.",			"%s"
+200			= "initialize Net Libs",				""
+201			= "initialize Open Server Library",			""
+202			= "initialize Open Client Library",			""
+203			= "initialize Embedded SQL C Precompiler",		""
+204			= "initialize Embedded SQL COBOL Precompiler",	""
+205			= "initialize XA Library",			""
+; End of section.

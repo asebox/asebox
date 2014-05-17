@@ -1,0 +1,78 @@
+; cpyblob.loc -- Localization message file for cpyblob, an Open Client 
+;   application ; ; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Incapaz de utilizar la base de datos '%1!'." 
+2 = ZZZZZ, "Incapaz de recuperar los datos de la tabla y obtener el descriptor \\nde datos de tipo texto o imagen."
+3 = ZZZZZ, "Incapaz de actualizar la tabla con los nuevos datos de tipo texto o imagen."
+4 = ZZZZZ, "Fallo al crear tabla."
+5 = ZZZZZ, "Fallo al suprimir tabla."
+6 = ZZZZZ, "Consulta SQL incorrecta."
+7 = ZZZZZ, "Fallo al examinar los resultados de la consulta."
+8 = ZZZZZ, "La consulta de SQL devolvió varias filas. Se esperaba que devolviera exactamente \\nuna fila."
+9 = ZZZZZ, "La consulta de SQL devolvió cero filas. Se espera que devolviera exactamente \\nuna fila."
+10 = ZZZZZ, "El archivo '%1!' no puede abrirse. Asegúrese de que el archivo existe y de que tiene permiso de escritura."
+11 = ZZZZZ, "El archivo '%1!' no puede abrirse. Asegúrese de que el archivo existe y de que se puede leer."
+12 = ZZZZZ, "El archivo '%1!' no puede cerrarse. Asegúrese de que el archivo existe y de que ya está abierto."
+13 = ZZZZZ, "El archivo '%1!' no se puede suprimir. Asegúrese de que el archivo existe y tiene permiso para suprimirlo."
+14 = ZZZZZ, "El tamaño del archivo '%1!' es 0. Asegúrese de que el archivo no está vacío."
+15 = ZZZZZ, "La unidad de capacidad '%1!' no existe."
+16 = ZZZZZ, "Fallo al procesar marca horaria."
+17 = ZZZZZ, "Error interno: ct_send_data() ha fallado."
+18 = ZZZZZ, "Error interno: ct_get_data() ha fallado."
+19 = ZZZZZ, "Error interno: ct_data_info() ha fallado."
+20 = ZZZZZ, "La longitud de '%1!' excede la longitud máxima de '%2!' bytes."
+21 = ZZZZZ, "No es posible ejecutar este comando porque no están activados los servicios\\nJava. Un usuario de nivel de Administrador del sistema (SA) \\ndebe volver a configurar el sistema para activar Java."
+
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "El nombre del servidor especificado por la variable de entorno DSQUERY no es \\nválido o DSQUERY no se ha establecido desde el entorno."
+2 = ZZZZZ, "Nombre de inicio de sesión de usuario incorrecto o no se ha definido el nombre de inicio de sesión desde el entorno."
+3 = ZZZZZ, "El directorio especificado por la variable de entorno SYBASE no es correcto o no se ha establecido SYBASE desde el entorno."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+
+1 = ZZZZZ, "Fallo al inicializar la aplicación del cliente."
+2 = ZZZZZ, "'%1!' ha fallado. Compruebe los mensajes de error anteriores."
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Error fatal: incapaz de asignar memoria."
+2 = ZZZZZ, "Incapaz de establecer las propiedades de conexión."
+3 = ZZZZZ, "Incapaz de establecer conexión."
+4 = ZZZZZ, "Objeto de localización desconocido. Utilizando valor predeterminado '%1!'."
+5 = ZZZZZ, "Error interno: se ha pasado un tipo de localización no válido a cs_locale()."
+6 = ZZZZZ, "Error de sintaxis en '%1!'."
+7 = ZZZZZ, "Error al intentar cargar un par de tablas de traducción."
+8 = ZZZZZ, "Interrupción - Programa cancelado."
+
+
+
+
+
+
+
+

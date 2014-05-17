@@ -1,0 +1,27 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Microsoft Windows Code Page 1257, Baltic character set, this is a binary sort order.
+;
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 27 1998  3:01PM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp1257
+menuname = "Binary ordering, for the Microsoft Windows Code Page 1257, Baltic character set (cp1257)."
+charset = cp1257
+ 
+description = "Binary sort order for the Microsoft Windows Code Page 1257, Baltic character set (cp1257)."
+ 
+binary = "true"

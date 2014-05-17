@@ -1,0 +1,213 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "O nome de servidor do Adaptive Server Enterprise no arquivo de saída Optdiag\\nnão coincide com o nome de servidor atual do Adaptive Server Enterprise."
+10 = ZZZZZ, "A versão do Adaptive Server Enterprise no arquivo de saída Optdiag\\nnão coincide com a versão atual do Adaptive Server Enterprise."
+11 = ZZZZZ, "O nome '%1!' não coincide com o nome de tabela especificado '%2!'."
+12 = ZZZZZ, "Problemas de aspas duplas no seguinte string:"
+13 = ZZZZZ, "Não há string de valor na seguinte linha:"
+14 = ZZZZZ, "O nome de coluna '%1!' não coincide com o nome da coluna especificada '%2!'."
+15 = ZZZZZ, "A atualização das estatísticas da coluna falhou."
+16 = ZZZZZ, "O nome de coluna '%1!' do histograma não coincide com o nome de coluna\\n'%2!' anterior para estatísticas diversas."
+17 = ZZZZZ, "Na etapa %1! do histograma, para '%2!.%3!.%4!', "
+18 = ZZZZZ, "há um problema com o número de aspas duplas."
+19 = ZZZZZ, "impossível ler os dados. "
+20 = ZZZZZ, "a etapa número 1 era esperada."
+21 = ZZZZZ, "o número da etapa não aumentou de 1."
+22 = ZZZZZ, "o peso cumulativo do histograma excedeu de 1.0, mais uma margem de erro. "
+23 = ZZZZZ, "duas células adjacentes não podem utilizar o operador <."
+24 = ZZZZZ, "No histograma para '%1!.%2!.%3!',"
+26 = ZZZZZ, "Falha ao iníciar a transação."
+27 = ZZZZZ, "A atualização das estatísticas do histograma falhou."
+28 = ZZZZZ, "A eliminação das estatísticas do histograma falhou."
+29 = ZZZZZ, "A inserção dos pesos do histograma falhou."
+30 = ZZZZZ, "A transação commit falhou."
+31 = ZZZZZ, "O banco de dados '%1!' não existe neste servidor."
+32 = ZZZZZ, "O proprietário da tabela especificada não possui uma tabela no banco de dados '%1!'."
+33 = ZZZZZ, "O usuário '%1!' não existe no banco de dados '%2!'."
+34 = ZZZZZ, "A tabela '%1!' não pertence ao usuário '%2!' neste banco de dados."
+35 = ZZZZZ, "A tabela '%1!' não existe no banco de dados '%2!'."
+36 = ZZZZZ, "A tabela '%1!' não contém a coluna '%2!'."
+37 = ZZZZZ, "Não há estatísticas em systabstats para este índice."
+38 = ZZZZZ, "O tipo de dados '%1!' não é suportado pelo Optdiag."
+39 = ZZZZZ, "O tipo de dados '%1!' de comprimento %2! não é suportado pelo Optdiag."
+40 = ZZZZZ, "Nenhuma estatística foi encontrada em sysstatistics para esta coluna ou grupo de colunas."
+41 = ZZZZZ, "Nenhum dado de histograma foi encontrado em sysstatistics para esta coluna ou\\ngrupo de colunas."
+42 = ZZZZZ, "Erro interno com trace flag 3."
+43 = ZZZZZ, "Erro interno: Os proprietários da tabela '%1!' e da tabela '%2!' estão repetidos."
+44 = ZZZZZ, "Erro interno: ct_results() retornou resultado inesperado do tipo %1!."
+45 = ZZZZZ, "Erro interno: o comprimento dos dados não coincide em ct_fetch()."
+48 = ZZZZZ, "valor inesperado %1!"
+; Next is "EN: returned", as in "a function returned a value".
+; BR: O próximo foi "retornou", como em "uma função retornou um valor".
+49 = ZZZZZ, "retornou"
+50 = ZZZZZ, "Erro interno: ct_results() retornou um resultado do tipo CS_CMD_FAIL."
+51 = ZZZZZ, "Erro interno: cs_convert() falhou."
+52 = ZZZZZ, "Erro ao ler a linha %1!."
+53 = ZZZZZ, "Erro interno: o número real de colunas (%1!) não é igual ao número esperado (%2!)."
+54 = ZZZZZ, "Erro interno: o comprimento máximo real dos dados (%1!) excede o esperado (%2!)."
+55 = ZZZZZ, "Parâmetros de configuração não-cache devem ser seguidos por '%1!'."
+56 = ZZZZZ, "Cache '%1!' não encontrado."
+57 = ZZZZZ, "Índice '%1!.%2!.%3!' não encontrado."
+58 = ZZZZZ, "Valor inválido ignorado na seguinte linha:"
+59 = ZZZZZ, "Valores de configuração simulada não atualizados."
+60 = ZZZZZ, "Estatísticas de tabela simulada não atualizadas para a tabela '%1!.%2!'."
+61 = ZZZZZ, "Podem estar faltando valores nulos e um limite inferior para os valores não-nulos."
+62 = ZZZZZ, "Pode haver etapas faltando."
+63 = ZZZZZ, "o peso não está entre 0.0 e 1.0."
+64 = ZZZZZ, "Um peso recentemente lido pode ser o culpado."
+65 = ZZZZZ, "o valor da etapa não está aumentando."
+66 = ZZZZZ, "o peso total diferiu de 1.0 por mais de uma margem de erro."
+67 = ZZZZZ, "A inserção de valores das etapas do histograma falhou."
+68 = ZZZZZ, "Procurando a etiqueta de linha '%1!'.\\nFim do arquivo de entrada alcançado inesperadamente.\\nPossivelmente devido a uma aspa dupla não coincidente."
+69 = ZZZZZ, "Erro interno: A tabela '%1!' e a coluna '%2!' estão repetidas."
+70 = ZZZZZ, "Fim do arquivo de entrada alcançado sem ler a mensagem sucessiva do Optdiag."
+71 = ZZZZZ, "O local do usuário deve ser especificado pela variável de ambiente LANG\\nou pelo sinalizador de linha de comando -z."
+72 = ZZZZZ, "os valores atual e anterior das etapas não devem ser idênticos\\ndesde que esta etapa não é uma contagem de freqüência."
+73 = ZZZZZ, "Valores binários diferentes em SYSSTATISTICS podem ter sido arredondados\\npara o mesmo valor legível."
+74 = ZZZZZ, "Atualizar SYSSTATISTICS com estes valores de etapas criaria uma inconsistência."
+75 = ZZZZZ, "Ignorando este histograma. Se necessitar atualizar este histograma,\\nexecute Optdiag no modo binário e edite os valores binários das etapas."
+76 = ZZZZZ, "Você deve ter o(s) seguinte(s) papel(éis) para executar este comando: '%1!'.\\nContate um usuário com o papel apropriado para ajudar."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Erro de sintaxe com a aspa."
+2 = ZZZZZ, "O nome da coluna foi especificado, mas não o da tabela."
+3 = ZZZZZ, "O número do sinalizador de rastreamento excede %1!, que é o máximo valor permitido."
+5 = ZZZZZ, "Os nomes dos arquivos de entrada e saída foram especificados."
+6 = ZZZZZ, "Os argumentos para o banco de dados e o arquivo de entrada não foram lidos, portanto o banco de dados\\nde destino é desconhecido."
+7 = ZZZZZ, "Falha ao abrir o arquivo de entrada."
+8 = ZZZZZ, "Falha ao abrir o arquivo de saída."
+9 = ZZZZZ, "Provavelmente o arquivo não existe ou Optdiag não tem a\\npermissão necessária."
+10 = ZZZZZ, "Erro de sintaxe na linha de comando antes que a palavra-chave 'statistics' fosse encontrada."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Optdiag falhou. Verifique as mensagens de erro acima."
+2 = ZZZZZ, "Optdiag funcionou."
+3 = ZZZZZ, "Configure o sinalizador de rastreamento 1 na linha de comando (-T1) para ignorar uma diferença\\nnas versões do Adaptive Server Enterprise."
+5 = ZZZZZ, "Configure o sinalizador de rastreamento 4 na linha de comando (-T4) para ignorar esta\\nverificação de inconsistência."
+7 = ZZZZZ, "não especificado"
+8 = ZZZZZ, " (agrupado)"
+9 = ZZZZZ, " (não agrupado)"
+10 = ZZZZZ, "o default foi usado"
+11 = ZZZZZ, "default"
+12 = ZZZZZ, "A próxima tabela é '%1!' e o proprietário é '%2!'."
+13 = ZZZZZ, "Se a localização do problema não estiver clara, execute Optdiag novamente\\nno modo de entrada, com o o sinalizador de rastreamento 6 para ajudar a localizar o problema."
+14 = ZZZZZ, "Optdiag foi concluído, mas as estatísticas foram ignoradas.\\nVerifique as mensagens de erro acima."
+15 = ZZZZZ, " (real)"
+16 = ZZZZZ, " (simulado)"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+
+; LOC_SECT_FORMAT
+;
+;   Row label strings for optdiag input and output files
+;
+[format]
+
+1 = ZZZZZ, "Nome do servidor:"
+2 = ZZZZZ, "Banco de dados especificado:"
+3 = ZZZZZ, "Proprietário da tabela especificado:"
+4 = ZZZZZ, "Proprietário da tabela:"
+5 = ZZZZZ, "Tabela especificada:"
+6 = ZZZZZ, "Coluna especificada:"
+7 = ZZZZZ, "Estatísticas para o índice:"
+8 = ZZZZZ, "Lista de colunas do índice:"
+9 = ZZZZZ, "Estatísticas para a tabela:"
+10 = ZZZZZ, "Estatísticas para a coluna:"
+11 = ZZZZZ, "Não há estatístiacs para as colunas restantes:"
+12 = ZZZZZ, "(usados os valores default)"
+13 = ZZZZZ, "Estatísticas para grupo de colunas:"
+14 = ZZZZZ, "Última atualização das estatíticas da coluna:"
+15 = ZZZZZ, "Estatísticas originadas pela atualização da página de distribuição."
+16 = ZZZZZ, "Estatísticas carregadas a partir de Optdiag."
+17 = ZZZZZ, "Histograma para a coluna:"
+18 = ZZZZZ, "Tipo de dados da coluna:"
+19 = ZZZZZ, "Contagem das etapas solicitadas:"
+20 = ZZZZZ, "Contagem real das etapas:"
+21 = ZZZZZ, "Última atualização do histograma:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data. Weight an value data should start under the first 
+; characters of "EN: Weight" and "Value" respectively.
+"BR: Para cada espacejamento de ajuste de local entre os seguintes cabeçalhos de histogramas para que coincidam com os dados. O peso e o valor dos dados devem iniciar sob os primeiros caracteres de "Peso" e "Valor" respectivamente.
+22 = ZZZZZ, "Etapa     Peso                    Valor"
+23 = ZZZZZ, "Densidade da faixa de células:"
+24 = ZZZZZ, "Densidade total:"
+25 = ZZZZZ, "Tipo de dados:"
+26 = ZZZZZ, "Seletividade da faixa:"
+27 = ZZZZZ, "Seletividade intermediária:"
+28 = ZZZZZ, "Contagem das folhas:"
+29 = ZZZZZ, "Contagem das página de dados:"
+30 = ZZZZZ, "Contagem das páginas de dados vazias:"
+31 = ZZZZZ, "Contagem das páginas de folhas vazias:"
+32 = ZZZZZ, "Contagem das linhas de dados:"
+33 = ZZZZZ, "Contagem das linhas encaminhadas:"
+34 = ZZZZZ, "Contagem das linhas eliminadas:"
+35 = ZZZZZ, "Contagem de Crs das páginas de dados:"
+36 = ZZZZZ, "Contagem de Crs das páginas de índice:"
+37 = ZZZZZ, "Contagem de Crs das linhas de dados:"
+38 = ZZZZZ, "OAM + contagem das páginas de alocação:"
+39 = ZZZZZ, "Páginas de dados da primeira extensão:"
+40 = ZZZZZ, "Páginas de folhas da primeira extensão:"
+41 = ZZZZZ, "Tamanho da linha de dados:"
+42 = ZZZZZ, "Tamanho da linha de folhas:"
+43 = ZZZZZ, "Altura do índice:"
+44 = ZZZZZ, "Estatísticas derivadas:"
+45 = ZZZZZ, "Proporção de agrupamentos de páginas de dados:"
+46 = ZZZZZ, "Proporção de agrupamentos de páginas de índices:"
+47 = ZZZZZ, "Proporção de agrupamentos de linhas de dados:"
+48 = ZZZZZ, "Nome da tabela:"
+49 = ZZZZZ, "Páginas na maior partição:"
+50 = ZZZZZ, "Parâmetros da Configuração:"
+51 = ZZZZZ, "Máx grau paralelo:"
+52 = ZZZZZ, "Máx grau paralelo de varredura:"
+53 = ZZZZZ, "Configuração do cache:"
+54 = ZZZZZ, "Tamanho do pool de 2K em Kb:"
+55 = ZZZZZ, "Tamanho do pool de 4K em Kb:"
+56 = ZZZZZ, "Tamanho do pool de 8K em Kb:"
+57 = ZZZZZ, "Tamanho do pool de 16K em Kb:"
+58 = ZZZZZ, "Última atualização da simulação:"
+59 = ZZZZZ, "espaço utilizado:" 
+60 = ZZZZZ, "Grande eficiciência de E/S:"
+61 = ZZZZZ, "EN: Number of worker processes:"
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Erro fatal: a alocação de memória falhou."
+2 = ZZZZZ, "A configuração das propriedades de conexão falhou."
+3 = ZZZZZ, "O estabelecimento da conexão falhou."
+4 = ZZZZZ, "Objeto de localização desconhecido. Utilizando o valor default '%1!'."
+5 = ZZZZZ, "Erro interno: Um tipo inválido de localização foi passado para cs_locale()."
+6 = ZZZZZ, "Erro de sintaxe em '%1!'."
+7 = ZZZZZ, "Erro ao tentar carregar um par de tabelas de conversão."
+8 = ZZZZZ, "Interrupção - Optdiag cancelado."

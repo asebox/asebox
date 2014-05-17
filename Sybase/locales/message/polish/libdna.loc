@@ -1,0 +1,63 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=polish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+ All rights reserved. \
+ Use, duplication, or disclosure by the United States \
+ Government is subject to restrictions as set forth in \
+ subparagraph (c) (1) (ii) of the Rights in Technical \
+ Data and Computer Software clause at CFR 52.227-7013. \
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libdna]
+1 = IPD_NOERR, "Aktualnie brak błędu."
+
+2 = IPD_ACPTWAITFAIL, "Próba oczekiwania na powiadomienie o akceptacji nie powiodła się - błąd systemu %1!"
+
+3 = IPD_ASSIGNFAIL, "Próba przypisania nowego kanału odczytu/zapisu nie powiodła się - błąd systemu %1!"
+
+4 = IPD_ACCEPTFAIL, "Próba akceptacji połączenia przychodzącego nie powiodła się - błąd systemu %1!"
+
+5 = IPD_EXPREADFAIL, "Odczyt rozsyłanych danych nie powiódł się - błąd systemu %1!"
+
+6 = IPD_CLOSEFAIL, "Próba zamknięcia aktywnego kanału nie powiodła się - błąd systemu %1!"
+
+7 = IPD_DASSGNFAIL, "Próba usunięcia przypisania aktywnego kanału nie powiodła się - błąd systemu %1!"
+
+8 = IPD_CNCTPRSFAIL, "Nie można przeprowadzić analizy składni informacji o połączeniu - błąd systemu %1!"
+
+9 = IPD_LISTENFAIL, "Próba utworzenia komputera nasłuchującego nie powiodła się - błąd systemu %1!"
+
+10 = IPD_READFAIL, "Odczyt zwykłych danych nie powiódł się - błąd systemu %1!"
+
+11 = IPD_WRITEFAIL, "Próba zapisu danych nie powiodła się - błąd systemu %1!"
+
+12 = IPD_CONNECTFAIL, "Próba zainicjowania połączenia nie powiodła się - błąd systemu %1!"
+
+13 = IPD_CREMBXFAIL, "Nie można utworzyć skrzynki pocztowej - błąd systemu %1!"
+
+14 = IPD_DELMBXFAIL, "Nie można usunąć skrzynki pocztowej - błąd systemu %1!"
+
+15 = IPD_BADMSG, "W skrzynce pocztowej odebrano nieoczekiwaną wiadomość - błąd systemu %1!"
+
+16 = IPD_MBREADFAIL, "Próba odczytu ze skrzynki pocztowej nie powiodła się - błąd systemu %1!"
+
+; end of decnet error strings
+;

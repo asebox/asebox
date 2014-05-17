@@ -1,0 +1,348 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "Ungültige Objektklasse."
+
+2 = IFACEE_BADOBJ, "Ungültiges Objekt."
+
+3 = IFACEE_OPEN, "Fehlgeschlagener Versuch, Interfaces-Datei zu öffnen."
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "Angeforderter Servername nicht gefunden."
+
+6 = IFACEE_DICTSYNTAX, "Ungültige Syntax in Interfaces-Datei gefunden."
+
+7 = IFACEE_MALLOC, "Fehler bei der Speicherzuordnung."
+
+8 = IFACEE_CLOSE, "Versuch, die Interfaces-Datei zu schließen, ist fehlgeschlagen."
+
+9 = IFACEE_ENTNOTSUPPORTED, "Angeforderter Treiber-Eintrittspunkt nicht unterstützt."
+
+10 = IFACEE_PROPNOTSUPPORTED, "Angeforderte Eigenschaft nicht unterstützt."
+
+11 = IFACEE_INVALID_HANDLE, "Ungültiges Treiber-Steuerprogramm gefunden."
+
+12 = IFACEE_INVALIDARG, "Ungültiges Argument an Treiber-API übergeben."
+
+13 = IFACEE_CANTMODIFY, "Interfaces-Datei oder Serverbereich nicht veränderbar."
+
+14 = IFACEE_WRITEFAIL, "Fehler beim Schreiben der Interfaces-Datei."
+
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "Dienstanbieter meldete einen Fehler."
+
+2 = DCLE_INITED, "DCL bereits initialisiert."
+
+3 = DCLE_MEMALLOC, "Versuch, Speicher zuzuweisen, ist fehlgeschlagen."
+
+4 = DCLE_MUTXALLOC, "Versuch, Mutex zuzuweisen, ist fehlgeschlagen."
+
+5 = DCLE_RMAN, "Fehler in der Anforderungsmanager-Schnittstelle."
+
+6 = DCLE_LMAN, "Fehler in der Listenmanager-Schnittstelle."
+
+7 = DCLE_VERSION, "Ungültige DCL-Library-Version."
+
+8 = DCLE_PROPCMD, "Ungültiger Eigenschaftsbefehl angegeben."
+
+9 = DCLE_PROPERTY, "Ungültige Eigenschaft angegeben."
+
+10 = DCLE_OPEN, "Angegebener Treiber konnte nicht geöffnet werden."
+
+11 = DCLE_LOAD, "Angegebener Treiber konnte nicht geladen werden."
+
+12 = DCLE_INTLHOME, "$SYBASE kann nicht ermittelt werden."
+
+13 = DCLE_INTLOPEN, "Konfigurationsdatei kann nicht geöffnet werden."
+
+14 = DCLE_INTLNOENT, "DCL-Eintrag in der Konfigurationsdatei kann nicht gefunden werden."
+
+15 = DCLE_FATAL, "Schwer wiegender interner Fehler."
+
+16 = DCLE_FAILOVER, "Während des letzten Befehls wurde auf den Ersatzrechner umgeschaltet."
+
+17 = DCLE_SESSBOUND, "Sitzung ist derzeit gebunden."
+
+18 = DCLE_SESSUBOUND, "Sitzung ist derzeit nicht gebunden."
+
+19 = DCLE_PROPOF, "Überlauf des Eigenschaftspuffers"
+
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "Fehler bei der Speicherzuweisung."
+
+2 = REGE_INVALID_HANDLE, "Ungültiges Treiber-Steuerprogramm gefunden."
+
+3 = REGE_ENTNOTSUPPORTED, "Angeforderter Treiber-Eintrittspunkt nicht unterstützt."
+
+4 = REGE_OPEN_KEY, "Registrierungsschlüssel konnte nicht geöffnet werden."
+
+5 = REGE_NO_VALUE, "Keine Attribute im Registrierungsschlüssel gefunden."
+
+6 = REGE_ADDRSYNTAX, "Syntaxfehler in Adress-Zeichenfolge."
+
+7 = REGE_TYPENOTSUPPORTED, "Ungültiger Werttyp."
+
+8 = REGE_ENUMKEY, "Ein Unterschlüssel konnte nicht aufgezählt werden."
+
+9 = REGE_PROPCMD, "Ungültiger Eigenschaftsbefehl angegeben."
+
+10 = REGE_PROP_READONLY, "Eine schreibgeschützte Eigenschaft kann nicht gesetzt/gelöscht werden."
+
+11 = REGE_INVALID_ARG, "Ungültiges Argument."
+
+12 = REGE_CREATE_KEY, "Schlüssel konnte nicht erzeugt werden."
+
+13 = REGE_ENTRY_EXIST, "Registrierungsschlüssel bereits vorhanden."
+
+14 = REGE_INVALID_OID, "Ungültige OID."
+
+15 = REGE_INVALID_ATTR_VALUE, "Ungültiger Attributwert."
+
+16 = REGE_CREATE_VALUE, "Wert konnte nicht gesetzt werden."
+
+17 = REGE_DELETE_KEY, "Schlüssel konnte nicht gelöscht werden."
+
+18 = REGE_MOD_ADDATTR, "Attribut konnte nicht hinzugefügt werden."
+
+19 = REGE_MOD_ADDVALUE, "Attributwert konnte nicht hinzugefügt werden."
+
+20 = REGE_MOD_REMOVEATTR, "Ein Attribut konnte nicht gelöscht werden."
+
+21 = REGE_MOD_REMOVEVALUE, "Ein Attributwert konnte nicht gelöscht werden."
+
+22 = REGE_READ_VALUE, "Vom Objekt konnte ein Attribut nicht gelesen werden."
+
+23 = REGE_PROPNOTSUPPORTED, "Ungültige Eigenschaft angegeben."
+
+24 = REGE_INVALID_VALUENAME, "Keine OID für den Wertnamen."
+
+25 = REGE_MODIFY, "Eintrag konnte nicht geändert werden."
+
+26 = REGE_ENUMVALUE, "Ein Wert konnte nicht aufgezählt werden."
+
+27 = REGE_CONNECT_REMOTE, "Verbindung mit entfernter Registrierung fehlgeschlagen."
+
+28 = REGE_PROPLEN, "Ungültige Eigenschaftslänge angegeben."
+
+29 = REGE_INVALID_INITSTR, "Ungültige Initialisierungs-Zeichenfolge gefunden."
+
+[dcedrv]
+
+1 = DCEE_BADCLASS, "Ungültige Objektklasse."
+
+2 = DCEE_BADOBJ, "Ungültiges Objekt."
+
+3 = DCEE_OPEN, "Eröffnungssitzung für DCE-Verzeichnisdienst fehlgeschlagen."
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "Angeforderter Servername nicht gefunden."
+
+6 = DCEE_DICTSYNTAX, "Ungültige Syntax im Verzeichnisdienst gefunden."
+
+7 = DCEE_MALLOC, "Fehler bei der Speicherzuordnung."
+
+8 = DCEE_CLOSE, "Versuch, die DCE-Verzeichnisdienstsitzung zu schließen, ist fehlgeschlagen."
+
+9 = DCEE_ENTNOTSUPPORTED, "Angeforderter Treiber-Eintrittspunkt nicht unterstützt."
+
+10 = DCEE_PROPNOTSUPPORTED, "Angeforderte Eigenschaft nicht unterstützt."
+
+11 = DCEE_INVALID_HANDLE, "Ungültiges Treiber-Steuerprogramm gefunden."
+
+12 = DCEE_BIND, "Versuch der Bindung einer DCE-Verzeichnisdienstsitzung fehlgeschlagen."
+
+13 = DCEE_UNBIND, "Bindung einer DCE-Verzeichnisdienstsitzung konnte nicht entfernt werden." 
+
+14 = DCEE_WORKSPACE, "Initialisierung des Arbeitsbereichs fehlgeschlagen."
+
+15 = DCEE_OMGET, "DCE omget() fehlgeschlagen."
+ 
+16 = DCEE_CONTEXT, "DCE-Kontextzuordnung fehlgeschlagen."
+ 
+17 = DCEE_PROPCMD, "Ungültiger Eigenschaftsbefehl angegeben."
+ 
+18 = DCEE_INVALIDARG, "Ungültige Argumente."
+ 
+19 = DCEE_INITSTR, "Ungültige Initialisierungs-Zeichenfolge."
+ 
+20 = DCEE_INVALNAME, "Ungültige Namenssyntax."
+ 
+21 = DCEE_CELLNAME, "Fehler bei der Suche des DCE-Zellnamens."
+ 
+22 = DCEE_DITBASE, "Ungültige ditbase."
+
+23 = DCEE_SEARCH, "Ungültiger Wert für Suchtiefe."
+ 
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "LDAP-Treiber konnte Speicher nicht zuordnen."
+
+2 = E_LOAD, "LDAP-Treiber konnte LDAP-API-Provider nicht laden."
+
+3 = E_VERSION, "Falsche LDAP-API-Version geladen."
+
+4 = E_URLPARSE, "LDAP-Treiber konnte URL nicht syntaktisch analysieren."
+
+5 = E_INTERRUPTED, "LDAP-Treiber hat unerwarteten unterbrochenen Systemaufruf erhalten."
+
+6 = E_INTERNAL, "Interner LDAP-Treiberfehler."
+
+7 = E_NOTFOUND, "LDAP-Treiber konnte Eintrag nicht finden."
+
+8 = E_PROPS, "LDAP-Treiber konnte auf Eigenschaften nicht zugreifen bzw. sie nicht einstellen."
+
+9 = E__INIT, "LDAP-Treiber in ldap_init() fehlgeschlagen."
+
+10 = E_BIND, "LDAP-Treiber in ldap_bind_s() fehlgeschlagen."
+
+11 = E_UNBIND, "LDAP-Treiber in ldap_unbind_s() fehlgeschlagen."
+
+12 = E_SEARCH, "LDAP-Treiber in ldap_search_s() fehlgeschlagen."
+
+13 = E_ADDMOD, "LDAP-Treiber konnte Eintrag nicht hinzufügen/ändern."
+
+14 = E_DELETE, "LDAP-Treiber konnte Eintrag nicht löschen."
+
+15 = E_PERM, "Keine Berechtigung, den angeforderten Vorgang auszuführen."
+
+; End of ldap error strings.
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "Ungültige Objektklasse."
+
+2 = NDS_EBADOBJ, "Ungültiges Objekt."
+
+3 = NDS_EOPEN, "Eröffnungssitzung für NDS-Verzeichnisdienst fehlgeschlagen."
+
+4 = NDS_ELASTENTRY, "Letzter Eintrag wurde übergeben."
+
+5 = NDS_ESRVNAMNOTFND, "Angeforderter Servername nicht gefunden."
+
+6 = NDS_EDICTSYNTAX, "Ungültige Syntax im Verzeichnisdienst gefunden."
+
+7 = NDS_EMALLOC, "Fehler bei der Speicherzuordnung."
+
+8 = NDS_ECLOSE, "Versuch, die NDS-Verzeichnisdienstsitzung zu schließen, ist fehlgeschlagen."
+
+9 = NDS_EENTNOTSUPPORTED, "Angeforderter Treiber-Eintrittspunkt nicht unterstützt."
+
+10 = NDS_EPROPNOTSUPPORTED, "Angeforderte Eigenschaft nicht unterstützt."
+
+11 = NDS_EINVALID_HANDLE, "Ungültiges Treiber-Steuerprogramm gefunden."
+
+12 = NDS_EBIND, "Bindung an den NDS-Verzeichnisdienst fehlgeschlagen."
+
+14 = NDS_EUNBIND, "Lösung der Bindung an den NDS-Verzeichnisdienst fehlgeschlagen."
+
+15 = NDS_EREAD, "Lesen vom NDS-Verzeichnisdienst fehlgeschlagen."
+
+16 = NDS_EADDOBJ, "Hinzufügen eines Objekts zum NDS-Verzeichnisdienst fehlgeschlagen."
+
+17 = NDS_EPROPCMD, "Ungültige Aktion für die Eigenschaft."
+
+18 = NDS_EINVALIDARG, "Ungültiges Argument."
+
+19 = NDS_ENDSINIT, "Initialisierung des NDS-Puffers fehlgeschlagen."
+
+20 = NDS_EDELOBJ, "Löschen eines Objekts im NDS-Verzeichnisdienst fehlgeschlagen."
+
+21 = NDS_EMODOBJ, "Änderung eines Objekts im NDS-Verzeichnisdienst fehlgeschlagen."
+
+22 = NDS_ESEARCH, "Suche nach einem Objekt im NDS-Verzeichnisdienst fehlgeschlagen."
+
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "Fehler bei der Speicherzuordnung."
+
+2 = BANE_INVALID_HANDLE, "Ungültiges Treiber-Steuerprogramm gefunden."
+
+3 = BANE_SRVNAMNOTFND, "Angeforderter Servername nicht gefunden."
+
+4 = BANE_NO_VALUE, "Im angegebenen Objekt wurden keine Attribute gefunden."
+
+5 = BANE_ADDRSYNTAX, "Syntaxfehler in der Adressen-Zeichenfolge."
+
+6 = BANE_TYPENOTSUPPORTED, "Ungültiger Werttyp."
+
+7 = BANE_ENUMKEY, "Unterschlüssel konnte nicht aufgezählt werden."
+
+8 = BANE_PROPCMD, "Ungültiger Eigenschaftsbefehl angegeben."
+
+9 = BANE_PROP_READONLY, "Schreibgeschützte Eigenschaft kann nicht gesetzt/gelöscht werden."
+
+10 = BANE_INVALID_ARG, "Ungültiges Argument."
+
+11 = BANE_INVALID_NAME, "Ungültiger Objektname."
+
+12 = BANE_ENTRY_EXIST, "Objekt bereits vorhanden."
+
+13 = BANE_INVALID_OID, "Ungültige OID."
+
+14 = BANE_INVALID_ATTR_VALUE, "Ungültiger Attributwert."
+
+15 = BANE_CREATE_VALUE, "Setzen des Attributwerts für das Objekt fehlgeschlagen."
+
+16 = BANE_MOD_ADDATTR, "Attribut konnte nicht hinzugefügt werden."
+
+17 = BANE_MOD_REMOVEATTR, "Attribut konnte nicht gelöscht werden."
+
+18 = BANE_READ_VALUE, "Lesen des Attributs vom Objekt fehlgeschlagen."
+
+19 = BANE_STARTSESS, "Start der StreetTalk- oder STDA-Sitzung fehlgeschlagen."
+
+20 = BANE_ENDSESS, "Beendigung der StreetTalk- oder STDA-Sitzung fehlgeschlagen."
+
+21 = BANE_DELETE_ENTRY, "Löschen eines Objekts fehlgeschlagen."
+
+22 = BANE_INITSTR, "Ungültige Initialisierungs-Zeichenfolge."
+
+23 = BANE_NO_ENTRY, "Angegebenes Objekt nicht vorhanden."
+
+; end Banyan DSA driver error message
+;
+

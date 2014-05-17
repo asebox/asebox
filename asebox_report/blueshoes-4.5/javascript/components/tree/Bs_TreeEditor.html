@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>BlueShoes JavaScript Tree Editor</title>
+<style>
+td {
+  font-family: arial;
+  font-size: 12px;
+}
+</style>
+
+<!--
+note: this editor is experimental and not up to date.
+-->
+
+<script type="text/javascript" src="/_bsJavascript/components/tree/Bs_Tree.class.js"></script>
+<script type="text/javascript" src="/_bsJavascript/components/tree/Bs_TreeElement.class.js"></script>
+
+<script>
+var treeArray = new Array();
+
+function init() {
+  updateTreeFromCode();
+  //initTree();
+}
+
+function isTrue(param) {
+  switch (typeof(param)) {
+    case 'string':
+      if (param == 'true') return true;
+      if (param == 'yes')  return true;
+      if (param == 'on')   return true;
+      return false;
+      break;
+    default:
+      return (param);
+  }
+}
+
+/**
+* internal helper function for initTree(), looped recursively.
+* @param  array arr
+* @return array
+*/
+function _prepareDataArrayForEditMode(arr) {
+  var a = new Array;
+  for (var i=0; i<arr.length; i++) {
+    a[i] = new Array;
+    a[i]['caption'] = arr[i]['caption'];
+    a[i]['isOpen']  = true;
+    a[i]['onClick'] = "editTreeElement(__this.id__);";
+    if (arr[i]['children']) {
+      a[i]['children'] = _prepareDataArrayForEditMode(arr[i]['children']);
+    }
+  }
+  return a;
+}
+
+function initTree(arr) {
+  //init edit tree
+  if (arr) {
+    //need to modify that array here. only care about the caption.
+    var a = _prepareDataArrayForEditMode(arr);
+  } else {
+    var a = new Array;
+    a[0] = new Array;
+    a[0]['caption'] = "start";
+    a[0]['onClick'] = "editTreeElement(__this.id__);";
+  }
+  editTree = new Bs_Tree('editTree'); //global
+  editTree.useLeaf = false;
+  editTree.initByArray(a);
+  redrawEditTree();
+  
+  
+  //init preview tree
+  if (arr) {
+    a = arr;
+  } else {
+    var a = new Array;
+    a[0] = new Array;
+    a[0]['caption'] = "start";
+  }
+  previewTree = new Bs_Tree('previewTree'); //global
+  previewTree.useLeaf = false;
+  previewTree.initByArray(a);
+  redrawPreviewTree();
+  
+}
+
+function editTreeElement(elementId) {
+  var e = previewTree.getElement(elementId);
+  
+  emptyForm();
+  
+  var formHtml = document.getElementById('treeForm');
+  formHtml.style.display = 'block';
+  var f = document.forms['addElement'];
+  f.myId.value     = elementId;
+  f.parentId.value = e.parent.id;
+  
+  if (e.parentId)          f.parentId.value          = e.parentId;
+  if (e.caption)           f.caption.value           = e.caption;
+  if (e.url)               f.url.value               = e.url;
+  if (e.target)            f.target.value            = e.target;
+  if (e.onClick)           f.onClick.value           = e.onClick;
+  if (isTrue(e.isOpen)) {
+    f.isOpen[0].checked = true;
+    f.isOpen[1].checked = false;
+  } else {
+    f.isOpen[0].checked = false;
+    f.isOpen[1].checked = true;
+  }
+  if (e.isChecked)         f.isChecked.value         = e.isChecked;
+  if (e.checkboxName)      f.checkboxName.value      = e.checkboxName;
+  if (e.beforeIconSpan)    f.beforeIconSpan.value    = e.beforeIconSpan;
+  if (e.beforeCaptionSpan) f.beforeCaptionSpan.value = e.beforeCaptionSpan;
+  if (e.afterCaptionSpan)  f.afterCaptionSpan.value  = e.afterCaptionSpan;
+}
+
+function showAddElementForm(parentElementId) {
+}
+
+function showAddChildForm() {
+  var f = document.forms['addElement'];
+  var parentId = f.myId.value;
+  emptyForm();
+  f.parentId.value = parentId;
+}
+
+
+/**
+* used to add and edit elements. 
+* depends if id is set or not.
+*/
+function storeElementFromForm(){
+  var f = document.forms['addElement'];
+  if (f.parentId.value == "") {
+    var parentElementId = 0; //special case, first element aka pseudo-element.
+  } else {
+    var parentElementId = f.parentId.value;
+  }
+  
+  //prepare data array
+  var a = new Array();
+  a['caption']           = f.caption.value;
+  a['onClick']           = "editTreeElement(__this.id__);";
+  a['isOpen']            = true;
+  
+  if (f.myId.value != "") { //edit mode
+    var e = editTree.getElement(f.myId.value);
+    e.updateObjectByArray(a);
+  } else { //add mode
+    var parent = editTree.getElement(parentElementId);
+    var treeElement = editTree._createTreeElement(a, parent._level +1); //hrm, _level would be private...
+    parent.addChild(treeElement);
+    parent.isOpen = true;
+  } 
+  redrawEditTree();
+  
+  
+  //prepare data array
+  var a = new Array();
+  a['caption']           = f.caption.value;
+  a['url']               = f.url.value;
+  a['target']            = f.target.value;
+  a['onClick']           = f.onClick.value;
+  a['isOpen']            = isTrue(f.isOpen.value);
+  a['isChecked']         = f.isChecked.value;
+  a['checkboxName']      = f.checkboxName.value;
+  a['beforeIconSpan']    = f.beforeIconSpan.value;
+  a['beforeCaptionSpan'] = f.beforeCaptionSpan.value;
+  a['afterCaptionSpan']  = f.afterCaptionSpan.value;
+  if (f.myId.value != "") { //edit mode
+    var e = previewTree.getElement(f.myId.value);
+    e.updateObjectByArray(a);
+  } else {
+    var parent = previewTree.getElement(parentElementId);
+    var treeElement = previewTree._createTreeElement(a, parent._level +1); //hrm, _level would be private...
+    parent.addChild(treeElement);
+  }
+  redrawPreviewTree();
+}
+
+function emptyForm() {
+  var f = document.forms['addElement'];
+  f.myId.value              = "";
+  f.parentId.value          = "";
+  f.caption.value           = "";
+  f.url.value               = "";
+  f.target.value            = "";
+  f.onClick.value           = "";
+  
+  f.isOpen[0].checked       = false;
+  f.isOpen[1].checked       = true;
+  
+  f.isChecked.value         = "";
+  f.checkboxName.value      = "";
+  f.beforeIconSpan.value    = "";
+  f.beforeCaptionSpan.value = "";
+  f.afterCaptionSpan.value  = "";
+}
+
+function updateCodePreview() {
+  document.getElementById('treeCode').innerText = previewTree.getJavascriptCode();
+}
+
+/**
+* takes the js array that's in the code window and rebuilds the tree based on that.
+* @access public
+* @return void
+*/
+function updateTreeFromCode() {
+  //var arr = document.getElementById('treeCode').innerText;
+  var a = null;
+  eval(document.getElementById('treeCode').innerText);
+  //alert(a);
+  initTree(a);
+}
+
+function redrawEditTree() {
+  var treeHtml = editTree.toHtml();
+  document.getElementById('treeContainer').innerHTML = treeHtml;
+}
+
+function redrawPreviewTree() {
+  var treeHtml = previewTree.toHtml();
+  document.getElementById('treePreview').innerHTML = treeHtml;
+  updateCodePreview();
+}
+
+</script>
+</head>
+
+<body onLoad="init();">
+
+<div id="treeContainer" style="position:absolute; width:300; height:500; left:0;   top:0; overflow:scroll;"></div>
+<div id="treeEditor"    style="position:absolute; width:700; height:500; left:300; top:0; overflow:scroll;">
+<span id="treeForm" style="display:none">
+  <form name="addElement">
+    <table>
+      <tr>
+        <td>id</td>
+        <td><input type="text" name="myId" value=""></td>
+      </tr>
+      <tr>
+        <td>parentId</td>
+        <td><input type="text" name="parentId" value=""></td>
+      </tr>
+      <tr>
+        <td>caption</td>
+        <td><input type="text" name="caption" value="" size="60"></td>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td><input type="text" name="url" value="" size="60"></td>
+      </tr>
+      <tr>
+        <td>target</td>
+        <td><input type="text" name="target" value="" size="20"> _blank _top _new</td>
+      </tr>
+      <tr>
+        <td>onClick</td>
+        <td><input type="text" name="onClick" value="" size="60"></td>
+      </tr>
+      <tr>
+        <td>isOpen</td>
+        <td><input type="radio" name="isOpen" value="true"><label>true</label> <input type="radio" name="isOpen" value="false" checked><label>false</label></td>
+      </tr>
+      <tr>
+        <td>isChecked</td>
+        <td><input type="text" name="isChecked" value=""> 0 = not checked, 1 = checked gray (part of the sub-elements are, part are not), 2 = checked (this or everything below is checked)</td>
+      </tr>
+      <tr>
+        <td>checkboxName</td>
+        <td><input type="text" name="checkboxName" value=""></td>
+      </tr>
+      <tr>
+        <td>beforeIconSpan</td>
+        <td><textarea name="beforeIconSpan"></textarea></td>
+      </tr>
+      <tr>
+        <td>beforeCaptionSpan</td>
+        <td><textarea name="beforeCaptionSpan"></textarea></td>
+      </tr>
+      <tr>
+        <td>afterCaptionSpan</td>
+        <td><textarea name="afterCaptionSpan"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="100%">
+          <input type="button" onClick="storeElementFromForm();" value="store">
+          <input type="button" onClick="showAddChildForm();" value="add child">
+        </td>
+      </tr>
+    </table>
+  </form>
+</span>
+</div>
+
+
+<div id="treePreview"   style="position:absolute; width:300; height:300; left:0;   top:500; overflow:scroll;"></div>
+
+
+<div id="treePreview"   style="position:absolute; width:700; height:300; left:300; top:500; overflow:scroll;">
+      <span id="treePreviewUpdate" onClick="updateTreeFromCode();" style="cursor:hand;">update</span><br>
+      <textarea id="treeCode" cols="60" rows="20" style="width:680; height:280;">
+a = new Array();
+a[0] = new Array();
+a[0]['caption']            = "root";
+a[0]['isOpen']             = true;
+      </textarea>
+      <!--<pre id="treeCode" style="overflow: scroll;" contentEditable=""></pre>-->
+</div>
+
+
+</body>
+</html>

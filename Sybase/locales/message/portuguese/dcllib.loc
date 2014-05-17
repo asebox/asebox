@@ -1,0 +1,348 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=portuguese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "Classe inválida de objeto."
+
+2 = IFACEE_BADOBJ, "Objeto inválido."
+
+3 = IFACEE_OPEN, "Falha na tentativa de abrir arquivo de interfaces."
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "Nome do servidor solicitado não encontrado."
+
+6 = IFACEE_DICTSYNTAX, "Encontrada sintaxe inválida no arquivo de interfaces."
+
+7 = IFACEE_MALLOC, "Erro na alocação de memória."
+
+8 = IFACEE_CLOSE, "Falha na tentativa de fechar o arquivo de interfaces."
+
+9 = IFACEE_ENTNOTSUPPORTED, "Ponto de entrada do driver solicitado não é suportado."
+
+10 = IFACEE_PROPNOTSUPPORTED, "A propriedade solicitada não é suportada."
+
+11 = IFACEE_INVALID_HANDLE, "Localizado ponteiro inválido do driver."
+
+12 = IFACEE_INVALIDARG, "Argumento inválido passado no api do driver."
+
+13 = IFACEE_CANTMODIFY, "Arquivo de interfaces ou seção do servidor não é modificável."
+
+14 = IFACEE_WRITEFAIL, "Erro de gravação no arquivo de interfaces."
+
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "Erro retornado pelo provedor de serviços."
+
+2 = DCLE_INITED, "DCL já está inicializado."
+
+3 = DCLE_MEMALLOC, "Falha na tentativa de alocar memória."
+
+4 = DCLE_MUTXALLOC, "Falha na tentativa de alocar mutex."
+
+5 = DCLE_RMAN, "Erro na interface Gerenciador de Solicitação."
+
+6 = DCLE_LMAN, "Erro na interface Gerenciador de Lista."
+
+7 = DCLE_VERSION, "Versão inválida de DCL-Library."
+
+8 = DCLE_PROPCMD, "Especificado comando inválido de propriedade."
+
+9 = DCLE_PROPERTY, "Foi especificada uma propriedade inválida."
+
+10 = DCLE_OPEN, "Falha de abertura do driver especificado."
+
+11 = DCLE_LOAD, "Falha no carregamento do driver especificado."
+
+12 = DCLE_INTLHOME, "Impossível determinar $SYBASE."
+
+13 = DCLE_INTLOPEN, "Impossível abrir o arquivo de configuração."
+
+14 = DCLE_INTLNOENT, "Impossível localizar a entrada DCL no arquivo de configuração."
+
+15 = DCLE_FATAL, "Erro interno fatal."
+
+16 = DCLE_FAILOVER, "Falha durante o último comando."
+
+17 = DCLE_SESSBOUND, "A sessão está ligada no momento."
+
+18 = DCLE_SESSUBOUND, "A sessão está inativa no momento."
+
+19 = DCLE_PROPOF, "Estouro no buffer de propriedade "
+
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "Erro na alocação de memória."
+
+2 = REGE_INVALID_HANDLE, "Localizado ponteiro inválido do driver."
+
+3 = REGE_ENTNOTSUPPORTED, "Ponto de entrada do driver solicitado não é suportado."
+
+4 = REGE_OPEN_KEY, "Falha na abertura de uma chave de log."
+
+5 = REGE_NO_VALUE, "Não foram encontrados atributos na chave de log."
+
+6 = REGE_ADDRSYNTAX, "Erro de sintaxe na string de endereço."
+
+7 = REGE_TYPENOTSUPPORTED, "Tipo de valor inválido."
+
+8 = REGE_ENUMKEY, "Falha de enumeração de uma sub-chave."
+
+9 = REGE_PROPCMD, "Especificado comando inválido de propriedade."
+
+10 = REGE_PROP_READONLY, "Impossível definir/limpar uma propriedade de somente de leitura."
+
+11 = REGE_INVALID_ARG, "Argumento inválido."
+
+12 = REGE_CREATE_KEY, "Falha na criação de uma chave."
+
+13 = REGE_ENTRY_EXIST, "Chave de log já existe."
+
+14 = REGE_INVALID_OID, "OID inválido."
+
+15 = REGE_INVALID_ATTR_VALUE, "Valor inválido do atributo."
+
+16 = REGE_CREATE_VALUE, "Falha na definição de um valor."
+
+17 = REGE_DELETE_KEY, "Falha na eliminação de uma chave."
+
+18 = REGE_MOD_ADDATTR, "Falha ao adicionar um atributo."
+
+19 = REGE_MOD_ADDVALUE, "Falha ao adicionar um valor de atributo."
+
+20 = REGE_MOD_REMOVEATTR, "Falha ao eliminar um atributo."
+
+21 = REGE_MOD_REMOVEVALUE, "Falha ao eliminar um valor de atributo."
+
+22 = REGE_READ_VALUE, "Falha na leitura de um atributo de um objeto."
+
+23 = REGE_PROPNOTSUPPORTED, "Foi especificada uma propriedade inválida."
+
+24 = REGE_INVALID_VALUENAME, "Atributo OID não encontrado."
+
+25 = REGE_MODIFY, "Falha na modificação de uma entrada."
+
+26 = REGE_ENUMVALUE, "Falha na enumeração de um valor."
+
+27 = REGE_CONNECT_REMOTE, "Falha na conexão com um log remoto."
+
+28 = REGE_PROPLEN, "Tamanho inválido da propriedade especificada."
+
+29 = REGE_INVALID_INITSTR, "Localizada string inválida de inicialização."
+
+[dcedrv]
+
+1 = DCEE_BADCLASS, "Classe inválida de objeto."
+
+2 = DCEE_BADOBJ, "Objeto inválido."
+
+3 = DCEE_OPEN, "Falha na abertura de uma sessão do Serviço de Diretório DCE."
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "Nome do servidor solicitado não encontrado."
+
+6 = DCEE_DICTSYNTAX, "Localizada sintaxe inválida no serviço de diretório."
+
+7 = DCEE_MALLOC, "Erro na alocação de memória."
+
+8 = DCEE_CLOSE, "Falha na tentativa de fechar a sessão de serviço do diretório DCE."
+
+9 = DCEE_ENTNOTSUPPORTED, "Ponto de entrada do driver solicitado não é suportado."
+
+10 = DCEE_PROPNOTSUPPORTED, "A propriedade solicitada não é suportada."
+
+11 = DCEE_INVALID_HANDLE, "Localizado ponteiro inválido do driver."
+
+12 = DCEE_BIND, "Falha na tentativa de vincular a sessão do diretório DCE."
+
+13 = DCEE_UNBIND, "Falha na tentativa de desativar a sessão no diretório DCE."
+
+14 = DCEE_WORKSPACE, "Falha na inicialização da área de trabalho."
+
+15 = DCEE_OMGET, "Falha em omget() de DCE."
+ 
+16 = DCEE_CONTEXT, "Falha na alocação do contexto de DCE."
+ 
+17 = DCEE_PROPCMD, "Especificado comando inválido de propriedade."
+ 
+18 = DCEE_INVALIDARG, "Argumentos inválidos."
+ 
+19 = DCEE_INITSTR, "String de inicialização inválida."
+ 
+20 = DCEE_INVALNAME, "Sintaxe do nome inválida."
+ 
+21 = DCEE_CELLNAME, "Erro na localização do nome da célula DCE."
+ 
+22 = DCEE_DITBASE, "Ditbase inválido."
+
+23 = DCEE_SEARCH, "Valor inválido para a profundidade da busca."
+ 
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "O driver LDAP falhou ao alocar memória."
+
+2 = E_LOAD, "O driver LDAP falhou ao carregar o provedor de API LDAP."
+
+3 = E_VERSION, "Versão de API LDAP incorreta carregada."
+
+4 = E_URLPARSE, "O driver LDAP falhou ao analisar o URL."
+
+5 = E_INTERRUPTED, "O driver LDAP obteve uma chamada de sistema interrompida inesperada."
+
+6 = E_INTERNAL, "Erro interno do driver LDAP."
+
+7 = E_NOTFOUND, "O driver LDAP falhou ao localizar a entrada."
+
+8 = E_PROPS, "O driver LDAP falhou ao obter/definir propriedades."
+
+9 = E__INIT, "O driver LDAP falhou em ldap_init()."
+
+10 = E_BIND, "O driver LDAP falhou em ldap_bind_s()."
+
+11 = E_UNBIND, "O driver LDAP falhou em ldap_unbind_s()."
+
+12 = E_SEARCH, "O driver LDAP falhou em ldap_search_s()."
+
+13 = E_ADDMOD, "O driver LDAP falhou ao adicionar/modificar a entrada."
+
+14 = E_DELETE, "O driver LDAP falhou ao eliminar a entrada."
+
+15 = E_PERM, "Sem permissão para executar a operação solicitada."
+
+; End of ldap error strings. 
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "Classe inválida de objeto."
+
+2 = NDS_EBADOBJ, "Objeto inválido."
+
+3 = NDS_EOPEN, "Falha na abertura de uma sessão para o Serviço de Diretório NDS."
+
+4 = NDS_ELASTENTRY, "Passou a última entrada."
+
+5 = NDS_ESRVNAMNOTFND, "Nome do servidor solicitado não encontrado."
+
+6 = NDS_EDICTSYNTAX, "Localizada sintaxe inválida no Serviço de Diretório."
+
+7 = NDS_EMALLOC, "Erro na alocação de memória."
+
+8 = NDS_ECLOSE, "Falha no fechamento de uma sessão para o Serviço de Diretório NDS."
+
+9 = NDS_EENTNOTSUPPORTED, "Ponto de entrada do driver solicitado não é suportado."
+
+10 = NDS_EPROPNOTSUPPORTED, "A propriedade solicitada não é suportada."
+
+11 = NDS_EINVALID_HANDLE, "Localizado ponteiro inválido do driver."
+
+12 = NDS_EBIND, "Falha no vínculo com o Serviço de Diretório NDS."
+
+14 = NDS_EUNBIND, "Falha no desligamento do Serviço de Diretório NDS."
+
+15 = NDS_EREAD, "Falha na leitura do Serviço de Diretório NDS."
+
+16 = NDS_EADDOBJ, "Falha no adicionamento de um objeto no Serviço de Diretório NDS."
+
+17 = NDS_EPROPCMD, "Ação inválida operando na propriedade."
+
+18 = NDS_EINVALIDARG, "Argumento inválido."
+
+19 = NDS_ENDSINIT, "Falha na inicialização do buffer NDS."
+
+20 = NDS_EDELOBJ, "Falha na eliminação de um objeto no Serviço de Diretório NDS."
+
+21 = NDS_EMODOBJ, "Falha na modificação de um objeto no Serviço de Diretório NDS."
+
+22 = NDS_ESEARCH, "Falha na busca de um objeto no Serviço de Diretório NDS."
+
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "Erro na alocação de memória."
+
+2 = BANE_INVALID_HANDLE, "Localizado ponteiro inválido do driver."
+
+3 = BANE_SRVNAMNOTFND, "Nome do servidor solicitado não encontrado."
+
+4 = BANE_NO_VALUE, "Não foram encontrados atributos no objeto especificado."
+
+5 = BANE_ADDRSYNTAX, "Erro de sintaxe na string de endereço."
+
+6 = BANE_TYPENOTSUPPORTED, "Tipo de valor inválido."
+
+7 = BANE_ENUMKEY, "Falha de enumeração de uma sub-chave."
+
+8 = BANE_PROPCMD, "Especificado comando inválido de propriedade."
+
+9 = BANE_PROP_READONLY, "Impossível definir/limpar uma propriedade de somente de leitura."
+
+10 = BANE_INVALID_ARG, "Argumento inválido."
+
+11 = BANE_INVALID_NAME, "Nome inválido de objeto."
+
+12 = BANE_ENTRY_EXIST, "Objeto já existe."
+
+13 = BANE_INVALID_OID, "OID inválido."
+
+14 = BANE_INVALID_ATTR_VALUE, "Valor inválido do atributo."
+
+15 = BANE_CREATE_VALUE, "Falha na definição de um valor de atributo."
+
+16 = BANE_MOD_ADDATTR, "Falha ao adicionar um atributo."
+
+17 = BANE_MOD_REMOVEATTR, "Falha ao eliminar um atributo."
+
+18 = BANE_READ_VALUE, "Falha na leitura de um atributo de um objeto."
+
+19 = BANE_STARTSESS, "Falha no início de uma sessão STDA ou StreetTalk."
+
+20 = BANE_ENDSESS, "Falha no encerramento de uma sessão STDA ou StreetTalk."
+
+21 = BANE_DELETE_ENTRY, "Falha na eliminação de um objeto."
+
+22 = BANE_INITSTR, "String de inicialização inválida."
+
+23 = BANE_NO_ENTRY, "Objeto especificado não existe."
+
+; end Banyan DSA driver error message
+;
+

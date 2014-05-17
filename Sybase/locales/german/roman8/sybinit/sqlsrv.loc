@@ -1,0 +1,1754 @@
+; comment character is semicolon.
+; "sqlsrv.hdr" - Localization file for sybinit.
+;
+; SCCS information: from sybinit.loc
+;	(#) sqlsrv.hdr 160.1 1/30/95 15:20:24
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright = "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+; "minor-number" = "message string with place holders", "format string"
+;
+1 = "'USE_DEFAULT'-Attribute nicht zuverlÃssig einstellbar, da Attribut '%1!' nicht gesetzt ist.",	"%s"
+ 
+100 	= "Sprache '%1!' wurde erfolgreich installiert.",	"%s"
+101 	= "Fehler beim Installieren von Sprache '%1!'; nicht installiert.",	"%s"
+102 	= "Sprache '%1!' wurde erfolgreich entfernt.",	"%s"
+103 	= "Fehler beim Entfernen von Sprache %1!'; nicht entfernt.",		"%s"
+104 	= "Sprache '%1!' ist bereits installiert.",		"%s"
+105 	= "Sprache '%1!' ist nicht installiert; nicht entfernt.",	"%s"
+106 	= "Sprache '%1!' ist bereits Standard.",		"%s"
+107	= "Standardsprache nicht einstellbar: Sprachkennung fœr Sprache '%1!' nicht gefunden.", "%s"
+108	= "Standardsprache des Adaptive Servers nicht ermittelbar.",		""
+109 = "Aktuell auf dem Adaptive Server installierte Sprachen nicht ermittelbar.",	""
+110 = "INTERNER FEHLER: Sprache '%1!' ist nicht klassifiziert. Der Entwickler muss sie zu lang_table hinzufœgen.", "%s"
+111 = "GrŒﬁe der Master-Datenbank auf dem Masterdevice kann wÃhrend der Installation der Sprachversion nicht geÃndert werden.",	""
+112	= "Sprache/n kann/kŒnnen nicht installiert werden, da Master-Datenbank %1! Mbyte mehr freien Speicherplatz benŒtigt.",	"%d"
+200	= "Standard-Zeichensatz des Adaptive Servers nicht ermittelbar.",	""
+202 = "Zeichensatz '%1!' wurde erfolgreich installiert.", "%s"
+203 	= "Fehler beim Installieren von Zeichensatz '%1!'; nicht installiert.", "%s"
+204 = "Zeichensatz '%1!' ist bereits installiert.",	"%s"
+205 	= "Zeichensatz '%1!' wurde erfolgreich entfernt.", "%s"
+206 	= "Fehler beim Entfernen von Zeichensatz '%1!'; nicht entfernt.",	"%s"
+207 = "Zeichensatz '%1!' ist bereits entfernt.",	"%s"
+208 = "Zeichensatz '%1!' ist bereits Standard.",	"%s"
+209 = "Standard-Zeichensatz kann wegen unbekannter Kennung fœr Zeichensatz '%1!' nicht eingestellt werden.", "%s"
+210 = "'%1!' ist der Standard-Zeichensatz und kann nicht entfernt werden.", "%s"
+211 = "Aktuell auf dem Adaptive Server installierte ZeichensÃtze nicht ermittelbar.", ""
+300	= "Standard-Sortierreihenfolge des Adaptive Servers nicht ermittelbar.",			""
+301 	= "Sortierreihenfolgenkennung fœr Sortierreihenfolge '%1!' nicht erkannt.", "%s"
+302 = "Sortierreihenfolge '%1!' wurde erfolgreich installiert.", "%s"
+303 	 = "Fehler beim Installieren von Sortierreihenfolge '%1!'; nicht installiert.", "%s"
+304 = "Sortierreihenfolge '%1!' ist bereits installiert.",	"%s"
+305 = "Aktuell installierte Sortierreihenfolge des Adaptive Servers nicht ermittelbar.", ""
+306 = "Versuch, Sortierreihenfolge '%1!' dennoch zu installieren.",	"%s"
+307 = "Sortierreihenfolge '%1!' ist bereits Standard.",		"%s"
+308 = "Aktuelle Standard-Sortierreihenfolge des Adaptive Servers nicht ermittelbar.", ""
+309 	 = "Fehler beim Setzen der Sortierreihenfolge '%1!' als Standard.",	"%s"
+310 = "Sortierreihenfolge '%1!' wurde erfolgreich als Standard eingestellt.", "%s"
+400 	= "Keine Berechtigung zum ÿndern der Systemtabellen.",""
+401 	= "Adaptive Server konnte nicht neu konfiguriert werden.",		 ""
+402	= "'sp_configure %1!' fehlgeschlagen.",				"%s"
+500	= "Fehler beim Suchen der Runserver-Datei '%1!'.",		"%s"
+501	= "Start des Servers '%1!' fehlgeschlagen.",			"%s"
+502	= "Start des Servers '%1!' fehlgeschlagen: Prozess ist aktiv, aber Server ist nicht verfœgbar.", "%s"
+503	= "Status von Server '%1!'nicht erkannt: Prozess aktiv, aber Login unmŒglich.", "%s"
+510		= "Start von Server '%1!' nach ÿnderung interner Tabellen nicht mŒglich.", "%s"
+511		= "Neustart von Server '%1!' nach ÿnderung interner Tabellen nicht mŒglich.", "%s"
+512		= "Warte auf Start von Server '%1!'...",		"%s"
+513	= "Server '%1!' ist kein Sybase Adaptive Server.", 		"%s"
+541	= "Anmeldung zum Herunterfahren von Server '%1!' fehlgeschlagen.",	"%s"
+542	= "\"shutdown\" an Server '%1!' abgesetzt; ist dennoch aktiv.", "%s"
+543		= "Herunterfahren von Server '%1!' fehlgeschlagen.",			"%s"
+544	= "Warte %1! Sekunden, damit Betriebssystem Ressourcen vor dem Neustart sichern kann.",	"%d"
+545	= "Warten bis die Datenbank '%1!' wiederhergestellt ist...",		"%s"
+546	= "Die Datenbank '%1!' konnte nicht wiederhergestellt werden. Starten ist noch nicht abgeschlossen ...",	"%s"
+547   = "Alle Datenbanken werden wiederhergestellt ...", ""
+548 = "...Fertig! Alle Datenbanken wiederhergestellt.", ""
+560 = "Keine Berechtigung zum Ausfœhren der Runserver-Datei '%1!': Dieser Server kann nicht gestartet werden.", "%s"
+561	= "Schreibzugriff auf Runserver-Datei '%1!' nicht mŒglich: €berprœfen Sie die Berechtigungen.", "%s"
+562 = "Adaptive Server '%1!' kann nicht als sekundÃrer Server erstellt werden. Es wird versucht\, ihn als primÃren Server zu erstellen.", "%s"
+563	= "Fehler bei der Textformatierung fœr die Runserver-Datei.", ""
+564 	= "Fehler beim Generieren der Runserver-Datei '%1!'.", "%s"
+600	= "Einstellung des Backup Servers auf '%1!' fehlgeschlagen.",		"%s"
+601             = "Der lokale Adaptive Server-Name konnte nicht auf '%1!' gesetzt werden.",     "%s"
+700	= "Device '%1!' kann nicht angelegt werden: keine Nummern fœr virtuelle GerÃte (vdevnos) verfœgbar.",	"%s"
+701	= "Device '%1!' kann nicht angelegt werden: Serverabfrage nicht mŒglich.", "%s"
+702 = "Device '%1!' mit Datei '%2!' kann nicht angelegt werden, da diese Datei bereits existiert. Wenn Sie das Device mit '%3!' anlegen wollen, mœssen Sie sie zuerst lŒschen.",	"%s %s %s"
+703	= "Anlegen von Device '%1!' fehlgeschlagen.",			"%s"
+704	= "Device '%1!' wurde angelegt.",				"%s"
+705		= "LŒschen von Device '%1!' fehlgeschlagen.",				"%s"
+706	= "Device '%1!' wurde gelŒscht.",				"%s"
+750	= "Datenbank '%1!' kann nicht angelegt werden: Device '%2!' existiert nicht.", "%s %s"
+751	= "Anlegen der Datenbank '%1!' fehlgeschlagen.",			"%s"
+752	= "Datenbank '%1!' wurde angelegt.",				"%s"
+753	= "Datenbank '%1!' wurde wegen PlatzbeschrÃnkung mit GrŒﬁe '%2!' statt '%3!' angelegt.", "%s %.2f %.2f"
+754	= "Datenbank '%1!' kann nicht geÃndert werden: Device '%2!' ist nicht vorhanden.", "%s %s"
+755		= "ÿndern von Datenbank '%1!' fehlgeschlagen.",                      "%s"
+756	= "Datenbank '%1!' wurde geÃndert.",                            "%s"
+757	= "ÿnderung von Datenbank '%1!' mit einer GrŒﬁe von '%2!' an Stelle von '%3!', auf Grund von PlatzbeschrÃnkungen.", "%s %.2f %.2f"
+760 = "LŒschen der Datenbank '%1!' fehlgeschlagen: Master-Datenbank konnte nicht verwendet werden.", "%s"
+761		= "LŒschen der Datenbank '%1!' fehlgeschlagen.",			"%s"
+762	= "Datenbank '%1!' wurde gelŒscht.",				"%s"
+763	= "Datenbank '%1!' wurde mit einer GrŒﬁe von '%2!' an Stelle von '%3!' erstellt, weil die AnforderungsgrŒﬁe kein Vielfaches von 256 logischen Seiten ist.",	"%s %.2f %.2f"
+764	= "Datenbank '%1!' wurde auf eine GrŒﬁe von '%2!' an Stelle von '%3!' verÃndert, da die AnforderungsgrŒﬁe kein Vielfaches von 256 logischen Seiten ist.",	"%s %.2f %.2f"
+800 	= "Kann Skript '%1!' zur Installation gespeicherter Audit-Prozeduren nicht finden.", "%s"
+801	= "Fehler beim Ausfœhren von Skript '%1!' zur Installation gespeicherter Audit-Prozeduren.", "%s"
+802 	= "Anlegen des Audit-Segments '%1!' auf Device '%2!' fehlgeschlagen.", "%s %s"
+803 	= "Audit-Segment '%1!' auf Device '%2!' angelegt.",		"%s %s"
+804	= "'sp_auditinstall %1!\, %2!' fehlgeschlagen.",		"%s %s"
+805	= "'sp_auditinstall' erfolgreich.",			""
+806	= "'use %1!' fehlgeschlagen.",					"%s"
+807		= "Neustart des Adaptive Servers '%1!'\, um Audit-Prozess zu aktivieren.", "%s"
+808	= "Neustart des Adaptive Servers fehlgeschlagen. Starten Sie '%1!' manuell\, um den Audit-Prozess zu aktivieren.", "%s"
+809	= "Setzen von '%1!' zum Abschneiden des Logs am Checkpoint fehlgeschlagen.", "%s"
+810	= "Der AUDIT-PROZESS ist nicht aktiv.",			""
+820		= "Installation von Auditing fehlgeschlagen.",			""
+821		= "Auditing wurde installiert.",				""
+822	= "Sie mœssen das Logdevice fœr die Audit-Datenbank angeben.", ""
+823		= "Da keine getrennten Devices fœr die Audit-Tabellen festgelegt wurden\, wird die Audit-Datenbank auf 'master' erstellt.", ""
+824	= "Geben Sie die Anzahl von Audit-Tabellen an\, die in der Audit-Datenbank zu erstellen sind.", ""
+825	= "Sie haben die hŒchstzulÃssige Anzahl von Devices fœr das Auditing erreicht. Weitere Devices kŒnnen fœr das Auditing nicht hinzugefœgt werden.", ""
+826	= "Wollen Sie ein neues Device hinzufœgen?", ""
+827		= "Fehler beim Bezug des Attributnamens fœr das Device Nummer '%1!'.", "%d"
+828		= "Fehler beim Setzen des Attributwerts '%1!' auf '%2!'.", "%s %s"
+829 = "Fœr das Transaktionslog der Audit-Datenbank steht Ihnen nur ein Device zur Verfœgung.", ""
+830		= "Geben Sie die Eingabenummer fœr das Device an.", ""
+831		= "Falscher Audit-Device-Eintrag gewÃhlt.", ""
+832	= "Mehr als ein Device wird fœr die aktuelle Audit-Datenbank verwendet. Auditinit zeigt nur ein Device\, das fœr das Transaktionslog der Audit-Datenbank verwendet wird.", ""
+833	= "Das Device mit dem Namen '%1!' kann nicht erstellt werden\, da ein Device mit diesem Namen im Server bereits existiert.", "%s"
+834	= "Der 'use'-Befehl fœr die Sybsecurity-Datenbank ist fehlgeschlagen.", ""
+835		= "Der Versuch\, das Device '%1!' der Sybsecurity-Datenbank hinzuzufœgen\, ist fehlgeschlagen.", "%s"
+836	= "Der Versuch\, das Segment '%1!' auf dem Device '%2!' in der Sybsecurity-Datenbank zu erstellen\, ist fehlgeschlagen.", "%s %s"
+837	= "Der Versuch\, die Tabelle '%1!' auf dem Segment '%2!' in der Sybsecurity-Datenbank zu erstellen\, ist fehlgeschlagen.", "%s %s"
+838	= "Eine fehlerhafte Tabellenanzahl fœr Auditing wurde eingegeben. Die Anzahl muss zwischen 1 und '%1!' liegen.", "%s"
+839	= "Eine ungœltige Deviceanzahl fœr Auditing wurde eingegeben. Die Anzahl muss zwischen 0 und '%1!' liegen.", "%s"
+841	= "Die Auditing-Attribute haben die erforderlichen Prœfungen nicht bestanden.", ""
+842	= "Die Verwendung einer Ressourcendatei fœr die Auditing-Konfiguration eines Servers\, auf dem Auditing bereits installiert wurde\, ist nicht zulÃssig. Verwenden Sie dafœr Auditinit im interaktiven Modus.", ""
+843 = "Sie mœssen angeben\, wie viel von dem Device der Audit-Datenbank zugewiesen werden soll.", ""
+844	= "Logischer Name", ""
+845	= "Physischer Name", ""
+846	= "Segmentname", ""
+847	= "Tabellenname", ""
+848	= "GrŒﬁe", ""
+849 = "Device '%1!' ist nicht als neues Device angegeben. In der Konfiguration eines neuen Servers sind nur neue Devices zulÃssig.", "%s"
+850	= "Prœfung der Attribute fœr Device Nummer '%1!' fehlgeschlagen.", "%s"
+851	 = "Befehl zum Setzen der Option 'abort tran on log full' auf 'FALSE' fœr die Datenbank '%1!' fehlgeschlagen.", "%s"
+852 = "CHECKPOINT-Befehl in der Datenbank '%1!' fehlgeschlagen.", "%s"
+853		 = "Einige Auditing-Devices sind konfiguriert\, aber 'configure auditing' ist auf 'no' gesetzt. Wollen Sie Auditing konfigurieren?", ""
+854	 = "Es wurde ein oder gar kein Device fœr die Audit-Tabellen angegeben. Sie kŒnnen immer noch mehrere Audit-Tabellen erstellen\, indem alle Audit-Tabellen auf demselben Device untergebracht werden.", ""
+855	 = "Befehl zur Erteilung der Select-Berechtigung auf '%1!' fœr '%2!' ist fehlgeschlagen.", "%s %s"
+856	= "Sie dœrfen keine Audit-Tabellen mehr in die Audit-Datenbank einfœgen\, da sonst die hŒchstzulÃssige Anzahl der Audit-Tabellen im System œberschritten wird.", ""
+900	= "Datenbank sybsystemprocs angelegt.",			""
+901	= "Erstellung der Datenbank 'sybsystemprocs' fehlgeschlagen.",	""
+902 = "Das Servertypattribut konnte nicht bezogen werden.",    ""
+1000	= "Alte Interfaces-Datei '%1!' wird nach '%2!' kopiert.",		"%s %s"
+1001	= "Upgrade-Eignungstest fœr Server '%1!' fehlgeschlagen: Kein Upgrade. Weitere Informationen im Log.",	"%s"
+1002	= "Upgrade-Eignungstest fœr Server '%1!' erfolgreich: Upgrade wird fortgesetzt.",	"%s"
+1003		= "Upgrade von Server '%1!' auf Version '%2!' fehlgeschlagen. Weitere Informationen im Log.",	"%s %s"
+1004	= "Upgrade von Server '%1!' auf Version '%2!' erfolgreich.",	"%s %s"
+1005 = "Fehler beim Verbinden zum Server nach Upgrade.",	""
+1006 = "Fehler bei Upgrade-Prœfung: Version ist '%1!', erwartet wurde '%2!'.",	"%s %s"
+1007 = "Versionsverzeichnis von Auditinit konnte nicht auf das neue Versionsverzeichnis gesetzt werden.", ""
+1008	= "Auﬁer 'us_english' wird kein Sprachen-Upgrade vorgenommen. Fœr alle Sprachen auﬁer 'us_english' ist ein manuelles Upgrade erforderlich.",	""
+1009 = "Fœr die folgenden Sprachen ist ein Upgrade nicht mŒglich, weil Sie nicht œber die entsprechenden 12.5 Sprachmodule verfœgen: '%1!'. Die vorhandenen Meldungen in diesen Sprachen werden nicht entfernt. Alle Meldungen, die bei der Version 12.5 hinzugekommen sind oder verÃndert wurden, werden allerdings standardmÃﬁig in 'us_english.' angezeigt.", "%s"
+1010	= "Folgende Sprachen werden gelŒscht oder neu installiert: '%1!'", "%s"
+1011	= "Fehler bei der Interfaces-Datei im neuen Versionsverzeichnis. Upgrade abgebrochen.", ""
+1012 = "Eintrag fœr Server '%1!' konnte in Interfaces-Datei '%2!' nicht gefunden werden.", "%s %s"
+1013 = "Eintrag in Interfaces fœr Server '%1!' konnte nicht geladen werden.", "%s"
+1014 = "Eintrag '%1!' in Interfaces-Datei '%2!' konnte nicht gelŒscht werden.", "%s %s"
+1015 	= "Eintrag '%1!' wird von Interfaces-Datei '%2!' nach Interfaces-Datei '%3!' kopiert.", "%s %s %s"
+1020	= "Fehler beim Erstellen der temporÃren Runserver-Datei im Versionsverzeichnis '%1!' fœr Server '%2!' zum Upgrade: Upgrade abgebrochen.", "%s %s" 
+1021	= "Masterdevice der Runserver-Datei nicht gefunden.", ""
+1022	= "Geben Sie den vollstÃndigen Pfad des Masterdevices fœr den Server\, der dem Upgrade unterzogen werden soll\, ein (Standard ist '%1!'): ", "%s"
+1023 = "Masterdevice '%1!' existiert nicht: Upgrade nicht mŒglich.", "%s"
+1024	= "Upgrade von Server '%1!' auf Version '%2!' erfolgreich. Allerdings sind Probleme beim Upgrade von gespeicherten Prozeduren\, Triggern\, Regeln oder Ansichten aufgetreten. Auditinit setzt die Konfiguration fort. Im Auditinit-Log (%3!) finden Sie nach Abschluss der Konfiguration weitere Informationen.", "%s %s %s"
+1050	= "Fehler bei der Statusprœfung der Datenbanken nach dem Upgrade.", ""
+1051	= "Datenbank '%1!' wurde als abgestœrzt beim Laden markiert.",		"%s"
+1052	= "Datenbank '%1!' wurde als suspekt markiert.",			"%s"
+1053	= "Upgrade der Datenbank '%1!' war NICHT erfolgreich.",	"%s"
+1060 	= "Checkpoint auf allen Datenbanken.",					""
+1061 = "Fehler bei Checkpoint-Vorbereitung auf Datenbanken: Upgrade nicht mŒglich.",	""
+1062 = "Fehler beim Checkpoint auf Datenbank '%1!': Upgrade nicht mŒglich.",	"%s"
+1063 = "Warten, bis die Datenbank '%1!' online ist. Sollte diese \
+Datenbank repliziert werden\, starten Sie den Replication Server\, um \
+das Transaktionslog zu leeren. Wenn Sie nicht warten wollen\, bis \
+die Datenbanken online sind\, kŒnnen Sie jetzt unterbrechen \
+und SYBINIT dann starten\, wenn die Datenbanken online sind.", "%s"
+1064    = "Achtung: '%1!' hat Warnmeldungen zurœckgegeben.",          "%s"
+1065    = "Achtung: €berprœfung auf reservierte WŒrter in Datenbank '%1!' wird œbersprungen, da sie nicht verfœgbar ist.",   "%s"
+1200	= "Datei '%1!' nicht gefunden: Gespeicherte Systemprozeduren nicht installiert.", "%s"
+1201	= "Datei '%1!' nicht gefunden: Berechtigungen fœr Datenbank 'model' auf dem Adaptive Server nicht erteilt.", "%s"
+1202 = "Die Versionsnummer der Datei 'installmaster' entspricht nicht der Versionsnummer\, die im Server gespeichert ist.", ""
+1203    = "Datei '%1!' konnte nicht gefunden werden; gespeicherte Prozeduren fœr jConnect-Metadaten kŒnnen nicht installiert werden.", "%s"
+1300 = "Interfaces-Eintrag '%1!' hat keinen Port.", "%s" 
+1301	= "Interfaces-Eintrag '%1!' hat kein Protokoll.",		"%s"
+1302	= "Interfaces-Eintrag '%1!' hat keinen Hostnamen.",		"%s"
+1304	= "Versuch, Eintrag '%1!' in Interfaces-Datei einzufœgen, fehlgeschlagen.", "%s"
+1305	= "Eintrag '%1!' kann in Interfaces-Datei nicht eingefœgt werden.",	"%s" 
+1306 = "Auf Grund eines Fehlers beim Einfœgen der Begleitserver-EintrÃge ist der Interfaces-Eintrag '%1!' mŒglicherweise unvollstÃndig. Auditinit kann deshalb vielleicht den Begleitserver nicht starten. Bearbeiten Sie in diesem Fall manuell die Interfaces-Datei.",	"%s"
+1400	= "Knotennamen des Hosts\, der als Master-Knoten des Adaptive Servers verwendet werden soll\, nicht gefunden.", ""
+1401 = "Start des Begleitservers '%1!' nicht mŒglich. Es wird versucht, nur den Masterserver zu starten.", "%s"
+2000	= "Installation der Sprache '%1!'",				"%s"
+2001	= "Installation des Zeichensatzes '%1!'",			"%s"
+2002	= "Start des Adaptive Servers",				""
+2003	= "Erstellen des Masterdevices",				""
+2004	= "Installation der gespeicherten Sybase-Systemprozeduren",		""
+2005	= "Setzen der Berechtigungen der Datenbank 'model'",	""
+2006	= "Installation der gespeicherten Sybase-Katalogprozeduren",	""
+2007	= "Installation der Datenbank 'pubs'",			""
+2008	= "Installation der Datenbank 'pubs2'",			""
+2009 = "Installation der Datenbank 'interpubs'",		""
+2010 	= "Installation der Datenbank 'jpubs'",			""
+2011	= "Hinzufœgen von Bildern in Datenbank 'pubs'",		""
+2012	= "Hinzufœgen von Bildern in Datenbank 'pubs2'",		""
+2013		= "Der Adaptive Server %1! wird von Version %2! auf Version %3! umgestellt.",		"%s %s %s"
+2014	= "Upgrade-Eignungstest des Adaptive Servers '%1!' fœr Upgrade auf Version '%2!'.", "%s %s"
+2015	= "Sprachen werden vom Adaptive Server gelŒscht.",		""
+2016	= "ZeichensÃtze werden vom Adaptive Server gelŒscht.",	""
+2017	= "Standardsprache ist %1!.",		"%s"
+2018	= "Standard-Zeichensatz ist %1!.",		"%s"
+2019    = "Gespeicherte Prozeduren fœr jConnect-Metadaten werden installiert.",     ""
+2051	= "Masterdevice wird angelegt.",				""
+2052	= "Runserver-Datei des Adaptive Servers wird aktualisiert.",		""
+2054	= "Adaptive Server wird gestartet.",				""
+2055	= "Adaptive Server wird umgestellt.",				""
+2056	= "Gespeicherte Systemprozeduren werden installiert.",			""
+2057	= "Berechtigungen fœr Datenbank 'model' werden gesetzt.",		""
+2058		= "Backup Server wird fœr den Adaptive Server eingestellt.",		""
+2059	= "ZeichensÃtze werden installiert.",				""
+2060	= "ZeichensÃtze werden gelŒscht.",				""
+2061		= "Standard-Zeichensatz bzw. Standard-Sortierreihenfolge fœr Adaptive Server werden eingestellt.",	""
+2062	= "Sprachen werden installiert.",				""
+2063	= "Sprachen werden gelŒscht.",				""
+2064	= "Standardsprache wird eingestellt.",				""
+2065			= "Auditing wird installiert.",			""
+2066		= "Fakultative Datenbanken werden konfiguriert.",			""
+2067	= "Adaptive Server-Eintrag in Interfaces-Datei wird aktualisiert.",	""
+2068		= "Datenbank 'sybsystemprocs' wird erstellt.",			""
+2069		= "VollstÃndige B1-spezifische Initialisierung",""
+2070	= "Zurœckschreiben der Runserver-Datei ohne Installations-Flag",""
+2071		= "Installationsskript fœr Monitor-Server",		""
+2072		= "Sybsystemdb-Datenbank wird installiert.", ""
+2073    = "Installation von gespeicherten Prozeduren fœr jConnect-Metadaten",        ""
+2074            = "lokalen Adaptive Server-Namen einrichten",                     ""
+2100		= "Adaptive Server Information:",		""
+2101 		= "Name: ",				""
+2102 	= "Masterdevice:",			""
+2103 	= "Spiegel des Masterdevices:",		""
+2104 	= "GrŒﬁe des Masterdevices:",		""
+2105 	= "Fehler-Log:",				""
+2106 		= "Interfaces:",			""
+2107 	= "Gemeinsam genutzter Speicher:",	""
+2109 	= "SSO-Kennwort:",			""
+2110 	= "SekundÃrer Server:",			""
+2111	= "Standort der Konfigurationsdatei: ",  ""
+2112	= "SeitengrŒﬁe fœr Server: ",			""
+2200	= "Begleitserver fœr den Adaptive Server '%1!' nicht gefunden: Interfaces-Datei nicht gefunden.", "%s"	
+2201		= "Begleitserver fœr Adaptive Server '%1!' nicht gefunden: Interfaces-Datei '%2!' existiert nicht.", "%s %s"	
+2202	= "Begleitserver fœr den Adaptive Server '%1!' nicht gefunden: Interfaces-Datei '%2!' nicht lesbar.", "%s %s"	
+2210 = "SYB_EXEC.COM in Ihrem Stammverzeichnis nicht gefunden. SYB_EXEC.COM wird zum Starten des Fremdservers benŒtigt. Es wird versucht, den Vorgang dennoch fortzusetzen.", ""
+2211 = "SYB_EXEC.COM in Ihrem Stammverzeichnis nicht gefunden. SYB_EXEC.COM wird zum Starten des Fremdservers benŒtigt. Es wird versucht, den Vorgang dennoch fortzusetzen.", ""
+2212 = "SYB_EXEC.COM in Ihrem Stammverzeichnis nicht gefunden. SYB_EXEC.COM wird zum Starten des Fremdservers benŒtigt. Es wird versucht, den Vorgang dennoch fortzusetzen.", ""
+2213 	= "Kopieren von SYB_EXEC.COM in Ihr Stammverzeichnis nicht mŒglich. Fremdserver kann nicht gestartet werden.",	""
+2214 = "Fehler beim Bereitstellen von '%1!'. Fremdserver kann nicht gestartet werden.",	"%s"	
+3111		= "BESTEHENDER SYBASE SERVER", ""
+3112		= "", ""
+3113		= "BESTEHENDER SYBASE SERVER", ""
+3114	= "\
+1. Bestehenden Adaptive Server konfigurieren.\\n\\nWÃhlen Sie die \
+Option zum Installieren von Auditing auf einem bereits installierten \
+oder umgestellten Adaptive Server.\\n\\n * Steuertasten *\\n\\nUm \
+zur nÃchsten Anzeige zu gelangen\, brauchen Sie nicht Strg-a \
+zu drœcken\; dorthin gelangen Sie automatisch durch die Auswahl \
+eines Elements. \\n\\nMit Strg-x verlassen Sie die Anzeige. \
+Auditinit kehrt ins vorherige Menœ zurœck. Mit Strg-x gelangen Sie in \
+die vorherigen Menœs\, verlassen Auditinit und kehren zum \
+Betriebssystem zurœck.", ""
+3115	= "\
+1. Bestehenden Sybase Server konfigurieren.\\n\\nWÃhlen Sie diese \
+Option zum Installieren von Auditing auf einem bereits installierten \
+oder umgestellten Adaptive Server.", ""
+3121		= "ADAPTIVE SERVER HINZUF€GEN", ""
+3122		= "", ""
+3123		= "ADAPTIVE SERVER HINZUF€GEN", ""
+3124	= "\
+Auditinit zeigt eine Liste von Servern\, die konfiguriert werden kŒnnen. \
+Diese Liste enthÃlt Backup Server und SQL Server. Wenn die Liste \
+nicht in den Ausschnitt passt\, gehen Sie mit Strg-f an das Ende \
+der Liste. WÃhlen Sie den Server\, den Sie konfigurieren wollen.\\n\\n\
+* Steuertasten *\\n\\nMit Strg-f kŒnnen Sie in der Liste der fœr \
+die Konfiguration verfœgbaren Server vorwÃrts blÃttern. Sie mœssen an das \
+Ende der Liste gehen\, bevor Sie einen Server auswÃhlen kŒnnen.\\n\\n\
+Mit Strg-b kŒnnen Sie in der Liste der fœr die Konfiguration \
+verfœgbaren Server zurœck blÃttern. \\n\\nSie brauchen Strg-a nicht \
+zu drœcken\, um zur nÃchsten Anzeige zu gelangen\, da \
+Ihre Serverauswahl automatisch die nÃchste Anzeige aufruft.\\n\\n\
+Mit Strg-x verlassen Sie die Anzeige. Audinit kehrt ins vorherige \
+Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen Menœs\, \
+verlassen Auditinit und kehren zum Betriebssystem zurœck.\\n\\n \
+* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den \
+angezeigten Servernamen und gehen zur nÃchsten Anzeige.\\n\\n\
+Mit Strg-x verlassen Sie die Anzeige und annullieren eine \
+eventuelle Auswahl. Audinit kehrt ins vorherige Menœ zurœck. Mit Strg-\
+x gelangen Sie in die vorherigen Menœs\, verlassen Auditinit und \
+kehren zum Betriebssystem zurœck.\\n\\n\.", ""
+3125	= "\
+Auditinit zeigt eine Liste von Servern\, die konfiguriert werden kŒnnen. \
+Diese Liste enthÃlt Backup Server und SQL Server. Wenn die Liste nicht \
+in ein Fenster passt\, gehen Sie mit der Pfeiltaste an das Ende der \
+Liste. WÃhlen Sie den Server\, den Sie konfigurieren wollen.\\n\\n * Weiter \
+zur nÃchsten Anzeige *\\n\\nMit <F10> akzeptieren Sie den \
+angezeigten Servernamen und gehen weiter zur nÃchsten Anzeige.", ""
+3131		= "BESTEHENDEN ADAPTIVE SERVER KONFIGURIEREN", ""
+3132		= "",	 ""
+3133		= "BESTEHENDEN ADAPTIVE SERVER KONFIGURIEREN",	 ""
+3134		= " \
+Auditinit zeigt eine Liste von Servern\, die konfiguriert werden kŒnnen. \
+Diese Liste enthÃlt Backup Server und Adaptive Server. Wenn die Liste nicht \
+in den Ausschnitt passt\, gehen Sie mit Strg-f an das Ende der Liste. \
+WÃhlen Sie den Server\, den Sie konfigurieren wollen. (Sie kŒnnen \
+Auditing nur fœr die aktuelle Version konfigurieren). \\n\\n* Steuertasten \
+*\\n\\nMit Strg-f kŒnnen Sie in der Liste der fœr das Upgrade oder die \
+Neukonfiguration verfœgbaren Server vorwÃrts blÃttern. Sie mœssen an das Ende \
+der Liste gehen\, bevor Sie einen Server auswÃhlen kŒnnen.\\n\\nMit Strg-b \
+kŒnnen Sie in der Liste der fœr Auditing verfœgbaren Server zurœck blÃttern. \
+\\n\\nSie brauchen Strg-a nicht zu drœcken\, um zur nÃchsten Anzeige \
+zu gelangen\, da Ihre Serverauswahl automatisch die nÃchste Anzeige \
+aufruft.\\n\\nMit Strg-x verlassen Sie die Anzeige. Audinit kehrt ins \
+vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen Menœs\, \
+verlassen Auditinit und kehren zum Betriebssystem zurœck.",    ""
+3135	= "\
+Auditinit zeigt eine Liste von Servern\, die konfiguriert werden kŒnnen. \
+Diese Liste enthÃlt Backup Server und Adaptive Server. Wenn die Liste nicht \
+in ein Fenster passt\, gehen Sie mit der Pfeiltaste an das Ende der \
+Liste. WÃhlen Sie den Server\, fœr den Sie Auditing konfigurieren wollen \
+(er muss die aktuelle Version haben).",    ""
+3169	= "\
+AUDITINIT KOPIERT DEN EINTRAG F€R DEN \
+UMZUSTELLENDEN SERVER NICHT MEHR AUS DER ALTEN \
+INTERFACES-DATEI IN DIE NEUE. Mehr darœber in der Hilfe oder in \
+der Dokumentation.",	""
+3170	= "\
+AUDITING KONFIGURIEREN\\n\\nWÃhlen Sie diese Option\, um die \
+Auditing-Funktion des Sybase Servers einzurichten.\\n\\n * Sybase Server \
+konfigurieren *\\n\\nDrœcken Sie <F10>\, um mit der Konfiguration \
+fortzufahren. ",	 ""
+3171		= "KONFIGURATION DES SYBASE SERVERS",	 ""
+3172		= "",	 ""
+3173		= "KONFIGURATION DES SYBASE SERVERS",	 ""
+3174	= "\
+1. AUDITING KONFIGURIEREN\\n\\nWÃhlen Sie diese Option\, um die \
+Auditing-Funktion des Adaptive Servers einzurichten.\\n\\n * Steuertasten \
+*\\n\\nMit Strg-a setzen Sie die Konfiguration fort. \\n\\nMit Strg-x \
+verlassen Sie die Anzeige und annullieren eine eventuelle Auswahl. \
+Audinit kehrt ins vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die \
+vorherigen Menœs\, verlassen Auditinit und kehren zum Betriebssystem \
+zurœck.",	 ""
+3175	= "\
+1. AUDITING KONFIGURIEREN\\n\\nWÃhlen Sie diese Option\, um die \
+Auditing-Funktion des Adaptive Servers einzurichten.\\n\\n * Steuertasten \
+*\\n\\nMit Strg-a setzen Sie die Konfiguration fort. \\n\\nMit Strg-x \
+verlassen Sie die Anzeige und annullieren eine eventuelle Auswahl. \
+Audinit kehrt ins vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die \
+vorherigen Menœs\, verlassen Auditinit und kehren zum Betriebssystem \
+zurœck.",	 ""
+3176		= "UPGRADE EINES BESTEHENDEN SYBASE SERVERS", ""
+3177		= "",	 ""
+3178		= "UPGRADE EINES BESTEHENDEN SYBASE SERVERS",	 ""
+3179	= "\
+1. VERSIONSVERZEICHNIS FR€HERER VERSIONEN \\n\\nWÃhlen \
+Sie diese Option\, um den angezeigten Pfad des Versionsverzeichnisses \
+Ihrer SYBASE-Installation vor Version 10.0 zu Ãndern. Geben Sie den \
+vollstÃndigen Pfad des Verzeichnisses Ihrer frœheren SYBASE-Installation \
+ein. Geben Sie nicht den Pfad des neuen SYBASE-Versionsverzeichnisses \
+ein.\\n\\n AUDITINIT UNTERST€TZT DIE BEARBEITUNG VON \
+INTERFACES-DATEIEN NICHT MEHR\, auch nicht das Kopieren des \
+Eintrags des umzustellenden Servers aus der alten Interfaces-Datei in die \
+neue.\\n\\n SYBSETUP\, DSEDIT\, DSEDIT_DCE oder ein Texteditor \
+mœssen dafœr benutzt werden. Weitere Hinweise finden Sie in der \
+Dokumentation.\\n\\n * Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den \
+angezeigten Pfad des Versionsverzeichnisses. \\n\\nMit Strg-x verlassen Sie \
+die Anzeige und verwerfen alle ÿnderungen. Auditinit kehrt ins \
+vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen Menœs\, \
+verlassen Auditinit und kehren zum Betriebssystem zurœck.",    ""
+3180	= "\
+Versionsverzeichnis fœr die frœhere Version einrichten\\n\\nWÃhlen Sie \
+diese Option\, um den angezeigten Pfad des Versionsverzeichnisses Ihrer \
+SYBASE-Installation vor Version 10.0 zu Ãndern. Geben Sie nach der \
+Eingabeaufforderung den vollstÃndigen Pfad des Verzeichnisses Ihrer \
+frœheren SYBASE-Installation ein. Geben Sie nicht den Pfad des neuen \
+SYBASE-Versionsverzeichnisses ein.\\n\\n AUDITINIT KOPIERT DEN \
+EINTRAG F€R DEN UMZUSTELLENDEN SERVER NICHT MEHR AUS \
+DER ALTEN IN DIE NEUE INTERFACES-DATEI.\\n\\n SYBSETUP\, \
+DSEDIT\, DSEDIT_DCE oder ein Texteditor mœssen dafœr benutzt \
+werden. Weitere Hinweise finden Sie in der Dokumentation.\\n\\n * Weiter \
+zur nÃchsten Anzeige *\\n\\nMit <F10> akzeptieren Sie den \
+angezeigten Pfad des Versionsverzeichnisses.",    ""
+3181		= "SA-KONTONAMEN UND KENNWORT EINGEBEN",	 ""
+3182		= "",	 ""
+3183		= "SA-KONTONAMEN UND KENNWORT EINGEBEN",	 ""
+3184	= "\
+1. SA-Konto\\n\\nMit dieser Option geben Sie den Benutzernamen eines \
+Kontos mit Systemverwalter-Rechten ein. Auditinit wird sich mit diesem \
+Konto bei dem Adaptive Server anmelden\, den Sie im vorherigen Menœ \
+ausgewÃhlt haben. \\n\\n2. SA-Kennwort\\n\\nMit dieser Option geben Sie \
+das Kennwort des Kontos mit Systemadministrator-Rechten ein. Um die \
+Sicherheit zu erhŒhen\, schreibt Auditinit im Kennwort-Feld Rautenzeichen \
+(#). Das Standard-Kennwort des SA-Kontos ist NULL. Wenn Sie diesen \
+Wert beibehalten wollen\, wÃhlen Sie die \
+Option \"SA-Kennwort\" nicht.\\n\\n* Steuertasten *\\n\\n Mit Strg-a \
+akzeptieren Sie Kennwort und Namen fœr das angezeigte \
+SA-Konto.\\n\\nMit Strg-x verlassen Sie die Anzeige und verwerfen \
+alle ÿnderungen. Auditinit kehrt ins vorherige Menœ zurœck. Mit Strg-x \
+gelangen Sie in die vorherigen Menœs\, verlassen Auditinit\, und kehren \
+zum Betriebssystem zurœck.",	 ""
+3185	= "\
+SA-Konto\\n\\nMit dieser Option geben Sie den Benutzernamen eines \
+Kontos mit Systemverwalter-Rechten ein. Auditinit wird sich mit diesem \
+Konto bei dem Adaptive Server anmelden\, den Sie im vorherigen Menœ \
+ausgewÃhlt haben. \\n\\nSA-Kennwort\\n\\nMit dieser Option geben Sie das \
+Kennwort des Kontos mit Systemadministrator-Rechten ein. Um die \
+Sicherheit zu erhŒhen\, schreibt Auditinit im Kennwort-Feld Rautenzeichen \
+(#). Das Standard-Kennwort des SA-Kontos ist NULL. Wenn Sie diesen \
+Wert beibehalten wollen\, wÃhlen Sie die \
+Option \"SA-Kennwort\" nicht.\\n\\n* Weiter zur nÃchsten Anzeige \
+*\\n\\nDrœcken Sie <F10>\, um den angezeigten SA-Kontonamen und \
+das Kennwort zu akzeptieren.",	 ""
+3191		= "UPGRADE DES SYBASE SERVERS",	 ""
+3192		= "",	 ""
+3193	= "UPGRADE DES SYBASE SERVERS",	 ""
+3194 = "1. UpgradefÃhigkeit des Sybase Servers jetzt \
+testen.\\n\\nWÃhlen Sie diese Option\, um zu testen\, ob die \
+Master-Datenbank des von Ihnen gewÃhlten Sybase Servers \
+genœgend freien Speicherplatz fœr das Upgrade auf 12.5 \
+hat.\\n\\nWenn 'auditinit' in einer Meldung mitteilt\, dass der \
+Server den Test der UpgradefÃhigkeit nicht bestanden hat\, \
+sehen Sie in der 'auditinit'-Logdatei nach\, wie viel \
+Speicherplatz fœr ein erfolgreiches Upgrade erforderlich \
+ist. Benutzen Sie den Befehl 'alter database' auf Ihrem \
+Server\, um den notwendigen Speicherplatz zuzuweisen\, bevor \
+Sie den Upgrade-Prozess erneut starten. Weitere Hinweise zum \
+Befehl 'alter database' finden Sie in der \
+Installationsanleitung Ihres SYBASE Adaptive Servers.\\n\\n2. \
+Auf Konflikte mit reservierten WŒrtern prœfen.\\n\\nDer Sybase \
+Server der Version 12.5 enthÃlt neue Transact-SQL \
+SchlœsselwŒrter\, die als reservierte WŒrter gelten. \
+Reservierte WŒrter sind SQL Syntax und kŒnnen nicht als \
+Bezeichner verwendet werden. WÃhlen Sie diese Option\, um \
+festzustellen\, ob Ihre vorhandene Datenbank diese neuen \
+reservierten WŒrter als Bezeichner verwendet. In der \
+Dokumentation \"Neues im Adaptive Server Version 12.5\" \
+finden Sie eine komplette Liste dieser neuen reservierten \
+WŒrter.\\n\\nWenn 'auditinit' Konflikte mit reservierten \
+WŒrtern findet\, wird in einer Meldung die Anzahl der \
+Konflikte mit reservierten WŒrtern in Ihrer Datenbank \
+angezeigt. Konflikte mit reservierten WŒrtern\, die \
+Datenbanknamen betreffen\, kŒnnen zu einem Fehlschlag des \
+Upgrades fœhren. Andere Konflikte mit reservierten WŒrtern \
+verhindern das erfolgreiche Upgrade nicht\, kŒnnen aber \
+Fehler in Abfragen\, gespeicherten Prozeduren oder \
+Anwendungen nach sich ziehen.\\n\\nFœhren Sie die gespeicherte \
+Prozedur 'sp_checkreswords' in jeder Datenbank aus\, um die \
+Bezeichner zu finden\, die einen Konflikt mit reservierten \
+WŒrtern auslŒsen. Sie kŒnnen diese Prozedur jetzt ausfœhren\, \
+bevor Sie das Upgrade fortsetzen\, oder auch nach dem \
+Abschluss des Upgrades. Weitere Hinweise œber die Erkennung \
+von Konflikten mit reservierten WŒrtern und œber die \
+ÿnderung der Bezeichnernamen finden Sie in der \
+Installationsanleitung des SYBASE Adaptive Servers. Drœcken \
+Sie die Eingabetaste\, um zum Menœ \"Sybase Server Upgrade\" \
+zurœckzukehren.\\n\\nWenn Ihre vorhandenen Datenbanken keine \
+reservierten WŒrter als Bezeichner verwenden\, zeigt \
+'auditinit' in einer Meldung\, dass keine Konflikte mit \
+reservierten WŒrtern vorliegen. Drœcken Sie die \
+Eingabetaste\, um zum Menœ \"Sybase Server Upgrade\" \
+zurœckzukehren.\\n\\n3. Konfiguration der 'sybsystemprocs'-\
+Datenbank.\\n\\nVersion 12.5 bietet eine neue Systemdatenbank \
+(sybsystemprocs)\, die die meisten Systemprozeduren enthÃlt. \
+Mit dieser neuen Funktion wird der Speicherbedarf fœr die \
+Master-Datenbank reduziert\, mehr FlexibilitÃt fœr den \
+Benutzer geboten und die Wiederherstellung der Master-\
+Datenbank beschleunigt. WÃhlen Sie diese Option\, um zum Menœ \
+fœr die Konfiguration der Datenbank 'sybsystemprocs' und \
+ihres Devices zu gelangen.\\n\\n4. Konfiguration der \
+'sybsystemdb'-Datenbank.\\n\\nBeginnend mit Version 12.5 des \
+Adaptive Servers wird die Tabelle 'spt_commitab' in einer \
+Datenbank namens 'sybsystemdb' gespeichert. (In frœheren \
+Versionen des Sybase Servers befand sich die Tabelle \
+'spt_commitab' in der Master-Datenbank.) In der \
+Installationsanleitung fœr den SYBASE Adaptive Server finden \
+Sie Hinweise œber die Wahl eines geeigneten Speicherortes \
+fœr 'sybsystemdb'. WÃhlen Sie diese Option\, um in das Menœ \
+fœr die Konfiguration der Datenbank 'sybsystemdb' und ihres \
+Devices zu gelangen.\\n\\n5. Upgrade des Sybase Servers jetzt \
+durchfœhren.\\n\\nWÃhlen Sie diese Option\, um das Upgrade \
+Ihres Servers fortzusetzen\, nachdem Sie den Test der \
+UpgradefÃhigkeit abgeschlossen\, Konflikte mit reservierten \
+WŒrtern geklÃrt und Konfigurationsoptionen fœr die Datenbank \
+'sybsystemprocs' ausgewÃhlt haben.\\n\\nAuditinit zeigt den \
+aktuellen Suchpfad fœr das Fehler-Log des Sybase Servers im \
+alten SYBASE Versionsverzeichnis an. Geben Sie einen neuen \
+vollstÃndigen Suchpfad fœr das Fehler-Log in Ihrem neu \
+erstellen SYBASE-Verzeichnis ein. Sie kŒnnen die \
+Eingabetaste drœcken\, um den angezeigten Suchpfad zu \
+akzeptieren\, Ihr Fehler-Log fœr den Adaptive Server wird \
+dann aber im alten SYBASE Verzeichnis untergebracht \
+werden.\\n\\nAuditinit zeigt eine Serie von Meldungen an\, \
+wÃhrend der Upgradeprozess lÃuft. Wenn der Upgradeprozess \
+nicht erfolgreich abgeschlossen werden kann\, zeigt \
+'auditinit' Fehlermeldungen an. Sie kŒnnen die \
+Fehlermeldungen und das Fehler-Log von 'auditinit' prœfen\, \
+um die Ursache fœr den Upgradefehler zu \
+ermitteln.\\n\\nNachdem der Upgradeprozess erfolgreich \
+abgeschlossen wurde\, zeigt 'auditinit' eine Erfolgsmeldung \
+an und kehrt zum Upgrade-Menœ des Sybase Servers \
+zurœck.\\n\\n6. ABFRAGEBÿUME IN ALLEN DATENBANKEN NEU \
+ZUORDNEN.\\n\\nEs kann sein\, dass das Upgrade erfolgreich \
+verlÃuft\, die Neuzuordnung bestimmter Objekte aber \
+fehlschlÃgt. Wenn dieser Fehler eintritt\, mœssen Sie diese \
+Objekte nach dem Upgrade lŒschen. Hinweise zum LŒschen der \
+Objekte und zum Fortsetzen des Upgrade-Prozesses finden Sie \
+in der Installationsanleitung des SYBASE Adaptive Servers. \
+WÃhlen Sie diese Option\, um die Neuzuordnung der restlichen \
+Objekte fortzusetzen\, nachdem Sie die fehlerhaften Objekte \
+gelŒscht haben.\\n\\n* Steuertasten *\\n\\nMit Strg-x verlassen \
+Sie die Anzeige. Auditinit kehrt zum vorherigen Menœ zurœck. \
+Sie kŒnnen Strg-x wiederholen\, um jeweils zum vorherigen \
+Menœ zurœckzukehren und schlieﬁlich Auditinit zu verlassen \
+und zur Eingabeaufforderung des Betriebssystems zurœckzukehren.", ""
+3195 = "UpgradefÃhigkeit des Sybase Servers jetzt \
+testen.\\n\\nWÃhlen Sie diese Option\, um zu testen\, ob die \
+Master-Datenbank des von Ihnen gewÃhlten Sybase Servers \
+genœgend freien Speicherplatz fœr das Upgrade auf 12.5 \
+hat.\\n\\nWenn 'auditinit' in einer Meldung mitteilt\, dass der \
+Server den Test der UpgradefÃhigkeit nicht bestanden hat\, \
+sehen Sie mit <F3> in der 'auditinit'-Logdatei nach\, wie viel \
+Speicherplatz fœr ein erfolgreiches Upgrade erforderlich \
+ist. Benutzen Sie den Befehl 'alter database' auf Ihrem \
+Server\, um den notwendigen Speicherplatz zuzuweisen\, bevor \
+Sie den Upgrade-Prozess erneut starten. Weitere Hinweise zum \
+Befehl 'alter database' finden Sie in der \
+Installationsanleitung Ihres SYBASE Adaptive Servers.\\n\\nAuf \
+Konflikte mit reservierten WŒrtern prœfen.\\n\\nDer Sybase \
+Server der Version 12.5 enthÃlt neue Transact-SQL \
+SchlœsselwŒrter\, die als reservierte WŒrter gelten. \
+Reservierte WŒrter sind SQL Syntax und kŒnnen nicht als \
+Bezeichner verwendet werden. WÃhlen Sie diese Option\, um \
+festzustellen\, ob Ihre vorhandene Datenbank diese neuen \
+reservierten WŒrter als Bezeichner verwendet. In der \
+Dokumentation \"Neues im Adaptive Server Version 12.5\" \
+finden Sie eine komplette Liste dieser neuen reservierten \
+WŒrter.\\n\\nWenn 'auditinit' Konflikte mit reservierten \
+WŒrtern findet\, wird in einer Meldung die Anzahl der \
+Konflikte mit reservierten WŒrtern in Ihrer Datenbank \
+angezeigt. Konflikte mit reservierten WŒrtern\, die \
+Datenbanknamen betreffen\, kŒnnen zu einem Fehlschlag des \
+Upgrades fœhren. Andere Konflikte mit reservierten WŒrtern \
+verhindern das erfolgreiche Upgrade nicht\, kŒnnen aber \
+Fehler in Abfragen\, gespeicherten Prozeduren oder \
+Anwendungen nach sich ziehen.\\n\\nFœhren Sie die gespeicherte \
+Prozedur 'sp_checkreswords' in jeder Datenbank aus\, um die \
+Bezeichner zu finden\, die einen Konflikt mit reservierten \
+WŒrtern auslŒsen. Sie kŒnnen diese Prozedur jetzt ausfœhren\, \
+bevor Sie das Upgrade fortsetzen\, oder auch nach dem \
+Abschluss des Upgrades. Weitere Hinweise œber die Erkennung \
+von Konflikten mit reservierten WŒrtern und œber die \
+ÿnderung der Bezeichnernamen finden Sie in der \
+Installationsanleitung des SYBASE Adaptive Servers.\\n\\nWenn \
+Ihre vorhandenen Datenbanken keine reservierten WŒrter als \
+Bezeichner verwenden\, zeigt 'auditinit' in einer Meldung\, \
+dass keine Konflikte mit reservierten WŒrtern vorliegen. \
+Drœcken Sie die Eingabetaste\, um zum Menœ \"Sybase Server \
+Upgrade\" zurœckzukehren.\\n\\nKonfiguration der \
+'sybsystemprocs'-Datenbank\\n\\nVersion 12.5 bietet eine neue \
+Systemdatenbank (sybsystemprocs)\, die die meisten \
+Systemprozeduren enthÃlt. Mit dieser neuen Funktion wird der \
+Speicherbedarf fœr die Master-Datenbank reduziert\, mehr \
+FlexibilitÃt fœr den Benutzer geboten und die \
+Wiederherstellung der Master-Datenbank beschleunigt. WÃhlen \
+Sie diese Option\, um zum Menœ fœr die Konfiguration der \
+Datenbank 'sybsystemprocs' und ihres Devices zu \
+gelangen.\\n\\nKonfiguration der 'sybsystemdb'-\
+Datenbank\\n\\nBeginnend mit Version 12.5 des Adaptive Servers \
+wird die Tabelle 'spt_commitab' in einer Datenbank namens \
+'sybsystemdb' gespeichert. (In frœheren Versionen des \
+Adaptive Servers befand sich die Tabelle 'spt_commitab' in \
+der Master-Datenbank.) In der Installationsanleitung fœr den \
+SYBASE Adaptive Server finden Sie Hinweise œber die Wahl \
+eines geeigneten Speicherortes fœr 'sybsystemdb'. WÃhlen Sie \
+diese Option\, um in das Menœ fœr die Konfiguration der \
+Datenbank 'sybsystemdb' und ihres Devices zu \
+gelangen.\\n\\nUpgrade des Sybase Servers jetzt \
+durchfœhren.\\n\\nNachdem Sie den Test der UpgradefÃhigkeit \
+abgeschlossen\, Konflikte mit reservierten WŒrtern geklÃrt \
+und Konfigurationsoptionen fœr die Datenbank \
+'sybsystemprocs' ausgewÃhlt haben\, wÃhlen Sie diese Option\, \
+um das Upgrade Ihres Servers fortzusetzen.\\n\\nAuditinit \
+zeigt den aktuellen Suchpfad fœr das Fehler-Log des Sybase \
+Servers (im alten SYBASE Versionsverzeichnis) an. Geben Sie \
+einen neuen vollstÃndigen Suchpfad fœr das Fehler-Log in \
+Ihrem neu erstellten SYBASE-Verzeichnis ein. Sie kŒnnen die \
+Eingabetaste drœcken\, um den angezeigten Suchpfad zu \
+akzeptieren\, das Fehler-Log fœr den Adaptive Server wird \
+dann aber im alten SYBASE-Verzeichnis untergebracht. \
+\\n\\nAuditinit zeigt eine Serie von Meldungen an\, \
+wÃhrend der Upgradeprozess lÃuft. Wenn der Upgradeprozess \
+nicht erfolgreich abgeschlossen werden kann\, zeigt \
+'auditinit' Fehlermeldungen an. Sie kŒnnen die \
+Fehlermeldungen und das Fehler-Log von 'auditinit' prœfen\, \
+um die Ursache fœr den Upgradefehler zu \
+ermitteln.\\n\\nNachdem der Upgradeprozess erfolgreich \
+abgeschlossen wurde\, zeigt 'auditinit' eine Erfolgsmeldung \
+an.\\n\\nABFRAGEBÿUME IN ALLEN DATENBANKEN NEU ZUORDNEN.\\n\\nEs \
+kann sein\, dass das Upgrade erfolgreich verlÃuft\, die \
+Neuzuordnung bestimmter Objekte aber fehlschlÃgt. Wenn \
+dieser Fehler eintritt\, mœssen Sie diese Objekte nach dem \
+Upgrade lŒschen. Hinweise zum LŒschen der Objekte und zum \
+Fortsetzen des Upgrade-Prozesses finden Sie im Anhang B der \
+Installationsanleitung des SYBASE Adaptive Servers. WÃhlen \
+Sie diese Option\, um die Neuzuordnung der restlichen Objekte \
+fortzusetzen\, nachdem Sie die fehlerhaften Objekte gelŒscht \
+haben.", ""
+3201 = "KONFIGURATION DES MASTERDEVICES", ""
+3202 = "", ""
+3203 = "KONFIGURATION DES MASTERDEVICES", ""
+3204 = "1. Masterdevice\\n\\nWÃhlen Sie diese Option\, um den \
+Suchpfad fœr Ihr Masterdevice einzugeben. Geben Sie den \
+vollen Suchpfad des Devices ein und drœcken Sie die \
+Eingabetaste.\\n\\n2. GrŒﬁe\\n\\nWÃhlen Sie diese Option\, um die \
+GrŒﬁe (in MByte) des Masterdevices anzugeben. Die \
+empfohlene GrŒﬁe fœr das Masterdevice ist 17 MByte\, die \
+MindestgrŒﬁe ist 15 MByte. Das Masterdevice enthÃlt \
+mindestens drei Datenbanken: master\, model und tempdb. \
+ZusÃtzlich kann es die drei pubs-Datenbanken enthalten: \
+pubs2\, interpubs und jpubs. Ab Version 12.5 werden die \
+meisten gespeicherten Prozeduren\, die von SYBASE \
+bereitgestellt werden\, in der neuen Datenbank \
+'sybsystemprocs' gespeichert\, und nicht in der Master-\
+Datenbank.\\n\\n3. ZusammenhÃngend \\n\\nWÃhlen Sie diese \
+Option\, wenn Sie den angezeigten Standardwert \"ja\" Ãndern \
+wollen. Wenn diese Option auf \"ja\" gesetzt ist\, meldet \
+'auditinit' einen Fehler\, falls das Masterdevice nicht auf \
+zusammenhÃngenden BlŒcken der Festplatte erstellt werden \
+kann. Wenn die Option auf \"nein\" gesetzt ist\, meldet \
+'auditinit' keinen Fehler\, falls die Erstellung \
+in zusammenhÃngenden BlŒcken nicht mŒglich ist.\\n\\n* \
+Steuertasten *\\n\\nDrœcken Sie Strg-a\, um die angezeigten \
+Werte zu akzeptieren und mit der nÃchsten Anzeige \
+weiterzuarbeiten.\\n\\nMit Strg-x verlassen Sie die Anzeige. \
+Auditinit kehrt zum vorherigen Menœ zurœck. Sie kŒnnen Strg-\
+x wiederholen\, um jeweils zum vorherigen Menœ zurœckzukehren \
+und schlieﬁlich Auditinit zu verlassen und zur \
+Eingabeaufforderung des Betriebssystems zurœckzukehren.", ""
+3205 = "1. Masterdevice\\n\\nWÃhlen Sie diese Option\, um den \
+Suchpfad des Masterdevices einzugeben. Geben Sie den vollen \
+Suchpfad des Devices ein und drœcken Sie die Eingabetaste. \
+(Wenn Sie den Namen einer Betriebssystemdatei an Stelle eines \
+unformatierten Devices eingeben\, werden Sie von 'auditinit' \
+gewarnt\, dass dies nicht empfohlen wird. Wenn Sie dennoch \
+eine Betriebssystemdatei verwenden wollen\, drœcken Sie \
+nochmals die Eingabetaste.) Im Allgemeinen empfiehlt Sybase \
+nicht\, das Masterdevice in eine Betriebssystemdatei zu \
+setzen\, da Betriebssystemdateien Block-I/O-VorgÃnge \
+benutzen. Wenn Sie Ihr Masterdevice in eine \
+Betriebssystemdatei setzen und das System abstœrzt\, wÃhrend \
+ein Lese- oder Schreibvorgang lÃuft\, kŒnnen Sie einen ganzen \
+Datenblock verlieren. In der Installationsanleitung des \
+SYBASE Adaptive Servers finden Sie Hinweise zur Verwendung \
+von Betriebssystemdateien fœr das Masterdevice.\\n\\n2. \
+GrŒﬁe\\n\\nWÃhlen Sie diese Option\, um die GrŒﬁe (in MByte) \
+des Masterdevices anzugeben. Die empfohlene GrŒﬁe fœr das \
+Masterdevice ist 17 MByte\, die MindestgrŒﬁe ist 15 MByte. \
+Das Masterdevice enthÃlt mindestens drei Datenbanken: \
+master\, model und tempdb. ZusÃtzlich kann es die drei pubs-\
+Datenbanken enthalten: pubs2\, interpubs und jpubs. Ab \
+Version 12.5 werden die meisten gespeicherten Prozeduren\, \
+die von SYBASE bereitgestellt werden\, in der neuen Datenbank \
+'sybsystemprocs' gespeichert\, und nicht in der Master-\
+Datenbank.\\n\\n* Steuertasten *\\n\\nDrœcken Sie Strg-a\, um die \
+angezeigten Werte zu akzeptieren und mit der nÃchsten \
+Anzeige weiterzuarbeiten.\\n\\nMit Strg-x verlassen Sie die \
+Anzeige. Auditinit kehrt zum vorherigen Menœ zurœck. Sie \
+kŒnnen Strg-x wiederholen\, um jeweils zum vorherigen Menœ \
+zurœckzukehren und schlieﬁlich Auditinit zu verlassen und \
+zur Eingabeaufforderung des Betriebssystems zurœckzukehren.", ""
+3206 = " Masterdevice\\n\\nWÃhlen Sie diese Option\, um den \
+Suchpfad der Masterdevicedatei einzugeben. Geben Sie die \
+Laufwerksbezeichnung\, den Suchpfad und den Dateienamen des \
+Devices ein. Drœcken Sie zum Abschluss die \
+Eingabetaste.\\n\\nIn der Installationsanleitung des SYBASE \
+Adaptive Servers finden Sie Hinweise zur Verwendung von \
+Betriebssystemdateien fœr das Master-\
+Device.\\n\\nGrŒﬁe\\n\\nWÃhlen Sie diese Option\, um die GrŒﬁe \
+(in MByte) des Masterdevices anzugeben. Die empfohlene \
+GrŒﬁe fœr das Masterdevice ist 17 MByte\, die MindestgrŒﬁe \
+ist 15 MByte. Das Masterdevice enthÃlt mindestens drei \
+Datenbanken: master\, model und tempdb. ZusÃtzlich kann es \
+die drei pubs-Datenbanken enthalten: pubs2\, interpubs und \
+jpubs. Ab Version 12.5 werden die meisten gespeicherten \
+Prozeduren\, die von SYBASE bereitgestellt werden\, in der \
+neuen Datenbank 'sybsystemprocs' gespeichert\, und nicht in \
+der Master-Datenbank.\\n\\nIn der Installationsanleitung des \
+SYBASE Adaptive Servers finden Sie Hinweise zur Planung der \
+GrŒﬁe von Masterdevice-Dateien.\\n\\n* Weiter zur nÃchsten \
+Anzeige *\\n\\nDrœcken Sie <F10>\, um die angezeigten Werte zu \
+akzeptieren und mit der nÃchsten Anzeige weiterzuarbeiten.", ""
+3211 = "STANDORT F€R FEHLER-LOG FESTLEGEN", ""
+3212 = "", ""
+3213 = "STANDORT F€R FEHLER-LOG FESTLEGEN", ""
+3214		= "\
+1. Fehler-Log des Adaptive Servers\\n\\nWÃhlen Sie diese Option\, um den \
+Speicherort fœr das Fehler-Log des Adaptive Servers festzulegen. \
+StandardmÃﬁig ist es unter $SYBASE/install/errorlog gespeichert. Durch \
+Drœcken von Strg-a akzeptieren Sie diesen Speicherort und gelangen zur \
+nÃchsten Anzeige. Das Fehler-Log des Adaptive Servers enthÃlt \
+Statusinformationen sowie die Fehlermeldungen\, die wÃhrend des Starts\, \
+der Verwendung und des Herunterfahrens des Adaptive Servers generiert \
+worden sind. Wenn Ihr Server Fehler feststellt oder in unerwarteter Weise \
+reagiert\, kŒnnen Sie das Fehler-Log auf Fehlermeldungen prœfen\, die als \
+Reaktion auf den mŒglichen Fehler generiert worden sind. Jeder Eintrag im \
+Fehler-Log enthÃlt Datum\, Zeitstempel\, ein Feld mit der Aussage\, ob die \
+Meldung vom Kernel des Adaptive Servers oder von einem anderen Teil \
+des Servers generiert wurde\, sowie die Fehlermeldung selbst.\\n\\n* \
+Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den angezeigten Pfad fœr das \
+Fehler-Log und gelangen in die nÃchste Anzeige.\\n\\nMit Strg-x \
+verlassen Sie die Anzeige und verwerfen alle ÿnderungen. Auditinit \
+kehrt ins vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen \
+Menœs\, verlassen Auditinit und kehren zum Betriebssystem zurœck.",	 ""
+3215		= "\
+1. Fehler-Log des Adaptive Servers\\n\\nWÃhlen Sie diese Option\, um den \
+Speicherort fœr das Fehler-Log des Adaptive Servers festzulegen. \
+StandardmÃﬁig ist es unter sybase_system:[sybase.install]errorlog \
+gespeichert. Durch Drœcken von Strg-a akzeptieren Sie diesen Speicherort \
+und gelangen zur nÃchsten Anzeige. Das Fehler-Log des Adaptive \
+Servers enthÃlt Statusinformationen sowie die Fehlermeldungen\, die \
+wÃhrend des Starts\, des Betriebs und des Herunterfahrens des Adaptive \
+Servers generiert worden sind. Wenn Ihr Server Fehler feststellt oder in \
+unerwarteter Weise reagiert\, kŒnnen Sie das Fehler-Log auf \
+Fehlermeldungen prœfen\, die als Reaktion auf den mŒglichen Fehler \
+generiert worden sind. Jeder Eintrag im Fehler-Log enthÃlt Datum\, \
+Zeitstempel\, ein Feld mit der Aussage\, ob die Meldung vom Kernel des \
+Adaptive Servers oder von einem anderen Teil des Servers generiert wurde\, \
+sowie die Fehlermeldung selbst.\\n\\n* Steuertasten *\\n\\nMit Strg-a \
+akzeptieren Sie den angezeigten Pfad fœr das Fehler-Log und gelangen zur \
+nÃchsten Anzeige.\\n\\nMit Strg-x verlassen Sie die Anzeige und \
+verwerfen alle ÿnderungen. Auditinit kehrt ins vorherige Menœ zurœck. Mit \
+Strg-x gelangen Sie in die vorherigen Menœs\, verlassen Auditinit und \
+kehren zum Betriebssystem zurœck.",	 ""
+3216		= "\
+Fehler-Log des Adaptive Servers\\n\\nMit dieser Option legen Sie den \
+Speicherort fœr das Fehler-Log des Adaptive Servers fest. Die \
+Standardeinstellung ist in der Datei 'errorlog' im \
+Unterverzeichnis 'install' des SYBASE-Versionsverzeichnisses \
+angegeben. Mit <F10> akzeptieren Sie den Standardspeicherort und \
+gelangen zur nÃchsten Anzeige.\\n\\nDas Fehler-Log des Adaptive \
+Servers enthÃlt Statusinformationen sowie die Fehlermeldungen\, die \
+wÃhrend des Starts\, des Betriebs und des Herunterfahrens des Adaptive \
+Servers generiert worden sind. Wenn Ihr Server Fehler feststellt oder auf \
+unerwartete Weise reagiert\, kŒnnen Sie das Fehler-Log auf Fehlermeldungen \
+prœfen\, die als Reaktion auf den mŒglichen Fehler generiert worden sind. \
+Jeder Eintrag im Fehler-Log enthÃlt Datum\, Zeitstempel\, ein Feld mit der \
+Aussage\, ob die Meldung vom System-Kernel des Adaptive Servers oder \
+einem anderen Server-Bereich generiert wurde\, und die Fehlermeldung \
+selbst.\\n\\n* Weiter zur nÃchsten Anzeige *\\n\\nMit <F10> akzeptieren \
+Sie den angezeigten Pfad fœr das Fehler-Log und gelangen zur nÃchsten \
+Anzeige.",	 ""
+3221		= "ORT DER QUOTA-DATEI EINSTELLEN",	 ""
+3222		= "",	 ""
+3223	= "ORT DER QUOTA-DATEI EINSTELLEN",	 ""
+3224		= "\
+1. Quota-Datei des Adaptive Servers \\n\\nWÃhlen Sie diese Option und \
+geben Sie den Suchpfad einer Quota-Datei ein\, die fœr die Systemparameter \
+des Adaptive Servers verwendet werden soll. Ein Standard-Pfadname ist \
+nicht vorhanden.\\n\\nDas Dienstprogramm 'startserver' verwendet die \
+Quota-Datei \, um dem Adaptive Server VMS-Ressourcenquoten zur \
+Verfœgung zu stellen. 'startserver' startet den Adaptive Server als getrennten \
+VMS-Prozess und œbergibt diesem Prozess die neuen Ressourcen-Quoten. \
+Wenn Sie fœr 'quota' keinen Pfad angeben\, sucht 'startserver' die Datei in \
+dem Verzeichnis\, in dem das Programm gerade lÃuft.\\n\\n* Steuertasten \
+*\\n\\nMit Strg-a akzeptieren Sie das aktuell angezeigte Verzeichnis fœr die \
+Quota-Datei.\\n\\nMit Strg-x verlassen Sie die Anzeige und verwerfen \
+alle ÿnderungen. Auditinit kehrt ins vorherige Menœ zurœck. Mit Strg-x \
+gelangen Sie in die vorherigen Menœs\, verlassen Auditinit und kehren zum \
+Betriebssystem zurœck.",	 ""
+3231		= "SPRACHEN KONFIGURIEREN",	 ""
+3232		= "",	 ""
+3233		= "SPRACHEN KONFIGURIEREN",	 ""
+3234	= "\
+Mit Hilfe von Sprachmodulen kŒnnen Sie:\\n- Eine Sprache installieren \
+und damit dem Adaptive Server zur Verfœgung stellen\\n- Eine Sprache \
+entfernen und damit dem Adaptive Server entziehen\\n- Eine Sprache \
+zur Standardsprache des Adaptive Servers machen\\n\\nIn den Spalten \
+am rechten Rand der Sprachen finden Sie deren Status:\\n- \
+\"Installiert?\" zeigt an\, ob diese Sprache auf dem Adaptive Server \
+verfœgbar ist. \\n- \"Entfernen\" zeigt an\, ob Auditinit diese Sprache \
+entfernt oder nicht. \\n- \"Installieren\" zeigt an\, ob Auditinit diese \
+Sprache installiert oder nicht. \\n- \"Standard\" zeigt an\, ob Auditinit \
+diese Sprache zur Standardsprache macht oder nicht.\\n\\nBeachten Sie\, \
+dass us_english auf dem Adaptive Server in jedem Fall verfœgbar ist.\\n\\n* \
+Steuertasten *\\n\\nMit Strg-a akzeptieren Sie die Optionen der \
+Sprachkonfiguration\, die in den Spalten angezeigt wird. Auditinit \
+œbernimmt Ihre ÿnderungen erst dann in die Sprachkonfiguration\, wenn \
+Sie die gesamte Konfiguration des Adaptive Servers als Einheit ausfœhren. \
+\\n\\nMit Strg-x verlassen Sie die Anzeige und verwerfen alle \
+ÿnderungen. Auditinit kehrt ins vorherige Menœ zurœck. Mit Strg-x \
+gelangen Sie in die vorherigen Menœs\, verlassen Auditinit und kehren zum \
+Betriebssystem zurœck.",	 ""
+3235	= "\
+WÃhlen Sie den Namen eines Sprachmoduls\, um einen der folgenden \
+Schritte durchzufœhren: \\n- Eine Sprache installieren und damit dem \
+Adaptive Server zur Verfœgung stellen\\n- Eine Sprache entfernen und \
+damit dem Adaptive Server entziehen \\n- Eine Sprache als \
+Standardsprache des Adaptive Servers festlegen \\n\\nDie Spalten am \
+rechten Rand der Sprachen zeigen deren Status an:\\n- \"Installiert?\" zeigt \
+an\, ob die Sprache bereits fœr den Adaptive Server verfœgbar ist.\\n- \
+\"Entfernen\" zeigt an\, ob Auditinit die Sprache entfernt oder nicht. \\n- \
+\"Installieren\" zeigt an\, ob Auditinit die Sprache installiert oder nicht.\\n- \
+\"Standard\" zeigt an\, ob Auditinit die Sprache als Standardsprache \
+definiert oder nicht. \\n\\nBeachten Sie\, dass us_english fœr den Adaptive \
+Server immer verfœgbar ist.\\n\\n* Weiter zur nÃchsten \
+Anzeige*\\n\\nMit <F10> akzeptieren Sie die in den Spalten festgelegten \
+Spracheinstellungen. Auditinit schreibt Ihre ÿnderungen erst dann in die \
+Sprachkonfiguration\, wenn Sie die gesamte Konfiguration des Adaptive \
+Servers als Einheit ausfœhren.",	 ""
+3241		= "ZEICHENSÿTZE KONFIGURIEREN",	 ""
+3242		= "",	 ""
+3243		= "ZEICHENSÿTZE KONFIGURIEREN",	 ""
+3244	= "\
+WÃhlen Sie einen Zeichensatz\, um folgende Aufgaben auszufœhren:\\n- \
+Einen Zeichensatz installieren und ihn damit dem Adaptive Server \
+verfœgbar machen\\n- Einen Zeichensatz entfernen und ihn damit dem \
+Adaptive Server entziehen \\n- Einen Zeichensatz zum \
+Standard-Zeichensatz des Adaptive Servers machen\\n\\nIn den Spalten am \
+rechten Rand der ZeichensÃtze finden Sie deren Status:\\n- \"Installiert?\" \
+zeigt an\, ob dieser Zeichensatz auf dem Adaptive Server verfœgbar ist. \\n- \
+\"Entfernen\" zeigt an\, ob Auditinit diesen Zeichensatz entfernt oder nicht. \
+\\n- \"Installieren\" zeigt an\, ob Auditinit diesen Zeichensatz installiert oder \
+nicht. \\n- \"Standard\" zeigt an\, ob Auditinit diesen Zeichensatz zum \
+Standard-Zeichensatz macht oder nicht. \\n\\n* Steuertasten *\\n\\nMit \
+Strg-a akzeptieren Sie die Optionen der Zeichensatz-Konfiguration\, die in \
+den Spalten angezeigt wird. Auditinit œbernimmt Ihre ÿnderungen erst dann \
+in die Zeichensatz-Konfiguration\, wenn Sie die gesamte Konfiguration des \
+Adaptive Servers als Einheit ausfœhren. \\n\\nMit Strg-x verlassen Sie die \
+Anzeige und verwerfen alle ÿnderungen. Auditinit kehrt ins vorherige \
+Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen Menœs\, verlassen \
+Auditinit und kehren zum Betriebssystem zurœck.",	 ""
+3245	= "\
+WÃhlen Sie den Namen eines Zeichensatzes\, um einen der folgenden \
+Schritte durchzufœhren: \\n- Einen Zeichensatz installieren und fœr den \
+Adaptive Server verfœgbar machen\\n- Einen Zeichensatz entfernen\, um ihn \
+dem Adaptive Server zu entziehen\\n- Einen Zeichensatz \
+als Standardzeichensatz fœr den Adaptive Server definieren\\n\\nDie Spalten \
+am rechten Rand der ZeichensÃtze zeigen deren Status an:\\n- \"Installiert?\" \
+zeigt an\, ob ein Zeichensatz bereits auf dem Adaptive Server verfœgbar \
+ist.\\n- \"Entfernen\" zeigt an\, ob Auditinit den Zeichensatz entfernt oder \
+nicht.\\n- \"Installieren\" zeigt an\, ob Auditinit den Zeichensatz installiert \
+oder nicht.\\n- \"Standard\" zeigt an\, ob Auditinit den Zeichensatz als \
+Standardzeichensatz definiert. \\n\\n* Weiter zur nÃchsten Anzeige \
+*\\n\\nMit <F10> akzeptieren Sie die in den Spalten angezeigten \
+Einstellungen fœr die Zeichensatzkonfiguration. Auditinit œbernimmt Ihre \
+ÿnderungen erst\, wenn Sie die Konfiguration des Adaptive Servers als \
+Einheit ausfœhren.",	 ""
+3251		= "SORTIERREIHENFOLGE KONFIGURIEREN",	 ""
+3252		= "",	 ""
+3253		= "SORTIERREIHENFOLGE KONFIGURIEREN",	 ""
+3254	= "\
+WÃhlen Sie den Namen der Standard-Sortierreihenfolge (Kollatierung)\, mit \
+der der Adaptive Server arbeiten soll. In der Installationsanleitung des \
+SYBASE Adaptive Servers finden Sie Hinweise zu den verfœgbaren \
+Sortierreihenfolgen.\\n\\nDie Spalte \"GewÃhlt\" zeigt an\, welche Sortierreihenfolge \
+Auditinit zum Standard macht. Zu Beginn ist die binÃre Sortierreihenfolge \
+Standard.\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie die gewÃhlte \
+Sortierreihenfolge als Standard. Auditinit œbernimmt Ihre neue Standard-\
+Sortierreihenfolge erst dann\, wenn Sie die gesamte Konfiguration des Adaptive \
+Servers als Einheit ausfœhren.\\n\\nMit Strg-x verlassen Sie die Anzeige \
+und verwerfen alle ÿnderungen. Auditinit kehrt ins vorherige Menœ zurœck. \
+Mit Strg-x gelangen Sie in die vorherigen Menœs\, verlassen Auditinit und \
+kehren zum Betriebssystem zurœck.",	 ""
+3255	= "\
+WÃhlen Sie den Namen der Standard-Sortierreihenfolge (Kollatierung)\, mit der \
+der Adaptive Server arbeiten soll. Informationen œber die verfœgbaren \
+Sortierreihenfolgen entnehmen Sie der Installationsanleitung des SYBASE \
+Adaptive Servers.\\n\\nDie Spalte \"GewÃhlt\" zeigt an\, welche Sortierreihenfolge \
+Auditinit als Standard-Sortierreihenfolge definiert. Zu Beginn ist BinÃre Sortierung \
+als Standard gewÃhlt.\\n\\n* Weiter zur nÃchsten Anzeige*\\n\\nMit \
+<F10> akzeptieren Sie die gewÃhlte Sortierreihenfolge als Standard-Sortierreihenfolge. \
+Auditinit Ãndert die Standard-Sortierreihenfolge nicht\, bis Sie die Konfiguration \
+des Adaptive Servers als Einheit ausfœhren.",	 ""
+3261		= "AUDITING AKTIVIEREN",	 ""
+3262		= "ANWEISUNG F€R DAS AUDITING", ""
+3263		= "AUDITING AKTIVIEREN",	 ""
+3264	= "\
+1. Auditing installieren\\n\\nWÃhlen Sie diese Option\, wenn Sie das \
+optionale Device und die optionale Datenbank Auditing installieren wollen. \
+Auditinit schaltet diese Option auf \"ja\". Wenn Sie das nicht wollen\, wird \
+Auditinit die Datenbank Auditing nicht installieren.\\n\\n2. GrŒﬁe der \
+Sybsecurity-Datenbank (MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+GrŒﬁe der Sybsecurity-Datenbank zu Ãndern\, die die Tabelle Sysaudits \
+enthÃlt. Sysaudits ist das Audit-Log\, in dem die AktivitÃten des Adaptive \
+Servers aufgezeichnet werden. \\n\\nDie StandardgrŒﬁe der \
+Sybsecurity-Datenbank ist 5 MByte. Je nach Umfang und Art des von Ihnen \
+gewœnschten Auditings mœssen Sie diese Datenbank vergrŒﬁern. Weitere \
+Hinweise finden Sie in der Installationsanleitung des SYBASE Adaptive \
+Servers.\\n\\n3. Logischer Devicename fœr Sybsecurity \\n\\nMit \
+dieser Option bestimmen Sie den logischen Devicenamen\, auf dem \
+Sie die Sybsecurity-Datenbank implementieren. Der logische Devicename \
+ist der Name\, den Sie in SQL-Anweisungen fœr dieses Device verwenden. \
+Er ist nicht identisch mit dem physischen Pfad des Devices.\\n\\nBei der \
+Neukonfiguration eines bestehenden Adaptive Servers kŒnnen Sie den \
+logischen Namen einer bestehenden Datenbank oder eines Devices \
+verwenden. Achten Sie aber darauf\, dass Sie die Sybsecurity-Datenbank \
+NICHT auf das \"master\"-Device kopieren. \\n\\nWenn Sie ein neues \
+Device fœr die Sybsecurity-Datenbank erstellen wollen (empfohlen)\, geben \
+Sie den Namen dieses neuen Devices an der Eingabeaufforderung ein. Der \
+Standardname ist \"sybsecurity\".\\n\\n4. Neues Device fœr \
+Sybsecurity-Datenbank anlegen\\n\\nWÃhlen Sie diese Option\, wenn Sie fœr \
+die Sybsecurity-Datenbank ein neues Device anlegen wollen. Auditinit \
+schaltet diese Option auf \"ja\" und zeigt zwei neue Menœoptionen an\, die \
+weiter unten beschrieben werden.\\n\\n5. Physischer Devicename fœr \
+Sybsecurity \\n\\nGeben Sie nach der Auswahl dieser Option den \
+vollstÃndigen Pfad der Datei an\, die Sie fœr das neue Sybsecurity-Device \
+verwenden wollen. Der Adaptive Server wird die Sybsecurity-Datenbank \
+auf diesem Auditing-Device speichern.\\n\\n6. GrŒﬁe des neuen Device \
+(MByte) \\n\\nGeben Sie nach der Auswahl dieser Option die GrŒﬁe des \
+neuen Auditing-Devices in Megabyte ein. \\n\\nDas Device muss groﬁ genug \
+angelegt werden\, um die Sybsecurity-Datenbank und die mit ihr \
+verwendeten Systemprozeduren aufnehmen zu kŒnnen.\\n\\n* Steuertasten \
+*\\n\\nMit Strg-a akzeptieren Sie die angezeigten Auditing-Optionen. Wenn \
+\"Auditing installieren\" und \"Neues Device fœr die Sybsecurity-Datenbank \
+anlegen\" mit \"ja\" markiert sind\, installiert Auditinit das Auditing-System \
+und Auditing-Device\, wenn Sie die Konfiguration des \
+Adaptive Servers in ihrer Gesamtheit ausfœhren. \\n\\nMit Strg-x verlassen \
+Sie die Anzeige und verwerfen alle ÿnderungen. Auditinit kehrt ins \
+vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen Menœs\, \
+verlassen Auditinit und kehren zum Betriebssystem zurœck.",	 ""
+3265	= "\
+1. Auditing konfigurieren\\n\\nWÃhlen Sie diese Option\, wenn Sie das \
+optionale Device und die optionale Datenbank Auditing installieren wollen. \
+Auditinit schaltet diese Option auf \"ja\". Wenn Sie das nicht wollen\, wird \
+Auditinit die Datenbank Auditing nicht installieren. \\n\\n2. GrŒﬁe der \
+Sybsecurity-Datenbank (MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+GrŒﬁe der Sybsecurity-Datenbank zu Ãndern\, die die Tabelle Sysaudits \
+enthÃlt. Sysaudits ist das Audit-Log\, in dem die AktivitÃten des Adaptive \
+Servers aufgezeichnet werden. \\n\\nDie StandardgrŒﬁe der \
+Sybsecurity-Datenbank ist 5 Megabyte. Je nach Umfang und Art des von \
+Ihnen gewœnschten Auditing mœssen Sie diese Datenbank vergrŒﬁern. \
+Weitere Hinweise finden Sie in der Installationsanleitung des SYBASE \
+Adaptive Servers.\\n\\n3. Logischer Sybsecurity-Devicename\\n\\nMit \
+dieser Option bestimmen Sie den logischen Devicenamen\, auf dem \
+Sie die Sybsecurity-Datenbank implementieren. Der logische Devicename \
+ist der Name\, den Sie in SQL-Anweisungen fœr dieses Device verwenden. \
+Er ist nicht identisch mit dem physischen Pfad des Devices.\\n\\nBei der \
+Neukonfiguration eines bestehenden Adaptive Servers kŒnnen Sie den \
+logischen Namen einer bestehenden Datenbank oder eines Devices \
+verwenden. Achten Sie aber darauf\, dass Sie die Sybsecurity-Datenbank \
+NICHT auf das \"master\"-Device kopieren.\\n\\nWenn Sie fœr die \
+Sybsecurity-Datenbank ein neues Device anlegen (wird empfohlen)\, geben \
+Sie den neuen Namen ein. Standardname ist \"sybsecurity\".\\n\\n4. Neues \
+Device fœr Sybsecurity-Datenbank anlegen\\n\\nWÃhlen Sie diese Option\, \
+wenn Sie fœr die Sybsecurity-Datenbank ein neues Device anlegen wollen. \
+Auditinit schaltet diese Option auf \"ja\" und zeigt zwei neue Menœoptionen \
+an\, die weiter unten beschrieben werden.\\n\\n5. Physischer \
+Devicename fœr Sybsecurity \\n\\nGeben Sie nach der Auswahl dieser Option \
+den vollstÃndigen Pfadnamen des unformatierten Bereichs (raw partition) \
+oder die Betriebssystemdatei an\, die Sie fœr das neue Sybsecurity-Device \
+verwenden wollen. Der Adaptive Server wird die Sybsecurity-Datenbank in \
+diesem Auditing-Device speichern.\\n\\nSybase empfiehlt fœr das \
+Auditing-Device die Verwendung eines unformatierten Speicherbereichs \
+(raw partition)\, da hier die Gefahr\, grŒﬁere Datenmengen zu verlieren\, \
+deutlich geringer ist.\\n\\n6. GrŒﬁe des neuen Devices (MByte)\\n\\nGeben \
+Sie nach der Auswahl dieser Option die GrŒﬁe des neuen Auditing-Devices \
+in Megabyte ein. Wenn Sie als Pfad fœr das Device einen unformatierten \
+Bereich (raw partition) eingegeben haben\, zeigt Auditinit die GrŒﬁe dieses \
+Bereichs als Standard an. Beachten Sie\, dass Sie in diesem Fall die GrŒﬁe \
+fœr das Device nicht geringer einstellen\, da Sie den verbleibenden Platz in \
+diesem Bereich nicht fœr andere Zwecke nutzen kŒnnen.\\n\\nHaben Sie als \
+Pfad fœr das Device eine Betriebssystemdatei eingetragen\, so wÃhlen Sie \
+diese Option und geben die GrŒﬁe der anzulegenden Datei ein.\\n\\nDas \
+Device muss groﬁ genug angelegt werden\, um die Sybsecurity-Datenbank \
+und die mit ihr verwendeten Systemprozeduren aufnehmen zu \
+kŒnnen.\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie die \
+angezeigten Auditing-Optionen. Wenn \"Auditing installieren\" und \"Neues \
+Device fœr die Sybsecurity-Datenbank anlegen\" mit \"ja\" markiert sind\, \
+installiert Auditinit das Auditing-System und Auditing-Device\, sobald Sie \
+die Konfiguration des Adaptive Servers in ihrer Gesamtheit ausfœhren. \
+\\n\\nMit Strg-x verlassen Sie die Anzeige und verwerfen alle \
+ÿnderungen. Auditinit kehrt ins vorherige Menœ zurœck. Mit Strg-x \
+gelangen Sie in die vorherigen Menœs\, verlassen Auditinit und kehren zum \
+Betriebssystem zurœck.",	 ""
+3266	= "\
+Auditing installieren\\n\\nWÃhlen Sie diese Option\, um die \
+Auditing-Datenbank und das Auditing-Device (fakultativ) zu installieren. \
+Auditinit setzt die Option auf \"Ja\". Wenn Sie die Option nicht auf \"Ja\" \
+setzen\, wird die Auditing-Datenbank nicht installiert. \\n\\nGrŒﬁe der \
+Sybsecurity-Datenbank (in MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+GrŒﬁe der Sybsecurity-Datenbank zu Ãndern\, die die Tabelle Sysaudits \
+enthÃlt. Sysaudits ist das Audit-Log\, in das alle AktivitÃten des Adaptive \
+Servers geschrieben werden.\\n\\nDie StandardgrŒﬁe der \
+Sybsecurity-Datenbank ist 5 MByte. Sie kŒnnen die GrŒﬁe der Datenbank \
+je nach Menge und Art des von Ihnen gewœnschten Auditings erweitern. \
+Weitere Hinweise finden Sie in der Installationsanleitung fœr den SYBASE \
+Adaptive Server.\\n\\nDer logische Devicename der Datenbank 'sybsecurity' \
+\\n\\nWÃhlen Sie diese Option\, um den logischen Devicenamen \
+einzugeben\, auf dem Sie die Sybsecurity-Datenbank anlegen. Sie \
+verwenden den logischen Devicenamen in SQL-Anweisungen\, um auf das \
+Device zu verweisen. Er entspricht nicht dem physischen Pfad des \
+Devices.\\n\\nWenn Sie einen vorhandenen Adaptive Server neu \
+konfigurieren\, kŒnnen Sie den logischen Namen eines vorhandenen \
+Datenbankdevices eingeben. Legen Sie die Sybsecurity-Datenbank auf \
+keinen Fall auf dem \"Master\"-Device an.\\n\\nWenn Sie ein neues Device \
+fœr die Sybsecurity-Datenbank erstellen mŒchten (empfohlen)\, geben Sie \
+den Namen fœr das neue Device nach der Eingabeaufforderung ein. Der \
+Standardname fœr ein neues Device ist \"sybsecurity\".\\n\\nEin neues \
+Device fœr die Sybsecurity-Datenbank erstellen\\n\\nWÃhlen Sie diese \
+Option\, um ein neues Device zu erstellen\, auf dem Sie die \
+Sybsecurity-Datenbank einrichten. Auditinit setzt diese Option auf \"Ja\" \
+und zeigt zwei neue Menœoptionen \, die weiter unten beschrieben \
+werden.\\n\\nPhysischer Devicename der Sybsecurity-Datenbank \
+\\n\\nWÃhlen Sie diese Option\, um den vollstÃndigen Pfad der Datei \
+anzugeben\, die sie fœr das neue Sybsecurity-Device verwenden mŒchten. \
+Der Adaptive Server verwendet das Auditing-Device\, um die \
+Sybsecurity-Datenbank zu speichern.\\n\\nGrŒﬁe des neuen Devices (in \
+MByte)\\n\\nWÃhlen Sie diese Option\, um die GrŒﬁe des neuen \
+Auditing-Devices festzulegen. Das Device muss groﬁ genug fœr die \
+Sybsecurity-Datenbank und die dazugehŒrigen Systemprozeduren \
+sein.\\n\\n* Weiter zur nÃchsten Anzeige *\\n\\nMit <F10> akzeptieren \
+Sie die angezeigten Optionen fœr das Auditing. Wenn die Optionen \
+\"Auditing-Funktionen installieren\" und \"Neues Device fœr die \
+Sybsecurity-Datenbank erstellen\" mit \"Ja\" gekennzeichnet sind\, installiert \
+Auditinit das Auditing-System und Auditing-Device\, sobald Sie die \
+gesamte Konfiguration des Adaptive Servers als Einheit ausfœhren.",	 ""
+3271		= "FAKULTATIVE DATENBANKEN HINZUF€GEN /L⁄SCHEN",	 ""
+3272		= "",	 ""
+3273		= "",	 ""
+3274		= "",	 ""
+3281		= "KONFIGURATION DER SYBSYSTEMPROCS-DATENBANK",	 ""
+3282		= "",	 ""
+3283		= "KONFIGURATION DER SYBSYSTEMPROCS-DATENBANK",	 ""
+3284 = " 1. GrŒﬁe der 'sybsystemprocs'-Datenbank \
+(MByte)\\n\\nDie Version 12.5 bietet die neue Systemdatenbank \
+'sybsystemprocs'\, die einen Groﬁteil der gespeicherten \
+Prozeduren enthÃlt. In der Installationsanleitung des SYBASE \
+Adaptive Servers finden Sie ausfœhrliche Hinweise zur \
+Konfiguration dieser Datenbank. WÃhlen Sie diese Option\, \
+wenn Sie die angezeigte StandardgrŒﬁe fœr die Datenbank \
+'sybsystemprocs' Ãndern wollen. Die StandardgrŒﬁe reicht fœr \
+die Systemprozeduren der Version 12.5. Wenn Sie zusÃtzliche \
+gespeicherte Prozeduren in der Datenbank ablegen wollen\, \
+mœssen Sie den Speicherplatz vergrŒﬁern. Geben Sie die \
+gewœnschte GrŒﬁe in MByte an der Eingabeaufforderung \
+ein.\\n\\n2. Logischer Devicename fœr \
+'sybsystemprocs':\\n\\nWÃhlen Sie diese Option\, um den \
+angezeigten logischen Devicenamen fœr das 'sybsystemprocs'-\
+Device einzugeben. Dies ist der Devicename\, den Sie in SQL-\
+Anweisungen benutzen\, um das Device anzusprechen. Dabei wird \
+NICHT der physische Pfad angegeben. Geben Sie den Namen \
+eines neuen oder bestehenden Devices ein. Auditinit zeigt \
+den Namen im Menœ an.\\n\\n3. Neues Device fœr die \
+'sybsystemprocs'-Datenbank erstellen.\\n\\nWÃhlen Sie diese \
+Option\, wenn Sie den angezeigten Wert Ãndern wollen. Mit \
+\"Ja\" legen Sie fest\, dass Sie ein neues Device fœr die \
+Datenbank 'sybsystemprocs' verwenden wollen. Mit \"Nein\" \
+geben Sie an\, dass Sie ein bestehendes Device fœr die \
+'sybsystemprocs'-Datenbank benutzen wollen.\\n\\nWenn Sie ein \
+bestehendes Device fœr die Datenbank 'sybsystemprocs' \
+verwenden wollen\, muss auf dem Device genœgend freier \
+Speicherplatz vorhanden sein.\\n\\n4. Physischer Name des \
+neuen Devices:\\n\\nWÃhlen Sie diese Option\, um den physischen \
+Pfad fœr das neue 'sybsystemprocs'-Device anzugeben. Geben \
+Sie an der Eingabeaufforderung den vollen Pfad ein. \
+'Auditinit' zeigt den Suchpfad im Menœ an. Diese Option \
+erscheint nicht\, wenn Sie ein bestehendes Device fœr die \
+Datenbank 'sybsystemprocs' verwenden.\\n\\n5. GrŒﬁe des neuen \
+Devices (MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+angezeigte StandardgrŒﬁe des neuen 'sybsystemprocs'-Devices \
+zu Ãndern. Geben Sie an der Eingabeaufforderung die GrŒﬁe \
+in MByte ein. Die DevicegrŒﬁe muss hoch genug angesetzt \
+werden\, um die Datenbank 'sybsystemprocs' aufnehmen zu \
+kŒnnen. Diese Option erscheint nicht\, wenn Sie ein \
+bestehendes Device fœr die Datenbank 'sybsystemprocs' \
+benutzen.\\n\\n* Steuertasten *\\n\\nDrœcken Sie Strg-a\, um alle \
+angezeigten Werte fœr die Datenbank 'sybsystemprocs' und ihr \
+Device zu akzeptieren.\\n\\nMit Strg-x verlassen Sie die \
+Anzeige. Auditinit kehrt zum vorherigen Menœ zurœck. Sie \
+kŒnnen Strg-x wiederholen\, um jeweils zum vorherigen Menœ \
+zurœckzukehren und schlieﬁlich Auditinit zu verlassen und \
+zur Eingabeaufforderung des Betriebssystems zurœckzukehren.", ""
+3285 = " 1. GrŒﬁe der 'sybsystemprocs'-Datenbank \
+(MByte)\\n\\nDie Version 12.5 bietet die neue Systemdatenbank \
+'sybsystemprocs'\, die einen Groﬁteil der gespeicherten \
+Prozeduren enthÃlt. In der Installationsanleitung des SYBASE \
+Adaptive Servers finden Sie ausfœhrliche Hinweise zur \
+Konfiguration dieser Datenbank. WÃhlen Sie diese Option\, \
+wenn Sie die angezeigte StandardgrŒﬁe fœr die Datenbank \
+'sybsystemprocs' Ãndern wollen. Die StandardgrŒﬁe reicht fœr \
+die Systemprozeduren der Version 12.5. Wenn Sie zusÃtzliche \
+gespeicherte Prozeduren in der Datenbank ablegen wollen\, \
+mœssen Sie den Speicherplatz vergrŒﬁern. Geben Sie die \
+gewœnschte GrŒﬁe in MByte an der Eingabeaufforderung \
+ein.\\n\\n2. Logischer Devicename fœr \
+'sybsystemprocs':\\n\\nWÃhlen Sie diese Option\, um den \
+angezeigten logischen Devicenamen fœr das 'sybsystemprocs'-\
+Device einzugeben. Dies ist der Devicename\, den Sie in SQL-\
+Anweisungen benutzen\, um das 'sybsystemprocs'-Device \
+anzusprechen. Dabei wird NICHT der physische Pfad angegeben. \
+Geben Sie den Namen eines neuen oder unformatierten Devices \
+ein. Der logische Name kann sich auf eine \
+Betriebssystemdatei oder eine unformatierte Partition \
+beziehen. Auditinit zeigt den Namen im Menœ an.\\n\\n3. Neues \
+Device fœr die 'sybsystemprocs'-Datenbank \
+erstellen.\\n\\nWÃhlen Sie diese Option\, wenn Sie den \
+angezeigten Wert Ãndern wollen. Mit \"Ja\" legen Sie fest\, \
+dass Sie ein neues Device fœr die Datenbank 'sybsystemprocs' \
+verwenden wollen. Mit \"Nein\" geben Sie an\, dass Sie ein \
+bestehendes Device fœr die 'sybsystemprocs'-Datenbank \
+benutzen wollen.\\n\\nWenn Sie ein bestehendes Device fœr die \
+Datenbank 'sybsystemprocs' verwenden wollen\, muss auf dem \
+Device genœgend freier Speicherplatz vorhanden sein.\\n\\n4. \
+Physischer Name des neuen Devices:\\n\\nWÃhlen Sie diese \
+Option\, um den physischen Pfad zu Ihrem neuen \
+'sybsystemprocs'-Device anzugeben. Das Device kann eine \
+Betriebssystemdatei oder eine unformatierte Partition sein. \
+Geben Sie den vollen Suchpfad an der Eingabeaufforderung \
+ein. Auditinit zeigt den Suchpfad im Menœ an. Diese Option \
+erscheint nicht\, wenn Sie ein bestehendes Device fœr die \
+'sybsystemprocs'-Datenbank verwenden.\\n\\n5. GrŒﬁe des neuen \
+Devices (MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+angezeigte StandardgrŒﬁe des neuen 'sybsystemprocs'-Devices \
+zu Ãndern. Geben Sie an der Eingabeaufforderung die GrŒﬁe \
+in MByte ein. Die DevicegrŒﬁe muss hoch genug angesetzt \
+werden\, um die Datenbank 'sybsystemprocs' aufnehmen zu \
+kŒnnen. Diese Option erscheint nicht\, wenn Sie ein \
+bestehendes Device fœr die Datenbank 'sybsystemprocs' \
+benutzen.\\n\\n* Steuertasten *\\n\\nDrœcken Sie Strg-a\, um alle \
+angezeigten Werte fœr die Datenbank 'sybsystemprocs' und ihr \
+Device zu akzeptieren.\\n\\nMit Strg-x verlassen Sie die \
+Anzeige. Auditinit kehrt zum vorherigen Menœ zurœck. Sie \
+kŒnnen Strg-x wiederholen\, um jeweils zum vorherigen Menœ \
+zurœckzukehren und schlieﬁlich Auditinit zu verlassen und \
+zur Eingabeaufforderung des Betriebssystems zurœckzukehren.", ""
+3286 = "Konfiguration der 'sybsystemprocs'-Datenbank", ""
+3287 = "GrŒﬁe der 'sybsystemprocs'-Datenbank (MByte)\\n\\nDie \
+Version 12.5 bietet die neue Systemdatenbank \
+'sybsystemprocs'\, die einen Groﬁteil der gespeicherten \
+Prozeduren enthÃlt. In der Installationsanleitung des SYBASE \
+Adaptive Servers finden Sie ausfœhrliche Hinweise zur \
+Konfiguration dieser Datenbank. WÃhlen Sie diese Option\, \
+wenn Sie die angezeigte StandardgrŒﬁe fœr die Datenbank \
+'sybsystemprocs' Ãndern wollen. Die StandardgrŒﬁe reicht fœr \
+die Systemprozeduren der Version 12.5. Wenn Sie zusÃtzliche \
+gespeicherte Prozeduren in der Datenbank ablegen wollen\, \
+mœssen Sie den Speicherplatz vergrŒﬁern. Geben Sie die \
+gewœnschte GrŒﬁe in MByte an der Eingabeaufforderung \
+ein.\\n\\nLogischer Devicename fœr 'sybsystemprocs'\\n\\nWÃhlen \
+Sie diese Option\, um den angezeigten logischen Devicenamen \
+fœr das 'sybsystemprocs'-Device einzugeben. Dies ist der \
+Devicename\, den Sie in SQL-Anweisungen benutzen\, um das \
+Device anzusprechen. Dabei wird NICHT der physische Pfad \
+angegeben. Geben Sie den Namen eines neuen oder bestehenden \
+Devices ein. Auditinit zeigt den Namen im Menœ an.\\n\\nNeues \
+Device fœr die 'sybsystemprocs'-Datenbank \
+erstellen.\\n\\nWÃhlen Sie diese Option\, wenn Sie den \
+angezeigten Wert Ãndern wollen. Mit \"Ja\" legen Sie fest\, \
+dass Sie ein neues Device fœr die Datenbank 'sybsystemprocs' \
+verwenden wollen. Mit \"Nein\" geben Sie an\, dass Sie ein \
+bestehendes Device fœr die 'sybsystemprocs'-Datenbank \
+benutzen wollen.\\n\\nWenn Sie ein bestehendes Device fœr die \
+Datenbank 'sybsystemprocs' verwenden wollen\, muss auf dem \
+Device genœgend freier Speicherplatz vorhanden \
+sein.\\n\\nPhysischer Name des neuen Devices:\\n\\nWÃhlen Sie \
+diese Option\, um den physischen Pfad fœr das neue \
+'sybsystemprocs'-Device anzugeben. Geben Sie an der \
+Eingabeaufforderung die volle Angabe zu Laufwerk\, Suchpfad \
+und Dateiname ein. 'Auditinit' zeigt den Suchpfad im Menœ \
+an. Diese Option erscheint nicht\, wenn Sie ein bestehendes \
+Device fœr die Datenbank 'sybsystemprocs' \
+verwenden.\\n\\nGrŒﬁe des neuen Devices (MByte)\\n\\nWÃhlen Sie \
+diese Option\, um die angezeigte StandardgrŒﬁe des neuen \
+'sybsystemprocs'-Devices zu Ãndern. Geben Sie an der \
+Eingabeaufforderung die GrŒﬁe in MByte ein. Die DevicegrŒﬁe \
+muss hoch genug angesetzt werden\, um die Datenbank \
+'sybsystemprocs' aufnehmen zu kŒnnen. Diese Option erscheint \
+nicht\, wenn Sie ein bestehendes Device fœr die Datenbank \
+'sybsystemprocs' benutzen.\\n\\n* Weiter zur nÃchsten Anzeige \
+*\\n\\nDrœcken Sie <F10>\, um alle angezeigten Werte fœr die \
+Datenbank 'sybsystemprocs' und ihr Device zu akzeptieren.", ""
+3291 = "NEUES DEVICE F€R AUDITING HINZUF€GEN/ÿNDERN", ""
+3292 = "", ""
+3293 = "NEUES DEVICE F€R AUDITING HINZUF€GEN/ÿNDERN", ""
+3294 = "", ""
+3295  = "\
+1. Physischer Devicename\\nWÃhlen Sie diese Option\, um den Pfad \
+fœr das neue Auditing-Device einzurichten. Das Device kann ein \
+unformatiertes Device oder eine Betriebssystemdatei sein.\\n\\n2. Logischer \
+Devicename\\nWÃhlen Sie diese Option\, um den Devicenamen \
+einzugeben\, wie er im Server gefœhrt werden soll.\\n\\n3. \
+DevicegrŒﬁe\\nWÃhlen Sie diese Option\, um die DevicegrŒﬁe anzugeben. \
+Die Angabe erfolgt in MByte. Bei unformatierten Devices wird die GrŒﬁe \
+automatisch angezeigt.\\n4. Fœr Auditing zugewiesene \
+DevicegrŒﬁe\\nWÃhlen Sie dieses Feld\, wenn Sie nur einen Teil des \
+Devices fœr Auditing einrichten und den Rest fœr einen anderen Zweck \
+verwenden wollen. Als Standardvorgabe wird das gesamte Device fœr das \
+Auditing verwendet.", ""
+3296    = "", ""
+3300	= "GrŒﬁe der Sybsystemprocs-Datenbank (MByte): ",	""
+3301 = "Logischer Devicenamefœr Sybsystemprocs: ",	""
+3302 = "Physischer Name des neuen Devices: ",	""
+3303	= "GrŒﬁe des neuen Devices (MByte): ",	""
+3304 = "Neues Device fœr die Sybsystemprocs-Datenbank anlegen: ",	""
+3305	= "GrŒﬁe der Sybsystemprocs-Datenbank in Megabyte eingeben: ", ""
+3306	= "Den logischen Devicenamen fœr die Sybsystemprocs-Datenbank eingeben: ", ""
+3307	= "Den physischen Devicenamen fœr die Sybsystemprocs-Datenbank eingeben: ", ""
+3308	= "GrŒﬁe des neuen Devices eingeben: ", ""
+3310      = "BESTEHENDES DEVICE F€R AUDITING BENUTZEN ODER ÿNDERN", ""
+3311      = "",  ""
+3312        = "BESTEHENDES DEVICE F€R AUDITING BENUTZEN ODER ÿNDERN",	""
+3313  = "", ""
+3314  = "\
+1. Logischer Devicename\\nWÃhlen Sie diese Option\, um den Devicenamen\
+ einzugeben\, wie er im Server gefœhrt werden soll.\\n\\n2. Fœr \
+Auditing zugewiesene DevicegrŒﬁe\\nGeben Sie hier ein\, wie viel vom \
+Device Sie fœr Auditing einrichten wollen.", ""
+3315    = "", ""
+3320 = "Device fœr die Audit-Tabellen hinzufœgen ", ""
+3321  = "Device fœr das Transaktionslog der Audit-Tabelle hinzufœgen", ""
+3322 = "Deviceeintrag lŒschen", ""
+3323  = "Deviceeintrag Ãndern", ""
+3324 = "Liste der Devices fœr die Audit-Tabellen: ", ""
+3325 = "Device fœr das Transaktionslog der Audit-Tabelle: ", ""
+3326  = "GesamtgrŒﬁe der Audit-Datenbank: ", ""
+3400		= "KONFIGURATION DER SYBSYSTEMDB-DATENBANK", ""
+3401		= "", ""
+3402		= "KONFIGURATION DER SYBSYSTEMDB-DATENBANK", ""
+3403	= "\
+1. Sybsystemdb erstellen:\\n\\nWÃhlen Sie diese Option\, um anzuzeigen\, \
+dass Sie die Sybsystemdb-Datenbank (wahlweise) erstellen wollen.\\n\\n2. \
+Sybsystemdb-Log erstellen:\\n\\nWÃhlen Sie diese Option\, um anzuzeigen\, \
+dass Sie das Sybsystemdb-Log (wahlweise) erstellen wollen.\\n\\n3. GrŒﬁe \
+der Sybsystemdb-Datenbank (MByte):\\n\\nWÃhlen Sie diese Option\, wenn \
+Sie die angezeigte StandardgrŒﬁe fœr die Sybsystemdb-Datenbank Ãndern \
+wollen.\\n\\n4. Logischer Devicename der \
+Sybsystemdb-Datenbank:\\n\\nWÃhlen Sie diese Option\, um den \
+angezeigten Standardnamen fœr das Datenbankdevice von Sybsystemdb zu \
+Ãndern.\\n\\n5. Neues Device fœr die Sybsystemdb-Datenbank erstellen: \
+\\n\\nWÃhlen Sie diese Option\, wenn Sie den angezeigten Wert Ãndern \
+wollen. \"Ja\" heiﬁt\, dass Sie ein neues Device fœr die \
+Sybsystemdb-Datenbank verwenden wollen. \"Nein\" bedeutet\, dass Sie ein \
+bestehendes Device fœr die Sybsystemdb-Datenbank verwenden \
+wollen.\\n\\nWenn Sie ein bestehendes Device fœr die \
+Sybsystemdb-Datenbank verwenden wollen\, achten Sie darauf\, dass das \
+Device genœgend freien Speicherplatz zur Verfœgung hat.\\n\\n6. Physischer \
+Devicename der Sybsystemdb-Datenbank:\\n\\nWÃhlen Sie diese \
+Option\, um den Pfad fœr das Device der neuen \
+Sybsystemdb-Datenbank einzugeben. Das Device kann eine \
+Betriebssystemdatei oder eine unformatierte Partition sein. Geben Sie an der \
+Eingabeaufforderung den vollstÃndigen Pfad ein. Auditinit zeigt den Pfad \
+im Menœ an. Die Option erscheint nicht\, wenn Sie ein bestehendes Device \
+fœr die Sybsystemdb-Datenbank verwenden.\\n\\n7. GrŒﬁe des neuen \
+Datenbankdevices (MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+angezeigte StandardgrŒﬁe des neuen Devices fœr die \
+Sybsystemdb-Datenbank zu Ãndern. Geben Sie an der Eingabeaufforderung \
+in MByte die GrŒﬁe ein. Die DevicegrŒﬁe muss fœr die Aufnahme der \
+Sybsystemdb-Datenbank bemessen sein. Die Option erscheint nicht\, wenn \
+Sie ein bestehendes Device fœr die Sybsystemdb-Datenbank \
+verwenden.\\n\\n8. Log-GrŒﬁe fœr Sybsystemdb (MByte):\\n\\nWÃhlen Sie \
+diese Option\, wenn Sie die angezeigte StandardgrŒﬁe fœr das \
+Sybsystemdb-Log Ãndern wollen.\\n\\n9. Logischer Devicename fœr das \
+Sybsystemdb-Log:\\n\\nWÃhlen Sie diese Option\, um den angezeigten \
+Standard-Devicenamen fœr das Sybsystemdb-Logdevice Ãndern \
+wollen.\\n\\n10. Neues Device fœr das Sybsystemdb-Log erstellen: \
+\\n\\nWÃhlen Sie diese Option\, wenn Sie den angezeigten Wert Ãndern \
+wollen. \"Ja\" heiﬁt\, dass Sie ein neues Device fœr das Sybsystemdb-Log \
+verwenden wollen. \"Nein\" bedeutet\, dass Sie ein bestehendes Device fœr \
+das Sybsystemdb-Log verwenden wollen.\\n\\nWenn Sie ein bestehendes \
+Device fœr das Sybsystemdb-Log verwenden wollen\, achten Sie darauf\, \
+dass das Device genœgend freien Speicherplatz zur Verfœgung hat.\\n\\n11. \
+Physischer Devicenamefœr das Sybsystemdb-Log:\\n\\nWÃhlen Sie \
+diese Option\, um den Pfad fœr das Device des neuen \
+Sybsystemdb-Logs einzugeben. Das Device kann eine Betriebssystemdatei \
+oder eine unformatierte Partition sein. Geben Sie an der Eingabeaufforderung den \
+vollstÃndigen Pfad ein. Auditinit zeigt den Pfad im Menœ an. Die Option \
+erscheint nicht\, wenn Sie ein bestehendes Device fœr das Sybsystemdb-Log \
+verwenden.\\n\\n12. GrŒﬁe des neuen Logdevices (MByte)\\n\\nWÃhlen Sie \
+diese Option\, um die angezeigte StandardgrŒﬁe des neuen Devices fœr das \
+Sybsystemdb-Log zu Ãndern. Geben Sie an der Eingabeaufforderung in \
+MByte die GrŒﬁe ein. Die DevicegrŒﬁe muss fœr die Aufnahme \
+Sybsystemdb-Logs richtig bemessen sein. Die Option erscheint nicht\, wenn \
+Sie ein bestehendes Device fœr das Sybsystemdb-Log verwenden.\\n\\n* \
+Steuertasten *\\n\\nGeben Sie Strg-a ein\, um alle angezeigten Werte fœr die \
+Sybsystemdb-Datenbank und das zugehŒrige Device zu œbernehmen. \
+\\n\\nGeben Sie Strg-x ein\, um dieses Menœ zu verlassen. Auditinit wird \
+zum vorhergehenden Menœ zurœckkehren. Sie kŒnnen wiederholt Strg-x \
+eingeben\, um zu den vorhergehenden Menœs zurœckzukehren und Auditinit \
+mit einer Rœckkehr zur Betriebssystem-Eingabeaufforderung zu \
+verlassen.",	 ""
+3404	= "\
+Sybsystemdb erstellen:\\n\\nWÃhlen Sie diese Option\, um anzuzeigen\, dass \
+Sie die Sybsystemdb-Datenbank (wahlweise) erstellen \
+wollen.\\n\\nSybsystemdb-Log erstellen:\\n\\nWÃhlen Sie diese Option\, um \
+anzuzeigen\, dass Sie das Sybsystemdb-Log (wahlweise) erstellen \
+wollen.\\n\\nGrŒﬁe der Sybsystemdb-Datenbank (MByte):\\n\\nWÃhlen Sie \
+diese Option\, wenn Sie die angezeigte StandardgrŒﬁe fœr die \
+Sybsystemdb-Datenbank Ãndern wollen.\\n\\nLogischer Devicename der \
+Sybsystemdb-Datenbank:\\n\\nWÃhlen Sie diese Option\, um den \
+angezeigten Standardnamen fœr das Datenbankdevice von Sybsystemdb zu \
+Ãndern.\\n\\nNeues Device fœr die Sybsystemdb-Datenbank erstellen: \
+\\n\\nWÃhlen Sie diese Option\, wenn Sie den angezeigten Wert Ãndern \
+wollen. \"Ja\" heiﬁt\, dass Sie ein neues Device fœr die \
+Sybsystemdb-Datenbank verwenden wollen. \"Nein\" bedeutet\, dass Sie ein \
+bestehendes Device fœr die Sybsystemdb-Datenbank verwenden \
+wollen.\\n\\nWenn Sie ein bestehendes Device fœr die \
+Sybsystemdb-Datenbank verwenden wollen\, achten Sie darauf\, dass das \
+Device genœgend freien Speicherplatz zur Verfœgung hat.\\n\\nPhysischer Devicename\
+der Sybsystemdb-Datenbank:\\n\\nWÃhlen Sie diese \
+Option\, um den Pfad fœr das Device der neuen \
+Sybsystemdb-Datenbank einzugeben. Das Device kann eine \
+Betriebssystemdatei oder eine unformatierte Partition sein. Geben Sie an der \
+Eingabeaufforderung den vollstÃndigen Pfad ein. Auditinit zeigt den Pfad \
+im Menœ an. Die Option erscheint nicht\, wenn Sie ein bestehendes Device \
+fœr die Sybsystemdb-Datenbank verwenden.\\n\\nGrŒﬁe des neuen \
+Datenbankdevices (MByte)\\n\\nWÃhlen Sie diese Option\, um die \
+angezeigte StandardgrŒﬁe des neuen Devices fœr die \
+Sybsystemdb-Datenbank zu Ãndern. Geben Sie an der Eingabeaufforderung \
+in MByte die GrŒﬁe ein. Die DevicegrŒﬁe muss fœr die Aufnahme der \
+Sybsystemdb-Datenbank bemessen sein. Die Option erscheint nicht\, wenn \
+Sie ein bestehendes Device fœr die Sybsystemdb-Datenbank \
+verwenden.\\n\\nLog-GrŒﬁe fœr Sybsystemdb (MByte):\\n\\nWÃhlen Sie \
+diese Option\, wenn Sie die angezeigte StandardgrŒﬁe fœr das \
+Sybsystemdb-Log Ãndern wollen.\\n\\nLogischer Devicename fœr das \
+Sybsystemdb-Log:\\n\\nWÃhlen Sie diese Option\, um den angezeigten \
+Standard-Devicenamen fœr das Sybsystemdb-Logdevice zu Ãndern. \
+\\n\\nNeues Device fœr das Sybsystemdb-Log erstellen: \\n\\nWÃhlen \
+Sie diese Option\, wenn Sie den angezeigten Wert Ãndern wollen. \"Ja\" \
+heiﬁt\, dass Sie ein neues Device fœr das Sybsystemdb-Log verwenden \
+wollen. \"Nein\" bedeutet\, dass Sie ein bestehendes Device fœr das \
+Sybsystemdb-Log verwenden wollen.\\n\\nWenn Sie ein bestehendes \
+Device fœr das Sybsystemdb-Log verwenden wollen\, achten Sie darauf\, \
+dass das Device genœgend freien Speicherplatz zur Verfœgung \
+hat.\\n\\nPhysischer Devicenamefœr das \
+Sybsystemdb-Log:\\n\\nWÃhlen Sie diese Option\, um den Pfad fœr das \
+Device des neuen Sybsystemdb-Logs einzugeben. Das Device \
+kann eine Betriebssystemdatei oder eine unformatierte Partition sein. Geben Sie an \
+der Eingabeaufforderung den vollstÃndigen Pfad ein. Auditinit zeigt den \
+Pfad im Menœ an. Die Option erscheint nicht\, wenn Sie ein bestehendes \
+Device fœr das Sybsystemdb-Log verwenden.\\n\\nGrŒﬁe des neuen \
+Logdevices (MByte)\\n\\nWÃhlen Sie diese Option\, um die angezeigte \
+StandardgrŒﬁe des neuen Devices fœr das Sybsystemdb-Log zu Ãndern. \
+Geben Sie an der Eingabeaufforderung in MByte die GrŒﬁe ein. Die \
+DevicegrŒﬁe muss fœr die Aufnahme des Sybsystemdb-Logs richtig bemessen \
+sein. Die Option erscheint nicht\, wenn Sie ein bestehendes Device fœr das \
+Sybsystemdb-Log verwenden.\\n\\n* Steuertasten *\\n\\nGeben Sie Strg-a \
+ein\, um alle angezeigten Werte fœr die Sybsystemdb-Datenbank und das \
+zugehŒrige Device zu œbernehmen. \\n\\nGeben Sie Strg-x ein\, um dieses \
+Menœ zu verlassen. Auditinit wird zum vorhergehenden Menœ \
+zurœckkehren. Sie kŒnnen wiederholt Strg-x eingeben\, um zu den \
+vorhergehenden Menœs zurœckzukehren und Auditinit mit einer Rœckkehr \
+zur Betriebssystem-Eingabeaufforderung zu verlassen.",	 ""
+3405	= "Sybsystemdb erstellen (wahlweise): ",	 ""
+3406	= "GrŒﬁe der Sybsystemdb-Datenbank (MByte): ",	 ""
+3407	= "GrŒﬁe der Sybsystemdb-Datenbank in MByte eingeben: ", ""
+3408 	= "Logischer Devicenamefœr Sybsystemdb: ",	""
+3409	= "Den logischen Devicenamen fœr die Sybsystemdb-Datenbank eingeben: ", ""
+3410= "Neues Device fœr die Sybsystemdb-Datenbank anlegen: ",	""
+3411	= "Physischer Devicename fœr die Sybsystemdb-Datenbank: ", ""
+3412	= "Den physischen Devicenamenfœr die Sybsystemdb-Datenbank eingeben (Standard ist '%1!'): ",	 "%s"
+3413	= "GrŒﬁe des neuen Devices (MByte): ",	""
+3414	= "GrŒﬁe des neuen Datenbankdevices eingeben (MByte): ", ""
+3415= "Sybsystemdb-Log erstellen: ",	 ""
+3416	= "GrŒﬁe des Sybsystemdb-Logs (MByte): ", ""
+3417	= "GrŒﬁe des Sybsystemdb-Logs eingeben (MByte): ", ""
+3418 	= "Logischer Devicename fœr das Sybsystemdb-Log: ",	""
+3419	= "Logischen Devicenamen fœr das Sybsystemdb-Log eingeben: ", ""
+3420= "Neues Devices fœr das Sybsystemdb-Log erstellen: ",	""
+3421	= "Physischer Devicename fœr das Sybsystemdb-Log: ", ""
+3422	= "Physischen Devicenamen fœr das Sybsystemdb-Log eingeben (Standard ist '%1!'): ",	 "%s"
+3423	= "GrŒﬁe des neuen Logdevices (MByte): ",	""
+3424	= "GrŒﬁe des neuen Logdevices eingeben (MByte): ", ""
+3425	= "Skript '%1!' zur Installation der gespeicherten Prozeduren 2PC nicht gefunden.", "%s"
+3426 = "Fehler beim Ausfœhren des Skripts '%1!' zur Installation der gespeicherten Prozeduren 2PC.", "%s"
+3427 = "Konfiguration der Sybsystemdb-Datenbank", ""
+3428	= "Die Tabelle sybsystemdb..spt_committab ist nicht vorhanden.", ""
+3429 = "Sybase rÃt davon ab\, die Datenbank '%1!' und das Log auf demselben Device unterzubringen\, da dies bei einem Festplattenfehler die Wiederherstellung unmŒglich machen wœrde.", "%s"
+3430 = "Das Upgrade des Sybase Servers ist erst mŒglich\, wenn Informationen œber die Sybsystemdb-Datenbank eingegeben werden.",	 ""
+3431	= "Sybsystemdb-Datenbank erstellt.",			""
+3432	= "Sybsystemdb-Datenbank konnte nicht erstellt werden.",	""
+3433	= "Sybsystemdb-Datenbank wurde erweitert.",		""
+3434	= "Sybsystemdb-Datenbank konnte nicht geÃndert werden.",	""
+3500	= "KONFIGURATION DES STANDARD-XP-SERVERS",	 ""
+3501	= "Standard-XP-Server konfigurieren",	 ""
+3502		= "KONFIGURATION DES STANDARD-XP-SERVERS", ""
+3503		= "",	 ""
+3504		= "XP-SERVER DES ADAPTIVE SERVERS EINRICHTEN",	 ""
+3505		= "\
+1. Eintrag in der Interfaces-Datei fœr den XP-Server \
+konfigurieren\\n\\nWÃhlen Sie diese Option\, um die \
+Listener-Dienstinformationen eines Standard-XP-Servers einzugeben\, \
+den dieser Adaptive Server fœr erweiterte gespeicherte Prozeduren verwendet. \
+\\n\\n* Steuertasten *\\n\\nMit Strg-a oder Strg-x verlassen Sie diese \
+Anzeige. Auditinit kehrt zum vorherigen Menœ zurœck. Mit wiederholtem \
+Drœcken von Strg-x kŒnnen Sie in vorherige Menœs zurœckkehren und \
+Auditinit verlassen, um zur Eingabeaufforderung des Betriebssystems \
+zurœckzukehren.",	 ""
+3506	= "Eintrag in der Interfaces-Datei des XP-Servers konfigurieren", ""
+3507 = "Das Upgrade des Sybase Servers ist erst mŒglich\, wenn Informationen œber XP-Server eingegeben wurden.",	 ""
+3508	= "XP-Server-Eintrag in der Interfaces-Datei aktualisieren",	""
+3509		= "XP-Server fœr den Adaptive Server festlegen", ""
+3510	= "XP-Server konnte nicht festgelegt werden.", ""
+3601	= "Einen neuen Adaptive Server konfigurieren",	 ""
+3602	= "Bestehenden Sybase Server konfigurieren",	 ""
+3603 = "Upgrade eines bestehenden Sybase Servers", ""
+3611		= "Namen des neuen Adaptive Servers eingeben (Standard ist '%1!'): ",	 "%s"
+3612		= "Name des Adaptive Servers: ",	 ""
+3651			= "VollstÃndig",	 ""
+3652			= "UnvollstÃndig",	 ""
+3653			= "GeÃndert",	 ""
+3654			= "UnverÃndert",	 ""
+3661		= "Es gibt keinen Eintrag in der Interfaces-Datei fœr '%1!'.",	 "%s"
+3662		= "Der Eintrag fœr '%1!' in der Interfaces-Datei enthÃlt keine Listener.",	 "%s"
+3663		= "Konfiguration des Sybase Servers jetzt ausfœhren? ",	 ""
+3664	= "Wollen Sie wirklich abbrechen? ",	 ""
+3665	= "KONFIGURATION DES EINTRAGS IN DER SERVER-INTERFACES-DATEI",	 ""
+3666	= "KONFIGURATION DES STANDARD-BACKUP SERVERS",	 ""
+3667	= "Einige Konfigurationsinformationen des Adaptive Servers wurden nicht eingegeben.",	 ""
+3668	= "WÃhlen Sie einen der folgenden Server:",	 ""
+3669	= "IST DIES EINE PRIMÿRINSTALLATION?             ", ""
+3670	= "Backup Server fœr Secure SQL Server konfigurieren? ", 	""
+3671		= "Der Adaptive Server ist heruntergefahren. Wollen Sie ihn jetzt starten? ",	 ""
+3672		= "Geben Sie ein Benutzer-Konto des Sybase Servers mit SA-Berechtigung ein (Standard ist'%1!'): ",	 "%s"
+3673		= "Geben Sie das Kennwort des Kontos ein: ",	 ""
+3674		= "SA-Konto: ",	 ""
+3675	= "SA-Kennwort: ",	 ""
+3676		= "Der Server '%1!' ist Ãlter als Version 4.8. Es muss mindestens ein Upgrade auf Version 4.8 ausgefœhrt werden\, bevor Auditinit verwendet werden kann.",	 "%s"
+3677	= "Sybase Server '%1!': Version unbekannt.",	 "%s" 
+3678			= "Wiederholen Sie die Eingabe des Kontos bzw. Kennworts fœr Server '%1!' und versuchen Sie es nochmals.", "%s"
+3679		= "SA-Konto muss zum Upgrade des Servers fœr System 10 verwendet werden. Nochmals versuchen.", ""
+3680 = "Der Server '%1!' ist ein '%2!' Sybase Server. Sie mœssen ein Upgrade auf die letzte Version '%3!' durchfœhren, bevor er mit 'auditinit' verwendet werden kann.", "%s %s %s"
+3681	= "Eignung zum Upgrade des Sybase Servers wird getestet",	 ""
+3682	= "Upgrade des Sybase Servers",	 ""
+3683	= "Eignungstest zum Upgrade bei Server '%1!' erfolgreich.",	"%s"
+3684	= "Eignungstest zum Upgrade bei Server '%1!' fehlgeschlagen. Weitere Informationen im Log.",	"%s"
+3685  = "Konflikte mit reservierten WŒrtern werden gesucht.", ""
+3686     = "€berprœfung auf reservierte WŒrter durchgefœhrt\, es liegen keine Konflikte mit reservierten WŒrtern des Adaptive Servers vor.", ""
+3687 = "Warnung: %1! Konflikt(e) mit reservierten WŒrtern der Version 12.5 wurden gefunden. Sybase empfiehlt, diese Konflikte zu lŒsen, bevor ein Upgrade vorgenommen wird. Fœhren Sie 'sp_checkreswords' in jeder Datenbank aus, um eine Prœfung nach reservierten WŒrtern durchzufœhren.", "%d"
+3688 = "Warnung: %1! Konflikt(e) mit reservierten WŒrtern der Version 12.5 wurden gefunden. Sybase empfiehlt, diese Konflikte zu lŒsen, bevor ein Upgrade vorgenommen wird. Weitere Hinweise finden Sie in der Datei '%2!'.", "%d %s"
+3689 = "Upgrade des Sybase Servers ohne die Eingabe von Informationen œber die Sybsystemprocs-Datenbank nicht mŒglich.",	 ""
+3691    = "Geben Sie den Pfad zum Masterdevice des Adaptive Servers ein (Standard ist: '%1!'): ", "%s"
+3692    = "Geben Sie die GrŒﬁe des Masterdevices des Adaptive Servers in MByte ein: ", ""
+3693   = "Soll das Masterdevice aus einer zusammenhÃngenden Datei bestehen? (Standard ist: '%1!') ",     "%s"
+3694  = "Masterdevice: ",   ""
+3695  = "GrŒﬁe (MByte): ",    ""
+3696 = "ZusammenhÃngend: ",    ""
+3697	= "Die Log-Datei fœr die Ausgabe von sp_checkreswords ist '%1!'.",	"%s"
+3698		= "In der Datenbank '%1!' werden reservierte WŒrter als Datenbank-Objekte verwendet", "%s"
+3699		= "Die Log-Datei fœr die Ausgabe der Neuzuordnung von AbfragebÃumen ist '%1!'.", "%s"
+3700	= "Neuzuordnung der AbfragebÃume aller Datenbanken", ""
+3701	= "Versionsverzeichnis fœr vorherige Version", ""
+3702		= "Sie mœssen %1! %2!.%3!.%4!\, Objekt-ID %5!\, deren Zuordnung fehlgeschlagen ist\, entfernen und neu erstellen.", "%s %s %s %s %d"
+3703		= "Neuzuordnung der AbfragebÃume in der Datenbank '%1!'.", "%s"
+3704		= "Neuzuordnung des Objekts '%1!'.", "%s"
+3705		= "Abbruch der Neuzuordnung der AbfragebÃume wegen %1! Fehlern in der Datenbank\, '%2!'", "%d %s"
+3706		= "Neuzuordnung aller AbfragebÃume auf Server '%1!' erfolgreich.", "%s"
+3707		= "Neuzuordnung von %1! AbfragebÃumen auf dem Server '%2!' fehlgeschlagen. Weitere Hinweise siehe '%3!'.", "%d %s %s"
+3711		= "Geben Sie den Pfad zum Fehler-Log des Adaptive Servers ein (Standard ist: '%1!'): ",	 "%s"
+3712		= "Fehler-Log des Adaptive Servers: ",	 ""
+3713	= "Geben Sie den NEUEN Pfad zum Fehler-Log des Adaptive Servers ein (Standard ist: '%1!'): ",	 "%s"
+3721		= "Geben Sie den Pfad zur Quota-Datei des Adaptive Servers ein (Standard ist: '%1!'): ",	 "%s"
+3722	= "Quota-Datei des Adaptive Servers: ",	 ""
+3731		= "Aktuelle Standardsprache: ",	 ""
+3732	= "Aktueller Standard-Zeichensatz: ",	 ""
+3733	= "Aktuelle Sortierreihenfolge: ",	 ""
+3734		= "Sprache",	 ""
+3735	= "WÃhlen Sie die Sprache\, die Sie installieren\, entfernen oder zur Standardsprache machen wollen.",	 ""
+3736		= "Installiert?",	 ""
+3737		= "Entfernen",	 ""
+3738		= "Installieren",	 ""
+3739	= "Zum Standard machen",	 ""
+3740		= "Diese Sprache entfernen? ",	 ""
+3741		= "Diese Sprache installieren? ",	 ""
+3742		= "Diese Sprache zur Standardsprache machen? ",	 ""
+3751		= "Zeichensatz",	 ""
+3752		= "WÃhlen Sie den Zeichensatz\, den Sie installieren\, entfernen oder zum Standardzeichensatz machen wollen.",	 ""
+3753		= "Diesen Zeichensatz entfernen? ",	 ""
+3754		= "Diesen Zeichensatz installieren? ",	 ""
+3755	= "Diesen Zeichensatz zum Standardzeichensatz machen? ",	 ""
+3756		= "Sie mœssen einen der aufgelisteten ZeichensÃtze zum Standardzeichensatz machen\, bevor Sie diese Anzeige verlassen. ",	 ""
+3761		= "Sortierreihenfolge",	 ""
+3762		= "GewÃhlt",	 ""
+3763		= "Sortierreihenfolge wÃhlen.",	 ""
+3771	= "Geben Sie den physischen Devicenamen ein\, den Sie fœr die Sybsecurity-Datenbank verwenden wollen (Standard ist: '%1!'): ",	 "%s"
+3772	= "Geben Sie die GrŒﬁe der Sybsecurity-Datenbank in MByte ein: ", ""
+3773	= "Physischer Devicename fœr Sybsecurity: ",	 ""
+3774	= "GrŒﬁe der Sybsecurity-Datenbank (MByte): ",	 ""
+3775 = "Auditing installieren: ",	 ""
+3776 	= "Logischer Devicename fœr Sybsecurity: ",	""
+3777	= "Geben Sie den logischen Devicenamen fœr die Sybsecurity-Datenbank ein: ", ""
+3778	= "GrŒﬁe des neuen Devices (in MByte): ",	""
+3779	= "Geben Sie die GrŒﬁe des neuen Devices ein:", ""
+3780 = "Neues Device fœr die Sybsecurity-Datenbank anlegen: ",	""
+3781		= "",	 ""
+3782		= "",	 ""
+3783		= "",	 ""
+3784		= "",	 ""
+3785		= "",	 ""
+3786		= "",	 ""
+3790	= "Logischer Devicename: ", ""
+3791	= "DevicegrŒﬁe fœr das Auditing: ", ""
+3792	= "Logischen Devicenameneingeben", ""
+3793	= "SpeichergrŒﬁe fœr die Audit-Datenbank angeben", ""
+3800		= "BACKUP SERVER DES SYBASE SERVERS EINSTELLEN",	 ""
+3801		= "",	 ""
+3802		= "BACKUP SERVER DES SYBASE SERVERS EINSTELLEN",	 ""
+3803	= "\
+1. Name des Backup Servers fœr den Sybase Server\\n\\nWÃhlen Sie diese \
+Option\, um den Namen des Standard-Backup Servers einzugeben\, der \
+vom Sybase Server fœr Sicherungen und zum Laden der Datenbanken \
+verwendet wird. Standard ist SYB_BACKUP.\\n\\n Beachten Sie\, dass der \
+von Ihnen hier eingetragene Backup Server noch nicht notwendigerweise \
+existieren muss. Wenn Sie noch keinen Standard-Backup Server konfiguriert \
+haben\, sollten Sie das nach der Konfiguration Ihres Adaptive Servers \
+nachholen. Dieser Backup Server sollte dann mit dem \
+Standard-Backup Server œbereinstimmen\, den Sie hier angeben. In der \
+Installationsanleitung fœr Ihren SYBASE Adaptive Server finden Sie \
+weitere Hinweise.\\n\\n* Steuertasten *\\n\\nMit Strg-a akzeptieren Sie den \
+Namen des angezeigten Standard-Backup Servers. \\n\\nMit Strg-x \
+verlassen Sie die Anzeige und verwerfen alle ÿnderungen. Auditinit \
+kehrt ins vorherige Menœ zurœck. Mit Strg-x gelangen Sie in die vorherigen \
+Menœs\, verlassen Auditinit und kehren zum Betriebssystem zurœck.",	 ""
+3804		= "Geben Sie den Namen des Backup Servers fœr den Sybase Server ein (Standard ist: '%1!'): ",	 "%s"
+3805		= "Name des Backup Servers fœr den Sybase Server: ", ""
+3806	= "\
+Name des Backup Servers fœr den Sybase Server\\n\\nWÃhlen Sie diese \
+Option\, um den Namen des Backup Servers einzugeben\, den dieser Sybase \
+Server beim Sichern und Wiederherstellen von Datenbanken verwendet. \
+Der Standardwert ist SYB_BACKUP.\\n\\n Beachten Sie\, dass der hier \
+angegebene Backup Server noch nicht notwendigerweise existieren muss. \
+Sie kŒnnen den Standard-Backup Server auch nach der erfolgreichen \
+Installation dieses Sybase Servers konfigurieren. Dieser Backup Server \
+sollte dann mit dem Standard-Backup Server œbereinstimmen\, den Sie hier \
+angeben. Weitere Hinweise finden Sie in der Installationsanleitung.\\n\\n* \
+Weiter zur nÃchsten Anzeige *\\n\\nMit <F10> akzeptieren Sie den \
+Namen des angezeigten Standard-Backup Servers. Auditinit kehrt zum \
+vorherigen Menœ zurœck.",	 ""
+3850	= "Neuen Adaptive Server (Express) konfigurieren",	 ""
+3851	= "Neuen Adaptive Server (Normal) konfigurieren",	 ""
+3852   = "Masterdevice Pfad/Name: ",	 ""
+3853   = "  GrŒﬁe (MByte): ",	 ""
+3854 = "Systemprozedur-Device Pfad/Name: ",	""
+3855 = "  Logischer Name: ",	""
+3856   = "  GrŒﬁe (MByte): ",	""
+3857	   = "Fehler-Log Pfad/Name: ",	 ""
+3859	= "Registrierungseintrag fœr Server '%1!' ist bereits vorhanden.", "%s"
+3860	= "Derzeitige Standardsprache:      ",	 ""
+3861	= "Derzeitiger Standardzeichensatz: ",	 ""
+3862	= "Derzeitige Sortierreihenfolge:   ",	 ""
+3863 		= "Sybase Server-Eintrag in Registrierung aktualisieren",	"" 	
+3864		= "Sybase Server starten",	""	
+3865		= "Sybase Server herunterfahren",	""	
+3866		= "Dienststeuerungs-Manager-Eintrag (Service Control Manager) fœr den Sybase Server '%1!' konnte nicht erstellt werden. Betriebssystem meldet Fehler: '%2!'",	"%s%s"
+3867		= "Der Sybase Server wurde angehalten. MŒchten Sie ihn starten?",	""	
+3868		= "Ungœltiges Login. Bitte wiederholen.",	""	
+3869 		= "Aktualisierung des Registrierungseintrags fœr den XP-Server",	"" 	
+3870			= "Konfiguration der Ereignisprotokollierung",	"" 	
+3871	= "Markierung fœr die Ereignisprotokollierung des Sybase Servers nicht feststellbar.",		""
+3872	= "Rechnername fœr das Ereignisprotokoll des Sybase Servers kann nicht ermittelt werden.",		""
+4000		= "Validierungsfunktion fœr Ja/Nein-Prœfung mit Null-Zeiger aufgerufen.", ""
+4001		= "Validierungsfunktion fœr Devicenamen mit Null-Zeiger aufgerufen.", ""
+4002	= "Validierungsfunktion fœr Namen des Begleitservers mit Null-Zeiger aufgerufen.", ""
+4003	= "Servername '%1!' ist zu lang. Die erlaubte LÃnge betrÃgt %2! Zeichen.", "%s %d"
+4004	= "Servername wurde nicht eingegeben.",""
+4005	= "Servername '%1!' ist ungœltig. Servernamen dœrfen nur alphanumerische Zeichen (rŒmisch) und '_' enthalten.", "%s"
+4006	= "Servername '%1!' beginnt mit einem unzulÃssigen Zeichen. Das erste Zeichen eines Servernamens muss ein alphanumerisches Zeichen (rŒmisch) sein.", "%s"
+4010		= "Validierungsfunktion fœr Wiederholfrequenz mit Null-Zeiger aufgerufen.", ""
+4011 	= "Wiederholfrequenz '%1!' ist keine Zahl.", "%s"
+4012		= "Validierungsfunktion fœr VerzŒgerungsintervall mit Null-Zeiger aufgerufen.", ""
+4013	= "VerzŒgerungsintervall '%1!' ist keine Zahl.", "%s"
+4014	= "Kann interne Liste fœr Validierungsprœfung fœr Protokolle nicht erzeugen.",""
+4015	= "Keine Protokolle in Protokoll-Liste wÃhrend der Validierungsprœfung fœr Protokolle gefunden.",""
+4017	= "Protokoll '%1!' ist ungœltig.","%s"
+4019	= "Interne Liste fœr Validierungsprœfung fœr Eintragnamen kann nicht erstellt werden.", ""
+4020	= "Keine Eintragnamen in Liste der Eintragnamen wÃhrend der Validierungsprœfung fœr Eintragnamen gefunden.", ""
+4021	= "Interne Liste fœr Hostnamen wÃhrend der Validierungsprœfung fœr Hostnamen kann nicht erstellt werden.", ""
+4022	= "Keine Hostnamen in Liste der Hostnamen wÃhrend der Validierungsprœfung fœr Hostnamen gefunden.",""
+4024	= "Host '%1!' existiert nicht.", "%s"
+4026	= "Interne Liste fœr Validierungsprœfung fœr Portlisten kann nicht erstellt werden.", ""
+4027 = "Das Protokollattribut wurde nicht vor dem Aufruf der Validierungsprœfung fœr Portlisten gesetzt.", ""
+4028 = "WÃhrend der Validierungsprœfung fœr Portlisten konnte keine interne Liste fœr Protokolle erstellt werden.", ""
+4030	= "WÃhrend der Validierungsprœfung fœr Portlisten keine Ports in Portliste gefunden.", ""
+4031 = "Weniger Protokolle als Ports wÃhrend der Validierungsprœfung der Portliste gefunden: Diese Liste muss genauso viele Elemente enthalten.", ""
+4032	= "Validierungsfunktion fœr SA-Login mit Null-Zeiger aufgerufen.", ""
+4033	= "Das Login des Systemadministrators darf nicht leer sein.", ""
+4034	= "Validierungsfunktion fœr SA-Kennwort mit Null-Zeiger aufgerufen.", ""
+4035	= "SA-Kennwort ist zu lang. Die erlaubte LÃnge betrÃgt %1! Zeichen.","%d"
+4036 = "",	""
+4037	= "Zeichensatz '%1!' ist ungœltig.", "%s"
+4038	= "Validierungsfunktion fœr Zeichensatz mit Null-Zeiger aufgerufen.", ""
+4039	= "Sprache '%1!' ist ungœltig.", "%s"
+4040	= "Validierungsfunktion fœr Sprache mit Null-Zeiger aufgerufen.", ""
+4041 = "Das Zeichensatzattribut muss vor dem Aufruf der Validierungsfunktion fœr Sortierreihenfolgen definiert werden.", ""
+4042 = "In der Liste der ZeichensÃtze wurden wÃhrend der Validierungsprœfung fœr ZeichensÃtze keine ZeichensÃtze gefunden.",""
+4043 = "Das Sprachattribut muss vor dem Aufruf der Validierungsfunktion fœr ZeichensÃtze definiert werden.", ""
+4044	= "In der Liste der Sprachen wurde wÃhrend der Validierungsprœfung fœr Sprachen keine Sprache gefunden.",""
+4045 	= "Zeichensatz '%1!' ist ungœltig.","%s"
+4046 	= "Sprache '%1!' ist ungœltig.", "%s"
+4047 = "Interne Liste kann wÃhrend der Validierungsprœfung fœr das Hinzufœgen von ZeichensÃtzen nicht erstellt werden.", ""
+4048 = "Interne Liste kann wÃhrend der Validierungsprœfung fœr das Entfernen von ZeichensÃtzen nicht erstellt werden.", ""
+4049 = "Interne Liste kann wÃhrend der Validierungsprœfung fœr das Hinzufœgen von Sprachen nicht erstellt werden.", ""
+4050 = "Interne Liste kann wÃhrend der Validierungsprœfung fœr das Entfernen von Sprachen nicht erstellt werden.", ""
+4052 = "Sortierreihenfolge '%1!' ist ungœltig.", "%s"
+4053	= "Validierungsfunktion fœr Sortierreihenfolgen mit Null-Zeiger aufgerufen.",""
+4054 = "", ""
+4055	= "Wert '%1!' muss 'ja' oder 'nein' sein.", "%s"
+4058 = "'%1!' ist zu lang. Maximal zulÃssige LÃnge betrÃgt %2! Zeichen.", "%s %d"
+4059 = "'%1!' ist eine bereits bestehende\, regulÃre Datei. Sie wird œberschrieben.", "%s"
+4060	= "Devicedatei '%1!' benŒtigt Lese- und Schreibberechtigung.", "%s"
+4061 = "'%1!' ist ein blockorientiertes Device\, das nicht als Server-Device verwendet werden sollte. Verwenden Sie ein zeichenorientiertes Device.", "%s"
+4062 	= "Device '%1!' ist kein Plattenspeicher.", "%s"
+4063	= "Verzeichniskomponente von '%1!' nicht verfœgbar.", "%s"
+4064	= "Fœr dieses Device mœssen Sie den vollstÃndiger Pfad eingeben.", ""
+4065	= "Fehler im Verzeichnis '%1!'.","%s"
+4066	= "'%1!' ist kein Verzeichnis und kann nicht als Device verwendet werden.", "%s"
+4067 = "Verzeichnis '%1!' benŒtigt Lese-\, Schreib- und Ausfœhrungsberechtigung\, wenn es als Sybase-Device verwendet werden soll.","%s"
+4068 = "Device '%1!' benŒtigt Lese- und Schreibberechtigung.", "%s"
+4069		 = "Die asynchrone Eingabe/Ausgabe ist nicht aktiviert. Installieren Sie die asynchrone Eingabe/Ausgabe.", ""
+4070 = "Device '%1!' ist ein blockorientiertes Device und wird nicht empfohlen\, da asynchrone Eingabe/Ausgabe nicht aktiviert ist. Aktivieren Sie die asynchrone Eingabe/Ausgabe oder wÃhlen Sie ein zeichenorientiertes Device.", "%s"
+4075 = "'%1!' ist keine gœltige Zahl. Die Zahlen enthalten die numerischen Zeichen von '0' bis '9' (arabisch).", "%s"
+4076 = "GrŒﬁe des Audit-Devices '%1!' ist zu klein: Das Minimum betrÃgt '%2!' MByte.", "%s %.2f"
+4077 = "GrŒﬁe des Masterdevices '%1!' ist zu klein: Das Minimum betrÃgt '%2!' MByte.", "%s %.2f"
+4079	= "Fehlerlogdatei des Sybase Servers wurde nicht angegeben.", ""
+4080	= "BACKUP SERVER Fehlerlogdatei nicht angegeben.", ""
+4081 	= "Quota-Datei wurde nicht angegeben.", ""
+4082 		= "Attribut '%1!' wurde nicht eingestellt.", "%s"
+4083 	= "Es ist nicht erlaubt\, wÃhrend des Upgrades einen Server hinzuzufœgen", ""
+4085 	= "Es ist nicht erlaubt\, wÃhrend des Upgrades eine neue Konfiguration einzustellen.", ""
+4086 = "\
+'%1!' ist eine regulÃre Datei\, die nicht als Server-Device verwendet werden sollte.", "%s"
+4087 	= "'%1!' ist kein gœltiger Name fœr den Sybase Server.", "%s"
+4088 	= "'%1!' ist kein gœltiger Name fœr den Backup Server.", "%s"
+4089 = "Name des Backup Servers wurde nicht eingegeben.",""
+4090 = "'%1!' ist eine bereits bestehende regulÃre Datei. Entfernen Sie sie\, wenn sie als Devicedatei verwendet werden soll.", "%s"
+4091 = "'%1!' ist ein zeichenorientiertes Device\, das nicht als Server-Device verwendet werden sollte. Verwenden Sie ein blockorientiertes Device.", "%s"
+4092 = "Der Backup Server '%1!' existiert nicht in der Interfaces-Datei. Erzeugen Sie ihn\, wenn Sie die Funktionen des Adaptive Servers zur Sicherung und Wiederherstellung verwenden wollen.", "%s"
+4093 = "GrŒﬁe des Devices '%1!' ist ungœltig: '%2!' hat hŒchstens '%3!' MByte freien Speicherplatz", "%s %s %.2f"
+4094 		= "'%1!' ist ein ungœltiger Wiederholwert.", "%s" 
+4095 		= "'%1!' ist ein ungœltiger VerzŒgerungswert.", "%s"
+4096	= "", ""
+4097	= "Device '%1!' enthÃlt bereits ein Sybase-Device.\\nWenn Sie mit diesem Vorgang auf diesem Device fortfahren,\\nwerden alle Daten auf diesem Device zerstŒrt.\\n\\nMŒchten Sie fortfahren?", "%s"
+4200 = "Neues Device fœr die Datenbank '%1!' kann erst angelegt werden\, wenn der physische Devicename eingegeben wurde.", "%s"
+4201 = "Neues Device fœr die Datenbank '%1!' kann erst angelegt werden\, wenn der logische Devicename eingegeben wurde.", "%s"
+4202	= "Neues Device fœr die Datenbank '%1!' kann nicht angelegt werden\, solange die GrŒﬁe des Devices nicht festgelegt ist.", "%s"
+4203 = "Physischer Devicename '%1!' ist ungœltig: Maximal 127 Zeichen sind zulÃssig.", "%s"
+4204 = "System-Devicename '%1!' ist ungœltig: Maximal 127 Zeichen sind zulÃssig.", "%s"
+4205 = "Sybase rÃt davon ab\, die Datenbank '%1!' im Masterdevice abzulegen. Wenn Sie '%1!' im Masterdevice ablegen\, mœssen Sie dafœr sorgen\, dass es fœr diese Datenbank groﬁ genug eingerichtet wurde.", "%s"
+4206 = "'%1!' DatenbankgrŒﬁe '%2!' ist ungœltig: Maximal zulÃssige GrŒﬁe ist %3! MByte.", "%s %d %d"
+4207 = "'%1!' Datenbank ('%2!' MByte) ist grŒﬁer als das Device\, auf dem sie untergebracht werden soll ('%3!' MByte).", "%s %s %s"
+4208 = "Die '%1!' DevicegrŒﬁe ('%2!' MByte) ist fœr Datenbank '%1!' ('%3!' MByte) zu klein.", "%s %s %s"
+4209	= "Anforderung zum Anlegen eines Devices fœr die Datenbank %1! ignoriert: Datenbank %1! besteht bereits. LŒschen Sie die bestehende Datenbank\, wenn Sie eine neue Datenbank %1! anlegen wollen.", "%s"
+4210	= "Bestehende Datenbank %1! ist zu klein ('%2!' MByte): Das Minimum betrÃgt '%3!' MByte.", "%s %.2f %.2f"
+4211		= "Datenbank %1! kann nicht auf Device '%2!' gespeichert werden: Dieses Device ist kein Datendevice.", "%s %s"
+4212		= "Datenbank %1! kann nicht auf Device '%2!' gespeichert werden: Es fehlen die benŒtigten '%3!' MByte freien Speicherplatzes.", "%s %s %s"
+4213		= "Datenbank %1! kann nicht auf Device '%2!' gespeichert werden: Device existiert nicht. Legen Sie das Device manuell an oder lassen Sie es von Auditinit automatisch anlegen.", "%s %s"
+4220 	= "Sie mœssen einen Wert fœr den physischen Devicenamen angeben\, wenn Sie es anlegen wollen.",	""
+4221	= "Sie mœssen einen Wert fœr die GrŒﬁe des physischen Devices angeben\, wenn Sie es anlegen wollen.",	""
+4222	= "Sie mœssen einen Wert fœr die GrŒﬁe der Datenbank '%1!' angeben.", "%s"
+4223	= "Sie mœssen einen Wert fœr den Devicenamen angeben\, auf dem die Datenbank '%1!' implementiert werden soll.", "%s"
+4224	= "Der Devicename\, '%1!'\, ist bereits vorhanden. Bitte geben Sie einen anderen Namen ein\, um das vorhandene Device nicht zu œberschreiben.", "%s"
+4225 = "Sie kŒnnen nicht dasselbe logische Device fœr zwei Auditing-Devices verwenden.", ""
+4226	= "Das Device '%1!' konnte auf dem Server nicht gefunden werden. Wenn Sie ein bestehendes Device verwenden wollen\, muss ein Device dieses Namens auf dem Server existieren.", "%s"
+5000	= "Runserver-Datei fœr '%1!' im Sybase 4.2-Versionsverzeichnis '%2!' konnte nicht gefunden werden.", "%s %s"
+5001	= "Informationen fœr Server '%1!' im Sybase 4.2-Versionsverzeichnis '%2!' konnten von Runserver-Datei '%3!' nicht gelesen werden.", "%s %s %s"
+5002	= "Speicherort des Masterdevices fœr Server '%1!' im Sybase 4.2-Versionsverzeichnis '%2!' konnte nicht gefunden werden. Upgrade-Vorbereitung fehlgeschlagen.", "%s %s"
+5003	= "Versionsverzeichnis '%1!' ist kein gœltiges Sybase 4.2-Versionsverzeichnis.", "%s"
+5004 = "Versionsverzeichnis '%1!' ist neuer als das Sybase 4.2-Versionsverzeichnis.", "%s"
+5005 = "Es wird geprœft\, ob Masterdevice '%1!' ein Sybase 4.2-Masterdevice ist.", "%s"
+5006 = "Sybase Server '%1!' konnte nicht heruntergefahren werden.", "%s"
+5007 = "TemporÃre Datei zur €berprœfung der Versionsebene des Masterdevices '%1!' konnte nicht gefunden werden.", "%s"
+5008 = "Unbekannte Sybase-Versionsebene fœr Masterdevice '%1!'.", "%s"
+5009 = "Masterdevice '%1!' ist kein Sybase 4.2-Masterdevice.", "%s"
+5010 = "Der Sybase Server '%1!' wird heruntergefahren.", "%s"
+5011 = "Datei '%1!' kann nicht geŒffnet werden.", "%s"
+5012 = "Sybase 4.2 Server '%1!' wird gestartet", "%s"
+5013 = "Sybase 4.2 Server '%1!' kann nicht gestartet werden.", "%s"
+5014 = "Es wird œberprœft\, ob bei allen Datenbanken 'no checkpoint on recovery' deaktiviert wurde.", ""
+5015 = "Bei der Datenbank '%1!' ist 'no checkpoint on recovery' aktiviert.", "%s"
+5016 = "Die Option 'no checkpoint on recovery' ist bei den oben genannten Datenbanken vor einem neuerlichen Upgradeversuch zu deaktivieren.", ""
+5017 = "Konfiguration der Version 4.2 wird gespeichert und auf System 12.5 umgestellt.", ""
+5018 = "SQL-Skript '%1!' zum Speichern der 4.2er Konfiguration und ÿnderung auf System 12.5 konnte nicht ausgefœhrt werden.", "%s"
+5019 = "Konfigurationswerte wurden erfolgreich auf System 12.5 umgestellt.", ""
+5020 = "Log wird in allen Datenbanken abgeschnitten.", ""
+5021 = "SQL-Skript '%1!' zum Abschneiden des Logs kann nicht gestartet werden.", "%s"
+5022 = "Konfiguration von 4.2 wird wiederhergestellt.", ""
+5023 = "Der Konfigurationsbereich wird auf '%1!' geÃndert, um das Hochfahren eines Sybase Servers der Version 12.5 zu ermŒglichen.", "%s"
+5024 = "Konfigurationsbereich auf '%1!' kann nicht modifiziert werden.", "%s"
+5025 = "Ein Sybase Server der Version 12.5 wird hochgefahren, um das Upgrade zu testen.", ""
+5026 = "Es konnte keine Runserver-Datei fœr Server '%1!' im Versionsverzeichnis '%2!' fœr die Version 12.5 geschrieben werden.", "%s %s"
+5027 = "Der Sybase Server Version 12.5 '%1!' im Versionsverzeichnis '%2!' konnte nicht hochgefahren werden.", "%s %s"
+5028 = "Versuchsweises Upgrade fehlgeschlagen. Im Fehler-Log '%1!' finden Sie weitere Informationen.", "%s"
+5029 = "Der 4.2-Konfigurationsbereich wird auf '%1!' zurœckgeschrieben.", "%s"
+5030 = "Der 4.2-Konfigurationsbereich konnte nicht auf '%1!' zurœckgeschrieben werden.", "%s"
+5031 = "Konfigurationswerte des Masterdevices '%1!' werden gespeichert.", "%s"
+5032 = "Konfigurationswerte des Masterdevices '%1!' kŒnnen nicht gespeichert werden.", "%s"
+5033 = "Konfigurationswerte des Masterdevices '%1!' erfolgreich gespeichert.", "%s"
+5034 = "Skript '%1!' zum Speichern der Segment-Informationen der Datenbank wird gestartet.", "%s"
+5035 = "Segmentinformationen der Datenbank konnten nicht gespeichert werden.", ""
+5036 = "Segmentinformationen der Datenbank erfolgreich gespeichert.", ""
+5037 = "Beginn der Upgrade-Phase I", ""
+5038 = "'%1!' wird zum Upgrade der Systemkataloge in Master-Datenbank gestartet.", "%s"
+5039 = "Skript '%1!' kann nicht ausgefœhrt werden.", "%s"
+5040 = "Systemkataloge auf System 12.5 umgestellt.", ""
+5041 = "Upgrade der Systemkataloge der Benutzer-Datenbanken", ""
+5042 = "Master-Datenbank kann nicht verwendet werden.", ""
+5043 = "Log der Systemdatenbanken wird abgeschnitten.", ""
+5044 = "Datenbank '%1!' kann nicht verwendet werden und wird œbersprungen.", "%s"
+5045 = "Upgrade der Sysindexes-Spalten in Datenbank '%1!'", "%s"
+5046 = "Der Datenbank '%1!' werden Sysgams hinzugefœgt.", "%s"
+5047 = "Log der Datenbank '%1!' wird abgeschnitten.", "%s"
+5048 = "Upgrade der Masterdevice-Konfiguration auf System 12.5", ""
+5049 = "Option '%1!' des Masterdevices kann nicht eingestellt werden.", "%s"
+5050 = "Unbekannter Upgrade-Status der Zuweisungsstrukturen in der Master-Datenbank.", ""
+5051 = "Upgrade der Zuweisungsstrukturen in der Master-Datenbank nicht mŒglich. Im Fehler-Log '%1!' finden Sie weitere Informationen.", "%s"
+5052 = "Beginn der Upgrade-Phase II", ""
+5053 = "Upgrade der Zuweisungsstrukturen in den Benutzer-Datenbanken.", ""
+5054 = "Unbekannter Upgrade-Status der Zuweisungsstrukturen in den Benutzer-Datenbanken.", ""
+5055 = "Upgrade der Zuweisungsstrukturen in den Benutzer-Datenbanken nicht mŒglich. Im Fehler-Log '%1!' finden Sie weitere Informationen.", "%s"
+5056 = "Beginn der Upgrade-Phase III", ""
+5057 = "Neue System-Fehlermeldungen werden geladen.", ""
+5058 = "Neue System-Fehlermeldungen konnten aus '%1!' nicht geladen werden.", "%s"
+5059 = "Beginn der Upgrade-Phase IV", ""
+5060 = "Upgrade erfolgreich abgeschlossen.",""
+5061 = "Konfiguration des Masterdevices erfolgreich geÃndert.",""
+5062 = "Runserver-Datei des Servers wird modifiziert.",""
+5063 = "Server '%1!' wird zum Upgrade der Zuweisungsstrukturen der Master-Datenbank gestartet.","%s"
+5064 = "Der Server ist nicht hochgefahren. Erneut versuchen?",""
+5065 = "Status der Zuweisungsstrukturen in der Master-Datenbank wird œberprœft.",""
+5066 = "Upgrade der Zuweisungsstrukturen in der Master-Datenbank erfolgreich abgeschlossen.",""
+5068 = "Status der Zuweisungsstrukturen in den Benutzer-Datenbanken wird œberprœft.",""
+5069 = "Upgrade der Zuweisungsstrukturen in allen Benutzer-Datenbanken erfolgreich abgeschlossen.",""
+5070 = "System 12.5 Sybase Server '%1!' wird hochgefahren, um das Upgrade abzuschlieﬁen.","%s"
+5071 = "Installation von sp_configure",""
+5072 = "Installation von sp_configure nicht mŒglich.\,",""
+5073 = "Start von 'upgrade49'.",""
+5074 = "Starten von 'upgrade49' nicht mŒglich.",""
+5075 = "Programm 'upgrade49' erfolgreich abgeschlossen.",""
+5076 = "Beginn der Upgrade-Phase V", ""
+5077 = "Upgrade lÃuft.",""
+5078 = "Starten des Upgrades nicht mŒglich.",""
+5079 = "Das Upgrade-Programm wurde erfolgreich beendet.",""
+5080 = "Starten des Programms 'Installmaster' nicht mŒglich.",""
+5081 = "Upgrade auf System 12.5 erfolgreich abgeschlossen",""
+5082 = "Haben Sie alle Ihre Datenbanken gesichert?",""
+5083 = "Die Version des aktuellen Devices konnte nicht festgestellt werden.\n", ""
+; End of section.
+5084	= "Konfiguration von OmniConnect",	""

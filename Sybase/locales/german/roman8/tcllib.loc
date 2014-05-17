@@ -1,0 +1,365 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) tcllib.loc 1.3 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "Kann benŒtigten Speicherbedarf fœr Protokoll-Treiber nicht bestimmen"
+
+2 = NETE_NULLOPT, "Eine NULL-Optionen-ptr darf nicht an eine Net-Library-Routine œbergeben werden"
+
+3 = NETE_UNKWOPT, "Angeforderte Net-Library-Option ist unbekannt"
+
+4 = NETE_UNKWINFCDE, "Angeforderter Informations-Code fœr Adresse ist unbekannt"
+
+5 = NETE_BOOLREP, "Wert der Option muﬁ entweder NET_TRUE oder NET_FALSE sein"
+
+6 = NETE_NULLNETBUF, "Ein NULL-Pufferzeiger darf nicht an net_init() œbergeben werden"
+
+7 = NETE_NOTSUPPORTED, "Eigenschaft wird nicht unterstœtzt"
+
+8 = NETE_NULLHDLR, "Ein NULL NET_POLL-Array-Zeiger darf nicht œbergeben werden"
+
+9 = NETE_BADENGINE, "Kennung der Engine ist ungœltig"
+
+10 = NETE_ALREADYINIT, "Der aktuelle Prozeﬁ hat net_init() bereits aufgerufen"
+
+11 = NETE_DICTNOTFOUND, "Konnte AdreﬁwŒrterbuch nicht finden"
+
+12 = NETE_SRVNAMENOTFND, "Angegebenes Namensattribut des Servers nicht gefunden"
+
+13 = NETE_NODICTS, "Kann keine verfœgbare AdreﬁwŒrterbuch-Struktur finden"
+
+14 = NETE_DRVINIT, "Fehler wÃhrend der Initialisierung des Protokolltreibers."
+
+15 = NETE_NODRIVERS, "Kann keine verfœgbare Protokolltreiber-Struktur finden"
+
+16 = NETE_LFNOSECTION , "Kann in der Lokalisierungs-Datei den Fehlerabschnitt der Net-Library nicht finden"
+
+17 = NETE_DICTSYNTAX, "Syntaxfehler im AdreﬁwŒrterbuch"
+
+18 = NETE_ADRTYPNOTFND, "Angegebenes Adreﬁtypattribut wurde nicht gefunden"
+
+19 = NETE_DICTCLOSE, "Fehler beim Schlieﬁen des AdreﬁwŒrterbuchs"
+
+20 = NETE_NOEPS, "Konnte keine verfœgbare Endpunkt-Struktur finden"
+
+21 = NETE_EPINUSE, "Es wurde versucht, einen Endpunkt zu verwenden, der bereits verwendet wird"
+
+22 = NETE_DRVPROPERTY, "Aufruf des Protokolltreibers zum Festzustellen von Eigenschaften ist fehlgeschlagen"
+
+23 = NETE_DRVLISTEN, "Aufruf Net-Lib-Protokolltreiber zur Registrierung eines Listener ist fehlgeschlagen"
+
+24 = NETE_DRVCONNECT, "Aufruf des Net-Lib-Protokolltreibers zum Verbinden zweier Endpunkte ist fehlgeschlagen"
+
+25 = NETE_DRVACCEPT, "Aufruf des Protokolltreibers zur Annahme einer eingehenden Verbindungsanforderung ist fehlgeschlagen"
+
+26 = NETE_BADIOSTATE, "Endpunkt hat falschen E/A-Zustand"
+
+27 = NETE_DRVNOTAVAIL, "Angegebener Net-Lib-Protokolltreiber nicht verfœgbar"
+
+28 = NETE_BADPROPERTY, "Ungœltiges Typargument der Eigenschaft"
+
+29 = NETE_DISCONNECT, "Net-Library-Operationen beendet, da Verbindung gelŒst wurde"
+
+30 = NETE_DRVEXIT, "Beendigungs-Routine des Net-Lib-Protokolltreibers fehlgeschlagen"
+
+31 = NETE_SUBACCEPT, "Versuch, accept fœr einen der Listener auszugeben, ist fehlgeschlagen"
+
+32 = NETE_DRVREAD, "Aufruf des Net-Lib-Protokolltreibers zum Lesen von Daten fehlgeschlagen"
+
+33 = NETE_RDDATLEN, "GrŒﬁe der zum Lesen angeforderten Daten ist grŒﬁer als Lesepuffer"
+
+34 = NETE_DRVREADOOB, "Aufruf des Net-Lib-Protokolltreibers zum Lesen wichtiger Daten"
+
+35 = NETE_EXPNOTSUPPORT, "Abgeschickte Daten werden von diesem Net-Lib-Protokolltreiber nicht unterstœtzt"
+
+36 = NETE_DRVWRITE, "Aufruf des Net-Lib-Protokolltreibers zum Schreiben von Daten fehlgeschlagen"
+
+37 = NETE_NULLADDR, "Ein NULL-Zeiger fœr net_addr kann nicht œbergeben werden"
+
+38 = NETE_NULLDICT, "Ein NULL-Zeiger fœr ein WŒrterbuch kann nicht œbergeben werden"
+
+39 = NETE_NULLSTATE, "Ein NULL-Zeiger fœr net_state kann nicht œbergeben werden"
+
+40 = NETE_NULLRETRES, "Ein NULL-Zeiger fœr return_reason kann nicht œbergeben werden"
+
+41 = NETE_NULLEP, "Ein NULL-Zeiger fœr einen Endpunkt kann nicht œbergeben werden"
+
+42 = NETE_NULLCBACK, "Ein NULL-Zeiger fœr eine Callback-Routine kann nicht œbergeben werden"
+
+43 = NETE_NULLDICTNAME, "Ein NULL-Zeiger fœr eine WŒrterbuchkennung kann nicht œbergeben werden"
+
+44 = NETE_NULLEXPFLAG, "Ein NULL-Zeiger fœr eine abgeschickte Daten-Flag kann nicht œbergeben werden"
+
+45 = NETE_NULLDICTPTR, "Ein NULL-Zeiger fœr ein WŒrterbuch-Handle kann nicht œbergeben werden"
+
+46 = NETE_NULLNEWEP, "Ein NULL-Zeiger fœr ein Endpunkt-Handle kann nicht œbergeben werden"
+
+47 = NETE_NULLATTRLST, "Ein NULL-Zeiger fœr Adreﬁinformationen kann nicht œbergeben werden"
+
+48 = NETE_NULLADDRPTR, "Ein NULL-Zeiger fœr ein net_addr-Handle kann nicht œbergeben werden"
+
+49 = NETE_NULLLASTENTRY, "Ein NULL-Zeiger fœr den letzten Eintrag kann nicht œbergeben werden"
+
+50 = NETE_NULLRDDATA, "Ein NULL-Lesepuffer kann nicht œbergeben werden"
+
+51 = NETE_NOADDRS, "Kann keine verfœgbare Adreﬁstruktur finden"
+
+52 = NETE_NULLBYTSRD, "Ein NULL-Zeiger fœr bytes_read kann nicht œbergeben werden"
+
+53 = NETE_EPCLOSING, "Der angegebene Endpunkt wird geschlossen"
+
+54 = NETE_NULLWRDATA, "Ein NULL-Lesepuffer kann nicht œbergeben werden"
+
+55 = NETE_CANCELLED, "Die angeforderte Operation wurde wegen anderer Ereignisse abgebrochen."
+
+56 = NETE_NULLINTL, "Eine NULL-Struktur fœr NET_INTL kann nicht œbergeben werden"
+
+57 = NETE_NULLUSERPTR, "Ein NULL-Puffer fœr Benutzerzeiger kann nicht œbergeben werden"
+
+58 = NETE_BADDICT, "Es wurde versucht, ein ungœltiges WŒrterbuch-Handle zu verwenden"
+
+59 = NETE_BADADDR, "Es wurde versucht, ein ungœltiges Adreﬁ-Handle zu verwenden"
+
+60 = NETE_BADEP, "Es wurde versucht, ein ungœltiges Endpunkt-Handle zu verwenden"
+
+61 = NETE_DRVCLOSE, "Aufruf des Net-Lib-Protokolltreibers zum Schlieﬁen eines Endpunkts fehlgeschlagen"
+
+62 = NETE_VERSION, "Protokolltreiber nicht kompatibel mit aktueller Net-Lib -- Wahrscheinlich eine Ãltere Version von Net-Library"
+
+63 = NETE_NULLSUPPORT, "Ein NULL-Zeiger fœr die 'unterstœtzten' Parameter kann nicht an net_capability() œbergeben werden"
+
+64 = NETE_BADPROCMODE, "Ungœltiger Verarbeitungsmodus"
+
+65 = NETE_FUNCCODE, "Ungœltiger Funktions-Code an net_report() œbergeben"
+
+66 = NETE_DRVINUSE, "Kann Treiber nicht ausladen -- Treiber wird weiterhin verwendet"
+
+67 = NETE_NCONNECTED, "Es wurde eine E/A fœr einen Endpunkt versucht, der nicht verbunden ist"
+
+68 = NETE_NOMULTIRW, "Mehr als ein Lesevorgang nicht mŒglich"
+
+69 = NETE_NULLPREVMODE, "Ungœltiger NULL-Zeiger fœr vorherigen Modus"
+
+70 = NETE_NULLREPORT, "Kann net_report() nicht aufrufen, wenn Bericht nicht von net_opt_report() angefordert wurde"
+
+71 = NETE_LFILENAME, "Name der Lokalisierungs-Datei nicht in dem Aufruf an net_intl_errstr() angegeben"
+
+72 = NETE_INTLOPEN, "Der Versuch, die Lokalisierungs-Datei mit intl_open zu Œffnen, ist fehlgeschlagen"
+
+73 = NETE_UP1ENIGNE, "Fœr die Einzelprozessor-Version von Net-Lib ist nur eine Engine erlaubt"
+
+74 = NETE_NULLCBPARM, "Ungœltiger NULL-Callback-Parameter fœr Net-Library-Routine"
+
+75 = NETE_NULLINFOLEN, "Ungœltiger NULL-Zeiger der InformationslÃnge fœr net_address_info()"
+
+76 = NETE_UNKWNMODE, "Angeforderter Callback-Modus wird nicht erkannt"
+
+77 = NETE_BADEPNUM, "Angeforderte Endpunkt-Nummer nicht gœltig"
+
+78 = NETE_NULLENGPTR, "Ein NULL-Zeiger fœr die Engine kann nicht an net_engine_init() œbergeben werden"
+
+79 = NETE_NULLENGINE, "Ein NULL-Zeiger fœr die Engine kann nicht an eine Net-Library-Routine œbergeben werden"
+
+80 = NETE_NOENGS, "Kann keine verfœgbare Engine-Struktur finden"
+
+81 = NETE_NOREQUESTS, "Kann keine verfœgbare Anforderungs-Struktur finden"
+
+82 = NETE_BADMONFLAG, "Die angeforderte Maske fœr Monitor-Flags ist ungœltig"
+
+83 = NETE_EPINCLOSE, "Der gewœnschte Endpunkt wird geschlossen"
+
+84 = NETE_BADMODE, "Der angeforderte Modus wird nicht unterstœtzt"
+
+85 = NETE_DRVLOAD, "Der Versuch, den Protokolltreiber zu laden, ist fehlgeschlagen"
+
+86 = NETE_DRVUNLOAD, "Der Versuch, den Protokolltreiber zu entladen, ist fehlgeschlagen"
+
+87 = NETE_MEMPOLICY, "Angeforderte Speicherrichtlinie ist nicht gœltig"
+
+88 = NETE_MEMREALLOC, "Der Versuch, Speicher erneut zuzuweisen, ist fehlgeschlagen"
+
+89 = NETE_MEMALLOC, "Der Versuch, Speicher zuzuweisen, ist fehlgeschlagen"
+
+90 = NETE_NULLSIZE, "Ein NULL-Zeiger fœr die GrŒﬁe kann nicht an net_initsize() œbergeben werden"
+
+91 = NETE_NULLSTATEPTR, "Ein NULL-Zeiger fœr NET_STATE kann nicht an net_init() œbergeben werden"
+
+92 = NETE_NULLSPNLCKCNTPTR, "Ein NULL-Zeiger fœr einen Spinlock-ZÃhler kann nicht an net_spinlocks() œbergeben werden"
+
+93 = NETE_ENGACTIVE, "Angeforderte Operation kann nicht durchgefœhrt werden, solange aktive Engines vorhanden sind"
+
+94 = NETE_UNKWIDTYPE, "Angegebener Kennungstyp des AdreﬁwŒrterbuchs nicht gœltig"
+
+95 = NETE_SECNOTFOUND, "Angeforderter Abschnitt der config-Datei nicht gefunden"
+
+96 = NETE_DRVNOTLOADED, "Netzwerktreiber fœr angegebenes Netzwerkprotokoll nicht geladen"
+
+97 = NETE_NODRVERRSTR, "Keine Fehlerzeichenkette des Protokolltreibers fœr aktuellen Fehler"
+
+98 = NETE_SHRTINFOBUF, "Der Puffer der Adreﬁinformation ist zu klein"
+
+99 = NETE_NULLNFDS, "Ein NULL-Zeiger fœr nfds kann nicht an net_poll_external() œbergeben werden"
+
+100 = NETE_BADNFDS, "Die Anzahl der angeforderten Datei-Deskriptoren ist ungœltig"
+
+101 = NETE_NULLRDBUF, "Ein NULL-Lesepuffer kann nicht an Net-Library œbergeben werden"
+
+102 = NETE_NULLWRTBUF, "Ein NULL-Schreibpuffer kann nicht an Net-Library œbergeben werden"
+
+103 = NETE_INTLNXTSEC, "Aufruf von intl_nextsection fehlgeschlagen"
+
+104 = NETE_INTLNXTVAL, "Aufruf von intl_nextvalue fehlgeschlagen"
+
+105 = NETE_LFNOVALUE, "Lokalisierungs-Datei-Eintrag ohne Fehlermeldung gefunden"
+
+106 = NETE_BADERRID, "Lokalisierungs-Datei-Eintrag mit ungœltiger Fehlernummer gefunden"
+
+107 = NETE_INTLNXTENT, "Aufruf von intl_nextentry fehlgeschlagen"
+
+108 = NETE_NULLINTLSIZE, "Ein Zeiger mit der GrŒﬁe NULL kann nicht an net_intl_size œbergeben werden"
+
+109 = NETE_NULLINTLBUF, "Ein Pufferzeiger mit der GrŒﬁe NULL kann nicht an net_intl_errstr œbergeben werden"
+
+110 = NETE_BADMSECS, "Der Wert des Parameters fœr Millisekunden ist ungœltig"
+
+111 = NETE_NOLISTENERS, "net_accept kann nicht aufgerufen werden, wenn keine empfangsbereiten Endpunkte vorhanden sind"
+
+112 = NETE_POLLNOTSUP, "Die Funktion net_poll_external() wird nicht unterstœtzt"
+
+113 = NETE_NONEQUEUED, "Kann nicht auf Anforderungsabschluﬁ warten, wenn keine Anforderungen in der Warteschlange stehen"
+
+114 = NETE_BADSIGNAL, "Das angeforderte Signal wird von Net-Library nicht verwendet"
+
+115 = NETE_DICTINUSE, "Es wurde versucht, auf das AdreﬁwŒrterbuch mit mehr als einer Aufgabe zuzugreifen"
+
+116 = NETE_NULLEXPFLG, "Ein abgesetzter Flag-Zeiger mit der GrŒﬁe NULL darf nicht an net_read œbergeben werden"
+
+117 = NETE_NODRVCLASS, "Fœr die angeforderte Protokollklasse ist kein Treiber verfœgbar"
+
+118 = NETE_BADSRCHATTR, "Die Attribut-Suchliste enthÃlt einen ungœltigen Eintrag"
+	
+119 = NETE_BADDICTID, "Ungœltige WŒrterbuchkennung an net_dict_open œbergeben"
+
+120 = NETE_INVALIDVERSION, "Ungœltige Net-Library-Version"
+
+121 = NETE_NULLVALUE, "Wertargument kann fœr diese Option nicht NULL sein"
+
+122 = NETE_NULLARG, "Ungœltiges NULL-Argument fœr Routine"
+
+123 = NETE_BUFTOOSMALL, "Puffer ist zu klein"
+
+124 = NETE_BADCMD, "Ungœltiges Befehlsargument"
+
+125 = NETE_NULLBUF, "Null-Puffer-Argument"
+
+126 = NETE_NULLPROPINFO, "Null-propinfo-Argument"
+
+127 = NETE_SETNOTSUPPORTED, "Einrichten von Net-Lib-Eigenschaften wird nicht unterstœtzt"
+
+128 = NETE_INTLHOME, "Aufruf von intl_home fehlgeschlagen"
+
+129 = NETE_INVOSERR, "Keine gœltige BS-Fehlernummer"
+
+130 = NETE_RLIMITERR, "Kann maximale Anzahl offener Dateien nicht einlesen/einstellen"
+
+131 = NETE_GETEF, "Konnte Ereignis-Flag nicht erstellen"
+
+132 = NETE_FREEEF, "Konnte Ereignis-Flag nicht freigeben"
+
+133 = NETE_INSQTI, "Element konnte nicht in verriegelte Warteschlange eingefœgt werden"
+
+134 = NETE_REMQHI, "Element konnte nicht aus verriegelter Warteschlange entfernt werden"
+
+135 = NETE_SETIMR, "Versuch, Zeitgeber einzustellen, ist fehlgeschlagen"
+
+136 = NETE_CANTIM, "Versuch, Zeitgeber abzubrechen, ist fehlgeschlagen"
+
+137 = NETE_WAITFR, "Versuch, auf Ereignis zu warten, ist fehlgeschlagen"
+
+138 = NETE_CLREF, "Konnte Ereignis-Flag nicht lŒschen"
+
+139 = NETE_SETEF, "Konnte Ereignis-Flag nicht einstellen"
+
+140 = NETE_DRVATTNHDLR, "Versuch, das Attention-Steuerprogramm fœr den Protokolltreiber zu installieren, ist fehlgeschlagen"
+
+141 = NETE_QUEOPEN, "Versuch, die Thread-Kommunikations-Warteschlange zu Œffnen, ist fehlgeschlagen"
+
+142 = NETE_QUEREAD, "Versuch, aus der Thread-Kommunikations-Warteschlange zu lesen, ist fehlgeschlagen"
+
+143 = NETE_QUEWRITE, "Versuch, in die Thread-Kommunikations-Warteschlange zu schreiben, ist fehlgeschlagen"
+
+144 = NETE_QUECLOSE, "Versuch, die Thread-Kommunikations-Warteschlange zu schlieﬁen, ist fehlgeschlagen"
+
+145 = NETE_CREATETHREAD, "Versuch, Thread zu vervielfÃltigen, ist fehlgeschlagen"
+
+146 = NETE_EVENTCREATE, "Versuch, Ereignis-Objekt zu erstellen, ist fehlgeschlagen"
+
+147 = NETE_EVENTPOST, "Versuch, ein Ereignis-Objekt zuzuordnen, ist fehlgeschlagen"
+
+148 = NETE_EVENTCLEAR, "Versuch, Ereignis-Objekt zu lŒschen, ist fehlgeschlagen"
+
+149 = NETE_EVENTWAIT, "Versuch, auf ein Ereignis-Objekt zu warten, ist fehlgeschlagen"
+
+150 = NETE_CREATEMTX, "Versuch, einen Mutex-Semaphor zu erstellen, ist fehlgeschlagen"
+
+151 = NETE_REQUESTMTX, "Versuch, exklusive Eigentumsrechte fœr einen Mutex-Semaphor zu erhalten, ist fehlgeschlagen"
+
+152 = NETE_RELEASEMTX, "Versuch, einen Mutex-Semaphor freizugeben, ist fehlgeschlagen"
+
+153 = NETE_DESTROYMTX, "Versuch, einen Mutex-Semaphor zu zerstŒren, ist fehlgeschlagen"
+
+154 = NETE_THRDSPND, "Versuch, einen Thread zeitweilig zu unterbrechen, ist fehlgeschlagen"
+
+155 = NETE_THRDRESUME, "Versuch, Thread wiederaufzunehmen, ist fehlgeschlagen"
+
+156 = NETE_THRDKILL, "Versuch, Thread zu beenden, ist fehlgeschlagen"
+
+157 = NETE_SETSIGHDLR, "Kann entsprechendes Signal-Steuerprogramm nicht einrichten"
+
+158 = NETE_SELECTFAIL, "Aufruf von select() fehlgeschlagen"
+
+159 = NETE_FDOFLOW, "Keine weiteren Datei-Deskriptoren verfœgbar. Listener wird heruntergefahren"
+
+160 = NETE_NOPOLLSTRATS, "Keine weiteren Polling-Strategie-Strukturen verfœgbar"
+
+161 = NETE_NOSIGNALS, "Net-Library kann keinen Protokolltreiber unterstœtzen, der Signale erzeugt"
+
+162 = NETE_UNKNOWN, "Unbekannter Net-Library-Fehler"
+
+164 = NETE_OODDRIVER, "Version des Treibers ist Ãlter als die unterstœtzte Version"
+
+165 = NETE_OSGENERIC, "Betriebssystemfehler - %1!"
+
+166 = NETE_DRVLOCFAIL, "Treiber fœr Lokalisierungsdatei konnte nicht geŒffnet werden."
+
+167 = NETE_OSOBJECT, "Betriebssystem-Objekt konnte nicht angelegt werden."
+
+168 = NET_QPRFSTR, "Fehler beim Lesen der Adreﬁdatei."
+
+; end of tcllib error strings
+;
+

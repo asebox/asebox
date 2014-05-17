@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > Compress </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL >  <![CDATA[
+select
+  InstanceID,
+  DBID,
+  ObjectID,
+  PartitionID,
+  CompRowInserted,
+  CompRowUpdated,
+  CompRowForward,
+  CompRowScan,
+  RowDecompressed,
+  RowPageDecompressed,
+  ColDecompressed,
+  RowCompNoneed,
+  PageCompNoneed,
+  PagesCompressed,
+  AvgBytesSavedPageLevel,
+  TableName
+from master.dbo.monTableCompression
+]]>
+  </SQL>
+  <key1 >DBID</key1>
+  <key2 >ObjectID</key2>
+  <key3 >PartitionID</key3>
+  <filterCol > </filterCol>
+  <delay > 300 </delay>
+  <colsCalcDiff >                 
+     <COL> CompRowInserted                 </COL>
+     <COL> CompRowUpdated                 </COL>
+     <COL> CompRowForward                 </COL>
+     <COL> CompRowScan                 </COL>
+     <COL> RowDecompressed                 </COL>
+     <COL> RowPageDecompressed                 </COL>
+     <COL> ColDecompressed                 </COL>
+     <COL> RowCompNoneed                 </COL>
+     <COL> PageCompNoneed                 </COL>
+     <COL> PagesCompressed                 </COL>
+  </colsCalcDiff>
+  <colsAlias>
+     <col nameInSQL="CompRowInserted"        nameInTable="delta_CompRowInserted"      />
+     <col nameInSQL="CompRowUpdated"         nameInTable="delta_CompRowUpdated"       />
+     <col nameInSQL="CompRowForward"         nameInTable="delta_CompRowForward"       />
+     <col nameInSQL="CompRowScan"            nameInTable="delta_CompRowScan"          />
+     <col nameInSQL="RowDecompressed"        nameInTable="delta_RowDecompressed"      />
+     <col nameInSQL="RowPageDecompressed"    nameInTable="delta_RowPageDecompressed"  />
+     <col nameInSQL="ColDecompressed"        nameInTable="delta_ColDecompressed"      />
+     <col nameInSQL="RowCompNoneed"          nameInTable="delta_RowCompNoneed"        />
+     <col nameInSQL="PageCompNoneed"         nameInTable="delta_PageCompNoneed"       />
+     <col nameInSQL="PagesCompressed"        nameInTable="delta_PagesCompressed"      />
+  </colsAlias>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_Compress (
+     Timestamp                 datetime not null,
+     InstanceID                int    not null,
+     DBID                      int    not null,
+     ObjectID                  int    not null,
+     PartitionID               int    not null,                
+     delta_CompRowInserted     bigint not null,
+     delta_CompRowUpdated      bigint not null,  
+     delta_CompRowForward      bigint not null,
+     delta_CompRowScan         bigint not null,     
+     delta_RowDecompressed     bigint not null,
+     delta_RowPageDecompressed bigint not null,
+     delta_ColDecompressed     bigint not null,
+     delta_RowCompNoneed       int    not null,
+     delta_PageCompNoneed      bigint not null,
+     delta_PagesCompressed     bigint not null,
+     AvgBytesSavedPageLevel    bigint not null,
+     TableName                 varchar(255) null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_Compress (Timestamp, DBID, ObjectID, PartitionID)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_Compress" >
+  delete ?SERVERNAME?_Compress where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+</MetricDescriptor>

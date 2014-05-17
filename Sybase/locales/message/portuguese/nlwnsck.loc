@@ -1,0 +1,70 @@
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=portuguese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "Impossível desconectar o ponto final - O erro é %1!"
+
+2 = IPDE_ACCEPT, "Erro durante a aceitação da nova conexão - O erro é %1!"
+
+3 = IPDE_EPCLOSE, "Impossível fechar o ponto final - O erro é %1!"
+
+4 = IPDE_PARSE, "A informação da conexão tem sintaxe inválida "
+
+5 = IPDE_EPCONNECT, "Impossível conexão com o servidor - O erro é %1!"
+
+6 = IPDE_EPMODE, "Falha na alteração do modo do pipe - O erro é %1!"
+
+7 = IPDE_EVENTOBJ, "Falha na criação de um objeto de evento - O erro é %1!"
+
+8 = IPDE_NPCREATE, "Falha na criação de um pipe nomeado - O erro é %1!"
+
+9 = IPDE_READ, "Falha na leitura do pipe nomeado - O erro é %1!"
+
+10 = IPDE_WRITE, "Falha na escrita do pipe nomeado - O erro é %1!"
+
+11 = IPDE_READOOB, "Erro durante a leitura de dados OOB - O erro é %1!"
+
+12 = IPDE_SOCKET, "Erro na criação de um soquete - O erro é %1!"
+
+13 = IPDE_HOSTNAME, "Erro na resolução do nome do host - O erro é %1!"
+
+14 = IPDE_EPBIND, "Erro na ligação a endereço local - O erro é %1!"
+
+15 = IPDE_EPLISTEN, "Erro na criação de um listening point - O erro é %1! "
+
+16 = IPDE_DRVINIT, "Erro na inicialização do driver - O erro é %1!"
+
+17 = IPDE_DRVINIT, "Erro na obtenção de uma opção do soquete - O erro é %1!"
+
+18 = IPDE_DRVINIT, "Erro na definição de uma opção do soquete - O erro é %1!"
+
+
+; end of insock error strings
+;
+

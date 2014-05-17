@@ -1,0 +1,364 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) tcllib.loc 1.3 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=french
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "Impossible de d‚terminer la quantit‚ de m‚moire n‚cessaire au gestionnaire de protocole"
+
+2 = NETE_NULLOPT, "Passage d'une pointeur d'options NULL … une routine Net-Library non admis"
+
+3 = NETE_UNKWOPT, "L'option Net-Library demand‚e est inconnue"
+
+4 = NETE_UNKWINFCDE, "Le code d'informations d'adresses demand‚ est inconnu"
+
+5 = NETE_BOOLREP, "La valeur de l'option doit ˆtre NET_TRUE ou NET_FALSE"
+
+6 = NETE_NULLNETBUF, "Passage d'un pointeur de tampon NULL … net_init() non admis"
+
+7 = NETE_NOTSUPPORTED, "Fonction non support‚e"
+
+8 = NETE_NULLHDLR, "Passage d'un pointeur de tableau NET_POLL NULL non admis"
+
+9 = NETE_BADENGINE, "Identificateur de machine incorrect"
+
+10 = NETE_ALREADYINIT, "Le processus en cours a d‚j… ‚t‚ appel‚ net_init()"
+
+11 = NETE_DICTNOTFOUND, "Dictionnaire d'adresses introuvable"
+
+12 = NETE_SRVNAMENOTFND, "Attribut de nom de serveur sp‚cifi‚ introuvable"
+
+13 = NETE_NODICTS, "Impossible de trouver une structure de dictionnaire d'adresses disponible"
+
+14 = NETE_DRVINIT, "Erreur lors de l'initialisation du gestionnaire de protocole."
+
+15 = NETE_NODRIVERS, "Impossible de trouver une structure de gestionnaire de protocole disponible"
+
+16 = NETE_LFNOSECTION , "Impossible de trouver une section d'erreurs Net-Library dans le fichier de localisation"
+
+17 = NETE_DICTSYNTAX, "Erreur de syntaxe dans le dictionnaire d'adresses"
+
+18 = NETE_ADRTYPNOTFND, "Impossible de trouver l'attribut de type d'adresse indiqu‚e"
+
+19 = NETE_DICTCLOSE, "Erreur lors de la fermeture du dictionnaire d'adresses"
+
+20 = NETE_NOEPS, "Impossible de trouver une structure endpoint disponible"
+
+21 = NETE_EPINUSE, "Tentative d'utilisation d'un endpoint d‚j… en cours d'utilisation"
+
+22 = NETE_DRVPROPERTY, "Echec de l'appel au gestionnaire de protocole pour d‚terminer les propri‚t‚s"
+
+23 = NETE_DRVLISTEN, "Echec de l'appel au gestionnaire de protocole Net-Lib pour enregistrer un r‚cepteur"
+
+24 = NETE_DRVCONNECT, "Echec de l'appel au gestionnaire de protocole Net-Lib pour connecter deux endpoints"
+
+25 = NETE_DRVACCEPT, "Echec de l'appel au gestionnaire de protocole pour accepter une demande de connexion d'entr‚e"
+
+26 = NETE_BADIOSTATE, "Endpoint a un ‚tat d'E/S incorrect"
+
+27 = NETE_DRVNOTAVAIL, "Le gestionaire de protocole Net-Lib indiqu‚ n'est pas disponible"
+
+28 = NETE_BADPROPERTY, "Argument de type de propri‚t‚ incorrect"
+
+29 = NETE_DISCONNECT, "Op‚ration Net-Library interrompue suite … une d‚connexion"
+
+30 = NETE_DRVEXIT, "Echec de la routine de sortie du gestionnaire de protocole Net-Lib"
+
+31 = NETE_SUBACCEPT, "Echec de la tentative d'acceptation pour un des r‚cepteurs"
+
+32 = NETE_DRVREAD, "Echec de l'appel au gestionnaire de protocole Net-Lib pour lire les donn‚es"
+
+33 = NETE_RDDATLEN, "Taille des donn‚es … lire sup‚rieure … celle du tampon de lecture"
+
+34 = NETE_DRVREADOOB, "Appel au gestionnaire de protocole Net-Lib pour lire les donn‚es urgentes"
+
+35 = NETE_EXPNOTSUPPORT, "Donn‚es exp‚di‚es non support‚es par ce gestionnaire de protocole Net-Lib"
+
+36 = NETE_DRVWRITE, "Echec de l'appel au gestionnaire de protocole Net-Lib pour ‚crire des donn‚es"
+
+37 = NETE_NULLADDR, "Passage d'un pointeur net_addr NULL non admis"
+
+38 = NETE_NULLDICT, "Passage d'un pointeur de dictionnaire NULL non admis"
+
+39 = NETE_NULLSTATE, "Passage d'un pointeur net_state NULL non admis"
+
+40 = NETE_NULLRETRES, "Passage d'un pointeur return_reason NULL non admis"
+
+41 = NETE_NULLEP, "Passage d'un pointeur endpoint NULL non admis"
+
+42 = NETE_NULLCBACK, "Passage d'un pointeur de routine d'action NULL non admis"
+
+43 = NETE_NULLDICTNAME, "Passage d'un pointeur d'id de dictionnaire NULL non admis"
+
+44 = NETE_NULLEXPFLAG, "Passage d'un pointeur de drapeau de donn‚es exp‚di‚es NULL non admis"
+
+45 = NETE_NULLDICTPTR, "Passage d'un pointeur de gestion de dictionnaire NULL non admis"
+
+46 = NETE_NULLNEWEP, "Passage d'un pointeur de gestion d'endpoint NULL non admis"
+
+47 = NETE_NULLATTRLST, "Passage d'un pointeur d'informations d'adresses NULL non admis"
+
+48 = NETE_NULLADDRPTR, "Passage d'un pointeur de gestion de net_addr NULL non admis"
+
+49 = NETE_NULLLASTENTRY, "Passage d'un pointeur de derniŠre entr‚e NULL non admis"
+
+50 = NETE_NULLRDDATA, "Passage d'un pointeur de lecture NULL non admis"
+
+51 = NETE_NOADDRS, "Impossible de trouver une structure d'adresses disponible"
+
+52 = NETE_NULLBYTSRD, "Passage d'un pointeur bytes_read NULL non admis"
+
+53 = NETE_EPCLOSING, "L'endpoint sp‚cifi‚ est en cours de fermeture"
+
+54 = NETE_NULLWRDATA, "Passage d'un tampon d'‚criture NULL non admis"
+
+55 = NETE_CANCELLED, "L'op‚ration demand‚e a ‚t‚ annul‚e en raison d'autres ‚v‚nements."
+
+56 = NETE_NULLINTL, "Passage d'une structure NET_INTL NULL non admis"
+
+57 = NETE_NULLUSERPTR, "Passage d'un pointeur utilisateur NULL non admis"
+
+58 = NETE_BADDICT, "Tentative d'utilisation d'un gestionnaire de dictionnaires incorrect"
+
+59 = NETE_BADADDR, "Tentative d'utilisation d'un gestionnaire d'adresses incorrect"
+
+60 = NETE_BADEP, "Tentative d'utilisation d'un gestionnaire d'endpoint incorrect"
+
+61 = NETE_DRVCLOSE, "Echec de l'appel au gestionnaire de protocole Net-Lib pour fermer un endpoint"
+
+62 = NETE_VERSION, "Gestionnaire de protocole incompatible avec Net-Lib courant -- Probablement une version ant‚rieure de Net-Library"
+
+63 = NETE_NULLSUPPORT, "Passage d'un pointeur NULL pour le paramŠtre 'support‚' … net_capability() non admis"
+
+64 = NETE_BADPROCMODE, "Mode de traitement incorrect"
+
+65 = NETE_FUNCCODE, "Code de fonction transmis … net_report() incorrect"
+
+66 = NETE_DRVINUSE, "Impossible de d‚charger le gestionnaire -- Il est toujours utilis‚"
+
+67 = NETE_NCONNECTED, "Tentative d'E/S sur un endpoint non connect‚"
+
+68 = NETE_NOMULTIRW, "Impossible d'effectuer plus d'une lecture"
+
+69 = NETE_NULLPREVMODE, "Pointeur mode previous NULL non admis"
+
+70 = NETE_NULLREPORT, "Impossible d'appeler net_report() si le rapport n'a ‚t‚ requis par net_opt_report()"
+
+71 = NETE_LFILENAME, "Nom de fichier de localisation non sp‚cifi‚ dans l'appel … net_intl_errstr()"
+
+72 = NETE_INTLOPEN, "Echec de l'ouverture du fichier de localisation … l'aide de intl_open"
+
+73 = NETE_UP1ENIGNE, "La version monoprocesseur de Net-Lib n'est autoris‚e que pour 1 machine"
+
+74 = NETE_NULLCBPARM, "Passage d'un paramŠtre d'action NULL … la routine Net-Library non admis"
+
+75 = NETE_NULLINFOLEN, "Passage d'un pointeur de longueur d'informations NULL … net_address_info() non admis"
+
+76 = NETE_UNKWNMODE, "Mode d'action requis non reconnu"
+
+77 = NETE_BADEPNUM, "Num‚ro endpoint requis incorrect"
+
+78 = NETE_NULLENGPTR, "Passage d'un pointeur de machine NULL … net_engine_init() non admis"
+
+79 = NETE_NULLENGINE, "Passage d'un pointeur de machine NULL … une routine Net-Library non admis"
+
+80 = NETE_NOENGS, "Impossible de trouver une structure de machine disponible"
+
+81 = NETE_NOREQUESTS, "Impossible de trouver une structure de requˆte disponible"
+
+82 = NETE_BADMONFLAG, "Masque de drapeaux de gestionnaire requis incorrect"
+
+83 = NETE_EPINCLOSE, "endponit demand‚ en cours de fermeture"
+
+84 = NETE_BADMODE, "Le mode requis n'est pas support‚"
+
+85 = NETE_DRVLOAD, "Echec de la tentative de chargement du gestionnaire de protocole"
+
+86 = NETE_DRVUNLOAD, "Echec de la tentative de d‚chargement du gestionnaire de protocole"
+
+87 = NETE_MEMPOLICY, "Politique de m‚moire requise incorrecte"
+
+88 = NETE_MEMREALLOC, "Echec de la tentative de r‚allocation de m‚moire"
+
+89 = NETE_MEMALLOC, "Echec de la tentative d'allocation de m‚moire"
+
+90 = NETE_NULLSIZE, "Passage d'un pointeur de taille NULL … net_initsize() non admis"
+
+91 = NETE_NULLSTATEPTR, "Passage d'un pointeur NET_STATE NULL … net_init() non admis"
+
+92 = NETE_NULLSPNLCKCNTPTR, "Passage d'un pointeur de comptage spinlock NULL … net_spinlocks() non admis"
+
+93 = NETE_ENGACTIVE, "L'op‚ration requise ne peut pas ˆtre effectu‚e tant que des machines sont actives"
+
+94 = NETE_UNKWIDTYPE, "Type d'id de dictionnaire d'adresses incorrect"
+
+95 = NETE_SECNOTFOUND, "Section de fichier config demand‚e introuvable"
+
+96 = NETE_DRVNOTLOADED, "Le gestionnaire de r‚seau correspondant au protocole de r‚seau sp‚cifi‚ n'est pas charg‚"
+
+97 = NETE_NODRVERRSTR, "Aucune chaŒne d'erreur de gestionnaire de protocole n'est disponible pour l'erreur courante"
+
+98 = NETE_SHRTINFOBUF, "Tampon d'informations d'adresses insuffisant"
+
+99 = NETE_NULLNFDS, "Passage d'un pointeur nfds NULL … net_poll_external() non admis"
+
+100 = NETE_BADNFDS, "Nombre de descripteurs de fichiers requis incorrect"
+
+101 = NETE_NULLRDBUF, "Passage d'un tampon de lecture NULL … Net-Library non admis"
+
+102 = NETE_NULLWRTBUF, "Passage d'un tampon d'‚criture NULL … Net-Library non admis"
+
+103 = NETE_INTLNXTSEC, "Echec de l'appel … intl_nextsection"
+
+104 = NETE_INTLNXTVAL, "Echec de l'appel … intl_nextvalue"
+
+105 = NETE_LFNOVALUE, "Entr‚e de fichier de localisation trouv‚e sans message d'erreur"
+
+106 = NETE_BADERRID, "Entr‚e de fichier de localisation trouv‚e avec un num‚ro d'erreur incorrect"
+
+107 = NETE_INTLNXTENT, "Echec de l'appel … intl_nextentry"
+
+108 = NETE_NULLINTLSIZE, "Passage d'un pointeur de taille NULL … net_intl_size non admis"
+
+109 = NETE_NULLINTLBUF, "Passage d'un pointeur de tampon NULL … net_intl_errstr non admis"
+
+110 = NETE_BADMSECS, "La valeur du paramŠtre milliseconds est incorrecte"
+
+111 = NETE_NOLISTENERS, "Appel … net_accept non admis en l'absence d'endpoints r‚cepteurs"
+
+112 = NETE_POLLNOTSUP, "Fonction net_poll_external() non support‚e"
+
+113 = NETE_NONEQUEUED, "Attente de la fin d'une requˆte impossible lorsqu'il n'y en a aucune dans la file d'attente"
+
+114 = NETE_BADSIGNAL, "Le signal requis n'est pas utilis‚ par Net-Library"
+
+115 = NETE_DICTINUSE, "Tentative d'accŠs au dictionnaire d'adresses avec plusieurs tƒches"
+
+116 = NETE_NULLEXPFLG, "Passage d'un pointeur de drapeau exp‚di‚ NULL … net_read non admis"
+
+117 = NETE_NODRVCLASS, "Aucun gestionnaire de la classe de protocole requise n'est disponible"
+
+118 = NETE_BADSRCHATTR, "La liste de recherche d'attributs contient une entr‚e incorrecte"
+	
+119 = NETE_BADDICTID, "L'id de dictionnaire envoy‚ … net_dict_open est incorrect"
+
+120 = NETE_INVALIDVERSION, "Version Net-Library incorrecte"
+
+121 = NETE_NULLVALUE, "L'argument de valeur ne peut pas ˆtre NULL pour cette option"
+
+122 = NETE_NULLARG, "Passage d'un argument NULL … la routine incorrect"
+
+123 = NETE_BUFTOOSMALL, "Tampon trop petit"
+
+124 = NETE_BADCMD, "Argument de commande incorrect"
+
+125 = NETE_NULLBUF, "Argument de tampon nul"
+
+126 = NETE_NULLPROPINFO, "Argument d'informations sur les propri‚t‚s nul"
+
+127 = NETE_SETNOTSUPPORTED, "D‚finition des propri‚t‚s Net-Lib non support‚e"
+
+128 = NETE_INTLHOME, "Echec de l'appel … intl_home"
+
+129 = NETE_INVOSERR, "Num‚ro d'erreur OS incorrect"
+
+130 = NETE_RLIMITERR, "Impossible d'obtenir/de d‚finir le nombre maximum de fichiers ouverts"
+
+131 = NETE_GETEF, "Impossible de cr‚er un drapeau d'‚v‚nement"
+
+132 = NETE_FREEEF, "Impossible de lib‚rer un drapeau d'‚v‚nement"
+
+133 = NETE_INSQTI, "Echec de la tentative d'insertion d'un ‚l‚ment dans la file d'attente verrouill‚e"
+
+134 = NETE_REMQHI, "Echec de la tentative de suppression d'un ‚l‚ment dans la file d'attente verrouill‚e"
+
+135 = NETE_SETIMR, "Echec de la tentative de d‚finition d'une horloge"
+
+136 = NETE_CANTIM, "Echec de la tentative d'annulation de l'horloge"
+
+137 = NETE_WAITFR, "Echec de la tentative d'attente d'un ‚v‚nement"
+
+138 = NETE_CLREF, "Impossible d'effacer le drapeau d'‚v‚nement"
+
+139 = NETE_SETEF, "Impossible de configurer le drapeau d'‚v‚nement"
+
+140 = NETE_DRVATTNHDLR, "Echec de la tentative d'installation d'une routine de contr“le du gestionnaire de protocole"
+
+141 = NETE_QUEOPEN, "Echec de la tentative d'ouverture de la file de communication"
+
+142 = NETE_QUEREAD, "Echec de la tentative de lecture de la file de communication"
+
+143 = NETE_QUEWRITE, "Echec de la tentative d'‚criture dans la file de communication"
+
+144 = NETE_QUECLOSE, "Echec de la tentative de fermeture de la file de communication"
+
+145 = NETE_CREATETHREAD, "Echec de la tentative de g‚n‚ration de tƒche"
+
+146 = NETE_EVENTCREATE, "Echec de la tentative de cr‚ation d'un objet ‚v‚nement"
+
+147 = NETE_EVENTPOST, "Echec de la tentative d'enregistrement de l'objet ‚v‚nement"
+
+148 = NETE_EVENTCLEAR, "Echec de la tentative d'effacement de l'objet ‚v‚nement"
+
+149 = NETE_EVENTWAIT, "Echec de la tentative d'attente de l'objet ‚v‚nement"
+
+150 = NETE_CREATEMTX, "Echec de la tentative de cr‚ation d'un s‚maphore mutex"
+
+151 = NETE_REQUESTMTX, "Echec de la tentative d'obtention de la propri‚t‚ exclusive d'un s‚maphore mutex"
+
+152 = NETE_RELEASEMTX, "Echec de la tentative de lib‚ration d'un s‚maphore mutex"
+
+153 = NETE_DESTROYMTX, "Echec de la tentative de destruction d'un s‚mahore mutex"
+
+154 = NETE_THRDSPND, "Echec de la tentative de suspension de tƒche"
+
+155 = NETE_THRDRESUME, "Echec de la tentative de reprise de tƒche"
+
+156 = NETE_THRDKILL, "Echec de la tentative de destruction de tƒche"
+
+157 = NETE_SETSIGHDLR, "Impossible de d‚finir le gestionnaire de signaux appropri‚"
+
+158 = NETE_SELECTFAIL, "Echec de l'appel … select()"
+
+159 = NETE_FDOFLOW, "Aucun descripteur de fichier n'est plus disponible, le r‚cepteur ayant ‚t‚ coup‚"
+
+160 = NETE_NOPOLLSTRATS, "Plus aucune structure de strat‚gie d'interrogation n'est disponible"
+
+161 = NETE_NOSIGNALS, "Net-Library ne peut pas supporter un gestionnaire de protocole qui g‚nŠre des signaux"
+
+162 = NETE_UNKNOWN, "Erreur Net-Library inconnue"
+
+164 = NETE_OODDRIVER, "La version du gestionnaire est ant‚rieure … celles support‚es"
+
+165 = NETE_OSGENERIC, "Erreur systŠme d'exploitation - %1!"
+
+166 = NETE_DRVLOCFAIL, "Impossible d'ouvrir le fichier de localisation du gestionnaire"
+
+167 = NETE_OSOBJECT, "Impossible de cr‚er un objet OS"
+
+168 = NET_QPRFSTR, "Erreur lors de la lecture du fichier d'adresses"
+
+; end of tcllib error strings
+;

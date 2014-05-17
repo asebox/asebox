@@ -1,0 +1,35 @@
+; comment character is semicolon.
+; "msrv.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) msrv.hdr 101.1 1/21/94 19:19:48
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+1		= "Server '%1!' is not a Sybase Monitor Server.",	"%s"
+10	= "update Monitor Server entry in interfaces file",	""
+11	= "update the Monitor Server runserver file",		""
+12	= "boot the Monitor Server",				""
+13	= "start the Monitor Server",				""
+450	= "Execute the Monitor Server configuration now? ",  ""
+451		= "There is no interfaces file entry for '%1!'.  Please create an interfaces entry for '%2!' before attempting to execute the configuration.",        "%s %s"
+500	= "Monitor server '%1!' has been configured. The new configuration will become effective when Monitor server is started next time. ",	"%s"
+501 	= "update Monitor Server entry in registry",	"" 	
+502	= "could not create Service Control Manager entry for Monitor Server '%1!'. Operating system returned error: '%2!'",	"%s%s"
+
+; End of section.

@@ -1,0 +1,334 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=portuguese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "Erro de Nível no Driver de Segurança."
+
+2 = SCLE_INITED, "SCL já está inicializado."
+
+3 = SCLE_MEMALLOC, "Falha na tentativa de alocar memória."
+
+4 = SCLE_MUTXALLOC, "Falha na tentativa de alocar mutex."
+
+5 = SCLE_RMAN, "Erro no API RMAN."
+
+6 = SCLE_LMAN, "Erro no API LMAN."
+
+7 = SCLE_VERSION, "Versão inválida de SCL-Library."
+
+8 = SCLE_PROPCMD, "Especificado comando inválido de propriedade."
+
+9 = SCLE_PROPERTY, "Foi especificada uma propriedade inválida."
+
+10 = SCLE_PROP_RO, "Propriedade somente de leitura."
+
+11 = SCLE_PROP_OF, "Estouro do Buffer Propriedades."
+
+12 = SCLE_OPEN, "Impossível abrir o driver de segurança."
+
+13 = SCLE_LOAD, "Impossível carregar o driver de segurança."
+
+14 = SCLE_INTLHOME, "Impossível determinar o diretório principal SYBASE."
+
+15 = SCLE_INTLOPEN, "Impossível abrir o arquivo de configuração."
+
+16 = SCLE_INTLNOENT, "Impossível localizar a entrada SCL no arquivo de configuração."
+
+18 = SCLE_DRVLOAD, "Falha na carga do driver de segurança especificado."
+
+19 = SCLE_SESSBOUND, "A sessão está ligada no momento."
+
+20 = SCLE_SESSUBOUND, "A sessão está inativa no momento."
+
+21 = SCLE_CREDACT, "A credencial está sendo usada no momento."
+
+22 = SCLE_CRED_NA, "A credencial não está ATIVA."
+
+23 = SCLE_UNSUPPORT, "O comando não é suportado."
+
+24 = SCLE_MUTEXLOCK, "Falha na chamada de lock do mutex."
+
+25 = SCLE_MECHNOTFND, "Mecanismo de segurança especificado não encontrado."
+
+26 = SCLE_CFGERR, "Erro no arquivo de configuração."
+
+27 = SCLE_CREDUSED, "O ponteiro da credencial não foi eliminado."
+
+28 = SCLE_DRIVUSED, "O driver não foi fechado."
+
+29 = SCLE_MECHUSED, "O ponteiro do mecanismo de segurança não foi eliminado."
+
+30 = SCLE_MECHOIDNOTFND, "Mecanismo de segurança OID não encontrado."
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "Falha de alocação de memória."
+
+2 = MSSPE_SRVNOTSUPP, "O serviço de segurança solicitado não é suportado."
+
+3 = MSSPE_PRINCIPAL, "Nome principal de segurança especificado é desconhecido ou não é o proprietário."
+
+4 = MSSPE_PROVIDER, "Provedor de segurança não encontrado ou falha na inicialização do provedor."
+
+5 = MSSPE_INITSTR, "String inválida de inicialização do driver."
+
+6 = MSSPE_PROPCMD, "Comando inválido de propriedade de segurança."
+
+7 = MSSPE_PROPNOTSUPP, "Nome inválido de propriedade de segurança."
+
+8 = MSSPE_CONTEXT, "Localizada estrutura inválida de contexto do driver."
+
+9 = MSSPE_OPNOTSUPP, "Ponto de entrada do driver não suportado."
+
+10 = MSSPE_PROPVALLEN, "Tamanho do buffer de valor da propriedade demasiadamente pequeno."
+
+11 = MSSPE_TOKEN, "Token de segurança inválido."
+
+12 = MSSPE_HANDLE, "Ponteiro de segurança inválido."
+
+13 = MSSPE_NAMETOOLONG, "Nome do mecanismo/principal/destino é longo demais."
+
+14 = MSSPE_PACKAGE, "O pacote de segurança especificado não é suportado."
+
+15 = MSSPE_INTERNAL, "Erro interno inesperado."
+
+16 = MSSPE_DENIED, "Solicitação de sessão de segurança negada."
+
+17 = MSSPE_RMTNAME, "Nome do destino de segurança não encontrado ou inválido."
+
+18 = MSSPE_PROVIDERERR, "Erro interno %1! no provedor de serviço de segurança."
+
+19 = MSSPE_MSGALTERED, "Mensagem de segurança alterada - falha na verificação da assinatura."
+
+20 = MSSPE_MSGSEQ, "Encontrada uma mensagem de fora-da-seq'ncia."
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "Falha de alocação de memória."
+
+2 = NDSE_SRVNOTSUPP, "O serviço de segurança solicitado não é suportado."
+
+3 = NDSE_PRINCIPAL, "Nome principal especificado inválido."
+
+4 = NDSE_PROVIDER, "Provedor de segurança NDS não encontrado ou falha na inicialização."
+
+5 = NDSE_INITSTR, "String de inicialização inválida."
+
+6 = NDSE_PROPCMD, "Comando inválido de propriedade de segurança."
+
+7 = NDSE_PROPNOTSUPP, "Nome inválido de propriedade de segurança."
+
+8 = NDSE_CONTEXT, "Especificada estrutura contextual de driver inválida."
+
+9 = NDSE_OPNOTSUPP, "Ponto de entrada do driver de segurança especificado não é suportado."
+
+10 = NDSE_PROPVALLEN, "O valor do buffer de propriedade é muito pequeno."
+
+11 = NDSE_DITBASE, "Base DIT especificada inválida."
+
+12 = NDSE_VERNOTSUPP, "Versão especificada não é suportada pelo driver."
+
+13 = NDSE_CREDS, "Credenciais ou tipo de utilização da credencial inválidas."
+
+14 = NDSE_INITDITBASE, "Base init DIT inválida."
+
+15 = NDSE_NAMETOOLONG, "Nome principal do NDS é longo demais."
+
+16 = NDSE_NWCALLSINIT, "Falha (%1!) no NetWare rotina NWCallsInit()."
+
+17 = NDSE_NWDSCCTX, "Falha (%1!) no NetWare rotina NWDSCreateContext()."
+
+18 = NDSE_INIT, "Falha (%1!) de init NDS."
+
+19 = NDSE_NDS, "Falha (%1!) na chamada a NDS."
+
+20 = NDSE_RMTNAME, "Nome de destino de segurança não encontrado ou inválido."
+
+21 = NDSE_CHANNELID, "Identificador de canal especificado não encontrado ou inválido."
+
+22 = NDSE_BIND, "Falha no vínculo com a sessão de segurança."
+
+23 = NDSE_PROVIDERVER, "Incompatibilidade da versão do provedor de segurança NDS."
+
+24 = NDSE_NWDSTREE, "Nome inválido da árvore do diretório especificada."
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "Falha de alocação de memória."
+
+2 = DCEE_SRVNOTSUPP, "O serviço de segurança solicitado não é suportado."
+
+3 = DCEE_PRINCIPAL, "Nome principal de segurança especificado é desconhecido ou não é o proprietário."
+
+4 = DCEE_BUFOF, "Erro de estouro no buffer de valor da propriedade."
+
+5 = DCEE_INITSTR, "String inválida de inicialização do driver."
+
+6 = DCEE_PROPCMD, "Comando inválido de propriedade de segurança."
+
+7 = DCEE_PROPNOTSUPP, "Nome inválido de propriedade de segurança."
+
+8 = DCEE_CONTEXT, "Localizada estrutura contextual de driver inválida (estado secundário %1!)."
+
+9 = DCEE_OPNOTSUPP, "Ponto de entrada do driver não suportado."
+
+10 = DCEE_PROPVALLEN, "Tamanho do buffer de valor da propriedade demasiadamente pequeno."
+
+11 = DCEE_TOKEN, "Token de segurança inválido (estado secundário %1!)."
+
+12 = DCEE_HANDLE, "Ponteiro de segurança inválido."
+
+13 = DCEE_NAMETOOLONG, "Nome do mecanismo/principal/destino é longo demais."
+
+14 = DCEE_CHKSIGN, "Falha de verificação de assinatura (estado secundário %1!)."
+
+15 = DCEE_INTERNAL, "Erro interno inesperado."
+
+16 = DCEE_DENIED, "Solicitação de sessão de segurança negada (estado secundário %1!)."
+
+17 = DCEE_RMTNAME, "Nome do destino da segurança não encontrado ou inválido (estado secundário %1!)."
+
+18 = DCEE_PROVIDERERR, "Erro interno %1! no provedor de serviço de segurança."
+
+19 = DCEE_MSGALTERED, "Mensagem de segurança alterada - falha na verificação da assinatura."
+
+20 = DCEE_MSGSEQ, "Encontrada mensagem de fora-da-seqüência (estado secundário %1!)."
+
+21 = DCEE_BADNAMETYPE, "Localizado tipo de nome de segurança inválido (estado secundário %1!)."
+
+22 = DCEE_BADCHANBIND, "Localizados vínculos de canal inválidos/incompatíveis (estado secundário %1!)."
+
+23 = DCEE_CREDEXPIRED, "Credenciais referenciadas expiraram (estado secundário %1!)."
+
+24 = DCEE_BADCRED, "Falha nas verificações de consistência realizadas na credencial (estado secundário %1!)."
+
+25 = DCEE_OLDTOKEN, "Token de segurança especificado é antigo demais para ser usado (estado secundário %1!)."
+
+26 = DCEE_DUPTOKEN, "Token de segurança especificado já está processado (estado secundário %1!)."
+
+27 = DCEE_CTXTEXPIRED, "O contexto da segurança expirou (estado secundário %1!)."
+
+28 = DCEE_BADNAME, "Um nome de seguraça inválido foi admitido (estado secundário %1!)."
+
+29 = DCEE_REGIDENTITY, "Falha na rotina de log da identidade do aceitador de contexto (estado secundário %1!)."
+
+30 = DCEE_BADMECH, "O mecanismo especificado não é suportado ou não está disponível (estado secundário %1!)."
+
+31 = DCEE_BADBUF, "Localizado buffer de segurança inválido (estado secundário %1!)."
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "Falha de alocação de memória."
+
+2 = KRBE_SRVNOTSUPP, "O serviço de segurança solicitado não é suportado."
+
+3 = KRBE_PRINCIPAL, "Nome principal de segurança especificado é desconhecido ou não é o proprietário."
+
+4 = KRBE_BUFOF, "Erro de estouro no buffer de valor da propriedade."
+
+5 = KRBE_INITSTR, "String inválida de inicialização do driver."
+
+6 = KRBE_PROPCMD, "Comando inválido de propriedade de segurança."
+
+7 = KRBE_PROPNOTSUPP, "Nome inválido de propriedade de segurança."
+
+8 = KRBE_CONTEXT, "Localizada estrutura contextual de driver inválida (estado secundário %1!)."
+
+9 = KRBE_OPNOTSUPP, "Ponto de entrada do driver não suportado."
+
+10 = KRBE_PROPVALLEN, "Tamanho do buffer de valor da propriedade demasiadamente pequeno."
+
+11 = KRBE_TOKEN, "Token de segurança inválido (estado secundário %1!)."
+
+12 = KRBE_HANDLE, "Ponteiro de segurança inválido."
+
+13 = KRBE_NAMETOOLONG, "Nome do mecanismo/principal/destino é longo demais."
+
+14 = KRBE_CHKSIGN, "Falha de verificação de assinatura (estado secundário %1!)."
+
+15 = KRBE_INTERNAL, "Erro interno inesperado."
+
+16 = KRBE_DENIED, "Solicitação de sessão de segurança negada (estado secundário %1!)."
+
+17 = KRBE_RMTNAME, "Nome do destino da segurança não encontrado ou inválido (estado secundário %1!)."
+
+18 = KRBE_PROVIDERERR, "Erro interno %1! no provedor de serviço de segurança."
+
+19 = KRBE_MSGALTERED, "Mensagem de segurança alterada - falha na verificação da assinatura."
+
+20 = KRBE_MSGSEQ, "Encontrada mensagem de fora-da-seqüência (estado secundário %1!)."
+
+21 = KRBE_BADNAMETYPE, "Localizado tipo de nome de segurança inválido (estado secundário %1!)."
+
+22 = KRBE_BADCHANBIND, "Localizados vínculos de canal inválidos/incompatíveis (estado secundário %1!)."
+
+23 = KRBE_CREDEXPIRED, "Credenciais referenciadas expiraram (estado secundário %1!)."
+
+24 = KRBE_BADCRED, "Falha nas verificações de consistência realizadas na credencial (estado secundário %1!)."
+
+25 = KRBE_OLDTOKEN, "Token de segurança especificado é antigo demais para ser usado (estado secundário %1!)."
+
+26 = KRBE_DUPTOKEN, "Token de segurança especificado já está processado (estado secundário %1!)."
+
+27 = KRBE_CTXTEXPIRED, "O contexto da segurança expirou (estado secundário %1!)."
+
+28 = KRBE_BADNAME, "Um nome de seguraça inválido foi admitido (estado secundário %1!)."
+
+29 = KRBE_REGIDENTITY, "Falha na rotina de log da identidade do aceitador de contexto (estado secundário %1!)."
+
+30 = KRBE_BADMECH, "O mecanismo especificado não é suportado ou não está disponível (estado secundário %1!)."
+
+31 = KRBE_BADBUF, "Localizado buffer de segurança inválido (estado secundário %1!)."
+
+; end of CyberSAFE Kerberos driver error strings
+;
+

@@ -1,0 +1,887 @@
+; comment character is semicolon.
+
+
+
+; "ctlib.loc" - Localization file for Client-Library.
+;
+; Sccsid @(#) ctlib.loc 1.6 11/5/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library Default Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdefaults]
+
+1 = ZZZZZ, "unable to get string due to lack of memory"
+
+2 = ZZZZZ, "unable to get layer message string"
+
+3 = ZZZZZ, "unable to get origin message string"
+
+4 = ZZZZZ, "error string not available"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctlayer]
+
+1 = ZZZZZ, "user api layer"
+
+2 = ZZZZZ, "user api layer"
+
+3 = ZZZZZ, "generic protocol layer"
+
+4 = ZZZZZ, "protocol specific layer"
+
+5 = ZZZZZ, "network packet layer"
+
+6 = ZZZZZ, "directory service layer"
+
+7 = ZZZZZ, "security service layer"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitions.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctorigin]
+
+1 = ZZZZZ, "external error"
+
+2 = ZZZZZ, "internal Client Library error"
+
+3 = ZZZZZ, "internal net library error"
+
+4 = ZZZZZ, "internal common library error"
+
+5 = ZZZZZ, "internal intl library error"
+
+6 = ZZZZZ, "internal async manager error"
+
+7 = ZZZZZ, "internal memory management error"
+
+8 = ZZZZZ, "internal directory control layer error"
+
+9 = ZZZZZ, "internal security control layer error"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctapierror]
+
+0 = ZZZZZ, "State validation succeeded."
+
+1 = ZZZZZ, "The information being retrieved will not fit in a buffer of %1! bytes."
+
+
+2 = ZZZZZ, "Memory allocation failure."
+
+3 = 22023, "The parameter %1! cannot be NULL."
+
+
+4 = 22023, "When %1! is NULL the %2! parameter must be 0."
+
+
+5 = 22023, "An illegal value of %1! given for parameter %2!."
+
+
+6 = 08000, "The maximum number of connections have already been opened."
+
+
+7 = ZZZZZ, "The server does not support the KEEP_CON capability."
+
+
+8 = 22023, "The %1! parameter must be NULL."
+
+
+9 = 22023, "The %1! parameter must be set to CS_UNUSED."
+
+
+10 = 22023, "Boolean values must be set to either CS_TRUE or CS_FALSE."
+
+
+11 = ZZZZZ,	"A CS_SIGNAL_CB cannot be installed because the platform does not support interrupt driven network I/O."
+
+
+12 = ZZZZZ,	"A CS_COMPLETION_CB cannot be installed because the platform does not provide the interrupt or polling capabilities needed."
+
+
+13 = ZZZZZ,	"This property cannot be set after a connection to a server has been established."
+
+
+14 = ZZZZZ,	"This property/capability cannot be set."
+
+
+15 = ZZZZZ,	"It is necessary to be connected to a server in order to get this property/capability."
+
+
+16 = ZZZZZ, "This routine cannot be called while results are pending for a command that has been sent to the server."
+
+
+17 = 36001, "The command structure already supports a declared cursor."
+
+
+18 = 24000,	"A cursor must be declared before this command type can be initialized."
+
+
+19 = ZZZZZ,	"This routine may be called only after a CS_SEND_DATA_CMD command has been initialized."
+
+
+20 = ZZZZZ,	"A command must be initialized before this routine can be called."
+
+
+21 = ZZZZZ,	"This routine cannot be used while a cursor is declared on the command structure."
+
+
+22 = 24000,	"A cursor has already been declared on this command structure."
+
+
+23 = 24000,	"The command cannot be initialized after the cursor has been opened."
+
+
+24 = 24000,	"The cursor on this command structure has already been opened."
+
+
+25 = 24000,	"Cursor updates and cursor deletes are not allowed after ct_fetch() returns CS_END_DATA."
+
+
+26 = ZZZZZ,	"A command has already been initialized on this command structure."
+
+
+27 = ZZZZZ,	"The initialized command cannot have parameters."
+
+
+28 = ZZZZZ,	"A command has already been initialized."
+
+
+29 = ZZZZZ,	"This type of command cannot be batched with the command already initialized on the command structure."
+
+
+30 = ZZZZZ, "A row must be fetched before this routine may be used."
+
+
+31 = 36001,	"A cursor rows command cannot be initialized after a cursor open command has been initialized."
+
+
+32 = 08000,	 "The connection's capabilities do not support this type of request."
+
+
+33 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_CURSOR_RESULT."
+
+
+34 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_CMD_DONE."
+
+
+35 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_COMPUTE_RESULT."
+
+
+36 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_COMPFMT_RESULT."
+
+
+37 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_MSG_RESULT."
+
+
+38 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_PARAM_RESULT."
+
+
+39 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_ROWFMT_RESULT."
+
+
+40 = ZZZZZ, "This routine cannot be called after ct_results() returns a result type of CS_CMD_FAIL."
+
+
+41 = ZZZZZ, "This routine cannot be called after ct_results() returns a result type of CS_CMD_SUCCEED."
+
+
+42 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_ROW_RESULT."
+
+
+43 = ZZZZZ,	"This routine cannot be called after ct_results() returns a result type of CS_STATUS_RESULT."
+
+
+44 = ZZZZZ,	"This routine cannot be called since an asynchronous operation is currently pending."
+
+
+45 = ZZZZZ,	"There is an internal error in the user api layer."
+
+
+46 = 22023,	"An illegal value of %1! was placed in the %2! field of the CS_DATAFMT structure."
+
+
+47 = ZZZZZ,	"When defining parameters, names must be supplied for either all of the parameters or none of the parameters."
+
+
+48 = ZZZZZ,	"The server does not support parameters of type %1!."
+
+
+49 = ZZZZZ,	"This routine cannot be called because another command structure has results pending."
+
+
+50 = ZZZZZ,	"The connection has been marked dead."
+
+
+51 = 22023,	"Exactly one of %1! and %2! must be non-NULL."
+
+
+52 = ZZZZZ,	"In-line error handling must be initialized with the CS_INIT operation before any other ct_diag() action may be taken."
+
+
+53 = ZZZZZ,	"There was not enough memory available to save messages. All previously stored messages have been cleared."
+
+
+54 = ZZZZZ,	"In-line error handling has already been initialized for this connection structure."
+
+
+55 = ZZZZZ,	"WARNING:  Existing error and message handlers have been removed."
+
+
+
+56 = ZZZZZ,	"The message limit cannot be set to a value less than the number of Client-Library or server messages which are currently saved."
+
+
+57 = ZZZZZ,	"A result of type %1! cannot be bound to a program variable of type %2!."
+
+
+58 = 22023,	"The format field of the CS_DATAFMT structure must be CS_FMT_UNUSED if the datatype field is %1!."
+
+
+59 = 22023,	"If the buffer parameter is NULL then the %1! parameter must also be NULL."
+
+
+60 = ZZZZZ,	"There is a usage error.  This routine has been called at an illegal time."
+
+
+61 = ZZZZZ,	"Item of %1! is not greater than the largest item bound."
+
+
+62 = ZZZZZ,	"Item %1! has already been read."
+
+
+63 = ZZZZZ,	"Read from the server has timed out."
+
+
+64 = ZZZZZ,	"The option to specify debug files is not yet supported. All debug information will be sent to stdout."
+
+
+65 = ZZZZZ,	"The requested type of trace information is not yet supported."
+
+
+66 = ZZZZZ,	"A context structure must be supplied when setting/clearing this type of debug information."
+
+
+67 = ZZZZZ,	"A connection structure must be supplied when setting/clearing this type of debug information."
+
+68 = ZZZZZ,	"Descriptor not found."
+
+69 = ZZZZZ,	"A descriptor of name %1! already exists on the connection"
+
+70 = 07008,	"The descriptor count of %1! is not possible because it exceeds the maximum count of %2!."
+
+72 = ZZZZZ,	"The descriptor %1! has already been associated with a command structure."
+
+73 = 22023,	"The %1! field of the CS_DATAFMT structure must be set to CS_UNUSED."
+
+74 = 22023,	"When %1! is NULL the %2! field of the CS_DATAFMT structure must be set to 0."
+
+75 = 07001, "Inconsistent parameter settings were found for the dynamic descriptor when it was used as input parameters to a command. All descriptor values must be set."
+
+76 = 07001,	"Inconsistent parameter names were found for the dynamic descriptor when it was used as input parameters to a command.  A parameter name must be supplied for all of the items or none of the items."
+
+77 = ZZZZZ,	"A dynamic descriptor is being used for input parameters; therefore ct_param() cannot be called."
+
+78 = 02000,	"There are no rows affected."
+
+79 = 22003, "The bind of result set item %1! resulted in an overflow."
+
+80 = ZZZZZ, "The bind of result set item %1! resulted in an underflow."
+
+81 = ZZZZZ, "The bind of result set item %1! failed because an illegal precision value was specified."
+
+82 = ZZZZZ,	"The bind of result set item %1! failed because an illegal scale value was specified."
+
+83 = ZZZZZ, "The bind of result set item %1! failed due to a syntax error in the source data."
+
+84 = ZZZZZ, "The bind of result set item %1! failed due to an illegal value in the format field of a CS_DATAFMT structure."
+
+85 = ZZZZZ, "The bind of result set item %1! failed because the source field value was not within the domain of legal values."
+
+86 = 22012, "The bind of result set item %1! failed because of an attempt to divide by zero."
+
+87 = ZZZZZ, "The bind of result set item %1! failed because Client-Library was unable to get a resource."
+
+88 = ZZZZZ, "The bind of result set item %1! failed.  The cause of failure is unknown."
+
+89 = 22002, "The data for column %1! is NULL but no indicator was available."
+
+90 = 01004, "The data for column %1! was truncated but no indicator was available."
+
+91 = ZZZZZ, "The bind was missing for column %1!."
+
+92 = ZZZZZ,	"A CS_IODESC structure must be set with ct_data_info() before ct_send_data() can be called."
+
+93 = ZZZZZ, "%1! bytes exceeds the amount of bytes specified for this send data operation.  Only %2! more bytes can be sent."
+
+94 = ZZZZZ, "The number of bytes specified for this send data operation have not been sent.  %1! more bytes need to be sent."
+
+95 = 22001, "The value %1! was truncated."
+
+96 = ZZZZZ, "No browse information exists."
+
+97 = ZZZZZ,	"A CS_IODESC can only be retrieved for text or image columns.  Column %1! is not a text or image column."
+
+98 = ZZZZZ,	"A CS_IODESC cannot be retrieved for a column that has not been read. Column %1! has not been read."
+
+99 = 0A000,	"Capabilities cannot be set after a connection has been established."
+
+100 = ZZZZZ, "Request capabilities cannot be set."
+
+101 = ZZZZZ, "There was a failure initializing the Client-Libray error cache."
+
+102 = 0A000, "This option is not supported by server."
+
+103 = ZZZZZ, "This routine can be called only if the CS_HIDDEN_KEYS property has been set to CS_TRUE."
+
+104 = ZZZZZ, "This message should not be seen."
+
+105 = ZZZZZ, "There was an unexpected failure while retrieving key data."
+
+106 = ZZZZZ, "Column %1! is not a key column."
+
+107 = ZZZZZ, "Column %1! is not nullable.  The key data for a column can be set to NULL only if the column accepts NULL values."
+
+108 = ZZZZZ, "The key data supplied for column %1! exceeds the maximum length defined for the column."
+
+109 = ZZZZZ, "There was an unexpected failure while setting key data."
+
+110 = 07008, "A valid count does not exist for the descriptor." 
+
+111 = ZZZZZ, "This message should not be seen."
+
+112 = 00000, "%1! rows affected."
+
+113 = ZZZZZ, "The command structure given to this routine contains notification data or extended error data.  This routine does not accept such a command structure."
+
+114 = ZZZZZ, "Extended error data does not exist for message %1!."
+
+115 = ZZZZZ, "A remote password cannot be set when a connection to a server exists."
+
+116 = ZZZZZ, "The server name/password combination supplied exceeds the 255 byte limit enforced by Client-Library."
+
+117 = ZZZZZ, "The CS_DISABLE_POLL property must be set to CS_FALSE when this routine is called."
+
+118 = ZZZZZ, "Unable to open file %1!."
+
+119 = 22023, "The data must be NULL when defining CS_INPUTVALUE parameters for a ct_cursor(CS_CURSOR_DECLARE) command."
+
+120 = 22023, "The buffer must be NULL when the current result set consists of format information only."
+
+121 = ZZZZZ, "There is no data associated with descriptor item %1!."
+
+122 = ZZZZZ, "Results are currently being fetched into this descriptor.  A descriptor count of %1! is less than the result set size of %2!."
+
+123 = ZZZZZ, "A descriptor has already been specified for the current command."
+
+124 = ZZZZZ, "ct_param() has already been used to define parameters for the command."
+
+125 = ZZZZZ, "A descriptor of size %1! is not large enough for a result set of size %2!."
+
+126 = ZZZZZ, "Another command structure is using the descriptor."
+
+127 = ZZZZZ, "This routine cannot be called if ct_bind() has already been called for the result set."
+
+128 = 22023, "The datatype field of a CS_IODESC must be set to either CS_TEXT_TYPE or CS_IMAGE_TYPE."
+
+129 = 22023, "An invalid locale was supplied in the %1! structure."
+
+130 = 22023, "An invalid precision or scale in the CS_NUMERIC or CS_DECIMAL value was supplied."
+
+131 = ZZZZZ, "A memory pool cannot be set or cleared if open connections exist on the context structure."
+
+132 = 22001, "The bind of result set item %1! resulted in truncation."
+
+133 = 02000, "No rows are affected.  More result sets will follow."
+
+134 = ZZZZZ, "The specified id already exists on this connection."
+
+135 = ZZZZZ, "The specified id does not exist on this connection."
+
+136 = 22023, "A string of length 0 is not allowed for parameter %1!."
+
+137 = ZZZZZ, "A bind count of %1! is not consistent with the count supplied for existing binds.  The current bind count is %2!."
+
+138 = ZZZZZ, "A data length of %1! exceeds the maximum length allowed for %2! data."
+
+139 = ZZZZZ, "Setting the precision or scale to CS_SRC_VALUE is allowed only if the corresponding result set column is of type numeric or decimal."
+
+140 = ZZZZZ, "Scale cannot be set greater than precision."
+
+141 = 22023, "%1! must be 0 or CS_UNUSED when %2! is NULL."
+
+142 = ZZZZZ, "This property can be used only in the appropriate Client-Library callback.  This property cannot be used in main-line code."
+
+143 = ZZZZZ, "The maximum number of connections cannot be set to a value less than the number of currently existing connections."
+
+144 = ZZZZZ, "This property can be used only if a cursor exists on the command structure."
+
+145 = ZZZZZ, "This property cannot be set when the command structure has results pending or has an open cursor."
+
+146 = ZZZZZ, "The CS_LOCALE structure supplied is not valid."
+
+147 = ZZZZZ, "This routine can be used only with the debug version of Client-Library."
+
+148 = ZZZZZ, "The Client-Library async manager was not able to continue.  This connection has been marked dead."
+
+149 = ZZZZZ, "The current row's key has been partially set with ct_keydata().  Every key column must be set with ct_keydata() before this operation can continue."
+
+150 = ZZZZZ, "This routine cannot be called because the context structure is in an undefined state. This is probably due to a ct_exit() failure." 
+
+151 = ZZZZZ, "A connection to the server must exist on the connection structure before this routine can be called." 
+
+152 = ZZZZZ, "A command structure must be supplied for a CS_CANCEL_CURRENT operation."
+
+153 = ZZZZZ, "This routine cannot be called when a connection to a server exists on the CS_CONNECTION structure."
+
+154 = ZZZZZ, "This routine cannot be called because the connection structure is in an undefined state." 
+
+155 = ZZZZZ, "This routine cannot be called when the command structure is idle."
+
+156 = ZZZZZ, "This routine cannot be called when a command has been initialized but not sent."
+
+157 = ZZZZZ, "This routine cannot be called until ct_results() has been called for the command that was sent to the server."
+
+158 = ZZZZZ, "This routine can be called only if fetchable results are available to be read."
+
+159 = ZZZZZ, "This routine can be called only if the command structure is idle."
+
+160 = ZZZZZ, "This routine can be called only if the cursor rows are available to be read."
+
+161 = ZZZZZ, "This routine can be called only if regular row results are available."
+
+162 = ZZZZZ, "A receive passthru operation is not legal while the connection is in the middle of processing results in the standard manner."
+
+163 = 21000, "This routine cannot be called until all fetchable results have been completely processed."
+
+164 = ZZZZZ, "This routine can be called only if compute results are available."
+
+165 = ZZZZZ, "This routine cannot be called when a nested cursor command is initialized."
+
+166 = ZZZZZ, "This routine cannot be called while the results of a nested cursor command are not completely processed."
+
+167 = ZZZZZ, "This routine cannot be called because the command structure is in an undefined state." 
+
+168 = ZZZZZ, "This routine cannot be called because a receive passthru operation is in progress on this command structure."
+
+169 = ZZZZZ, "This routine cannot be called because a send passthru operation is in progress on this command structure."
+
+170 = ZZZZZ, "This routine cannot be called after ct_results() returns a result type of CS_DESCRIBE_RESULT."
+
+171 = 24000, "A cursor must be opened before this command type can be initialized."
+
+172 = ZZZZZ, "This routine cannot be called because the CS_COMMAND structure is in the middle of a send data operation."
+
+173 = ZZZZZ, "A return status of CS_PENDING must be returned from a completion callback if additional async operations have been initiated."
+
+174 = ZZZZZ, "A context structure must be supplied when setting/clearing this type of callback."
+
+175 = ZZZZZ, "There is not a callback handler installed for signal %1!."
+
+176 = ZZZZZ, "The server does not support null parameters of type %1!."
+
+177 = 22023, "The length of the null-terminated string parameter %1! exceeds the maxium length allowed."
+
+178 = ZZZZZ, "This routine cannot be called until at least one call to ct_send_data() has been made."
+
+179 = 24000, "A cursor row must be fetched before this command can be initialized."
+
+180 = ZZZZZ, "This command must come immediately after a CS_CURSOR_DECLARE command has been initialized."
+
+181 = 24000, "This command is not allowed when the cursor is closed."
+
+182 = 24000, "This command is not allowed after all the cursor's rows have been fetched."
+
+183 = ZZZZZ, "An error was returned from the server while setting the options, check the server message for details."
+
+184 = 00ZZZ, "The sticky binds do not match the current result set.  The sticky binds have been discarded for all result sets."
+
+185 = ZZZZZ, "The CS_STICKY_BINDS property cannot be set on CS_COMMAND structures containing extended error data or event notification data."
+
+186 = ZZZZZ, "The current result set has not been bound.  The sticky binds that did exist were discarded because they did not match the current result set."
+
+187 = ZZZZZ, "This command is not allowed, ct_command with CS_END is expected."
+
+188 = ZZZZZ, "This command is not allowed, ct_cursor with CS_END is expected."
+
+189 = 01X01, "The configuration value (%1!) for property %2! must be CS_TRUE or CS_FALSE."
+
+190 = 01X02, "The configuration value (%1!) for property %2! is not an integer."
+
+191 = ZZX03, "The connection failed because of invalid or missing external configuration data."
+
+192 = ZZZZZ, "The value of sd_sqld exceeds sd_sqln and the operation is %1!."
+
+193 = ZZZZZ, "The value of sd_sqld is negative and the operation is %1!."
+
+194 = ZZZZZ, "The value of sd_sqln is negative."
+
+195 = ZZZZZ, "The number of columns in the result set, %1!, exceeds the possible number of columns, %2!, for the SQLDA structure supplied."
+
+196 = ZZZZZ, "This command is only allowed when describe results are pending."
+
+197 = ZZZZZ, "Invalid directory services object passed in."
+
+198 = ZZZZZ, "Requested security service is not supported."
+
+199 = 22023, "The command length exceeds the maximum count %1! for this operation."
+
+200 = ZZZZZ, "The last query caused either a deadlock or a lock timeout. Check the server message for details."
+
+201 = ZZZZZ, "HAFAILOVER:Trying to connect to %1! server."
+
+202 = 00ZZZ, "Server does not support CS_IMPLICIT_CURSOR. Cursor declaration changed to CS_READ_ONLY." 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Generic Protocol Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctgperror]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The TDS Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cttdserror]
+
+1 = ZZZZZ, "There is a tds protocol error. Premature end of the datastream was encountered." 
+
+2 = ZZZZZ, "There is a tds protocol error. An illegal tds version was received." 
+
+3 = ZZZZZ, "There is a tds protocol error. An illegal login status was received." 
+
+4 = ZZZZZ, "There is a tds protocol error. There are too many bytes in the datastream." 
+
+5 = ZZZZZ, "memory allocation failure."
+
+6 = ZZZZZ, "There is a tds protocol error. Duplicate ALT ID was seen while processing results." 
+
+7 = ZZZZZ, "There is a tds protocol error. Invalid ALT operator was seen while processing results." 
+
+8 = ZZZZZ, "There is a tds protocol error. Invalid ALT id was seen while processing results." 
+
+9 = ZZZZZ, "There is a tds protocol error. Invalid ALT column count was seen while processing results." 
+
+10 = ZZZZZ, "There is a tds protocol error. Invalid column number was seen while processing results." 
+
+11 = ZZZZZ, "There is a tds protocol error. Invalid table index was seen while processing results." 
+
+12 = ZZZZZ, "There is a tds protocol error. An illegal browse status was received." 
+
+13 = ZZZZZ, "There is a tds protocol error. An illegal capability type was received." 
+
+14 = 34000, "There is a tds protocol error. An invalid cursor name was received." 
+
+15 = ZZZZZ, "There is a tds protocol error. A duplicate cursor id was received." 
+
+16 = ZZZZZ, "There is a tds protocol error. An invalid cursor id was received." 
+
+17 = ZZZZZ, "There is a tds protocol error. An invalid cursor row count was received." 
+
+18 = 24000, "There is a tds protocol error. An invalid cursor status was received." 
+
+19 = ZZZZZ, "There is a tds protocol error. An invalid done status was received." 
+
+20 = ZZZZZ, "There is a tds protocol error. An illegal DONEINPROC token stream was received." 
+
+21 = ZZZZZ, "There is a tds protocol error. An invalid dynamic status was received." 
+
+22 = ZZZZZ, "There is a tds protocol error. An invalid dynamic statement length was received." 
+
+23 = 07000, "There is a tds protocol error. An invalid dynamic type was received." 
+
+24 = ZZZZZ, "There is a tds protocol error. An invalid dynamic id was received." 
+
+25 = ZZZZZ, "There is a tds protocol error. An invalid packet size was received." 
+
+26 = ZZZZZ, "There is a tds protocol error. An illegal ENVCHANGE type was received." 
+
+27 = ZZZZZ, "There is a tds protocol error. An invalid message status was received." 
+
+28 = ZZZZZ, "There is a tds protocol error. An illegal token was received." 
+
+29 = ZZZZZ, "There is a tds protocol error. An invalid option command was received." 
+
+30 = ZZZZZ, "There is a tds protocol error. An invalid option type was received." 
+
+31 = ZZZZZ, "There is a tds protocol error. An invalid orderby stream was received." 
+
+32 = ZZZZZ, "There is a tds protocol error. A PARAMFMT was received with no parameters specified." 
+
+33 = ZZZZZ, "There is a tds protocol error. An invalid PARAMFMT stream was received." 
+
+34 = ZZZZZ, "There is a tds protocol error. A ROWFMT was received with no columns specified." 
+
+35 = ZZZZZ, "There is a tds protocol error. An invalid ROWFMT stream was received." 
+
+36 = ZZZZZ, "There is a tds state machine error. An illegal tds token sequence was received." 
+
+37 = ZZZZZ, "There is a tds state machine error. Attempted operation with results pending. This is an internal error." 
+
+38 = ZZZZZ, "There is a tds login error. Illegal number of parameters seen during negotiation." 
+
+39 = ZZZZZ, "There is a tds protocol error. An invalid message id was received during login negotiation." 
+
+40 = ZZZZZ, "There is a tds protocol error. An invalid column status was received." 
+
+41 = ZZZZZ, "There is a tds protocol error. An invalid datatype was received." 
+
+42 = ZZZZZ, "There is a tds protocol error. An invalid numeric precision was received." 
+
+43 = ZZZZZ, "There is a tds protocol error. An invalid numeric scale was received." 
+
+44 = 08001,	"The attempt to connect to the server failed."
+
+45 = ZZZZZ, "There is an internal tds layer error. Access to the row buffer manager failed."
+
+46 = ZZZZZ, "There is a tds login error. An attempt was made by the server to encrypt a password, but no encryption handler was installed."
+
+47 = ZZZZZ, "There is a tds login error. The installed encryption handler returned a status that was not CS_SUCCEED."
+
+48 = ZZZZZ, "There is a tds login error. An attempt was made by the server to issue a security challenge, but no challenge handler was installed."
+
+49 = ZZZZZ, "There is a tds login error. The installed challenge handler returned a status that was not CS_SUCCEED."
+
+50 = ZZZZZ, "There is an internal tds layer error. An error was returned from the server while processing an internal tds stream."
+
+51 = ZZZZZ, "There is an internal tds layer error. An unexpected error was returned from common library."
+
+52 = ZZZZZ, "There is an internal tds layer error. An unexpected error was returned from the async manager."
+
+53 = ZZZZZ, "There is a security usage error. Security session callback should be set for a direct security session"
+
+54 = ZZZZZ, "Invalid security service for the specified mechanism"
+
+55 = ZZZZZ, "Unexpected security token received from server. Internal or server error" 
+
+56 = ZZZZZ, "Channel binding information is not available."
+
+57 = ZZZZZ, "Bad security token received"
+
+58 = ZZZZZ, "Security session callback failed"
+
+59 = ZZZZZ, "Invalid number of parameters in the received security message." 
+
+60 = ZZZZZ, "Unexpected internal security error occurred." 
+
+61 = ZZZZZ, "Requested security service is not supported." 
+
+63 = ZZZZZ, "There is an internal tds layer error. Server is not able to handle larger sized capability mask."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Network Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctnperror]
+
+1 = 01002, "There was an error encountered while closing the connection."
+
+2 = ZZZZZ, "There was an error encountered while releasing the address."
+
+3 = ZZZZZ, "There was an error encountered while resolving the address."
+
+4 = 08001, "There was an error encountered while establishing the connection."
+
+5 = ZZZZZ, "There was an error encountered while executing the expedited write."
+
+6 = ZZZZZ, "There was an error while executing the network read."
+
+7 = ZZZZZ, "There was an error while executing the network write."
+
+8 = ZZZZZ, "There was an error encountered while opening the address dictionary."
+
+9 = ZZZZZ, "There was an error encountered while closing the address dictionary."
+
+10 = ZZZZZ, "A read was attempted on a connection already executing a read."
+
+11 = ZZZZZ, "A write was attempted on a connection already executing a write."
+
+12 = ZZZZZ, "State error: trying to write when connection is expecting a read."
+
+13 = ZZZZZ, "State error: trying to read when connection is expecting a write."
+
+14 = ZZZZZ, "Buffer is too small to fit a whole packet."
+
+15 = ZZZZZ, "Reading from the network while there remains unprocessed data from the last read."
+
+16 = ZZZZZ, "There was an error encountered while getting the address information."
+
+17 = ZZZZZ, "There was an error encountered while getting the address property."
+
+18 = ZZZZZ, "There is a protocol packet error. An illegal length was received"
+
+19 = ZZZZZ, "There is a security error. Security credentials expired."
+
+20 = ZZZZZ, "There is a security error. Security session expired"
+
+21 = ZZZZZ, "There is a security protocol error. A TDS packet with invalid security information was received."
+
+22 = ZZZZZ, "There is a security error. A security token with bad security version was received."
+
+23 = ZZZZZ, "There is a security error. Sign routine failed."
+
+24 = ZZZZZ, "There is a security error. Signature verification failed."
+
+25 = ZZZZZ, "There is a security error. Seal routine failed."
+
+26 = ZZZZZ, "There is a security error. Unseal routine failed."
+
+27 = ZZZZZ, "Unexpected internal security error occurred."
+
+128 = ZZZZZ, "There was an error encountered while initializing network options recordkeeping."
+
+129 = ZZZZZ, "There was an error encountered while setting a network option."
+
+130 = ZZZZZ, "unused."
+
+131 = ZZZZZ, "There was an error encountered while initializing Net-Library."
+
+132 = ZZZZZ, "There was an error encountered while initializing Net-Library engine."
+
+133 = ZZZZZ, "There was an error encountered while setting Net-Library callback."
+
+134 = ZZZZZ, "There was an error encountered while exiting Net-Library engine."
+
+135 = ZZZZZ, "There was an error encountered while exiting Net-Library."
+
+136 = ZZZZZ, "There was an error encountered while setting Net-Library callback mode."
+
+137 = ZZZZZ, "There was an error encountered while chaining signals in Net-Library."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Directory Service Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdserror]
+
+1 = ZZZZZ, "There was an error encountered while binding to the directory service."
+
+2 = ZZZZZ, "There was an error encountered while unbinding from the directory service."
+
+3 = ZZZZZ, "There was an error encountered while reading from the directory service."
+
+4 = ZZZZZ, "There was an error encountered while allocating a directory service session."
+
+5 = ZZZZZ, "There was an error encountered while dropping directory service session."
+
+6 = ZZZZZ, "There was an error encountered while manipulating a session property."
+
+7 = ZZZZZ, "There was an error encountered while issuing a directory search."
+
+8 = ZZZZZ, "The supplied attribute number was out of range."
+
+9 = ZZZZZ, "An invalid information identifier was supplied."
+
+10 = ZZZZZ, "There was an error encountered while dropping a directory object."
+
+128 = ZZZZZ, "There was an error encountered while initializing the directory control layer."
+
+129 = ZZZZZ, "There was an error encountered while exiting the directory control layer."
+
+130 = ZZZZZ, "unused."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Security Service Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctsserror]
+
+1 = ZZZZZ, "There was an error encountered while binding to the security service"
+
+2 = ZZZZZ, "There was an error encountered while unbinding from the security service"
+
+4 = ZZZZZ, "There was an error encountered while allocating a security session context"
+
+5 = ZZZZZ, "There was an error encountered while dropping a security session context"
+
+6 = ZZZZZ, "There was an error encountered while manipulating a security session property"
+
+7 = ZZZZZ, "There was an error encountered while allocating a security credential handle"
+
+8 = ZZZZZ, "There was an error encountered while acquiring a established security credential"
+
+9 = ZZZZZ, "There was an error encountered while dropping a security credential handle"
+
+10 = ZZZZZ, "There was an error encountered while manipulating a session credential property"
+
+11 = ZZZZZ, "There was an error encountered while changing security mechanism"
+
+12 = ZZZZZ, "There was an error encountered while allocating a security mechanism handle"
+
+13 = ZZZZZ, "There was an error encountered while dropping the security mechanism handle"
+
+14 = ZZZZZ, "There was an error encountered while manipulating a security mechanism property"
+
+15 = ZZZZZ, "There was an error encountered while sealing the session data"
+
+16 = ZZZZZ, "There was an error encountered while unsealing the session data"
+
+17 = ZZZZZ, "There was an error encountered while generating a cryptographic signature"
+
+18 = ZZZZZ, "There was an error encountered while checking a cryptographic signature"
+
+19 = ZZZZZ, "There was an error encountered while processing a security session token"
+
+20 = ZZZZZ, "There was an error encountered while trying to abandon a security session"
+
+21 = ZZZZZ, "Specified security service is not supported"
+
+128 = ZZZZZ, "There was an error encountered while initializing the security control layer."
+
+129 = ZZZZZ, "There was an error encountered while exiting the security control layer."
+
+130 = ZZZZZ, "There was an error encountered while configuring the properties of the security control layer."
+
+131 = ZZZZZ, "There was an error encountered while allocating a credential handle of the security control layer."
+
+132 = ZZZZZ, "There was an error encountered while dropping a credential handle of the security control layer."
+
+133 = ZZZZZ, "There was an error encountered while manipulating a credential property of the security control layer."
+
+134 = ZZZZZ, "There was an error encountered while changing security mechanism."
+
+135 = ZZZZZ, "There was an error encountered while allocating a new security mechanism handle."
+
+136 = ZZZZZ, "There was an error encountered while dropping the security mechanism handle."
+
+137 = ZZZZZ, "There was an error encountered while manipulating the properties of the security mechanism."
+

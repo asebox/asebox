@@ -1,0 +1,66 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) libtli.loc 1.1 11/5/93
+;
+[file format]
+	; left and right brackets will delimit section titles.
+	; Any special character, including the comment character
+	; and the section-title delimiters, may be interpreted
+	; literally by preceding them with the escape character.
+	; In addition, any line that ends with the escape character
+	; will be continued onto the next line.
+	version=10.0
+	list_separator=,	; commas will separate the members of a list.
+	escape=\		; backslash is the escape symbol.
+[language]
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libtli]
+
+1 = IPDE_ACCEPTFAIL, "การเรียกการยอมรับ TLI ล้มเหลว - t_errno %1!"
+
+2 = IPDE_BINDFAIL, "การเรียกการไบนด์ TLI ล้มเหลว - t_errno %1!"
+
+3 = IPDE_BADADDR, "แอดเดรสที่ป้อนมีรูปแบบที่ไม่ถูกต้อง"
+
+4 = IPDE_BADBIND, "ไม่สามารถไบนด์ไปยังแอดเดรสที่ถูกต้อง"
+
+5 = IPDE_CONECTFAIL, "การเรียกการเชื่อมต่อ TLI ล้มเหลว - t_errno %1!"
+
+6 = IPDE_GETINFO, "การเรียกการรับข้อมูล TLI ล้มเหลว - t_errno %1!"
+
+7 = IPDE_LISTENFAIL, "การเรียกการฟัง TLI ล้มเหลว - t_errno %1!"
+
+8 = IPDE_NOCOTS, "ตัวลำเลียงไม่เชื่อมต่ออย่างมีทิศทาง"
+
+9 = IPDE_OPTFAIL, "ไม่สามารถตั้งค่าตัวเลือกโปรโตคอล"
+
+10 = IPDE_OPENFAIL, "การเรียกการเปิด TLI ล้มเหลว - t_errno %1!"
+
+11 = IPDE_PARSEFAIL, "ไม่สามารถพาร์สข้อมูลแอดเดรส"
+
+12 = IPDE_RCVCONNECT, "การเรียก TLI rcvconnect ล้มเหลว - t_errno %1!"
+
+13 = IPDE_RECVFAIL, "การเรียก TLI recv ล้มเหลว - t_errno %1!"
+
+14 = IPDE_SETSIG, "ไม่สามารถตั้งค่าหมายเลขโปรเซสสัญญาณ - t_errno %1!"
+
+15 = IPDE_SENDFAIL, "การเรียกการส่ง TLI ล้มเหลว - t_errno %1!"
+
+16 = IPDE_BADINITSTRING, "สตริง init จาก TCL ไม่ถูกต้อง"
+
+17 = IPDE_TALLOCFAIL, "TLI t_alloc ล้มเหลว - t_errno %1!"
+
+; end of tli error strings
+;
+

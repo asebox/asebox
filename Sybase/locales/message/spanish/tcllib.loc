@@ -1,0 +1,422 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) tcllib.loc 1.3 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=spanish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "No es posible determinar la cantidad de memoria necesaria para el controlador de protocolo"
+
+2 = NETE_NULLOPT, "No es posible transferir un ptr de opciones NULL a cualquier rutina Net-Library"
+
+3 = NETE_UNKWOPT, "La opción Net-Library solicitada es desconocida"
+
+4 = NETE_UNKWINFCDE, "El código de información de dirección solicitado es desconocido"
+
+5 = NETE_BOOLREP, "El valor de la opción debe ser NET_TRUE o NET_FALSE"
+
+6 = NETE_NULLNETBUF, "No es posible transferir un puntero NULL de buffer a net_init()"
+
+7 = NETE_NOTSUPPORTED, "Característica no soportada"
+
+8 = NETE_NULLHDLR, "No es posible transferir un puntero NULL de matriz NET_POLL"
+
+9 = NETE_BADENGINE, "El identificador de sistema no es válido"
+
+10 = NETE_ALREADYINIT, "El proceso actual ya ha llamado net_init()"
+
+11 = NETE_DICTNOTFOUND, "No pudo encontrarse el diccionario de direcciones"
+
+12 = NETE_SRVNAMENOTFND, "No pudo encontrarse el atributo del nombre del servidor especificado"
+
+13 = NETE_NODICTS, "No es posible encontrar una estructura de diccionarios de direcciones disponible"
+
+14 = NETE_DRVINIT, "Error durante la inicialización del controlador de protocolo."
+
+15 = NETE_NODRIVERS, "No es posible encontrar una estructura disponible de controlador de protocolo"
+
+16 = NETE_LFNOSECTION , "No se encuentra la sección de error de Net-Library en el archivo de localización"
+
+17 = NETE_DICTSYNTAX, "Error de sintaxis en el diccionario de direcciones"
+
+18 = NETE_ADRTYPNOTFND, "No pudo encontrarse el atributo de tipo de dirección especificado"
+
+19 = NETE_DICTCLOSE, "Error al cerrar el diccionario de direcciones"
+
+20 = NETE_NOEPS, "No es posible encontrar una estructura disponible de punto de terminación"
+
+21 = NETE_EPINUSE, "Se intentó utilizar un punto de terminación que ya estaba en uso"
+
+22 = NETE_DRVPROPERTY, "Error de llamada del controlador de protocolo para determinar las propiedades"
+
+23 = NETE_DRVLISTEN, "Error de llamada del controlador de protocolo Net-Lib para registrar a un oyente"
+
+24 = NETE_DRVCONNECT, "Error de llamada del controlador de protocolo Net-Lib para conectar dos puntos de terminación"
+
+25 = NETE_DRVACCEPT, "Error de llamada del controlador de protocolo para aceptar una solicitud de conexión entrante"
+
+26 = NETE_BADIOSTATE, "El punto de terminación tiene un estado de E/S erróneo"
+
+27 = NETE_DRVNOTAVAIL, "El controlador de protocolo Net-Lib especificado no está disponible"
+
+28 = NETE_BADPROPERTY, "Argumento de tipo de propiedad incorrecto"
+
+29 = NETE_DISCONNECT, "Funcionamiento de Net-Library terminado debido a una desconexión"
+
+30 = NETE_DRVEXIT, "Error de rutina de salida del controlador de protocolo Net-Lib"
+
+31 = NETE_SUBACCEPT, "Error al intentar ejecutar una aceptación para uno de los oyentes"
+
+32 = NETE_DRVREAD, "Error de llamada del controlador de protocolo Net-Lib para leer datos"
+
+33 = NETE_RDDATLEN, "El tamaño de los datos que se deben leer es superior al buffer de lectura"
+
+34 = NETE_DRVREADOOB, "Llamada del controlador de protocolo Net-Lib para leer datos urgentes"
+
+35 = NETE_EXPNOTSUPPORT, "Este controlador de protocolo Net-Lib no reconoce los datos expedidos"
+
+36 = NETE_DRVWRITE, "Error de llamada del controlador de protocolo Net-Lib para escribir datos"
+
+37 = NETE_NULLADDR, "No es posible transferir un puntero net_addr NULL"
+
+38 = NETE_NULLDICT, "No es posible transferir un puntero de diccionario NULL"
+
+39 = NETE_NULLSTATE, "No es posible transferir un puntero net_state NULL"
+
+40 = NETE_NULLRETRES, "No es posible transferir un puntero return_reason NULL"
+
+41 = NETE_NULLEP, "No es posible transferir un puntero de punto de terminación NULL"
+
+42 = NETE_NULLCBACK, "No es posible transferir un puntero de función de callback NULL"
+
+43 = NETE_NULLDICTNAME, "No es posible transferir un puntero de ID de diccionario NULL"
+
+44 = NETE_NULLEXPFLAG, "No es posible transferir un puntero de indicador de datos expedidos NULL"
+
+45 = NETE_NULLDICTPTR, "No es posible transferir un puntero de gestión de diccionario NULL"
+
+46 = NETE_NULLNEWEP, "No es posible transferir un puntero de gestión de punto de terminación NULL"
+
+47 = NETE_NULLATTRLST, "No es posible transferir un puntero de información de dirección NULL"
+
+48 = NETE_NULLADDRPTR, "No es posible transferir un puntero de gestión net_addr NULL"
+
+49 = NETE_NULLLASTENTRY, "No es posible transferir un puntero de última entrada NULL"
+
+50 = NETE_NULLRDDATA, "No es posible transferir un buffer de lectura NULL"
+
+51 = NETE_NOADDRS, "No es posible encontrar una estructura de direcciones disponible"
+
+52 = NETE_NULLBYTSRD, "No es posible transferir un puntero bytes_read NULL"
+
+53 = NETE_EPCLOSING, "Se va a cerrar el punto de terminación especificado"
+
+54 = NETE_NULLWRDATA, "No es posible transferir un buffer de escritura NULL"
+
+55 = NETE_CANCELLED, "La operación solicitada ha sido cancelada debido a otros eventos."
+
+56 = NETE_NULLINTL, "No es posible transferir una estructura NET_INTL NULL"
+
+57 = NETE_NULLUSERPTR, "No es posible transferir un buffer de puntero de usuario NULL"
+
+58 = NETE_BADDICT, "Se intentó utilizar una referencia de diccionario incorrecta"
+
+59 = NETE_BADADDR, "Se intentó utilizar una referencia de direcciones incorrecta"
+
+60 = NETE_BADEP, "Se intentó utilizar una referencia de punto de terminación incorrecta"
+
+61 = NETE_DRVCLOSE, "Error de llamada del controlador de protocolo Net-Lib para cerrar el punto de terminación"
+
+62 = NETE_VERSION, "Controlador de protocolo no compatible con el Net-Lib actual. Probablemente se trate de una versión antigua de Net-Library"
+
+63 = NETE_NULLSUPPORT, "No es posible transferir un puntero NULL para el parámetro 'supported' a net_capability()"
+
+64 = NETE_BADPROCMODE, "Modo de procesamiento incorrecto"
+
+65 = NETE_FUNCCODE, "Código de función incorrecto transferido a net_report()"
+
+66 = NETE_DRVINUSE, "No es posible descargar el controlador porque se está usando"
+
+67 = NETE_NCONNECTED, "Se intentó efectuar una E/S en un punto de terminación que no está conectado"
+
+68 = NETE_NOMULTIRW, "No puede realizarse más de una lectura"
+
+69 = NETE_NULLPREVMODE, "Puntero NULL de modo anterior incorrecto"
+
+70 = NETE_NULLREPORT, "No puede llamarse net_report() si net_opt_report() no ha solicitado un informe"
+
+71 = NETE_LFILENAME, "Nombre de archivo de localización no especificado en la llamada a net_intl_errstr()"
+
+72 = NETE_INTLOPEN, "Error al abrir el archivo de localización utilizando intl_open"
+
+73 = NETE_UP1ENIGNE, "La versión monoprocesador de Net-Lib sólo puede utilizar un sistema"
+
+74 = NETE_NULLCBPARM, "Parámetro de función de callback NULL incorrecto en la rutina Net-Library"
+
+75 = NETE_NULLINFOLEN, "Puntero de longitud de información NULL incorrecto en net_address_info()"
+
+76 = NETE_UNKWNMODE, "No se reconoce el modo de función de callback solicitado"
+
+77 = NETE_BADEPNUM, "El número de punto de terminación solicitado no es válido"
+
+78 = NETE_NULLENGPTR, "No es posible transferir un puntero de sistema NULL a net_engine_init()"
+
+79 = NETE_NULLENGINE, "No es posible transferir un puntero de sistema NULL a cualquier rutina Net-Library"
+
+80 = NETE_NOENGS, "No es posible encontrar una estructura de sistemas disponible"
+
+81 = NETE_NOREQUESTS, "No es posible encontrar una estructura de solicitudes disponible"
+
+82 = NETE_BADMONFLAG, "La máscara de indicadores del monitor solicitada no es válida"
+
+83 = NETE_EPINCLOSE, "Se va a cerrar el punto de terminación deseado"
+
+84 = NETE_BADMODE, "El modo solicitado no es soportado"
+
+85 = NETE_DRVLOAD, "Error al cargar el controlador de protocolo"
+
+86 = NETE_DRVUNLOAD, "Error al descargar el controlador de protocolo"
+
+87 = NETE_MEMPOLICY, "Las directivas de memoria solicitadas no son válidas"
+
+88 = NETE_MEMREALLOC, "Error al reasignar memoria"
+
+89 = NETE_MEMALLOC, "Error al asignar memoria"
+
+90 = NETE_NULLSIZE, "No es posible transferir un puntero de tamaño NULL a net_initsize()"
+
+91 = NETE_NULLSTATEPTR, "No es posible transferir un puntero NET_STATE NULL a net_init()"
+
+92 = NETE_NULLSPNLCKCNTPTR, "No es posible transferir un puntero de conteo de bloqueos de giro NULL a net_spinlocks()"
+
+93 = NETE_ENGACTIVE, "La operación solicitada no puede realizarse mientras haya sistemas activos"
+
+94 = NETE_UNKWIDTYPE, "El tipo especificado de ID de diccionario de direcciones no es válido"
+
+95 = NETE_SECNOTFOUND, "No se encuentra la sección del archivo de configuración solicitada"
+
+96 = NETE_DRVNOTLOADED, "No se ha cargado el controlador de red para el protocolo de red especificado"
+
+97 = NETE_NODRVERRSTR, "No hay ninguna cadena de error del controlador de protocolo disponible para el error actual"
+
+98 = NETE_SHRTINFOBUF, "El buffer de información de direcciones es demasiado pequeño."
+
+99 = NETE_NULLNFDS, "No es posible transferir un puntero nfds NULL a net_poll_external()"
+
+100 = NETE_BADNFDS, "El número de descriptores de archivo solicitado no es válido"
+
+101 = NETE_NULLRDBUF, "No es posible transferir un buffer de lectura NULL a Net-Library"
+
+102 = NETE_NULLWRTBUF, "No es posible transferir un buffer de lectura NULL a Net-Library"
+
+103 = NETE_INTLNXTSEC, "Error de llamada a intl_nextsection"
+
+104 = NETE_INTLNXTVAL, "Error de llamada a intl_nextvalue"
+
+105 = NETE_LFNOVALUE, "Se encontró una entrada de archivo de localización sin mensaje de error"
+
+106 = NETE_BADERRID, "Se encontró una entrada de archivo de localización con número de error incorrecto"
+
+107 = NETE_INTLNXTENT, "Error de llamada a intl_nextentry"
+
+108 = NETE_NULLINTLSIZE, "No es posible transferir un puntero de tamaño NULL a net_intl_size"
+
+109 = NETE_NULLINTLBUF, "No es posible transferir un puntero de buffer NULL a net_intl_errstr"
+
+110 = NETE_BADMSECS, "El valor del parámetro milisegundos no es válido"
+
+111 = NETE_NOLISTENERS, "No es posible llamar a net_accept si no hay puntos de terminación de escucha"
+
+112 = NETE_POLLNOTSUP, "La función net_poll_external() no está soportada"
+
+113 = NETE_NONEQUEUED, "No es posible esperar la conclusión de la solicitud cuando no hay ninguna en la cola"
+
+114 = NETE_BADSIGNAL, "Net-Library no utiliza la señal solicitada"
+
+115 = NETE_DICTINUSE, "Se intentó acceder al diccionario de direcciones con más de una tarea"
+
+116 = NETE_NULLEXPFLG, "No es posible transferir un puntero de indicador de datos expedidos NULL a net_read"
+
+117 = NETE_NODRVCLASS, "No hay ningún controlador disponible del tipo de protocolo solicitado"
+
+118 = NETE_BADSRCHATTR, "La lista de búsqueda de atributos contiene una entrada incorrecta"
+
+119 = NETE_BADDICTID, "ID de diccionario incorrecta transferida a net_dict_open"
+
+120 = NETE_INVALIDVERSION, "Versión de Net-Library incorrecta"
+
+121 = NETE_NULLVALUE, "El argumento de valor no puede ser NULL para esta opción"
+
+122 = NETE_NULLARG, "Argumento NULL incorrecto para la rutina"
+
+123 = NETE_BUFTOOSMALL, "El buffer es demasiado pequeño"
+
+124 = NETE_BADCMD, "Argumento de comando incorrecto"
+
+125 = NETE_NULLBUF, "Argumento de buffer Null"
+
+126 = NETE_NULLPROPINFO, "Argumento propinfo Null"
+
+127 = NETE_SETNOTSUPPORTED, "La configuración de las propiedades de Net-Lib no está soportada"
+
+128 = NETE_INTLHOME, "Error de llamada a intl_home"
+
+129 = NETE_INVOSERR, "No es un número válido de error de SO"
+
+130 = NETE_RLIMITERR, "No es posible obtener/definir el número máximo de archivos abiertos"
+
+131 = NETE_GETEF, "No pudo crearse el indicador de eventos"
+
+132 = NETE_FREEEF, "No pudo liberarse el indicador de eventos"
+
+133 = NETE_INSQTI, "Error al insertar un elemento en la cola interbloqueada"
+
+134 = NETE_REMQHI, "Error al suprimir el elemento de la cola interbloqueada"
+
+135 = NETE_SETIMR, "Error al definir el temporizador"
+
+136 = NETE_CANTIM, "Error al cancelar temporizador"
+
+137 = NETE_WAITFR, "Error al esperar un evento"
+
+138 = NETE_CLREF, "No pudo borrarse el indicador de eventos"
+
+139 = NETE_SETEF, "No pudo definirse el indicador de eventos"
+
+140 = NETE_DRVATTNHDLR, "Error al instalar el gestor de atención del controlador de protocolo"
+
+141 = NETE_QUEOPEN, "Error al abrir la cola de comunicación de subprocesos"
+
+142 = NETE_QUEREAD, "Error al leer la cola de comunicación de subprocesos"
+
+143 = NETE_QUEWRITE, "Error al escribir en la cola de comunicación de subprocesos"
+
+144 = NETE_QUECLOSE, "Error al cerrar la cola de comunicación de subprocesos"
+
+145 = NETE_CREATETHREAD, "Error al instalar el subproceso"
+
+146 = NETE_EVENTCREATE, "Error al crear un objeto de evento"
+
+147 = NETE_EVENTPOST, "Error al enviar al objeto de evento"
+
+148 = NETE_EVENTCLEAR, "Error al borrar el objeto de evento"
+
+149 = NETE_EVENTWAIT, "Error al esperar el objeto de evento"
+
+150 = NETE_CREATEMTX, "Error al crear un semáforo de mutex"
+
+151 = NETE_REQUESTMTX, "Error al intentar obtener la propiedad exclusiva de un semáforo de mutex"
+
+152 = NETE_RELEASEMTX, "Error al liberar un semáforo de mutex"
+
+153 = NETE_DESTROYMTX, "Error al destruir un semáforo de mutex"
+
+154 = NETE_THRDSPND, "Error al suspender el subproceso"
+
+155 = NETE_THRDRESUME, "Error al reanudar el subproceso"
+
+156 = NETE_THRDKILL, "Error al eliminar el subproceso"
+
+157 = NETE_SETSIGHDLR, "No es posible definir el gestor de señal apropiado"
+
+158 = NETE_SELECTFAIL, "Error de llamada a select()"
+
+159 = NETE_FDOFLOW, "No hay más descriptores de archivo disponibles. Se va a cerrar el oyente"
+
+160 = NETE_NOPOLLSTRATS, "No hay más estructuras de estrategia de sondeo disponibles"
+
+161 = NETE_NOSIGNALS, "Net-Library no puede aceptar un controlador de protocolo que genere señales"
+
+162 = NETE_UNKNOWN, "Error de Net-Library desconocido"
+
+164 = NETE_OODDRIVER, "El controlador es de una versión anterior a la requerida"
+
+165 = NETE_OSGENERIC, "Error del sistema operativo: %1!"
+
+166 = NETE_DRVLOCFAIL, "Error al abrir el archivo de localización de controlador"
+
+167 = NETE_OSOBJECT, "Error al crear un objeto de SO"
+
+168 = NET_QPRFSTR, "Error al leer el archivo de direcciones"
+
+170 = NETE_BADHANDLER, "Gestor de señal erróneo"
+
+171 = NETE_FLTCONNECT, "El controlador de filtro Net-Lib no pudo conectar dos puntos de terminación."
+
+172 = NETE_CONABORTED, "Conexión interrumpida"
+
+173 = NETE_TIMEOUT, "Se superó el tiempo de espera de la operación Net-lib"
+
+174 = NETE_URGENT, "Datos OOB recibidos"
+
+[filter]
+
+1 = FLTE_CALLFAIL, "Error de llamada al proveedor."
+2 = FLTE_BUFOF, "Error de desbordamiento de buffer."
+3 = FLTE_MALLOC, "Error de asignación de memoria."
+4 = FLTE_SRVNOTSUPP, "Servicio no compatible."
+5 = FLTE_INVPRM, "Parámetro no válido."
+6 = FLTE_BADPOINTER, "Puntero erróneo."
+
+; TLS/SSL specific errors:
+60 = FLTE_TLS_MSTRINIT, "No se pudo inicializar el contexto master de SSL/TLS."
+61 = FLTE_TLS_IO_SEMANTICS, "No se pudo definir semántica de E/S para E/S parcial."
+62 = FLTE_TLS_PROTOCOLVER, "No se pudo definir la versión de protocolo de SSL/TLS."
+63 = FLTE_TLS_RANDOMOBJ, "No se pudo crear el objeto PRNG."
+64 = FLTE_TLS_RANDOMINIT, "No se pudo inicializar el objeto PRNG."
+65 = FLTE_TLS_RANDOMSEED, "No se pudo inicializar PRNG."
+66 = FLTE_TLS_RANDOMREF, "No se pudo definir la referencia del objeto PRNG."
+67 = FLTE_TLS_RANDOMFUNC, "No se pudo definir la función PRNG."
+68 = FLTE_TLS_CERTFUNC, "No se pudo definir la función de comprobación de certificado."
+69 = FLTE_TLS_DUPCONTEXT, "No se pudo duplicar la información de contexto de SSL/TLS."
+70 = FLTE_TLS_DUPCHILD, "No se pudo crear un contexto de SSL/TLS secundario."
+71 = FLTE_TLS_GETVER, "No se pudo obtener la versión de protocolo de SSL/TLS."
+72 = FLTE_TLS_INVALIDVER, "Versión desconocida de protocolo de SSL/TLS."
+73 = FLTE_TLS_NOVALIDCIPHERS, "Conjuntos cifrados no reconocidos en el cifrado establecido."
+74 = FLTE_TLS_SETCIPHER, "Error al definir conjuntos cifrados."
+75 = FLTE_TLS_LOADCERT, "Error al cargar la identidad local."
+76 = FLTE_TLS_LOADCA, "Error al cargar la información de CA."
+77 = FLTE_TLS_GETCERTLEN, "No se pudo obtener la longitud del certificado del igual."
+78 = FLTE_TLS_GETCERT, "No se pudo obtener el certificado del igual."
+79 = FLTE_TLS_GETNAME, "No se pudo extraer el nombre común del igual."
+80 = FLTE_TLS_SETIOREF, "No se pudo definir la referencia de E/S de TLS/SSL."
+81 = FLTE_TLS_SETCERTREF, "No se pudo definir la referencia del certificado de TLS/SSL."
+82 = FLTE_TLS_SETREADFUNC, "No se pudo definir la función de callback de TLS/SSL."
+83 = FLTE_TLS_SETWRITEFUNC, "No se pudo definir la función de callback de escritura de TLS/SSL."
+84 = FLTE_TLS_HANDSHAKEFAIL, "Error en el establecimiento de conexión de TLS/SSL."
+85 = FLTE_TLS_SERVERSIDE, "No se pudo establecer TLS/SSL en el lado del servidor."
+86 = FLTE_TLS_CLIENTSIDE, "No se pudo establecer TLS/SSL en el lado del cliente."
+87 = FLTE_TLS_NOEP, "Intento de E/S antes de configurar TLS/SSL."
+88 = FLTE_TLS_NOCONTEXT, "Intento de E/S antes del establecimiento de conexión de SSL."
+89 = FLTE_TLS_READERROR, "Error durante la lectura."
+90 = FLTE_TLS_WRITEERROR, "Error durante la escritura."
+91 = FLTE_TLS_DNFCOUNT, "No se pudo obtener el recuento de campos DN de certificado remoto."
+92 = FLTE_TLS_DNFEXTRACT, "No se pudo extraer la información de nombre diferenciado del certificado remoto."
+93 = FLTE_TLS_EXTCOUNT, "No se pudieron contar las extensiones de certificado remoto."
+94 = FLTE_TLS_EXTEXTRACT, "No se pudo extraer la información de extensión del certificado remoto."
+95 = FLTE_TLS_REQCLNT, "Error de llamada al certificado de cliente requerido."
+
+; end of tcllib error strings
+;
+

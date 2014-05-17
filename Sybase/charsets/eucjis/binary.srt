@@ -1,0 +1,22 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#) binary.srt 84.1	6/23/93
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the EUC JIS Japanese character set, this sort order is a
+;   binary ordering.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_eucjis
+menuname = "Binary ordering, for the EUC JIS character set (eucjis)."
+charset = eucjis
+
+description = "Binary sort order for Japanese using the EUC JIS character set (eucjis)."
+
+binary = "true"

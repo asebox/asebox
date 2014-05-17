@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > CachedPrc </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > 
+     select ObjectID,OwnerUID,DBID,PlanID,MemUsageKB,CompileDate, ObjectName,ObjectType,OwnerName,DBName,
+     RequestCnt ,
+     TempdbRemapCnt ,
+     AvgTempdbRemapTime ,
+     ExecutionCount ,
+     CPUTime ,
+     ExecutionTime ,
+     PhysicalReads ,
+     LogicalReads ,
+     PhysicalWrites ,
+     PagesWritten
+     from master..monCachedProcedures
+     where 1=1
+     ?FILTER_CLAUSE?
+  </SQL>
+  <parameters>
+     <param name="FILTER_CLAUSE"> </param>
+  </parameters>
+  <key1 > ObjectID </key1>
+  <key2 > DBID </key2>
+  <key3 > PlanID </key3>
+  <filterCol > -1  </filterCol>
+  <delay > 300 </delay>
+  <colsCalcDiff >                 
+     <COL> RequestCnt </COL>
+     <COL> TempdbRemapCnt </COL>
+     <COL> ExecutionCount </COL>
+     <COL> CPUTime </COL>
+     <COL> ExecutionTime </COL>
+     <COL> PhysicalReads </COL>
+     <COL> LogicalReads </COL>
+     <COL> PhysicalWrites </COL>
+     <COL> PageWritten </COL>
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_CachedPrc (
+     Timestamp datetime not null,
+     ObjectID int not null,
+     OwnerUID int not null,
+     DBID int not null,
+     PlanID int not null,
+     MemUsageKB int not null,
+     CompileDate datetime not null,
+     ObjectName varchar(30) null,
+     ObjectType varchar(32) null,
+     OwnerName varchar(30) null,
+     DBName varchar(30) null,
+     RequestCnt int null,
+     TempdbRemapCnt int null,
+     AvgTempdbRemapTime int null,
+     ExecutionCount int null,
+     CPUTime int null,
+     ExecutionTime int null,
+     PhysicalReads int null,
+     LogicalReads int null,
+     PhysicalWrites int null,
+     PagesWritten int null,
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_CachedPrc (Timestamp, ObjectID )
+     </I>
+     <I>
+  create index idx2 on ?SERVERNAME?_CachedPrc (CompileDate )
+     </I>
+     <I>
+  create index idx3 on ?SERVERNAME?_CachedPrc (ObjectName, CompileDate )
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_CachedPrc" >
+  delete ?SERVERNAME?_CachedPrc from ?SERVERNAME?_CachedPrc (index idx) where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

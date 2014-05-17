@@ -1,0 +1,220 @@
+; comment character is semicolon.
+;
+; - Localization file for Auditinit and Syconfig.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 1999 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+1		= "Server '%1!' is not a Sybase Backup Server.",	"%s"
+10	= "update Backup Server entry in interfaces file",	""
+11	= "update the Backup Server runserver file",		""
+12	= "boot the Backup Server",				""
+13	= "start the Backup Server",				""
+100 			= "Backup Server Information:",		""
+101 		= "name:",				""
+102 		= "errorlog:",				""
+103 		= "interfaces:",			""
+104	= "number of supported connections:",	""
+105		= "location of multibuf:",		""
+106		= "language:",		""
+107		= "character set:",	""
+108		= "tape configuration file:",		""
+300		= "ADD NEW BACKUP SERVER",	 ""
+301		= "",	 ""
+302		= "ADD NEW BACKUP SERVER",	 ""
+303		= "\
+Auditinit displays a list of servers available for \
+configuration.  This list contains Adaptive Servers as well as Backup \
+Servers.  If the entire list does not fit on one screen\, scroll \
+through to the end of the list.  Select the Backup Server you want to \
+configure.\\n\\n* Control Keys *\\n\\nPress the Ctrl-f key if you \
+want to scroll forward through the list of servers available for \
+configuration.  You must scroll to the end of the list before \
+selecting a server.\\n\\nPress the Ctrl-b key if you want to scroll \
+backward through the list of servers available for \
+configuration.\\n\\nYou do not need to press Ctrl-a to continue to \
+the next screen\, as your selection of a server automatically leads to \
+the next screen.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.",	 ""
+304	= "\
+Auditinit displays a list of previously installed servers available for \
+configuration.  This list contains Adaptive Servers as well as Backup \
+Servers.  If the entire list does not fit on one screen\, use the down \
+arrow key to scroll through to the end of the list.  Select the Backup \
+Server you want to configure.",	 ""
+320		= "CONFIGURE EXISTING BACKUP SERVER",	 ""
+321		= "",	 ""
+322		= "CONFIGURE EXISTING BACKUP SERVER",	 ""
+323	= "\
+Auditinit displays a list of previously installed servers available for \
+reconfiguration.  This list contains Adaptive Servers as well as Backup \
+Servers.  If the entire list does not fit on one screen\, scroll \
+through to the end of the list.  Select the Backup Server you want to \
+reconfigure.\\n\\n* Control Keys *\\n\\nPress the Ctrl-f key if you \
+want to scroll forward through the list of servers available for \
+reconfiguration.  You must scroll to the end of the list before \
+selecting a server.\\n\\nPress the Ctrl-b key if you want to scroll \
+backward through the list of servers available for \
+reconfiguration.\\n\\nYou do not need to press Ctrl-a to continue to \
+the next screen\, as your selection of a server automatically leads to \
+the next screen.\\n\\nPress Ctrl-x to exit this screen.  Auditinit will \
+return to the previous menu.  You can repeat Ctrl-x to return to \
+previous menus and exit auditinit to the operating system prompt.",	 ""
+324	= "\
+Auditinit displays a list of previously installed servers available for \
+reconfiguration.  This list contains Adaptive Servers as well as Backup \
+Servers.  If the entire list does not fit on one screen\, use the down \
+arrow key to scroll through to the end of the list.  Select the Backup \
+Server you want to reconfigure.",	 ""
+340		= "NEW OR EXISTING BACKUP SERVER",	 ""
+341		= "",	 ""
+342		= "NEW OR EXISTING BACKUP SERVER",	 ""
+343	= "\
+1.  Configure a new Backup Server\\n\\nSelect this option if you want \
+to configure a new Backup Server.  As of the 10.0 release all DUMP/LOAD \
+operations will require the use of Backup Server.  You must configure a \
+Backup Server to be able to perform dumping and loading of your \
+databases.\\n\\n2.  Configure an existing Backup Server\\n\\nSelect \
+this option if you want to reconfigure a previously configured Backup \
+Server.\\n\\n\
+AUDITINIT NO LONGER SUPPORTS INTERFACES FILE EDITING.\\n\\n\
+SYBSETUP\, DSEDIT\, DSEDIT_DCE\, or a text editor must be used for this \
+purpose before using auditinit to install or modify any server:\\n\
+- before installing a server\, create a new interfaces file entry\\n\
+- before modifying a server in other ways\, modify its interfaces file entry\\n\
+See your documentation for more details.\\n\\n\
+* Control Keys *\\n\\nYou do not need to press Ctrl-a to \
+continue to the next screen\, as your selection of a configuration \
+option automatically leads to the next screen.\\n\\nPress Ctrl-x to \
+exit this screen.  Auditinit will return to the previous menu.  You can \
+repeat Ctrl-x to return to previous menus and exit auditinit to the \
+operating system prompt.", ""
+344	= "\
+Configure a new Backup Server\\n \\nSelect this option if you want \
+to configure a new Backup Server.  As of the 10.0 release all DUMP/LOAD \
+operations will require the use of Backup Server.  You must configure a \
+Backup Server to be able to perform dumping and loading of your \
+databases.\\n \\nConfigure an existing Backup Server\\n \\nSelect \
+this option if you want to reconfigure a previously configured Backup \
+Server.\\n\\n\
+AUDITINIT NO LONGER SUPPORTS INTERFACES FILE EDITING.\\n\\n\
+SYBSETUP\, DSEDIT\, DSEDIT_DCE\, or a text editor must be used for this \
+purpose before using auditinit to install or modify any server:\\n\
+- before installing a server\, create a new interfaces file entry\\n\
+- before modifying a server in other ways\, modify its interfaces file entry\\n\
+See your documentation for more details.",	""
+360		= "BACKUP SERVER CONFIGURATION",	 ""
+361		= "",	 ""
+362		= "BACKUP SERVER CONFIGURATION",	 ""
+363	= "\
+1.  Backup Server errorlog\\n\\nSelect this option if you want to \
+change the displayed default path for your Backup Server's error log.  \
+Type the full path at the prompt.  The default path is backup.log in \
+the install subdirectory of the new SYBASE directory.\\n\\n2.  Backup \
+Server quota file\\n\\nSelect this item if you want to use a quota file \
+to set system paramenters for Backup Server.  Specify a path at the \
+prompt.\\n\\The startserver utility uses the quota file to provide Backup \
+Server with VMS resource quotas.  If you do not provide a quota file path\, \
+startserver looks for a quota file in the current default directory.  See \
+the System Administration Guide Supplement for your platform for more \
+information on quota files.\\n\\n\
+* Control Keys *\\n\\nPress Ctrl-a to accept the displayed Backup Server \
+error log location and the values you entered for your Backup Server \
+Interfaces file.\\n\\nAuditinit displays the prompt \"Execute the Backup \
+Server Configuration now?\".  Type \"y\" to proceed with Backup Server \
+installation or configuration.\\n\\nAuditinit will display a series of \
+messages as the Backup Server configuration process runs.  If the \
+configuration process does not succeed\, auditinit will display error \
+messages.  You can review the error messages and the Backup Server's \
+error log to determine the cause of the failure.\\n\\nAfter the Backup \
+Server configuration process is complete\, auditinit will display a \
+message indicating the configuration succeeded and will return to the \
+NEW OR EXISTING BACKUP SERVER menu.\\n\\nPress Ctrl-x to exit this \
+screen.  Auditinit will return to the previous menu.  You can repeat \
+Ctrl-x to return to previous menus and exit auditinit to the \
+operating system prompt.",	 ""
+364	= "\
+1.  Backup Server errorlog\\n\\nSelect this option if you want to \
+change the displayed default path for your Backup Server's error log.  \
+Type the full path at the prompt.  The default path is backup.log in \
+the install subdirectory of the new SYBASE directory.\\n\\n* Control \
+Keys *\\n\\nPress Ctrl-a to accept the displayed Backup Server \
+error log location and the values you entered for your Backup Server \
+Interfaces file.\\n\\nAuditinit displays the prompt \"Execute the Backup \
+Server Configuration now?\".  Type \"y\" to proceed with Backup Server \
+installation or configuration.\\n\\nAuditinit will display a series of \
+messages as the Backup Server configuration process runs.  If the \
+configuration process does not succeed\, auditinit will display error \
+messages.  You can review the error messages and the Backup Server's \
+error log to determine the cause of the failure.\\n\\nAfter the Backup \
+Server configuration process is complete\, auditinit will display a \
+message indicating the configuration succeeded and will return to the \
+NEW OR EXISTING BACKUP SERVER menu.\\n\\nPress Ctrl-x to exit this \
+screen.  Auditinit will return to the previous menu.  You can repeat \
+Ctrl-x to return to previous menus and exit auditinit to the \
+operating system prompt.",	 ""
+365	= "\
+Backup Server errorlog\\n \\nSelect this option if you want to \
+change the displayed default path for your Backup Server's error log.  \
+Type the full volume\, path\, and filename at the prompt.  The default \
+destination is a file named backup.log in the install subdirectory of the \
+new SYBASE directory.\\n \\n* Continue to Next Screen *\\n \\nPress <F10> to \
+accept the displayed Backup Server error log location and the values you \
+entered for your Backup Server Interfaces file.\\n \\nAuditinit displays the \
+prompt \"Execute the Backup Server Configuration now?\".  Select \"Yes\" to \
+proceed with the Backup Server installation or configuration.\\n \\nAuditinit \
+will display a series of messages as the Backup Server configuration \
+process runs.  If the configuration process does not succeed\, auditinit \
+will display error messages.  You can review the error messages and the \
+Backup Server's error log to determine the cause of the failure.\\n \\nAfter \
+the Backup Server configuration process is complete\, auditinit will display a \
+message indicating the configuration succeeded.",	 ""
+380		= "Enter the name of the new Backup Server (default is '%%s'): ",	 ""
+381		= "Backup Server name: ",	 ""
+382	= "Configure a new Backup Server",	 ""
+383	= "Configure an existing Backup Server",	 ""
+400		= "Enter the pathname of the Backup Server's errorlog (default is '%%s'): ",	 ""
+401	= "Backup Server errorlog: ",	 ""
+402	= "Enter / Modify Backup Server interfaces file information",	 ""
+440		= "Enter the pathname of the Backup Server's quota file (default is '%%s'): ",	 ""
+441	= "Backup Server quota file: ",	 ""
+450	= "Execute the Backup Server configuration now? ",  ""
+451		= "There is no interfaces file entry for '%1!'.  Please create an interfaces entry for '%1!' before attempting to execute the configuration.",        "%s %s"
+460		= "Backup Server language: ",	 ""
+461	= "Backup Server character set: ",	 ""
+462		= "BACKUP SERVER LANGUAGE",	""
+463		= "",	""
+464		= "",	""
+465		= "",	""
+466	= "Current Backup Server language: ",	""
+467		= "",	""
+468		= "",	""
+469		= "BACKUP SERVER CHARACTER SET",	""
+470		= "",	""
+471	= "",	""
+472	= "",	""
+473	= "Current Backup Server character set: ",	""
+474		= "",	""
+475	= "",	""
+476		= "Enter the pathname of the Backup Server's tape configuration file (default is '%%s'): ",  ""
+477		= "Backup Server tape configuration file:",	""
+500 		= "Backup server '%1!' has been configured. The new configuration will become effective when Backup server is started next time. ",	"%s"
+501 	= "update Backup Server entry in registry",	"" 	
+502	= "could not create Service Control Manager entry for Backup Server '%1!'. Operating system returned error: '%2!'",	"%s%s"
+; End of section.

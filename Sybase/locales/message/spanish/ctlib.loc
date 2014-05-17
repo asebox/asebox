@@ -1,0 +1,887 @@
+; comment character is semicolon.
+
+
+
+; "ctlib.loc" - Localization file for Client-Library.
+;
+; Sccsid @(#) ctlib.loc 1.6 11/5/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library Default Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdefaults]
+
+1 = ZZZZZ, "no es posible obtener la cadena por falta de memoria"
+
+2 = ZZZZZ, "no es posible obtener la cadena de mensaje de nivel"
+
+3 = ZZZZZ, "no es posible obtener la cadena de mensaje de origen"
+
+4 = ZZZZZ, "cadena de error no disponible"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Client-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctlayer]
+
+1 = ZZZZZ, "nivel api de usuario"
+
+2 = ZZZZZ, "nivel api de usuario"
+
+3 = ZZZZZ, "nivel de protocolo genérico"
+
+4 = ZZZZZ, "nivel de protocolo específico"
+
+5 = ZZZZZ, "nivel de paquetes de red"
+
+6 = ZZZZZ, "nivel del servicio de directorios"
+ 
+7 = ZZZZZ, "nivel del servicio de seguridad"
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitions.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctorigin]
+
+1 = ZZZZZ, "error externo"
+
+2 = ZZZZZ, "error interno en la librería cliente"
+
+3 = ZZZZZ, "error interno en la librería de red"
+
+
+
+4 = ZZZZZ, "error interno en la librería común"
+
+5 = ZZZZZ, "error interno en la librería intl"
+
+6 = ZZZZZ, "error interno en el administrador asíncrono"
+
+7 = ZZZZZ, "error interno en la gestión de memoria"
+
+8 = ZZZZZ, "error de nivel de control interno de directorios"
+ 
+9 = ZZZZZ, "error de nivel de control interno de seguridad"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctapierror]
+
+0 = ZZZZZ, "Validación de estado correcta."
+
+1 = ZZZZZ, "La información que se está recuperando no se podrá almacenar en un buffer de %1! bytes."
+
+
+2 = ZZZZZ, "Imposible asignar memoria."
+
+3 = 22023, "El parámetro %1! no puede ser NULL."
+
+
+4 = 22023, "Si %1! es NULL, el parámetro %2! debe ser 0."
+
+
+5 = 22023, "Valor incorrecto de %1! para el parámetro %2!."
+
+
+6 = 08000, "Ya está abierto el número máximo de conexiones."
+
+
+7 = ZZZZZ, "El servidor no soporta la función KEEP_CON."
+
+
+8 = 22023, "El parámetro %1! debe ser NULL."
+
+
+9 = 22023, "El parámetro %1! se debe definir como CS_UNUSED."
+
+
+10 = 22023, "Los valores booleanos se deben definir como CS_TRUE o CS_FALSE."
+
+
+11 = ZZZZZ,	"No se puede instalar un CS_SIGNAL_CB porque la plataforma no soporta las E/S de red controladas por interrupciones."
+
+
+12 = ZZZZZ,	"No se puede instalar un CS_COMPLETION_CB porque la plataforma no ofrece las funciones de sondeo o interrupción necesarias."
+
+
+13 = ZZZZZ,	"Esta propiedad no se puede definir después de haber establecido una conexión con un servidor."
+
+
+14 = ZZZZZ,	"No se puede definir esta propiedad/función."
+
+
+15 = ZZZZZ,	"Es necesario estar conectado a un servidor para obtener esta propiedad/función."
+
+
+16 = ZZZZZ, "No se puede llamar esta rutina mientras hayan resultados pendientes de un comando enviado al servidor."
+
+
+17 = 36001, "La estructura de comando ya soporta un cursor declarado."
+
+
+18 = 24000,	"Se debe declarar un cursor antes de poder inicializar este tipo de comando."
+
+
+19 = ZZZZZ,	"Esta rutina sólo se puede llamar tras haber inicializado un comando CS_SEND_DATA_CMD."
+
+
+20 = ZZZZZ,	"Se debe inicializar un comando antes de poder llamar esta rutina."
+
+
+21 = ZZZZZ,	"No se puede utilizar esta rutina mientras esté declarado un cursor en la estructura de comando."
+
+
+22 = 24000,	"Ya se ha declarado un cursor en esta estructura de comando."
+
+
+23 = 24000,	"El comando no puede inicializarse después de haber abierto el cursor."
+
+
+24 = 24000,	"Ya se ha abierto el cursor en esta estructura de comando."
+
+
+25 = 24000,	"No se permiten actualizaciones ni supresiones de cursor cuando ct_fetch() ha devuelto CS_END_DATA."
+
+
+26 = ZZZZZ,	"Ya se ha inicializado un comando en esta estructura de comando."
+
+
+27 = ZZZZZ,	"El comando inicializado no puede tener parámetros."
+
+
+28 = ZZZZZ,	"Ya se ha inicializado un comando."
+
+
+29 = ZZZZZ,	"Este tipo de comando no puede procesarse por lotes con el comando ya inicializado en la estructura de comando."
+
+
+30 = ZZZZZ, "Se debe extraer una fila antes de poder utilizar esta rutina."
+
+
+31 = 36001,	"No se puede inicializar un comando de filas de cursor después de inicializar un comando de apertura de cursor."
+
+
+32 = 08000,	 "Las capacidades de la conexión no soportan este tipo de solicitud."
+
+
+33 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_CURSOR_RESULT."
+
+
+34 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_CMD_DONE."
+
+
+35 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_COMPUTE_RESULT."
+
+
+36 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_COMPFMT_RESULT."
+
+
+37 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_MSG_RESULT."
+
+
+38 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_PARAM_RESULT."
+
+
+39 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_ROWFMT_RESULT."
+
+
+40 = ZZZZZ, "No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_CMD_FAIL."
+
+
+41 = ZZZZZ, "No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_CMD_SUCCEED."
+
+
+42 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_ROW_RESULT."
+
+
+43 = ZZZZZ,	"No se puede llamar esta rutina cuando ct_results() ha devuelto un tipo de resultado CS_STATUS_RESULT."
+
+
+44 = ZZZZZ,	"No se puede llamar esta rutina porque una operación asíncrona está pendiente."
+
+
+45 = ZZZZZ,	"Error interno en el nivel api de usuario."
+
+
+46 = 22023,	"Valor incorrecto de %1! en el campo %2! de la estructura CS_DATAFMT."
+
+
+47 = ZZZZZ,	"Al definir parámetros, se debe dar un nombre a todos ellos o no darlo a ninguno."
+
+
+48 = ZZZZZ,	"El servidor no soporta parámetros de tipo %1!."
+
+
+49 = ZZZZZ,	"No se puede llamar esta rutina porque otra estructura de comando tiene resultados pendientes."
+
+
+50 = ZZZZZ,	"La conexión se ha marcado como inactiva."
+
+
+51 = 22023,	"Exactamente uno de %1! y de %2! no debe ser NULL."
+
+
+52 = ZZZZZ,	"La gestión de errores en fila se debe inicializar con la operación CS_INIT antes de llevar a cabo cualquier otra acción ct_diag()."
+
+
+53 = ZZZZZ,	"No hay suficiente memoria disponible para guardar mensajes. Todos los mensajes almacenados anteriormente se han borrado."
+
+
+54 = ZZZZZ,	"La gestión de errores en fila ya se ha inicializado para esta estructura de conexión."
+
+
+55 = ZZZZZ,	"ADVERTENCIA: Se han eliminado los gestores de error y de mensaje existentes."
+
+
+56 = ZZZZZ,	"El límite de mensajes no puede ser un valor inferior al número de mensajes del servidor o de la librería cliente actualmente guardados."
+
+
+
+57 = ZZZZZ,	"Un resultado de tipo %1! no se puede asociar a una variable de programa de tipo %2!."
+
+
+58 = 22023,	"El campo de formato de la estructura CS_DATAFMT debe ser CS_FMT_UNUSED si el campo del tipo de datos es %1!."
+
+
+59 = 22023,	"Si el parámetro del buffer es NULL, el parámetro %1! también debe ser NULL."
+
+
+60 = ZZZZZ,	"Error de sintaxis. Se ha llamado esta rutina en un momento indebido."
+
+
+61 = ZZZZZ,	"El elemento de %1! no es mayor que el elemento asociado más grande."
+
+
+62 = ZZZZZ,	"El elemento %1! ya se ha leído."
+
+
+63 = ZZZZZ,	"El tiempo de lectura por el servidor ha expirado."
+
+
+64 = ZZZZZ,	"La opción para especificar archivos de depuración no existe todavía. Toda la información de depuración se enviará a stdout."
+
+
+65 = ZZZZZ,	"El tipo de información de seguimiento solicitado no existe todavía."
+
+
+66 = ZZZZZ,	"Se debe proporcionar una estructura de contexto al definir/borrar este tipo de información de depuración."
+
+
+67 = ZZZZZ,	"Se debe proporcionar una estructura de conexión al definir/borrar este tipo de información de depuración."
+
+68 = ZZZZZ,	"Descriptor no encontrado."
+
+69 = ZZZZZ,	"Ya existe en la conexión un descriptor con el nombre %1!"
+
+70 = 07008,	"El número de descriptores %1! no es posible porque es superior al número máximo de %2!."
+
+72 = ZZZZZ,	"El descriptor %1! ya se ha asociado a una estructura de comando."
+
+73 = 22023,	"El campo %1! de la estructura CS_DATAFMT se debe definir como CS_UNUSED."
+
+74 = 22023,	"Si %1! es NULL, el campo %2! de la estructura CS_DATAFMT debe ser 0."
+
+75 = 07001, "Se encontraron parámetros incoherentes en el descriptor dinámico cuando se utilizó como parámetros de entrada a un comando. Se deben definir todos los valores del descriptor."
+
+76 = 07001,	"Se encontraron nombres de parámetros incoherentes en el descriptor dinámico cuando se utilizó como parámetros de entrada a un comando. Se debe dar un nombre de parámetro a todos los elementos o no darlo a ninguno."
+
+77 = ZZZZZ,	"Se está utilizando un descriptor dinámico para los parámetros de entrada; por lo tanto, no se puede llamar ct_param()."
+
+78 = 02000,	"No hay filas afectadas."
+
+79 = 22003, "El enlace del elemento conjunto de resultados %1! provocó un desbordamiento."
+
+80 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! provocó un subdesbordamiento."
+
+81 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! falló porque se especificó un valor de precisión incorrecto."
+
+82 = ZZZZZ,	"El enlace del elemento conjunto de resultados %1! falló porque se especificó un valor de escala incorrecto."
+
+83 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! falló debido a un error de sintaxis en los datos de origen."
+
+84 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! falló debido a un valor incorrecto en el campo de formato de una estructura CS_DATAFMT."
+
+85 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! falló porque el valor del campo de origen no estaba dentro del margen de valores válidos."
+
+86 = 22012, "El enlace del elemento conjunto de resultados %1! falló porque se intentó dividir por cero."
+
+87 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! falló porque la librería cliente no podía obtener un recurso."
+
+88 = ZZZZZ, "El enlace del elemento conjunto de resultados %1! falló. Se desconoce la causa."
+
+89 = 22002, "Los datos de la columna %1! son NULL, pero ningún indicador estaba disponible."
+
+90 = 01004, "Los datos de la columna %1! se truncaron pero ningún indicador estaba disponible."
+
+91 = ZZZZZ, "Se perdió el enlace de la columna %1!."
+
+92 = ZZZZZ,	"Se debe definir una estructura CS_IODESC con ct_data_info() antes de poder llamar ct_send_data()."
+
+93 = ZZZZZ, "Hay %1! bytes más que la cantidad de bytes especificada para esta operación de envío de datos. Sólo se pueden enviar %2! bytes más."
+
+94 = ZZZZZ, "No se ha enviado el número de bytes especificado para esta operación de envío de datos. Falta enviar %1! bytes más."
+
+95 = 22001, "El valor %1! se truncó."
+
+96 = ZZZZZ, "No se dispone de información de examen."
+
+97 = ZZZZZ,	"Sólo puede recuperarse un CS_IODESC para columnas de texto o imagen. La columna %1! no es una columna de texto o imagen."
+
+98 = ZZZZZ,	"No se puede recuperar un CS_IODESC para una columna que no se ha leído. La columna %1! no se ha leído."
+
+99 = 0A000,	"Las funciones no se pueden definir después de haber establecido una conexión."
+
+100 = ZZZZZ, "Las funciones solicitadas no se pueden definir."
+
+101 = ZZZZZ, "Fallo al inicializar el caché de error de la librería cliente."
+
+102 = 0A000, "El servidor no acepta esta opción."
+
+103 = ZZZZZ, "Esta rutina sólo se puede llamar si la propiedad CS_HIDDEN_KEYS se ha definido como CS_TRUE."
+
+104 = ZZZZZ, "Este mensaje no debe verse."
+
+105 = ZZZZZ, "Fallo inesperado mientras se recuperaban datos clave."
+
+106 = ZZZZZ, "La columna %1! no es una columna clave."
+
+107 = ZZZZZ, "La columna %1! no puede ser nula. Los datos clave de una columna pueden ser NULL sólo si la columna acepta valores NULL."
+
+108 = ZZZZZ, "Los datos clave de la columna %1! superan la longitud máxima definida para la columna."
+
+109 = ZZZZZ, "Fallo inesperado mientras se definían datos clave."
+
+110 = 07008, "El conteo del descriptor no es válido." 
+
+111 = ZZZZZ, "Este mensaje no debe verse."
+
+112 = 00000, "%1! filas afectadas."
+
+113 = ZZZZZ, "La estructura de comando asignada a esta rutina contiene datos de notificación o datos de error extendidos. Esta rutina no acepta dicha estructura de comando."
+
+114 = ZZZZZ, "No existen datos de error extendidos para el mensaje %1!."
+
+115 = ZZZZZ, "No se puede definir una contraseña remota si hay una conexión con un servidor."
+
+116 = ZZZZZ, "La combinación de nombre/servidor proporcionada supera el límite de 255 bytes que impone la librería cliente."
+
+117 = ZZZZZ, "La propiedad CS_DISABLE_POLL se debe definir como CS_FALSE cuando se llame esta rutina."
+
+118 = ZZZZZ, "No es posible abrir el archivo %1!."
+
+119 = 22023, "Los datos deben ser NULL cuando se definen parámetros CS_INPUTVALUE para un comando ct_cursor(CS_CURSOR_DECLARE)."
+
+120 = 22023, "El buffer debe ser NULL si el conjunto de resultados actual sólo contiene información de formato."
+
+121 = ZZZZZ, "No existen datos asociados al elemento de descriptor %1!."
+
+122 = ZZZZZ, "Los resultados se están cargando en este descriptor. Un conteo de descriptor de %1! es menor que el tamaño del conjunto de resultados de %2!."
+
+123 = ZZZZZ, "Ya se ha especificado un descriptor para el comando actual."
+
+124 = ZZZZZ, "Ya se ha utilizado ct_param() para definir parámetros para el comando."
+
+125 = ZZZZZ, "Un descriptor de tamaño %1! no es bastante grande para un conjunto de resultados de tamaño %2!."
+
+126 = ZZZZZ, "Otra estructura de comando está utilizando el descriptor."
+
+127 = ZZZZZ, "No se puede llamar esta rutina si ya se ha llamado ct_bind() para el conjunto de resultados."
+
+128 = 22023, "El campo de tipo de datos de un CS_IODESC debe ser CS_TEXT_TYPE o CS_IMAGE_TYPE."
+
+129 = 22023, "Localización incorrecta en la estructura %1!."
+
+130 = 22023, "Escala o precisión incorrecta en el valor CS_NUMERIC o CS_DECIMAL."
+
+131 = ZZZZZ, "No se puede definir o borrar una agrupación de memoria si existen conexiones abiertas en la estructura de contexto."
+
+132 = 22001, "El enlce del elemento conjunto de resultados %1! se truncó."
+
+133 = 02000, "No hay filas afectadas. Seguirán más conjuntos de resultados."
+
+134 = ZZZZZ, "La ID especificada ya existe en esta conexión."
+
+135 = ZZZZZ, "La ID especificada no existe en esta conexión."
+
+136 = 22023, "Una cadena de longitud 0 no es posible para el parámetro %1!."
+
+137 = ZZZZZ, "Un conteo de enlace de %1! no es coherente con el conteo de los enlaces existentes. El conteo de enlaces actual es %2!."
+
+138 = ZZZZZ, "Una longitud de datos de %1! es superior a la longitud máxima permitida para datos %2!."
+
+139 = ZZZZZ, "La definición de la precisión o escala sólo puede ser CS_SRC_VALUE si la correspondiente columna de conjunto de resultados es de tipo numérico o decimal."
+
+140 = ZZZZZ, "La escala no puede ser un valor mayor que el de la precisión."
+
+141 = 22023, "%1! debe ser 0 o CS_UNUSED si %2! es NULL."
+
+142 = ZZZZZ, "Esta propiedad sólo se puede utilizar en la función de callback de la librería CT. Esta propiedad no se puede utilizar en el código de fila principal."
+
+143 = ZZZZZ, "El número máximo de conexiones no puede ser un valor inferior al número de conexiones existentes actualmente."
+
+144 = ZZZZZ, "Esta propiedad sólo se puede utilizar si existe un cursor en la estructura de comando."
+
+145 = ZZZZZ, "Esta propiedad no se puede definir cuando la estructura de comando tiene resultados pendientes o un cursor abierto."
+
+146 = ZZZZZ, "La estructura CS_LOCALE proporcionada no es válida."
+
+147 = ZZZZZ, "Esta rutina sólo se puede utilizar con la versión de depuración de la librería cliente."
+
+148 = ZZZZZ, "El administrador asíncrono de la librería cliente no pudo continuar. Esta conexión se ha marcado como inactiva."
+
+149 = ZZZZZ, "La clave de la fila actual se definió parcialmente con ct_keydata(). Cada columna clave se debe definir con ct_keydata() antes de que esta operación pueda continuar."
+
+150 = ZZZZZ, "No se puede llamar esta rutina porque la estructura de contexto está en un estado no definido. Probablemente se deba a un fallo en ct_exit()." 
+
+151 = ZZZZZ, "Debe existir una conexión con el servidor en la estructura de conexión para poder llamar esta rutina." 
+
+152 = ZZZZZ, "Una estructura de comando es necesaria para una operación CS_CANCEL_CURRENT."
+
+153 = ZZZZZ, "No se puede llamar esta rutina mientras exista una conexión con un servidor en la estructura CS_CONNECTION."
+
+154 = ZZZZZ, "No se puede llamar esta rutina porque la estructura de conexión está en un estado no definido." 
+
+155 = ZZZZZ, "No se puede llamar esta rutina mientras la estructura de comando esté inactiva."
+
+156 = ZZZZZ, "No se puede llamar esta rutina mientras no se haya enviado un comando inicializado."
+
+157 = ZZZZZ, "No se puede llamar esta rutina si ct_results() no ha recogido el comando que se envió al servidor."
+
+158 = ZZZZZ, "Esta rutina sólo se puede llamar si existen resultados extraíbles que leer."
+
+159 = ZZZZZ, "Esta rutina sólo se puede llamar si la estructura de comando está inactiva."
+
+160 = ZZZZZ, "Esta rutina sólo se puede llamar si hay filas de cursor que leer."
+
+161 = ZZZZZ, "Esta rutina sólo se puede llamar si existen resultados de fila normales."
+
+162 = ZZZZZ, "Una operación passthru de recepción no será válida mientras la conexión esté en pleno procesamiento de resultados en modo estándar."
+
+163 = 21000, "No se puede llamar esta rutina hasta que no se hayan procesado completamente todos los resultados extraíbles."
+
+164 = ZZZZZ, "Esta rutina sólo se puede llamar si los resultados calculados están disponibles."
+
+165 = ZZZZZ, "No se puede llamar esta rutina si se ha inicializado un comando de cursor anidado."
+
+166 = ZZZZZ, "No se puede llamar esta rutina mientras no se hayan procesado completamente los resultados de un comando de cursor anidado."
+
+167 = ZZZZZ, "No se puede llamar esta rutina porque la estructura de comando está en un estado no definido." 
+
+168 = ZZZZZ, "No se puede llamar esta rutina porque está realizándose una operación passthru de recepción en esta estructura de comando."
+
+169 = ZZZZZ, "No se puede llamar esta rutina porque está realizándose una operación passthru de envío en esta estructura de comando."
+
+170 = ZZZZZ, "No se puede llamar esta rutina después de que ct_results() haya devuelto un tipo de resultados de CS_DESCRIBE_RESULT."
+
+171 = 24000, "Debe abrirse un cursor antes de poder inicializar este tipo de comando."
+
+172 = ZZZZZ, "No se puede llamar esta rutina porque la estructura CS_COMMAND está enviando datos."
+
+173 = ZZZZZ, "Debe enviarse un estado de retorno de CS_PENDING desde una función de callback terminada si se han inicializado operaciones asíncronas adicionales."
+
+174 = ZZZZZ, "Se debe proporcionar una estructura de contexto al definir/borrar este tipo de función de callback."
+
+175 = ZZZZZ, "No se ha instalado ningún gestor de función de callback para la señal %1!."
+
+176 = ZZZZZ, "El servidor no reconoce parámetros nulos de tipo %1!."
+
+177 = 22023, "La longitud del parámetro de la cadena terminado por un valor nulo %1! suepra la longitud máxima permitida."
+
+178 = ZZZZZ, "No se puede llamar esta rutina mientras no se haya realizado al menos una llamada de ct_send_data()."
+
+179 = 24000, "Se debe extraer una fila de cursor antes de poder inicializar este comando."
+
+180 = ZZZZZ, "Este comando debe ejecutarse inmediatamente después de inicializar un comando CS_CURSOR_DECLARE."
+
+181 = 24000, "Este comando no está autorizado cuando el cursor está cerrado."
+
+182 = 24000, "Este comando no está autorizado cuando se han extraído todas las filas del cursor."
+
+183 = ZZZZZ, "El servidor devolvió un error al definir las opciones. Consulte el mensaje del servidor para obtener detalles."
+
+184 = 00ZZZ, "Los enlaces persistentes no coinciden con el conjunto de resultados actual. Se han ignorado estos vínculos para todos los conjuntos de resultados."
+
+185 = ZZZZZ, "La propiedad CS_STICKY_BINDS no puede definirse en estructuras CS_COMMAND que contienen datos de error extendidos o datos de notificación de eventos."
+
+186 = ZZZZZ, "No se asoció el conjunto de resultados actual. Los enlaces persistentes que existían se ignoraron porque no coincidían con el conjunto de resultados actual."
+ 
+187 = ZZZZZ, "Este comando no está autorizado. Se espera ct_command con CS_END."
+
+188 = ZZZZZ, "Este comando no está autorizado. Se espera ct_cursor con CS_END."
+
+189 = 01X01, "El valor de configuración (%1!) para la propiedad %2! debe ser CS_TRUE o CS_FALSE."
+
+190 = 01X02, "El valor de configuración (%1!) para la propiedad %2! no es un entero."
+
+191 = ZZX03, "La conexión falló debido a la falta de datos de configuración externa o a datos incorrectos."
+
+192 = ZZZZZ, "El valor de sd_sqld es mayor que sd_sqln y la operación es %1!."
+
+193 = ZZZZZ, "El valor de sd_sqld es negativo y la operación es %1!."
+
+194 = ZZZZZ, "El valor de sd_sqln es negativo."
+
+195 = ZZZZZ, "El número de columnas en el conjunto de resultados, %1!, supera el número posible de columnas, %2!, para la estructura SQLDA suministrada."
+
+196 = ZZZZZ, "Este comando sólo está autorizado cuando hay resultados de descripción pendientes."
+
+197 = ZZZZZ, "El objeto del servicio de directorios indicado es incorrecto."
+
+198 = ZZZZZ, "El servicio de seguridad solicitado no es soportado."
+ 
+199 = 22023, "La longitud del comando supera el número máximo %1! para esta operación."
+
+200 = ZZZZZ, "La última consulta provocó un interbloqueo o un bloqueo de tiempo límite. Consulte el mensaje del servidor para más detalles."
+
+201 = ZZZZZ, "FAILOVERHA: Intento de conexión al servidor %1!."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+202 = 00ZZZ, "El servidor no admite CS_IMPLICIT_CURSOR. La declaración de cursor ha cambiado a CS_READ_ONLY." 
+
+;
+; The Generic Protocol Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctgperror]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The TDS Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+[cttdserror]
+
+1 = ZZZZZ, "Error de protocolo tds. Finalización anticipada del flujo de datos." 
+
+2 = ZZZZZ, "Error de protocolo tds. Se recibió una versión tds incorrecta." 
+
+3 = ZZZZZ, "Error de protocolo tds. Se recibió un estado de conexión incorrecto." 
+
+4 = ZZZZZ, "Error de protocolo tds. Hay demasiados bytes en el flujo de datos." 
+
+5 = ZZZZZ, "Error de asignación de memoria."
+
+6 = ZZZZZ, "Error de protocolo tds. Se encontró una ALT ID duplicada durante el procesamiento de resultados." 
+
+7 = ZZZZZ, "Error de protocolo tds. Se encontró un operador ALT incorrecto durante el procesamiento de resultados." 
+
+8 = ZZZZZ, "Error de protocolo tds. Se encontró una ALT id incorrecta durante el procesamiento de resultados." 
+
+9 = ZZZZZ, "Error de protocolo tds. Se encontró un conteo de columnas ALT incorrecto durante el procesamiento de resultados." 
+
+10 = ZZZZZ, "Error de protocolo tds. Se encontró un número de columnas incorrecto durante el procesamiento de resultados." 
+
+11 = ZZZZZ, "Error de protocolo tds. Se encontró un índice de tabla incorrecto durante el procesamiento de resultados." 
+
+12 = ZZZZZ, "Error de protocolo tds. Se recibió un estado de examen incorrecto." 
+
+13 = ZZZZZ, "Error de protocolo tds. Se recibió un tipo de función incorrecto." 
+
+14 = 34000, "Error de protocolo tds. Se recibió un nombre de cursor incorrecto." 
+
+15 = ZZZZZ, "Error de protocolo tds. Se recibió una ID de cursor duplicada." 
+
+16 = ZZZZZ, "Error de protocolo tds. Se recibió una ID de cursor incorrecta." 
+
+17 = ZZZZZ, "Error de protocolo tds. Se recibió un conteo de filas de cursor incorrecto." 
+
+18 = 24000, "Error de protocolo tds. Se recibió un estado de cursor incorrecto." 
+
+19 = ZZZZZ, "Error de protocolo tds. Se recibió un estado DONE incorrecto." 
+
+20 = ZZZZZ, "Error de protocolo tds. Se recibió un flujo de testigos DONEINPROC incorrecto." 
+
+21 = ZZZZZ, "Error de protocolo tds. Se recibió un estado dinámico incorrecto." 
+
+22 = ZZZZZ, "Error de protocolo tds. Se recibió una longitud de instrucción dinámica incorrecta." 
+
+23 = 07000, "Error de protocolo tds. Se recibió un tipo dinámico incorrecto." 
+
+24 = ZZZZZ, "Error de protocolo tds. Se recibió una ID dinámica incorrecta." 
+
+25 = ZZZZZ, "Error de protocolo tds. Se recibió un tamaño de paquete incorrecto." 
+
+26 = ZZZZZ, "Error de protocolo tds. Se recibió un tipo ENVCHANGE incorrecto." 
+
+27 = ZZZZZ, "Error de protocolo tds. Se recibió un estado de mensaje incorrecto." 
+
+28 = ZZZZZ, "Error de protocolo tds. Se recibió una señal incorrecta." 
+
+29 = ZZZZZ, "Error de protocolo tds. Se recibió una opción de comando incorrecto." 
+
+30 = ZZZZZ, "Error de protocolo tds. Se recibió un tipo de opción incorrecto." 
+
+31 = ZZZZZ, "Error de protocolo tds. Se recibió un flujo orderby incorrecto." 
+
+32 = ZZZZZ, "Error de protocolo tds. Se recibió un PARAMFMT sin parámetros especificados." 
+
+33 = ZZZZZ, "Error de protocolo tds. Se recibió un flujo PARAMFMT incorrecto." 
+
+34 = ZZZZZ, "Error de protocolo tds. Se recibió un ROWFMT sin columnas especificadas." 
+
+35 = ZZZZZ, "Error de protocolo tds. Se recibió un flujo ROWFMT incorrecto." 
+
+36 = ZZZZZ, "Error de estado de sistema tds. Se recibió una secuencia de señal tds incorrecta." 
+
+37 = ZZZZZ, "Error de estado de sistema tds. Se intentó una operación con resultados pendientes. Error interno." 
+
+38 = ZZZZZ, "Error de conexión tds. Se encontró un número de parámetros incorrecto durante la negociación." 
+
+39 = ZZZZZ, "Error de protocolo tds. Se recibió una ID de mensaje durante la negociación de conexión." 
+
+40 = ZZZZZ, "Error de protocolo tds. Se recibió un estado de columna incorrecto." 
+
+41 = ZZZZZ, "Error de protocolo tds. Se recibió un tipo de datos incorrecto." 
+
+42 = ZZZZZ, "Error de protocolo tds. Se recibió una precisión numérica incorrecta." 
+
+43 = ZZZZZ, "Error de protocolo tds. Se recibió una escala numérica incorrecta." 
+
+44 = 08001,	"El intento de conexión con el servidor falló."
+
+45 = ZZZZZ, "Error interno del nivel tds. El acceso a la gestión del buffer de la fila falló."
+
+46 = ZZZZZ, "Error de conexión tds. El servidor intentó cifrar una contraseña, pero el gestor de cifrado no estaba instalado."
+
+47 = ZZZZZ, "Error de conexión tds. El gestor de cifrado instalado devolvió un estado que no era CS_SUCCEED."
+
+48 = ZZZZZ, "Error de conexión tds. El servidor intentó emitir una verificación de seguridad, pero no estaba instalado un gestor de seguridad."
+
+49 = ZZZZZ, "Error de conexión tds. El gestor de seguridad devolvió un estado que no era CS_SUCCEED."
+
+50 = ZZZZZ, "Error interno de nivel tds. El servidor devolvió un error durante el procesamiento de un flujo tds interno."
+
+51 = ZZZZZ, "Error interno de nivel tds. La librería común devolvió un error inesperado."
+
+52 = ZZZZZ, "Error interno de nivel tds. El administrador asíncrono devolvió un error inesperado."
+
+53 = ZZZZZ, "Error de uso de seguridad. Debe definirse la función de callback de sesión de seguridad para una sesión de seguridad directa"
+ 
+54 = ZZZZZ, "Servicio de seguridad incorrecto para el mecanismo especificado"
+
+55 = ZZZZZ, "Se recibió un testigo de seguridad inesperado del servidor. Error interno o del servidor" 
+ 
+56 = ZZZZZ, "La información sobre enlace de canales no está disponible."
+ 
+57 = ZZZZZ, "Se recibió un testigo de seguridad erróneo"
+ 
+58 = ZZZZZ, "Fallo de la función de callback de sesión de seguridad"
+ 
+59 = ZZZZZ, "Número incorrecto de parámetros en el mensaje de seguridad recibido." 
+ 
+60 = ZZZZZ, "Error interno de seguridad inesperado." 
+ 
+61 = ZZZZZ, "El servicio de seguridad solicitado no es reconocido." 
+ 
+63 = ZZZZZ, "Hay un error de capa tds interna. El servidor no puede gestionar máscaras de capacidad de gran tamaño."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Network Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctnperror]
+
+1 = 01002, "Error durante el cierre de la conexión."
+
+2 = ZZZZZ, "Error durante la liberación de la dirección."
+
+3 = ZZZZZ, "Error durante la determinación de la dirección."
+
+4 = 08001, "Error durante el establecimiento de la conexión."
+
+5 = ZZZZZ, "Error durante la ejecución de aceleración de la escritura."
+
+6 = ZZZZZ, "Error durante la ejecución de la lectura de la red."
+
+7 = ZZZZZ, "Error durante la ejecución de la escritura de la red."
+
+8 = ZZZZZ, "Error durante la apertura del diccionario de direcciones."
+
+9 = ZZZZZ, "Error durante el cierre del diccionario de direcciones."
+
+10 = ZZZZZ, "Se intentó leer en una conexión que ya estaba ejecutando una lectura."
+
+11 = ZZZZZ, "Se intentó escribir en una conexión que ya estaba ejecutando una escritura."
+
+12 = ZZZZZ, "Error de estado: intento de escribir cuando la conexión espera una lectura."
+
+13 = ZZZZZ, "Error de estado: intentp de leer cuando la conexión espera una escritura."
+
+14 = ZZZZZ, "El buffer es demasiado pequeño para contener todo el paquete."
+
+15 = ZZZZZ, "Lectura en la red cuando hay datos no procesados de la última lectura."
+
+16 = ZZZZZ, "Error durante la obtención de informaciones de dirección."
+
+17 = ZZZZZ, "Error durante la obtención de la propiedad de dirección."
+
+18 = ZZZZZ, "Error en el paquete de protocolo. Se recibió una longitud incorrecta."
+
+19 = ZZZZZ, "Error de seguridad. Las credenciales de seguridad vencieron."
+ 
+20 = ZZZZZ, "Error de seguridad. La sesión de seguridad venció"
+ 
+21 = ZZZZZ, "Error de protocolo de seguridad. Se recibió un paquete TDS con información de seguridad incorrecta."
+ 
+22 = ZZZZZ, "Error de seguridad. Se recibió un testigo de seguridad con una versión de seguridad errónea."
+ 
+23 = ZZZZZ, "Error de seguridad. Fallo de la rutina de señal."
+ 
+24 = ZZZZZ, "Error de seguridad. Fallo de la verificación de firma."
+ 
+25 = ZZZZZ, "Error de seguridad. Fallo de la rutina de cierre."
+ 
+26 = ZZZZZ, "Error de seguridad. Fallo de la rutina de apertura."
+ 
+27 = ZZZZZ, "Error interno de seguridad inesperado."
+
+128 = ZZZZZ, "Error durante la inicialización del mantenimiento de registros de las opciones de red."
+
+129 = ZZZZZ, "Error durante la definición de una opción de red."
+
+130 = ZZZZZ, "no utilizado."
+
+131 = ZZZZZ, "Error durante la inicialización de Net-Library."
+
+132 = ZZZZZ, "Error durante la inicialización del programa Net-Library."
+
+133 = ZZZZZ, "Error durante la función de callback de Net-Library."
+
+134 = ZZZZZ, "Error al salir del programa Net-Library."
+
+135 = ZZZZZ, "Error al salir de Net-Library."
+
+136 = ZZZZZ, "Error al definir el modo de función de callback de Net-Library."
+
+137 = ZZZZZ, "Error durante el encadenamiento de señales en Net-Library."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Directory Service Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdserror]
+ 
+1 = ZZZZZ, "Error al realizar el enlace con el servicio de directorios."
+ 
+2 = ZZZZZ, "Error al realizar el desenlace del servido de directorios."
+ 
+3 = ZZZZZ, "Error al leer el servicio de directorios."
+ 
+4 = ZZZZZ, "Error al asignar una sesión del servicio de directorios."
+ 
+5 = ZZZZZ, "Error al suprimir una sesión de servicio de directorios."
+ 
+6 = ZZZZZ, "Error al manipular una propiedad de sesión."
+ 
+7 = ZZZZZ, "Error al ejecutar una búsqueda de directorios."
+ 
+8 = ZZZZZ, "El número de atributo suministrado estaba fuera de alcance."
+ 
+9 = ZZZZZ, "Se suministró un identificador de información incorrecto."
+ 
+10 = ZZZZZ, "Error al suprimir un objeto de directorio."
+ 
+128 = ZZZZZ, "Error al inicializar el nivel de control de directorios."
+ 
+129 = ZZZZZ, "Error al salir del nivel de control de directorios."
+ 
+130 = ZZZZZ, "no utilizado."
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Security Service Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+[ctsserror]
+ 
+1 = ZZZZZ, "Error al realizar el enlace con un servicio de seguridad"
+ 
+2 = ZZZZZ, "Error al realizar el desenlace de un servicio de seguridad"
+ 
+4 = ZZZZZ, "Error al asignar un contexto de sesión de seguridad"
+ 
+5 = ZZZZZ, "Error al suprimir un contexto de sesión de seguridad"
+ 
+6 = ZZZZZ, "Error al manipular una propiedad de sesión de seguridad"
+ 
+7 = ZZZZZ, "Error al asignar un control de credenciales de seguridad"
+ 
+8 = ZZZZZ, "Error al adquirir una credencial de seguridad establecida"
+ 
+9 = ZZZZZ, "Error al suprimir un gestor de credenciales de seguridad"
+ 
+10 = ZZZZZ, "Error al manipular una propiedad de credenciales de sesión"
+ 
+11 = ZZZZZ, "Error al cambiar el mecanismo de seguridad"
+ 
+12 = ZZZZZ, "Error al asignar un gestor de mecanismos de seguridad"
+ 
+13 = ZZZZZ, "Error al suprimir el gestor de mecanismos de seguridad"
+ 
+14 = ZZZZZ, "Error al manipular una propiedad de mecanismo de seguridad"
+ 
+15 = ZZZZZ, "Error al cerrar los datos de sesión"
+ 
+16 = ZZZZZ, "Error al abrir los datos de sesión"
+ 
+17 = ZZZZZ, "Error al generar una firma cifrada"
+ 
+18 = ZZZZZ, "Error al verificar una firma cifrada"
+ 
+19 = ZZZZZ, "Error al procesar un testigo de sesión de seguridad"
+ 
+20 = ZZZZZ, "Error al intentar abandonar una sesión de seguridad"
+ 
+21 = ZZZZZ, "El servicio de seguridad especificado no es reconocido"
+ 
+128 = ZZZZZ, "Error al inicializar el nivel de control de seguridad."
+ 
+129 = ZZZZZ, "Error al salir del nivel de control de seguridad."
+ 
+130 = ZZZZZ, "Error al configurar las propiedades del nivel de control de seguridad."
+ 
+131 = ZZZZZ, "Error al asignar un gestor de credenciales del nivel de control de seguridad."
+ 
+132 = ZZZZZ, "Error al suprimir un gestor de credenciales del nivel de control de seguridad."
+ 
+133 = ZZZZZ, "Error al manipular una propiedad de credenciales del nivel de control de seguridad."
+ 
+134 = ZZZZZ, "Error al cambiar el mecanismo de seguridad."
+ 
+135 = ZZZZZ, "Error al asignar un nuevo gestor de mecanismos de seguridad."
+ 
+136 = ZZZZZ, "Error al suprimir el gestor de mecanismos de seguridad."
+ 
+137 = ZZZZZ, "Error al manipular las propiedades del mecanismo de seguridad."
+

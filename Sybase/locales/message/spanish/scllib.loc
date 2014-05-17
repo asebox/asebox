@@ -1,0 +1,332 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) scllib.loc 1.4 12/14/95
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=spanish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[scllib]
+
+1 = SCLE_DRIVER, "Error de nivel del controlador de seguridad."
+
+2 = SCLE_INITED, "SCL ya está inicializado."
+
+3 = SCLE_MEMALLOC, "Error al asignar memoria."
+
+4 = SCLE_MUTXALLOC, "Error al asignar el mutex."
+
+5 = SCLE_RMAN, "Error en la API RMAN."
+
+6 = SCLE_LMAN, "Error en la API LMAN."
+
+7 = SCLE_VERSION, "Versión de SCL-Library incorrecta."
+
+8 = SCLE_PROPCMD, "Comando de propiedad especificado incorrecto."
+
+9 = SCLE_PROPERTY, "Propiedad especificada incorrecta."
+
+10 = SCLE_PROP_RO, "Propiedad de sólo lectura."
+
+11 = SCLE_PROP_OF, "Buffer de propiedad desbordado."
+
+12 = SCLE_OPEN, "No es posible abrir el controlador de seguridad."
+
+13 = SCLE_LOAD, "No es posible cargar el controlador de seguridad."
+
+14 = SCLE_INTLHOME, "No es posible determinar el directorio local SYBASE."
+
+15 = SCLE_INTLOPEN, "No es posible abrir el archivo de configuración."
+
+16 = SCLE_INTLNOENT, "No es posible encontrar la entrada SCL en el archivo de configuración."
+
+18 = SCLE_DRVLOAD, "Error al cargar el controlador de seguridad especificado."
+
+19 = SCLE_SESSBOUND, "La sesión está enlazada."
+
+20 = SCLE_SESSUBOUND, "La sesión está desenlazada."
+
+21 = SCLE_CREDACT, "La credencial está en uso actualmente."
+
+22 = SCLE_CRED_NA, "La credencial no está ACTIVE."
+
+23 = SCLE_UNSUPPORT, "El comando no es soportado."
+
+24 = SCLE_MUTEXLOCK, "Error de llamada de bloqueo Mutex."
+
+25 = SCLE_MECHNOTFND, "No se encontró el mecanismo de seguridad especificado."
+
+26 = SCLE_CFGERR, "Error de archivo de configuración."
+
+27 = SCLE_CREDUSED, "No se eliminó el gestor de credenciales."
+
+28 = SCLE_DRIVUSED, "El controlador no se ha cerrado."
+
+29 = SCLE_MECHUSED, "No se eliminó el gestor del mecanismo de seguridad."
+
+30 = SCLE_MECHOIDNOTFND, "No se encontró la OID del mecanismo de seguridad."
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "Error al asignar memoria."
+
+2 = MSSPE_SRVNOTSUPP, "El servicio de seguridad solicitado no es soportado."
+
+3 = MSSPE_PRINCIPAL, "El nombre principal de seguridad especificado es desconocido o no es el propietario."
+
+4 = MSSPE_PROVIDER, "No se encuentra el proveedor de seguridad o error de inicialización del proveedor."
+
+5 = MSSPE_INITSTR, "Cadena de inicialización del controlador errónea."
+
+6 = MSSPE_PROPCMD, "Comando de propiedad de seguridad erróneo."
+
+7 = MSSPE_PROPNOTSUPP, "Nombre de propiedad de seguridad erróneo."
+
+8 = MSSPE_CONTEXT, "Estructura de contexto de controlador incorrecta."
+
+9 = MSSPE_OPNOTSUPP, "El punto de entrada del controlador no es soportado."
+
+10 = MSSPE_PROPVALLEN, "Longitud del buffer de valor de propiedad demasiado pequeña."
+
+11 = MSSPE_TOKEN, "Testigo de seguridad erróneo."
+
+12 = MSSPE_HANDLE, "Gestor de seguridad erróneo."
+
+13 = MSSPE_NAMETOOLONG, "El nombre de destino/principal/del mecanismo es demasiado largo."
+
+14 = MSSPE_PACKAGE, "El paquete de seguridad especificado no es soportado."
+
+15 = MSSPE_INTERNAL, "Error interno inesperado."
+
+16 = MSSPE_DENIED, "Solicitud de sesión de seguridad rechazada."
+
+17 = MSSPE_RMTNAME, "No se encuentra el nombre de destino de seguridad o no es válido."
+
+18 = MSSPE_PROVIDERERR, "Error interno del proveedor del servicio de seguridad %1!."
+
+19 = MSSPE_MSGALTERED, "Mensaje de seguridad modificado: error de verificación de firma."
+
+20 = MSSPE_MSGSEQ, "Mensaje de fuera de secuencia."
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "Error al asignar memoria."
+
+2 = NDSE_SRVNOTSUPP, "El servicio de seguridad solicitado no es soportado."
+
+3 = NDSE_PRINCIPAL, "Nombre principal especificado incorrecto."
+
+4 = NDSE_PROVIDER, "No se encuentra el proveedor de seguridad NDS o error de inicialización."
+
+5 = NDSE_INITSTR, "Cadena de inicialización errónea."
+
+6 = NDSE_PROPCMD, "Comando de propiedad de seguridad erróneo."
+
+7 = NDSE_PROPNOTSUPP, "Nombre de propiedad de seguridad erróneo."
+
+8 = NDSE_CONTEXT, "Estructura de contexto de controlador especificada errónea."
+
+9 = NDSE_OPNOTSUPP, "El punto de entrada del controlador de seguridad especificado no es soportado."
+
+10 = NDSE_PROPVALLEN, "El buffer de valor de propiedad es muy pequeño."
+
+11 = NDSE_DITBASE, "DIT Base especificada incorrecta."
+
+12 = NDSE_VERNOTSUPP, "El controlador no soporta la versión especificada."
+
+13 = NDSE_CREDS, "Credenciales o tipo de uso de credenciales incorrectos."
+
+14 = NDSE_INITDITBASE, "init DIT base incorrecta."
+
+15 = NDSE_NAMETOOLONG, "El nombre principal NDS es demasiado largo."
+
+16 = NDSE_NWCALLSINIT, "Error de la rutina NWCallsInit() NetWare (%1!)."
+
+17 = NDSE_NWDSCCTX, "Error de la rutina NWDSCreateContext() NetWare (%1!)."
+
+18 = NDSE_INIT, "Error de NDS init (%1!)."
+
+19 = NDSE_NDS, "Error de llamada NDS (%1!)."
+
+20 = NDSE_RMTNAME, "No se encuentra el nombre de destino de seguridad o no es válido."
+
+21 = NDSE_CHANNELID, "No se encuentra el identificador de canal especificado o no es válido."
+
+22 = NDSE_BIND, "Error de enlace de la sesión de seguridad."
+
+23 = NDSE_PROVIDERVER, "Discrepancia de versión del proveedor de seguridad NDS."
+
+24 = NDSE_NWDSTREE, "Nombre de árbol de directorio especificado incorrecto."
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "Error al asignar memoria."
+
+2 = DCEE_SRVNOTSUPP, "El servicio de seguridad solicitado no es soportado."
+
+3 = DCEE_PRINCIPAL, "El nombre principal de seguridad especificado es desconocido o no es el propietario."
+
+4 = DCEE_BUFOF, "Error de desbordamiento del buffer de valor de propiedad."
+
+5 = DCEE_INITSTR, "Cadena de inicialización del controlador errónea."
+
+6 = DCEE_PROPCMD, "Comando de propiedad de seguridad erróneo."
+
+7 = DCEE_PROPNOTSUPP, "Nombre de propiedad de seguridad erróneo."
+
+8 = DCEE_CONTEXT, "Estructura de contexto de controlador errónea (estado inferior %1!)."
+
+9 = DCEE_OPNOTSUPP, "El punto de entrada del controlador no es soportado."
+
+10 = DCEE_PROPVALLEN, "La longitud del buffer de valor de propiedad es muy pequeña."
+
+11 = DCEE_TOKEN, "Testigo de seguridad erróneo (estado inferior %1!)."
+
+12 = DCEE_HANDLE, "Gestor de seguridad erróneo."
+
+13 = DCEE_NAMETOOLONG, "El nombre de destino/principal/del mecanismo es demasiado largo."
+
+14 = DCEE_CHKSIGN, "Error de verificación de firma (estado inferior %1!)."
+
+15 = DCEE_INTERNAL, "Error interno inesperado."
+
+16 = DCEE_DENIED, "Solicitud de sesión de seguridad rechazada (estado inferior %1!)."
+
+17 = DCEE_RMTNAME, "No se encuentra el nombre de destino de seguridad o no es válido (estado inferior %1!)."
+
+18 = DCEE_PROVIDERERR, "Error interno del proveedor de servicios de seguridad %1!."
+
+19 = DCEE_MSGALTERED, "Mensaje de seguridad modificado: error de verificación de firma."
+
+20 = DCEE_MSGSEQ, "Mensaje de fuera de secuencia (estado inferior %1!)."
+
+21 = DCEE_BADNAMETYPE, "Tipo de nombre de seguridad erróneo(estado inferior %1!)."
+
+22 = DCEE_BADCHANBIND, "Enlaces de canal incorrectos/no coincidentes (estado inferior %1!)."
+
+23 = DCEE_CREDEXPIRED, "Credenciales referenciadas vencidas (estado inferior %1!)."
+
+24 = DCEE_BADCRED, "Error en las verificaciones de coherencia de la credencial (estado inferior %1!)."
+
+25 = DCEE_OLDTOKEN, "El testigo de seguridad especificado es demasiado antiguo para ser usado (estado inferior %1!)."
+
+26 = DCEE_DUPTOKEN, "El testigo de seguridad especificado ya se ha procesado (estado inferior %1!)."
+
+27 = DCEE_CTXTEXPIRED, "El contexto de seguridad ha expirado (estado inferior %1!)."
+
+28 = DCEE_BADNAME, "Se ha transferido un nombre de seguridad incorrecto (estado inferior %1!)."
+
+29 = DCEE_REGIDENTITY, "Error de la rutina para registrar la identidad del aceptor de contexto (estado inferior %1!)."
+
+30 = DCEE_BADMECH, "El mecanismo especificado no es soportado o no está disponible (estado inferior %1!)."
+
+31 = DCEE_BADBUF, "Buffer de seguridad erróneo (estado inferior %1!)."
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "Error al asignar memoria."
+
+2 = KRBE_SRVNOTSUPP, "El servicio de seguridad solicitado no es soportado."
+
+3 = KRBE_PRINCIPAL, "El nombre principal de seguridad especificado es desconocido o no es el propietario."
+
+4 = KRBE_BUFOF, "Error de desbordamiento del buffer de valor de propiedad."
+
+5 = KRBE_INITSTR, "Cadena de inicialización del controlador errónea."
+
+6 = KRBE_PROPCMD, "Comando de propiedad de seguridad erróneo."
+
+7 = KRBE_PROPNOTSUPP, "Nombre de propiedad de seguridad erróneo."
+
+8 = KRBE_CONTEXT, "Estructura de contexto del controlador errónea (estado inferior %1!)."
+
+9 = KRBE_OPNOTSUPP, "El punto de entrada del controlador no es soportado."
+
+10 = KRBE_PROPVALLEN, "La longitud del buffer de valor de propiedad es demasiado pequeña."
+
+11 = KRBE_TOKEN, "Testigo de seguridad erróneo (estado inferior %1!)."
+
+12 = KRBE_HANDLE, "Gestor de seguridad erróneo."
+
+13 = KRBE_NAMETOOLONG, "El nombre de destino/principal/del mecanismo es demasiado largo."
+
+14 = KRBE_CHKSIGN, "Error de verificación de firma (estado inferior %1!)."
+
+15 = KRBE_INTERNAL, "Error interno inesperado."
+
+16 = KRBE_DENIED, "Solicitud de sesión de seguridad rechazada (estado inferior %1!)."
+
+17 = KRBE_RMTNAME, "No se encuentra el nombre de destino de seguridad o no es válido (estado inferior %1!)."
+
+18 = KRBE_PROVIDERERR, "Error interno del proveedor de servicios de seguridad %1!."
+
+19 = KRBE_MSGALTERED, "Mensaje de seguridad modificado: error de verificación de firma."
+
+20 = KRBE_MSGSEQ, "Mensaje de fuera de secuencia (estado inferior %1!)."
+
+21 = KRBE_BADNAMETYPE, "Tipo de nombre de seguridad erróneo (estado inferior %1!)."
+
+22 = KRBE_BADCHANBIND, "Enlaces de canal incorrectos/no coincidentes (estado inferior %1!)."
+
+23 = KRBE_CREDEXPIRED, "Credenciales referenciadas vencidas (estado inferior %1!)."
+
+24 = KRBE_BADCRED, "Error en las verificaciones de coherencia de la credencial (estado inferior %1!)."
+
+25 = KRBE_OLDTOKEN, "El testigo de seguridad especificado es demasiado antiguo para ser usado (estado inferior %1!)."
+
+26 = KRBE_DUPTOKEN, "El testigo de seguridad especificado ya se ha procesado (estado inferior %1!)."
+
+27 = KRBE_CTXTEXPIRED, "El contexto de seguridad ha expirado (estado inferior %1!)."
+
+28 = KRBE_BADNAME, "Se transfirió un nombre de seguridad incorrecto (estado inferior %1!)."
+
+29 = KRBE_REGIDENTITY, "Error de la rutina para registrar la identidad del aceptor de contexto (estado inferior %1!)."
+
+30 = KRBE_BADMECH, "El mecanismo especificado no es soportado o no está disponible (estado inferior %1!)."
+
+31 = KRBE_BADBUF, "Buffer de seguridad erróneo (estado inferior %1!)."
+
+; end of CyberSAFE Kerberos driver error strings
+;
+

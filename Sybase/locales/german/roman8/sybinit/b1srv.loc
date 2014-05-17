@@ -1,0 +1,65 @@
+; comment character is semicolon.
+; "%M%" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	%Z% %M% %I% %G% %U%
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2004 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+2068                = "Label aller Dateien im Versionsverzeichnis einrichten", ""
+2069                = "Berechtigungen fœr die erforderlichen Programmdateien erteilen", ""
+3820                = "KONFIGURATION DER B1-PARAMETER", ""
+3821		= "", ""
+3822		= "", ""
+3823		= "", ""
+3824        = "Aktueller Wert von Data High ist:", ""
+3825                = "BestÃtigen Sie den Wert fœr Data High", ""
+3826                = "Der Wert fœr Data Low ist:", ""
+3827                = "Label fœr alle Dateien im Versionsverzeichnis einrichten", ""
+3828                = "Berechtigungen fœr die erforderlichen Programmdateien zuweisen", ""
+3829        = "Wert von Data Low eingeben", ""
+3830        = "Ist der Wert fœr Data High OK?", ""
+3831                = "Current Process Label auf den richtigen DATAHI-Wert setzen und Sybinit nochmals ausfœhren", ""
+3832        = "Angeben, ob der Wert von DATAHI richtig ist oder nicht", ""
+3833        = "ZulÃssiges Label fœr DATALO angeben", ""
+3834        = "Einrichten von Labels fœr alle Dateien im Versionsverzeichnis abschlieﬁen", ""
+3835        = "Zuweisung von Berechtigungen fœr die erforderlichen Programmdateien abschlieﬁen", ""
+3836        = "Der Wert von DATAHI kann nicht bezogen werden", ""
+3837        = "Wert fœr DATALO nicht angegeben oder falsch", ""
+3838        = "DATAHI dominiert DATALO nicht", ""
+3839        = "B1-Initialisierung wurde nicht abgeschlossen", ""
+3840        = "Wert fœr Data_Low festlegen, bevor das Setzen von Labels fœr alle Dateien im Versionsverzeichnis versucht wird", ""
+3841                = "Data_Low-Wert kann nicht ins Host-Label-Format umgewandelt werden", ""
+3842                = "Der Wert fœr Data_High kann nicht bezogen werden", ""
+3843        = "Data_High kann nicht ins Host-Label-Format umgewandelt werden", ""
+3844        = "Datei %1! nicht gefunden. Diese Datei enthÃlt die Liste der Dateien, fœr die Labels nicht gesetzt werden mœssen", "%s"
+3845                = "Datei %1! kann nicht geŒffnet werden. Berechtigungen fœr die Datei prœfen", "%s"
+3846                = "Shell-Befehl %1! %2! fehlgeschlagen", "%s %s"
+3847        = "System-Aufruf zum Setzen des Labels der Datei %1! auf %2! fehlgeschlagen", "%s %s"
+3848        = "Datei %1! nicht gefunden. Diese Datei enthÃlt die Liste der Dateien, fœr die eine Berechtigung erteilt werden muss", "%s"
+3849        = "Vertraulichkeitslabel des Verzeichnisses %1!, das fœr das Fehlerlog angegeben wurde, kann nicht gelesen werden", "%s"
+3850        = "Das fœr das Fehlerlog festgelegte Verzeichnis %1! ist nicht auf Data_High %2!", "%s %s"
+3851        = "Label fœr Fehlerlog-Datei %1! kann nicht bezogen werden", "%s"
+3852        = "Label der Fehlerlog-Datei %1! kann nicht geÃndert werden", "%s"
+3853                = "Befehl fœr die Zuweisung der Berechtigungen an Datei %1! fehlgeschlagen. Prœfen, ob Sybinit alle erforderlichen Berechtigungen besitzt.", "%s"
+3854        = "Sicherheitsattribute konnten nicht initialisiert werden", ""
+3856                = "Systemaufruf zum Bezug des Werts des Vertraulichkeitslabels fehlgeschlagen", ""
+3857        = "Host-Label kann nicht ins lesbare Format umgewandelt werden", ""
+3858                = "Versuch zum Setzen des Labels von Datei %1! fehlgeschlagen", "%s"
+3859        = "Systemaufruf zum Bezug des Labels fœr Datei %1! fehlgeschlagen", "%s"
+3860                = "Betriebssystemfunktion zum Vergleich der Labels fehlgeschlagen. Prœfen, ob Sybinit alle erforderlichen Berechtigungen hat", ""
+; End of section.

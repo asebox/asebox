@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the IBM Code Page 852, Eastern Europe character set, this is a binary sort order.
+;
+; SCCS information:	%Z% generic/localization/charsets/cp852/%M% %I% %G%
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Jan 18 1995  7:54AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp852
+menuname = "Binary ordering, for the IBM Code Page 852, Eastern Europe character set (cp852)."
+charset = cp852
+ 
+description = "Binary sort order for the IBM Code Page 852, Eastern Europe character set (cp852)."
+ 
+binary = "true"

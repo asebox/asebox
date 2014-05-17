@@ -1,0 +1,712 @@
+Change log
+==========
+
+Version 2.7.8 (24 fev 2012)
+-------------
+Logger :
+- logger uses jConnect V7.07 (rather than jConnect V6.05) Seen improvement for Bulk inserts
+- fixed divide by zero error in RSTrends (need to truncate table xxxxxx_TrendsCfg and restart asemon_logger)
+- removed cursor on sysdatabases when connecting to monitored server and when user has no sa_role 
+  (loop for checking if user exists in all databases)
+- Fixed bug in CachePool_V157.xml : compute delta for new V15.7 indicators (LogicalReads, PhysicalWrites, APFReads)
+- Changed IQCtxt to fix err with large row result
+
+Report :
+- use default database of user on Archive Server (avoid errors when user has no right to enter in first database in the list)
+- fixed pool statistic "turnover_s" calculation when server page size is > 2K
+- ASE : replace pie graphs for process repartition with donut's graph
+- ASE : added sum indicators (sumCPU, sumLogicalReads, ...) in "compiled objects statistics" summary
+- ASE : fixed bug in lock_contention_V15.php when only one lock is retreived
+- IQ : add sysmon page (need to activate IQSysmon.xml collector at asemon_logger level
+- RS : divide by zero fixes
+
+- archive tables can be on IQ (you have to load tables on IQ yourself) Asemon_report can query these tables on IQ (thanks Damien)
+
+Version 2.7.7 (28 Oct 2012)
+-------------
+Logger :
+- removed "LockWaits.xml" from default config file (config.xml) for V157 servers (this collector may produce a lot of contention
+  on rdesmgr_spin spinlock
+- added RequestsReceived in IQAsaStat_V15.xml
+- new trace flag -T6 : allow asemon retreive MDA data even if user has no sa_role and no asemon_indirect_sa_role, but only mon_role
+- modified "install_asemon_procs_non_sa_V15.7ESD#2.sql" to support new "exec as owner" 15.7ESD2 feature. It is no longer necessary to use local RPC's
+
+Report :
+- added support for chrome (thanks fabien)
+- added graph for RequestsReceived / s on main page and connections statistics and connection detail
+- added Sum statistics on Procedures Statistics (in addition to the avg statistics)
+- added "line graphs per active connections" : can see distribution of actives connections in time
+
+Version 2.7.6 (23 aug 2012)
+-------------
+Logger :
+- support ASE V15.7 ESD#2 when monitoring user has no "sa_role"
+  (must execute new "install_asemon_procs_non_sa_V15.7ESD#2.sql" script on ASE monitored server)
+- Fragment_V157.xml supports UNSIGNED INT pagecnt, leafcnt and emptypgcnt
+- LogsHold_V157.xml supports UNSIGNED INT pagecnt
+- AseDbSpce_V157.xml supports UNSIGNED INT Total_pgs, dbFree_pgs, logTotal_pgs, ...
+- changed CachedSTM_V157.xml to support new indicators. Use "CachedSTM_V157preESD2.xml" if your monitored server if V15.7 but lower than ESD#2
+- created new server descriptor (in config file) named ASEV157_preESD2 if your V15.7 monitored server is lower than ESD#2
+
+- added monitoring of IQ 15 Commits in IQAsaStats and IQCnx
+
+Report :
+- Cached statement detail supports new V15.7ESD#2 indicators
+- Cached statement detail supports enhancements to show_cached_plan_in_xml
+
+- added new graphs for IQ commits (works with IQ 15 only)
+
+
+
+Version 2.7.5 (14 july 2012)
+-------------
+Logger :
+- fix spinlock capture for ASE V15.7 (spinlock group_name is spinlock_p rather than spinlock_p_0)
+- added new collector IQSysmon.xml (thanks Fabien) (not yet usable in asemon_report)
+
+Report :
+- fix RS DSI Statistics when several connexions have been created with same ID (but not during the same timeframe)
+- spinlock statistics : by default display spinlocks grouped by Name rather than ungroup
+- fix RS15 object's statistics page when sorting with non default order
+- graph pie for process use synchronized colors between graphs (a same process is displayed with same color in all graphs)
+- fix CachedStmt detail when ASE < V15.7 (ovoid error saying that col RequestCnt, AvgTempdbRemapTime, TempdbRemapCnt, ... does not exists)
+- fragmentation : compute severity of emptypages for index leaf pages
+- support new spinlock group names in V15.7 (spinlock group_name is spinlock_p rather than spinlock_p_0)
+
+Note1 : "install_asemon_procs_non_sa_V15.sql" has been modified, don't forget to run this script if you monitor your ASE
+       with a non-sa_role user
+
+Note2 : When migrating to a new version of monitored ASE (ex. 15.5 to 15.7) you must truncate the XXXX_SysMonFld table 
+       before starting asemon_logger since some counters have a different field_id
+
+Version 2.7.4 (01 jun 2012)
+-------------
+Logger :
+- fix divide by zero error in trend proc aggregation for V15.7 procedures (trends.xml purge thread)
+- fix RS version string parsing. Allow connect to RS V15.0.1 (Sourceforge BUG ID 3523349)
+- removed unecessary ORDER BY in collector's SQL (improve collect performance)
+- fix arith overflow in RS Trends calculation (new RSTrends.xml collector)
+- CachedSQL.xml : starting with V15.7 don't retreive plan for cached statement (since plan can be retreived with CachedXML.xml)
+  It is now safe to use this collector (could not be used in prod before because of a bug in "sp_showplan -1, stmtid")
+
+Report :
+- fix avg compute in QPMetrics statistics
+- V15.7 : parse XML plan and display each sections (query text, parameters, plan, ...)
+- Use new JPGraph version V3.5. All graphs now use a theme (named asemon_theme) and colors have been revised
+
+Version 2.7.3 (06 Apr 2012)
+-------------
+Logger :
+- forced packet_size to 2K for IQ and RS if not defined in the config file
+- config.xml : added ASEV1253 srv_descriptor to use when monitoring OLD 12.5.3 servers
+- AseDbSpce.xml : don't try to read databases with "dbo use only" status
+- lockWaits : don't analyse databases with a "bad" status (single user, suspect, offline, ...)
+- CnxActiv : avoid calling "object_name" on databases with "bad" status ...
+- OpObjAct : avoid calling "object_name" on databases with "bad" status ...
+- new BlockedP_V15 using new V15 fields in "monLocks" MDA
+- new CachedXML colector using new "show_cached_plan_in_xml" V15.7 function used to retreive 
+  SQLTEXT, Plan, tree, parameters of statements in statement cache and dynamic SQL if parameter
+  "streamlined dynamic SQL" is set. This new collector replaces old "CachedSQL" collector.
+
+Report :
+- upgraded version of Apache (from 2.0 to 2.2), php (from 5.2.5 to 5.3.10) and OCS (from 12.5 to 15.7) in AsemonReportSRV distribution
+- make all graphs labels display consistent on Windows and Linux (tested with PHP5.3)
+- added SumPlans to the ProcMDA_statistics view in asemon_report (compute distinct plans per procedures)
+- changed "Locks" display if new "BlockedP_V15.xml" is activated at logger level
+- changed "StmtCache" display to display plan in XML if new CachedXML is activated at logger level
+
+
+Version 2.7.2 (12 feb 2012)
+-------------
+- fixed Sysmon.php to support ASE 15.5 ESD#5 (avoid error due to field_name which sould be 79 rather than 80)
+- ignore error 12052 when "enable monitoring" = 0. Asemon can capture some data in this case (like it did before V15.5)
+- added housekeeper GC statistics on objects in OpObjAct_V15.xml and OpObjAct_V157.xml and asemon_report
+
+
+Version 2.7.1 (13 dec 2011)
+-------------
+- if RS version >15.0 and <15.5 still uses RSSD info in config file (else the "connect to rssd" command can crash a RS 15.1 )
+- RaActiv collector : ignore error 9236
+- asemon_report : fixed queue statistics error when one contains "strict" keyword
+
+Version 2.7.0 (04 dec 2011)
+-------------
+- asemon_report : use sybase_pconnect rather than sybase_connect. Connections are reused if your php.ini includes "sybct.allow_persistent = On" 
+  in [Sybase-ct] section
+- asemon_report : many bug fixes and new pages (particularly for RS15 monitoring)
+- Fixed Trends.cfg : added existance test for SysMon table for rencently added aggregators
+- RS15 monitoring : no longer necessary to define RSSD server/user/database in config file. Asemon_logger use the new "connect to rssd" syntax.
+- RS15 : new collector RSWhoSQM.xml to collect SQM statistics
+  Remark : sometimes RS collection is blocked for unknown reason (seems a JConnect problem).  Force packet size to 4094 with 
+  <packet_size> 4096 </packet_size>
+  in the <SRV> section of the config file
+- RS15 : new collector RSConfig.xml to collect RS configuration (used mainly to retreive block_size)
+- RS15 : new RSTrends.xml collector to aggregate and save some KPI's
+- Simplified configuration when user has no "sa_role" for monitoring ASE : no longer necessary to use a different configuration file. The same configuration
+file can be used for monitoring ASE with or without "sa_role". When no "sa_role", asemon_logger checks if "asemon" procedures exist on the monitored ASE server
+and then use them automaticaly
+- When asemon login has no 'sa_role', asemon login needs stored procedures. Execute appropriate 'install_asemon_procs_non_sa_Vxxx.sql' script with isql.
+ (Converted old Perl script to standard SQL script)
+
+Changes for ASE V157 :
+  - Ignore warning 12052 if cached statement monitoring is activated but statement cache is not configured
+  - Added monCachedProcedures new fields to "CachedPrc_V157.xml" collector (Asemon_report's ProcCache view reflects these new counters)
+  - Added monCachePool new fields to "CachePool_V157.xml" collector (Asemon_report's main view reflects these new counters)
+  - Added monCachedStatement new fields to "CachedSTM_V157.xml" collector (Asemon_report's Cache Statement Detail view reflects these new counters)
+  - Added monDeadLock new fields to "DeadLock_V157.xml" collector (Asemon_report's Deadlock view reflects these new counters)
+  - Added monOpenObjectActivity new fields to "OpObjAct_V157.xml" collector (Asemon_report's Objects stats view reflects these new counters)
+  - Added monProcessLookup new fields to "MonSQL_V157.xml" collector (Asemon_report's statements stats view reflects these new counters)
+  - Added monEngine new fields to "Engines_V157.xml" collector
+  - Modified Trends.xml to compute trends procedures statistics based on new CachedPrc collector
+
+  - New collector SysEngThre.xml to capture new monThread, monEngine MDA data for sysmon (for new kernel section)
+  - New collector SysThread.xml to capture monThread, monTask MDA data for sysmon (for new kernel section)
+  - New collector IOControl.xml to capture monIOController MDA data for sysmon (for new kernel section)
+  - New collector WorkQueue.xml to capture monWorkQueue MDA data for sysmon (for new kernel section)
+  - New collector ThreaPool.xml to capture monThreadPool MDA data for sysmon (for new kernel section)
+  - New collector SysLoad.xml to capture monThreadPool MDA data for sysmon (for new kernel section)
+
+  - New collector Compress.xml to capture monTableCompression MDA data
+
+Version 2.6.12 (20 sep 2011)
+-------------
+- Fixed bugs in install_asemon_procs_non_sa.pl for V12.5
+- Added columns in IQCtx to support IQ15.3
+- Many fixes in asemon_report. Possibility to control display interval in Trends report page.
+
+
+
+Version 2.6.11 (04 Aug 2011)
+-------------
+- Changed type of "Memory_in_Use" in RSMem collector (for RS15.6)
+- Added new aggregators in the "Trends.xml" collector (aggregators for statistics on procs recompilation)
+
+Version 2.6.10 (04 jul 2011)
+-------------
+- Added possibility to define network packet_size for archive server and/or monitored servers. This is necessary when default network packet size is 16K at ASE level.
+  (seems a JConnect bug in that case and asemon_logger blocks) See default config.xml file for the syntax.
+
+- Added new attribute "batchsize" for purge (it specifies the number of rows to delete in a single transaction. Default is 1000)
+  Can be set globaly : <purgearchive daysToKeep="3"  deleteSleep="100" startDelay="1"  batchsize="10000" />
+  or per collector   : <md batchsize="10000"> SysMon.xml </md>
+
+- Added trends for stored procedures activity (the new trends collector aggregates procedure's statistics per day in new xxx_TrendProc table)
+
+- Fixed bug in SamplingMetric when SQLState is null (for example when traceflag 302 is "on" on the monitored server)
+
+- Changed DevIO.xml (for V12.5) to support TotIO bigger than an unsigned int (does not need change the corresponding archive table)
+
+- Added optional possibility to define an admin port for asemon_logger. isql can then connect to asemon_logger like any othe Sybase product.
+  Use "help" command under isql to get list of commands.
+  Changed "asemon_logger.bat" and "asemon_logger.sh" to include "jTDS3.jar" in classpath.
+
+
+
+Version 2.6.6 (15 feb 2011)
+-------------
+- Replaced version of JConnect by "jConnect (TM) for JDBC(TM)/6.05(Build 26631)/P/EBF17992/JDK14/Thu Jun  3 13:31:59 2010"
+- Change SQL in CachedSTM to filter some "LastRecompiledDate" fields returned incorrect by Sybase ASE 15.5 (may be with 15.0 also)
+- Added optional parameter "FILTER_CLAUSE" in OpObjAct collector to allow filtering of collected objects.
+  To filter objects in sepcific databases you can add a FILTER_CLAUSE attribute for the collector OpObjAct in your main config file
+        Ex. : 
+        <md FILTER_CLAUSE="and db_name(DBID) not in ('db1', 'db2')"> OpObjAct_V15.xml                 </md>
+        or
+        <md FILTER_CLAUSE="and db_name(DBID) not like 'db%'"> OpObjAct_V15.xml                 </md>
+
+- New version of asemon_report contains new graphic design. Works and tested with IE8 and Firefox 3. Limited functionality with IE6.
+
+Version 2.6.5 (04 jan 2011)
+-------------
+- Statements capture can be filtered by logical reads or elapsed time. Added new "min_elapsed_time_ms" config parameter in MonSQL.xml and MonSQL_V15.xml. Default is 10000 ms.
+  So, by default, all statements consuming more than 10000 logical reads OR lasting more than 10000 ms will be captured (as well as associated plan and tables statistics)
+
+
+Version 2.6.4 (30 dec 2010)
+-------------
+- Added new "CachedPrc.xml" collector to collect "monCachedProcedures" MDA table. Filters statements in statement cache and dynamic sql.
+- Added possibility to use new predefined ASM$LASTCOLLECT variable in SQL (see example usage in "CachedPrc.xml")
+- Updated RAOSTATS collector to support new RAO 15.2 counters. This new version resets counters after each collection.
+  This way, AVG counters refects activity during the sampling interval.
+- Fixed bug in MissStats.xml when retreiving owner name.
+
+Version 2.6.3 (02 dec 2010)
+-------------
+- Fixed pb with "tablesize" column in monProcessObject not existing before 12.5.2 (previous asemon consider this column existed starting ASE 12.5.1)
+
+
+Version 2.6.2 (19 nov 2010)
+-------------
+- Remove restriction on "enable monitoring" and "wait event timing" ASE config params : asemon_logger can now collect some information even if these parameters are not set
+- ignore all errors 12052 and 12036 in most collectors ("Collection of monitoring data for table 'xxx' requires that the yyyy configuration option(s) be enabled.")
+- added "archRows" as a new column in AmStats collector : set to the number of rows archived during each collection or -1 if error or necessayr ASE config parameter is not set
+
+Version 2.6.1 (28 oct 2010)
+-------------
+- Support ASE 15.5 ESD#2 (ignore error 12052 when "per object statistics active" or "process wait events"... is not set)
+- Fixed small problems with the new AmStats collector (this collects statistics on asemon_logger)
+
+
+Version 2.6.0 (24 sep 2010)
+-------------
+- Compiled with Java 1.6 (Starting with this version, asemon_logger requires JRE1.6 rather that 1.5 before)
+- Use new "console.readPassword" method available with Java 1.6, for asking password when not present in passwords file
+- asemon_logger can now use Kerberos to connect to servers (add <useKerberos> YES </useKerberos> in config file. See file "conf/config.xml")
+  (copy "jaas.conf" file in the directory from where asemon_logger is executed)
+- Deal with iq_status "NA" returned info when monitoring a reader in a Multiplex
+- Allow asemon_logger to start even if "max SQL text monitored" is not configured
+- For RS15 monitoring, added check if RSSD configuration exists in config file
+- Close purge connection after a purge session (reopened every hour)
+- New parameter for purge : startDelay to define the wait time, in minutes, to wait before starting purge thread (default is still 30 mn).
+  Ex. for waiting 10 mn :
+  <purgearchive daysToKeep="3"  deleteSleep="100" startDelay="10" />
+  Special case = -1 : generates a random delay between 1 and 30 mn
+- Modified RSStatsMetrics to support new RS15.5 HVAR option (DSIHQ counters)
+- Removed PACKETSIZE=512 at connection establishment (so will use default 2K packet size with ASE V15)
+- Added most of monitorconfig's indicators in the trends collector
+- Added connection pool management for archive connections
+  (necessary when a single instance of asemon_logger is used to monitor several servers)
+  Add the new line :
+      <poolsize> X </poolsize>
+  in the <ArchiveSrv> section, where X is the number of connections in the pool (X >= 1)
+- Fixed several bugs when monitored server is no longer accessible. Asemon_logger try to reconnect every 10 s.
+- Added collector's statistics for each monitored server : these statistics can be archived (or displayed in DEBUG mode)
+  To archive theses statistics, add a 
+             <md> AmStats.xml </md>
+  line in your config file for each server descriptor (see new "config.xml" file)
+  This new table contains performance info about active collectors
+  The new table contains the following columns :
+    Timestamp : end time of collected data
+    Thread  : Collector name
+    cWait   : Collector wait time    (wait time in ms on the monitored connection semaphore)
+    cActive : Time to collect data   
+    aWait   : Archive wait time      (wait time in ms on the archive connection semaphore)
+    aActive : Time to archive data 
+  This table will be used by asemon_report to display collector's activity
+- passwords file can be changed dynamically : when a password is changed for a connection (to ASE, RS, ... or archive server)
+  update the password file (remove the two leading dash chars, and put the new password in clear text). This new password will
+  be encrypted and used the new time the connection is reopen by asemon_logger (no longer necessary to stop and restart asemon_logger)
+  (this functionality is usefull when several servers are monitored by a single asemon_logger)
+- Asemon_logger now takes into account the time difference between the "monitored server" and the instance of asemon_logger.
+  All archive data has a Timestamp corresponding to time of the "monitored server". The time difference is computed every 5 mn by the MonConf collector.
+- Added asemon_logger host process id when opening connections. This information then appears in sysprocesses where asemon_logger is connected.
+
+
+Version 2.5.2
+-------------
+- Changed RSStats_RS15 to support new BIGINT RS15.5 counters
+- Added support for new RS 15.5 counters
+- Added RStickets.xml, RSTckHist.xml for RS Tickets (V15) monitoring  
+- Ignore warning message "output parameter ignored" (needed for RStickets.xml)
+- Changed RSLstCmt.xml to support pre-12.5.4 versions
+- Added Uniq index with IGNORE_DUP_KEY on RSLstCmt to ignore already seen rows in rs_lastcommit
+- change JConnect version : use 6.05 ESD16 (ESD13 before)
+- Fixed pb when archive connection is lost (changed IS_CLOSED_TEST from INTERNAL to "select 1")
+- Improved SysMon collector : generates less data, no longer need to increase stacksize. Need to use Asemeon_report V2.5.2 or up
+  Drop the old XXX_SysMon table, the new one will be reconstructed without the "Interval" column (no longer necessary)
+- Fixed bug in MonSQL to avoid retreiving name of procedure when ProcedureID < 0 (case for DYNAMIC SQL)
+
+Version 2.5.1
+-------------
+- Set clientapplname for archive and purge connections to name of config file
+  (this is to distinguish several asemon_logger's connected to same archive server)
+- close and reopen purge connection if error
+- added traceflag 5 : skipRetrievePlan
+- alter archive table columns from NOT NULL to NULL if necessary
+- check if "stats_sampling" is ON for monitored Replication Server
+- Reset RS15 statistics before the first sample
+- RS15 : Fixed identification of counter_id (some counter have same name for different modules : ex. CmdsRead)
+- Added columns "module_name" and "description" for RS counter description. Before upgrading to 2.5.1 TRUNCATE your table XXXX_Counters to get theses new values
+  The RS15 counter description is used in the completely rewriten asemon_report pages for RS15.
+- Added new collector "RSLstCmt" to monitor "rs_lastcommit" table if exists in any database of ASE. This new collector is used to display
+  latency graph in asemon_report for RS15
+
+Version 2.5
+-------------
+- Added ASE V15 statement cache monitoring
+- Added ASE V15 Query Processing monitoring (pool sysquerymetrics in all databases)
+- Added Dpage_utilization in Fragment monitoring (compute data page utilization based on pagesize, rowsize and type of table)
+- Changed purge of ASE Cnx to keep long running connections (ex. a connection still open but would be qualified by the old purge algo)
+  (new index automatically created on CnxActiv ( Loggedindatetime, Kpid, Spid, Timestamp ) )
+
+Version 2.4.6
+-------------
+- Added support for ASE 15.5
+
+Version 2.4.5
+-------------
+- Added new column in AseDbSpce named "logsegFree_pgs" which sums the curunreserved pages in the syslogs's segment. This column
+  should be compared to the logFree_pgs and if difference exists you should execute dbcc usedextents(database_name, 1,1) on your database
+- Fixed pb (null pointer exception) in implementation of the #filter_if_no_change# filter (used in CnxActiv) 
+  when a metric returned by Ase sometimes is null
+- Added message when alter archive table is terminated
+- changed behaviour of traceflag -T1 (skipRetreiveSQLText) to skip only retreiving of SQL Text but not retreiving of lookup data
+- Fixed pb (Error=102 Incorrect sybtax near 'to') when <GranteeList> is empty
+
+Version 2.4.4
+-------------
+- Fixed pb with ASE V15 statement cache monitoring when config param is not set. SF bug 2890786.
+- Fixed stacktrace pb with ASE V15. SF bug 2892407
+- Added AseDbSpce_pre12.5.1.xml file for pre-12.5.1 ASE server monitoring. SF bug 2892705.
+- Added PageSize in MonState collector (corresponds to @@maxpagesize of ASE) SF bug 2897088.
+- Implemented feature request SF 2896491 : add support for automatic granting to archive tables.
+  Added new parameter in config file : <GranteeList>. Put a comma separated list of grantees.
+  Ex. : <GranteeList> usr1, usr2, grp1, role1 </GranteeList>
+  Or leave blank
+- Fixed error "Cannot create temporary table '#stmt'" (or #sqltext) when "statement pipe max messages"=0 or "sql text pipe max messages"=0 
+  and statement monitoring is activated
+
+Version 2.4.3
+-------------
+- Changed archive tables for IQ collectors : changed INT to numeric (12,0) where "unsigned bigint" is expected (but unavailable on a V12.5 archive server)
+                                             changed INT to "unsigned bigint" for archive tables created in an IQ server
+- added AseDbSpce collector for space (data and log) monitoring in DB's  
+- removed RaActiv collector (very bad performance when many repagents configured on monitored server). SysMon collector already collects these data.
+  Changed asemon_report to test is old collector still used. If not , then use data from SysMon.
+  Drawback of this new method : RaActiv was collected every 1 mn, SysMon is collected every 5 mn, so less precison for RepAgent activity.
+  Former RaActiv can still be used but has been removed from the default sample config file.
+- Added support of ASEMON_LOGGER_HOME environment variable. This allow asemon_logger to be started from another directory. 
+  Define ASEMON_LOGGER_HOME and JAVA_HOME before starting asemon_logger.bat or asemon_logger.sh. Start asemon_logger from any directory.
+  The passwords file is created in the directory from which asemon_logger is started.
+- Improved support of old ASE Versions (12.5.0.3) :
+  Fixed pb when getting ASE version number with 12.5.0.3 (bad str_replace on that version). SF Bug 2889546.
+  Tablesize does not exists in monProcessObject before 12.5.1. SF bug 2890695.
+  Fixed hostprocess strange issue with V12.5.0.3. SF bug 2890726
+  Fixed program_name issue with V12.5.0.3. SF bug 2889544
+- Added filtering on IQXacts collector (sometimes produce too much data)
+
+Version 2.4.2
+-------------
+- RS 15 : fix bug in RSStatsMetrics (Numeric overflow at asemon_logger.RSStatsMetrics.getMetrics(RSStatsMetrics.java:258)".
+
+Version 2.4.1
+-------------
+- improved parsing of sql.ini or interfaces files (pb before when port or host missing)
+- verify current archive tables against configured archive tables
+- added column names in insert statement for archive tables (columns no longer need to be in same order between select list and archive table)
+- skip columns in select list not in archive table
+- fixed bug in get plan (last char of plan rows was sometimes missing)
+- alter archive tables if required (add new columns or modify existing columns, depending on new config files)
+  NO LONGER NECESSARY TO ALTER ARCHIVE TABLES WHEN CHANGING ASEMON_LOGGER VERSION
+- added transaction control when saving captured statements in MonSQL
+- changed CnxActiv collector to introduce outer join between sysprocesses and MDA tables (in case there are missing rows in MDA tables)
+
+Version 2.4
+-------------
+- added V15 missing statistics capture
+- support IQ V15 (needs recreation of IQXacts, IQAsaStat, IQCnx archive tables and use of IQ15 descriptor in config file)
+
+
+Version 2.3.10
+-------------
+- fixed many problems with RS15 stats capture
+
+
+Version 2.3.9
+-------------
+- added trends collection (indicator aggregation). Add : Trends.xml in your server descriptor.
+- modified install_asemon_procs_non_sa.pl script to create "sp_asemon_sysmon" and "sp_asemon_sysmon_rpc" procs
+- modified config_for_non_sa.xml sample file to incorprate new descriptors
+
+Version 2.3.8
+-------------
+- added monitoring of RS15 (RSStats_RS15)
+
+Version 2.3.7
+-------------
+- added support of NUMERIC, FLOAT, DOUBLE, BIGINT for comparison to 0 of colsCalcDiff columns when #filter_if_no_change# 
+  is set in metric descriptor (only INT supported before)
+- fixed internal hash key computing (before :key1key2key3, now key1|key2|ke3)
+- added file : "CnxActiv_pre12.4.4.xml" for sites still using pre ASE 12.5.4
+- added fragmentation collector in config.xml file, with default parameters :
+                 HOUR_EXEC="7" : this collection is done between 7:00 and 7:59 (can be changed from 0 to 23)
+                 minpages="1000" : restrict collection to object bigger than 1000 pages (data + index pages)
+- added sysmon : asemon_logger get sysmon counters. New section "sysmon" added in asemon_report
+    must add   : SysDev.xml or SysDev_V15.xml
+                 SysCaches.xml
+                 SysConf.xml
+                 SysMonFld.xml
+                 SysMon.xml
+    in your config file in section <metricsDescriptorFiles> ... </metricsDescriptorFiles> of your server descriptor 
+    (see config.xml file)
+                 
+Version 2.3.6
+-------------
+- Fixed pb with deadlocks monitoring when heldProcDBID=0
+
+Version 2.3.5
+-------------
+- Fixed pb with multi server monitoring : synchronize on archive connection
+- added support of NUMERIC, FLOAT, DOUBLE, BIGINT for filterCol in metric descriptor (only INT supported before)
+- added DevIO_V15 in order to support TotIO as a NUMERIC(14,0) rather than INT
+- changed Fragment.xml and Fragment_V15.xml to add "actual_datapages", "actual_indexpages" and "reserved_pages".
+  Added onwer column to Fragment table
+  Corresponding archive tables must be altered
+  The new Fragment collectors loop on all databases except tempdb and user tempdb
+  It is no longer necessary to set USEDB attribute in the config file
+- added DevIO_V15.xml to support TotIo as a Numeric(14,0) rather than an int
+
+Version 2.3.4
+-------------
+- Fixed pb with bad stmt when purge connection is reopen
+- Changed logic when a query batch has no result set (print only a message if it loops on more than 10 results and there is no result set)
+- Added 2 fields to Cnx metric : tempdbid and tempdbname corresponding to the tempdb of the connection
+  Need to execute script : alter_tables_V234.sh if archive tables already exist
+- Added 2 fields to CnxActiv : dbid (current dbid of the connection), tmp_pages (current tempdb usage of the connection
+  Need to execute script : alter_tables_V234.sh if archive tables already exist
+  ATTENTION : the new function pssinfo used to retreive tempdb usage per connection is available since ASE 12.5.4 ESD#1
+              If your server is at a lower version, reference the "CnxActiv_pre12.4.4.xml" descriptor in your config file rather
+              than "CnxActiv.xml"
+- Forced CHAINED=OFF for IQ connections
+
+Version 2.3.3
+-------------
+- Added support for network password encryption (support Sybase algo for 12.5 and RSA for V15)
+(trace flag "-T4" disable this feature)
+- added transaction management (disable autocommit) in GENERIC module when BULK LOAD is disabled (with trace flag -T2)
+- experimental : can use asemon_logger with IQ as archive server (must use xxx_IQ.xml in config file). Must use trace flags -T2 and -T4.
+  Note : asemon_report V2.3.4 and upper can use IQ as archive_server
+
+Version 2.3.2
+-------------
+- Changed CachedObj to filter objects with a null objectid
+
+Version 2.3.1
+-------------
+- fix pb with 15.0.3 where sp_monitorconfig returns pct_act with comma rather than dot for decimal sep (on windows only?)
+- better error management when database is not yet recovered or offline
+- don't stop asemon_logger when archive connection is dead, retry every 10 s
+- allow several connection to same monitored ASE if they use different srvDescriptor's 
+(allow monitoring of a same ASE with several connections)
+- rewrite AseConnectionMetric for BULK LOAD into archive server. This also fix problem when clientname, clienthostname or clientapplname contains quotes.
+
+Version 2.3
+-------------
+- asemon_logger can now use a login witout "sa" or "sa_role" to monitor an ASE. See SETUP_NON_SA_USER.txt file.
+- fixed deadlock metric producing error 913 when monDeadLock table contains a bad HeldProcDBID
+
+Version 2.2.10
+-------------
+- asemon_logger now exits if it find another asemon_logger connection on the monitored server. This for security in case asemon_logger
+try to reconnect following an error, and the connection was not properly closed.
+
+Version 2.2.9
+-------------
+- Changed LockWaits monitoring to avoid tempdb and user tempdb's. object_stats function produce deadlocks when invoked on theses 
+database. (we have to wait for 15.0.3 which is supposed to fix this problem)
+
+
+Version 2.2.8
+-------------
+- Retry reinitialize repAgentMetric after error during initialization (Ex. : when a database is "in recovery")
+
+Version 2.2.7
+-------------
+- Check warnings in samplingmetric
+
+Version 2.2.6
+-------------
+- Fix problem with BULK LOAD and IQ statistics :
+  convert bit types to char(1) since BULK LOAD seems not yet supporting bit type. Changed 2 IQ tables : xxx_IQXacts and xxx_IQCnx
+- Fix problem with BigDecimal data retreived from IQ (fixed bad computation of satoiq_count and iqtoiq_count)
+- Filter error 8233 (produced when accessing V15 monProcessObj and one object is in the course of an alter or reorg)
+- Changed IQAsaStat.xml (added some columns, see alter_tables.sql)
+
+Version 2.2.5
+-------------
+- Can use JNDI to access interfaces or ini file : this allow connection failover on other servers if corresponding entries exist in interfaces file
+  Enable this with trace flag 3 ( "-T3"  on the start command line) 
+  (JNDI not set by default since I had problems on Solaris with long pathname for interfaces file)
+- Force DNS caching to 0 second (no caching). Asemon_logger will reconnect to the new server if its address has been changed in the DNS
+  (no longer need to restart asemon_logger to take into account changes at the DNS level)
+- Added monitoring of cached objects (every 10 mn)
+- Improved monitoring of IQ
+
+
+Version 2.2.4
+-------------
+- Implemented the BULK_LOAD facility of JConnect to speed up insertions in the archive database
+  ATTENTION : you needs to execute the sql_server15.0.sql or sql_server12.sql script in the JConnect/sp on your archive server,
+  else you may encounter error "JZ0SJ" ( cannot find metadata descriptor information)
+  You can disable the BULK_LOAD facility by setting the trace flag "-T2" on the start command line
+
+
+Version 2.2.3
+-------------
+- Added possibility to configure "delay", "daysToKeep" and "deleteSleep" in the config file (to override what is configured in the metric descriptor files)
+  Ex. : 
+             <md daysToKeep="30" deleteSleep="1000"  delay="10"> CnxActiv.xml </md>
+
+  "delay"       : delay between two sample of the metric
+  "daysToKeep"  : number of days to keep in the table before purge
+  "deleteSleep" : number of milliseconds to wait beteen two purge statements
+
+
+Version 2.2.2
+-------------
+- Renamed projet Asemon_logger rather than Asemon_logger_V2
+- Extended IQ monitoring : monitoring of connexions and transactions
+- support bit dadatype for IQCnx archive table
+- Fixed join between monProcessObject and monProcessStatement where DBName exists in both tables in V15.0.2 ESD#4
+
+Version 2.2.1
+-------------
+- asemon_logger dynamically restart or stop monitoring of montables according to changes to ASE configuration parameters
+(for example if you dynamically activate "per objects statistics active", the capture of monOpenObjectsActivity is resumed)
+- added "deleteSleep" parameter in the purge descriptor. The default value is 100 ms. The purge thread applies
+this delay between two delete statements to  ovoid filling the transaction log.
+
+
+Version 2.2
+-------------
+- added possibility to pass parameters to SQL in config descriptors
+- added table fragmentation metric (Fragment.xml) You must give a database parameter in the config file 
+  Ex. :             <md database="pubs2" > Fragment.xml </md>
+- fix computation of difference of signed int
+
+
+Version 2.1.2
+-------------
+- removed join on monProcessWaits and sysprocesses (bad perf when lots of connections)
+- added index idx1 on Cnx (Spid, Kpid, Loggedindatetime) to speed join between CnxWaits and Cnx in Asemon_Report
+
+Version 2.1.1
+-------------
+- added IQ support(metrics : IQStatus IQAsaStat)
+- added process waits info for ASE (3 new tables XXX_CnxWaits, XXX_WEvInf, XXX_WClassInf)
+- added process waits info on process detail's PHP page
+- check correct database use at connection (avoid creation of tables in master)
+
+Version 2.1
+-------------
+- added automatic purge of archive tables : can be activated in config file by adding :
+          <purgearchive daysToKeep="90" />
+  in the <SRV> ... </SRV> section (see sample config.xml file in the conf directory).
+  The attribute "daysToKeep" controls the number of days of data to keep in tables.
+  The purge thread is run every hour, and delete data by chunk of 1000 rows max.
+
+- added debug info in sybdirectory class 
+- fixed bug when last entry in interfaces file does not contain query line
+- added specific module for capturing RAO (Rep Agent Oracle) V15 statistics (new xxxxx_RAOSTATS table)
+- added option "sp_showplan_proc" to be able to specify an alternate sp_showplan in case a specific one
+  exists which grant itself "sa_role" 
+
+Version 2.0.3
+-------------
+- better error management
+
+
+Version 2.0.2
+-------------
+- better find usage statistics on objects when capturing statements
+- don't exec sp_showplan if captured statement is no longer runing
+
+Version 2.0.1
+-------------
+- added 13 missing counters to repagent statistics : table xxx_RaActiv must be modified (see script "alter_tablels.sql")
+
+Version 2.0
+-----------
+- in this new version, each metric group is defined in a "metric descriptor" stored in as XML file in the "conf" directory
+- can add as many "metric descriptors" as needed
+- removed all the command switch of asemon_logger. They are replaced by a config file (XML file). The config file can be passed on the command line (default is "conf/config.xml")
+- asemon_logger can monitor several servers at the same time (any type of Sybase server, including Replication Server). Put the list of servers in the configuration file.
+
+- changes to archive_server tables :
+    - xxx_StmtSQL : added Timestamp col (for speeding purge of table)
+                    added index idx1 (Timestamp, KPID, SPID)
+
+- removed the archiving to flat files : only archiving to an ASE database is supported
+
+
+Version 1.3.2
+------------
+- Fix : monProcessActivity.getCounters () was called twice sometimes
+- Add monitoring of deadlocks
+- Create archive tables in DATAPAGES lock mode (to avoid deadlocks with user querying these tables)
+- Save passwords (of monitored and archive server) in an encrypted form in a passwords file named "passwords" (local to the start dir of asemon_logger)
+This avoids to input passwords in the command line.
+    Passwords file has one row for each couple (servername, loginname). Two formats for the row :
+
+    --servername;loginname;encryptpassword
+    servername;loginname;unencryptpassword
+
+If asemon_logger finds a row with an unencrypt password, it first encrypt it and add "--" in front of the row to indicate it is now encrypted
+
+- Encrypt password on network for connection
+- Upgraded JConnect version  to V6.0.5 ESD#7
+
+
+Version 1.3.1
+------------
+- Fix problem with "-r" switch when user don't have sa_role
+- fix problem with call to monitoring of process activity
+- Check if user has mon_role
+- Check if user has sa_role. If not disable RepAgent monitoring. 
+If not, user must be declared in all databases with sp_adduser, else, the object_name function does not work
+Anyway, without sa_role user cannot execute sp_showplan, so don't configure "statement statistics active" or "sql batch capture"
+- Monitor all blocking locks, even less than 2 s (revoved where clause on time_blocked
+- Increased time waited before restarting asemon_logger after a severe error (from 10 to 30 s)
+- Added supplemental index on StmtStat table
+
+Version 1.3
+------------
+- Allow monitoring even if some parameter are not set (like "per object statistics active", ...)
+- Better identification of blocking locks
+- Better monitoring of active processes : 2 new tables "Cnx" containing info on all new connections and "CnxActiv" containing activity of actives processes 
+every 30 s. Table xxxx_ProcActiv is no longer used. By default, monitoring of processes is done every 30 s.
+- Fix bug for columns whose value for sample was not correctly computed (ex.: ScanPgs, IdxPgs, TmpTbl, UlcBytWrite, UlcFlush)
+- Assed OpenedConnections to the xxxx_MonState table. This columns contains the number of connections opened during the sample. 
+The existing column "Connections" represents the number of open connections at the time of the sampling.
+You need to drop this table before migrating to this new asemon_logger version.
+
+
+Version 1.2
+------------
+- Change to JConnect 6.0
+- Add monSQL : monitoring of statements (better results if "statement pipe" and "sql text pipe" actives, but this is not mandatory)
+- Check configured ASE monitoring options
+- new version of ASEMON REPORT
+- add new swicthes : "min logical reads" and "disable RA monitoring" (Replication Agent monitoring requires "sa_role". 
+All other monitoring features only need "mon_role")
+
+Version 1.1a
+------------
+- Add support for 12.5.4 (getMonitorConfig has more result sets)
+
+Version 1.1
+------------
+- Fix bug when computing diff with null values
+- add support for ASE V15 (new counters)
+
+Version 1.0
+------------
+- Changed unique index on BlockedP
+
+Version 0.99A
+------------
+- Changed definition of table MonState : null for CountersCleared column
+- Deal with null when writing data into files
+- Added locking statistics in asemon_report
+- Fix problem with type of "num_reuse" column in result of sp_monitorconfig (char in V12.5.0.3,int after)
+
+Version 0.99
+------------
+- Changed interval for monitoring Objects and Processes : 5 times slower
+- Added monitorng of main server structure usage (exec of sp_monitorconfig 'all')
+- Added Procedure cache usage and user connections graphs in asemon_report
+- Added monState monitoring
+
+Version 0.98_patch
+------------
+- added force plan for join on monProcessActivity and monProcessNetIO
+
+Version 0.98
+------------
+- added monitoring of blocked processes
+- automatically restart asemon_logger when fatal error in main loop
+- added control of exiting : asemon_logger stops if another user, connected with the same logging as asemon_logger
+  on the monitored server, issued the command "set clientapplname stop_asemon_logger"
+
+Version 0.97
+------------
+- changed compute of TotIO : no longer include APFREads

@@ -1,0 +1,145 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Erreur fatale : échec de l'allocation mémoire."
+2 = ZZZZZ, "Erreur d'E/S : espace insuffisant pour les données en entrée."
+3 = ZZZZZ, "Impossible d'ouvrir le fichier temporaire '%1!' pour écriture dans dbedit()."
+4 = ZZZZZ, "Impossible d'appeler l'éditeur '%1!'."
+5 = ZZZZZ, "Impossible d'ouvrir le fichier d'entrée '%1!'."
+6 = ZZZZZ, "Impossible d'ouvrir le fichier de résultat '%1!'."
+7 = ZZZZZ, "bcp : paramètre inconnu '%1!'."
+8 = ZZZZZ, "Lorsque vous utilisez l'argument '%1!' pour définir la première ligne à copier, le numéro de la ligne doit être supérieur ou égal à 1."
+9 = ZZZZZ, "Lorsque vous utilisez les arguments '%1!' et '%2!' pour définir les première et dernière lignes à copier, le numéro de la première ligne doit être inférieur à celui de la dernière."
+10 = ZZZZZ, "Lorsque vous utilisez l'argument '%1!' pour définir la dernière ligne à copier, le numéro de la ligne doit être supérieur ou égal à 1."
+11 = ZZZZZ, "La direction de la copie doit être 'in' (entrante) ou 'out' (sortante)."
+12 = ZZZZZ, "L'argument '%1!' doit être suivi d'un entier. '%2!' n'est pas un entier admis."
+13 = ZZZZZ, "Attention : l'argument '%1!' apparaît plusieurs fois. La nouvelle valeur de cet argument remplace la précédente."
+14 = ZZZZZ, "Attention : '%1!' remplace '%2!'"
+15 = ZZZZZ, "Longueur de préfixe incorrecte. Les longueurs de préfixe admises sont 0, 1, 2 ou 4."
+16 = ZZZZZ, "Niveau (1-16) : "
+17 = ZZZZZ, "Niveau incorrect"
+18 = ZZZZZ, "Compartiment (1-64) : "
+19 = ZZZZZ, "Les entrées multiples, séparées par un retour à la ligne, sont admises ; validez en appuyant sur la touche Entrée lorsque vous avez terminé. "
+20 = ZZZZZ, "Connexion en tant que SA (n/o) : "
+21 = ZZZZZ, "Refaites une tentative :"
+22 = ZZZZZ, "Compartiment incorrect"
+23 = ZZZZZ, "Début de la copie..."
+24 = ZZZZZ, "%1! lignes copiées."
+25 = ZZZZZ, "Horloge (ms.) : total = %1!"
+26 = ZZZZZ, "Souhaitez-vous sauvegarder ces informations sur le format dans un fichier ? [O/n] "
+27 = ZZZZZ, "Nom du fichier hôte [%1!] : "
+28 = ZZZZZ, "Type de colonne incorrect. Les types admis sont :"
+29 = ZZZZZ, "    <cr> : type identique à la colonne DataServer."
+30 = ZZZZZ, "  Moy = %1! (%2! lignes par s.)"
+31 = ZZZZZ, "Echec de la copie bcp %1!"
+32 = ZZZZZ, "Echec partiel de la copie bcp %1!"
+33 = ZZZZZ, "Précision incorrecte. La précision doit être comprise entre %1! et %2!"
+34 = ZZZZZ, "Echelle incorrecte. L'échelle doit être comprise entre %1! et %2!  et doit être inférieure ou égale à la précision."
+35 = ZZZZZ, "Type de résultat renvoyé inattendu."
+36 = ZZZZZ, "Résultat renvoyé inattendu."
+37 = ZZZZZ, "Erreur : écriture du fichier bcp (%1!)!"
+38 = ZZZZZ, "Echec de l'extraction de la spécification du fichier hôte."
+39 = ZZZZZ, "La table que le bulkcopy tente de copier vers un fichier hôte comporte moins de lignes que le nombre indiqué au bulkcopy."
+40 = ZZZZZ, "Code de retour blk_rowxfer_mult renvoyé inattendu."
+41 = ZZZZZ, "Type de données '%1!' inconnu."
+42 = ZZZZZ, "Erreur d'E/S lors de la lecture du fichier d'erreurs de bcp."
+43 = ZZZZZ, "Erreur d'E/S lors de l'écriture du fichier d'erreurs de bcp."
+44 = ZZZZZ, "Impossible d'ouvrir le fichier d'erreurs."
+45 = ZZZZZ, "Fin de fichier inattendue détectée dans le fichier de données bcp."
+46 = ZZZZZ, "Préfixe de longueur négative détecté dans le fichier de données bcp."
+47 = ZZZZZ, "Le fichier hôte bcp '%1!' ne contient que %2! lignes. L'omission de toutes ces lignes n'est pas admise."
+48 = ZZZZZ, "Le fichier hôte bcp '%1!' ne contient que %2! lignes. Impossible de lire le nombre requis de lignes."
+49 = ZZZZZ, "Pour le bulkcopy, toutes les données de longueur variable doivent avoir un préfixe ou un délimiteur de fin."
+50 = ZZZZZ, "Le champ Text/image est plus grand que la valeur maximale. Données tronquées."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Erreur fatale : échec de l'allocation mémoire."
+2 = ZZZZZ, "La direction de la copie doit être 'in' (entrante) ou 'out' (sortante)."
+3 = ZZZZZ, "Attention : '%1!' remplace '%2!'."
+4 = ZZZZZ, "Lorsque vous utilisez l'argument '%1!' pour définir la première ligne à copier, le numéro de la ligne doit être supérieur ou égal à 1."
+5 = ZZZZZ, "Lorsque vous utilisez les arguments '%1!' et '%2!' pour définir les première et dernière lignes à copier, le numéro de la première ligne doit être inférieur à celui de la dernière."
+6 = ZZZZZ, "Lorsque vous utilisez l'argument '%1!' pour définir la dernière ligne à copier, le numéro de la ligne doit être supérieur ou égal à 1."
+7 = ZZZZZ, "Lorsque vous utilisez l'argument '%1!' pour définir la taille de batch, la valeur doit être supérieure ou égale à 1."
+8 = ZZZZZ, "Attention : l'argument '%1!' est ignoré lors de l'exportation."
+9 = ZZZZZ, "Vous ne pouvez pas utiliser '%1!' et '%2!' lors de l'importation."
+10 = ZZZZZ, "Lorsque vous utilisez l'argument '%1!' pour définir la valeur de début de la colonne identity, la valeur doit être supérieure ou égale à 0."
+11 = ZZZZZ, "Vous ne pouvez pas utiliser simultanément les arguments '%1!' et '%2!'."
+12 = ZZZZZ, "Attention : restauration de la taille de batch de %1! à %2!."
+13 = ZZZZZ, "Echec de la définition des propriétés de connexion."
+14 = ZZZZZ, "Echec de l'ouverture de la connexion."
+15 = ZZZZZ, "Echec de la définition des options de connexion."
+16 = ZZZZZ, "Echec de l'extraction de la langue."
+17 = ZZZZZ, "Echec de la définition des valeurs par défaut."
+18 = ZZZZZ, "Echec de l'extraction du format de table."
+19 = ZZZZZ, "Echec de blk_init."
+20 = ZZZZZ, "Impossible d'ouvrir le fichier d'erreurs."
+21 = ZZZZZ, "Objet de localisation non reconnu. Utilisation de la valeur par défaut '%1!'."
+22 = ZZZZZ, "Erreur interne : type de localisation incorrect transmis à cs_locale()."
+23 = ZZZZZ, "Attention : l'option '%1!' n'est pas prise en charge ; elle est donc ignorée."
+24 = ZZZZZ, "Erreur de syntaxe dans '%1!'."
+25 = ZZZZZ, "Erreur lors du chargement d'un couple de tables de traduction."
+26 = ZZZZZ, "Une erreur s'est produite lors de la tentative de configuration du contexte de l'application pour une utilisation avec des structures de localisation."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Bulkcopy du batch effectué vers SQL Server."
+2 = ZZZZZ, "%1! lignes envoyées à SQL Server."
+3 = ZZZZZ, "Bulkcopy de %1! lignes effectué vers le fichier hôte."
+4 = ZZZZZ, "Interruption : annulation du bulkcopy."
+5 = ZZZZZ, "%1! lignes copiées."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Mot de passe : "
+2 = ZZZZZ, "Indiquez le type de stockage de fichier du champ %1! [%2!] : "
+3 = ZZZZZ, "Indiquez la longueur du champ %1! [pas de maximum] : "
+4 = ZZZZZ, "Indiquez la longueur du champ %1! [%2!] : "
+5 = ZZZZZ, "Indiquez le séparateur de champs [%1!] : "
+6 = ZZZZZ, "Indiquez la longueur de préfixe du champ %1! [%2!] : "
+7 = ZZZZZ, "Indiquez la précision du champ %1! [%2!] : "
+8 = ZZZZZ, "Indiquez l'échelle du champ %1! [%2!] : "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1! : impossible d'ouvrir le fichier de format '%2!'."
+2 = ZZZZZ, "Erreur d'E/S lors de la lecture du fichier de format bcp."
+3 = ZZZZZ, "Impossible de fermer le fichier de format bcp."
+4 = ZZZZZ, "Colonne %1! : précision incorrecte."
+5 = ZZZZZ, "Détection d'un type de données de longueur fixe inconnu."
+6 = ZZZZZ, "Tentative de lecture d'un fichier de format bcp de version inconnue."
+7 = ZZZZZ, "Numéro de colonne hôte incorrect détecté dans le format de fichier bcp."
+8 = ZZZZZ, "Type de données '%1!' non reconnu détecté dans le fichier de format."
+9 = ZZZZZ, "Le fichier de format indique à bcp de ne pas copier la colonne identity ; conflit avec l'option -E."
+10 = ZZZZZ, "Aucune colonne à copier."
+
+
+
+
+
+

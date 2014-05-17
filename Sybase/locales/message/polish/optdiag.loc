@@ -1,0 +1,284 @@
+; optdiag.loc -- Localization message file for Optdiag, an Open Client 
+;   application
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+; Note: All spaces prepended to strings are significant and must be 
+;       retained when translating messages.  For example, in the 
+;       LOC_SECT_FORMAT section, the prepended spaces provide 
+;       indentation.
+;
+; Note: The translated messages in the LOC_SECT_FORMAT section, 
+;       including prepended spaces, must not exceed 40 characters.
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+2 = ZZZZZ, "Nazwa serwera Adaptive Server Enterprise w pliku wyjściowym\\n Optdiag nie odpowiada bieżącej nazwie serwera Adaptive Server Enterprise."
+3 = ZZZZZ, "Wersja Optdiag nie jest zgodna z wersją\\nAdaptive Server Enterprise. Użyj tych samych wersji obydwu programów."
+10 = ZZZZZ, "Wersja Adaptive Server Enterprise w pliku wyjściowym\\nOptdiag nie odpowiada bieżącej wersji Adaptive Server Enterprise."
+11 = ZZZZZ, "Nazwa tabeli '%1!' nie jest zgodna z określoną nazwą tabeli '%2!'."
+12 = ZZZZZ, "Wystąpił problem z podwójnymi cudzysłowami w następującym łańcuchu:"
+13 = ZZZZZ, "Nie znaleziono łańcucha wartości w następującym wierszu:"
+14 = ZZZZZ, "Nazwa kolumny '%1!' nie jest zgodna z określoną nazwą kolumny '%2!'."
+15 = ZZZZZ, "Aktualizacja statystyk kolumn nie powiodła się."
+16 = ZZZZZ, "Nazwa kolumny histogramu '%1!' nie jest zgodna z poprzednią\\n nazwą kolumny'%2!' dla innych statystyk."
+17 = ZZZZZ, "Podczas wykonywania kroku %1! histogramu dla '%2!.%3!.%4!', "
+18 = ZZZZZ, "wystąpił problem z liczbą podwójnych cudzysłowów."
+19 = ZZZZZ, "nie można odczytać danych.  "
+20 = ZZZZZ, "oczekiwano na wykonanie kroku 1."
+21 = ZZZZZ, "numer kroku nie zwiększył się o 1."
+22 = ZZZZZ, "waga histogramu skumulowanego przekroczyła wartość 1,0 wraz z marginesem błędu.  "
+23 = ZZZZZ, "dwie przylegające komórki nie mogą jednocześnie używać operatora <"
+24 = ZZZZZ, "W przypadku histogramu dla '%1!.%2!.%3!',"
+26 = ZZZZZ, "Rozpoczęcie transakcji nie powiodło się."
+27 = ZZZZZ, "Aktualizacja statystyk histogramu nie powiodła się."
+28 = ZZZZZ, "Usunięcie statystyk histogramu nie powiodło się."
+29 = ZZZZZ, "Wstawienie wag histogramu nie powiodło się."
+30 = ZZZZZ, "Zatwierdzenie transakcji nie powiodło się."
+31 = ZZZZZ, "Baza danych '%1!' nie istnieje na tym serwerze."
+32 = ZZZZZ, "Określony właściciel tabeli nie posiada tabeli w bazie danych '%1!'."
+33 = ZZZZZ, "Użytkownik '%1!' nie istnieje w bazie danych '%2!'."
+34 = ZZZZZ, "Tabela '%1!' nie należy do użytkownika '%2!' w tej bazie danych."
+35 = ZZZZZ, "Tabela '%1!' nie istnieje w bazie danych '%2!'."
+36 = ZZZZZ, "Tabela '%1!' nie zawiera kolumny '%2!'."
+37 = ZZZZZ, "Brak statystyk w tabeli systabstats dla tego indeksu."
+38 = ZZZZZ, "Typ danych '%1!' nie jest obsługiwany przez Optdiag."
+39 = ZZZZZ, "Typ danych '%1!' o długości %2! nie jest obsługiwany przez Optdiag."
+40 = ZZZZZ, "W tabeli sysstatistics nie znaleziono statystyk dla tej kolumny lub grupy kolumn."
+41 = ZZZZZ, "W tabeli sysstatistics nie znaleziono danych histogramu dla tej kolumny lub\\ngrupy kolumn."
+42 = ZZZZZ, "Błąd wewnętrzny flagi śledzenia 3."
+43 = ZZZZZ, "Błąd wewnętrzny: Właściciel tabeli '%1!' oraz tabela '%2!' powtarzają się."
+44 = ZZZZZ, "Błąd wewnętrzny: Funkcja ct_results() zwróciła nieoczekiwany typ wyników %1!."
+45 = ZZZZZ, "Błąd wewnętrzny: Niezgodność długości danych w ct_fetch()."
+48 = ZZZZZ, "Nieoczekiwana wartość %1!"
+; Next is "returned", as in "a function returned a value".
+49 = ZZZZZ, "zwróciła"
+50 = ZZZZZ, "Błąd wewnętrzny: Funkcja ct_results() zwróciła typ wyników CS_CMD_FAIL."
+51 = ZZZZZ, "Błąd wewnętrzny: wykonanie funkcji cs_convert() nie powiodło się."
+52 = ZZZZZ, "Błąd odczytu wiersza %1!."
+53 = ZZZZZ, "Błąd wewnętrzny: Rzeczywista liczba kolumn (%1!) nie jest równa oczekiwanej liczbie (%2!)."
+54 = ZZZZZ, "Błąd wewnętrzny: Rzeczywista maksymalna długość danych (%1!) przekracza wartość oczekiwaną (%2!)."
+55 = ZZZZZ, "Po parametrach konfiguracji bez pamięci podręcznej musi znajdować się '%1!'."
+56 = ZZZZZ, "Nie znaleziono pamięci podręcznej '%1!'."
+57 = ZZZZZ, "Nie znaleziono indeksu '%1!.%2!.%3!'."
+58 = ZZZZZ, "Zignorowano nieprawidłową wartość w następującym wierszu:"
+59 = ZZZZZ, "Symulowane wartości konfiguracji nie zostały zaktualizowane."
+60 = ZZZZZ, "Symulowane statystyki tabeli nie zostały zaktualizowane dla tabeli '%1!.%2!'."
+61 = ZZZZZ, "Prawdopodobnie brak wartości null i dolnego ograniczenia dla wartości innych niż null."
+62 = ZZZZZ, "Prawdopodobnie brak kroków."
+63 = ZZZZZ, "waga nie zawiera się w przedziale pomiędzy 0,0 a 1,0."
+64 = ZZZZZ, "Może to być spowodowane przez wagę ostatniego odczytu"
+65 = ZZZZZ, "wartość kroku nie zwiększa się."
+66 = ZZZZZ, "całkowita waga ma wartość inną niż 1,0 oraz większą niż margines błędu."
+67 = ZZZZZ, "Wstawienie wartości kroku histogramu nie powiodło się."
+68 = ZZZZZ, "Wyszukiwanie etykiety wiersza '%1!'.\\nNieoczekiwanie osiągnięto koniec pliku wejściowego.\\nPrawdopodobnie z powodu nie pasującego podwójnego cudzysłowu."
+69 = ZZZZZ, "Błąd wewnętrzny: Tabela '%1!' oraz kolumna '%2!' powtarzają się."
+70 = ZZZZZ, "Osiągnięto koniec pliku wejściowego bez odczytu komunikatu o zakończonym sukcesem działaniu Optdiag."
+71 = ZZZZZ, "Ustawienia lokalne użytkownika muszą być określone przez zmienną środowiskową LANG\\nlub flagę wiersza poleceń -z."
+72 = ZZZZZ, "bieżąca i poprzednia wartość kroku nie mogą być identyczne,\\nponieważ ten krok nie ma wartości częstotliwości."
+73 = ZZZZZ, "Różne wartości binarne w tabeli SYSSTATISTICS mogły zostać zaokrąglone\\ndo takiej samej wartości, którą można odczytać."
+74 = ZZZZZ, "Aktualizacja SYSSTATISTICS za pomocą tych wartości kroku spowoduje utworzenie niespójności."
+75 = ZZZZZ, "Pomijanie tego histogramu.  Jeśli zachodzi potrzeba aktualizacji tego histogramu,\\nnależy uruchomić Optdiag w trybie binarnym i edytować binarne wartości kroku."
+76 = ZZZZZ, "Aby wykonać to polecenie należy mieć następującą rolę(e): '%1!'.\\nAby uzyskać pomoc, należy skontaktować się z użytkownikiem mającym odpowiednią rolę."
+77 = ZZZZZ, "Etykieta wiersza Optdiag przekracza maksymalną dozwoloną długość."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Błąd składniowy cudzysłowu."
+2 = ZZZZZ, "Określono nazwę kolumny, ale nie określono nazwy tabeli."
+3 = ZZZZZ, "Numer flagi śledzenia przekracza %1!, jest to maksymalna dopuszczalna wartość."
+5 = ZZZZZ, "Określono nazwę pliku wejściowego i wyjściowego."
+6 = ZZZZZ, "Argumenty dla bazy danych i pliku wejściowego nie zostały odczytane, więc docelowa\\nbaza danych jest nieznana."
+7 = ZZZZZ, "Nie można otworzyć pliku wejściowego."
+8 = ZZZZZ, "Nie można otworzyć pliku wyjściowego."
+9 = ZZZZZ, "  Prawdopodobnie plik nie istnieje lub Optdiag nie posiada\\n wymaganych praw."
+10 = ZZZZZ, "Znaleziono błąd składniowy wiersza poleceń przed słowem kluczowym 'statistics'."
+
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Działanie Optdiag nie powiodło się.  Sprawdź komunikaty o błędach znajdujące się powyżej."
+2 = ZZZZZ, "Działanie Optdiag zakończyło się pomyślnie."
+3 = ZZZZZ, "Aby zignorować różnicę wersji Adaptive Server Enterprise, należy w wierszu poleceń ustawić wartość\\nflagi śledzenia na 1 (-T1)."
+5 = ZZZZZ, "Aby pominąć sprawdzanie spójności, należy w wierszu poleceń ustawić wartość\\nflagi śledzenia na 4 (-T4)."
+7 = ZZZZZ, "nie określono"
+8 = ZZZZZ, " (klastrowe)"
+9 = ZZZZZ, " (nieklastrowe)"
+10 = ZZZZZ, "użyta wartość domyślna"
+11 = ZZZZZ, "wartość domyślna"
+12 = ZZZZZ, "Następna tabela: '%1!', właściciel: '%2!'."
+13 = ZZZZZ, "Jeśli położenie problemu nie jest jasne, aby ułatwić odnalezienie problemu, należy rozważyć ponowne uruchomienie Optdiag\\nw trybie wejściowym z flagą śledzenia o wartości 6."
+14 = ZZZZZ, "Działanie Optdiag zostało zakończone, ale pominięto statystyki.\\nSprawdź komunikaty o błędach znajdujące się powyżej."
+15 = ZZZZZ, " (rzeczywisty)"
+16 = ZZZZZ, " (symulowany)"
+17 = ZZZZZ, "Statystyki pochodzą z aktualizacji strony rozkładu."
+18 = ZZZZZ, "Statystyki załadowane z Optdiag."
+19 = ZZZZZ, " (używane tylko 255 bajtów)"
+
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Hasło: "
+
+
+; LOC_SECT_FORMAT
+;
+;   Line title strings with a length restriction for input and output files
+;
+[format]
+
+1 = ZZZZZ, "Nazwa serwera:"
+2 = ZZZZZ, "Podana baza danych:"
+3 = ZZZZZ, "Podany właściciel tabeli:"
+4 = ZZZZZ, "Właściciel tabeli:"
+5 = ZZZZZ, "Podana tabela:"
+6 = ZZZZZ, "Podana kolumna:"
+7 = ZZZZZ, "Statystyka dla indeksu:"
+8 = ZZZZZ, "Lista indeksu kolumn:"
+9 = ZZZZZ, "Statystyki dla tabeli:"
+10 = ZZZZZ, "Statystyki dla kolumny:"
+11 = ZZZZZ, "Brak statystyk dla pozostałych kolumn:"
+12 = ZZZZZ, "(użyte wartości domyślne)"
+13 = ZZZZZ, "Statystyki dla grupy kolumn:"
+14 = ZZZZZ, "Ostatnia aktualizacja statystyk kolumn:"
+
+; histogram messages for ASE 12.0
+15 = ZZZZZ, "Statystyki pochodzą z aktualizacji strony rozkładu."
+16 = ZZZZZ, "Statystyki załadowane z Optdiag."
+17 = ZZZZZ, "Histogram dla kolumny:"
+18 = ZZZZZ, "Typ danych w kolumnie:"
+19 = ZZZZZ, "Żądana liczba kroków:"
+20 = ZZZZZ, "Rzeczywista liczba kroków:"
+21 = ZZZZZ, "Ostatnia aktualizacja histogramu:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+22 = ZZZZZ, "Krok     Waga                    Wartość"
+23 = ZZZZZ, "Gęstość zakresu komórek:"
+24 = ZZZZZ, "Całkowita gęstość:"
+25 = ZZZZZ, "Typ danych:"
+26 = ZZZZZ, "Selektywność zakresu:"
+27 = ZZZZZ, "Selektywność przedziału:"
+28 = ZZZZZ, "Liczba liści:"
+29 = ZZZZZ, "Liczba stron danych:"
+30 = ZZZZZ, "Liczba pustych stron danych:"
+31 = ZZZZZ, "Liczba pustych stron liści:"
+32 = ZZZZZ, "Liczba wierszy danych:"
+33 = ZZZZZ, "Liczba wierszy przesłanych dalej:"
+34 = ZZZZZ, "Liczba wierszy usuniętych:"
+35 = ZZZZZ, "Liczba CR stron danych:"
+36 = ZZZZZ, "Liczba CR stron indeksu:"
+37 = ZZZZZ, "Liczba CR wierszy danych:"
+38 = ZZZZZ, "Stat. OAM + liczba stron alokacji:"
+39 = ZZZZZ, "Str. danych pierw. rozszerzenia:"
+40 = ZZZZZ, "Str. liści pierwszego rozszerzenia:"
+41 = ZZZZZ, "Rozmiar wiersza danych:"
+42 = ZZZZZ, "Rozmiar wiersza liści:"
+43 = ZZZZZ, "Wysokość indeksu:"
+44 = ZZZZZ, "Statystyki pochodne:"
+45 = ZZZZZ, "Wsp. klastrowania stron danych:"
+46 = ZZZZZ, "Wsp. klastrowania stron indeksu:"
+47 = ZZZZZ, "Wsp. klastrowania wierszy danych:"
+48 = ZZZZZ, "Nazwa tabeli:"
+49 = ZZZZZ, "Strony na największej partycji:"
+50 = ZZZZZ, "Parametry konfiguracji:"
+51 = ZZZZZ, "Stopień maks. zrównoleglenia:"
+52 = ZZZZZ, "Stopień maks. zrównoleglenia skan.:"
+53 = ZZZZZ, "Konfiguracja dla pamięci podręcznej:"
+54 = ZZZZZ, "Rozmiar puli 2K w kilobajtach:"
+55 = ZZZZZ, "Rozmiar puli 4K w kilobajtach:"
+56 = ZZZZZ, "Rozmiar puli 8K w kilobajtach:"
+57 = ZZZZZ, "Rozmiar puli 16K w kilobajtach:"
+58 = ZZZZZ, "Ostatnia aktualizacja symulacji:"
+59 = ZZZZZ, "Wykorzystanie miejsca:"
+60 = ZZZZZ, "Duża wydajność we/wy:"
+61 = ZZZZZ, "Liczba procesów roboczych:"
+
+; histogram messages for ASE 12.5
+65 = ZZZZZ, "Histogram dla kolumny:"
+66 = ZZZZZ, "Typ danych w kolumnie:"
+67 = ZZZZZ, "Żądana liczba kroków:"
+68 = ZZZZZ, "Rzeczywista liczba kroków:"
+69 = ZZZZZ, "Ostatnia aktualizacja histogramu:"
+; For each locale adjust spacing between the following histogram headings
+; to match the data.  Weight an value data should start under the first 
+; characters of "Weight" and "Value" respectively.
+70 = ZZZZZ, "Krok     Waga                    Wartość"
+71 = ZZZZZ, "     Gęstość zakresu komórek:"
+72 = ZZZZZ, "     Całkowita gęstość:"
+73 = ZZZZZ, "Typ danych:"
+74 = ZZZZZ, "     Selektywność zakresu:"
+75 = ZZZZZ, "     Selektywność przedziału:"
+76 = ZZZZZ, "     Liczba liści:"
+77 = ZZZZZ, "     Liczba stron danych:"
+78 = ZZZZZ, "     Liczba pustych stron danych:"
+79 = ZZZZZ, "     Liczba pustych stron liści:"
+80 = ZZZZZ, "     Liczba wierszy danych:"
+81 = ZZZZZ, "     Liczba wierszy przesłanych dalej:"
+82 = ZZZZZ, "     Liczba wierszy usuniętych:"
+83 = ZZZZZ, "     Liczba CR stron danych:"
+84 = ZZZZZ, "     Liczba CR stron indeksu:"
+85 = ZZZZZ, "     Liczba CR wierszy danych:"
+86 = ZZZZZ, "     Stat. OAM + liczba stron alokacji:"
+87 = ZZZZZ, "     Str. danych pierw. rozszerzenia:"
+88 = ZZZZZ, "     Str. liści pierwszego rozszerzenia:"
+89 = ZZZZZ, "     Rozmiar wiersza danych:"
+90 = ZZZZZ, "     Rozmiar wiersza liści:"
+91 = ZZZZZ, "     Wysokość indeksu:"
+92 = ZZZZZ, "     Wsp. klastrowania stron danych:"
+93 = ZZZZZ, "     Wsp. klastrowania stron indeksu:"
+94 = ZZZZZ, "     Wsp. klastrowania wierszy danych:"
+95 = ZZZZZ, "Nazwa tabeli:"
+96 = ZZZZZ, "     Strony na największej partycji:"
+97 = ZZZZZ, "     Stopień maks. zrównoleglenia:"
+98 = ZZZZZ, "     Stopień maks. zrównoleglenia skan.:"
+99 = ZZZZZ, "Konfiguracja dla pamięci podręcznej:"
+100 = ZZZZZ, "     Rozmiar puli 2K w kilobajtach:"
+101 = ZZZZZ, "     Rozmiar puli 4K w kilobajtach:"
+102 = ZZZZZ, "     Rozmiar puli 8K w kilobajtach:"
+103 = ZZZZZ, "     Rozmiar puli 16K w kilobajtach:"
+104 = ZZZZZ, "     Rozmiar puli 32K w kilobajtach:"
+105 = ZZZZZ, "     Rozmiar puli 64K w kilobajtach:"
+106 = ZZZZZ, "     Rozmiar puli 128K w kilobajtach:"
+107 = ZZZZZ, "Ostatnia aktualizacja symulacji:"
+108 = ZZZZZ, "     Wykorzystanie miejsca:"
+109 = ZZZZZ, "     Duża wydajność we/wy:"
+110 = ZZZZZ, "     Liczba procesów roboczych:"
+111 = ZZZZZ, "  Statystyki pochodne:"
+112 = ZZZZZ, "Parametry konfiguracyjne:"
+113 = ZZZZZ, "Procent próbkowania:"
+
+
+; LOC_SECT_CTBCP
+;
+;   Message strings retained from ctbcp
+;
+[ctbcp]
+
+1 = ZZZZZ, "Błąd krytyczny: Przydzielanie pamięci nie powiodło się."
+2 = ZZZZZ, "Ustawianie właściwości połączenia nie powiodło się."
+3 = ZZZZZ, "Nawiązanie połączenia nie powiodło się."
+4 = ZZZZZ, "Nierozpoznany obiekt lokalizacji.  Używanie wartości domyślnej '%1!'."
+5 = ZZZZZ, "Błąd wewnętrzny: Nieprawidłowy typ lokalizacji został przekazany do funkcji cs_locale()."
+6 = ZZZZZ, "Błąd składniowy w '%1!'."
+7 = ZZZZZ, "Błąd podczas próby ładowania pary tabel translacyjnych."
+8 = ZZZZZ, "Przerwanie - działanie Optdiag zostało przerwane."
+

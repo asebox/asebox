@@ -1,0 +1,62 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) libdna.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=french
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libdna]
+
+1 = IPD_NOERR, "Pas d'erreur courante"
+
+2 = IPD_ACPTWAITFAIL, "Echec de la tentative d'attente d'une notification d'acceptation - erreur syst…me %1!"
+
+3 = IPD_ASSIGNFAIL, "Echec de la tentative d'assignation d'une nouvelle voie de lecture/d'≈criture - erreur syst…me %1!"
+
+4 = IPD_ACCEPTFAIL, "Echec de la tentative d'acceptation de la demande de connexion - erreur syst…me %1!"
+
+5 = IPD_EXPREADFAIL, "Echec de lecture des donn≈es envoy≈es - erreur syst…me %1!"
+
+6 = IPD_CLOSEFAIL, "Echec de la tentative de fermeture de la voie active - erreur syst…me %1!"
+
+7 = IPD_DASSGNFAIL, "Echec de la tentative de fin d'assignation de voie - erreur syst…me %1!"
+
+8 = IPD_CNCTPRSFAIL, "Impossible d'analyser les informations de connexion - erreur syst…me %1!"
+
+9 = IPD_LISTENFAIL, "Echec de la tentative de cr≈ation d'un r≈cepteur - erreur syst…me %1!"
+
+10 = IPD_READFAIL, "Echec de lecture de donn≈es normales - erreur syst…me %1!"
+
+11 = IPD_WRITEFAIL, "Echec de la tentative d'≈criture de donn≈es - erreur syst…me %1!"
+
+12 = IPD_CONNECTFAIL, "Echec de la tentative de lancement de connexion - erreur syst…me %1!"
+
+13 = IPD_CREMBXFAIL, "Impossible de cr≈er la bo—te aux lettres - erreur syst…me %1!"
+
+14 = IPD_DELMBXFAIL, "Impossible de supprimer la bo—te aux lettres - erreur syst…me %1!"
+
+15 = IPD_BADMSG, "Message inattendu reµu dans la bo—te aux lettres - erreur syst…me %1!"
+
+16 = IPD_MBREADFAIL, "Echec de la tentative de lecture de la bo—te aux lettres - erreur syst…me %1!"
+
+; end of decnet error strings
+;

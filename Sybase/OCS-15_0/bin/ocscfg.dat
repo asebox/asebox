@@ -1,0 +1,167 @@
+
+[**Env Var Begin**]
+comment=This marks the beginning of the area of the environment variables.
+
+[DSQUERY]
+default=SYBASE
+comment=The default server for client applications.
+used-by=Open Client.
+type=sybase
+
+[DSLISTEN]
+default=SYBASE
+comment=The default name under which a server looks up its listener address.
+used-by=Open Server.
+type=sybase
+
+[LANG]
+default=
+comment=A locale name (from locales.dat file) that indicates which language and character set to use for messages, datatype conversions, and datetime formats.
+used-by=Open Client.
+type=sybase
+
+[LC_ALL]
+default=
+comment=A locale name (from locales.dat file) that indicates which language and character set to use for messages, datatype conversions, and datetime formats.
+used-by=Open Client.
+type=sybase
+
+[LC_CTYPE]
+default=
+comment=A locale name (from locales.dat file) that indicates which character set to use for datatype conversions.
+used-by=Open Client.
+type=sybase
+
+[LC_MESSAGE]
+default=
+comment=A locale name (from locales.dat file) that indicates which language and character set to use for messages.
+used-by=Open Client.
+type=sybase
+
+[LC_TIME]
+default=
+comment=A locale name (from locales.dat file) that indicates which language to use when converting between datetime and character datatypes.
+used-by=Open Client.
+type=sybase
+
+[PATH]
+default=
+comment=Path to Sybase runtime DLLs and executables, for running Sybase applications.
+used-by=Open Client, Open Server.
+type=system
+
+[INCLUDE]
+default=
+comment=Path to Sybase header files, for compiling Sybase applications.
+used-by=Open Client, Open Server.
+type=system
+
+[LIB]
+default=
+comment=Path to Sybase library files, for linking Sybase applications.
+used-by=Open Client, Open Server.
+type=system
+
+
+[**Env Var End**]
+comment=This marks the end of the area of the environment variables.
+
+
+
+[**NetLib Drivers Begin**]
+comment=This marks the beginning of the area of the Net-Lib drivers
+
+
+# Default NT Net-Library driver list.
+# Note: NT has the section name [DRIVERS], not [NT_DRIVERS].
+[DRIVERS]
+#NLWNSCK=TCP		Winsock TCP/IP Net-Library driver
+#NLMSNMP=NAMEPIPE	Named Pipes Net-Library driver
+#NLNWLINK=SPX		NT NWLINK SPX/IPX Net-Library driver
+#NLDECNET=DECNET		DecNET Net-Library driver for NT
+#NLDEC95=DECNET		DecNET Net-Library driver for Windows95
+#NLVIP32=VINESIP		Banyan Vines IP driver
+
+# Default Windows Net-Library driver list.
+[WIN3_DRIVERS]
+#WNLWNSCK=TCP		Winsock TCP/IP Net-Library driver
+#WNLNMP=NAMEPIPE         Named Pipe Net-Library driver
+#WNLNOVSP=SPX		SPX/IPX Net-Library driver
+#WNLFTPTC=TCP		FTP PC/TCP Net-Library driver
+#WNLLWPTC=TCP		Novell LanWorkplace TCP/IP Net-Library driver
+#WNLNEWTC=TCP		NetManage TCP/IP Net-Library driver
+#WNLDECPW=DECNET		DecNET Net-Library driver
+#WNLSUNTC=TCP		Sun PC-NFS TCP/IP Net-Library driver
+#WNLWOLTC=TCP		Wollongong TCP/IP Net-Library driver
+#WNLMSTCP=TCP		Microsoft TCP/IP Net-Library driver
+#WNLVIP16=VINESIP	Banyan Vines IP driver
+
+
+# Default DOS Net-Library driver list.
+[DOS_DRIVERS]
+#NLFTPTCP=TCP       	FTP PC/TCP Net-Library driver
+#NLLWPTCP=TCP       	Novell LanWorkplace TCP/IP Net-Library driver
+#NLNMPIPE=NAMEPIPE       Named Pipe Net-Library driver
+#NLNOVSPX=SPX       	SPX/IPX Net-Library driver
+#NLRTXOSI=OSI       	Retix OSI Net-Library driver
+#NLDECDEC=DECNET		DecNET Net-Library driver
+#NLMSTCP=TCP		Microsoft TCP/IP Net-Library driver
+#NLSUNTCP=TCP		Sun PC-NFS TCP/IP Net-Library driver
+#NLWOLTCP=TCP		Wollongong TCP/IP Net-Library driver
+#NLIBMTCP=TCP		IBM TCP/IP Net-Library driver
+#NL3CTCP=TCP		3Com TCP/IP Net-Library driver
+#NLHPTCP=TCP		HP ARPA TCP/IP Net-Library driver
+#NLNULL=DUMMY		Dummy NULL Net-Library driver
+
+
+[**NetLib Drivers End**]
+comment=This marks the end of the area of the Net-Lib drivers
+
+
+
+[**Directory Services Drivers Begin**]
+comment=This marks the beginning of the area of the DirSvc drivers
+
+# This is the generic section.
+[DIRECTORY]
+;DCDDCE=DCE directory driver, under the generic section
+;DCDNDS=NDS directory driver, under the generic section
+;DCDREG=Registry directory driver, under the generic section
+;DCDBAN=Banyan directory driver, under the generic section
+
+[NT_DIRECTORY]
+LIBDREG=Directory driver for NT Registry
+LIBDDCE=Directory driver for DCE
+Local_Interface=Local interface file
+
+[WIN3_DIRECTORY]
+WDSNDS=Directory driver for Netware NDS
+WDSBAN=Directory driver for Banyan
+
+[DOS_DIRECTORY]
+
+
+[**Directory Services Drivers End**]
+comment=This marks the end of the area of the DirSvc drivers
+
+
+
+[**Security Services Drivers Begin**]
+comment=This marks the beginning of the area of the Security drivers
+
+[SECURITY]
+LIBSMSSP=Security driver for Microsoft Security Provider
+LIBSDCE=Security driver for DCE
+LIBSNVL=Security driver for Novell Netware
+LIBSKRB=Security driver for CyberSAFE Kerberos
+
+[WIN3_SECURITY]
+WSSMSSP=Security driver for Microsoft Security Provider
+
+
+
+[**Security Services Drivers End**]
+comment=This marks the end of the area of the Security drivers
+
+
+

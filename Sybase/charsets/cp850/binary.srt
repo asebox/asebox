@@ -1,0 +1,21 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   @(#)binary.srt	84.1
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Code Page 850 character set, this is a binary sort order.
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp850
+menuname = "Binary ordering, for use with Code Page 850 (cp850)."
+charset = cp850
+
+description = "Binary Sort Order for Code Page 850 (cp850)."
+
+binary = "true"

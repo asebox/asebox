@@ -1,0 +1,59 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nldecnet.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.2
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Alle Rechte vorbehalten. \
+Gebrauch, VervielfÑltigung oder Bekanntmachung durch die \
+US-Regierung sind Gegenstand von BeschrÑnkungen entsprechend \
+Unterabsatz (c) (1) (ii) der Klausel Rights in Technical \
+Data and Computer Software CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nldecnet]
+
+1 = IPDE_EPDISCON, "Verbindung kann am Endpunkt nicht getrennt werden - Fehler ist %1!"
+
+2 = IPDE_ACCEPT, "Fehler beim Herstellen einer neuen Verbindung - Fehler ist %1!"
+
+3 = IPDE_EPCLOSE, "Endpunkt kann nicht geschlossen werden - Fehler ist %1!"
+
+4 = IPDE_PARSE, "Verbindungsinformationen haben ungÅltige Syntax!"
+
+5 = IPDE_EPCONNECT, "Verbindung mit Server kann nicht hergestellt werden - Fehler ist %1!"
+
+6 = IPDE_READ, "Lesen von DECnet-Socket fehlgeschlagen - Fehler ist %1!"
+
+7 = IPDE_WRITE, "Schreiben zu DECnet-Socket fehlgeschlagen - Fehler ist %1!"
+
+8 = IPDE_READOOB, "Fehler beim Lesen von OOB-Daten - Fehler ist %1!"
+
+9 = IPDE_SOCKET, "Fehler beim Erstellen eines Socket - Fehler ist %1!"
+
+10 = IPDE_NODENAME, "Fehler beim Erkennen des Knotennamens - Fehler ist %1!"
+
+11 = IPDE_EPBIND, "Fehler beim Binden an lokale Adresse - Fehler ist %1!"
+
+12 = IPDE_EPLISTEN, "Fehler beim Erstellen eines Listening-Punkts - Fehler ist %1!"
+
+13 = IPDE_DRVINIT, "Fehler beim Initialisieren des Treibers - Fehler ist %1!"
+
+14 = IPDE_OBJECTNAME, "LÑnge des DECnet-Objektnamens kann 16 nicht Åberschreiten" 
+
+
+; end of nldecnet error strings
+;

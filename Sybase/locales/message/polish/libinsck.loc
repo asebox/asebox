@@ -1,0 +1,63 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=polish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libinsck]
+
+1 = IPDE_SETSCKPROC, "Nie można ustawić identyfikatora procesu sygnału gniazda - błąd nr %1!"
+
+2 = IPDE_SETSCKBLK, "Nie można ustawić gniazda na nieblokujące - błąd nr %1!"
+
+3 = IPDE_INSUFFDS, "Za mało opisów plików - błąd nr %1!"
+
+4 = IPDE_CLOSEFAIL, "Zamknięcie gniazda nie powiodło się - błąd nr %1!"
+
+5 = IPDE_PARSEFAIL, "Analiza składni informacji o adresie nie powiodła się"
+
+6 = IPDE_NORESOLVE, "Nie można skojarzyć nazwy hosta - błąd nr %1!"
+
+7 = IPDE_CONNECTFAIL, "Łączenie z gniazdem nie powiodło się - błąd nr %1!"
+
+8 = IPDE_SCKOPTFAIL, "Ustawienie opcji gniazda nie powiodło się - błąd nr %1!"
+
+9 = IPDE_BINDFAIL, "Dowiązanie gniazda nie powiodło się - błąd nr %1!"
+
+10 = IPDE_LISTENFAIL, "Nasłuchiwanie gniazda nie powiodło się - błąd nr %1!"
+
+11 = IPDE_RECVFAIL, "Odbieranie z gniazda nie powiodło się - błąd nr %1!"
+
+12 = IPDE_OOBREADFAIL, "Odbieranie z gniazda poza pasmem nie powiodło się - błąd nr %1!"
+
+13 = IPDE_UNSUP, "Wywołano nieobsługiwaną operację sterownika"
+
+14 = IPDE_SOCKFAIL, "Tworzenie nowego gniazda nie powiodło się - błąd nr %1!"
+
+15 = IPDE_SENDFAIL, "Wysyłanie z gniazda nie powiodło się - błąd nr %1!"
+16 = IPDE_GETOPTFAIL, "Pobranie opcji gniazda nie powiodło się - błąd nr %1!"
+
+; end of insock error strings
+;

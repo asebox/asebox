@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > RAOSTATS </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 60 </delay>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_RAOSTATS (
+     Timestamp datetime not null,
+     Interval int not null,
+     avg_changeset_send_time              float      null,
+     avg_oper_process_time                float      null,
+     avg_ops_per_transaction              float      null,
+     avg_sender_oper_process_time         float      null,
+     avg_sender_oper_wait_time            float      null,
+     avg_xlog_oper_wait_time              float      null,
+     current_marked_obj_cache_size        int         null,
+     current_oper_queue_size              int         null,
+     current_scan_buffer_size             int         null,
+     current_session_cache_size           int         null,
+     last_processed_oper_locator          varchar(80) null,
+     log_reposition_point_locator         varchar(80) null,
+     maint_user_opers_filtered            int         null,
+     opers_processed                      int         null,
+     opers_scanned                        int         null,
+     opers_skipped                        int         null,
+     sender_opers_processed               int         null,
+     system_transactions_skipped          int         null,
+     transactions_aborted                 int         null,
+     transactions_closed                  int         null,
+     transactions_committed               int         null,
+     transactions_opened                  int         null,
+     transactions_processed               int         null,
+     transactions_skipped                 int         null,
+     avg_bytes_second_during_trans        float      null,
+     avg_data_arrival_time                float      null,
+     avg_ltl_buffer_cache_time            float      null,
+     avg_ltl_buffer_size                  float      null,
+     avg_ltl_command_size                 float      null,
+     avg_ltl_commands_buffer              float      null,
+     avg_ltl_commands_sec                 float      null,
+     avg_ltm_buffer_utilization           float      null,
+     avg_rep_srvr_turnaround_time         float      null,
+     avg_time_to_create_distrib           float      null,
+     encoded_column_name_cache_size       float      null,
+     input_queue_size                     float      null,
+     last_qid_sent                        varchar(80) null,
+     last_transaction_id_sent             varchar(80) null,
+     number_of_ltl_commands_sent          int         null,
+     output_queue_size                    float      null,
+     bytes_sent                           float      null,
+     items_held_in_global_lrucache        int         null,
+     time_replication_last_started        datetime    null,
+     time_statistics_last_reset           datetime    null,
+     time_statistics_obtained             datetime    null,
+     vm__max_memory_used                  float      null,
+     vm_free_memory                       float      null,
+     vm_maximum_memory                    float         null,
+     vm_memory_usage                      float         null,
+     vm_total_memory_allocated            float         null,
+
+
+     avg_RBA_search_time                  float null,
+     avg_number_of_bytes_per_record       float null,
+     avg_number_of_bytes_read_per_s       float null,
+     avg_nb_of_log_records_per_ckpt       float null,
+     avg_nb_of_s_between_log_r_ckpt       float null,
+     avg_time_per_arch_log_dev_read       float null,
+     avg_time_per_onln_log_dev_read       float null,
+     Curr_RASD_article_cache_size         float null,
+     Cur_RASD_marked_obj_cache_size       float null,
+     Log_scan_checkpoint_set_size         float null,
+     Total_archive_log_read_time          float null,
+     Total_bytes_read                     float null,
+     Total_log_records_filtered           float null,
+     Total_log_records_queued             float null,
+     Total_log_records_read               float null,
+     TotNum_of_RASD_art_cache_hits        float null,
+     TotNum_of_RASD_art_cache_miss        float null,
+     TotNum_of_RASD_marked_obj_hits       float null,
+     TotNum_of_RASD_marked_obj_miss       float null,
+     Total_online_log_read_time           float null
+  ) lock datarows
+     </T>
+
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_RAOSTATS (Timestamp)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_RAOSTATS" >
+  delete ?SERVERNAME?_RAOSTATS where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

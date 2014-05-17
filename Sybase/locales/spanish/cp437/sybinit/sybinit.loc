@@ -1,0 +1,1001 @@
+; comment character is semicolon.
+; "sybinit.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) sybinit.hdr 160.1 1/30/95 15:20:44
+;
+; NOTE: This file will be empty for the language 'us_english'
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "message string with place holders", "format string"
+;
+0    = "", 	""
+1    = "No se puede crear el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+2    = "No se puede abrir el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+3    = "No se puede escribir en el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+4    = "No se puede leer el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+5    = "No se puede cerrar el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+6    = "No se puede acceder al directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+7    = "%1! ", 	"%s"
+8    = "No se puede crear un archivo temporal.", 	""
+9    = "No se puede capturar la salida de '%1!'.", 	"%s"
+10    = "Error al crear el nombre de la ruta '%1!': demasiado largo.", 	"%s"
+11    = "Error al crear la lista de objetos.", 	""
+12    = "El atributo '%1!' no est  definido.", 	"%s"
+13    = "El atributo '%1!' no existe.", 	"%s"
+14    = "El archivo '%1!' no existe.", 	"%s"
+15    = "No se ha podido crear la ruta del archivo de interfaces.", 	""
+16    = ".", 	""
+17    = "%1!", 	"%s"
+18    = "Realizado", 	""
+19    = "No es posible obtener informaci¢n sobre '%1!' con la llamada a '%2!'. El sistema operativo ha devuelto: %3!.", 	"%s %s %s"
+20    = "s", 	""
+21    = "n", 	""
+24    = "Saturaci¢n de buffer interno al enviar '%1!' al shell.", 	"%s"
+25    = "Se ha llamado al shell sin comando.", 	" "
+26    = "Llamando al shell con '%1!'.", 	"%s"
+27    = "fork() ha fallado con el mensaje siguiente: %1!.", 	"%s"
+28    = "execl() ha devuelto: error del sistema operativo.", 	""
+29    = "syb_system_datetime() llamado con buffer NULL.", 	""
+32    = "syb_user_username() llamado con buffer NULL.", 	 ""
+33    = "No es posible determinar el nombre del usuario actual.", 	""
+34    = "syb_user_get_env() llamado con buffer de entorno NULL.", 	""
+35    = "syb_user_get_env() llamado con buffer de variable de entorno NULL.", 	""
+36    = "La variable de entorno '%1!' no est  definida.", 	"%s"
+37    = "syb_user_curdir() llamado con buffer NULL.", 	""
+38    = "No se ha podido obtener el directorio de trabajo actual.", 	""
+39    = "syb_user_chdir() llamado con buffer NULL.", 	""
+40    = "No se ha podido cambiar el directorio de trabajo actual a '%1!'.", 	"%s"
+41    = "syb_file_exists() llamado con buffer NULL.", 	""
+42    = "No se ha podido determinar si existe '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+43    = "No se ha podido determinar si existe '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+44    = "syb_file_delete() llamado con buffer NULL.", 	""
+45    = "No se ha podido eliminar el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+46    = "No se ha podido eliminar el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+47    = "syb_file_get_mode() llamado con nombre de archivo NULL.", 	""
+48    = "No se han podido obtener permisos para el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+49    = "No se han podido obtener permisos para el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+50    = "syb_file_set_mode() llamado con nombre de archivo NULL.", 	""
+51    = "No se han podido definir los permisos para el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+52    = "No se han podido definir los permisos para el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+53    = "syb_file_copy() llamado con nombre de archivo de origen NULL. ", 	""
+54    = "syb_file_copy() llamado con nombre de archivo de destino NULL.", 	""
+55    = "No se ha podido abrir el archivo '%1!' como origen de la copia.", 	"%s"
+56    = "No se ha podido abrir el archivo '%1!' como destino de la copia.", 	"%s"
+57    = "Error durante la copia del archivo:  n§ de lecturas = '%1!', n§ de escrituras = '%2!'.", 	"%d %d"
+58    = "No se ha podido obtener permisos del archivo '%1!' despu‚s de la copia. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+59    = "No se ha podido obtener permisos del archivo '%1!' despu‚s de la copia. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+60    = "No se ha podido establecer permiso del archivo '%1!' despu‚s de la copia. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+61    = "No se ha podido establecer permiso del archivo '%1!' despu‚s de la copia. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+62    = "syb_file_rename() llamado con buffer de origen NULL.", 	""
+63    = "syb_file_rename() llamado con buffer de destino NULL.", 	""
+64    = "No se ha podido cambiar nombre del archivo '%1!' por '%2!'. El sistema operativo ha devuelto: %3!.", 	"%s %s %s"
+65    = "No se ha podido cambiar nombre del archivo '%1!' por '%2!'. El sistema operativo ha devuelto: %3!.", 	"%s %s %d"
+66    = "syb_file_size() llamado con nombre de archivo NULL.", 	""
+67    = "No se ha podido determinar el tama¤o de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+68    = "No se ha podido determinar el tama¤o de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+69    = "syb_file_isdir() llamado con ruta NULL.", 	""
+70    = "No se ha podido determinar si '%1!' es un directorio. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+71    = "No se ha podido determinar si '%1!' es un directorio. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+72    = "syb_user_default_charset() llamado con buffer NULL.", 	""
+73    = "syb_user_default_language() llamado con buffer NULL.", 	""
+74    = "syb_file_date() llamado con nombre de archivo NULL.", 	""
+75    = "No se ha podido obtener la fecha de modificaci¢n de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+76    = "No se ha podido obtener la fecha de modificaci¢n de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+77    = "No se ha podido obtener la fecha de modificaci¢n de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+78    = "No se ha podido obtener la fecha de modificaci¢n de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+79    = "syb_path_basename() llamado con nombre de ruta NULL.", 	""
+80    = "syb_path_basename() llamado con buffer NULL.", 	""
+81    = "El nombre de ruta '%1!' para syb_path_basename() supera la longitud m xima ('%2!').", 	"%s %d"
+82    = "syb_path_dirname() llamado con nombre de ruta NULL.", 	""
+83    = "syb_path_dirname() llamado con buffer NULL.", 	""
+84    = "El nombre de ruta '%1!' para syb_path_dirname() supera la longitud m xima ('%2!').", 	"%s %d"
+85    = "syb_path_append_dir() llamado con nombre de ruta NULL.", 	""
+86    = "syb_path_append_dir() llamado con nombre de directorio NULL.", 	""
+87    = "El nombre de ruta formado al a¤adir '%1!' a '%2!' superar  la longitud m xima permitida para un nombre de ruta ('%3!').", 	"%s %s %d"
+88    = "syb_path_append_file() llamado con nombre de ruta NULL.", 	""
+89    = "syb_path_append_file() llamado con nombre de archivo NULL.", 	""
+90    = "No se ha podido a¤adir '%1!' a '%2!'.", 	"%s %s"
+91    = "syb_path_convert() llamado con ruta NULL.", 	""
+92    = "El nombre de ruta '%1!' para syb_file_convert() supera la longitud m xima ('%2!').", 	"%s %d"
+93    = "Se llam¢ a syb_file_convert() sin especificar nombre de archivo.", 	""
+94    = "El par metro '%1!' del nombre de archivo para syb_file_convert() no tiene el delimitador terminal esperado.", 	"%s"
+95    = "syb_file_convert() llamado con un tipo de archivo no v lido '%1!'.", 	"%d"
+96    = "syb_file_list() llamado con nombre de directorio NULL.", 	""
+97    = "No se ha podido abrir el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	 "%s %s"
+98    = "No se ha podido abrir el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	 "%s %d"
+99    = "No se ha podido leer el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+100    = "No se ha podido leer el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+101    = "No se ha podido cerrar el directorio '%1!'. El sistema operativo ha devuelto: %2!", 	"%s %s"
+102    = "No se ha podido cerrar el directorio '%1!'. El sistema operativo ha devuelto: %2!", 	"%s %d"
+103    = "No se ha podido asignar list_head en syb_file_list().", 	""
+104    = "No se ha podido asignar la estructura syb_file en syb_file_list().", 	""
+105    = "syb_file_list_first() llamado con buffer NULL.", 	""
+106    = "syb_file_list_first() llamado con file_list NULL.", 	""
+107    = "syb_file_list_next() llamado con buffer NULL.", 	""
+108    = "syb_file_list_next() llamado con file_list NULL.", 	""
+109    = "syb_dir_delete() llamado con nombre de directorio NULL.", 	""
+110    = "No se ha podido abrir el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+111    = "No se ha podido abrir el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+112    = "No se ha podido obtener informaci¢n acerca de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+113    = "No se ha podido obtener informaci¢n acerca de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+114    = "No se ha podido eliminar el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+115    = "No se ha podido eliminar el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+116    = "No se ha podido leer el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+117    = "No se ha podido leer el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+118    = "No es posible eliminar el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+119    = "No es posible eliminar el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+120    = "syb_dir_create() llamado con nombre de directorio NULL.", 	""
+121    = "No es posible crear el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+122    = "No es posible crear el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+123    = "syb_dir_get_mode() llamado con directorio NULL.", 	""
+124    = "No es posible obtener informaci¢n acerca del directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+125    = "No es posible obtener informaci¢n acerca del directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+126    = "'%1!' no es un directorio.", 	"%s"
+127    = "syb_dir_set_mode() llamado con directorio NULL.", 	""
+128    = "No es posible obtener informaci¢n acerca del directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+129    = "No es posible obtener informaci¢n acerca del directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+130    = "'%1!' no es un directorio.", 	"%s"
+131    = "No es posible establecer permisos para el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+132    = "No es posible establecer permisos para el directorio '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+133    = "syb_net_get_inet_address() llamado con buffer NULL.", 	""
+134    = "syb_net_get_ethernet_address() llamado con buffer NULL.", 	""
+135    = "No se ha podido obtener la direcci¢n Ethernet para '%1!'.", 	"%s"
+136    = "syb_net_get_hostname_from_enet() llamado con buffer NULL.", 	""
+137    = "No se ha podido convertir la direcci¢n Ethernet '%1!' en un n£mero Ethernet.", 	"%s"
+138    = "No se ha podido obtener el nombre del host para la direcci¢n Ethernet '%1!'.", 	"%s"
+139    = "No se encuentra el Host '%1!' .", 	"%s"
+140    = "syb_net_get_hostname_from_inet() llamado con buffer NULL.", 	""
+141    = "No se ha podido obtener el nombre del host para la direcci¢n Internet '%1!'.", 	"%s"
+142    = "No se ha podido asignar la estructura de contexto en syb_system_default_charset().", 	""
+143    = "No es posible obtener la informaci¢n de localizaci¢n por defecto de syb_system_default_charset().", 	""
+144    = "No se ha podido cerrar la estructura de contexto en syb_system_default_charset().", 	""
+145    = "No es posible cerrar la estructura de contexto local en syb_system_default_charset().", 	""
+146    = "No es posible asignar estructura de contexto local en syb_system_default_charset().", 	""
+147    = "No es posible determinar la informaci¢n del juego de caracteres por defecto.", 	""
+148    = "No se ha podido asignar la estructura de contexto en syb_system_default_language().", 	""
+149    = "No se ha podido cerrar la estructura de contexto en syb_system_default_language().", 	""
+150    = "Argumento de l¡nea de comandos no v lido '%1!'.", 	"%s"
+151    = "No es posible establecer el indicador de depuraci¢n '%1!'.", 	"%s"
+152    = "No es posible establecer el indicador de seguimiento '%1!'.", 	"%s"
+153    = "No es posible obtener la informaci¢n de la ruta.", 	""
+154    = "No es posible determinar el directorio de versi¢n auditinit.", ""
+155    = "No es posible determinar el directorio de versi¢n auditinit.", ""
+156    = "No es posible determinar el directorio de versi¢n auditinit.", ""
+157    = "No es posible determinar la informaci¢n de idioma por defecto.", 	""
+158    = "No es posible obtener la informaci¢n de localizaci¢n por defecto de syb_system_default_language().", 	""
+159    = "syb_get_home_directory() llamado con usuario NULL.", 	""
+160    = "syb_get_home_directory() llamado con buffer NULL.", 	""
+161    = "No se ha podido obtener informaci¢n sobre el directorio de trabajo para '%1!'.", 	"%s"
+162    = "No se ha podido compilar la expresi¢n regular '%1!'.", 	"%s"
+163    = "syb_file_touch_date() llamado con nombre de archivo NULL.", 	""
+164    = "No se ha podido actualizar la fecha de modificaci¢n de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+165    = "No se ha podido actualizar la fecha de modificaci¢n de '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+166    = "No se ha podido asignar la estructura de contexto en syb_system_datetime().", 	""
+167    = "No se ha podido obtener la informaci¢n sobre la hora de cs_time() en syb_system_datetime().", 	""
+168    = "No se ha podido cerrar la estructura de contexto en syb_system_datetime().", 	""
+169    = "No se ha podido asignar la estructura de contexto en syb_system_month().", 	""
+172    = "No se ha podido obtener la informaci¢n sobre la hora de cs_time() en syb_system_month().", 	""
+173    = "No se ha podido cerrar la estructura de contexto en syb_system_month().", 	""
+174    = "No es posible cerrar la estructura de contexto local en syb_system_default_language().", 	""
+175    = "No es posible asignar estructura de contexto local en syb_system_default_language().", 	""
+176    = "No se ha podido asignar la estructura de contexto en syb_system_day().", 	""
+177    = "No se ha podido obtener la informaci¢n sobre la hora de cs_time() en syb_system_day().", 	""
+178    = "No se ha podido cerrar la estructura de contexto en syb_system_day().", 	""
+179    = "S¢lo se puede especificar el juego de caracteres una vez en la l¡nea de comandos.", 	""
+180    = "S¢lo se puede especificar el idioma una vez en la l¡nea de comandos.", 	""
+181    = "S¢lo se puede especificar el archivo de registro una vez en la l¡nea de comandos.", 	""
+182    = "S¢lo se puede especificar el archivo de recursos una vez en la l¡nea de comandos.", 	""
+183    = "S¢lo se puede especificar el directorio de versi¢n una vez en la l¡nea de comandos.", 	 ""
+184    = "syb_file_date_buffer() llamado con buffer NULL.", 	""
+185    = "Se ha detectado una cadena inesperada de solicitud de fecha '%1!'.", 	"%s"
+186    = "No se ha podido asignar la estructura de contexto en syb_file_date_buffer().", 	""
+187    = "No se ha podido cerrar la estructura de contexto en syb_file_date_buffer().", 	""
+188    = "syb_net_get_hostname() llamado con nombre de host NULL.", 	""
+189    = "No se ha podido obtener el nombre de host. El sistema operativo ha devuelto: %1!.", 	"%s"
+190    = "No se ha podido obtener el nombre de host. El sistema operativo ha devuelto: %1!.", 	"%d"
+191    = "Argumento err¢neo pasado a syb_file_is_regular_file.", 	""
+192    = "No se ha podido determinar si %1! es un dispositivo de bloques. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+193    = "No se ha podido determinar si %1! es un dispositivo de bloques. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+194    = "No se ha podido determinar si %1! es un dispositivo de caracteres. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+195    = "No se ha podido determinar si %1! es un dispositivo de caracteres. El sistema operativo ha devuelto: %2!.", 	"%s %d"
+196    = "Imposible establecer la variable de entorno '%1!' a '%2!'.", 	"%s %s"
+197    = "No se puede inicializar la librer¡a '%1!': el archivo no existe.", 	"%s"
+198    = "Imposible iniciar la librer¡a '%1!'. Consulte el registro para m s informaci¢n.", 	"%s"
+199    = "Comprobaci¢n de validaci¢n de directorio v lido realizada con puntero NULL.", 	""	
+200    = "No se ha podido obtener el componente de directorio para '%1!'.", 	"%s"
+201    = "Se requiere el nombre de ruta completo (%1!).", 	"%s"
+202    = "Error en directorio '%1!'.", 	"%s"
+203    = "'%1!' no es un directorio.", 	"%s"
+204    = "El directorio '%1!' debe tener permisos de lectura, escritura y ejecuci¢n.", 	"%s"
+205    = "'%1!' no devolvi¢ un estado de salida a auditinit.", "%s"
+206    = "No es posible determinar el valor de la variable de entorno SYBASE. ", 	""
+207    = "AUDITINIT.NLM no existe en la ubicaci¢n indicada por la variable de entorno de SYBASE: '%1!'.", "%s"
+208    = "No se encuentra el archivo de variables de entorno SYBASE '%1!'.", 	"%s"
+209    = "No es posible cerrar el archivo de variables de entorno Sybase '%1!'.", 	"%s"
+210    = "No es posible crear el archivo de variables de entorno Sybase '%1!'.", 	"%s"
+211    = "No es posible determinar el componente de directorio de '%1!'.", 	"%s"
+212    = "No es posible cambiar el nombre del archivo de variables de entorno Sybase '%1!' por '%2!'.", 	"%s %s"
+213    = "No es posible determinar el sufijo de nombre del archivo de entorno Sybase '%1!'.", 	"%s"
+214    = "No es posible anexar '%1!' a '%2!' para obtener el nombre de archivo de entorno auditinit de copia de seguridad.", "%s %s"
+215    = "No es posible generar %1!. Compruebe la pantalla de la consola del sistema para obtener informaci¢n adicional.", 	"%s"
+216    = "El nombre del host '%1!' no es v lido. Los nombres de host deben incluir caracteres latinos.", 	"%s"
+217    = "No es posible ampliar la ruta '%1!' usando una llamada a '%2!'. El sistema operativo ha devuelto: %3!.", 	"%s %s %s"
+218    = "No es posible obtener informaci¢n acerca del sistema de archivos '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+219    = "No es posible determinar la interfaz del archivo de caracteres para la ruta '%1!'.", 	"%s"
+220    = "No se puede a¤adir '%1! a '%2!': '%3!' no es un directorio v lido.", 	"%s %s %s"
+221    = "No es posible determinar si '%1!' es un miembro del cluster. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+227    = "El NLM '%1!' ya est  cargado.", 	"%s"
+231    = "La direcci¢n '%1!' no es v lida. Las direcciones SPX s¢lo pueden incluir caracteres que representen d¡gitos hexadecimales ('0'-'9' y 'a'-'f').",      "%s"
+244    = "s¡", 	""
+245    = "no", 	""
+250    = "Error al esperar la terminaci¢n del proceso '%1!'. El sistema operativo ha devuelto: %2!.ATENCION: no se podr  determinar el estado de terminaci¢n.", 	"%s %s"
+251    = "Error al comprobar el estado del proceso '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+252    = "No tiene permiso de escritura en '%1!'. Es posible que sea necesario el permiso de escritura m s adelante; soluci¢nelo antes de continuar.", "%s"
+300    = "ATENCION:", 	""
+301    = "SEGUIMIENTO:", 	""
+302    = "", 	""
+303    = "ERROR DEL SISTEMA:", 	""
+304    = "ERROR INTERNO:", 	""
+305    = "Compruebe el registro (%1!) para m s informaci¢n. Tome nota de este error y p¢ngase en contacto con Sybase.", 	"%s"
+306    = "ERROR DE CONECTIVIDAD:", 	""
+307    = "ERROR DEL SERVIDOR:", 	""
+308    = "Tome nota de este error y p¢ngase en contacto con Sybase.", 	""
+401    = "inf_ifile_read() llamado con nombre de archivo NULL.", 	""
+402    = "El archivo de interfaces '%1!' ya est  cargado. El archivo de interfaces debe estar descargado antes de cargar el archivo de interfaces '%2!'.", 	"%s %s"
+403    = "No se ha encontrado el archivo de interfaces '%1!'.", 	"%s"
+404    = "No se ha podido abrir el archivo de interfaces '%1!'.", 	"%s"
+405    = "Error de sintaxis en la l¡nea '%1!'.", 	"%s"
+406    = "No se ha podido cerrar el archivo de interfaces '%1!'.", 	"%s"
+407    = "No se ha podido cerrar el archivo de interfaces '%1!' al liberar la imagen en memoria.", 	"%s"
+408    = "No es posible asignar memoria para una estructura de entrada de interfaces.", 	""
+409    = "No es posible asignar memoria para una estructura b sica de servicio.", 	""
+410    = "Error de sintaxis al analizar el servicio '%1!'.", 	"%s"
+411    = "Tipo de servicio desconocido '%1!' en servicio '%2!'.", 	"%s %s"
+412    = "Error de an lisis en la l¡nea de servicio '%1!'.", 	"%s"
+413    = "Error de an lisis en la l¡nea de servicio '%2!': protocolo desconocido '%1!'.", 	"%s %s"
+414    = "No se ha podido determinar el nombre de host actual.", 	""
+415    = "No se ha podido determinar la direcci¢n Internet para '%1!'.", 	"%s"
+416    = "El protocolo '%1!' no est  actualmente admitido en '%2!'.", 	"%s %s"
+417    = "No es posible analizar la direcci¢n TLI para '%1!'.", 	"%s"
+418    = "El archivo de interfaces '%1!' ya est  abierto. El archivo debe cerrarse antes de escribir.", 	"%s"
+419    = "No se ha especificado el nombre de archivo de interfaces en el que escribir.", 	""
+420    = "No se ha podido obtener el componente de directorio del nombre de archivo de interfaces '%1!'.", 	"%s"
+421    = "No es posible determinar el nombre del archivo de seguridad del archivo secuencial de interfaces.", 	""
+422    = "No es posible a¤adir '%1!' a '%2!' para obtener el nombre del archivo de seguridad de interfaces.", 	"%s %s"
+423    = "No es posible cambiar el nombre de '%1!' por '%2!'.", 	"%s %s"
+424    = "No es posible abrir el archivo de interfaces '%1!' para su escritura.", 	"%s"
+425    = "No es posible escribir en el archivo de interfaces '%1!'.", 	"%s"
+426    = "No es posible cerrar el archivo de interfaces '%1!'.", 	"%s"
+427    = "Incapaz de convertir el servicio para la entrada '%1!' a un formato de cadena.", 	"%s"
+428    = "inf_service_construct_string() llamado con servicio NULL.", 	""
+429    = "inf_service_construct_string() llamado con buffer NULL.", 	""
+430    = "Tipo de servicio '%1!' desconocido; descartando este servicio.", 	"%d"
+431    = "Protocolo '%1!' desconocido; descartando este servicio.", 	"%d"
+432    = "TCP es el £nico protocolo que se admite en TLI.", 	""
+433    = "Api de red desconocida. Las APIs de red v lidas son TLI, Sockets o ninguna.", ""
+434    = "Se ha detectado un servicio en l¡nea '%1!' antes de su entrada.", 	"%s"
+435    = "Incapaz de analizar el n£mero de puerto TLI '%1!'.", 	"%s"
+436    = "No es posible determinar la direcci¢n Internet para '%1!'.", 	"%s"
+437    = "No es posible analizar la direcci¢n Internet '%1!' para un formato TLI.", 	"%s"
+438    = "Protocolo desconocido detectado en la entrada '%1!'; descartando esta entrada.", 	"%s"
+439    = "Servicio desconocido detectado en la entrada '%1!'; descartando este servicio.", 	"%s"
+440    = "No se puede determinar el nombre del host para la direcci¢n '%1!'; descartando este servicio.", 	"%s"
+441    = "Se ha detectado una entrada duplicada '%1!'. La primera entrada se conservar  y las dem s se descartar n. ", 	"%s"
+442    = "No se han podido configurar todos los alias de los receptores.", 	""
+443    = "Error de an lisis: '%1!' tiene un receptor '%2!', que ya tiene '%3!' como receptor.", 	"%s %s %s"
+444    = "inf_service_copy_string() llamado con servicios NULL.", 	 ""
+445    = "No se detecta ning£n servicio en el archivo de interfaces para la entrada '%1!'; desechando esta entrada.", 	"%s"
+446    = "La entrada de interfaces '%1!' ya existe; no se permite la inserci¢n de duplicados.", 	"%s"
+447    = "La entrada de interfaces '%1!' ser  un receptor de '%2!'. Sin embargo, '%3!' ya tiene una asociaci¢n con '%4!'.", 	"%s %s %s %s"
+448    = "La entrada del receptor '%1!' tiene '%2!' especificado como su principal, pero corresponde a '%3!' en el archivo de interfaces.", 	"%s %s %s"
+449    = "No es posible asignar memoria para el encabezado de la lista de entradas de interfaces.", 	""
+450    = "No es posible asignar memoria para el elemento de la lista de entradas de interfaces.", 	""
+451    = "Se ha detectado un servicio duplicado en la entrada de interfaces '%1!'; servicio no insertado.", 	"%s"
+452    = "El servicio de la entrada de interfaces '%1!' no se ha especificado completamente; servicio no insertado.", 	"%s"
+453    = "inf_service_get_alias() llamado con buffer NULL.", 	""
+454    = "No se ha podido marcar la entrada de interfaces '%1!' como principal de '%2!' ya que '%3!' ya est  asociado a '%4!'.", 	"%s %s %s %s"
+455    = "Ha fallado el intento de asociar '%1!' como receptor de '%2!', porque '%3!' no tiene servicios de interfaces.", 	"%s %s %s"
+456    = "Ha fallado el intento de asociar '%1!' como receptor de '%2!', porque '%3!'  no tiene un servicio de consultas (deber¡a haber exactamente UN servicio de consultas).", 	"%s %s %s"
+457    = "Ha fallado el intento de asociar '%1!' como receptor de '%2!', porque '%3!' tiene varios servicios de consultas (deber¡a haber exactamente UN servicio de consultas).", 	"%s %s %s"
+458    = "No es posible asignar memoria para la entrada del receptor de'%1!'.", 	"%s"
+459    = "No es posible asignar memoria para el servicio de entradas del receptor de'%1!'.", 	"%s"
+460    = "No es posible insertar el alias de receptor '%1!' de '%2!' en el archivo de interfaces.", 	"%s %s"
+461    = "inf_service_set_alias() llamado con buffer NULL.", 	""
+463    = "No se ha podido localizar la entrada de interfaces '%1!' en el archivo de interfaces.", 	"%s"
+464    = "Entradas de interfaz nulas. Verifique el archivo de interfaces", 	""
+500    = "No se ha podido encontrar el n£mero de mensaje '%1!' para el producto '%2!' en el cach‚ de mensajes.", 	"%d %s"
+501    = "No es posible localizar el mensaje auditinit n£mero '%1!'.", "%d"
+502    = "No se ha podido crear el mensaje '%1!' para el producto '%2!'. El texto no creado es: '%3!', y la cadena de formato es '%4!'.", 	"%d %s %s %s"
+503    = "Utilizando 'us_english' para este mensaje.", 	""
+504    = "No es posible cargar mensajes para el producto '%1!' utilizando el idioma '%2!' y el juego de caracteres '%3!': no se ha podido encontrar el archivo de localizaci¢n '%4!'.", 	"%s %s %s %s"
+505    = "No es posible cargar mensajes para el producto n£mero '%1!' utilizando el idioma '%2!' y el juego de caracteres '%3!':  n£mero de producto err¢neo.", 	"%d %s %s"
+506    = "Utilizando 'us_english' para todos los mensajes.", 	""
+507    = "Error de formato en archivo de localizaci¢n '%1!': no se ha podido encontrar la secci¢n '%2!'. Abortando carga del idioma. ", 	"%s %s"
+508    = "Error al abrir '%1!' para la localizaci¢n '%2!' del producto. Abortando carga del idioma. ", 	"%s %s"
+509    = "Uso de '%1!' por defecto en todos los mensajes.", 	"%s"
+600    = "Directorio de inicio sin definir; no se puede crear el registro de la sesi¢n.", 	""
+601    = "No se puede localizar el directorio de registro; no se puede crear el registro de la sesi¢n.", 	""
+602    = "No se puede leer el directorio de registro; no se puede crear el registro de la sesi¢n.", 	""
+603    = "No se puede abrir el archivo de registro '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+604    = "Ha fallado la escritura del registro. El sistema operativo ha devuelto: %1!.", 	"%s"
+605    = "Ha fallado el cierre del registro. El sistema operativo ha devuelto: %1!.", 	"%s"
+607    = "No se puede escribir en el registro: el registro no se ha creado.", 	""
+608    = "PRINCIPIO DE INFORMACION DE ENTORNO", 	""
+609    = "FIN DE INFORMACION DE ENTORNO", 	""
+610    = "Cierre del registro.", 	""
+611    = "El nombre del registro es demasiado largo; el registro no puede crearse.", 	""
+612    = "ENTORNO DE SISTEMA OPERATIVO", 	""
+613    = "ENTORNO DE USUARIO", 	""
+614    = "LIMITES DE PROCESOS", 	""
+615    = "Principio de salida de '%1!':", 	"%s"
+616    = "Fin de salida de '%1!'.", 	"%s"
+617    = "No es posible generar el nombre de archivo de registro de '%1!'.", 	"%s"
+640    = "juego de caracteres:", 	""
+641    = "idioma:", 	""
+642    = "directorio de versi¢n auditinit:", ""
+643    = "directorio de versiones de trabajo:", 	""
+644    = "nombre de usuario:", 	""
+645    = "directorio actual:", 	""
+700    = "S¡", 	""
+701    = "No", 	""
+702    = "(Introduzca S¡ o No): ", 	""
+703    = "Continuar", 	""
+704    = "Introduzca el n£mero deseado y presione retorno: ", 	""
+705    = "La inicializaci¢n del administrador de men£s ha fallado.", 	""
+706    = "No se puede crear el men£; supera el n£mero m ximo de pantallas.", 	""
+707    = "No se puede crear el men£; el nombre de pantalla es NULL.", 	""
+708    = "No se puede crear un men£ (nombre pantalla = %1!) que ya existe.", 	"%s"
+709    = "No se puede establecer el atributo de pantalla; no hay ninguna pantalla abierta.", 	""
+710    = "Pantalla actual NULL.", 	""
+711    = "Ctrl-a Aceptar y Continuar, Ctrl-x Salir de pantalla, ? Ayuda.", 	""
+712    = "Ctrl-f Adelante,  Ctrl-b Atr s.", 	""
+714    = "<M s>", 	""
+715    = "Presione <retorno> para continuar. ", 	""
+716    = "Su selecci¢n est  fuera del rango. Vuelva a intentarlo.", 	""
+717    = "Presione Ctrl-x para salir de la ayuda: ", 	""
+718    = "<F1> : Ayuda                                       <F3> : Ver diario de errores Auditinit", ""
+719    = "<Esc> :  Salir de pantalla de ayuda", 	""
+720    = "Error Auditinit : ", ""
+721    = "Advertencia Auditinit : ", ""
+722    = "Mensaje Auditinit : ", ""
+723    = "Sybinit-El instalador de System 10", ""
+724    = "<F1> : Ayuda                                       <F3> : Ver diario de errores Auditinit", ""
+725    = "¨Salir de AUDITINIT?", ""
+726    = "<RETORNO> : Seleccionar opci¢n   <Esc> : Pantalla anterior    <F10> : Pantalla siguiente", 	""
+727    = "<RETORNO> : Seleccionar opci¢n                                 <Esc> : Salir de Auditinit", ""
+728    = "Registro de errores de Auditinit: %1!", "%s"
+729    = "<Esc> :  Salir de la pantalla del registro de errores de Auditinit", ""
+730    = "<F3>  : Cambiar unidad de origen                       <Esc> : Abortar copia de archivo", 	""
+731    = "Especifique la ubicaci¢n del disco de instalaci¢n: ", 	""
+732    = "<Esc> : Abortar instalaci¢n", 	""
+733    = "Copiando archivo: %1!", 	"%s"
+734    = "¨Abortar la instalaci¢n?", 	""
+735    = "Especifique la ubicaci¢n del disquete %1!", 	"%s"
+736    = "Ruta de origen: %1!", 	"%s"
+737    = "Ruta de destino: %1!", 	"%s"
+738    = "Disquete    : %1!", 	"%s"
+739    = "Inserte el disquete %1! en la unidad %2!", 	"%s %s"
+740    = "%1! Instalaci¢n terminada.", 	"%s"
+741    = "No se ha encontrado el archivo de configuraci¢n del producto Sybase.", 	""
+742    = "Inserte el disquete INSTALL.", 	""
+743    = "Seleccione el producto que desea instalar", 	""
+744    = "%1! Instalaci¢n", 	"%s"
+745    = "Cambiar disquete:", 	""
+746    = "Error interno: el tipo de campo para %1! no es v lido", 	"%s"
+800    = "N£mero de producto no v lido '%1!':  el producto no est  en el registro interno.", 	"%d"
+801    = "reg_product_num_name() llamado con buffer NULL.", 	""
+802    = "reg_product_num_name() llamado con buffer NULL.", 	""
+803    = "El producto '%1!' no est  registrado en el registro interno.", 	"%s"
+804    = "reg_product_num_firstscreen() llamado con buffer NULL.", 	""
+900    = "EOF inesperado en el archivo de reproducci¢n.", 	""
+1100    = "Fallo al inicializar el m¢dulo de conectividad de auditinit.", ""
+1101    = "No se ha podido obtener el registro de nombre de conexi¢n para la conexi¢n: servidor = '%1!'.", 	"%s"
+1102    = "Saturaci¢n del buffer DBPROCESS. El texto SQL es: '%1!'.", 	"%s"
+1103    = "Error al enviar SQL al servidor '%1!'.", 	"%s"
+1104    = "Ha fallado el intento de inicio de sesi¢n: servidor = '%1!'.", 	"%s"
+1105    = "No se ha podido abrir el archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+1106    = "Error al leer archivo '%1!'. El sistema operativo ha devuelto: %2!.", 	"%s %s"
+1107    = "Error al obtener resultados del servidor '%1!'.", 	"%s"
+1108    = "No se ha inicializado el m¢dulo de conectividad de auditinit.", ""
+1109    = "Error en librer¡a de DB: '%1!'.", 	"%s"
+1110    = "Error del sistema operativo de la librer¡a de DB: '%1!'.", 	"%s"
+1111    = "Mensaje de Adaptive Server: mens. %1!, nivel %2!, estado %3!", "%d %d %d"
+1112    = "servidor", 	""
+1113    = "procedimiento", 	""
+1114    = "l¡nea", 	""
+1115    = "Error al reunir resultados del servidor '%1!'.", 	"%s"
+1120    = "Error al inicializar rpc para el servidor '%1!'.", 	"%s"
+1121    = "Error al establecer par metros rpc para el servidor '%1!'.", 	"%s"
+1122    = "Error al enviar rpc al servidor '%1!'.", 	"%s"
+1123    = "Se est  enviando el siguiente comando SQL al servidor: '%1!'.",    "%s"
+1200    = "No se puede localizar la lista de tareas; no se puede ejecutar la configuraci¢n.", 	""
+1201    = "No se puede ejecutar la configuraci¢n porque ha fallado la validaci¢n de valores de entrada. ", 	""
+1202    = "ADVERTENCIA: no se puede recuperar esta configuraci¢n por errores en la escritura del volcado de atributos.", 	""
+1203    = "Empezando tarea %1!.", 	"%s"
+1204    = "Terminando tarea %1!.", 	"%s"
+1205    = "...need_to %1!.", 	"%s"
+1206    = "...need_to es NULL. Ejecutando por defecto.", 	""
+1207    = "...able_to %1!.", 	"%s"
+1208    = "...able_to es NULL. No se ejecutar .", 	""
+1209    = "...acciones de tareas %1!.", 	"%s"
+1210    = "...ADVERTENCIA: acciones de tareas nulas -- no se ejecutar n. ", 	""
+1211    = "...tarea finalizada %1!.", 	"%s"
+1212    = "...tarea anulada -- no se ejecuta.", 	""
+1213    = "Tarea en ejecuci¢n: %1!.", 	"%s"
+1214    = "Tarea finalizada: %1!.", 	"%s"
+1215    = "Tarea fallida: %1!. Configuraci¢n cancelada.", 	"%s"
+1216    = "La configuraci¢n se ha completado satisfactoriamente.", 	""
+1217    = "Ha fallado la configuraci¢n.", 	""
+1218    = "Ya que la sesi¢n auditinit se inici¢ con el indicador '%1! %2!', se ignorar n las advertencias anteriores y se continuar  con la configuraci¢n.", "%s %s"
+1219    = "Se saldr  de auditinit debido a las advertencias anteriores. Para continuar con la configuraci¢n sin tener en cuenta las advertencias, inicie auditinit con el indicador '%1! %2!'.", "%s %s"
+1230    = "Lista de tareas cancelada a petici¢n del usuario.", 	""
+1300    = "No es posible determinar el directorio de versi¢n auditinit.", ""
+1302    = "No es posible establecer el atributo del directorio de versi¢n auditinit.", ""
+1303    = "No es posible inicializar el administrador de localizaci¢n.", 	 ""
+1304    = "S¢lo se debe especificar el indicador validate con el archivo de recursos.", 	""
+1305    = "No es posible determinar la ruta de acceso al directorio de versi¢n auditinit.", ""
+1306    = "No es posible determinar el directorio de versi¢n de Sybase.", 	""
+1308    = "No es posible establecer el atributo del directorio de versi¢n de Sybase.", 	""
+1310    = "No es posible establecer el atributo del archivo de recursos de Sybase", 	""
+1311    = "No es posible inicializar el administrador de registros.", 	""
+1312    = "Error al acceder al volcado de atributos en el proceso de recuperaci¢n de la sesi¢n de configuraci¢n anterior.", 	""
+1313    = "No se ha podido cargar el volcado de atributos en el proceso de recuperaci¢n de la sesi¢n de configuraci¢n anterior.", 	""
+1314    = "Error en el registro de recuperaci¢n de auditinit: no se ha especificado un producto en el registro de recuperaci¢n.", ""
+1315    = "¨Desea recuperar la sesi¢n anterior de configuraci¢n? ", 	""
+1316    = "  '%1!'.", 	"%s"
+1319    = "Producto no v lido '%1!' especificado en volcado de atributos de registro de recuperaci¢n auditinit.", "%s"
+1320    = "Error en registro de recuperaci¢n de auditinit: no se ha especificado un idioma en volcado de atributos.", ""
+1321    = "No se encuentra la lista de tareas del producto '%1!' en el registro de recuperaci¢n de auditinit.", "%s"
+1322    = "No es posible ejecutar la lista de tareas del producto '%1!'.", 	"%s"
+1323    = "No es posible cargar el archivo de recursos '%1!'.", 	"%s"
+1324    = "No se ha especificado ning£n producto en el archivo de recursos '%1!'.", 	"%s"
+1325    = "Se ha especificado un producto desconocido '%1!' en el archivo de recursos '%2!'.", 	"%s %s"
+1326    = "No es posible verificar el archivo de recursos '%1!'.", 	"%s"
+1327    = "No existe configuraci¢n de la funci¢n del archivo de recursos en registro para '%1!'.", 	"%s"
+1328    = "No se ha especificado ning£n idioma en el archivo de recursos '%1!'.", 	"%s"
+1329    = "No se ha podido obtener la primera pantalla de '%1!'.", 	"%s"
+1330    = "No se ha podido abrir ni visualizar la primera pantalla de '%1!'.", 	"%s"
+1331    = "No se ha especificado ning£n idioma en modo interactivo.", 	""
+1332    = "No es posible obtener la primera pantalla para auditinit.", ""
+1333    = "No es posible abrir y mostrar la primera pantalla de auditinit.", ""
+1334    = "Auditinit : \\n\\tauditinit\\n\\t [-a]\\n\\t [-c charset]\\n\\t [-e]\\n\\t [-h]\\n\\t [-l language]\\n\\t [-log log_file]\\n\\t [-r resource_file]\\n\\t [-s release_directory]\\n\\t [-v]", ""
+1336    = "'%1!'", 	"%s"
+1338    = "No es posible inicializar el Administrador de pantallas.", 	""
+1339    = "No es posible inicializar el M¢dulo de ejecuci¢n de SQL.", 	""
+1340    = "No es posible crear atributos.", 	""
+1341    = "No es posible crear pantallas.", 	""
+1342    = " No es posible establecer el entorno de auditinit.", ""
+1343    = "Ignorando registro de recuperaci¢n de sesi¢n anterior.", 	""
+1344    = "Recuperando sesi¢n de configuraci¢n para el producto '%1!'.", 	"%s"
+1345    = "Saliendo.", 	""
+1346    = "¨Salir de auditinit? ", ""
+1347    = "Hay tareas que actualmente est n en ejecuci¢n. ¨Quiere REALMENTE cancelar las tareas? ", 	""
+1348    = "¨Volcar atributos actuales?", 	""
+1349    = "Introduzca un nombre de archivo de recursos de atributos (el valor por defecto es '%1!'): ",         "%s"
+1350    = "Atributos volcados satisfactoriamente a '%1!'.", 	"%s"
+1400    = "Auditinit : \\n\\tauditinit\\n\\t [/validate]\\n\\t [/charset=charset]\\n\\t [/environment]\\n\\t [/help]\\n\\t [/language=language]\\n\\t [/log=log_file]\\n\\t [/resource=resource_file]\\n\\t [/sybase=release_directory]\\n\\t [/version]", ""
+1401    = "El directorio '%1!' ya existe y no es un directorio de versi¢n v lido para Adaptive Server. Especifique una ubicaci¢n diferente para el directorio de versi¢n.", "%s"
+1402    = "El directorio '%1!' es un directorio de versi¢n Sybase Server. ¨Sobreescribir?", "%s"
+1403    = "El archivo de registro de esta sesi¢n es '%1!'.", 	"%s"
+1404    = "Utilizando el archivo de recursos '%1!' para atributos de productos.", 	"%s"
+1405    = "AUDITINIT YA NO ADMITE LA EDICI?N DE ARCHIVOS DE \
+INTERFACES. Se ignorar n todos los atributos de archivos de \
+recursos relativos a archivos de interfaces (incluidos do_add_server y \
+do_add_backup_server).\\n\\n\
+Deber  utilizar SYBSETUP, DSEDIT, DSEDIT_DCE o un editor de texto \
+para esta tarea antes de utilizar auditinit para instalar, \
+modificar o actualizar cualquier servidor:\\n\
+- antes de la instalaci¢n, cree una nueva entrada de archivo de \
+  interfaces\\n\
+- antes de modificar un servidor de otra forma, modifique su \
+  entrada en el archivo de interfaces\\n\
+- antes de actualizar, copie la entrada del servidor que se \
+  actualizar  del archivo antiguo de interfaces al nuevo.\\n\\n\
+Consulte la documentaci¢n para m s informaci¢n.", "%s"
+1502    = "No se puede asignar memoria de tama¤o %1!: tama¤o no v lido.", 	"%d"
+1503    = "Ha fallado el intento de asignar memoria. ", 	""
+1506    = "No se puede a¤adir memoria de tama¤o %1! a la memoria existente: tama¤o no v lido.", 	"%d"
+1507    = "Se ha intentado a¤adir memoria a un puntero de memoria no v lido.", 	""
+1508    = "Ha fallado el intento de a¤adir memoria.", 	""
+1509    = "Argumentos no v lidos para syb_calloc(): n£mero = %1!, tama¤o = %2!.", 	"%d %d"
+1510    = "Incapaz de asignar memoria a trav‚s de calloc().", 	""
+1511    = "El espacio de intercambio del sistema operativo es muy peque¤o. El sistema operativo puede cancelar auditinit.", ""
+1650    = "En el archivo de recursos '%1!': '%2!' no es un nombre de producto v lido.", 	"%s %s"
+1651    = "En el archivo de recursos '%3!': '%2!' no es un atributo v lido para el producto '%1!'.", 	"%s %s %s"
+1652    = "Error de sintaxis en el archivo de recursos '%1!': %2!.", 	"%s %s"
+1653    = "%1! es un volcado incompleto de atributos.", 	"%s"
+1654    = "El atributo '%1!' es necesario para la configuraci¢n del producto '%2!' pero no est  definido en el archivo de recursos '%3!'.", 	 "%s %s %s"
+1655    = "El atributo '%1!' del producto '%2!' se ha especificado m s de una vez en el archivo de recursos '%3!'.", 	 "%s %s %s"
+1656    = "Error interno del registro de productos. Hay '%1!' productos registrados. ", 	 "%d"
+1657    = "El atributo '%1!' no se ha podido definir, porque '%2!' no es un valor v lido.", 	 "%s %s"
+3101    = "AUDITINIT", ""
+3102    = "", 	""
+3103    = "AUDITINIT", ""
+3104    = "\
+1. Directorio de versi¢n\\n\\nSi desea configurar un servidor y el \
+directorio mostrado no es el mismo que el que se utiliz¢ \
+para cargar los archivos SYBASE, salga de auditinit. Restablezca la \
+variable de entorno SYBASE para apuntar al directorio en que se cargaron \
+los archivos de SYBASE. Reinicie auditinit y vuelva a \
+intentarlo.\\n\\n2. Configurar un Producto de \
+Servidor\\n\\nSeleccione este elemento si desea instalar la \
+auditor¡a en un directorio existente de Adaptive Server.\\n\\n \
+* Teclas de control *\\n\\nPresione Ctrl-x para salir de auditinit.", ""
+3105    = "\
+1. Directorio de versi¢n\\n\\nSi est  configurando un servidor y el \
+directorio mostrado no es el mismo que el que se utiliz¢ \
+para cargar los archivos SYBASE, salga de auditinit. Restablezca la \
+l¢gica SYBASE para apuntar al directorio en que se cargaron \
+los archivos de SYBASE. Reinicie auditinit y vuelva a \
+intentarlo.\\n\\nTipo de instalaci¢n: Este elemento muestra si la \
+instalaci¢n SYBASE es primaria o secundaria. Una instalaci¢n \
+primaria es para un entorno de producci¢n con l¢gicas definidas \
+en un archivo de comandos de SYBASE. Una instalaci¢n secundaria \
+es para un entorno de pruebas con l¢gicas definidas en un nivel \
+de proceso. El tipo de instalaci¢n se indica al ejecutar \
+VMSINSTAL.\\\n\\\n2. Configurar un Producto de \
+Servidor\\n\\nSeleccione este elemento si desea instalar la \
+auditor¡a en un directorio existente de Adaptive Server.\\n\\n \
+* Teclas de control *\\n\\nPresione Ctrl-x para salir de auditinit.", ""
+3107    = "AUDITINIT YA NO ADMITE LA EDICI?N DE ARCHIVOS DE \
+INTERFACES.\\nConsulte la pantalla de ayuda o su documentaci¢n para \
+m s informaci¢n.\\n\\n", ""
+3111    = "CONFIGURAR PRODUCTOS DE SERVIDOR", ""
+3112    = "", 	""
+3113    = "CONFIGURAR PRODUCTOS DE SERVIDOR", ""
+3114    = "\
+Seleccione el n£mero del producto que desea configurar y presione \
+Retorno.\\n\\n* Teclas de control *\\n\\nNo es necesario que \
+presione Ctrl-a para continuar con la pantalla siguiente ya que al \
+seleccionar un producto aparecer  la pantalla siguiente.\\n\\n \
+Presione Ctrl-x para salir de esta pantalla y cancelar cualquier \
+selecci¢n realizada. Auditinit volver  al men£ anterior. Puede \
+repetir Ctrl-x para volver al men£ anterior y salir de auditinit \
+al indicador del sistema.", ""
+3121    = "CONFIGURAR PRODUCTOS DE CONECTIVIDAD", ""
+3122    = "", 	""
+3123    = "CONFIGURAR PRODUCTOS DE CONECTIVIDAD", ""
+3124    = "\
+Auditinit presenta una lista de productos de conectividad \
+disponibles. Seleccione el producto que desee configurar y presione \
+Retorno.\\n\\n* Teclas de control *\\n\\nNo es necesario que \
+presione Ctrl-a para continuar con la pantalla siguiente ya que al \
+seleccionar un producto aparecer  la pantalla siguiente.\\n\\n \
+Presione Ctrl-x para salir de esta pantalla y cancelar cualquier \
+selecci¢n realizada. Auditinit volver  al men£ anterior. Puede \
+repetir Ctrl-x para volver al men£ anterior y salir de auditinit \
+al indicador del sistema.", ""
+3131    = "CONFIGURAR PRODUCTOS FRONTALES", ""
+3132    = "", 	""
+3133    = "CONFIGURAR PRODUCTOS FRONTALES", ""
+3134    = "\
+Auditinit presenta una lista de productos frontales \
+disponibles. Seleccione el producto que desee configurar y presione \
+Retorno.\\n\\n* Teclas de control *\\n\\nNo es necesario que \
+presione Ctrl-a para continuar con la pantalla siguiente ya que al \
+seleccionar un producto aparecer  la pantalla siguiente.\\n\\n \
+Presione Ctrl-x para salir de esta pantalla y cancelar cualquier \
+selecci¢n realizada. Auditinit volver  al men£ anterior. Puede \
+repetir Ctrl-x para volver al men£ anterior y salir de auditinit \
+al indicador del sistema.", ""
+3141    = "PANTALLA DEL ARCHIVO DE INTERFACES", ""
+3142    = "", 	""
+3143    = "PANTALLA DEL ARCHIVO DE INTERFACES", ""
+3144    = "\
+1. A¤adir nueva entrada\\n\\nSeleccione esta opci¢n para a¤adir un nuevo \
+servicio receptor.\\n\\n2. Modificar entrada existente\\n\\nSeleccione esta \
+opci¢n para cambiar cualquiera de los valores asociados con una entrada \
+en el archivo de interfaces.\\n\\n3. Visualizar entrada \
+existente\\n\r\\nSeleccione esta opci¢n para ver cualquier entrada \
+definida previamente en el archivo de interfaces.\\n\\n4. Eliminar una \
+entrada existente\\n\r\\nSeleccione esta opci¢n para eliminar una \
+entrada existente en el archivo de interfaces.\\n\\n* Teclas de \
+control *\\n\\nNo es necesario que presione Ctrl-a para continuar\
+con la pantalla siguiente ya que al seleccionar un producto \
+aparecer  la pantalla siguiente.\\n\\nPresione Ctrl-x para salir de \
+esta pantalla y cancelar cualquier selecci¢n realizada. Auditinit \
+volver  al men£ anterior. Puede repetir Ctrl-x para volver al men£ \
+anterior y salir de auditinit al indicador del sistema.", ""
+3151    = "CREAR ENTRADA EN ARCHIVO DE INTERFACES", ""
+3152    = "", 	""
+3153    = "CREAR ENTRADA EN ARCHIVO DE INTERFACES", ""
+3154    = "\
+1. Nombre de Servidor\\n\\nSeleccione esta opci¢n para introducir el \
+nombre del servidor para el que desea crear una entrada en el \
+archivo de interfaces. Escriba el nombre en el indicador.\\n\\n* \
+Teclas de control *\\n\\nPresione Ctrl-a para aceptar el nombre que \
+aparece y continuar con el men£ siguiente.\\n\\nPresione Ctrl-x para \
+salir de esta pantalla. Auditinit volver  al men£ anterior. Puede \
+repetir Ctrl-x para volver a los men£s anteriores y salir de \
+auditinit al indicador del sistema.", ""
+3161    = "ESCOGER ENTRADA DE ARCHIVO DE INTERFACES", ""
+3162    = "", 	""
+3163    = "ESCOGER ENTRADA DE ARCHIVO DE INTERFACES", ""
+3164    = "\
+Auditinit muestra una lista de las entradas de archivo de interfaces \
+disponibles. Esta lista contiene servidores Adaptive Servers y \
+Backup Servers. Si la lista completa no cupiera en una pantalla, \
+puede desplazarse hasta el final de la lista. Seleccione la entrada \
+del archivo de interfaces que desee modificar.\\n\\n* Teclas de \
+control *\\n\\nPresione Ctrl-f si desea desplazarse hacia adelante \
+en la lista de entradas de archivo de interfaces disponibles. Debe \
+desplazarse hasta el final de la lista antes de seleccionar una \
+entrada.\\n\\nPresione Ctrl-b si desea desplazarse hacia atr s en la \
+lista de entradas de archivo de interfaces disponibles.\\n\\nNo es \
+necesario que presione Ctrl-a para continuar con la pantalla \
+siguiente ya que al seleccionar una entrada de archivo de interfaces \
+aparecer  la pantalla siguiente.\\n\\nPresione Ctrl-x para salir de \
+esta pantalla. Auditinit volver  al men£ anterior. Puede repetir \
+Ctrl-x para volver al men£ anterior y salir de auditinit al \
+indicador del sistema.", ""
+3171    = "PANTALLA DE ENTRADA DE ARCHIVO DE INTERFACES DE SERVIDOR", ""
+3172    = "", 	""
+3173    = "PANTALLA DE ENTRADA DE ARCHIVO DE INTERFACES DE SERVIDOR", ""
+3174    = "\
+\
+1. Reintentos\\n\\nEsta opci¢n permite especificar el n£mero de veces \
+que un cliente repetir  un intento de conexi¢n a Adaptive Server \
+tras un fallo inicial de conexi¢n. Seleccione esta opci¢n si desea \
+cambiar el valor mostrado.\\n\\n2. Retardo de reintento\\n\\nEsta \
+opci¢n permite especificar los segundos que esperar  un cliente \
+entre cada reintento para conectarse con Adaptive Server. Seleccione \
+esta opci¢n si desea cambiar el valor mostrado.\\n\\n3. A¤adir un \
+nuevo servicio receptor\\n\\nSeleccione esta opci¢n si desea a¤adir un \
+nuevo servicio receptor que permitir  las conexiones de red con \
+Adaptive Server. Tenga en cuenta que auditinit muestra cualquier \
+servicio receptor disponible en ese momento en la parte inferior de la \
+pantalla.\\n\\nModificar o eliminar un servicio receptor:\\n\\nSi \
+previamente ha configurado servicios receptores, auditinit \
+muestra los servicios disponibles como una opci¢n de \
+men£ distinta. Seleccione el servicio que desea \
+modificar o eliminar.\\n\\n* Teclas de control *\\n\\nPresione \
+Ctrl-a para aceptar todos los valores mostrados para la entrada del \
+archivo de interfaces. Auditinit le pedir  que confirme que \
+desea escribir estos cambios en el archivo de interfaces. Escriba \
+'s' en la solicitud para confirmar los cambios.\\n\\nPresione \
+Ctrl-x para salir de esta pantalla. Auditinit volver  al men£ \
+anterior. Puede repetir Ctrl-x para volver al men£ anterior y salir \
+de auditinit al indicador del sistema.", ""
+3191    = "SELECCIONAR PROTOCOLO DE RED", ""
+3192    = "", 	""
+3193    = "SELECCIONAR PROTOCOLO DE RED", ""
+3194    = "\
+Seleccione el nombre del protocolo de red que se usar  con este \
+nuevo servicio. La lista de protocolos disponibles depender  del \
+sistema operativo que est‚ utilizando y del software de red que \
+tenga instalado. Consulte la gu¡a de instalaci¢n de SYBASE Adaptive \
+Server para m s informaci¢n sobre los protocolos admitidos.\\n\\n* \
+Teclas de control *\\n\\nPresione Ctrl-x para salir de esta \
+pantalla y cancelar cualquier cambio realizado. Auditinit volver  \
+al men£ anterior. Puede repetir Ctrl-x para volver a los men£s \
+anteriores y salir de auditinit al indicador del sistema.", ""
+3201    = "EDITAR SERVICIO TCP", ""
+3202    = "", 	""
+3203    = "EDITAR SERVICIO TCP", ""
+3204    = "\
+1. NombreHost/Direcci¢n\\n\\nSeleccione esta entrada para cambiar \
+los valores de host TCP o la direcci¢n IP del Adaptive Server que \
+est  instalando. Por defecto, auditinit muestra el \
+nombre de host de la m quina que est  utilizando.\\n\\n2. \
+Puerto\\n\\nSeleccione esta entrada para introducir el n£mero de \
+puerto con 4 o 5 d¡gitos para Adaptive Server. El rango v lido del \
+n£mero de puerto est  entre 1024 y 65535. Consulte La Gu¡a de \
+instalaci¢n de Adaptive Server para m s informaci¢n sobre c¢mo \
+seleccionar un numero de puerto no usado.\\n\\nAdaptive Server utilizar  \
+este n£mero de puerto para gestionar las conexiones de los clientes. \
+(Los clientes deben utilizar el mismo n£mero de puerto para \
+establecer la conexi¢n con este Adaptive Server).\\n\\n3. Nombre \
+de Alias\\n\r\\nSeleccione esta entrada si desea definir un alias \
+(un \"nombre alternativo\") para el servicio TCP. En redes con \
+varios protocolos, puede utilizar un alias para distinguir el \
+servicio TCP de otros servicios que haya definido.\\n\\n4. Eliminar \
+este servicio de la entrada de interfaces\\n\\nSeleccione esta \
+opci¢n para eliminar un servicio existente (nombre host, puerto \
+y nombre de alias) del archivo de interfaces del servidor.\\n\\n* \
+Teclas de control *\\n\\nPresione Ctrl-a para aceptar el servicio \
+TCP mostrado.\\n\\nPresione Ctrl-x para salir de esta pantalla y \
+cancelar cualquier cambio realizado. Auditinit volver  al men£ \
+anterior. Puede repetir Ctrl-x para volver a los men£s anteriores \
+y salir de auditinit al indicador del sistema.", ""
+3205    = "\
+1. NombreHost/Direcci¢n\\n\\nSeleccione esta entrada para cambiar \
+los valores de host TCP o la direcci¢n IP del Adaptive Server que \
+est  instalando. Por defecto, auditinit muestra el \
+nombre de host de la m quina que est  utilizando.\\n\\n2. \
+Puerto\\n\\nSeleccione esta entrada para introducir el n£mero de \
+puerto con 4 o 5 d¡gitos para Adaptive Server. El rango v lido del \
+n£mero de puerto est  entre 1024 y 65535. Consulte La Gu¡a de \
+instalaci¢n de Adaptive Server para m s informaci¢n sobre c¢mo \
+seleccionar un numero de puerto no usado.\\n\\nAdaptive Server utilizar  \
+este n£mero de puerto para gestionar las conexiones de los clientes. \
+(Los clientes deben utilizar el mismo n£mero de puerto para \
+establecer la conexi¢n con este Adaptive Server).\\n\\n3. Nombre \
+de Alias\\n\r\\nSeleccione esta entrada si desea definir un alias \
+(un \"nombre alternativo\") para el servicio TCP. En redes con \
+varios protocolos, puede utilizar un alias para distinguir el \
+servicio TCP de otros servicios que haya definido.\\n\\n4. Tipo de \
+servidor\\n\\nSeleccione esta opci¢n si desea cambiar el tipo de \
+servidor de servidor principal a servidor compa¤ero. Por \
+defecto, auditinit instala un servidor principal. Si desea \
+instalar solo un servidor principal, ignore esta opci¢n.\\n\\nConsulte \
+la gu¡a de instalaci¢n de SYBASE Adaptive Server para m s \
+informaci¢n sobre la instalaci¢n de un servidor compa¤ero.\\n\\n5. Eliminar \
+este servicio de la entrada de interfaces\\n\\nSeleccione esta \
+opci¢n para eliminar un servicio existente (nombre host, puerto \
+y nombre de alias) del archivo de interfaces del servidor.\\n\\n* \
+Teclas de control *\\n\\nPresione Ctrl-a para aceptar el servicio \
+TCP mostrado.\\n\\nPresione Ctrl-x para salir de esta pantalla y \
+cancelar cualquier cambio realizado. Auditinit volver  al men£ \
+anterior. Puede repetir Ctrl-x para volver a los men£s anteriores \
+y salir de auditinit al indicador del sistema.", ""
+3211    = "EDITAR SERVICIO DECNET", ""
+3212    = "", 	""
+3213    = "EDITAR SERVICIO DECNET", ""
+3214    = "\
+1. Nombre de nodo\\n\\nSeleccione esta opci¢n para cambiar el nombre \
+de nodo mostrado para el Adaptive Server que est  instalando. Por \
+defecto, auditinit muestra el nombre de nodo \
+actual.\\n\\n2. Objeto\\n\\nSeleccione esta opci¢n si escoge \
+introducir un n£mero de objeto de red para Adaptive Server. \
+Los n£meros de objeto v lidos est n comprendidos entre 128 y \
+253.\\n\\nSybase recomienda no utilizar n£meros de objetos. Adaptive \
+Server admite n£meros de objetos para mantener compatibilidad con \
+versiones anteriores.\\n\\n3. Nombre de alias\\n\\nSeleccione esta \
+entrada si desea definir un alias (un \"nombre alternativo\") para \
+el servicio DECnet. En redes con varios protocolos, puede utilizar \
+un alias para distinguir el servicio DECnet de otros servicios que \
+haya definido.\\n\\n4. Tipo de servidor\\n\\nSeleccione esta opci¢n \
+si desea cambiar el tipo de servidor de servidor principal a servidor \
+compa¤ero. Por defecto, auditinit instala un servidor \
+principal. Si desea instalar solo un servidor principal, ignore esta \
+opci¢n.\\n\\nConsulte la gu¡a de instalaci¢n de SYBASE Adaptive \
+Server para mayor informaci¢n sobre la instalaci¢n de un servidor \
+compa¤ero.\\n\\n5. Eliminar este servicio de la entrada de \
+interfaces\\n\\nSeleccione esta opci¢n para eliminar un servicio \
+existente (nombre de nodo, objeto y nombre de alias) del archivo de \
+interfaces del servidor.\\n\\n* Teclas de control *\\n\\nPresione \
+Ctrl-a para aceptar el servicio DECnet mostrado.\\n\\nPresione \
+Ctrl-x para salir de esta pantalla y cancelar cualquier cambio \
+realizado. Auditinit volver  al men£ anterior. Puede repetir \
+Ctrl-x para volver a los men£s anteriores y salir de auditinit \
+al indicador del sistema.", 	""
+3215    = "\
+1. Nombre de nodo\\n\\nSeleccione esta opci¢n para cambiar el nombre \
+de nodo mostrado para el Adaptive Server que est  instalando. Por \
+defecto, auditinit muestra el nombre de nodo \
+actual.\\n\\n2. Objeto\\n\\nSeleccione esta opci¢n si escoge \
+introducir un n£mero de objeto de red para Adaptive Server. \
+Los n£meros de objeto v lidos est n comprendidos entre 128 y \
+253.\\n\\nSybase recomienda no utilizar n£meros de objetos. Adaptive \
+Server admite n£meros de objetos para mantener compatibilidad con \
+versiones anteriores.\\n\\n3. Nombre de alias\\n\\nSeleccione esta \
+entrada si desea definir un alias (un \"nombre alternativo\") para \
+el servicio DECnet. En redes con varios protocolos, puede utilizar \
+un alias para distinguir el servicio DECnet de otros servicios que \
+haya definido.\\n\\n4. Tipo de servidor\\n\\nSeleccione esta opci¢n \
+si desea cambiar el tipo de servidor de servidor principal a servidor \
+compa¤ero. Por defecto, auditinit instala un servidor \
+principal. Si desea instalar solo un servidor principal, ignore esta \
+opci¢n.\\n\\nConsulte la gu¡a de instalaci¢n de SYBASE Adaptive \
+Server para mayor informaci¢n sobre la instalaci¢n de un servidor \
+compa¤ero.\\n\\n5. Eliminar este servicio de la entrada de \
+interfaces\\n\\nSeleccione esta opci¢n para eliminar un servicio \
+existente (nombre de nodo, objeto y nombre de alias) del archivo de \
+interfaces del servidor.\\n\\n* Teclas de control *\\n\\nPresione \
+Ctrl-a para aceptar el servicio DECnet mostrado.\\n\\nPresione \
+Ctrl-x para salir de esta pantalla y cancelar cualquier cambio \
+realizado. Auditinit volver  al men£ anterior. Puede repetir \
+Ctrl-x para volver a los men£s anteriores y salir de auditinit \
+al indicador del sistema.", ""
+3221    = "EDITAR SERVICIO SPX", ""
+3222    = "", 	""
+3223    = "EDITAR SERVICIO SPX", ""
+3224    = "\
+1. NombreHost/Direcci¢n\\n\\nSeleccione esta opci¢n para introducir \
+el nombre de host con el que funcionar  el servidor. \
+Por defecto, auditinit muestra el nombre del servidor \
+actual. Un ejemplo de nombre de host/direcci¢n v lidos es \
+00000001,AA0004002104.\\n\\n2. Z¢calo\\n\\nSeleccione esta opci¢n \
+para introducir el z¢calo (socket) que usar  el servidor en conexiones \
+con clientes. Los n£meros de z¢calo v lidos deben estar comprendidos \
+entre 0x8000 y 0xBFFF. Puede introducir los n£meros de z¢calo tanto \
+en formato hexadecimal como decimal; las entradas que comienzan con \
+\"0x\" se interpretan como hexadecimal.\\n\\n3. Nombre de \
+Alias\\n\\nSeleccione esta entrada si desea definir un alias (un \
+\"nombre alternativo\") para el servicio SPX. En redes con varios \
+protocolos, puede utilizar un alias para distinguir el servicio SPX \
+de otros servicios que haya definido.\\n\\n4. Eliminar este servicio \
+de la entrada de interfaces\\n\\nSeleccione esta opci¢n para \
+eliminar un servicio existente (nombre host, z¢calo y nombre de \
+alias) del archivo de interfaces del servidor.\\n\\n* Teclas de \
+control *\\n\\nPresione Ctrl-a para aceptar el servicio SPX \
+mostrado.\\n\\nPresione Ctrl-x para salir de esta pantalla y \
+cancelar cualquier cambio realizado. Auditinit volver  al men£ \
+anterior. Puede repetir Ctrl-x para volver a los men£s anteriores \
+y salir de auditinit al indicador del sistema.", ""
+3225    = "\
+1. NombreHost/Direcci¢n\\n\\nSeleccione esta opci¢n para introducir \
+el nombre del servidor de archivos sobre el que servidor funcionar . \
+Por defecto, auditinit muestra el nombre del servidor \
+actual. Un ejemplo de un nombre de host/direcci¢n v lidos es \
+00000001,AA0004002104.\\n\\n2. Z¢calo\\n\\nSeleccione esta opci¢n \
+para introducir el z¢calo (socket) que usar  el servidor en conexiones \
+con clientes. Los n£meros de z¢calo v lidos deben estar comprendidos \
+entre 0x8000 y 0xBFFF. Puede introducir los n£meros de z¢calo tanto \
+en formato hexadecimal como decimal; las entradas que comienzan con \
+\"0x\" se interpretan como hexadecimal.\\n\\nConsulte La Gu¡a de \
+instalaci¢n de Adaptive Server para m s informaci¢n sobre c¢mo \
+introducir n£meros de z¢calo v lidos.\\n\\n3. Nombre de \
+Alias\\n\\nSeleccione esta entrada si desea definir un alias (un \
+\"nombre alternativo\") para el servicio SPX. En redes con varios \
+protocolos, puede utilizar un alias para distinguir el servicio SPX \
+de otros servicios que haya definido.\\n\\n4. Tipo de \
+servidor\\n\\nSeleccione esta opci¢n si desea cambiar el tipo de \
+servidor de servidor principal a servidor compa¤ero. Por \
+defecto, auditinit instala un servidor principal. Si desea \
+instalar solo un servidor principal, ignore esta \
+opci¢n.\\n\\nConsulte la gu¡a de instalaci¢n de SYBASE Adaptive \
+Server para m s informaci¢n sobre la instalaci¢n de un servidor \
+compa¤ero.\\n\\n5. Eliminar este servicio \
+de la entrada de interfaces\\n\\nSeleccione esta opci¢n para \
+eliminar un servicio existente (nombre host, ranura y nombre de \
+alias) del archivo de interfaces del servidor.\\n\\n* Teclas de \
+control *\\n\\nPresione Ctrl-a para aceptar el servicio SPX \
+mostrado.\\n\\nPresione Ctrl-x para salir de esta pantalla y \
+cancelar cualquier cambio realizado. Auditinit volver  al men£ \
+anterior. Puede repetir Ctrl-x para volver a los men£s anteriores \
+y salir de auditinit al indicador del sistema.", ""
+3231    = "EDITAR SERVICIO APPLETALK", ""
+3232    = "", 	""
+3233    = "", 	""
+3234    = "", 	""
+3241    = "EDITAR SERVICIO BSD NAMED PIPES", ""
+3242    = "", 	""
+3243    = "EDITAR SERVICIO BSD NAMED PIPES", ""
+3244    = "\
+1. Ruta de acceso de receptor\\n\\nSeleccione esta entrada para \
+introducir la ruta del receptor BSD named pipes. La m quina local debe \
+ser capaz de encontrar la ruta de acceso al servidor. \\n\\n 2. \
+Alias con nombre \\n\\n Seleccione esta entrada para introducir el \
+alias de named pipes. \\n\\n 3. Eliminar este servicio \
+de la entrada de interfaces\\n\\nSeleccione esta opci¢n para \
+eliminar un servicio existente (el receptor bsd named pipes mostrado y \
+su alias) del archivo de interfaces del servidor.\\n\\n* Teclas de \
+control *\\n\\nPresione Ctrl-a para aceptar el servicio TCP \
+mostrado.\\n\\nPresione Ctrl-x para salir de esta pantalla y \
+cancelar cualquier cambio realizado. Auditinit volver  al men£ \
+anterior. Puede repetir Ctrl-x para volver a los men£s anteriores \
+y salir de auditinit al indicador del sistema.", ""
+3245    = "¨Configurar Interfaces para Secure SQL Server?", ""
+3301    = "Introduzca la ruta de acceso del directorio de versi¢n que se utilizar  (el valor por defecto es '%1!'): ", "%s"
+3302    = "Directorio de versi¢n: ", ""
+3303    = "Editar / Visualizar archivo de interfaces", ""
+3304    = "Configurar un producto servidor", ""
+3305    = "Configurar un producto Open Client/Server", ""
+3306    = "Configurar un producto frontal", ""
+3307    = "Copiar archivos desde disquete", ""
+3308    = "Visualizar / Editar valores de entorno", ""
+3309    = "Comprobar coherencia del sistema", ""
+3310    = "Tipo de instalaci¢n: ", ""
+3311    = "primaria (acceso a nivel sistema)", ""
+3312    = "secundaria (acceso a nivel proceso o grupo)", ""
+3401    = "No es posible cargar mensajes localizados del producto '%1!'.", "%s"
+3402    = "Producto", ""
+3403    = "Fecha instalaci¢n", ""
+3404    = "Fecha configuraci¢n", ""
+3405    = "Productos:", ""
+3501    = "Archivo de interfaces: ", ""
+3502    = "A¤adir una nueva entrada", ""
+3503    = "Modificar una entrada existente", ""
+3504    = "Visualizar una entrada existente", ""
+3505    = "Eliminar una entrada existente", ""
+3511    = "Ya existe una entrada con ese nombre en el archivo de interfaces.", ""
+3512    = "Introduzca el nombre del servidor que desee a¤adir (valor por defecto '%1!'): ", "%s"
+3513    = "Nombre de Servidor: ", ""
+3514    = "Seleccione una de las entradas de interfaces siguientes:", ""
+3522    = "No se ha encontrado la entrada '%1!' en el archivo de interfaces.", "%s"
+3530    = "Esta entrada no es v lida debido a que no tiene receptores. A¤ada uno o varios receptores a la entrada o presione Ctrl-x para salir de la pantalla sin escribir la entrada en el archivo de interfaces.", ""
+3531    = "¨Escribir los cambios en el archivo de interfaces ahora? ", ""
+3532    = "¨Est  seguro de querer cancelar? ", ""
+3533    = "Introduzca el n£mero de reintentos (valor por defecto '%1!'): ", "%s"
+3534    = "Introduzca el retardo de reintento (valor por defecto '%1!'): ",  "%s"
+3535    = "¨Eliminar esta entrada del archivo de interfaces? ", ""
+3536    = "Backup Server: ", ""
+3537    = "Reintentos: ", ""
+3538    = "Retardo de reintento: ", ""
+3539    = "A¤adir nuevo servicio receptor", ""
+3540    = "Modificar o eliminar un servicio", ""
+3541    = "Protocolo", ""
+3542    = "Direcci¢n", ""
+3543    = "Puerto", ""
+3544    = "Nombre de alias", ""
+3545    = "Tipo", ""
+3546    = "Servicios receptor disponibles:", ""
+3547    = "A¤adir un nuevo servicio de consulta", ""
+3548    = "Servicios de consulta disponibles:", ""
+3551    = "TCP", ""
+3552    = "DECnet", ""
+3553    = "SPX", ""
+3554    = "ADSP", ""
+3555    = "BSD NAMED PIPES", ""
+3561    = "Introduzca el nombre de alias que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3562    = "Introduzca el nombre de host o direcci¢n Internet que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3563    = "Introduzca el n£mero de puerto que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3564    = "Nombre de alias:", ""
+3565    = "Nombre Host/Direcci¢n:", ""
+3566    = "Puerto:", ""
+3567    = "¨Es correcta esta informaci¢n? ", ""
+3568    = "¨Quitar este servicio de la entrada de interfaces? ", ""
+3569    = "¨Eliminar este servicio de la entrada de interfaces?", ""
+3570    = "principal", ""
+3571    = "compa¤ero", ""
+3572    = "Especifique primero un nombre de host.", ""
+3573    = "¨Este servidor es un servidor compa¤ero? ", ""
+3574    = "Tipo de servidor:", ""
+3581    = "Introduzca el nombre de alias que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3582    = "Introduzca el nombre de nodo que desee utilizar en esta entrada (valor por defecto '%1!'): ",  "%s"
+3583    = "Introduzca el n£mero de objeto que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3584    = "Nombre de alias:", ""
+3585    = "Nombre de nodo:", ""
+3586    = "Objeto:", ""
+3591    = "Introduzca el nombre de alias que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3592    = "Introduzca el nombre de host o direcci¢n Internet que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3593    = "Introduzca el n£mero de z¢calo que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3594    = "Nombre de alias:", ""
+3595    = "Nombre de Host / Direcci¢n:", ""
+3596    = "Z¢calo:", ""
+3597    = "Introduzca el nombre de alias que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3598    = "Introduzca el nombre de zona Appletalk que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3599    = "Introduzca el nombre de objeto Appletalk que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3600    = "Nombre de zona:", ""
+3601    = "Nombre de objeto:", ""
+3602    = "Nombre de alias:", ""
+3611    = "Introduzca la direcci¢n Internet en hexadecimal que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3612    = "Direcci¢n Internet:", ""
+3620    = "Introduzca el nombre de alias que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3621    = "Introduzca la ruta de acceso de receptor que desee utilizar en esta entrada (valor por defecto '%1!'): ", "%s"
+3622    = "Nombre de alias:", ""
+3623    = "Ruta de receptor:", ""
+3624    = "Puerto: ", ""
+3650    = "Comprobaci¢n sistema Netware", ""
+3651    = "", 	""
+3652    = "", 	""
+3653    = "", 	""
+3654    = "Mayor", ""
+3655    = "Menor", ""
+3656    = "Rev.", ""
+3657    = "Mes", ""
+3658    = "D¡a", ""
+3659    = "A¤o", ""
+3660    = "Resultados de la comprobaci¢n NLM : ", ""
+4000    = "Se ha llamado a la funci¢n de validaci¢n para nombre de servidor con un puntero NULL.",  ""
+4001    = "El nombre de servidor '%1!' es demasiado largo; el n£mero m ximo de caracteres permitidos es'%2!'.", "%s %d"
+4002    = "No se proporcion¢ el nombre de Adaptive Server.", ""
+4003    = "El nombre '%1!' no es v lido. Los nombres de servidor s¢lo pueden incluir caracteres alfanum‚ricos y signos de puntuaci¢n.", "%s"
+4004    = "El nombre de entrada de interfaces '%1!' ya existe.", "%s"
+4005    = "El puerto '%1!' no es v lido. Las descripciones de puerto s¢lo pueden incluir caracteres alfanum‚ricos.", "%s"
+4006    = "No se recomienda usar nombres de objetos (%1!) debido al impacto que tienen sobre el rendimiento.", "%s"
+4007    = "No se han detectado productos en el registro interno.", ""
+4008    = "No se han detectado nombres cortos de producto en el registro interno.", ""
+4009    = "El nombre corto de producto '%1!' no es v lido.", "%s"
+4010    = "Sybase no recomienda utilizar nombres de objeto DECnet (%1!); utilice un n£mero de objeto.", "%s"
+4011    = "El nombre de objeto '%1!' es demasiado largo. Los nombres de objeto deben tener %2! caracteres como m ximo.", "%s %d"
+4012    = "El archivo runserver '%1!' ya existe. Los nombre de archivos Runserver est n restringidos a 8 caracteres. Escoja un nombre de servidor diferente o elimine el archivo runserver existente.", "%s"
+4013    = "El puerto '%1!' est  registrado a '%2!'. Puede escoger una direcci¢n de puerto diferente o asegurarse de que el puerto est  disponible antes de continuar.", "%d %s"
+4014    = "El puerto '%1!' no est  comprendido en el rango v lido de puertos admitidos por Sybase.", "%s"
+; End of section.

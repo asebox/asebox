@@ -1,0 +1,290 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Kennwort: "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Definitionsdatei '%1!' kann nicht geöffnet werden."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, Speicher für die Initialisierung der Client Library zuzuweisen, ist fehlgeschlagen."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Client Library zu initialisieren, ist fehlgeschlagen."
+
+4 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, einen CS-Library-Meldungsrückruf zu installieren, ist fehlgeschlagen."
+
+5 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, einen Client-Meldungsrückruf zu installieren, ist fehlgeschlagen."
+
+6 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, einen Server-Meldungsrückruf zu installieren, ist fehlgeschlagen."
+
+7 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, den Pfadnamen und den Namen der Interfaces-Datei für den Anwendungskontext zu liefern, ist fehlgeschlagen."
+
+8 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch der Zuordnung einer defncopy-Kontextstruktur fehlgeschlagen."
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "defncopy-Syntaxfehler"
+
+2 = ZZZZZ, "Syntax"
+
+3 = ZZZZZ, "Anzeige-Zeichensatz"
+
+4 = ZZZZZ, "Interfaces-Datei"
+
+5 = ZZZZZ, "Client-Zeichensatz"
+
+6 = ZZZZZ, "Keytab-Datei"
+
+7 = ZZZZZ, "Kennwort"
+
+8 = ZZZZZ, "Haupt-Fremdserver"
+
+9 = ZZZZZ, "Servername"
+
+10 = ZZZZZ, "Benutzername"
+
+11 = ZZZZZ, "Sicherheitsoptionen"
+
+12 = ZZZZZ, "Sicherheitsmechanismus"
+
+13 = ZZZZZ, "Sprache"
+
+14 = ZZZZZ, "Dateiname"
+
+15 = ZZZZZ, "Datenbankname"
+
+16 = ZZZZZ, "Eigentümer"
+
+17 = ZZZZZ, "Objektname"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch der Zuordnung von genügend Speicherplatz für %1! fehlgeschlagen."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch der Zuordnung von genügend Speicherplatz für %1! fehlgeschlagen. Restlicher Kopiervorgang abgebrochen."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch der Zuordnung von Speicherplatz fehlgeschlagen."
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Ein Servername wurde nicht angegeben. Prüfen Sie den Wert Ihrer DSQUERY-Umgebungsvariablen."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch der Zuweisung einer Client/Server-Verbindungsstruktur fehlgeschlagen."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Die Benutzernamens-Eigenschaft der Client/Server-Verbindung konnte nicht auf den Wert '%1!' gesetzt werden."
+
+4 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Die Kennwort-Eigenschaft der Client/Server-Verbindung konnte nicht gesetzt werden."
+
+5 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Die Kennwort-Verschlüsselungseigenschaft der Client/Server-Verbindung konnte nicht gesetzt werden."
+
+6 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch der Verbindungsaufnahme zum Server '%1!' fehlgeschlagen."
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die CS-Library-Befehlsstruktur zuzuweisen, ist fehlgeschlagen."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, einen SQL-Befehl einzuleiten, ist fehlgeschlagen."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, einen SQL-Befehl einzuleiten, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+4 = ZZZZZ, "SCHWER WIEGENDER FEHLER: SQL-Befehl konnte nicht an den Server gesandt werden."
+
+5 = ZZZZZ, "SCHWER WIEGENDER FEHLER: SQL-Befehl konnte nicht an den Server gesandt werden. Weitere Kopieroperationen abgebrochen."
+
+6 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnisdaten eines SQL-Befehls zusammenzustellen, ist fehlgeschlagen."
+
+7 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnisdaten eines SQL-Befehls zusammenzustellen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+8 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnisdaten eines SQL-Befehls für das Objekt '%1!' zusammenzustellen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+9 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Ergebnisdaten des SQL-Befehls abgebrochen."
+
+10 = ZZZZZ, "FEHLER: Ergebnisdaten des SQL-Befehls abgebrochen. Kopiervorgang für dieses Objekt abgebrochen."
+
+11 = ZZZZZ, "FEHLER: Ergebnisdaten des SQL-Befehls für das Objekt '%1!' abgebrochen. Kopiervorgang für dieses Objekt abgebrochen."
+
+12 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnisdaten des SQL-Befehls zusammenzustellen, erzeugte den unerwarteten Rückgabe-Code '%1!'."
+
+13 = ZZZZZ, "FEHLER: Versuch, die Ergebnisdaten des SQL-Befehls für das Objekt '%1!' zusammenzustellen, erzeugte den unerwarteten Rückgabe-Code '%1!'. Kopiervorgang für dieses Objekt abgebrochen."
+
+14 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnisdaten des SQL-Befehls zusammenzustellen, erzeugte den unerwarteten Ergebnis-Typ '%1!'."
+
+15 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Information über die Ergebnismenge abzurufen, ist fehlgeschlagen."
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "FEHLER: Objekt in Datei '%1!' nicht als Definition erkannt."
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Information über die Ergebnismenge für das Objekt '%1!' abzurufen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, Ergebnismengendaten für das Objekt '%1!' an eine interne Programmvariable zu binden, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, Zeilen-Ergebnisdaten für das Objekt '%1!' einzulesen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+4 = ZZZZZ, "FEHLER: Versuch, Zeilen-Ergebnisdaten für das Objekt '%1!' einzulesen, ist fehlgeschlagen. Kopiervorgang für dieses Objekt abgebrochen."
+
+5 = ZZZZZ, "FEHLER: Ergebnisdaten des SQL-Befehls für das Objekt '%1!' annulliert. Kopiervorgang für dieses Objekt abgebrochen."
+
+6 = ZZZZZ, "FEHLER: Versuch, die Zeilen-Ergebnisdaten für das Objekt '%1!' einzulesen, erzeugte den unerwarteten Rückgabecode '%2!'. Kopiervorgang für dieses Objekt abgebrochen."
+
+7 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Zeilen-Ergebnisdaten für das Objekt '%1!' einzulesen, erzeugte den unerwarteten Ergebnistyp '%2!'. Kopiervorgang für dieses Objekt abgebrochen."
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Beim Zugriff auf die Datenbank '%1!' ist der Server auf einen Fehler gestoßen."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, auf die Datenbank '%1!' zuzugreifen, erzeugte den unerwarteten Ergebnistyp '%2!'."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnisdaten für den SQL-Befehl zusammenzustellen, ist fehlgeschlagen. Zugriff auf Datenbank '%1!' unmöglich."
+
+4 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Ergebnisdaten für den SQL-Befehl abgebrochen.  Zugriff auf Datenbank '%1!' unmöglich."
+
+5 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, auf die Datenbank '%1!' zuzugreifen, erzeugte den unerwarteten Rückgabecode '%2!'."
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "FEHLER: Der Server ist auf einen Fehler gestoßen, als er versuchen wollte, die in der Datei '%1!' enthaltene SQL-Anweisung auszuführen. Kopiervorgang wird mit dem nächsten Objekt in der Datei fortgesetzt."
+
+2 = ZZZZZ, "FEHLER: Versuch, eine in der Datei '%1!' enthaltene SQL-Anweisung auszuführen, erzeugte den unerwarteten Ergebnistyp '%2!'. Kopiervorgang für dieses Objekt abgebrochen."
+
+3 = ZZZZZ, "FEHLER: Versuch, eine in der Datei '%1!' enthaltene SQL-Anweisung auszuführen, erzeugte den unerwarteten Rückgabecode '%2!'. Kopiervorgang für dieses Objekt abgebrochen."
+
+4 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, eine Beschreibung des Ergebnisses nach der Ausführung einer gespeicherten Prozedur aufzurufen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+5 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, das Ergebnis nach der Ausführung einer gespeicherten Prozedur an eine interne Programmvariable zu binden, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+6 = ZZZZZ, "FEHLER: Eine gespeicherte Prozedur erzeugte eine unerwartete Status-Ergebnismenge. Ausführung der gespeicherten Prozedur abgebrochen."
+
+7 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die Ergebnismenge nach der Ausführung einer gespeicherten Prozedur einzulesen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+8 = ZZZZZ, "FEHLER: Versuch, die Ergebnismenge nach der Ausführung einer gespeicherten Prozedur einzulesen, ist fehlgeschlagen. Ausführung der gespeicherten Prozedur abgebrochen."
+
+9 = ZZZZZ, "FEHLER: Ergebnisdaten des SQL-Befehls abgebrochen. Ausführung der gespeicherten Prozedur abgebrochen."
+
+10 = ZZZZZ, "FEHLER: Versuch, die Ergebnismenge nach der Ausführung einer gespeicherten Prozedur einzulesen, erzeugte den unerwarteten Rückgabecode '%1!'. Ausführung der gespeicherten Prozedur abgebrochen."
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Der Server ist beim Versuch, Daten aus der Syscomments-Tabelle der Datenbank '%1!' abzurufen, auf einen Fehler gestoßen."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "FEHLER: Objekt '%1!' wurde in Datenbank '%2!' nicht gefunden."
+
+2 = ZZZZZ, "FEHLER: Der Server ist beim Versuch, Daten aus der Sysobjects-Tabelle der Datenbank '%1!' abzurufen, auf einen Fehler gestoßen. Kopiervorgang für Objekt '%2!' abgebrochen."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "FEHLER: Definition des Objekts '%1!' in der Datenbank '%2!' nicht gefunden."
+
+2 = ZZZZZ, "FEHLER: Der Server ist beim Versuch, Daten aus der Syscomments-Tabelle der Datenbank '%1!' abzurufen, auf einen Fehler gestoßen. Kopiervorgang für Objekt '%2!' abgebrochen."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "FEHLER: Der Server ist beim Versuch, Daten aus der Sysobjects-Tabelle der Datenbank '%1!' abzurufen, auf einen Fehler gestoßen. Kopiervorgang für Objekt '%2!' abgebrochen."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "FEHLER: Der Server ist beim Versuch, Daten aus der Syscomments-Tabelle der Datenbank '%1!' abzurufen, auf einen Fehler gestoßen. Kopiervorgang für Objekt '%2!' abgebrochen."
+
+2 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, die SQL-Definitionsanweisung des Objekts '%1!' aus der Syscomments-Tabelle der Datenbank '%1!' abzurufen, ist fehlgeschlagen. Weitere Kopieroperationen abgebrochen."
+
+3 = ZZZZZ, "SCHWER WIEGENDER FEHLER: Versuch, in die Datei '%1!' zu schreiben, bewirkte einen EOF-Fehler. Verfügbaren Festplattenspeicher prüfen. Weitere Kopieroperationen abgebrochen."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "FEHLER: Versuch, die Client Library zu verlassen, ist fehlgeschlagen."
+
+2 = ZZZZZ, "FEHLER: Versuch, die Befehlsstruktur der CS-Library freizugeben, ist fehlgeschlagen."
+
+3 = ZZZZZ, "FEHLER: Versuch, die mit der Client/Server-Verbindung verbundenen Eigenschaften abzurufen, ist fehlgeschlagen."
+
+4 = ZZZZZ, "FEHLER: Versuch, die Client/Server-Verbindung mit dem Server '%1!' zu trennen, ist fehlgeschlagen."
+
+5 = ZZZZZ, "FEHLER: Versuch, die Verbindungsstruktur der CS-Library freizugeben, ist fehlgeschlagen."
+

@@ -1,0 +1,126 @@
+; Sccsid @(#) ctdrvlib.loc 1.2 10/7/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "저작권 (C) 1990, 2001 Sybase, Inc.\
+	모든 저작권은 본사 소유입니다.\
+	미 연방 정부에 의한 사용, 복제 또는 공개는\
+	CFR 52.227-7013의 Rights in Technical Data and\
+	Computer Software 절에 있는 (c) (1) (ii) 항목에\
+	명시된 규정을 따릅니다.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "메모리를 할당할 수 없습니다."
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "일반 오류"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, "CtDrv 레이어"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "사용자 오류"
+
+2 = E_ORG_INTRN, "CTDRV 라이브러리 내부 오류"
+
+3 = E_ORG_CT, "CT 라이브러리 오류"
+
+4 = E_ORG_ASYNC, "비동기 관리자 오류"
+
+5 = E_ORG_COM, "일반 라이브러리 오류"
+
+6 = E_ORG_MEM, "메모리 관리 오류"
+
+7 = E_ORG_SS, "SQL 서버 오류"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, " ctdrv에 성공하였습니다."
+
+1 = CTDRVE_MEM_F, "CtDrv 루틴에 메모리에 오류가 있습니다."
+
+2 = CTDRVE_CTF, "%1! CT_Lib 루틴을 호출하였을 때 CtDrv 루틴에 오류가 있습니다."
+
+3 = CTDRVE_APIF, "%1!을(를) 호출하였을 때 CtDrv 루틴에 오류가 있습니다."
+
+4 = CTDRVE_NOCURSOR, "이 명령문 핸들에 커서가 없습니다."
+
+5 = CTDRVE_TRUNCATE, "전체 데이타를 반환할 수 없습니다. %1!이(가) 절단되었습니다."
+
+6 = CTDRVE_DUPCUR, "%1!(이)라는 커서가 이미 있습니다."
+
+7 = CTDRVE_LENCUR, "커서 이름은 %1! 문자를 초과하지 않아야 합니다."
+
+8 = CTDRVE_SEQ, "잘못된 순서로 함수를 호출하고 있습니다."
+
+9 = CTDRVE_ODBCTYPE, "CT_LIB 입력 데이타 유형을 ODBC 데이타 유형에 매핑할 수 없습니다."
+
+10 = CTDRVE_CTTYPE, "ODBC 입력 데이타 유형을 CT_LIB 데이타 유형에 매핑할 수 없습니다."
+
+11 = CTDRVE_CTDATYPE, "%1! : ct_lib 데이타 유형이 없습니다."
+
+12 = CTDRVE_ASYNC, "함수의 순서가 잘못되었습니다. 다른 함수를 비동기식으로 실행합니다."
+
+13 = CTDRVE_BUFF, "SQL 버퍼를 할당할 때 CtDrv 루틴에 오류가 있습니다."
+
+14 = CTDRVE_SUBF, "SQL 대체를 수행할 때 CtDrv 루틴에 오류가 있습니다."
+
+15 = CTDRVE_STMTNM, "명령문 이름을 만들 때 CtDrv 루틴에 오류가 있습니다."
+
+16 = CTDRVE_CURNM, "커서 이름을 만들 때 CtDrv 루틴에 오류가 있습니다."
+
+17 = CTDRVE_RESROW, "%1!와(과) %2!의 로우 결과를 가져올 때 CtDrv 루틴에 오류가 있습니다."
+
+18 = CTDRVE_RESDCF, "%1! 결과를 가져올 때 CtDrv 루틴에 오류가 있습니다."
+
+19 = CTDRVE_APIF2, "%1! 내부 함수를 호출하였을 때 CtDrv 루틴에 오류가 있습니다."
+
+20 = CTDRVE_APIF3, "%2! CT_LIB 루틴을 호출하였을 때 %1! 내부 함수에 오류가 있습니다."
+
+21 = CTDRVE_PARF, "SQL 파싱을 수행할 때 CtDrv 루틴에 오류가 있습니다."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+

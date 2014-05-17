@@ -1,0 +1,286 @@
+;
+;   WARNING!!!!
+;
+;   PLEASE NOTE THAT THIS SORT ORDER IS DISTRIBUTED ON A RESTRICTED
+;   BASIS.  PERMISSION MUST BE OBTAINED FROM SYBASE'S GLOBAL PRODUCTS
+;   GROUP BEFORE ANY USE CAN BE MADE OF THIS FILE.  THERE IS NO SUPPORT
+;   FROM SYBASE FOR THE USE OF THIS FILE UNLESS YOU HAVE PREVIOUSLY
+;   REGISTERED WITH SYBASE'S GLOBAL PRODUCTS GROUP.
+;
+;   FOR ANY QUESTIONS, PLEASE CONTACT US AT ask_gpg@sybase.com.
+;
+[sortorder]
+;===============================================================================
+;
+;   @(#)utf8_nc.srt	160.1
+;
+;   Sort Order Overview:
+;   --------------------
+;   This sort order is a case-insensitive ordering for ASCII-7
+;   characters only.  Upper case ascii-7 letters are equal to
+;   and always sort before their lower case counterparts.
+;
+;   UTF-8 characters beyond U+007f will NOT be case-insensitive!
+;
+;   Ligatures, Sort-Doubles, etc.:
+;   ------------------------------
+;   		none
+;
+;===============================================================================
+
+class = 0x01			; Class `1' sort order
+id = 0x65			; id = 101
+name = utf8_nocase
+menuname = "Case insensitive ordering, for use with any utf8-based 8-bit environment."
+charset = utf8      		; build on top of default set for phase I
+
+description = "Case-insensitive sort order for English only\
+ using the utf8 character set."
+
+; Control characters
+
+char = 0x01      ;(SOH) start of heading
+char = 0x02      ;(STX) start of text
+char = 0x03      ;(ETX) end of text
+char = 0x04      ;(EOT) end of transmission
+char = 0x05      ;(ENQ) enquiry
+char = 0x06      ;(ACK) acknowledge
+char = 0x07      ;(BEL) bell
+char = 0x08      ;(BS) backspace
+char = 0x09      ;(HT) horizontal tab
+char = 0x0A      ;(LF) newline, or line feed
+char = 0x0B      ;(VT) vertical tab
+char = 0x0C      ;(FF) form feed
+char = 0x0D      ;(CR) carriage return
+char = 0x0E      ;(SO) shift out
+char = 0x0F      ;(SI) shift in
+char = 0x10      ;(DLE) data link escape
+char = 0x11      ;(DC1) device control 1
+char = 0x12      ;(DC2) device control 2
+char = 0x13      ;(DC3) device control 3
+char = 0x14      ;(DC4) device control 4
+char = 0x15      ;(NAK) negative acknowledge
+char = 0x16      ;(SYN) synchronous idle
+char = 0x17      ;(ETB) end transmission blk
+char = 0x18      ;(CAN) cancel
+char = 0x19      ;(EM) end of medium
+char = 0x1A      ;(SUB) substitute
+char = 0x1B      ;(ESC) escape
+char = 0x1C      ;(FS) file separator
+char = 0x1D      ;(GS) group separator
+char = 0x1E      ;(RS) record separator
+char = 0x1F      ;(US) unit separator
+
+; All non-alphanumeric characters, including puntuation
+; 	These are sorted merely by their numerical ordering
+;	based on the ASCII standard for clarity and
+;	consistency
+
+char = 0x20 	 ;( ) space
+char = 0x21      ;(!) exclamation mark
+char = 0x22      ;(") quotation mark
+char = 0x23      ;(#) number sign
+char = 0x24      ;($) dollar sign
+char = 0x25      ;(%) percent sign
+char = 0x26      ;(&) ampersand
+char = 0x27      ;(') apostrophe
+char = 0x28      ;(() left parenthesis
+char = 0x29      ;()) right parenthesis
+char = 0x2A      ;(*) asterisk
+char = 0x2B      ;(+) plus sign
+char = 0x2C      ;(,) comma
+char = 0x2D      ;(-) hyphen, minus sign
+char = 0x2E      ;(.) full stop
+char = 0x2F      ;(/) solidus
+
+; Digits
+	
+char = 0x30      ;(0) digit zero
+char = 0x31      ;(1) digit one
+char = 0x32      ;(2) digit two
+char = 0x33      ;(3) digit three
+char = 0x34      ;(4) digit four
+char = 0x35      ;(5) digit five
+char = 0x36      ;(6) digit six
+char = 0x37      ;(7) digit seven
+char = 0x38      ;(8) digit eight
+char = 0x39      ;(9) digit nine
+char = 0x3A      ;(:) colon
+char = 0x3B      ;(;) semicolon
+char = 0x3C      ;(<) less-than sign
+char = 0x3D      ;(=) equals sign
+char = 0x3E      ;(>) greater-than sign
+char = 0x3F      ;(?) question mark
+char = 0x40      ;(@) commercial at
+
+; Latin Alphabet
+
+char = 0x41=0x61	;A, a
+char = 0x42=0x62	;letter B, b
+char = 0x43=0x63	;letters C, c
+char = 0x44=0x64	;letter D, d
+char = 0x45=0x65	;E, e
+char = 0x46=0x66	;letter F, f
+char = 0x47=0x67	;letter G, g
+char = 0x48=0x68	;letter H, h
+char = 0x49=0x69	;I, i
+char = 0x4A=0x6A	;letter J, j
+char = 0x4B=0x6B	;letter K, k
+char = 0x4C=0x6C	;letter L, l
+char = 0x4D=0x6D	;letter M, m
+char = 0x4E=0x6E	;letters N, n
+char = 0x4F=0x6F	;O, o
+char = 0x50=0x70	;letter P, p
+char = 0x51=0x71	;letter Q, q
+char = 0x52=0x72	;letter R, r
+char = 0x53=0x73	;letter S, s
+char = 0x54=0x74	;letter T, t
+char = 0x55=0x75	;U, u
+char = 0x56=0x76	;letter V, v
+char = 0x57=0x77	;letter W, w
+char = 0x58=0x78	;letter X, x
+char = 0x59=0x79	; Y, y
+char = 0x5A=0x7A	;letter Z, z
+
+char = 0x5B      ;([) left square bracket
+char = 0x5C      ;(\) reverse solidus (or yen symbol)
+char = 0x5D      ;(]) right square bracket
+char = 0x5E      ;(^) circumflex accent
+char = 0x5F      ;(_) low line
+char = 0x60      ;(`) grave accent
+char = 0x7B      ;({) left curly bracket
+char = 0x7C      ;(|) vertical line
+char = 0x7D      ;(}) right curly bracket
+char = 0x7E      ;(~) tilde
+char = 0x7F      ;delete, or rubout
+
+; The rest is binary ...
+
+char = 0x80	; UTF-8 follow-on byte
+char = 0x81	; UTF-8 follow-on byte
+char = 0x82	; UTF-8 follow-on byte
+char = 0x83	; UTF-8 follow-on byte
+char = 0x84	; UTF-8 follow-on byte
+char = 0x85	; UTF-8 follow-on byte
+char = 0x86	; UTF-8 follow-on byte
+char = 0x87	; UTF-8 follow-on byte
+char = 0x88	; UTF-8 follow-on byte
+char = 0x89	; UTF-8 follow-on byte
+char = 0x8A	; UTF-8 follow-on byte
+char = 0x8B	; UTF-8 follow-on byte
+char = 0x8C	; UTF-8 follow-on byte
+char = 0x8D	; UTF-8 follow-on byte
+char = 0x8E	; UTF-8 follow-on byte
+char = 0x8F	; UTF-8 follow-on byte
+char = 0x90	; UTF-8 follow-on byte
+char = 0x91	; UTF-8 follow-on byte
+char = 0x92	; UTF-8 follow-on byte
+char = 0x93	; UTF-8 follow-on byte
+char = 0x94	; UTF-8 follow-on byte
+char = 0x95	; UTF-8 follow-on byte
+char = 0x96	; UTF-8 follow-on byte
+char = 0x97	; UTF-8 follow-on byte
+char = 0x98	; UTF-8 follow-on byte
+char = 0x99	; UTF-8 follow-on byte
+char = 0x9A	; UTF-8 follow-on byte
+char = 0x9B	; UTF-8 follow-on byte
+char = 0x9C	; UTF-8 follow-on byte
+char = 0x9D	; UTF-8 follow-on byte
+char = 0x9E	; UTF-8 follow-on byte
+char = 0x9F	; UTF-8 follow-on byte
+char = 0xA0	; UTF-8 follow-on byte
+char = 0xA1	; UTF-8 follow-on byte
+char = 0xA2	; UTF-8 follow-on byte
+char = 0xA3	; UTF-8 follow-on byte
+char = 0xA4	; UTF-8 follow-on byte
+char = 0xA5	; UTF-8 follow-on byte
+char = 0xA6	; UTF-8 follow-on byte
+char = 0xA7	; UTF-8 follow-on byte
+char = 0xA8	; UTF-8 follow-on byte
+char = 0xA9	; UTF-8 follow-on byte
+char = 0xAA	; UTF-8 follow-on byte
+char = 0xAB	; UTF-8 follow-on byte
+char = 0xAC	; UTF-8 follow-on byte
+char = 0xAD	; UTF-8 follow-on byte
+char = 0xAE	; UTF-8 follow-on byte
+char = 0xAF	; UTF-8 follow-on byte
+char = 0xB0	; UTF-8 follow-on byte
+char = 0xB1	; UTF-8 follow-on byte
+char = 0xB2	; UTF-8 follow-on byte
+char = 0xB3	; UTF-8 follow-on byte
+char = 0xB4	; UTF-8 follow-on byte
+char = 0xB5	; UTF-8 follow-on byte
+char = 0xB6	; UTF-8 follow-on byte
+char = 0xB7	; UTF-8 follow-on byte
+char = 0xB8	; UTF-8 follow-on byte
+char = 0xB9	; UTF-8 follow-on byte
+char = 0xBA	; UTF-8 follow-on byte
+char = 0xBB	; UTF-8 follow-on byte
+char = 0xBC	; UTF-8 follow-on byte
+char = 0xBD	; UTF-8 follow-on byte
+char = 0xBE	; UTF-8 follow-on byte
+char = 0xBF	; UTF-8 follow-on byte
+char = 0xC0	; Double-byte UTF-8
+char = 0xC1	; Double-byte UTF-8
+char = 0xC2	; Double-byte UTF-8
+char = 0xC3	; Double-byte UTF-8
+char = 0xC4	; Double-byte UTF-8
+char = 0xC5	; Double-byte UTF-8
+char = 0xC6	; Double-byte UTF-8
+char = 0xC7	; Double-byte UTF-8
+char = 0xC8	; Double-byte UTF-8
+char = 0xC9	; Double-byte UTF-8
+char = 0xCA	; Double-byte UTF-8
+char = 0xCB	; Double-byte UTF-8
+char = 0xCC	; Double-byte UTF-8
+char = 0xCD	; Double-byte UTF-8
+char = 0xCE	; Double-byte UTF-8
+char = 0xCF	; Double-byte UTF-8
+char = 0xD0	; Double-byte UTF-8
+char = 0xD1	; Double-byte UTF-8
+char = 0xD2	; Double-byte UTF-8
+char = 0xD3	; Double-byte UTF-8
+char = 0xD4	; Double-byte UTF-8
+char = 0xD5	; Double-byte UTF-8
+char = 0xD6	; Double-byte UTF-8
+char = 0xD7	; Double-byte UTF-8
+char = 0xD8	; Double-byte UTF-8
+char = 0xD9	; Double-byte UTF-8
+char = 0xDA	; Double-byte UTF-8
+char = 0xDB	; Double-byte UTF-8
+char = 0xDC	; Double-byte UTF-8
+char = 0xDD	; Double-byte UTF-8
+char = 0xDE	; Double-byte UTF-8
+char = 0xDF	; Double-byte UTF-8
+char = 0xE0	; Triple-byte UTF-8
+char = 0xE1	; Triple-byte UTF-8
+char = 0xE2	; Triple-byte UTF-8
+char = 0xE3	; Triple-byte UTF-8
+char = 0xE4	; Triple-byte UTF-8
+char = 0xE5	; Triple-byte UTF-8
+char = 0xE6	; Triple-byte UTF-8
+char = 0xE7	; Triple-byte UTF-8
+char = 0xE8	; Triple-byte UTF-8
+char = 0xE9	; Triple-byte UTF-8
+char = 0xEA	; Triple-byte UTF-8
+char = 0xEB	; Triple-byte UTF-8
+char = 0xEC	; Triple-byte UTF-8
+char = 0xED	; Triple-byte UTF-8
+char = 0xEE	; Triple-byte UTF-8
+char = 0xEF	; Triple-byte UTF-8
+char = 0xF0	; Triple-byte UTF-8
+char = 0xF1	; Triple-byte UTF-8
+char = 0xF2	; Triple-byte UTF-8
+char = 0xF3	; Triple-byte UTF-8
+char = 0xF4	; Triple-byte UTF-8
+char = 0xF5	; Triple-byte UTF-8
+char = 0xF6	; Triple-byte UTF-8
+char = 0xF7	; Triple-byte UTF-8
+char = 0xF8	; Triple-byte UTF-8
+char = 0xF9	; Triple-byte UTF-8
+char = 0xFA	; Triple-byte UTF-8
+char = 0xFB	; Triple-byte UTF-8
+char = 0xFC	; Triple-byte UTF-8
+char = 0xFD	; Triple-byte UTF-8
+char = 0xFE	; Triple-byte UTF-8
+char = 0xFF	; Triple-byte UTF-8

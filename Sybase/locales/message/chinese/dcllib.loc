@@ -1,0 +1,348 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=chinese
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "非法的对象级别."
+
+2 = IFACEE_BADOBJ, "非法的对象."
+
+3 = IFACEE_OPEN, "打开接口文件失败."
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "要求的服务器名没找到."
+
+6 = IFACEE_DICTSYNTAX, "在接口文件中找到非法语法."
+
+7 = IFACEE_MALLOC, "内存分配错误."
+
+8 = IFACEE_CLOSE, "关闭接口文件失败."
+
+9 = IFACEE_ENTNOTSUPPORTED, "不支持要求的驱动入口."
+
+10 = IFACEE_PROPNOTSUPPORTED, "不支持要求的属性."
+
+11 = IFACEE_INVALID_HANDLE, "找到非法的驱动处理."
+
+12 = IFACEE_INVALIDARG, "非法的驱动 api 参数传递."
+
+13 = IFACEE_CANTMODIFY, "接口文件或者服务器段不可改."
+
+14 = IFACEE_WRITEFAIL, "写接口文件出错."
+ 
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "服务返回错误."
+
+2 = DCLE_INITED, "DCL 已初始化."
+
+3 = DCLE_MEMALLOC, "企图分配内存失败."
+
+4 = DCLE_MUTXALLOC, "企图分配 mutex 失败."
+
+5 = DCLE_RMAN, "请求管理器接口出错."
+
+6 = DCLE_LMAN, "列表管理器接口出错."
+
+7 = DCLE_VERSION, "非法的 DCL-Library 版本."
+
+8 = DCLE_PROPCMD, "指定非法的属性命令."
+
+9 = DCLE_属性, "指定非法的属性."
+
+10 = DCLE_OPEN, "打开指定驱动失败."
+
+11 = DCLE_LOAD, "装载指定驱动失败."
+
+12 = DCLE_INTLHOME, "不能确定 $SYBASE."
+
+13 = DCLE_INTLOPEN, "不能打开配置文件."
+
+14 = DCLE_INTLNOENT, "不能在配置文件中发现 DCL 记录项."
+
+15 = DCLE_FATAL, "致命的内部错误."
+
+16 = DCLE_FAILOVER, "最后的命令失败."
+
+17 = DCLE_SESSBOUND, "捆绑会话."
+
+18 = DCLE_SESSUBOUND, "解绑会话."
+
+19 = DCLE_PROPOF, "属性缓冲溢出"
+ 
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "内存分配错误."
+
+2 = REGE_INVALID_HANDLE, "找到非法的驱动处理."
+
+3 = REGE_ENTNOTSUPPORTED, "不支持要求的驱动入口."
+
+4 = REGE_OPEN_KEY, "打开注册键失败."
+
+5 = REGE_NO_VALUE, "在注册键中找不到属性."
+ 
+6 = REGE_ADDRSYNTAX, "地址字符串语法错误."
+
+7 = REGE_TYPENOTSUPPORTED, "非法的值类型."
+
+8 = REGE_ENUMKEY, "模拟子键失败."
+
+9 = REGE_PROPCMD, "指定非法的属性命令."
+
+10 = REGE_PROP_READONLY, "不能设置/清除一个只读属性."
+ 
+11 = REGE_INVALID_ARG, "非法的参数."
+
+12 = REGE_CREATE_KEY, "创建键失败."
+
+13 = REGE_ENTRY_EXIST, "注册键已经存在."
+ 
+14 = REGE_INVALID_OID, "非法的 OID."
+
+15 = REGE_INVALID_ATTR_VALUE, "非法的属性值."
+
+16 = REGE_CREATE_VALUE, "设置值失败."
+
+17 = REGE_DELETE_KEY, "删除键失败."
+
+18 = REGE_MOD_ADDATTR, "修改时增加值失败."
+
+19 = REGE_MOD_ADDVALUE, "修改时增加数据失败."
+
+20 = REGE_MOD_REMOVEATTR, "修改时删除数据失败."
+
+21 = REGE_MOD_REMOVEVALUE, "修改时删除数据失败."
+
+22 = REGE_ENUMVALUE, "模拟值失败."
+
+23 = REGE_PROPNOTSUPPORTED, "指定非法的属性."
+
+24 = REGE_INVALID_VALUENAME, "名称无 OID 值."
+
+25 = REGE_MODIFY, "修改记录项失败."
+
+26 = REGE_ENUMVALUE, "模拟值失败."
+
+27 = REGE_CONNECT_REMOTE, "连接远程注册失败."
+ 
+28 = REGE_PROPLEN, "指定非法的属性长度."
+
+29 = REGE_INVALID_INITSTR, "找到非法的初始化字符串."
+ 
+[dcedrv]
+
+1 = DCEE_BADCLASS, "非法的对象级别."
+
+2 = DCEE_BADOBJ, "非法的对象."
+
+3 = DCEE_OPEN, "打开会话 DCE 目录服务失败."
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "要求的服务器名没找到."
+
+6 = DCEE_DICTSYNTAX, "在目录服务中找到非法的语法."
+
+7 = DCEE_MALLOC, "内存分配错误."
+
+8 = DCEE_CLOSE, "企图关闭 DCE 目录服务会话失败."
+
+9 = DCEE_ENTNOTSUPPORTED, "不支持要求的驱动入口."
+
+10 = DCEE_PROPNOTSUPPORTED, "不支持要求的属性."
+
+11 = DCEE_INVALID_HANDLE, "找到非法的驱动处理."
+
+12 = DCEE_BIND, "捆绑失败."
+
+13 = DCEE_UNBIND, "解绑失败."
+
+14 = DCEE_WORKSPACE, "工作空间初始化失败."
+
+15 = DCEE_OMGET, "DCE omget 失败."
+ 
+16 = DCEE_CONTEXT, "上下文失败."
+ 
+17 = DCEE_PROPCMD, "指定非法的属性命令."
+ 
+18 = DCEE_INVALIDARG, "非法的参数."
+ 
+19 = DCEE_INITSTR, "非法的初始化字符串."
+ 
+20 = DCEE_INVALNAME, "非法的命名语法."
+ 
+21 = DCEE_CELLNAME, "查找单元名失败."
+ 
+22 = DCEE_DITBASE, "非法的 ditbase."
+  
+23 = DCEE_SEARCH, "搜索深度值非法."
+ 
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "LDAP 驱动程序分配内存失败。"
+
+2 = E_LOAD, "LDAP 驱动程序装载 LDAP API 提供程序失败。"
+
+3 = E_VERSION, "装载的 LDAP API 版本不正确。"
+
+4 = E_URLPARSE, "LDAP 驱动程序解析 URL 失败。"
+
+5 = E_INTERRUPTED, "LDAP 驱动程序捕获了一个意外的被中断的系统调用。"
+
+6 = E_INTERNAL, "内部 LDAP 驱动程序错误。"
+
+7 = E_NOTFOUND, "LDAP 驱动程序查找项目失败。"
+
+8 = E_PROPS, "LDAP 驱动程序获取/设置属性失败。"
+
+9 = E__INIT, "LDAP 驱动程序在 ldap_init() 时失败。"
+
+10 = E_BIND, "LDAP 驱动程序在 ldap_bind_s() 时失败。"
+
+11 = E_UNBIND, "LDAP 驱动程序在 ldap_unbind_s() 时失败。"
+
+12 = E_SEARCH, "LDAP 驱动程序在 ldap_search_s() 时失败。"
+
+13 = E_ADDMOD, "LDAP 驱动程序添加/修改项目失败。"
+
+14 = E_DELETE, "LDAP 驱动程序删除项目失败。"
+
+15 = E_PERM, "不具备执行请求的操作应具备的权限。"
+
+; End of ldap error strings.
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "非法的对象级别."
+
+2 = NDS_EBADOBJ, "非法的对象."
+
+3 = NDS_EOPEN, "打开会话NDS 目录服务失败."
+
+4 = NDS_ELASTENTRY, "传递最后记录项."
+
+5 = NDS_ESRVNAMNOTFND, "要求的服务器名没找到."
+
+6 = NDS_EDICTSYNTAX, "在目录服务找到非法的语法."
+
+7 = NDS_EMALLOC, "内存分配错误."
+
+8 = NDS_ECLOSE, "企图关闭NDS 目录服务会话失败."
+
+9 = NDS_EENTNOTSUPPORTED, "不支持要求的驱动入口."
+
+10 = NDS_EPROPNOTSUPPORTED, "不支持要求的属性."
+
+11 = NDS_EINVALID_HANDLE, "找到非法的驱动处理."
+
+12 = NDS_EBIND, "捆绑NDS 目录服务失败."
+ 
+14 = NDS_EUNBIND, "解绑NDS 目录服务失败."
+
+15 = NDS_EREAD, "读NDS 目录服务失败."
+
+16 = NDS_EADDOBJ, "增加对象到NDS 目录服务失败."
+
+17 = NDS_EPROPCMD, "非法的属性操作."
+
+18 = NDS_EINVALIDARG, "非法的参数."
+
+19 = NDS_ENDSINIT, "初始化NDS 缓冲失败."
+
+20 = NDS_EDELOBJ, "在NDS 目录服务删除对象失败."
+
+21 = NDS_EMODOBJ, "在NDS 目录服务修改对象失败."
+
+22 = NDS_ESEARCH, "在NDS 目录服务搜索对象失败."
+ 
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "内存分配错误."
+
+2 = BANE_INVALID_HANDLE, "找到非法的驱动处理."
+
+3 = BANE_SRVNAMNOTFND, "没找到要求的服务器名."
+
+4 = BANE_NO_VALUE, "未读到对象值."
+
+5 = BANE_ADDRSYNTAX, "地址字符串语法错误."
+
+6 = BANE_TYPENOTSUPPORTED, "非法的值类型."
+
+7 = BANE_ENUMKEY, "模拟子键失败."
+
+8 = BANE_PROPCMD, "指定非法的属性命令."
+
+9 = BANE_PROP_READONLY, "不能设置只读属性."
+
+10 = BANE_INVALID_ARG, "非法的参数."
+
+11 = BANE_INVALID_NAME, "非法的对象名."
+
+12 = BANE_ENTRY_EXIST, "对象已存在."
+
+13 = BANE_INVALID_OID, "非法的OID."
+
+14 = BANE_INVALID_ATTR_VALUE, "非法的属性值."
+
+15 = BANE_CREATE_VALUE, "设置属性值对象失败."
+
+16 = BANE_MOD_ADDATTR, "修改时增加属性失败."
+
+17 = BANE_MOD_REMOVEATTR, "修改时删除属性失败."
+
+18 = BANE_READ_VALUE, "从对象中读属性失败."
+
+19 = BANE_STARTSESS, "启动StreetTalk 或者STDA 会话失败."
+
+20 = BANE_ENDSESS, "结束StreetTalk 或者STDA 会话失败."
+
+21 = BANE_DELETE_ENTRY, "删除对象失败."
+
+22 = BANE_INITSTR, "非法的初始字符串."
+
+23 = BANE_NO_ENTRY, "对象不存在."
+ 
+; end Banyan DSA driver error message
+;
+

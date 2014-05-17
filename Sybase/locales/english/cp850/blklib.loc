@@ -1,0 +1,157 @@
+; comment character is semicolon.
+
+
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "unable to allocate memory."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "general error"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "blk layer"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "user error"
+
+2 = ZZZZZ, "internal BLK-Library error"
+
+3 = ZZZZZ, "CT library error"
+
+4 = ZZZZZ, "async manager error"
+
+5 = ZZZZZ, "common library error"
+
+6 = ZZZZZ, "memory management error"
+
+7 = ZZZZZ, "SQL Server error"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk okay"
+
+1 = ZZZZZ, "Cannot call API %1! from this state: %2!"
+
+2 = ZZZZZ, "API %1! allowed only for bulk copy IN operation"
+
+3 = ZZZZZ, "API %1! not allowed to be called from a callback (state = %2!)"
+
+4 = ZZZZZ, "Parameter %1! has an illegal value of %2!"
+
+5 = ZZZZZ, "The %1! field of the CS_DATAFMT structure has an illegal value \
+ of %2!."
+
+6 = ZZZZZ, "The parameter %1! cannot be NULL."
+
+7 = ZZZZZ, "The information being retrieved will not fit in a buffer of \
+ %1! byte."
+
+8 = ZZZZZ, "The precision must be greater than or equal to scale"
+
+9 = ZZZZZ, "Cannot bind a NULL %1! with a datatype of %2!."
+
+10 = ZZZZZ, "a table column of type %1! cannot be bound to a program \
+ variable of type %2!."
+
+11 = ZZZZZ, "Cannot have textxfer and array binding together."
+
+12 = ZZZZZ, "All columns must have the same array count value for array \
+ binding."
+
+13 = ZZZZZ, "Cannot find an equivalent CS_TYPE for this TDS data type \
+ %1!"
+
+14 = ZZZZZ, "Failed when CT_Lib routine %1! called."
+
+15 = ZZZZZ, "Use direction CS_BLK_IN or CS_BLK_OUT for a bulk copy operation."
+
+16 = ZZZZZ, "Use option CS_BLK_ALL to end a bulk copy OUT."
+
+17 = ZZZZZ, "Bad process %1! status for %2! - shouldn't be here."
+
+18 = ZZZZZ, "Bad status for %1! - shouldn't be here."
+
+19 = ZZZZZ, "The column and default %1! sent from the server are not \
+ the same."
+
+20 = ZZZZZ, "Bad status for %1! - but can recover - continue processing."
+
+21 = ZZZZZ, "The number of columns expected from the server not the same \
+ as received %1!."
+
+22 = ZZZZZ, "Application must login with %1! property set."
+
+23 = ZZZZZ, "Versions for bulk copy library and CT_Lib are incompatible."
+
+24 = ZZZZZ, "No value or default value available and NULL not allowed. \
+ col = %1! row = %2!."
+
+25 = ZZZZZ, "Failed in conversion routine - condition overflow. \
+ col = %1! row = %2!."
+
+26 = ZZZZZ, "Failed in conversion routine - syntax error. \
+ col = %1! row = %2!."
+
+27 = ZZZZZ, "Bad bind order - a bound column follows a column marked \
+ for textxfer."
+
+28 = ZZZZZ, "Total size of textxfer %1! exceeds input data length %2!"
+
+29 = ZZZZZ, "Number of default values %1! do not same as default count %2!"
+
+30 = ZZZZZ, "Return of CS_END_RESULTS for the file requested for \
+ bulk copy out. File may be empty."
+
+31 = ZZZZZ, "The parameter %1! is required to be NULL."
+
+32 = ZZZZZ, "The parameter %1! is required to be CS_UNUSED."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

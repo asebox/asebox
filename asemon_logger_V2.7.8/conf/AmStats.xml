@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <!-- Collector for Asemon_logger statistics -->
+  <metricName > AmStats </metricName>
+  <metricType > BUILTIN </metricType>
+  <delay > 60 </delay>
+  <mandatoryConfigs>
+  </mandatoryConfigs>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_AmStats (
+     Timestamp datetime not null,      -- End time of collection (server time for ASE servers, else, asemon_logger time)
+     Thread varchar(10) not null,      -- Collector name
+     cWait   int not null,             -- Collector wait time
+     cActive   int not null,           -- Time to collect data
+     aWait   int not null,             -- Archive wait time
+     aActive   int not null,           -- Time to archive data
+     archRows  int null                -- Number of rows archived. -1 if no collection or error
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_AmStats (Timestamp)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_AmStats" >
+<![CDATA[
+  delete ?SERVERNAME?_AmStats
+  where Timestamp < ?DATE?
+]]>
+
+    </P>
+  </purge>
+
+</MetricDescriptor>

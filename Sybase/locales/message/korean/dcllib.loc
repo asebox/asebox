@@ -1,0 +1,348 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) dcllib.loc 1.4 1/15/94
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=11.5
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=korean
+
+[copyright]
+copyright =  "저작권 (C) 1990, 2001 Sybase, Inc.\
+모든 저작권은 본사 소유입니다.\
+미 연방 정부에 의한 사용, 복제 또는 공개는\
+CFR 52.227-7013의 Rights in Technical Data and\
+Computer Software 절에 있는 (c) (1) (ii) 항목에\
+명시된 규정을 따릅니다.\
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[ifacedrv]
+
+1 = IFACEE_BADCLASS, "잘못된 객체 클래스입니다."
+
+2 = IFACEE_BADOBJ, "잘못된 객체입니다."
+
+3 = IFACEE_OPEN, "인터페이스 파일을 열 수 없습니다."
+
+4 = IFACEE_LASTENTRY, ""
+
+5 = IFACEE_SRVNAMNOTFND, "요청된 서버 이름이 없습니다."
+
+6 = IFACEE_DICTSYNTAX, "인터페이스 파일에 잘못된 구문이 있습니다."
+
+7 = IFACEE_MALLOC, "메모리 할당에 오류가 있습니다."
+
+8 = IFACEE_CLOSE, "인터페이스 파일을 닫을 수 없습니다."
+
+9 = IFACEE_ENTNOTSUPPORTED, "요청된 드라이버 진입점은 지원하지 않습니다."
+
+10 = IFACEE_PROPNOTSUPPORTED, "요청된 특성은 지원하지 않습니다."
+
+11 = IFACEE_INVALID_HANDLE, "잘못된 드라이버 핸들이 있습니다."
+
+12 = IFACEE_INVALIDARG, "드라이버 API에 잘못된 인수가 전달되었습니다."
+
+13 = IFACEE_CANTMODIFY, "인터페이스 파일 또는 서버 섹션을 수정할 수 없습니다."
+
+14 = IFACEE_WRITEFAIL, "인터페이스 파일에 쓸 때 오류가 발생하였습니다."
+
+; end of dcl error strings
+;
+
+[dcllib]
+
+1 = DCLE_DRIVER, "서비스 제공업체에 의한 오류를 반환하였습니다."
+
+2 = DCLE_INITED, "DCL은 이미 초기화되어 있습니다."
+
+3 = DCLE_MEMALLOC, "메모리를 할당할 수 없습니다."
+
+4 = DCLE_MUTXALLOC, "mutex를 할당할 수 없습니다."
+
+5 = DCLE_RMAN, "요청 관리자 인터페이스에 오류가 있습니다."
+
+6 = DCLE_LMAN, "목록 관리자 인터페이스에 오류가 있습니다."
+
+7 = DCLE_VERSION, "잘못된 DCL 라이브러리 버전입니다."
+
+8 = DCLE_PROPCMD, "잘못된 특성 명령어를 지정하였습니다."
+
+9 = DCLE_PROPERTY, "잘못된 특성을 지정하였습니다."
+
+10 = DCLE_OPEN, "지정된 드라이버를 열 수 없습니다."
+
+11 = DCLE_LOAD, "지정된 드라이버를 로드할 수 없습니다."
+
+12 = DCLE_INTLHOME, "$SYBASE를 결정할 수 없습니다."
+
+13 = DCLE_INTLOPEN, "구성 파일을 열 수 없습니다."
+
+14 = DCLE_INTLNOENT, "구성 파일에 DCL 항목이 없습니다."
+
+15 = DCLE_FATAL, "중대 내부 오류입니다."
+
+16 = DCLE_FAILOVER, "마지막 명령어를 실행하는 동안 고장 전환(failover)이 발생하였습니다."
+
+17 = DCLE_SESSBOUND, "세션이 현재 바인드되어 있습니다."
+
+18 = DCLE_SESSUBOUND, "세션이 현재 바인드되어 있지 않습니다."
+
+19 = DCLE_PROPOF, "특성 버퍼의 오버플로우가 발생하였습니다."
+
+; end of dcl error strings
+;
+
+; NT registry driver error message
+[regdrv]
+
+1 = REGE_MALLOC, "메모리 할당에 오류가 있습니다."
+
+2 = REGE_INVALID_HANDLE, "잘못된 드라이버 핸들이 있습니다."
+
+3 = REGE_ENTNOTSUPPORTED, "요청된 드라이버 진입점은 지원하지 않습니다."
+
+4 = REGE_OPEN_KEY, "레지스트리 키를 열 수 없습니다."
+
+5 = REGE_NO_VALUE, "레지스트리 키에 속성이 없습니다."
+
+6 = REGE_ADDRSYNTAX, "주소 문자열에 구문 오류가 있습니다."
+
+7 = REGE_TYPENOTSUPPORTED, "잘못된 값 유형입니다."
+
+8 = REGE_ENUMKEY, "서브키를 열거할 수 없습니다."
+
+9 = REGE_PROPCMD, "잘못된 특성 명령어를 지정하였습니다."
+
+10 = REGE_PROP_READONLY, "읽기 전용 특성을 설정하거나 지울 수 없습니다."
+
+11 = REGE_INVALID_ARG, "잘못된 인수입니다."
+
+12 = REGE_CREATE_KEY, "키를 만들 수 없습니다."
+
+13 = REGE_ENTRY_EXIST, "레지스트리 키가 이미 있습니다."
+
+14 = REGE_INVALID_OID, "잘못된 OID입니다."
+
+15 = REGE_INVALID_ATTR_VALUE, "잘못된 속성 값입니다."
+
+16 = REGE_CREATE_VALUE, "값을 설정할 수 없습니다."
+
+17 = REGE_DELETE_KEY, "키를 삭제할 수 없습니다."
+
+18 = REGE_MOD_ADDATTR, "속성을 추가할 수 없습니다."
+
+19 = REGE_MOD_ADDVALUE, "속성 값을 추가할 수 없습니다."
+
+20 = REGE_MOD_REMOVEATTR, "속성을 삭제할 수 없습니다."
+
+21 = REGE_MOD_REMOVEVALUE, "속성 값을 삭제할 수 없습니다."
+
+22 = REGE_READ_VALUE, "객체로부터 속성을 읽을 수 없습니다."
+
+23 = REGE_PROPNOTSUPPORTED, "잘못된 특성을 지정하였습니다."
+
+24 = REGE_INVALID_VALUENAME, "속성 OID가 없습니다."
+
+25 = REGE_MODIFY, "항목을 수정할 수 없습니다."
+
+26 = REGE_ENUMVALUE, "값을 열거할 수 없습니다."
+
+27 = REGE_CONNECT_REMOTE, "원격 레지스트리에 연결할 수 없습니다."
+
+28 = REGE_PROPLEN, "잘못된 특성 길이를 지정하였습니다."
+
+29 = REGE_INVALID_INITSTR, "잘못된 초기화 문자열이 있습니다."
+
+[dcedrv]
+
+1 = DCEE_BADCLASS, "잘못된 객체 클래스입니다."
+
+2 = DCEE_BADOBJ, "잘못된 객체입니다."
+
+3 = DCEE_OPEN, "DCE 디렉토리 서비스 세션을 열 수 없습니다."
+
+4 = DCEE_LASTENTRY, ""
+
+5 = DCEE_SRVNAMNOTFND, "요청된 서버 이름이 없습니다."
+
+6 = DCEE_DICTSYNTAX, "디렉토리 서비스에 잘못된 구문이 있습니다."
+
+7 = DCEE_MALLOC, "메모리 할당에 오류가 있습니다."
+
+8 = DCEE_CLOSE, "DCE 디렉토리 서비스 세션을 닫을 수 없습니다."
+
+9 = DCEE_ENTNOTSUPPORTED, "요청된 드라이버 진입점은 지원하지 않습니다."
+
+10 = DCEE_PROPNOTSUPPORTED, "요청된 특성은 지원하지 않습니다."
+
+11 = DCEE_INVALID_HANDLE, "잘못된 드라이버 핸들이 있습니다."
+
+12 = DCEE_BIND, "DCE 디렉토리 세션에 바인드할 수 없습니다."
+
+13 = DCEE_UNBIND, "DCE 디렉토리 세션의 바인드를 해제할 수 없습니다."
+
+14 = DCEE_WORKSPACE, "작업 공간을 초기화할 수 없습니다."
+
+15 = DCEE_OMGET, "DCE omget()를 실행할 수 없습니다."
+ 
+16 = DCEE_CONTEXT, "DCE 문맥을 할당할 수 없습니다."
+ 
+17 = DCEE_PROPCMD, "잘못된 특성 명령을 지정하였습니다."
+ 
+18 = DCEE_INVALIDARG, "잘못된 인수입니다."
+ 
+19 = DCEE_INITSTR, "잘못된 초기화 문자열입니다."
+ 
+20 = DCEE_INVALNAME, "잘못된 이름 구문입니다."
+ 
+21 = DCEE_CELLNAME, "DCE 셀 이름을 찾을 때 오류가 발생하였습니다."
+ 
+22 = DCEE_DITBASE, "잘못된 ditbase입니다."
+
+23 = DCEE_SEARCH, "잘못된 검색 수준 값입니다."
+ 
+; end of dce driver error strings
+;
+
+[ldapdrv]
+
+1 = E_ALLOC, "LDAP 드라이버가 메모리를 할당하는 데 실패했습니다."
+
+2 = E_LOAD, "LDAP 드라이버가 LDAP API 제공자를 로드하는 데 실패했습니다."
+
+3 = E_VERSION, "잘못된 LDAP API 버전이 로드되었습니다."
+
+4 = E_URLPARSE, "LDAP 드라이버가 URL을 구문 분석하는 데 실패했습니다."
+
+5 = E_INTERRUPTED, "LDAP 드라이버가 예상하지 못한 중단된 시스템 호출을 받았습니다."
+
+6 = E_INTERNAL, "내부 LDAP 드라이버 오류입니다."
+
+7 = E_NOTFOUND, "LDAP 드라이버가 항목을 찾는 데 실패했습니다."
+
+8 = E_PROPS, "LDAP 드라이버가 등록정보를 가져오거나 설정하는 데 실패했습니다."
+
+9 = E__INIT, "LDAP 드라이버가 ldap_init()에 실패했습니다."
+
+10 = E_BIND, "LDAP 드라이버가 ldap_bind_s()에 실패했습니다."
+
+11 = E_UNBIND, "LDAP 드라이버가ldap_unbind_s()에 실패했습니다."
+
+12 = E_SEARCH, "LDAP 드라이버가 ldap_search_s()에 실패했습니다."
+
+13 = E_ADDMOD, "LDAP 드라이버가 항목을 추가 또는 수정하는 데 실패했습니다."
+
+14 = E_DELETE, "LDAP 드라이버가 항목을 삭제하는 데 실패했습니다."
+
+15 = E_PERM, "요청된 작업을 수행할 수 있는 권한이 없습니다."
+
+; End of ldap error strings.
+
+;
+
+[ndsdrv]
+
+1 = NDS_EBADCLASS, "잘못된 객체 클래스입니다."
+
+2 = NDS_EBADOBJ, "잘못된 객체입니다."
+
+3 = NDS_EOPEN, "NDS 디렉토리 서비스 세션을 열 수 없습니다."
+
+4 = NDS_ELASTENTRY, "마지막 항목을 전달하였습니다."
+
+5 = NDS_ESRVNAMNOTFND, "요청된 서버 이름이 없습니다."
+
+6 = NDS_EDICTSYNTAX, "디렉토리 서비스에 잘못된 구문이 있습니다."
+
+7 = NDS_EMALLOC, "메모리 할당에 오류가 있습니다."
+
+8 = NDS_ECLOSE, "NDS 디렉토리 서비스 세션을 닫을 수 없습니다."
+
+9 = NDS_EENTNOTSUPPORTED, "요청된 드라이버 진입점은 지원하지 않습니다."
+
+10 = NDS_EPROPNOTSUPPORTED, "요청된 특성은 지원하지 않습니다."
+
+11 = NDS_EINVALID_HANDLE, "잘못된 드라이버 핸들이 있습니다."
+
+12 = NDS_EBIND, "NDS 디렉토리 서비스에 바인드할 수 없습니다."
+
+14 = NDS_EUNBIND, "NDS 디렉토리 서비스의 바인드를 해제할 수 없습니다."
+
+15 = NDS_EREAD, "NDS 디렉토리 서비스에서 읽을 수 없습니다."
+
+16 = NDS_EADDOBJ, "NDS 디렉토리 서비스에 객체를 추가할 수 없습니다."
+
+17 = NDS_EPROPCMD, "특성에 잘못된 활동이 작동하고 있습니다."
+
+18 = NDS_EINVALIDARG, "잘못된 인수입니다."
+
+19 = NDS_ENDSINIT, "NDS 버퍼를 초기화할 수 없습니다."
+
+20 = NDS_EDELOBJ, "NDS 디렉토리 서비스의 객체를 삭제할 수 없습니다."
+
+21 = NDS_EMODOBJ, "NDS 디렉토리 서비스의 객체를 수정할 수 없습니다."
+
+22 = NDS_ESEARCH, "NDS 디렉토리 서비스의 객체를 찾을 수 없습니다."
+
+; end of nds error strings
+
+; Banyan DSA driver error message
+[dcdban]
+
+1 = BANE_MALLOC, "메모리 할당에 오류가 있습니다."
+
+2 = BANE_INVALID_HANDLE, "잘못된 드라이버 핸들이 있습니다."
+
+3 = BANE_SRVNAMNOTFND, "요청된 서버 이름이 없습니다."
+
+4 = BANE_NO_VALUE, "지정된 객체에 속성이 없습니다."
+
+5 = BANE_ADDRSYNTAX, "주소 문자열에 구문 오류가 있습니다."
+
+6 = BANE_TYPENOTSUPPORTED, "잘못된 값 유형입니다."
+
+7 = BANE_ENUMKEY, "서브키를 열거할 수 없습니다."
+
+8 = BANE_PROPCMD, "잘못된 특성 명령어를 지정하였습니다."
+
+9 = BANE_PROP_READONLY, "읽기 전용 특성을 설정하거나 지울 수 없습니다."
+
+10 = BANE_INVALID_ARG, "잘못된 인수입니다."
+
+11 = BANE_INVALID_NAME, "잘못된 객체 이름입니다."
+
+12 = BANE_ENTRY_EXIST, "객체가 이미 있습니다."
+
+13 = BANE_INVALID_OID, "잘못된 OID입니다."
+
+14 = BANE_INVALID_ATTR_VALUE, "잘못된 속성 값입니다."
+
+15 = BANE_CREATE_VALUE, "속성 값을 설정할 수 없습니다."
+
+16 = BANE_MOD_ADDATTR, "속성을 추가할 수 없습니다."
+
+17 = BANE_MOD_REMOVEATTR, "속성을 삭제할 수 없습니다."
+
+18 = BANE_READ_VALUE, "객체로부터 속성을 읽을 수 없습니다."
+
+19 = BANE_STARTSESS, "StreetTalk 또는 STDA 세션을 시작할 수 없습니다."
+
+20 = BANE_ENDSESS, "StreetTalk 또는 STDA 세션을 종료할 수 없습니다."
+
+21 = BANE_DELETE_ENTRY, "객체를 삭제할 수 없습니다."
+
+22 = BANE_INITSTR, "잘못된 초기화 문자열입니다."
+
+23 = BANE_NO_ENTRY, "지정된 객체가 없습니다."
+
+; end Banyan DSA driver error message
+;

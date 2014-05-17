@@ -1,0 +1,85 @@
+<?php
+$query="";
+
+$filter_clause ="
+and (Appli      like '".$filterappli  ."' or '".$filterappli  ."' = '')
+and (Server     like '".$filterserver ."' or '".$filterserver ."' = '')
+and (ChkName    like '".$filtername   ."' or '".$filtername   ."' = '')
+and (ChkMessage like '".$filtermessage."' or '".$filtermessage."' = '')";
+
+$fsts = substr($filterstatus,0,4);
+if     ($fsts == "OK"  ) { $filterstatus2 = "0" ; } 
+elseif ($fsts == "WARN") { $filterstatus2 = "1" ; }
+elseif ($fsts == "CRIT") { $filterstatus2 = "2" ; }
+elseif ($fsts == "UNKN") { $filterstatus2 = "3" ; }
+else                     { $filterstatus2 = ""  ; };
+
+if ($filterstatus2 != ""  ) { 
+   $filter_clause = $filter_clause . ' and (ChkStatus  = ' . $filterstatus2 . ')';
+};
+
+
+$sts=-1;
+if ($filterstatus == "OK")       { $sts=0 ; };
+if ($filterstatus == "WARNING")  { $sts=1 ; };
+if ($filterstatus == "CRITICAL") { $sts=2 ; };
+if ($filterstatus == "UNKNOWN")  { $sts=3 ; };
+
+if ($sts > 0) {
+   $filter_clause = $filter_clause." and (ChkStatus = ".$sts.")";
+};
+
+$query = "create table #checksall (
+               Appli       varchar(20)
+              ,Server      varchar(30)
+              ,ChkName     varchar(30)
+              ,ChkTime     datetime
+              ,ChkStatus   tinyint
+              ,ChkMessage  varchar(255)
+          )
+          ";
+
+for ($i=0; $i<count($databases); $i++) {
+   $db = str_replace( "ASEBOX_", "", $databases[$i] );
+
+   // get list of serveurs
+   $q = "select srv=substring(name,1,datalength(name)-7) from ASEBOX_".$db."..sysobjects where type='U' and name like '%_Checks'";
+   $result = sybase_query($q,$pid);
+   while($row = sybase_fetch_array($result)) {
+           $srv[] = $row["srv"];
+           
+           $server = $row["srv"];     
+           //print "<br>server=" . $server ;
+           $query = $query . "
+           insert into #checksall
+           select
+                '".$db."'
+               ,'".$server."'
+               ,ChkName
+               ,ChkTime
+               ,ChkStatus
+               ,ChkMessage
+           from ASEBOX_" . $db . ".." . $server . "_Checks
+           ";
+              
+    } //end for each srv      
+   
+} //end for each db
+
+//print "<br>query=$query<br>";
+
+$query = $query . "
+select 
+     Appli
+    ,Server
+    ,ChkName   
+    ,ChkTime   
+    ,ChkStatMsg = case when ChkStatus=0 then 'OK' when ChkStatus=1 then 'WARNING' when ChkStatus=2 then 'CRITICAL' else 'UNKNOWN' end
+    ,ChkStatus
+    ,ChkMessage
+from #checksall
+where (1=1)" . $filter_clause."
+order by ".$orderChk;
+
+$query_name = "appchecksall";
+?>

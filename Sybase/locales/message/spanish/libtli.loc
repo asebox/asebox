@@ -1,0 +1,67 @@
+
+; comment character is a semicolon.
+;
+; Sccsid @(#) libtli.loc 1.1 11/5/93
+;
+[file format]
+	; left and right brackets will delimit section titles.
+	; Any special character, including the comment character
+	; and the section-title delimiters, may be interpreted
+	; literally by preceding them with the escape character.
+	; In addition, any line that ends with the escape character
+	; will be continued onto the next line.
+	version=10.0
+	list_separator=,	; commas will separate the members of a list.
+	escape=\		; backslash is the escape symbol.
+[language]
+	language=spanish
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libtli]
+
+1 = IPDE_ACCEPTFAIL, "Error de llamada de aceptación TLI. t_errno %1!"
+
+2 = IPDE_BINDFAIL, "Error de llamada de enlace TLI. t_errno %1!"
+
+3 = IPDE_BADADDR, "La dirección suministrada tiene un formato incorrecto"
+
+4 = IPDE_BADBIND, "No pudo asociarse a la dirección correcta"
+
+5 = IPDE_CONECTFAIL, "Error de llamada de conexión TLI. t_errno %1!"
+
+6 = IPDE_GETINFO, "Error de llamada de captura de información TLI. t_errno %1!"
+
+7 = IPDE_LISTENFAIL, "Error de llamada de escucha TLI. t_errno %1!"
+
+8 = IPDE_NOCOTS, "Proveedor de transporte no orientado a la conexión"
+
+9 = IPDE_OPTFAIL, "No es posible definir opciones de protocolo"
+
+10 = IPDE_OPENFAIL, "Error de llamada de apertura TLI. t_errno %1!"
+
+11 = IPDE_PARSEFAIL, "Error al analizar la información de direcciones"
+
+12 = IPDE_RCVCONNECT, "Error de llamada de conexión de recepción. t_errno %1!"
+
+13 = IPDE_RECVFAIL, "Error de llamada de recepción TLI. t_errno %1!"
+
+14 = IPDE_SETSIG, "No es posible definir la ID de proceso de señal. t_errno %1!"
+
+15 = IPDE_SENDFAIL, "Error de llamada de envío TLI. t_errno %1!"
+
+16 = IPDE_BADINITSTRING, "Cadena de inicialización errónea de TCL"
+ 
+17 = IPDE_TALLOCFAIL, "Error de TLI t_alloc. t_errno %1!"
+
+; end of tli error strings
+;
+
+

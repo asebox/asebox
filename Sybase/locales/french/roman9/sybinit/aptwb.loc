@@ -1,0 +1,30 @@
+; comment character is semicolon.
+; "toolset.hdr" - Localization file for Sybinit.
+;
+; SCCS information: from sybinit.loc
+;	@(#) toolset.hdr 92.1 6/17/93 14:09:34
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+All rights reserved. \
+Use, duplication, or disclosure by the United States Government \
+is subject to restrictions as set forth in FAR subparagraphs \
+52.227-19(a)-(d) for civilian agency contracts and DFARS \
+252.227-7013(c)(1)(ii) for Department of Defense contracts. \
+Sybase reserves all unpublished rights under the copyright laws \
+of the United States. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;
+; Now we list the localized message strings.
+[sybinitmsg]
+; Syntax:
+;  "minor-number" = "cha—ne de message avec marques de r≈servation", "cha—ne de format"
+;
+200 = "indiquez le num≈ro de s≈rie de SQL Toolset",	""
+201  = "initialisez le module de langue japonais SQL Toolset, EUCJIS", ""
+202 = "initialisez le module de langue japonais SQL Toolset, ShiftJIS", ""
+5000 = "Veuillez indiquer le num≈ro de s≈rie (6 chiffres) :", ""
+5001 = "Le num≈ro de s≈rie doit ¡tre un nombre » 6 chiffres. Comparez le num≈ro saisi au num≈ro de s≈rie fourni avec la cartouche.", ""
+5100	= "Configuration du module de langue japonais, jeu de caract…res %1!", "%s"
+; End of section.

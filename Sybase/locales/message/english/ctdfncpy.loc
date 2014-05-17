@@ -1,0 +1,291 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Password: "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "FATAL ERROR: Unable to open definition file, '%1!'."
+
+2 = ZZZZZ, "FATAL ERROR: Attempting to allocate memory for Client-Library initialization failed."
+
+3 = ZZZZZ, "FATAL ERROR: Attempting to initialize Client-Library failed."
+
+4 = ZZZZZ, "FATAL ERROR: Attempting to install CS-Library message callback failed."
+
+5 = ZZZZZ, "FATAL ERROR: Attempting to install client message callback failed."
+
+6 = ZZZZZ, "FATAL ERROR: Attempting to install server message callback failed."
+
+7 = ZZZZZ, "FATAL ERROR: Attempting to supply interfaces file path and name to application context failed."
+
+8 = ZZZZZ, "FATAL ERROR: Attempting to allocate defncopy context structure failed."
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "defncopy Syntax Error"
+
+2 = ZZZZZ, "Usage"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "password"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "server_name"
+
+10 = ZZZZZ, "user_name"
+
+11 = ZZZZZ, "security_options"
+
+12 = ZZZZZ, "security_mechanism"
+
+13 = ZZZZZ, "language"
+
+14 = ZZZZZ, "file_name"
+
+15 = ZZZZZ, "database_name"
+
+16 = ZZZZZ, "owner"
+
+17 = ZZZZZ, "object_name"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "FATAL ERROR: Attempting to allocate sufficient memory for %1! failed."
+
+2 = ZZZZZ, "FATAL ERROR: Attempting to allocate sufficient memory for %1! failed.  All further copying canceled."
+
+3 = ZZZZZ, "FATAL ERROR: Attempting to allocate memory failed."
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "FATAL ERROR: A server name has not been specified.  Check the value of your DSQUERY environment variable."
+
+2 = ZZZZZ, "FATAL ERROR: Attempting to allocate a client/server connection structure failed."
+
+3 = ZZZZZ, "FATAL ERROR: Attempting to set the client/server connection's user name property with value '%1!' failed."
+
+4 = ZZZZZ, "FATAL ERROR: Attempting to set the client/server connection's password property failed."
+
+5 = ZZZZZ, "FATAL ERROR: Attempting to set the client/server connection's password encryption property failed."
+
+6 = ZZZZZ, "FATAL ERROR: Attempting to connect to server '%1!' failed."
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "FATAL ERROR: Attempting to allocate CS-Library command structure failed."
+
+2 = ZZZZZ, "FATAL ERROR: Unable to initiate SQL command."
+
+3 = ZZZZZ, "FATAL ERROR: Unable to initiate SQL command.  All further copying canceled."
+
+4 = ZZZZZ, "FATAL ERROR: Unable to send SQL command to server."
+
+5 = ZZZZZ, "FATAL ERROR: Unable to send SQL command to server.  All further copying canceled."
+
+6 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data failed."
+
+7 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data failed.  All further copying canceled."
+
+8 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data for object '%1!' failed.  All further copying canceled."
+
+9 = ZZZZZ, "FATAL ERROR: SQL command result data canceled."
+
+10 = ZZZZZ, "ERROR: SQL command result data canceled.  Copying canceled for this object."
+
+11 = ZZZZZ, "ERROR: SQL command result data for object '%1!' canceled.  Copying canceled for this object."
+
+12 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data generated unexpected return code '%1!'."
+
+13 = ZZZZZ, "ERROR: Attempting to set up SQL command result data for object '%1!' generated unexpected return code '%1!'.  Copying canceled for this object."
+
+14 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data generated unexpected result type '%1!'."
+
+15 = ZZZZZ, "FATAL ERROR: Attempting to retrieve result set information failed."
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "ERROR: Object in file '%1!' not recognized as a definition."
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "FATAL ERROR: Attempting to retrieve result set information for object '%1!' failed.  All further copying canceled."
+
+2 = ZZZZZ, "FATAL ERROR: Attempting to bind result set data for object '%1!' to an internal program variable failed.  All further copying canceled."
+
+3 = ZZZZZ, "FATAL ERROR: Attempting to fetch row result data for object '%1!' failed.  All further copying canceled."
+
+4 = ZZZZZ, "ERROR: Attempting to fetch row result data for object '%1!' failed.  Copying canceled for this object."
+
+5 = ZZZZZ, "ERROR: SQL command result data for object '%1!' canceled.  Copying canceled for this object."
+
+6 = ZZZZZ, "ERROR: Attempting to fetch row result data for object '%1!' generated unexpected return code '%2!'.  Copying canceled for this object."
+
+7 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data for object '%1!' generated unexpected result type '%2!'.  Copying canceled for this object."
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "FATAL ERROR: The server encountered an error when attempting to access database '%1!'."
+
+2 = ZZZZZ, "FATAL ERROR: Attempting to access database '%1!' generated unexpected result type '%2!'."
+
+3 = ZZZZZ, "FATAL ERROR: Attempting to set up SQL command result data failed.  Unable to access database '%1!'."
+
+4 = ZZZZZ, "FATAL ERROR: SQL command result data canceled.  Unable to access database '%1!'."
+
+5 = ZZZZZ, "FATAL ERROR: Attempting to access database '%1!' generated unexpected return code '%2!'."
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "ERROR: The server encountered an error when attempting to execute SQL contained within file '%1!'.  Copying continuing using next object in file."
+
+2 = ZZZZZ, "ERROR: Attempting to execute SQL contained within file '%1!' generated unexpected result type '%2!'.  Copying canceled for this object."
+
+3 = ZZZZZ, "ERROR: Attempting to execute SQL contained within file '%1!' generated unexpected return code '%2!'.  Copying canceled for this object."
+
+4 = ZZZZZ, "FATAL ERROR: Attempting to retrieve a description of the result from executing a stored procedure failed.  All further copying canceled."
+
+5 = ZZZZZ, "FATAL ERROR: Attempting to bind the result from executing a stored procedure to an internal program variable failed.  All further copying canceled."
+
+6 = ZZZZZ, "ERROR: A stored procedure generated an unexpected status result.  Stored procedure execution canceled."
+
+7 = ZZZZZ, "FATAL ERROR: Attempting to fetch the result from executing a stored procedure failed.  All further copying canceled."
+
+8 = ZZZZZ, "ERROR: Attempting to fetch the result from executing a stored procedure failed.  Stored procedure execution canceled."
+
+9 = ZZZZZ, "ERROR: SQL command result data canceled.  Stored procedure execution canceled."
+
+10 = ZZZZZ, "ERROR: Attempting to fetch the result from executing a stored procedure generated unexpected return code '%1!'.  Stored procedure execution canceled."
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "FATAL ERROR: The server encountered an error when attempting to retrieve data from database '%1!'s syscomments table."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "ERROR: Object '%1!' was not found in database '%2!'."
+
+2 = ZZZZZ, "ERROR: The server encountered an error when attempting to retrieve data from database '%1!'s sysobjects table.  Copying canceled for object '%2!'."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "ERROR: Definition of object '%1!' was not found in database '%2!'."
+
+2 = ZZZZZ, "ERROR: The server encountered an error when attempting to retrieve data from database '%1!'s syscomments table.  Copying canceled for object '%2!'."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "ERROR: The server encountered an error when attempting to retrieve data from database '%1!'s sysobjects table.  Copying canceled for object '%2!'."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "ERROR: The server encountered an error when attempting to retrieve data from database '%1!'s syscomments table.  Copying canceled for object '%2!'."
+
+2 = ZZZZZ, "FATAL ERROR: Attempting to read object '%1!'s SQL definition statement from database '%1!'s syscomments table failed.  All further copying canceled."
+
+3 = ZZZZZ, "FATAL ERROR: Attempting to write to file '%1!' has generated an end-of-file error; check available disk space.  All further copying canceled."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "ERROR: Attempting to exit Client-Library failed."
+
+2 = ZZZZZ, "ERROR: Attempting to deallocate CS-Library command structure failed."
+
+3 = ZZZZZ, "ERROR: Attempting to retrieve properties associated with the client/server connection failed."
+
+4 = ZZZZZ, "ERROR: Attempting to close the client/server connection with server '%1!' failed."
+
+5 = ZZZZZ, "ERROR: Attempting to deallocate CS-Library connection structure failed."
+
+

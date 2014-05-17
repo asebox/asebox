@@ -1,0 +1,74 @@
+; 
+;
+; Message and Capabilities file for DirectCONNECT Informix Access Service.
+; Line comment is denoted by a semicolon or pound-sign in column 1
+;
+[copyright]
+copyright = "Sybase, Inc. Copyright 1997, &
+All Rights Reserved. Use, duplication, or disclosure by the &
+United States Government is subject to restrictions as set &
+forth in subparagraph (c) (1) (ii) of the Rights in Technical &
+Data and Computer Software clause at CFR 52.227-7013. &
+Sybase, Inc., 3665 Discovery Drive, Boulder, CO, USA 80303"
+
+[l10n]
+; Specifies the codeset of the message templates contained in this
+; otherwise ASCII file.
+TemplateCodeset = 850
+
+; ******************************************************************
+;      Informix Access Service Capabilities
+; ******************************************************************
+[Svclib Capabilities]
+{Configuration}
+Client Interaction = Properties that affect the behavior of all services.
+Logging = Properties that affect output to the log file.
+{ReadHistoricalLog}
+LogSvcLibStatistics = Aggregate statistics for a svclib during the logging period.
+
+[Service Capabilities]
+{Configuration}
+ACS Required = Properties that must have a value.
+Client Interaction = Properties that determine how the client interacts with &
+   DirectCONNECT.
+Target Interaction = Properties that affect target behavior.
+Catalog Stored Procedures = Properties that affect the behavior of CSPs.
+Datatype Conversion = Properties that affect datatype conversion between &
+   the target and the client.
+Data Conversion Errors = Properties that determine how  conversion errors &
+   are handled.
+Transfer = Properties that affect the behavior of transfer.
+Logging = Properties that affect output to the log file.
+Tracing = Properties that affect output to the trace file.
+
+{Start/Stop}
+
+{SubscribeLiveLog}
+LogChildProcess = Log information from the child process.
+LogConnectionStatistics = Aggregate statistics for the life of a connection.
+LogReceivedSQL = SQL as received from the client.
+LogRequestStatistics = Statistics for a single request.
+LogServiceStatistics = Aggregate statistics for a service during the logging period.
+LogTargetActivity = Log interactions with the target DBMS.
+LogTransferStatistics = Summary statistics for a single transfer request.
+LogTransformedSQL = SQL transformed by DirectCONNECT as sent to the target DBMS.
+
+{ReadHistoricalLog}
+LogChildProcess = Log information from the child process.
+LogConnectionStatistics = Aggregate statistics for the life of a connection.
+LogReceivedSQL = SQL as received from the client.
+LogRequestStatistics = Statistics for a single request.
+LogServiceStatistics = Aggregate statistics for a service during the logging period.
+LogTargetActivity = Log interactions with the target DBMS.
+LogTransferStatistics = Summary statistics for a single transfer request.
+LogTransformedSQL = SQL transformed by DirectCONNECT as sent to the target DBMS.
+
+{Text Objects}
+ApplicationValidation = Backward compatible client login validation.
+SqlInformation = Results from sp_sqlgetinfo.
+
+{Heartbeat}
+
+
+; End of inf.loc
+

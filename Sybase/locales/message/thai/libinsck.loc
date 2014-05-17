@@ -1,0 +1,65 @@
+
+; comment character is a semicolon.
+;
+; Sccsid %Z% %M% %I% %G%
+
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=english
+
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc. \
+All rights reserved. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[libinsck]
+
+1 = IPDE_SETSCKPROC, "ไม่สามารถตั้งค่าหมายเลขโปรเซสของสัญญาณซ็อกเก็ต - errno %1!"
+
+2 = IPDE_SETSCKBLK, "ไม่สามารถตั้งค่าซ็อกเก็ตเป็นแบบไม่บล็อก - errno %1!"
+
+3 = IPDE_INSUFFDS, "รายละเอียดของไฟล์ไม่เพียงพอ - errno %1!"
+
+4 = IPDE_CLOSEFAIL, "ซ็อกเก็ตปิดล้มเหลว - errno %1!"
+
+5 = IPDE_PARSEFAIL, "ไม่สามารถพาร์สข้อมูลแอดเดรส"
+
+6 = IPDE_NORESOLVE, "ไม่สามารถแก้ปัญหาชื่อโฮสต์ - errno %1!"
+
+7 = IPDE_CONNECTFAIL, "ซ็อกเก็ตเชื่อมต่อล้มเหลว - errno %1!"
+
+8 = IPDE_SCKOPTFAIL, "ไม่สามารถตั้งค่าตัวเลือกซ็อกเก็ต - errno %1!"
+
+9 = IPDE_BINDFAIL, "ซ็อกเก็ตไบนด์ล้มเหลว - errno %1!"
+
+10 = IPDE_LISTENFAIL, "ซ็อกเก็ตฟังล้มเหลว - errno %1!"
+
+11 = IPDE_RECVFAIL, "ซ็อกเก็ต recv ล้มเหลว - errno %1!"
+
+12 = IPDE_OOBREADFAIL, "ซ็อกเก็ต recv นอกแบนด์ล้มเหลว - errno %1!"
+
+13 = IPDE_UNSUP, " เรียกการทำงานของไดรฟ์เวอร์ที่ไม่สนับสนุน"
+
+14 = IPDE_SOCKFAIL, "ไม่สามารถสร้างซ็อกเก็ตใหม่ - errno %1!"
+
+15 = IPDE_SENDFAIL, "ซ็อกเก็ตส่งล้มเหลว - errno %1!"
+
+16 = IPDE_GETOPTFAIL, "ไม่สามารถเรียกออปชันของซ็อกเก็ต - errno %1!"
+
+; end of insock error strings
+;
+

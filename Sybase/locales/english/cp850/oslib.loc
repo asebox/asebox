@@ -1,0 +1,788 @@
+; comment character is semicolon.
+
+; "oslib.loc" - Localization file for Open Server
+;
+; Sccsid @(#) oslib.loc 1.3 10/19/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1993 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Open Server Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[oserrors]
+
+0 = SRV_EOPTION, "Unknown option '%1!'"
+
+1 = SRV_ENOPROC, "No free server processes"
+
+2 = SRV_ELIVEPROC, "Attempt to drop client server process '%1!' with active i/o"
+
+3 = SRV_ENOEVENT, "Unknown event '%1!' requested for process '%2!'"
+
+4 = SRV_EBADEVENT, "Client process '%1!' can't raise event '%2!'"
+
+5 = SRV_EBADUEVENT, "Unknown event '%1!' in %2!"
+
+6 = SRV_EIOBADBUF, "Corrupt send buffer, sleft < 0 (%1!)"
+
+7 = SRV_EIOBADTYPE, "Unknown i/o operation (%1!) requested in srv__buf_io()"
+
+8 = SRV_EMEMORY, "Memory allocation for '%1!' bytes failed in '%2!' for '%3!' allocation"
+
+9 = SRV_ENOPPROC, "Can't create server process for '%1!' process"
+
+10 = SRV_EEINITNET, "Initialization failed for network '%1!' on machine '%2!'"
+
+11 = SRV_EIFILE, "Bad interfaces file"
+
+12 = SRV_EFOPEN, "Can't open %1! file '%2!'"
+
+13 = SRV_ESRVNAME, "Could not find server name '%1!' in interfaces file"
+
+14 = SRV_EHOMEDIR, "Could not find the user's (%1!) home directory"
+
+15 = SRV_EPROCTYPE, "Unknown process type '%1!' in routine '%2!'"
+
+16 = SRV_ENOMSGS, "No free messages."
+
+17 = SRV_EMSGPROC, "%1! process '%2!' for message from process '%3!' is not allocated"
+
+18 = SRV_EMSGADDRESS, "Bad message %1! process '%2!' for message from process '%3!'"
+
+19 = SRV_EMSGTYPE, "Bad message type received by %1!"
+
+20 = SRV_EBADIOEVENT, "Bad event type '%1!' from srv__runnet() for client '%2!'"
+
+21 = SRV_EIOERROR, "I/O error '%1!' (%2!) for client process '%3!'"
+
+22 = SRV_EQPROC, "Bad server process id '%1!' in %2!"
+
+23 = SRV_EQFREE, "No free run queue structures"
+
+24 = SRV_ESRVEVENT, "Non-event message received by client process spid %1!"
+
+25 = SRV_ECLNTMSG, "Unknown message type '%1!' given in %2!"
+
+26 = SRV_ESOCKET, "Can't create listen socket"
+
+27 = SRV_EBIND, "Can't bind socket"
+
+28 = SRV_EGETHOST, "Can't find host '%1!'"
+
+29 = SRV_ELISTEN, "Failed to start any network listeners"
+
+30 = SRV_ECNTSOCKET, "Can't connect client socket"
+
+31 = SRV_EPROCDEAD, "Server process '%1!' is not active in '%2!'"
+
+32 = SRV_EBADINDEX, "Bad STRCHR (%1!) passed to '%2!'"
+
+33 = SRV_ENOCONVERT, "Can't convert from type '%1!' to type '%2!'"
+
+34 = SRV_EMAXNAME, "%1! names may not be longer than %2! bytes (%3! given)"
+
+35 = SRV_ECUFLOW, "Conversion from type '%1!' to type '%2!' resulted in underflow"
+
+36 = SRV_ECOFLOW, "Conversion from type '%1!' to type '%2!' resulted in overflow"
+
+37 = SRV_ECBINOFLOW, "Conversion to a binary variable resulted in overflow"
+
+38 = SRV_ECPREC, "Conversion from type '%1!' to type '%2!' resulted in loss of precision"
+
+39 = SRV_ECSYNTAX, "Conversion from type '%1!' to type '%2!' stopped by syntax error in source field"
+
+40 = SRV_EBADLEN, "Illegal integer column length '%1!'.  Legal values are 1, 2, and 4 bytes"
+
+41 = SRV_EUVDT, "Unknown variable-length datatype '%1!' encountered"
+
+42 = SRV_EUFDT, "Unknown fixed-length datatype '%1!' encountered"
+
+43 = SRV_ENOROWDESC, "Attempted to send row without row description"
+
+44 = SRV_ENOTYPE, "The %1! datatype '%2!' is not a known datatype"
+
+45 = SRV_ENOITEM, "%1!: There are no dataitems for %2!"
+
+46 = SRV_ESTATSTATE, "%1!: results state error - %2! already sent to client"
+
+47 = SRV_ENOTRACE, "No such trace flag (%1!)"
+
+48 = SRV_ENORPC, "There is no current remote procedure call"
+
+49 = SRV_ENOITEMNO, "%1!: There is no dataitem #%2! for %3!"
+
+50 = SRV_ENORETPARAM, "Rpc parameter #%1! is not a return parameter"
+
+51 = SRV_EBADPARMLEN, "Illegal length '%1!' for type '%2!'"
+
+52 = SRV_EBADPARAMMAXLEN, "Actual length '%1!' cannot be greater than maximum length '%2!'"
+
+53 = SRV_ESYMBOL, "Unknown %1! '%2!' passed to srv_symbol()"
+
+54 = SRV_ESRVTYPE, "No such server field (%1!)"
+
+55 = SRV_ESRVPROCTYPE, "No such server process field (%1!)"
+
+56 = SRV_ENULLPTR, "NULL %1! pointer passed to %2!"
+
+57 = SRV_ETDSVERSION, "Down level TDS -- attempt to send status, ENVCHANGE or parameters ignored"
+
+58 = SRV_EOOB, "Could not install network ATTENTION/OOB handler -- fatal error"
+
+59 = SRV_ENO_OOB, "TCP Select found no sockets had sent SIGURG -- SIGURG ignored"
+
+60 = SRV_ESIGURG_SETUP, "TCP socket SIGURG setup failed due to condition %1!"
+
+61 = SRV_ENOTSITE, "Thread %1! is not a site-handler. Type = %2!, function = %3!"
+
+62 = SRV_EBADCONFIGOPT, "Bad configuration option value (%1!) for option %2!"
+
+63 = SRV_EOBJSYNTAX, "Object name syntax error. Use site.db.owner.object;1"
+
+64 = SRV_ENETTERM, "Network termination failed"
+
+65 = SRV_EBADSTATUS, "%1!: illegal status - %2!"
+
+66 = SRV_ERETVALRPC, "The current client command is an rpc -- use srv__paramset() to return parameters"
+
+67 = SRV_EBADTYPELEN, "Illegal length (%1!) for datatype '%2!'"
+
+68 = SRV_EPROCFREE, "Attempt to drop a thread that is currently free"
+
+69 = SRV_EINVCHAN, "Read message for an invalid channel in %1!"
+
+70 = SRV_ENOLOGFILE, "No server log file open"
+
+71 = SRV_ECOLNUMBER, "Column number must be greater than %1!"
+
+72 = SRV_EDUPITEM,  "%1!: Item no '%2!' has already been described"
+
+73 = SRV_EINCDESC, "Description is not complete for %1! %2! for %3!"
+
+74 = SRV_EMAXUEVENT, "The configured maximum number of user events (%1!) have already been defined"
+
+75 = SRV_EEVENTTYPE, "Bad event type (%1!)"
+
+76 = SRV_EINATTN, "Can't call %1! from an attention-handler"
+
+77 = SRV_EINCONNECT, "Can't call %1! from a SRV_CONNECT handler"
+
+78 = SRV_EBLOCKREAD, "Received blocking read from site-handler '%1!'"
+
+79 = SRV_ESIGIO, "Could not install network IO INTERRUPT handler -- fatal error"
+
+80 = SRV_EDEFQFULL, "Deferred wakeup queue is full.  Increase its size using SRV_S_DEFQUEUESIZE server property"
+
+81 = SRV_EFLAGIGN, "Warning: %1! for signal %2! ignored because a Sybase installed handler exists for this signal"
+
+82 = SRV_ESIGSUPERCEDE, "The signal handler for %1! will be executed by a Sybase installed handler for the same signal"
+
+83 = SRV_EDEFUNUSED, "Unused error define"
+
+84 = SRV_EBADPROCTYPE, "Unknown task type %1! encountered in %2! while dropping server"
+
+85 = SRV_EDNAALLFAIL, "Could not allocate memory for network control structure for DECNET"
+
+86 = SRV_EDNACRELSNMBX, "Failed to create mailbox for DECNET listener"
+
+87 = SRV_EDNANETASSIGN, "Assign to _NET failed for DECNET.  Cannot start network"
+
+88 = SRV_EDNADUPOBJ, "Port name %1! already in use for DECNET. Cannot start network"
+
+89 = SRV_EDNADECLARE, "Declare object for object %1! failed for DECNET. Cannot start network"
+
+90 = SRV_EDNALISTEN, "Read failed for listen on DECNET"
+
+91 = SRV_EDNAASSIGN, "Failed to assign a new channel for a client connection"
+
+92 = SRV_EDNAACCESS, "Failed to complete new client connection"
+
+93 = SRV_EDNANOLINK, "No link table entries available for client"
+
+94 = SRV_ENOTSERVICE, "Attempt to drop non-service process %1!"
+
+95 = SRV_EEVENTNOSERVICE, "Attempt to send non-user-defined-event from process %1! to service process %2!"
+
+96 = SRV_EDEFHANDLER, "Error processing deferred event notice for process %1!"
+
+97 = SRV_ERPCINCONSIST, "Rpc parameters must all either be passed by name or positionally"
+
+98 = SRV_ECHANSETUP, "A subchannel setup failed because a process could not be allocated"
+
+99 = SRV_ENOSCHEDPROC, "Couldn't create thread for the scheduler"
+
+100 = SRV_EDEFERFAIL, "Deferred interrupt handler message queue failure in srv__rundef(), status = %1!"
+
+101 = SRV_EDEFERINVMSG, "Invalid message received by deferred interrupt handler in srv__rundef(). type = %1!, from = %2!"
+
+102 = SRV_EINVEVENT, "Invalid event type received by a site handler"
+
+103 = SRV_EINVSTACK, "Invalid stack size, %1!, passed to srv_spawn()"
+
+104 = SRV_ESTACKALLOC, "Unable to allocate stack, size %1!, for new thread"
+
+105 = SRV_EINVPRIORITY, "Invalid priority, %1!, passed to %2!. Valid priorities are in the range from %3! to %4!"
+
+106 = SRV_EALLOCFAIL, "Failed to allocate memory for free process queue"
+
+107 = SRV_ENOPRACK, "Unable to allocate message for protocol acknowledge"
+
+108 = SRV_ENULLPARAM, "%1! was called with a NULL %2! parameter"
+
+109 = SRV_EPMSTAT, "%1! may only be called after %2! has returned succesfully"
+
+110 = SRV_EBADPARAM, "%1! was called with a bad %2! parameter"
+
+111 = SRV_EPNOTCLIENT, "SRV_PROC passed to %1! is not a Client thread"
+
+112 = SRV_EOBJNAME, "Invalid object name found in %1!"
+
+113 = SRV_EOBJID, "Invalid object id found in %1!"
+
+114 = SRV_ELOCKMODE, "Invalid lock mode found in %1!"
+
+115 = SRV_ENOSPAWN, "Could not start thread"
+
+116 = SRV_EINRESTART, "Tried to restart thread %1! which was not stopped"
+
+117 = SRV_EINSTOP, "Tried to stop thread %1! which was executing"
+
+118 = SRV_ENOTOWNER, "Tried to a unlock a mutex that is not owned by thread %1!"
+
+119 = SRV_EPRNUM, "Too many parameters for procedure %1! were received"
+
+120 = SRV_EPARAMNAME, "Must give name for parameter %1! for procedure %2!, once names have been used for other parameters"
+
+121 = SRV_EPTYPE, "Got bad datatype for parameter %1! for procedure %2!"
+
+122 = SRV_EPUNREGNOPROC, "Attempted to unregister unknown procedure %1!"
+
+123 = SRV_EPROCNOTREG, "Attempted to execute procedure %1!, which was not registered"
+
+124 = SRV_EPEXISTS, "Cannot create %1! %2! because it already exists"
+
+125 = SRV_EPNOPROC, "Requested notification for unknown procedure %1!"
+
+126 = SRV_EPNONOTICEREQ, "Client does not have a notification request for procedure %1!"
+
+127 = SRV_EPNOSRVPROC, "Could not allocate a SRV_PROC to register system procedures"
+
+128 = SRV_EBUFFSIZE, "Buffer size insufficient to hold %1! value in procedure %2!"
+
+129 = SRV_EPNOPROCEX, "Cannot cancel notification request for procedure %1! because this procedure does not exist"
+
+130 = SRV_ENEEDPARAM, "Procedure %1! expects parameter %2!, which was not supplied"
+
+131 = SRV_EUNKNOWNPARAM, "The named parameter %1! does not exist for registered procedure %2!"
+
+132 = SRV_ENOLANG, "There is no current language command"
+
+133 = SRV_EMAXCONNECT, "Configuration of %1! connections has been exceeded, connection rejected"
+
+134 = SRV_EPCALLBACK, "The callback routine for %1! aborted the current operation"
+
+135 = SRV_EMAXPARAM, "The maximum number of parameters for procedure %1! have already been defined"
+
+136 = SRV_EBADFLAG, "A bad flag value was passed to routine %1!"
+
+137 = SRV_EMAXREMSITES, "The maximum number of site handlers, %1! has been exceeded"
+
+138 = SRV_EPNOTIFYEXISTS, "This client already has a notification request for procedure %1!"
+
+139 = SRV_EMAXREMCONNS, "The maximum number of remote channels, %1! has been exceeded"
+
+140 = SRV_EMAXRPC, "Maximum RPC execution stack depth has already been reached"
+
+141 = SRV_EPROCNULL, "NULL Server process passed to '%1!'"
+
+142 = SRV_EPROCINVALID, "Server process address 0x%1! not in pool in '%2!'"
+
+143 = SRV_EPROCBOUND, "Server process address 0x%1! is on bad boundary in '%2!'"
+
+144 = SRV_EPROCNOTUSED, "Server process '%1!' is not allocated in '%2!'"
+
+145 = SRV_EPROCIODEAD, "Server process '%1!' has invalid I/O in '%2!'"
+
+146 = SRV_ECONSRVFAIL, "The connection service process has failed"
+
+147 = SRV_ENONETBUF, "Failed to allocate a network buffer for thread '%1!'"
+
+148 = SRV_ENOTSUPPORTED, "'%1!' is not a valid capability value"
+
+149 = SRV_ECORRUPT, "Fatal error: Internal %1! structure is corrupted in %2!"
+
+150 = SRV_ELOWSTK, "Thread '%1!' is in danger of exceeding allotted stack space of %2! bytes"
+
+151 = SRV_EBADSTK, "Thread '%1!' has overflowed or corrupted its stack -- aborting"
+
+152 = SRV_EIO, "Fatal error: Error detected during network I/O, error '%1!'"
+
+153 = SRV_EDISC, "Client disconnected during network read"
+
+154 = SRV_ENETCLOSE, "Error closing network connection, error '%1!'"
+
+155 = SRV_ENODEV, "Fatal error: Maximum number of file descriptors exceeded"
+
+156 = SRV_ECMD, "Invalid command argument (0x%1!)"
+
+157 = SRV_ETYPE, "Invalid type argument (0x%1!)"
+
+158 = SRV_EBADCOUNT, "%1!: Invalid count (%2!) in CS_DATAFMT"
+
+159 = SRV_EBADSTAT, "%1!: Invalid status (0x%2!) in CS_DATAFMT"
+
+160 = SRV_EBADFORMAT, "%1!: Invalid format (0x%2!) in CS_DATAFMT"
+
+161 = SRV_ENOMSG, "Must be in SRV_MSG event handler for CS_GET"
+
+162 = SRV_ENOBIND, "%1!: Bind was not completed for item number(%2!) for %3!"
+
+163 = SRV_ETRUNC, "Data was truncated from (%1!) to (%2!)"
+
+164 = SRV_ENULLADDR, "Bind was attempted with NULL program variable"
+
+165 = SRV_ESTATE, "%1!: %2! for %3! not valid"
+
+166 = SRV_ELEN, "%1!: Invalid length for variable, oldvallen(%2!), newvallen(%3!)"
+
+167 = SRV_EDUPROW, "Row '%1!' has already been described"
+
+168 = SRV_ENOROW, "%1!: There is no compute row '%2!' for the current thread"
+
+169 = SRV_ENOAGG, "%1!: There is no aggregate operator with id# '%2!'"
+
+170 = SRV_EDUPTAB, "%1!: Table '%2!' has already been described"
+
+171 = SRV_ENOTAB, "%1!: Table '%2!' has not been described"
+
+172 = SRV_EBADROW, "%1!: Bad compute-id '%2!'"
+
+173 = SRV_EBADCOMPUTBY, "%1!: The compute-by list does not match the order-by list"
+
+174 = SRV_ENOCOMPUTEBY, "%1!: There is no compute-by list in the current statement"
+
+175 = SRV_EBADNUMBYLIST, "%1!: Bad value '%2!' for number of compute-by columns"
+
+176 = SRV_ENOORDERBY, "%1!: There is no order-by list in the current statement"
+
+177 = SRV_EBADNUMCOLS, "%1!: Bad value '%2!' for number of order-by columns"
+
+178 = SRV_EBADTABNUM, "%1!: Bad table number '%2!'"
+
+179 = SRV_EBADNAMELEN, "%1!: Bad name length value '%2!'"
+
+180 = SRV_EBADCTRLLEN, "%1!: Bad control-format length value '%2!'"
+
+181 = SRV_ENULLNAME, "%1!: '%2!' argument cannot be null"
+
+182 = SRV_EBADTABCOL, "%1!: column '%2!' must be linked with a table via srv_tabcolname()"
+
+183 = SRV_EUNSUPPORTED, "%1!: Unsupported option(%2!) for %3!"
+
+184 = SRV_ENOCHARSET, "Unknown character set %1! in function '%2!'"
+
+185 = SRV_ECSRFILE, "Bad format in csr file '%1!' ('%2!' line)"
+
+186 = SRV_ECHARATTR, "Error building character attribute structure for character set '%1!'"
+
+187 = SRV_ENOTHEX, "Expected hex digit, got %1! in function '%2!'"
+
+188 = SRV_EARG, "Argument %1! %2! incorrect in function '%3!'"
+
+189 = SRV_ECSNOCVT, "Can't convert between server character set '%1!' and client character set '%2!'"
+
+190 = SRV_ECSCVT, "Character set conversion %1! occurred in '%2!'"
+
+191 = SRV_ENORETURN, "Unknown return (%1!) in function '%2!'"
+
+192 = SRV_ECSLOGREC, "%1! character set conversion error in login record"
+
+193 = SRV_ECSMISMATCH, "'%1!' is not a '%2!'"
+
+194 = SRV_ECSLOAD, "Can't load definition file for %1! '%2!'"
+
+195 = SRV_EBADNULL, "CS_CANBENULL set for invalid data type(%1!)"
+
+196 = SRV_ECHCONFIG, "Can't change configuration option '%1!' after srv_init()"
+
+197 = SRV_ELATEORDER, "%1! must be called before srv_alt_header() if a compute-by list is present"
+
+198 = SRV_EBADITEM, "Invalid item number(%1!)"
+
+199 = SRV_ENOTINBULK, "%1!: must be in SRV_BULK handler to get property %2!"
+
+200 = SRV_EBADIOTYPE, "%1!: invalid transfer type '%2!'"
+
+201 = SRV_EGTONECOL, "%1! can only be called for single-column rows"
+
+202 = SRV_ENONELEFT, "%1!: Nothing left to %2!"
+
+203 = SRV_EWRONGTYPE, "%1!: Column must be of type TEXT or IMAGE"
+
+204 = SRV_EBADNUMVAL, "%1!: Bad value %2! for structure member '%3!'"
+
+205 = SRV_EDUPPARAM, "%1!: Parameter '%2!' has already been described"
+
+206 = SRV_ERPCINC, "RPC parameter description is not complete -- %1! %2! not described"
+
+207 = SRV_EBADROWLEN, "%1!: rows read in may not exceed %2! bytes"
+
+208 = SRV_EBADALTCOLTYPE, "%1!: compute row columns cannot be of type TEXT or IMAGE"
+
+209 = SRV_EIOTYPENOTSET, "%1!: srvp_iotype field of SRV_PROC is uninitialized"
+
+210 = SRV_EBOUND, "%1!: column %2! should not be bound"
+
+211 = SRV_ETXTLENREAD, "%1!: text/image length for the current column has already been read from the client"
+
+212 = SRV_ETXTLENNOTREAD, "%1!: text/image length for the current column has not yet been read from the client"
+
+213 = SRV_ENOTIMESTAMP, "Text or image timestamp not defined"
+
+214 = SRV_ECSFALLBACK, "No character set definition file available -- setting server's character set to '%1!'"
+
+215 = SRV_ELOGINLEN, "Out-of-range length (%1!) for login field '%2!'"
+
+216 = SRV_EBADCOLTYPE, "%1! cannot retrieve TEXT or IMAGE column values"
+
+217 = SRV_ENEEDROW, "%1!: blk_getrow() must be called to retrieve row information"
+
+218 = SRV_ENEEDHANDLE, "%1!: blk_exec() must be called to initialize bulk copy operation"
+
+219 = SRV_EINTERRUPTED, "A call to %1! was interrupted by an attention"
+
+220 = SRV_ESTATUS, "%1!: invalid status argument(0x%2!)"
+
+221 = SRV_EFLUSH, "%1!: SRV_DONE_FLUSH cannot be set with SRV_DONE_FINAL"
+
+222 = SRV_EFLUSHCON, "%1!: SRV_DONE_FLUSH cannot be executed from a SRV_CONNECT event"
+
+223 = SRV_EMORE, "%1!: SRV_DONE_MORE cannot be set with SRV_DONE_FINAL"
+
+224 = SRV_EMORECON, "%1!: SRV_DONE_MORE cannot be executed from a SRV_CONNECT event"
+
+225 = SRV_ECONTEXT, "%1!: Invalid context"
+
+226 = SRV_EVERSION, "%1!: Invalid version number(%1!)"
+
+227 = SRV_EBADTDS, "Unknown %1! TDS stream received by spid %2!"
+
+228 = SRV_EINOPTION, "%1!: can only be called in SRV_OPTION handler."
+
+229 = SRV_EWRONGTDSVER, "%1!: Wrong TDS version (%2!) in %3!"
+
+230 = SRV_EWRONGOPTCMD, "%1!: Unknown option cmd from client in func %2!"
+
+231 = SRV_EWRONGOPT, "%1!: Unknown option from client in func %2!"
+
+232 = SRV_ENODATA, "%1!: No data left for the current token stream"
+
+233 = SRV_ENULLARG, "Argument %1! is NULL in function: %2!"
+
+234 = SRV_EINUSEREVENT, "Cannot call %1! in user defined event handler"
+
+235 = SRV_EBINDARG, "Invalid bind value (0x%1!) for column (%2!) in function: %3!"
+
+236 = SRV_ESTATECHK, "%1!:  State error (0x%2!)"
+
+237 = SRV_ENOVERSION, "%1!: Version not set with srv_version"
+
+238 = SRV_EBADRESULT, "%1!: Invalid result type(%2!) for event(%3!)"
+
+239 = SRV_ECONFAIL, "Connection service thread failed to sleep"
+
+240 = SRV_ENETFUNC, "Net-Library routine %1! failed in %2!"
+
+241 = SRV_EPROCFAIL, "Thread %1! failed to get new event"
+
+242 = SRV_ECLOSEFAIL, "Failed to close a client connection"
+
+243 = SRV_EREADFAIL, "Read operation for process %1! failed"
+
+244 = SRV_EWRITEFAIL, "Write operation for process %1! failed"
+
+245 = SRV_EBLOCK, "Failed to block interrupts"
+
+246 = SRV_EUNBLOCK, "Failed to unblock interrupts"
+
+247 = SRV_ECHANNEL, "Site handler spid %1! failed to setup a new channel"
+
+248 = SRV_EPOLL, "Error in %1! - file descriptor %2! is no longer active"
+
+249 = SRV_EGLOBAL, "%1!: Could not access common library global data"
+
+250 = SRV_EIOPOST, "%1!: Could not run async manager"
+
+251 = SRV_EBADLENARG, "%1! has invalid length value (%2!) in function: %3!"
+
+252 = SRV_EPROCPROPS, "Invalid thread property (%1!) in %2!"
+
+253 = SRV_EINSERVTHREAD,"%1!: property %2! not valid for service thread"
+
+254 = SRV_EFROMDISCONNECT, "%1!: %2! property is valid only in SRV_DISCONNECT handle"
+
+255 = SRV_ESMALLBUF, "%1!: buffer size smaller (%2!) for property %3!"
+
+256 = SRV_ELARGBUF, "%1!: buffer size may not exceed (%2!) bytes for %3!"
+
+257 = SRV_EFROMCONNECT, "%1!: should be in connect handler to set property %2!"
+
+258 = SRV_EWRONGTDSSET, "%1!: Can't set a TDS level (%2!) > current level (%3!)"
+
+259 = SRV_EWRONGLANG, "%1!: (%2!) invalid for property: %3!"
+
+260 = SRV_ENOPROPSET, "%1!: Property - %2! cannot be set/cleared"
+
+261 = SRV_ESRVPROPS, "Invalid server property (%1!) in %2!"
+
+262 = SRV_EPROPCFG, "%1!: Cannot configure server property after srv_init()"
+
+263 = SRV_EBADINTPROP, "%1!: Bad value (%2!) for property %3!"
+
+264 = SRV_ECAPMASK, "%1!: invalid capability mask for %2!"
+
+265 = SRV_EPROPNOSUPPORT, "%1!: property: %2! not supported on this platform"
+
+266 = SRV_ENOPROPCLEAR, "%1!: Property: %2! cannot be cleared"
+
+267 = SRV_ENOPROPTDS, "%1!: property - %2! invalid for current tds version (%3!)"
+
+268 = SRV_ENOSERVNAME, "%1!: Cannot get property %2! before srv_init"
+
+269 = SRV_ENOFDONE, "Final DONE not sent by event handler"
+
+270 = SRV_EERROR, "%1!: SRV_DONE_FLUSH cannot be set with SRV_DONE_ERROR"
+
+271 = SRV_EENVDB, "Changed database context to '%1!'"
+
+272 = SRV_EENVLANG, "Changed language setting to '%1!'"
+
+273 = SRV_EENVCHAR, "Changed client character set setting to '%1!'"
+
+274 = SRV_ENOCUR, "%1!: no cursor with id %2! or name '%3!'"
+
+275 = SRV_ENOCUREVENT, "%1!: not in SRV_CURSOR event handler"
+
+276 = SRV_ENOCURPARAMS, "%1!: No cursor parameters present"
+
+277 = SRV_ENOCURPARAM, "%1!: No cursor parameter %2! present"
+
+278 = SRV_ENOCURUPCOLS, "%1!: No cursor update columns present"
+
+279 = SRV_ENOCURUPCOL, "%1!: No cursor update column %2! present"
+
+280 = SRV_EDUPCUR, "%1!: Cursor '%2!' has already been declared"
+
+281 = SRV_EBADCUR, "%1!: Invalid cursor descriptor"
+
+282 = SRV_ENOCURROWDESC, "%1!: No cursor row description present"
+
+283 = SRV_EROWCNT, "%1!: Cursor row fetch count %2! exceeded"
+
+284 = SRV_ENOCURSENT, "%1!: Cursor info must sent via srv_cursor_props() before sending DONE"
+
+285 = SRV_ECURSENT, "%1!: Cursor info was already sent via srv_cursor_props()"
+
+286 = SRV_ENOSENDCUR, "%1!: Error sending cursor info"
+
+287 = SRV_ENOKEY, "%1!: No key columns were described for the current cursor row"
+
+288 = SRV_ENOKEYCOL, "%1!: No key column %2! present"
+
+289 = SRV_ENODYN, "%1!: No dynamic SQL statement '%2!' present"
+
+290 = SRV_ENODYNEVENT, "%1!: not in SRV_DYNAMIC event handler"
+
+291 = SRV_ENODYNPARAMS, "%1!: No dynamic SQL parameters present"
+
+292 = SRV_ENODYNPARAM, "%1!: No dynamic SQL parameter %2! present"
+
+293 = SRV_EDUPDYN, "%1!: Dynamic SQL statement '%2!' has already been prepared"
+
+294 = SRV_EDYNINC, "%1!: Incomplete dynamic SQL parameter-list -- %2! parameters undescribed"
+
+295 = SRV_ENOSENDDYN, "%1!: Error sending dynamic SQL info"
+
+296 = SRV_ENODYNSENT, "%1!: Dynamic SQL statement info must be sent via srv_dynamic() before sending %2!"
+
+297 = SRV_EDYNSENT, "%1!: Dynamic SQL statement info was already sent via srv_dynamic()"
+
+298 = SRV_EBADCTXT, "%1!: Invalid call for this %2!"
+
+299 = SRV_EBADRESP, "%1!: Invalid response '%2!' to '%3!'"
+
+300 = SRV_EBADTOKEN, "Unknown token 0x%1! received from client"
+
+301 = SRV_ENOCONN, "%1!: not in SRV_CONNECT event handler"
+
+302 = SRV_EDUPCURID, "%1!: Cursor ID %2! has already been assigned"
+
+303 = SRV_ETEXTLEFT, "Text/image column %1! was not completely sent"
+
+304 = SRV_EBADALTID, "%1!: Compute-id %2! exceeded limit -- must be between 1 and %3!"
+
+305 = SRV_ENOTXTSENT, "%1!: NULL data sent for column %2! -- text pointer length was 0"
+
+306 = SRV_ENOTEXTPTR, "%1!: text or image pointer not defined"
+
+307 = SRV_ENOPARAMRPC, "%1!: there are no parameters for current rpc: %2!"
+
+308 = SRV_ECAPABILITY, "Invalid capability (%1!) in %2!"
+
+309 = SRV_ECAPTYPE, "Invalid capability type (%1!) in %2!"
+
+310 = SRV_EBADIO, "%1!: Fatal error while %2! for spid: %3!"
+
+311 = SRV_EBADMSGID, "%1!: has illegal value (%2!) for msgid"
+
+312 = SRV_ENOPARAMMSG, "%1!: there are no parameters for current MSG"
+
+313 = SRV_ENOPARAMNUM, "%1!: there is no parameter #%2! in the current %3!"
+
+314 = SRV_EPARAMINC, "%1!: parameter description is not complete -- %2! %3! not described"
+
+315 = SRV_EPROTERR, "%1!: Protocol error occurred: %2!"
+
+316 = SRV_ENOPARAMEED, "%1!: there are no parameters for current Error messsage"
+
+317 = SRV_ENODYNDESC, "%1!: Dynamic SQL data should be defined as CS_DESCIN (input parameter format) or CS_DESCOUT (output column format)"
+
+318 = SRV_ETXTLEFT, "%1!: There are still text or image columns left to be read via blk_gettext()"
+
+319 = SRV_EBLKINIT, "%1!: Failed sending table column information"
+
+320 = SRV_ENONATLOCALE, "Could not load localization information for locale %1!"
+
+321 = SRV_EBADLOCALE, "Invalid CS_LOCALE, or not allocated using Open Server CS_CONTEXT"
+
+322 = SRV_ENOLOCALE, "Could not allocate localization information for thread %1!"
+
+323 = SRV_ENOCHARLOCALE, "Could not load localization information for character set %1! language %2!"
+
+324 = SRV_EWRONGNULL, "%1!: data for column no: %2! cannot be NULL"
+
+325 = SRV_ENOINIT, "srv_init has not been called"
+
+326 = SRV_EWRONGARGLEN, "wrong argument length has been passed into %1! when %2!"
+
+327 = SRV_ENONEGPWD, "%1!: No remote server information was sent by the client"
+
+328 = SRV_EREADFAILED, "%1!: Failed waiting for client response"
+
+329 = SRV_EWRONGMSG, "%1!: Incorrect response type %2! received in response to %3!"
+
+330 = SRV_EINCPASSTHRU, "Pass-through is incomplete for spid: %1!"
+
+331 = SRV_ERECURSIVE, "It is a dummy error string. Should not be printed anywhere"
+
+332 = SRV_ENORESCAP, "%1!: %2! result types are being withheld or not supported"
+
+333 = SRV_EINSTART, "%1!: Cannot call in SRV_START handler" 
+
+334 = SRV_ESTARTEVENT, "SRV_START event aborted srv_run"
+
+335 = SRV_ENONULLIND, "%1!: Null indicator not set when datalength = 0 for itemno %2!"
+
+336 = SRV_EBADPREC,  "%1!: Bad value(%2!) for precision in CS_DATAFMT"
+
+337 = SRV_EBADSCALE, "%1!: Bad value(%2!) for scale in CS_DATAFMT"
+
+338 = SRV_ERUN, "Fatal error detected by srv_run"
+
+339 = SRV_ETAKECOROUTINE, "Could not take coroutine control back in %1!"
+
+340 = SRV_ERELEASECOROUTINE, "Could not release coroutine control in %1!"
+
+341 = SRV_ETAKEMUTEX, "Could not take system mutex in %1!"
+
+342 = SRV_ERELEASEMUTEX, "Could not release system mutex in %1!"
+
+;	End of generic error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VOS
+;	platforms.  Generic error numbers should be added above this
+;
+343 = SRV_EMSGSENDREPLY, "There was an error responding to spid %1!"
+
+344 = SRV_EFREEBUF, "A bad read buffer was freed"
+
+345 = SRV_ENOREADBUFFERS, "There are currently no network read buffers available"
+
+346 = SRV_EDEADCLIENT, "Received message for a dead or disconnected client"
+
+347 = SRV_EMSGSKIPPED, "A message for spid %1! was skipped"
+
+348 = SRV_ECLIENTACCEPT, "Could not send login acceptance message to procid %1!"
+
+349 = SRV_ECLIENTDISCONNECT, "Spid %1! has either died or been disconnected"
+
+350 = SRV_EQUEUECREATE, "Error creating direct queue %1!"
+
+351 = SRV_ESETTINGFASTQ, "Error setting a port with s$control()"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VMS
+;	platforms.
+;
+352 = SRV_ETCPALLFAIL, "Could not allocate memory for TCP/IP network control structure"
+
+353 = SRV_ETCPNETASSIGN, "Failed to assign TCP/IP device %1!"
+
+354 = SRV_ETCPSETKEEP, "Cannot set TCP/IP socket option SO_KEEPALIVE"
+
+355 = SRV_ETCPSETREUSE, "Cannot set TCP/IP socket option SO_REUSEADDR"
+
+356 = SRV_ETCPACCEPTW, "Error stating TCP/IP accept wait"
+
+357 = SRV_ETCPASSIGN, "Failed to assign a new channel for client connection"
+
+358 = SRV_ETCPNOLINK, "No link entries available for client connection"
+
+359 = SRV_ETCPATTNAST, "Failed to set attention ast on socket"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported NT
+;	platforms.
+;
+360 = SRV_EWAITFAIL, "WaitForSingleObject() failed in %1!"
+
+361 = SRV_ECREATEEVENT, "CreateEvent() failed in %1!"
+
+362 = SRV_ESETEVENT, "SetEvent() failed in %1!"
+
+363 = SRV_ESTARTCOROUTINE, "Could not start coroutine mode"
+
+364 = SRV_EENDCOROUTINE, "Could not end coroutine mode"
+
+365 = SRV_ECREATEMUTEX, "CreateMutex() failed in %1!"
+
+366 = SRV_EDELETEMUTEX, "Deleting a mutex failed in %1!"
+
+;
+;	NOTE:  The errors below are additional generic errors,
+;	added after the initial 10.0 release.
+;
+367 = SRV_EBADMSGFIELD, "%1!: %2! field of CS_SERVERMSG argument must be set to %3! for initial call"
+
+368 = SRV_ENOMSGSENT, "%1!: A message was initialized, but not completed"
+
+

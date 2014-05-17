@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDescriptor>
+  <metricName > BlkLocks </metricName>
+  <metricType > GENERIC </metricType>
+  <SQL > select spid,DBName=db_name(dbid),ObjName=object_name(id,dbid), lckName=V.name,page,row, class
+from master.dbo.syslocks L,
+    master.dbo.spt_values V
+where L.type = V.number
+and V.type='L'
+and V.name like '%-blk'
+ </SQL>
+  <key1 > spid </key1>
+  <key2 >  </key2>
+  <key3 >  </key3>
+  <filterCol >  </filterCol>
+  <delay > 5 </delay>
+  <colsCalcDiff >                 
+  </colsCalcDiff>
+  <createTables>
+     <T>
+  create table ?SERVERNAME?_BlkLocks (
+     Timestamp datetime not null,
+     Interval int not null,
+     spid int not null,
+     DBName varchar(30) null,
+     ObjName varchar(30) null,
+     lckName varchar(30) null,
+     page int null,
+     row int null,
+     class varchar(30) null
+  ) lock datapages
+     </T>
+  </createTables>
+
+  <createIndexes>
+     <I>
+  create index idx on ?SERVERNAME?_BlkLocks (Timestamp, Interval, spid)
+     </I>
+  </createIndexes>
+
+  <purge>
+    <P table="?SERVERNAME?_BlkLocks" >
+  delete ?SERVERNAME?_BlkLocks where Timestamp &lt; ?DATE?
+    </P>
+  </purge>
+
+</MetricDescriptor>

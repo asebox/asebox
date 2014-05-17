@@ -1,0 +1,76 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nlnwlink.loc 1.1 4/18/94
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=german
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Alle Rechte vorbehalten. \
+Use, duplication, or disclosure by the United States \
+Government is subject to restrictions as set forth in \
+subparagraph (c) (1) (ii) of the Rights in Technical \
+Data and Computer Software clause at CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlnwlink]
+
+1 = IPDE_EPDISCON, "Endpunkt kann nicht getrennt werden - Fehler: %1!"
+
+2 = IPDE_ACCEPT, "Fehler beim Akzeptieren der neuen Verbindung - Fehler: %1!"
+
+3 = IPDE_EPCLOSE, "Endpunkt kann nicht geschlossen werden - Fehler: %1!"
+
+4 = IPDE_PARSE, "Ungültige Syntax in Verbindungsinformation."
+
+5 = IPDE_EPCONNECT, "Verbindung zum Server fehlgeschlagen - Fehler: %1!"
+
+6 = IPDE_EPMODE, "Moduswechsel bei Pipe fehlgeschlagen - Fehler: %1!"
+
+7 = IPDE_EVENTOBJ, "Anlegen eines Ereignisobjekts fehlgeschlagen - Fehler: %1!"
+
+8 = IPDE_NPCREATE, "Anlegen einer Named Pipe fehlgeschlagen - Fehler: %1!"
+
+9 = IPDE_READ, "Lesen aus der Named Pipe fehlgeschlagen - Fehler: %1!"
+
+10 = IPDE_WRITE, "Schreiben in die Named Pipe fehlgeschlagen - Fehler: %1!"
+
+11 = IPDE_READOOB, "Fehler beim Lesen von OOB-Daten - Fehler: %1!"
+
+12 = IPDE_SOCKET, "Fehler beim Anlegen des Socket - Fehler: %1!"
+
+13 = IPDE_HOSTNAME, "Fehler beim Erkennen des Hostnamens - Fehler: %1!"
+
+14 = IPDE_EPBIND, "Fehler beim Binden an lokale Adresse - Fehler: %1!"
+
+15 = IPDE_EPLISTEN, "Fehler beim Anlegen eines Listening Point - Fehler: %1!"
+
+16 = IPDE_DRVINIT, "Fehler bei der Treiber-Initialisierung - Fehler: %1!"
+
+17 = IPDE_SAPSOCKET, "Fehler beim Öffnen des SAP-Socket - Fehler %1!"
+
+18 = IPDE_SAPBIND, "Fehler beim Binden des SAP-Socket - Fehler %1!"
+
+19 = IPDE_SAPTHREAD, "Fehler beim Start des SAP-Thread - Fehler %1!"
+
+20 = IPDE_SAPADDRGET, "Fehler beim Einlesen der Adreßinformation - Fehler %1!"
+
+21 = IPDE_SAPMUTEX,	"Fehler beim Anlegen des SAP-Mutex - Fehler %1!"
+
+22 = IPDE_SAPTIMEOUT, "Zeitsperre beim Warten auf SAP-Antwort - Fehler %1!"
+
+; end of insock error strings
+;
+
+

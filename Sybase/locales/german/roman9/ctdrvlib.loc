@@ -1,0 +1,122 @@
+; Sccsid @(#) ctdrvlib.loc 1.3 12/3/93
+; comment character is semicolon.
+; "ctdrvlib.loc" - Localization file for CTDRV-Lib.
+;
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvdefaults]
+
+1 = CS_DEF_MEMORY_ERRNUM, "Speicher konnte nicht zugewiesen werden."
+
+2 = CS_DEF_LAYER_ERRNUM, "ctdrvlib"
+
+3 = CS_DEF_ORIGIN_ERRNUM, "ctdrvlib"
+
+4 = CS_DEF_ERROR_ERRNUM, "Allgemeiner Fehler"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CTDRV-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvlayer]
+
+1 = E_LAYER_BLK, "ctdrv-Schicht"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvorigin]
+
+1 = E_ORG_USER, "Benutzerfehler"
+
+2 = E_ORG_INTRN, "Interner CTDRV-Library-Fehler"
+
+3 = E_ORG_CT, "CT-Library-Fehler"
+
+4 = E_ORG_ASYNC, "Async-Manager-Fehler"
+
+5 = E_ORG_COM, "Allgemeiner Library-Fehler"
+
+6 = E_ORG_MEM, "Speicherverwaltungs-Fehler"
+
+7 = E_ORG_SS, "SQL-Server-Fehler"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ctdrvapierror]
+
+0 = CTDRVE_OK, "ctdrv okay"
+
+1 = CTDRVE_MEM_F, "Speicherfehler in CtDrv-Routine."
+
+2 = CTDRVE_CTF, "Fehler in CtDrv-Routine bei Aufruf von CT_Lib Routine %1!."
+
+3 = CTDRVE_APIF, "Fehler in CtDrv-Routine bei Aufruf von %1!."
+
+4 = CTDRVE_NOCURSOR, "Kein Cursor auf diesen Anweisungs-Handle vorhanden."
+
+5 = CTDRVE_TRUNCATE, "Nicht alle Daten zurœckgeliefert. %1! abgeschnitten."
+
+6 = CTDRVE_DUPCUR, "Cursor mit dem Namen %1! bereits vorhanden."
+
+7 = CTDRVE_LENCUR, "Cursorname darf %1! Zeichen nicht œberschreiten."
+
+8 = CTDRVE_SEQ, "Funktion auﬁerhalb der Reihenfolge aufgerufen."
+
+9 = CTDRVE_ODBCTYPE, "Kann Eingabe-Datentyp CT_LIB nicht auf einen ODBC-Datentyp abbilden."
+
+10 = CTDRVE_CTTYPE, "Kann Eingabe-Datentyp ODBC nicht auf einen CT_LIB-Datentyp abbilden."
+
+11 = CTDRVE_CTDATYPE, "%1! : Kann Datentyp ct_lib nicht finden."
+
+12 = CTDRVE_ASYNC, "Funktion auﬁerhalb der Reihenfolge. Asynchrone Ausfœhrung einer anderen Funktion."
+
+13 = CTDRVE_BUFF, "Fehler in CtDrv-Routine beim Zuweisen des SQL-Puffers."
+
+14 = CTDRVE_SUBF, "Fehler in CtDrv-Routine beim Ausfœhren von SQL-Substitutionen."
+
+15 = CTDRVE_STMTNM, "Fehler in CtDrv-Routine beim Erstellen des Anweisungsnamens."
+
+16 = CTDRVE_CURNM, "Fehler in CtDrv-Routine beim Erstellen des Cursornamens."
+
+17 = CTDRVE_RESROW, "Fehler in CtDrv-Routine beim Einlesen der Zeilenergebnisse %1! und %2!."
+
+18 = CTDRVE_RESDCF, "Fehler in CtDrv-Routine beim Einlesen der Ergebnisse %1!."
+
+19 = CTDRVE_APIF2, "Fehler in CtDrv-Routine bei Aufruf der internen Funktion %1!."
+
+20 = CTDRVE_APIF3, "Fehler in interner Funktion %1! bei Aufruf der CT_LIB-Routine %2!."
+
+21 = CTDRVE_PARF, "Fehler in CtDrv-Routine beim Parsen von SQL."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

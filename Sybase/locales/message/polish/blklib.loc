@@ -1,0 +1,183 @@
+; comment character is semicolon.
+
+
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Sccsid @(#) blklib.loc 1.2 8/18/93
+;
+; For readability, this example is for a us_english localization file.
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States\
+	Government is subject to restrictions as set forth in\
+	subparagraph (c) (1) (ii) of the Rights in Technical\
+	Data and Computer Software clause at CFR 52.227-7013.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "nie można przydzielić pamięci."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "błąd ogólny"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "warstwa blk"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "błąd użytkownika"
+
+2 = ZZZZZ, "błąd wewnętrzny biblioteki BLK"
+
+3 = ZZZZZ, "błąd biblioteki CT"
+
+4 = ZZZZZ, "błąd menedżera asynchronicznego"
+
+5 = ZZZZZ, "błąd biblioteki wspólnej"
+
+6 = ZZZZZ, "błąd zarządzania pamięcią"
+
+7 = ZZZZZ, "błąd SQL Server"
+
+8 = ZZZZZ, "Błąd formatu danych klienta"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk prawidłowe"
+
+1 = ZZZZZ, "Nie można wywołać interfejsu API %1! z tego stanu: %2!"
+
+2 = ZZZZZ, "Interfejs API %1! jest dozwolony tylko dla operacji kopiowania zbiorczego z parametrem IN"
+
+3 = ZZZZZ, "Wywołanie interfejsu API %1! z wywołania zwrotnego nie jest dozwolone (stan = %2!)"
+
+4 = ZZZZZ, "Parametr %1! ma niedozwoloną wartość %2!"
+
+5 = ZZZZZ, "Pole %1! struktury CS_DATAFMT ma niedozwoloną wartość %2!.\"
+
+6 = ZZZZZ, "Parametr %1! nie może mieć wartości NULL."
+
+7 = ZZZZZ, "Podany bufor o rozmiarze %1! bajtów przekracza całkowitą długość \
+wartości, która ma zostać przesłana."
+
+8 = ZZZZZ, "Dokładność musi być większa lub równa skali"
+
+9 = ZZZZZ, "Nie można powiązać %1! o wartości NULL z typem danych %2!."
+
+10 = ZZZZZ, "Kolumna tabeli typu %1! nie może zostać powiązana ze zmienną \
+programową typu %2!."
+
+11 = ZZZZZ, "Nie można dowiązać textxfer i tablicy."
+
+12 = ZZZZZ, "Wszystkie kolumny muszą mieć tę samą wartość liczby tablic dla \
+powiązania tablicy."
+
+13 = ZZZZZ, "Nie można znaleźć odpowiednika CS_TYPE dla tych danych TDS \
+typu %1!"
+
+14 = ZZZZZ, "Błąd podczas wywoływania procedury CT_Lib %1!."
+
+15 = ZZZZZ, "Użyj kierunku CS_BLK_IN lub CS_BLK_OUT dla operacji kopiowania zbiorczego."
+
+16 = ZZZZZ, "Użyj opcji CS_BLK_ALL, aby zakończyć kopiowanie zbiorcze z parametrem OUT."
+
+17 = ZZZZZ, "Zły stan procesu %1! dla %2! - nie powinien tutaj wystąpić."
+
+18 = ZZZZZ, "Zły stan dla %1! - nie powinien tutaj wystąpić."
+
+19 = ZZZZZ, "%1! kolumny i wartość domyślna wysłane z serwera nie są \
+takie same."
+
+20 = ZZZZZ, "Zły stan dla %1!, ale można odzyskać - przetwarzanie kontynuowane."
+
+21 = ZZZZZ, "Liczba kolumn oczekiwanych z serwera nie jest taka sama \
+jak odebrana przez %1!."
+
+22 = ZZZZZ, "Aplikacja musi się zalogować za pomocą zestawu właściwości %1!."
+
+23 = ZZZZZ, "Wersje biblioteki kopiowania zbiorczego i CT_Lib nie są zgodne."
+
+24 = ZZZZZ, "Brak wartości lub wartości domyślnej, a wartość NULL nie jest dozwolona. \
+ kolumna = %1!, wiersz = %2!."
+
+25 = ZZZZZ, "Błąd w procedurze konwersji - przepełnienie warunku. \
+ kolumna = %1!, wiersz = %2!."
+
+26 = ZZZZZ, "Błąd w procedurze konwersji - błąd składniowy. \
+ kolumna = %1!, wiersz = %2!."
+
+27 = ZZZZZ, "Zły porządek dowiązania - dowiązana kolumna znajduje się po kolumnie oznaczonej \
+ jako textxfer."
+
+28 = ZZZZZ, "Całkowity rozmiar textxfer %1! przekracza długość danych wejściowych %2!"
+
+29 = ZZZZZ, "Liczba domyślnych wartości %1! nie jest taka sama jak domyślna liczba %2!"
+
+30 = ZZZZZ, "Zwrócenie CS_END_RESULTS dla pliku wymaganego do \
+ kopiowania zbiorczego z parametrem OUT. Plik może być pusty."
+
+31 = ZZZZZ, "Wymagane jest, aby parametr %1! miał wartość NULL."
+
+32 = ZZZZZ, "Wymagane jest, aby parametr %1! miał wartość CS_UNUSED."
+
+33 = ZZZZZ, "Nie można ustawić liczby wierszy na wartość większą niż liczba dowiązań tablicy."
+
+34 = ZZZZZ, "Tylko jedna z opcji BLK_IDENTITY i BLK_IDSTARTNUM może być włączona."
+
+35 = ZZZZZ, "Wartość właściwości %1! nie może zostać pobrana, ponieważ nie określono wartości \
+dla tej właściwości."
+
+36 = ZZZZZ, "Podczas aktualizacji wartości początkowej kolumny identity \
+wystąpił błąd konwersji lub dodawania."
+
+37 = ZZZZZ, "Podczas tworzenia polecenia wstawiania zbiorczego wystąpił błąd."
+
+38 = ZZZZZ, "Wartość początkowa kolumny identity musi mieć skalę 0."
+
+39 = ZZZZZ, "Utworzenie polecenia języka, które pobiera format wiersza, nie powiodło się. "
+
+40 = ZZZZZ, "Bufor o rozmiarze %1! bajtów jest niedozwoloną wartością, musi być większy od zera. "
+
+41 = ZZZZZ, "Utworzenie przez BCP wierszy w tabeli docelowej nie powiodło się. Utworzona kolumna %1! miałaby swój początek \
+pod adresem 8191 bajtów; to położenie początkowe nie może być dokładnie przedstawione w \
+formacie tabeli (wiersz)."
+
+42 = ZZZZZ, "Dane obcięte podczas wykonywania konwersji lokalnego zestawu znaków. \
+ kol = %1! wrs = %2!."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

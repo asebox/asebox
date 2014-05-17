@@ -1,0 +1,91 @@
+; comment character is semicolon.
+; "comnlib.loc "- Localization file for Comn-Library.
+;
+[copyright]
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+	All rights reserved.\
+	Use, duplication, or disclosure by the United States Government\
+	is subject to restrictions as set forth in FAR subparagraphs\
+	52.227-19(a)-(d) for civilian agency contracts and DFARS\
+	252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+	Sybase reserves all unpublished rights under the copyright laws\
+	of the United States.\
+	Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "impossível obter string por insuficiência de memória "
+
+2 = ZZZZZ, "impossível obter a string de mensagem da camada "
+
+3 = ZZZZZ, "impossível obter string da mensagem de origem "
+
+4 = ZZZZZ, "string de erro não está disponível "
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "camada do api do usuário "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origem do erro "definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "erro externo "
+
+2 = ZZZZZ, "erro interno na Biblioteca do Cliente "
+
+3 = ZZZZZ, "erro interno na biblioteca da rede "
+
+4 = ZZZZZ, "erro interno na biblioteca comum "
+
+5 = ZZZZZ, "erro na biblioteca intl interna "
+
+6 = ZZZZZ, "erro no gerenciador assíncrono interno "
+
+7 = ZZZZZ, "erro de gerenciamento da memória interna "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "Sem erro."
+
+1 = ZZZZZ, "Erro desconhecido."
+
+2 = ZZZZZ, "Falha de alocação de memória."
+
+3 = ZZX04, "Impossível abrir o arquivo de configuração %1! para leitura."
+
+4 = ZZX05, "A configuração %1! foi eliminada (CS_FORCE)."
+
+5 = ZZX06, "Nome do arquivo de configuração %1! demasiado longo."
+
+6 = ZZX07, "Erro de formato de arquivo, caractere inválido linha %1!."
+
+7 = ZZX08, "Seção de configuração %1! não encontrada."
+
+8 = 01X09, "Erro de sintaxe no arquivo de configuração linha %1! próximo de (%2!)."
+
+9 = 01X0A, "A configuração %1! foi eliminada (CS_FORCE) enquanto ainda estava em uso."
+

@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the Microsoft Windows Code Page 1250, Eastern Europe character set, this is a binary sort order.
+;
+; SCCS information:	%Z% generic/localization/charsets/cp1250/%M% %I% %G%
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Jan 18 1995  7:53AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_cp1250
+menuname = "Binary ordering, for the Microsoft Windows Code Page 1250, Eastern Europe character set (cp1250)."
+charset = cp1250
+ 
+description = "Binary sort order for the Microsoft Windows Code Page 1250, Eastern Europe character set (cp1250)."
+ 
+binary = "true"

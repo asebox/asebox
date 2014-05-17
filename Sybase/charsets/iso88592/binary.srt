@@ -1,0 +1,28 @@
+; semi-colon is the comment character
+[sortorder]
+;===============================================================================
+;
+;   Sort Order Overview:
+;   --------------------
+;   Based on the ISO_8859-2:1987, Latin2, Eastern Europe character set, this is a binary sort order.
+;
+; SCCS information:	@(#) generic/localization/charsets/iso88592/binary.srt 1.1 1/13/95
+;
+; Revision History:
+; ----------------------------------------------------------------------------
+; Aug 16 1994  3:46AM	machine generated from Unicode Database
+;
+;
+; Copyright (C) 1991, 1998 Sybase, Inc.
+;	All rights reserved.
+;===============================================================================
+ 
+class = 0x01			; Class `1' sort order
+id = 0x32			; id = 50
+name = bin_iso88592
+menuname = "Binary ordering, for the ISO_8859-2:1987, Latin2, Eastern Europe character set (iso88592)."
+charset = iso88592
+ 
+description = "Binary sort order for the ISO_8859-2:1987, Latin2, Eastern Europe character set (iso88592)."
+ 
+binary = "true"

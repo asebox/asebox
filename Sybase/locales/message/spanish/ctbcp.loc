@@ -1,0 +1,139 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Error fatal: Imposible asignar memoria."
+2 = ZZZZZ, "Error de E/S: espacio insuficiente para datos de entrada."
+3 = ZZZZZ, "Imposible abrir el archivo temporal '%1!' para escribir en dbedit()."
+4 = ZZZZZ, "Imposible invocar el editor '%1!'."
+5 = ZZZZZ, "Imposible abrir el archivo de entrada '%1!'."
+6 = ZZZZZ, "Imposible abrir el archivo de salida '%1!'."
+7 = ZZZZZ, "bcp: parámetro '%1!' desconocido."
+8 = ZZZZZ, "Cuando se utiliza el indicador '%1!' para definir la primera fila que desea copiarse, el número de fila debe ser igual o mayor que 1."
+9 = ZZZZZ, "Cuando se utilizan los indicadores '%1!' y '%2!' para definir la primera y la última fila que desean copiarse, el número de la primera fila debe ser menor que el de la última fila."
+10 = ZZZZZ, "Cuando se utiliza el indicador '%1!' para definir la última fila que desea copiarse, el número de fila debe ser igual o mayor que 1."
+11 = ZZZZZ, "La dirección de la copia debe ser 'in' o 'out'."
+12 = ZZZZZ, "El indicador '%1!' debe ir seguido de un entero. '%2!' no es un entero válido."
+13 = ZZZZZ, "Advertencia: El indicador '%1!' aparece más de una vez. El valor del nuevo indicador reemplazará al antiguo."
+14 = ZZZZZ, "Advertencia: '%1!' reemplaza a '%2!'"
+15 = ZZZZZ, "Longitud de prefijo incorrecta. Las longitudes válidas de prefijo son 0, 1, 2 y 4."
+16 = ZZZZZ, "Nivel (1-16): "
+17 = ZZZZZ, "Nivel incorrecto"
+18 = ZZZZZ, "compartimento (1-64): "
+19 = ZZZZZ, "Se admiten varias entradas separadas por retorno; retorno al finalizar. "
+20 = ZZZZZ, "Entrar como SA (n/s): "
+21 = ZZZZZ, "Vuelva a intentarlo:"
+22 = ZZZZZ, "compartimento incorrecto"
+23 = ZZZZZ, "Iniciando la copia..."
+24 = ZZZZZ, "%1! filas copiadas."
+25 = ZZZZZ, "Tiempo de reloj (ms.): total = %1!"
+26 = ZZZZZ, "¿Desea guardar la información de formato en un archivo? [S/n] "
+27 = ZZZZZ, "Nombre de archivo del host [%1!]: "
+28 = ZZZZZ, "Tipo de columna incorrecto. Los tipos válidos son:"
+29 = ZZZZZ, "    <cr>: tipo igual al de la columna del servidor de datos."
+30 = ZZZZZ, "  Media = %1! (%2! filas por seg.)"
+31 = ZZZZZ, "Falló la copia BCP de %1!"
+32 = ZZZZZ, "Falló parcialmente la copia BCP de %1!"
+33 = ZZZZZ, "Precisión incorrecta. La precisión debe situarse entre %1! y %2!"
+34 = ZZZZZ, "Escala incorrecta. La escala debe situarse entre %1! y %2! y ser inferior o igual al valor de precisión."
+35 = ZZZZZ, "Se devolvió un tipo de resultado no esperado."
+36 = ZZZZZ, "Se devolvió un resultado no esperado."
+37 = ZZZZZ, "Error al escribir el archivo BCP (%1!)!"
+38 = ZZZZZ, "No pudo recuperarse la especificación de archivo del host."
+39 = ZZZZZ, "La tabla que la operación de bulk copy está tratando de copiar en un archivo del host tiene menos filas que el número de filas que se han solicitado saltarse."
+40 = ZZZZZ, "blk_rowxfer_mult devolvió un código de retorno inesperado."
+41 = ZZZZZ, "Se encontró un tipo de datos '%1!' desconocido."
+42 = ZZZZZ, "Error de E/S al leer el archivo de errores BCP."
+43 = ZZZZZ, "Error de E/S al escribir el archivo de errores BCP."
+44 = ZZZZZ, "Imposible abrir el archivo de errores."
+45 = ZZZZZ, "Se encontró un final de archivo inesperado en el archivo de datos BCP."
+46 = ZZZZZ, "Se encontró un prefijo de longitud negativo en el archivo de datos BCP."
+47 = ZZZZZ, "El archivo del host BCP '%1!' contiene únicamente %2! filas. No está permitido saltarlas todas."
+48 = ZZZZZ, "El archivo del host BCP '%1!' contiene únicamente %2! filas. Fue imposible leer el número de filas requerido."
+49 = ZZZZZ, "Para la operación de bulk copy, todos los datos de longitud variable tienen que tener especificado un prefijo de longitud o un terminador."
+50 = ZZZZZ, "El campo de texto/imagen es mayor que el valor máximo. Datos truncados."
+
+
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Error fatal: Falló la asignación de memoria."
+2 = ZZZZZ, "La dirección de la copia debe ser 'in' o 'out'."
+3 = ZZZZZ, "Advertencia: '%1!' reemplaza a '%2!'."
+4 = ZZZZZ, "Cuando se utiliza el indicador '%1!' para definir la primera fila que desea copiarse, el número de fila debe ser igual o mayor que 1."
+5 = ZZZZZ, "Cuando se utilizan los indicadores '%1!' y '%2!' para definir la primera y la última fila que desean copiarse, el número de la primera fila debe ser menor que el de la última fila."
+6 = ZZZZZ, "Cuando se utiliza el indicador '%1!' para definir la última fila que desea copiarse, el número de fila debe ser igual o mayor que 1."
+7 = ZZZZZ, "Cuando se utiliza el indicador '%1!' para definir el tamaño de lotes el número debe ser igual o mayor que 1."
+8 = ZZZZZ, "Advertencia: Se omitirá el indicador '%1!' al exportar."
+9 = ZZZZZ, "No es posible usar '%1!' y '%2!' a la vez al importar."
+10 = ZZZZZ, "Cuando se utiliza el indicador '%1!' para definir el valor inicial de la columna identity, el número debe ser igual o mayor que 0."
+11 = ZZZZZ, "Los indicadores '%1!' y '%2!' no pueden utilizarse juntos."
+12 = ZZZZZ, "Advertencia: Se está restaurando el número de filas en el proceso por lotes de %1! a %2!."
+13 = ZZZZZ, "Falló la definición de propiedades de conexión."
+14 = ZZZZZ, "Falló el establecimiento de la conexión."
+15 = ZZZZZ, "Falló la definición de opciones de conexión."
+16 = ZZZZZ, "Falló la recuperación de idioma."
+17 = ZZZZZ, "Falló la configuración de valores predeterminados."
+18 = ZZZZZ, "Falló la recuperación del formato de tabla."
+19 = ZZZZZ, "Falló blk_init."
+20 = ZZZZZ, "Imposible abrir el archivo de errores."
+21 = ZZZZZ, "Objeto de localización desconocido. Se utilizará el valor predeterminado '%1!'."
+22 = ZZZZZ, "Error interno: Se pasó un tipo de localización incorrecto en cs_locale()."
+23 = ZZZZZ, "Advertencia: La opción '%1!' no es reconocida y se ignorará."
+24 = ZZZZZ, "Error de sintaxis en '%1!'."
+25 = ZZZZZ, "Error al intentar cargar un par de tablas de conversión."
+26 = ZZZZZ, "Se ha producido un error al intentar configurar el contexto de la aplicación para su uso con las estructuras relacionadas con la localización."
+
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Bulk copy por lotes en el SQL Server correcto."
+2 = ZZZZZ, "Se enviaron %1! filas al SQL Server."
+3 = ZZZZZ, "Bulk-copy de %1! filas correctamente copiadas al archivo del host."
+4 = ZZZZZ, "Interrupción: operación de bulk copy abortada."
+5 = ZZZZZ, "%1! filas copiadas."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Contraseña: "
+2 = ZZZZZ, "Introduzca el tipo de almacenamiento del campo %1! [%2!]: "
+3 = ZZZZZ, "Introduzca la longitud del campo %1! [sin longitud máxima]: "
+4 = ZZZZZ, "Introduzca la longitud del campo %1! [%2!]: "
+5 = ZZZZZ, "Introduzca el terminador de campo [%1!]: "
+6 = ZZZZZ, "Introduzca la longitud de prefijo del campo %1! [%2!]: "
+7 = ZZZZZ, "Introduzca la precisión del campo %1! [%2!]: "
+8 = ZZZZZ, "Introduzca la escala del campo %1! [%2!]: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: Imposible abrir el archivo de formato '%2!'."
+2 = ZZZZZ, "Error de E/S durante la lectura del archivo de formato BCP."
+3 = ZZZZZ, "Imposible cerrar el archivo de formato de BCP."
+4 = ZZZZZ, "Columna %1!: se encontró un valor de precisión incorrecto."
+5 = ZZZZZ, "Se encontró un tipo de datos de longitud fija desconocido."
+6 = ZZZZZ, "Se intentó leer una versión desconocida de archivo de formato BCP."
+7 = ZZZZZ, "Se encontró un número de columna del host incorrecto en el archivo de formato BCP."
+8 = ZZZZZ, "Se encontró el tipo de datos desconocido '%1!' en el archivo de formato."
+9 = ZZZZZ, "El archivo de formato indicó a BCP no copiar la columna identity; conflicto con la opción -E."
+10 = ZZZZZ, "No hay columnas para copiar."

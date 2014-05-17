@@ -1,0 +1,239 @@
+; "dscp.loc"-- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments
+;
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Sessão "
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "Falha na tentativa de alocação de memória."
+
+2  = ZZZZZ, "Erro na leitura de objetos."
+
+3  = ZZZZZ, "Não foram encontrados objetos."
+
+4  = ZZZZZ, "'%1!' não existe."
+
+5  = ZZZZZ, "falha "
+
+6  = ZZZZZ, "OK "
+
+7  = ZZZZZ, "FailOver para o Driver de Interface."
+
+8  = ZZZZZ, "Não hß sessões abertas."
+
+9  = ZZZZZ, "Adicionado %1!"
+
+10 = ZZZZZ, "Erro na adição de %1!"
+
+11 = ZZZZZ, "Modificado %1!"
+
+12 = ZZZZZ, "Erro na modificação de %1!"
+
+13 = ZZZZZ, "Eliminado %1!"
+
+14 = ZZZZZ, "Erro na eliminação de %1!"
+
+15 = ZZZZZ, "Eliminar todos os objetos do servidor."
+
+16 = ZZZZZ, "Erro na eliminação de objetos do servidor."
+
+17 = ZZZZZ, "Erro: Tentativa de cópia para o objeto na mesma sessão."
+
+18 = ZZZZZ, "Copiar '%1!' da Sessão %2! para '%3!' na Sessão %4!"
+
+19 = ZZZZZ, "Erro na cópia de %1!"
+
+20 = ZZZZZ, "Erro: Tentativa de copiar para a mesma sessão."
+
+21 = ZZZZZ, "Copiar tudo para a Sessão %1!"
+
+22 = ZZZZZ, "Sessão %1! %2!"
+
+23 = ZZZZZ, "atual "
+
+24 = ZZZZZ, "Erro de Sintaxe "
+
+25 = ZZZZZ, "Atributo adicional "
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "Tipo de Transporte "
+
+2 =  ZZZZZ, "Endereço de Transporte "
+
+3  = ZZZZZ, "Segurança do Servidor "
+
+4  = ZZZZZ, "Mecanismo de Segurança "
+
+5  = ZZZZZ, "**Valor Desconhecido**"
+
+6  = ZZZZZ, "Base DIT para o objeto "
+
+7  = ZZZZZ, "Distinguir o nome "
+
+8  = ZZZZZ, "Objetos do servidor encontrados "
+
+9  = ZZZZZ, "Versão "
+
+10 = ZZZZZ, "Serviço "
+
+11 = ZZZZZ, "Estado "
+
+12 = ZZZZZ, "Endereço "
+
+13 = ZZZZZ, "SYBASE "
+
+14 = ZZZZZ, "Configuração "
+
+15 = ZZZZZ, "Nome do DS "
+
+16 = ZZZZZ, "HA Failoverserver"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "Tem certeza da eliminação de todos os objetos do servidor? (S/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "ajuda "
+
+2  = ZZZZZ, "h "
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "abrir "
+
+5  = ZZZZZ, "fechar "
+
+6  = ZZZZZ, "ler "
+
+7  = ZZZZZ, "adicionar "
+
+8  = ZZZZZ, "mod "
+
+9  = ZZZZZ, "addattr "
+
+10 = ZZZZZ, "del "
+
+11 = ZZZZZ, "eliminar-tudo "
+
+12 = ZZZZZ, "copiar "
+
+13 = ZZZZZ, "copiar tudo "
+
+14 = ZZZZZ, "para "
+
+15 = ZZZZZ, "lista "
+
+16 = ZZZZZ, "tudo "
+
+17 = ZZZZZ, "sess "
+
+18 = ZZZZZ, "config "
+
+19 = ZZZZZ, "sair "
+
+20 = ZZZZZ, "encerrar "
+
+21 = ZZZZZ, "trocar "
+
+22 = ZZZZZ, "#concluído "
+
+23 = ZZZZZ, "#del "
+
+24 = ZZZZZ, "Y "
+
+25 = ZZZZZ, "y "
+
+26 = ZZZZZ, "DSNAME "
+
+27 = ZZZZZ, "SESS "
+
+28 = ZZZZZ, "SERVER_NAME "
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "Esta tela."
+
+; open [DSNAME]
+2  = ZZZZZ, "Abra uma sessão para o serviço de diretório default ou para o serviço de diretório DSNAME."
+
+; close [SESS]
+3  = ZZZZZ, "Feche a sessão numerada SESS ou a sessão atual."
+
+; sess
+4  = ZZZZZ, "Liste todas as sessões."
+
+; [switch] SESS
+5  = ZZZZZ, "Transforme em sessão atual a sessão numerada SESS."
+
+; add SERVER-NAME
+6  = ZZZZZ, "Adicione um novo objeto do servidor no serviço de diretório."
+
+; read SERVER-NAME
+7  = ZZZZZ, "Leia o conteúdo de um objeto do servidor."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "Modifique um objeto de servidor existente."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "Adicione um atributo a um objeto de servidor existente."
+
+; del SERVER-NAME
+10 = ZZZZZ, "Elimine um objeto de servidor existente."
+
+; list [all]
+11 = ZZZZZ, "Liste todos os objetos do servidor."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "Copie o objeto NAME1 para um novo objeto NAME2 na sessão numerada SESS ou para a sessão atual."
+
+; copyall to SESS
+13 = ZZZZZ, "Copie todos os objetos do servidor da sessão atual para a sessão numerada SESS."
+
+; delete-all
+14 = ZZZZZ, "Elimine todos os objetos do servidor da sessão atual."
+
+; config
+15 = ZZZZZ, "Liste a configuração atual."
+
+; exit | quit
+16 = ZZZZZ, "Saia do programa."
+

@@ -1,0 +1,64 @@
+; comment character is a semicolon.
+;
+; Sccsid @(#) nlwnsck.loc 1.2 12/3/93
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+[language] 
+	language=french
+
+[copyright]
+copyright =  "Copyright (C) 1994 Sybase, Inc. \
+Tous droits r≈serv≈s. \
+L'utilisation, la reproduction et la divulgation du pr≈sent document\
+par le gouvernement des Etats-Unis d'Am≈rique sont r≈gies par le \
+paragraphe (c) (1) (ii) de la clause sur les Droits en mati…re \
+d'informations techniques, informatiques et logicielles du\
+CFR 52.227-7013. \
+Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+
+[nlwnsck]
+
+1 = IPDE_EPDISCON, "Impossible de d≈connecter l'endpoint - Erreur : %1!"
+
+2 = IPDE_ACCEPT, "Erreur d≈tect≈e durant l'acceptation de la nouvelle connexion - Erreur : %1!"
+
+3 = IPDE_EPCLOSE, "Impossible de fermer l'endpoint - Erreur : %1!"
+
+4 = IPDE_PARSE, "L'information relative » la connexion pr≈sente une syntaxe incorrecte."
+
+5 = IPDE_EPCONNECT, "Connexion au serveur impossible - Erreur : %1!"
+
+6 = IPDE_EPMODE, "Impossible de changer le mode du pipe - Erreur : %1!"
+
+7 = IPDE_EVENTOBJ, "Echec de la cr≈ation d'un objet ≈v≈nement - Erreur : %1!"
+
+8 = IPDE_NPCREATE, "Echec de la cr≈ation d'un named pipe - Erreur : %1!"
+
+9 = IPDE_READ, "Echec de lecture du named pipe - Erreur : %1!"
+
+10 = IPDE_WRITE, "Echec de la tentative d'≈criture sur le named pipe - Erreur : %1!"
+
+11 = IPDE_READOOB, "Erreur lors de la lecture des donn≈es OOB - Erreur : %1!"
+
+12 = IPDE_SOCKET, "Erreur lors de la cr≈ation d'un socket - Erreur : %1!"
+
+13 = IPDE_HOSTNAME, "Erreur lors de la r≈solution du nom de l'h¬te - Erreur : %1!"
+
+14 = IPDE_EPBIND, "Erreur lors de la liaison avec l'adresse locale - Erreur : %1!"
+
+15 = IPDE_EPLISTEN, "Erreur lors de la cr≈ation d'un point d'≈coute - Erreur : %1!"
+
+16 = IPDE_DRVINIT, "Erreur lors de l'initialisation du gestionnaire - Erreur : %1!"
+
+
+; end of insock error strings
+;

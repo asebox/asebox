@@ -1,0 +1,58 @@
+; comment character is a semicolon.
+[copyright]
+
+copyright =  "Copyright (C) 1990, 2001 Sybase, Inc.\
+ All rights reserved.\
+ Use, duplication, or disclosure by the United States Government\
+ is subject to restrictions as set forth in FAR subparagraphs\
+ 52.227-19(a)-(d) for civilian agency contracts and DFARS\
+ 252.227-7013(c)(1)(ii) for Department of Defense contracts.\
+ Sybase reserves all unpublished rights under the copyright laws\
+ of the United States.\
+ Sybase, Inc. 6475 Christie Avenue, Emeryville, CA 94608, USA"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "COBOL CT Library ベニア・レイヤ"
+2 = ZZZZZ, "COBOL ランタイム・レイヤ"
+
+[cobcterror]
+
+1 = ZZZZZ, "CSBDIAG または CTBDIAG に対して正しいタイプではありません。"
+2 = ZZZZZ, "CS_USERDATA オプションは、COBOL ではサポートされていません。"
+3 = ZZZZZ, "コンパイラ・コードが認識できません。"
+4 = ZZZZZ, "CTBPARAM の入力変数の変換ができませんでした。"
+5 = 22022, "インジケータ・タイプ情報の格納または検索ができませんでした。"
+6 = ZZZZZ, "メモリの割り当てに失敗しました。"
+7 = ZZZZZ, "サポートされていないタイプです。"
+8 = ZZZZZ, "CS-ALL-CAPS 機能は、COBOL ではサポートされていません。"
+9 = 22003, "整数が持つ、フェッチされたデータ項目の PIC の桁数が多すぎます。"
+10 = ZZZZZ, "SYBSETSQLDAの引数の組み合わせが正しくありません。"
+11 = ZZZZZ, "SQLDA-SQLN が SQLDA-SQLD より小さいです。"
+12 = ZZZZZ, "SQLDA-SQLD が負の値です。"
+
+[cobctorigin]
+
+1 = ZZZZZ, "内部エラー"
+2 = ZZZZZ, "呼び出し元プログラムで、プリコンパイラ生成コードのエラーの可能性があります。"
+3 = ZZZZZ, ""
+
+[cobctruntime]
+1 = ZZ000, "リカバリできないエラーが発生しました。"
+2 = ZA000, "内部エラーが発生しました。"
+3 = ZD000, "予期しない CS_COMPUTE_RESULT を受け取りました。"
+4 = ZE000, "予期しない CS_CURSOR_RESULT を受け取りました。"
+5 = ZF000, "予期しない CS_PARAM_RESULT を受け取りました。"
+6 = ZG000, "予期しない CS_ROW_RESULT を受け取りました。"
+7 = ZB000, "sqlca、SQLCODE または SQLSTATE にメッセージが返されません。"
+8 = ZC000, "まだ接続が定義されていません。"
+9 = ZH000, "予想外の CS_STATUS_RESULT を受信しました。"
+10 = ZI000, "予期しない CS_DESCRIBE_RESULT を受け取りました。"
+11 = 22005, "データ例外 -- 項目記述子の割り当てエラー - タイプ"
+12 = JZ000, "メモリ割り当てに失敗しました。"
+13 = ZK000, "SQL Server のバージョンは 10 以上でなければなりません。"
+14 = ZM000, "クライアント・ライブラリ初期化時のエラー"
+15 = ZN000, "mutex の取得時または解放時のエラー"
+16 = 08002, "接続名が使用中です。"
+16 = 25019, "HA FAILOVER が発生しました。"
