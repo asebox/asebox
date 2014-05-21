@@ -85,13 +85,7 @@ if ( !isset($pidsource) || $pidsource==0 ) {
   	$SourcePassword=$ArchivePassword;
   	$SourceCharset=$ArchiveCharset;
   	$applog="sybsystemprocs..boxapplog";
-  	include("config_app.php");
-  	if ($ServerName=="ESY3_PAR_LIV_SQL") {
-       $SourceUser="compli_bat";
-       $SourcePassword=auricom45;  	   
-       $applog="COMPLIANCE..spy_log";
-  	}
-    $pidsource=sybase_pconnect($ServerName, $SourceUser, $SourcePassword,$SourceCharset, "asebox_".$version_asemon_report);
+    $pidsource=sybase_connect($ServerName, $SourceUser, $SourcePassword,$SourceCharset, "asebox_".$version_asemon_report);
 //    $pidsource=sybase_connect($ServerName, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asebox_".$version_asemon_report);
 
 
