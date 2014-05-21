@@ -888,7 +888,7 @@ ul.dropdown li.hover a          { color: black; }
 */
 ul.dropdown ul 			{ width: 140px; visibility: hidden; position: absolute; top: 100%; left: 0; }
 ul.dropdown ul li 		{ font-weight: normal; background: #f6f6f6; color: #000; 
-				border-bottom: 1px solid #ccc; float: none; }
+				border-bottom: 1px solid #ccc; float: none; text-align: left; }
 									  
                                     /* IE 6 & 7 Needs Inline Block */
 ul.dropdown ul li a		{ border-right: none; width: 100%; display: inline-block; } 

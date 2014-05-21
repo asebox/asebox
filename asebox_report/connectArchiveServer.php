@@ -87,8 +87,11 @@ if ( !isset($pidsource) || $pidsource==0 ) {
   	$applog="sybsystemprocs..boxapplog";
     $pidsource=sybase_connect($ServerName, $SourceUser, $SourcePassword,$SourceCharset, "asebox_".$version_asemon_report);
 <<<<<<< HEAD
+<<<<<<< HEAD
   //$pidsource=sybase_connect($ServerName, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asebox_".$version_asemon_report);
 =======
+=======
+>>>>>>> 3.1.0
 //    $pidsource=sybase_connect($ServerName, $ArchiveUser, $ArchivePassword,$ArchiveCharset, "asebox_".$version_asemon_report);
 >>>>>>> 3.1.0
 
