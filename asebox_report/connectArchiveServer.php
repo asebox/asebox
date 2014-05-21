@@ -1,6 +1,6 @@
 <?php   
 //--------------------------------------------------------------------------------------------------------------------------------------------
-// FUNCTIONS
+// FUNCTIONS x
 if (!function_exists("msg_handler")) {
      function msg_handler($msgnumber, $severity, $state, $line, $msgtext) {
          if ($msgnumber==911) return; // Database does not exists. Return, and get the list of databases.
